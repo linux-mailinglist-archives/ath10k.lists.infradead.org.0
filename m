@@ -2,73 +2,80 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E81A3DE47
-	for <lists+ath10k@lfdr.de>; Mon, 29 Apr 2019 10:48:55 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5F49DE08F
+	for <lists+ath10k@lfdr.de>; Mon, 29 Apr 2019 12:30:23 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
 	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=YI3GEXHk1+12NLdaXoBpUuK60CbEXCj4Aor8nDnIb9c=; b=bfMQsdtGE1jBuM
-	NtBZgVn28HQrC5yKb73X2wNJyttMLbDgcuQ3yklqoKQ0ZDJvV8u9TRwGE+w28X0eMF7WzWnMsjqQO
-	pQJqFr5rG+FypvzsXmhjtT7Q9rLR57Ii5FYgaWiR0dKF+SJK2uTR1dIt5zloVWxO0UiAPHSQwt86l
-	yb3rVZJfusX43IGkCRfgclTMxnwcySyh3aR1PnxmNVf6L5/36AsZXneGc/62gBdJuPB6r9zp6Yshr
-	PK7WpELpyryEyCknAWT+dpg/q2LpVmqcu9ZCafLsq3vj3w71PXiNXzRnxRwL65/yHt9hViUr3XGFG
-	AugZk6YJukvNGpxNQivQ==;
+	List-Owner; bh=nngdUvM5EqX0+ngJyr9ePQhVA6xpC+dh2jwk+9j9W78=; b=MTC64N0mXG9H6o
+	CD1MfgSAzdnOlCiiHx/uGMckMvTz4Frd6VbCHYhMSMvTk5M22K6S+/AN6cdVCs5cJMedzJhsMNOjv
+	sdQ44a4Go3sV58P2ooeWjSa/B57WmDD2sjXspe8mvUo/sM3WNv3EV8R/pd58Hc4ZHX9AvGwcwHsYs
+	jrRCTjTjC1WMrSnvJ/sRvwBbLxHFZXHSqYBnGeKbeISdmT6UyKHtz+UZp/xgUvCpwrq6RchaITJCk
+	saTJWqAyd2a5wO7onpVUOLENPLs7c9L2kj4O9VMvn0fZj304413e3334/USv1/MHZ1iixfOxBXya8
+	3QYO+UT7kHUmGz30pq7Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hL1y0-0004mo-T0; Mon, 29 Apr 2019 08:48:52 +0000
-Received: from mail-oi1-f194.google.com ([209.85.167.194])
+	id 1hL3Y9-0006Kb-1e; Mon, 29 Apr 2019 10:30:17 +0000
+Received: from mail-qk1-x744.google.com ([2607:f8b0:4864:20::744])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hL1xw-0004mF-CU
- for ath10k@lists.infradead.org; Mon, 29 Apr 2019 08:48:50 +0000
-Received: by mail-oi1-f194.google.com with SMTP id v23so7508671oif.8
- for <ath10k@lists.infradead.org>; Mon, 29 Apr 2019 01:48:47 -0700 (PDT)
+ id 1hL3Y5-0006KC-3z
+ for ath10k@lists.infradead.org; Mon, 29 Apr 2019 10:30:14 +0000
+Received: by mail-qk1-x744.google.com with SMTP id w73so5540575qkb.13
+ for <ath10k@lists.infradead.org>; Mon, 29 Apr 2019 03:30:12 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=LsbJoBOTkJ5iG+ZToRJP54iUPlrflioTmA0QK3mgDEc=;
+ b=O6Jb8N54hpz3uPynvt6Yt5/rHuZZLUeyQ0rO2pFpfNvWnT1xSu7T4eYytHDR01LEQQ
+ ZU1tzv39a8sX4YIaOH4s3mOel/4TQn7rwamS5K9B9YRJzc+N9RK4L4ocfxPOlWxMg4NL
+ P1PX0fdUj7gXI8YJSe5Z1aany9gBNk4KVQbDA=
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:mime-version:references:in-reply-to:from:date
  :message-id:subject:to:cc;
- bh=8DkL30STsaxgYUCGgLF1HNO5dyfcD0gOWg9WjzksmEw=;
- b=q3W3Ql7Rlm5M9bti9D4Cl9w5LyZZdp1nl/1XdQtFKYslu8+gbiuRwceeotztn1tW7R
- wXTqKlMT4pI6yOICCC4OYk2Hs2gHx/qvy8PdrgGCx4Y6snFxSKIVxkHyqMGZ6jFo8wT6
- jqSy7dikAjpO+oG1OW/boHS8nE4dOb8JfLEDaFrsS3DLvCvsHgM2R4++2AWxdZRcvlFo
- +zMMr1K7NBrD9ZGEb9SScXoZHE4DFNgy8tGoG07y+UypyXeGCVj6SDxGWniUPU53Rcci
- qfJUIldD3wGY/84xqeeK0yT1YbPOZ8W80isA3AaT8wa43Pmd9G3025jGuBdfs81jaFrn
- znHw==
-X-Gm-Message-State: APjAAAVMPQFvM3qre4l5BRSDt+hiMs3XpMkB7zSVTvb5uH2DnXvrxtz9
- XQV5dwoac+wkGg9ZjBUVg5x4vXdxpy6l0fKO2DY=
-X-Google-Smtp-Source: APXvYqyLJGa7+HnvOpfZY8x6Fch1od+pFueZwowvEwEsz9duuDJOvZrKhA1V/swPDl6mm+4EGDvD+SUxVsA5B/E186I=
-X-Received: by 2002:aca:5304:: with SMTP id h4mr4059265oib.115.1556527726758; 
- Mon, 29 Apr 2019 01:48:46 -0700 (PDT)
+ bh=LsbJoBOTkJ5iG+ZToRJP54iUPlrflioTmA0QK3mgDEc=;
+ b=GPWmte9r5YoQWDEZrXiTJLEWsqcwWjwFwO3zke8c0akOHzBtyaKQPW3Z4+OciKIWSs
+ qLO9ViKO1vPy7fQo+KYNJ46o1wQdTOFhAXjoSymg7KAywzSXAx/HrHyDQuU/rgiKcH7B
+ eKaOvOetF1MmKAzr7pD3JbpHsPBq2Mcy8jXOzaQp+tDdqcDmQZH0vq6d/m/pumLhJlRw
+ NH/u49qty89evO6kJ0exB2P4voLDUazQ2e017gah351pYEMaGWdNkBi7Vmhm05anGc+q
+ wBwH66e4hEAoLdVZZyee9oRR4pIw1ywsHXIyXRLsxelybr5hB7Ycr3lpyEXqyfCpVWAd
+ 3yFg==
+X-Gm-Message-State: APjAAAUB9eZontFbMIq7crD5E3OpX6cvYoenysZhbOOtN9S//If7YlIZ
+ EScBCYyOcLQF06t/LgiT95fafTVBj3VDwC0wVWOC7g==
+X-Google-Smtp-Source: APXvYqxZ73NWcz094Q/7/PmP4XT2MmsPOvqcdxePBjq87Uy02bxkEdIOmOR4YOXaAalFtBGm5if9wOLGQYtec+tcCPM=
+X-Received: by 2002:a37:6897:: with SMTP id
+ d145mr35198030qkc.185.1556533811413; 
+ Mon, 29 Apr 2019 03:30:11 -0700 (PDT)
 MIME-Version: 1.0
-References: <2884043.Jv1Mn93hE8@aspire.rjw.lan>
- <20190403195718.GA74723@google.com>
- <87o94tutdz.fsf@kamboji.qca.qualcomm.com>
-In-Reply-To: <87o94tutdz.fsf@kamboji.qca.qualcomm.com>
-From: "Rafael J. Wysocki" <rafael@kernel.org>
-Date: Mon, 29 Apr 2019 10:48:35 +0200
-Message-ID: <CAJZ5v0ifD=DATprUeeO2_LGs04aEEhPB6AcGVPxWUdQaOma+ww@mail.gmail.com>
-Subject: Re: [PATCH] ath10k: Drop WARN_ON()s that always trigger during system
- resume
-To: Kalle Valo <kvalo@codeaurora.org>
+References: <1554260478-4161-1-git-send-email-wgong@codeaurora.org>
+In-Reply-To: <1554260478-4161-1-git-send-email-wgong@codeaurora.org>
+From: Nicolas Boichat <drinkcat@chromium.org>
+Date: Mon, 29 Apr 2019 18:30:00 +0800
+Message-ID: <CANMq1KAU1B4Bweq3O6O8HOMwT7fHjj9tDyxqMsn_vn4gwxXL=Q@mail.gmail.com>
+Subject: Re: [PATCH] ath10k: add peer id check in ath10k_peer_find_by_id
+To: Wen Gong <wgong@codeaurora.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190429_014848_426776_B100B590 
-X-CRM114-Status: GOOD (  16.71  )
-X-Spam-Score: 0.2 (/)
+X-CRM114-CacheID: sfid-20190429_033013_187632_C4D97DF9 
+X-CRM114-Status: GOOD (  13.64  )
+X-Spam-Score: -0.3 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.2 points)
+ Content analysis details:   (-0.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.167.194 listed in list.dnswl.org]
- 0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
+ no trust [2607:f8b0:4864:20:0:0:0:744 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (rjwysocki[at]gmail.com)
- 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -80,83 +87,67 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Claire Chang <tientzu@google.com>, Sriram R <srirrama@codeaurora.org>,
- Linux PM <linux-pm@vger.kernel.org>,
- Pradeep Kumar Chitrapu <pradeepc@codeaurora.org>,
- "open list:NETWORKING DRIVERS \(WIRELESS\)" <linux-wireless@vger.kernel.org>,
- Brian Norris <briannorris@chromium.org>,
- "Rafael J. Wysocki" <rjw@rjwysocki.net>, ath10k@lists.infradead.org,
- Srinivas Pandruvada <srinivas.pandruvada@linux.intel.com>,
- Todd Brandt <todd.e.brandt@intel.com>
+Cc: Claire Chang <tientzu@chromium.org>, linux-wireless@vger.kernel.org,
+ ath10k@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On Fri, Apr 26, 2019 at 9:18 AM Kalle Valo <kvalo@codeaurora.org> wrote:
+On Wed, Apr 3, 2019 at 3:01 AM Wen Gong <wgong@codeaurora.org> wrote:
 >
-> Brian Norris <briannorris@chromium.org> writes:
+> For some SDIO chip, the peer id is 65535 for MPDU with error status,
+> then test_bit will trigger buffer overflow for peer's memory, if kasan
+> enabled, it will report error.
 >
-> > + Sriram, Pradeep, Claire
-> >
-> > On Sun, Mar 03, 2019 at 06:24:33PM +0100, Rafael J. Wysocki wrote:
-> >
-> > Ooh, exactly 1 month ago!
-> >
-> >> From: Rafael J. Wysocki <rafael.j.wysocki@intel.com>
-> >>
-> >> ath10k_mac_vif_chan() always returns an error for the given vif
-> >> during system-wide resume which reliably triggers two WARN_ON()s
-> >> in ath10k_bss_info_changed() and they are not particularly
-> >> useful in that code path, so drop them.
-> >>
-> >
-> > Particularly, when WOWLAN isn't enabled, we get called during resume via
-> > ieee80211_reconfig(), where we're not associated and don't have any
-> > channel contexts. AFAICT, we shouldn't need to communicate anything in
-> > particular to the firmware here, and so failing the 'if' is definitely
-> > not worth WARN-ing about.
-> >
-> > I'd love to see this get applied with:
-> >
-> > Fixes: cd93b83ad927 ("ath10k: support for multicast rate control")
-> > Fixes: f279294e9ee2 ("ath10k: add support for configuring management packet rate")
-> >
-> > and sent to stable. This has been bugging people since 4.19. Spurious
-> > WARN_ON()s can trigger reports to various crash trackers, and on some
-> > systems appear as user-visible warnings ("System problem detected").
-> >
-> >> Signed-off-by: Rafael J. Wysocki <rafael.j.wysocki@intel.com>
-> >
-> > Reviewed-by: Brian Norris <briannorris@chromium.org>
-> > Tested-by: Brian Norris <briannorris@chromium.org>
+> Add check for overflow the size of peer's peer_ids will avoid the buffer
+> overflow access.
 >
-> I added these now to the commit log, thanks Brian.
+> Call trace of kasan:
+> dump_backtrace+0x0/0x2ec
+> show_stack+0x20/0x2c
+> __dump_stack+0x20/0x28
+> dump_stack+0xc8/0xec
+> print_address_description+0x74/0x240
+> kasan_report+0x250/0x26c
+> __asan_report_load8_noabort+0x20/0x2c
+> ath10k_peer_find_by_id+0x180/0x1e4 [ath10k_core]
+> ath10k_htt_t2h_msg_handler+0x100c/0x2fd4 [ath10k_core]
+> ath10k_htt_htc_t2h_msg_handler+0x20/0x34 [ath10k_core]
+> ath10k_sdio_irq_handler+0xcc8/0x1678 [ath10k_sdio]
+> process_sdio_pending_irqs+0xec/0x370
+> sdio_run_irqs+0x68/0xe4
+> sdio_irq_work+0x1c/0x28
+> process_one_work+0x3d8/0x8b0
+> worker_thread+0x508/0x7cc
+> kthread+0x24c/0x264
+> ret_from_fork+0x10/0x18
 >
-> Rafael, could you please provide the hardware and firmware versions you
-> tested this on? We have so many different firmware branches to support
-> that I prefer to have that documented in the commit log. Providing
-> ath10k startup messages in dmesg are enough,
+> Tested with QCA6174 SDIO with firmware
+> WLAN.RMH.4.4.1-00007-QCARMSWP-1.
+>
+> Signed-off-by: Wen Gong <wgong@codeaurora.org>
+> ---
+>  drivers/net/wireless/ath/ath10k/txrx.c | 3 +++
+>  1 file changed, 3 insertions(+)
+>
+> diff --git a/drivers/net/wireless/ath/ath10k/txrx.c b/drivers/net/wireless/ath/ath10k/txrx.c
+> index 23606b6..33de9e1 100644
+> --- a/drivers/net/wireless/ath/ath10k/txrx.c
+> +++ b/drivers/net/wireless/ath/ath10k/txrx.c
+> @@ -157,6 +157,9 @@ struct ath10k_peer *ath10k_peer_find_by_id(struct ath10k *ar, int peer_id)
+>  {
+>         struct ath10k_peer *peer;
+>
+> +       if (peer_id >= sizeof(peer->peer_ids) * BITS_PER_BYTE)
 
-There you go:
+I'd use >= BITS_PER_TYPE(peer->peer_ids).
 
-[    4.695349] ath10k_pci 0000:3a:00.0: enabling device (0000 -> 0002)
-[    4.698165] ath10k_pci 0000:3a:00.0: pci irq msi oper_irq_mode 2
-irq_mode 0 reset_mode 0
-[    4.912240] ath10k_pci 0000:3a:00.0: qca6174 hw3.2 target
-0x05030000 chip_id 0x00340aff sub 1a56:1535
-[    4.912255] ath10k_pci 0000:3a:00.0: kconfig debug 0 debugfs 0
-tracing 0 dfs 0 testmode 0
-[    4.912716] ath10k_pci 0000:3a:00.0: firmware ver
-WLAN.RM.2.0-00180-QCARMSWPZ-1 api 4 features
-wowlan,ignore-otp,no-4addr-pad crc32 75dee6c5
-[    4.982563] ath10k_pci 0000:3a:00.0: board_file api 2 bmi_id N/A
-crc32 19644295
-
-> I can then add it to the commit log.
-
-Still, I'm quite sure that the WARN_ON()s trigger during system resume
-regardless of the hw/fw combination.
+> +               return NULL;
+> +
+>         lockdep_assert_held(&ar->data_lock);
+>
+>         list_for_each_entry(peer, &ar->peers, list)
 
 _______________________________________________
 ath10k mailing list
