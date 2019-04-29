@@ -2,83 +2,73 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2F0A3DD3A
-	for <lists+ath10k@lfdr.de>; Mon, 29 Apr 2019 09:54:38 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E81A3DE47
+	for <lists+ath10k@lfdr.de>; Mon, 29 Apr 2019 10:48:55 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
-	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
-	References:List-Owner; bh=X5ze1XqO9bzhMTpIoqBOqjLEIX4PFpGnfdt6QUk6U60=; b=F4H
-	pecmXezzIpVrLGSZCh9KU8AeZ3SU2UHhQ7YQpWUEfSC6rs9G6rnbggf6UH/wDlU84YPdpnTVNeHR5
-	9cxK4qvx5oj/h9pgLKqaxydHNEPKFuxuu6fuc+MtZRC395YN6MJZ2w6gjRStWPSOGQxAkMyauPIX1
-	yAJnxiSlm/V1+7pZIPLD1NjPt7ht6YfqteowmCbCUt0rWHBMQzhlNGaCRtcaB0OR3JY2IrGFpFQGW
-	/d29IEt9jjOYMFTp6n2RxmSgTeEJbldnqIwhBrGYHwhSWZHTeJ1SIab2MWQkQ9rqoxQQYBvvmY9up
-	dj07QGc3Z7osPaipMNJApipNieUwcTg==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=YI3GEXHk1+12NLdaXoBpUuK60CbEXCj4Aor8nDnIb9c=; b=bfMQsdtGE1jBuM
+	NtBZgVn28HQrC5yKb73X2wNJyttMLbDgcuQ3yklqoKQ0ZDJvV8u9TRwGE+w28X0eMF7WzWnMsjqQO
+	pQJqFr5rG+FypvzsXmhjtT7Q9rLR57Ii5FYgaWiR0dKF+SJK2uTR1dIt5zloVWxO0UiAPHSQwt86l
+	yb3rVZJfusX43IGkCRfgclTMxnwcySyh3aR1PnxmNVf6L5/36AsZXneGc/62gBdJuPB6r9zp6Yshr
+	PK7WpELpyryEyCknAWT+dpg/q2LpVmqcu9ZCafLsq3vj3w71PXiNXzRnxRwL65/yHt9hViUr3XGFG
+	AugZk6YJukvNGpxNQivQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hL17S-0007KB-1l; Mon, 29 Apr 2019 07:54:34 +0000
-Received: from smtp.codeaurora.org ([198.145.29.96])
+	id 1hL1y0-0004mo-T0; Mon, 29 Apr 2019 08:48:52 +0000
+Received: from mail-oi1-f194.google.com ([209.85.167.194])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hL17O-0007Je-0x
- for ath10k@lists.infradead.org; Mon, 29 Apr 2019 07:54:31 +0000
-Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 266CE608D4; Mon, 29 Apr 2019 07:54:29 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1556524469;
- bh=XktlkB+zNNoISAn1fR9+feOMjtMSyGbdO2GzL8wkjiw=;
- h=From:To:Cc:Subject:Date:From;
- b=PgjLnHTlWlA6wIjzGcI7hGmzinjNHEUJoOEqxa5iDy1tgmPZyRfbBfjYa8GO8ZQiI
- uLyBKKfrKPjdlmd6qthryRv07DqzMD9bFj7Np0gx/+3MH1Pa9zpPwXi+b6aaSGdePq
- wAK6Z/y/bvmATwE7vkBtZQa5qqkyvq0PSLNV7x/M=
-X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
- pdx-caf-mail.web.codeaurora.org
-X-Spam-Level: 
-X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
- DKIM_INVALID,DKIM_SIGNED autolearn=no autolearn_force=no version=3.4.0
-Received: from localhost.localdomain (unknown [180.166.53.21])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
- (No client certificate requested)
- (Authenticated sender: wgong@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 82B47608FC;
- Mon, 29 Apr 2019 07:54:27 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1556524468;
- bh=XktlkB+zNNoISAn1fR9+feOMjtMSyGbdO2GzL8wkjiw=;
- h=From:To:Cc:Subject:Date:From;
- b=Ea60pZ/OgDafDGch9h9ZekSzewTnxjmm4mDp+kpnGkE8ue0dpjDSQou0H8I55Z78j
- lq51Rs3i77nOan9gUlVroIhtOK5YU1IQGkHWGkLnPwFsV54EXjHdrQISv6OuQMHcvE
- D8U4GaKYtDKZr1FQ3SOnzZqqSeSA+LGU9tgulnzI=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 82B47608FC
-Authentication-Results: pdx-caf-mail.web.codeaurora.org;
- dmarc=none (p=none dis=none) header.from=codeaurora.org
-Authentication-Results: pdx-caf-mail.web.codeaurora.org;
- spf=none smtp.mailfrom=wgong@codeaurora.org
-From: Wen Gong <wgong@codeaurora.org>
-To: ath10k@lists.infradead.org
-Subject: [PATCH v2] ath10k: add support for simulate crash on SDIO chip
-Date: Mon, 29 Apr 2019 15:54:17 +0800
-Message-Id: <1556524457-17469-1-git-send-email-wgong@codeaurora.org>
-X-Mailer: git-send-email 1.9.1
+ id 1hL1xw-0004mF-CU
+ for ath10k@lists.infradead.org; Mon, 29 Apr 2019 08:48:50 +0000
+Received: by mail-oi1-f194.google.com with SMTP id v23so7508671oif.8
+ for <ath10k@lists.infradead.org>; Mon, 29 Apr 2019 01:48:47 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=8DkL30STsaxgYUCGgLF1HNO5dyfcD0gOWg9WjzksmEw=;
+ b=q3W3Ql7Rlm5M9bti9D4Cl9w5LyZZdp1nl/1XdQtFKYslu8+gbiuRwceeotztn1tW7R
+ wXTqKlMT4pI6yOICCC4OYk2Hs2gHx/qvy8PdrgGCx4Y6snFxSKIVxkHyqMGZ6jFo8wT6
+ jqSy7dikAjpO+oG1OW/boHS8nE4dOb8JfLEDaFrsS3DLvCvsHgM2R4++2AWxdZRcvlFo
+ +zMMr1K7NBrD9ZGEb9SScXoZHE4DFNgy8tGoG07y+UypyXeGCVj6SDxGWniUPU53Rcci
+ qfJUIldD3wGY/84xqeeK0yT1YbPOZ8W80isA3AaT8wa43Pmd9G3025jGuBdfs81jaFrn
+ znHw==
+X-Gm-Message-State: APjAAAVMPQFvM3qre4l5BRSDt+hiMs3XpMkB7zSVTvb5uH2DnXvrxtz9
+ XQV5dwoac+wkGg9ZjBUVg5x4vXdxpy6l0fKO2DY=
+X-Google-Smtp-Source: APXvYqyLJGa7+HnvOpfZY8x6Fch1od+pFueZwowvEwEsz9duuDJOvZrKhA1V/swPDl6mm+4EGDvD+SUxVsA5B/E186I=
+X-Received: by 2002:aca:5304:: with SMTP id h4mr4059265oib.115.1556527726758; 
+ Mon, 29 Apr 2019 01:48:46 -0700 (PDT)
+MIME-Version: 1.0
+References: <2884043.Jv1Mn93hE8@aspire.rjw.lan>
+ <20190403195718.GA74723@google.com>
+ <87o94tutdz.fsf@kamboji.qca.qualcomm.com>
+In-Reply-To: <87o94tutdz.fsf@kamboji.qca.qualcomm.com>
+From: "Rafael J. Wysocki" <rafael@kernel.org>
+Date: Mon, 29 Apr 2019 10:48:35 +0200
+Message-ID: <CAJZ5v0ifD=DATprUeeO2_LGs04aEEhPB6AcGVPxWUdQaOma+ww@mail.gmail.com>
+Subject: Re: [PATCH] ath10k: Drop WARN_ON()s that always trigger during system
+ resume
+To: Kalle Valo <kvalo@codeaurora.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190429_005430_098920_4DC0BBDD 
-X-CRM114-Status: GOOD (  13.17  )
-X-Spam-Score: -2.5 (--)
+X-CRM114-CacheID: sfid-20190429_014848_426776_B100B590 
+X-CRM114-Status: GOOD (  16.71  )
+X-Spam-Score: 0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.5 points)
+ Content analysis details:   (0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [198.145.29.96 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [209.85.167.194 listed in list.dnswl.org]
+ 0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (rjwysocki[at]gmail.com)
+ 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -90,76 +80,83 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless@vger.kernel.org
-MIME-Version: 1.0
+Cc: Claire Chang <tientzu@google.com>, Sriram R <srirrama@codeaurora.org>,
+ Linux PM <linux-pm@vger.kernel.org>,
+ Pradeep Kumar Chitrapu <pradeepc@codeaurora.org>,
+ "open list:NETWORKING DRIVERS \(WIRELESS\)" <linux-wireless@vger.kernel.org>,
+ Brian Norris <briannorris@chromium.org>,
+ "Rafael J. Wysocki" <rjw@rjwysocki.net>, ath10k@lists.infradead.org,
+ Srinivas Pandruvada <srinivas.pandruvada@linux.intel.com>,
+ Todd Brandt <todd.e.brandt@intel.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-The command to simulate firmware crash:
-echo soft > /sys/kernel/debug/ieee80211/phy0/ath10k/simulate_fw_crash
+On Fri, Apr 26, 2019 at 9:18 AM Kalle Valo <kvalo@codeaurora.org> wrote:
+>
+> Brian Norris <briannorris@chromium.org> writes:
+>
+> > + Sriram, Pradeep, Claire
+> >
+> > On Sun, Mar 03, 2019 at 06:24:33PM +0100, Rafael J. Wysocki wrote:
+> >
+> > Ooh, exactly 1 month ago!
+> >
+> >> From: Rafael J. Wysocki <rafael.j.wysocki@intel.com>
+> >>
+> >> ath10k_mac_vif_chan() always returns an error for the given vif
+> >> during system-wide resume which reliably triggers two WARN_ON()s
+> >> in ath10k_bss_info_changed() and they are not particularly
+> >> useful in that code path, so drop them.
+> >>
+> >
+> > Particularly, when WOWLAN isn't enabled, we get called during resume via
+> > ieee80211_reconfig(), where we're not associated and don't have any
+> > channel contexts. AFAICT, we shouldn't need to communicate anything in
+> > particular to the firmware here, and so failing the 'if' is definitely
+> > not worth WARN-ing about.
+> >
+> > I'd love to see this get applied with:
+> >
+> > Fixes: cd93b83ad927 ("ath10k: support for multicast rate control")
+> > Fixes: f279294e9ee2 ("ath10k: add support for configuring management packet rate")
+> >
+> > and sent to stable. This has been bugging people since 4.19. Spurious
+> > WARN_ON()s can trigger reports to various crash trackers, and on some
+> > systems appear as user-visible warnings ("System problem detected").
+> >
+> >> Signed-off-by: Rafael J. Wysocki <rafael.j.wysocki@intel.com>
+> >
+> > Reviewed-by: Brian Norris <briannorris@chromium.org>
+> > Tested-by: Brian Norris <briannorris@chromium.org>
+>
+> I added these now to the commit log, thanks Brian.
+>
+> Rafael, could you please provide the hardware and firmware versions you
+> tested this on? We have so many different firmware branches to support
+> that I prefer to have that documented in the commit log. Providing
+> ath10k startup messages in dmesg are enough,
 
-It will send WMI_FORCE_FW_HANG_ASSERT to firmware, then it will trigger
-CPU interrupt status register for SDIO chip, ath10k driver need to
-configure it while enable SDIO interrupt, otherwise ath10k driver will
-not get the assert error info.
+There you go:
 
-After this change, it will success for simulate firmware crash.
+[    4.695349] ath10k_pci 0000:3a:00.0: enabling device (0000 -> 0002)
+[    4.698165] ath10k_pci 0000:3a:00.0: pci irq msi oper_irq_mode 2
+irq_mode 0 reset_mode 0
+[    4.912240] ath10k_pci 0000:3a:00.0: qca6174 hw3.2 target
+0x05030000 chip_id 0x00340aff sub 1a56:1535
+[    4.912255] ath10k_pci 0000:3a:00.0: kconfig debug 0 debugfs 0
+tracing 0 dfs 0 testmode 0
+[    4.912716] ath10k_pci 0000:3a:00.0: firmware ver
+WLAN.RM.2.0-00180-QCARMSWPZ-1 api 4 features
+wowlan,ignore-otp,no-4addr-pad crc32 75dee6c5
+[    4.982563] ath10k_pci 0000:3a:00.0: board_file api 2 bmi_id N/A
+crc32 19644295
 
-Tested with QCA6174 SDIO with firmware
-WLAN.RMH.4.4.1-00007-QCARMSWP-1.
+> I can then add it to the commit log.
 
-Signed-off-by: Wen Gong <wgong@codeaurora.org>
----
-v2: add MBOX_CPU_STATUS_ENABLE_ASSERT_MASK for fw assert check
- drivers/net/wireless/ath/ath10k/hw.h   |  1 +
- drivers/net/wireless/ath/ath10k/sdio.c | 10 ++++++++--
- 2 files changed, 9 insertions(+), 2 deletions(-)
-
-diff --git a/drivers/net/wireless/ath/ath10k/hw.h b/drivers/net/wireless/ath/ath10k/hw.h
-index 7131499..60521ed 100644
---- a/drivers/net/wireless/ath/ath10k/hw.h
-+++ b/drivers/net/wireless/ath/ath10k/hw.h
-@@ -1095,6 +1095,7 @@ struct ath10k_hw_ops {
- #define MBOX_CPU_INT_STATUS_ENABLE_ADDRESS	0x00000819
- #define MBOX_CPU_INT_STATUS_ENABLE_BIT_LSB	0
- #define MBOX_CPU_INT_STATUS_ENABLE_BIT_MASK	0x000000ff
-+#define MBOX_CPU_STATUS_ENABLE_ASSERT_MASK 0x00000001
- #define MBOX_ERROR_STATUS_ENABLE_ADDRESS	0x0000081a
- #define MBOX_ERROR_STATUS_ENABLE_RX_UNDERFLOW_LSB  1
- #define MBOX_ERROR_STATUS_ENABLE_RX_UNDERFLOW_MASK 0x00000002
-diff --git a/drivers/net/wireless/ath/ath10k/sdio.c b/drivers/net/wireless/ath/ath10k/sdio.c
-index fae56c6..1a3a7bf 100644
---- a/drivers/net/wireless/ath/ath10k/sdio.c
-+++ b/drivers/net/wireless/ath/ath10k/sdio.c
-@@ -850,6 +850,10 @@ static int ath10k_sdio_mbox_proc_cpu_intr(struct ath10k *ar)
- 
- out:
- 	mutex_unlock(&irq_data->mtx);
-+	if (cpu_int_status & MBOX_CPU_STATUS_ENABLE_ASSERT_MASK) {
-+		ath10k_err(ar, "firmware crashed!\n");
-+		queue_work(ar->workqueue, &ar->restart_work);
-+	}
- 	return ret;
- }
- 
-@@ -1495,8 +1499,10 @@ static int ath10k_sdio_hif_enable_intrs(struct ath10k *ar)
- 	regs->int_status_en |=
- 		FIELD_PREP(MBOX_INT_STATUS_ENABLE_MBOX_DATA_MASK, 1);
- 
--	/* Set up the CPU Interrupt status Register */
--	regs->cpu_int_status_en = 0;
-+	/* Set up the CPU Interrupt Status Register, enable CPU sourced interrupt #0
-+	 * #0 is used for report assertion from target
-+	 */
-+	regs->cpu_int_status_en = FIELD_PREP(MBOX_CPU_STATUS_ENABLE_ASSERT_MASK, 1);
- 
- 	/* Set up the Error Interrupt status Register */
- 	regs->err_int_status_en =
--- 
-1.9.1
-
+Still, I'm quite sure that the WARN_ON()s trigger during system resume
+regardless of the hw/fw combination.
 
 _______________________________________________
 ath10k mailing list
