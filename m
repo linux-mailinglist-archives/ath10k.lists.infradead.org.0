@@ -2,36 +2,36 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 95118164D9
-	for <lists+ath10k@lfdr.de>; Tue,  7 May 2019 15:44:55 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id BB4EB164FC
+	for <lists+ath10k@lfdr.de>; Tue,  7 May 2019 15:50:55 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
 	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=HsQcGWuKV5uvDmpc7+BDRKMkjQ5d50LgV6sGQlnpD+o=; b=YZpHvTnNuMrEYd
-	MrZoW1VWKBi4sFBSEfjgciP5YTn7lvhsCzzb862hSKMBOZi5+Sfjy3uENXRae3oUgKaB0GYwMlFoM
-	JgzsmnBZOU93N7qhrc5DDN2GOKq1T6U6plraWdUEPwwOrpTJ9/z9P+eHx1+RtzN9S4QF1SEEbwg1s
-	oUm8Z0ga5kovb0mJTDSzhdRMvbiA0OaC2Tz4iOajKKYXQMNM2cUsTNBRgKGvsnzIRHU+W4yle2ByE
-	tnSnDoWgpO8h0AopG3NRdW1Hddc6r0ypuNFEn/QbgMBpx2zDmX4wbLR+SYuLnm5aP34+48zVphidl
-	Q3tVl480LWz/eeJlL5UQ==;
+	List-Owner; bh=B2GaIOoEaZ6748VBto/MiSAhw5Y+NS2VBuaSK2F5wcA=; b=HLokdVb0KxGUnm
+	johguZOwgvH9rjH0DOGX1lA5DmmzZqCB0JDDpvPTqmOboDZb3m4COxLBNKZZmUVpzvxrtavC+8vNy
+	DCj/eu9VsN+UL/jRBOjbmqSgHr8CM9xnN0KFccni8VHgcCynHHx50vcNszM1ObxGVV4JVocyH7rrX
+	CmNeQoW1YZpFKPtF0xSrhYxR+wwjiAsLenLZPAU84B37xOKLCZV32bQ3PtRmsmjrED15pxcvhoYr1
+	i3S8nAbwgg889HXSesffGhoe65pH0EDGsH0qHpw8GvvyO7JGhLEGntK+2PMb6W2440h1aaKgM+wwg
+	fn+OmrbxAouw5m4uS0jw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hO0Oq-0006FY-Gt; Tue, 07 May 2019 13:44:52 +0000
+	id 1hO0Uf-0001q1-V4; Tue, 07 May 2019 13:50:53 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hO0Ol-0006Em-Se
- for ath10k@lists.infradead.org; Tue, 07 May 2019 13:44:49 +0000
+ id 1hO0Ub-0001oi-25
+ for ath10k@lists.infradead.org; Tue, 07 May 2019 13:50:51 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 8F8E1609CD; Tue,  7 May 2019 13:44:47 +0000 (UTC)
+ id 6B8C960DB6; Tue,  7 May 2019 13:50:48 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1557236687;
- bh=5+/CuPZbzgEEDoJkq+RXNhVRlIWuk3/hjSsNj+NCNLA=;
+ s=default; t=1557237048;
+ bh=UMGwbXcx64tBezxSNuvo+YAOX1QBmq2Crgw3gSp06pY=;
  h=Subject:From:In-Reply-To:References:To:Cc:Date:From;
- b=DCKo2cEOR9hK/0XqV98hMP0MIM3SsMvJEsWdizALA/5nWvrMBXtwxnzOlFHw+KX20
- 7rWx9KbCw+s81K/Z4tSlr4vI2oGZPpfir/C4mFk9LOlrhEnCn1TJD2hUMft1hqGFoD
- 39YwJL68BEpKO2gJvbIowjqRYykpU+mo/tUF/rl8=
+ b=F2jNQ6S9dPglpjfAefOHLfoCRBZUw2qvO8RXhQga57AASd8EH40rHyJiex/GO6zw3
+ iuGPraS3j6tFscrrgZwUiwpcS+D55OQINkTJP5hGzHeeokJ3SK4iKhudHrAQ3p8raq
+ KYRW31k+YjEaQINztptawwlGYc1MhQTp8fGjWPXs=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
@@ -43,32 +43,32 @@ Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
  (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
  (Authenticated sender: kvalo@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 395B2608FC;
- Tue,  7 May 2019 13:44:46 +0000 (UTC)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 8B6E760CEC;
+ Tue,  7 May 2019 13:50:46 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1557236687;
- bh=5+/CuPZbzgEEDoJkq+RXNhVRlIWuk3/hjSsNj+NCNLA=;
+ s=default; t=1557237047;
+ bh=UMGwbXcx64tBezxSNuvo+YAOX1QBmq2Crgw3gSp06pY=;
  h=Subject:From:In-Reply-To:References:To:Cc:From;
- b=D9cEawQDeV4pNIzwfwMWBVd6wEO5UF3N/kVdQ4mOVJgcjC0xPGwrmYM3mw+O3Wvaf
- BDbNmFOWXyF6djE22GiZyU2WmR30LlE9AAjBLAgdVH/4FBzx7zOilZGqkaovzBhdGc
- 4DLt7vj1TuPIpaykG9fT0BMU/1IvFTaKE+EWMlDg=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 395B2608FC
+ b=U7u5HFoV3zCtub88Fi06bNmoqAcolRP+yQy034+0CdJOGwWo5/WlBEzY7fWCakmTV
+ A+43FpyzmLWs4w2FX+/K96+nbSUF4B0D9Hqn0c4/5tlpP9LM/v9ucvf9rWj9FMiqZo
+ GpuCd2iTxlpCuxJmXi/hxZMAJ/s101ajYRaq/oy0=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 8B6E760CEC
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  spf=none smtp.mailfrom=kvalo@codeaurora.org
 MIME-Version: 1.0
-Subject: Re: [PATCH] ath10k: rx_duration update for fw_stats debugfs entry
+Subject: Re: [PATCH] ath10k: Fix encoding for protected management frames
 From: Kalle Valo <kvalo@codeaurora.org>
-In-Reply-To: <1552389470-28405-1-git-send-email-bpothuno@codeaurora.org>
-References: <1552389470-28405-1-git-send-email-bpothuno@codeaurora.org>
-To: Balaji Pothunoori <bpothuno@codeaurora.org>
+In-Reply-To: <1554208970-16527-1-git-send-email-pillair@codeaurora.org>
+References: <1554208970-16527-1-git-send-email-pillair@codeaurora.org>
+To: Rakesh Pillai <pillair@codeaurora.org>
 User-Agent: pwcli/0.0.0-git (https://github.com/kvalo/pwcli/) Python/2.7.12
-Message-Id: <20190507134447.8F8E1609CD@smtp.codeaurora.org>
-Date: Tue,  7 May 2019 13:44:47 +0000 (UTC)
+Message-Id: <20190507135048.6B8C960DB6@smtp.codeaurora.org>
+Date: Tue,  7 May 2019 13:50:48 +0000 (UTC)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190507_064447_941003_939D6E36 
-X-CRM114-Status: UNSURE (   6.67  )
+X-CRM114-CacheID: sfid-20190507_065049_115881_6574BA26 
+X-CRM114-Status: UNSURE (   8.07  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -96,35 +96,37 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Balaji Pothunoori <bpothuno@codeaurora.org>, linux-wireless@vger.kernel.org,
+Cc: Rakesh Pillai <pillair@codeaurora.org>, linux-wireless@vger.kernel.org,
  ath10k@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Balaji Pothunoori <bpothuno@codeaurora.org> wrote:
+Rakesh Pillai <pillair@codeaurora.org> wrote:
 
-> Currently instant rx_duration always fetching as zero
-> in fw_stats debugfs entry if extended peer stats event
-> supports.
+> Currently the protected management frames are
+> not appended with the MIC_LEN which results in
+> the protected management frames being encoded
+> incorrectly.
 > 
-> This patch updates instant rx_duration in fw_stats entry
-> based on extended peer stats and maintaining backward
-> compatibility for 10.2/10.x.
+> Add the extra space at the end of the protected
+> management frames to fix this encoding error for
+> the protected management frames.
 > 
-> Tested HW: QCA9984.
-> Tested FW: 10.4-3.6.0.1-00004.
+> Tested HW: WCN3990
+> Tested FW: WLAN.HL.3.1-00784-QCAHLSWMTPLZ-1
 > 
-> Signed-off-by: Balaji Pothunoori <bpothuno@codeaurora.org>
+> Fixes: 1807da49733e ("ath10k: wmi: add management tx by reference support over wmi")
+> Signed-off-by: Rakesh Pillai <pillair@codeaurora.org>
 > Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 
 Patch applied to ath-next branch of ath.git, thanks.
 
-5c51875c0943 ath10k: rx_duration update for fw_stats debugfs entry
+42f1bc43e6a9 ath10k: Fix encoding for protected management frames
 
 -- 
-https://patchwork.kernel.org/patch/10849119/
+https://patchwork.kernel.org/patch/10881571/
 
 https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
 
