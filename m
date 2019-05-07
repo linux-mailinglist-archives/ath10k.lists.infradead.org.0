@@ -2,36 +2,36 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 941C81653F
-	for <lists+ath10k@lfdr.de>; Tue,  7 May 2019 15:58:38 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4E5CD1654F
+	for <lists+ath10k@lfdr.de>; Tue,  7 May 2019 16:02:18 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
 	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=femOkXCEdeYbj6JsKXcZ+9NVGx6Dn5fTji+JzwLhOmQ=; b=ZdmA8XqhVCIFCa
-	nLJixLbO41a6UFfLjPWQ7Ckg5oOW4BqYWJaQZT+4kZBPydUlNG2EPlCEiP5ONhugajY4dHhp0yUjX
-	BjkKZwHSg4i3w/MNc1ozT3Br0XtCQRpVh0Jb0Xxr+LVxvZ0inl9nacPs9nluGsSb+XYWEia9ztO18
-	AxTUw9Y69ebu22lIdALty8YuKKC0wzdvA4A5S+LT/ny3IEpKcDdkbLwXRKomgiSC5dtEcm95qPRK3
-	HKByAIFJMoNgJzoch2MGP9bZGGJmD/oLTjgmQj0nXwon5YrcL9urY8XzstUqgFeD9/iIfvI6Ey0cT
-	qq/he/CL+r7r2eKdKQSw==;
+	List-Owner; bh=+iCA4kQgUVvPcHAxqCrllqeJpe8g7El5QB4CAFIr//Y=; b=fQN8KatHySd3BV
+	JUwleUbprKFycz3qsDo2MHpaooQGwymfWuVhldKMRpdwRSRdniZCskcIq0XwuzjWSC11ZSWxFahjM
+	FtfJZOOdfavP/CsFPtVVbUyRLVfLNjntj1gE7DOsdXBh+NVXZIDrsNGzrRa5jZG9/qEQALitYq5iv
+	EnqjLof95mAB+FLqNMGvJ5SIlRPNziy8zVtUeopXcba1ad2lDloaeVQRTviFEpPP25jCuDYqyVhRR
+	zfhC7a0GSQ96Nce+djdjKrZQImMTVMvNKdwbjUiMr6wgUrPY7CDJziSlKE8XssmIv8KwNRZWs3Pt5
+	IxDHOX8xEuGcEGx5Vxyw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hO0c8-0006GO-C7; Tue, 07 May 2019 13:58:36 +0000
+	id 1hO0ff-0007uJ-UM; Tue, 07 May 2019 14:02:15 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hO0c4-0006G3-MY
- for ath10k@lists.infradead.org; Tue, 07 May 2019 13:58:34 +0000
+ id 1hO0fY-0007ts-IW
+ for ath10k@lists.infradead.org; Tue, 07 May 2019 14:02:13 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 2042360AA8; Tue,  7 May 2019 13:58:31 +0000 (UTC)
+ id D214060350; Tue,  7 May 2019 14:02:07 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1557237512;
- bh=UVrAVR71DeqnGsG77IgvmH4NMdGJDIS8VmhtMoLwRy8=;
+ s=default; t=1557237727;
+ bh=/hVlbXyQQMjDGxfdnaO6GMk/i/CPNdy0bGA6g5+p8MU=;
  h=Subject:From:In-Reply-To:References:To:Cc:Date:From;
- b=PquEXDySxJX1ksEX6xIZ7PmL218LxHE838M7dZlqhkJPxyjkX/8dniepnkFsxotf9
- wLEsgpCfuuW0kCBJXNiB7rQpoXaJpHHiYB4woJUs5KxbIbXwv4FhCCwWa46dWciX/B
- iV71FRD11ndArRLiGFLmbJD34aw3lcNU5fmpYr84=
+ b=XzPzc0CbrtyMTXrT98hjmMKNnB0JGzOvtNeU3AQgAfPYOrznKpj3HsmDaBPhCTgLD
+ 7Job7ZRtmkKverycSu49cenU0tE2FcJySUK9w2HooeNCK6yBx7NnPS6UL2p5CBYlIM
+ ck8vP9AbjWcJdgqRreN3Zkbd9rOGfDcnFvUnvxs8=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
@@ -43,32 +43,32 @@ Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
  (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
  (Authenticated sender: kvalo@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 82B75608FC;
- Tue,  7 May 2019 13:58:30 +0000 (UTC)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 56CE26016D;
+ Tue,  7 May 2019 14:02:06 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1557237511;
- bh=UVrAVR71DeqnGsG77IgvmH4NMdGJDIS8VmhtMoLwRy8=;
+ s=default; t=1557237727;
+ bh=/hVlbXyQQMjDGxfdnaO6GMk/i/CPNdy0bGA6g5+p8MU=;
  h=Subject:From:In-Reply-To:References:To:Cc:From;
- b=Wswpti8RiRXyjvxNrIjFLGsIZx+UOLVK90mMmw3Dbv8c2nhrLzN/hf9pjIxkDfoT8
- 17T7VwfGMTdh7lyXR5ofRhNiw6R9ubsW7mkSDkaG3XO51roAC8sJPQK9e22MIEwctg
- glyYJ7/pXb7v/pYUyZEYninTV7xlZan4NXUMNKWc=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 82B75608FC
+ b=TJfZ4KbGz/dcV6dG6VXKhpgw6pxAZIyfxS1lRsd3c0Wt940c9MsC9Jb16oe+X1DdA
+ l3sZCXEbPwTKNRjTxbfUEuDqp2xxN3Gntzxoe0nA+bC5S4dwFdVkx3psFhGbODhxYN
+ dbgIH0lHoO74t4u+cTgzqB4p8Bf9GKwZ9iOdNYd0=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 56CE26016D
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  spf=none smtp.mailfrom=kvalo@codeaurora.org
 MIME-Version: 1.0
-Subject: Re: [PATCH] ath10k: change swap mail box config for UTF mode of SDIO
+Subject: Re: [PATCH 1/3] ath10k: Add wmi tlv vdev subtype for mesh in WCN3990
 From: Kalle Valo <kvalo@codeaurora.org>
-In-Reply-To: <1554870654-4236-1-git-send-email-wgong@codeaurora.org>
-References: <1554870654-4236-1-git-send-email-wgong@codeaurora.org>
-To: Wen Gong <wgong@codeaurora.org>
+In-Reply-To: <1555489907-30117-2-git-send-email-svishnoi@codeaurora.org>
+References: <1555489907-30117-2-git-send-email-svishnoi@codeaurora.org>
+To: Surabhi Vishnoi <svishnoi@codeaurora.org>
 User-Agent: pwcli/0.0.0-git (https://github.com/kvalo/pwcli/) Python/2.7.12
-Message-Id: <20190507135832.2042360AA8@smtp.codeaurora.org>
-Date: Tue,  7 May 2019 13:58:31 +0000 (UTC)
+Message-Id: <20190507140207.D214060350@smtp.codeaurora.org>
+Date: Tue,  7 May 2019 14:02:07 +0000 (UTC)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190507_065832_748737_3B019D04 
-X-CRM114-Status: UNSURE (   8.52  )
+X-CRM114-CacheID: sfid-20190507_070208_631078_80CC92E4 
+X-CRM114-Status: UNSURE (   6.71  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -96,34 +96,34 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org
+Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
+ Surabhi Vishnoi <svishnoi@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Wen Gong <wgong@codeaurora.org> wrote:
+Surabhi Vishnoi <svishnoi@codeaurora.org> wrote:
 
-> For SDIO chip, it does not have HTT connect step in boot phase of UTF
-> mode, so it does not need the swap configuration for UTF mode, otherwise
-> it will trigger UTF load fail. For normal mode, it is swap between HTT
-> and WMI, for UTF mode, it does not have HTT, so it can not swap between
-> HTT and WMI.
+> There is a disparity in wmi and wmi tlv vdev subtype
+> enum for WMI_VDEV_SUBTYPE_MESH_11S.
 > 
-> Disable swap mail box for UTF mode will let UTF mode load success.
+> Add different enum for wmi tlv vdev subtype to support
+> vdev of subtype mesh 11s for WCN3990.
 > 
-> Tested with QCA6174 SDIO with firmware
-> WLAN.RMH.4.4.1-00007-QCARMSWP-1.
+> Tested HW: WCN3990
 > 
-> Signed-off-by: Wen Gong <wgong@codeaurora.org>
+> Signed-off-by: Surabhi Vishnoi <svishnoi@codeaurora.org>
 > Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 
-Patch applied to ath-next branch of ath.git, thanks.
+3 patches applied to ath-next branch of ath.git, thanks.
 
-8cdee1affe90 ath10k: change swap mail box config for UTF mode of SDIO
+a7368c395fc3 ath10k: Add wmi tlv vdev subtype for mesh in WCN3990
+97354f2c4327 ath10k: Do not send probe response template for mesh
+7835d8f8792d ath10k: Add wmi tlv service map for mesh 11s
 
 -- 
-https://patchwork.kernel.org/patch/10893131/
+https://patchwork.kernel.org/patch/10904959/
 
 https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
 
