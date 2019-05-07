@@ -2,36 +2,36 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1697E16558
-	for <lists+ath10k@lfdr.de>; Tue,  7 May 2019 16:04:35 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E72E51655A
+	for <lists+ath10k@lfdr.de>; Tue,  7 May 2019 16:05:46 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
 	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ete0FO/sxbMZhEzDhglerK/a/KZ1C8O3r5HnBTJw9hU=; b=aIEz5ifh/IlWJb
-	01yQgYRIPBgFghemonmMaj2yIUoDbz8IWzdp7tBmRDWJjO+ShjnpBePuQb5f6B3Y50/VDS47Hvs2F
-	L6R7gO1jgDwVayYqASXFu7Bs9zr+sG2ENBa8X6QKMf6C1cMpF4UI1hzuLzFKSFbm2ULXHcSwI95eU
-	xctOgX5KSbSazCUI3dJ1/UIM0s5gjlYZwK1650LSM6YE22nqzDltbQk8Ia0P2ykGvDyW5nM2ngZz/
-	jWz6rrG0QaQbyddLzDNj1vTzfKETnFOmk3OhCwlXQK48RGjlgZNPidaGs+VQGcLiPO1Swz0hw+FRc
-	0zKJR6w7dVhaRnuaXd6g==;
+	List-Owner; bh=ZXdhWY6nq/bgvqdvDoy72e2OwuQ0oCUP5FF1yAHVf9k=; b=YNDDbLCYlC8wUI
+	MG9DWAZB+l+x5hEwummWZoB/CpAb6EHI7vYRkf8+yRa8C9fGGxoh2cxhePeKaQdB84UM6ltx+oXqH
+	05XffHpTBj10NZIJUKldkXK4XK0KBe6SyOzkpwtI40Qdwk5jGy6T6DEo9YjBgRAcHG3zQKBVxo/Ta
+	Rk0LWjB+xX6KKTkgNxWuWjQS8ev8uWPxiRdu0e7A/S2MY1+3b094zcU3LueVtqkHODaeKyowwwi83
+	NZcBDRr9924MaOyJD6HM2toa2Ibh4O1KLo/xp+SSp8jJT0EnozhYqYMKkmKo4QPbbdq7VGdSlzX68
+	3oM/zG5TNeaBE44KSoPg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hO0hq-00089i-13; Tue, 07 May 2019 14:04:30 +0000
+	id 1hO0j3-000114-8P; Tue, 07 May 2019 14:05:45 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hO0hj-00089E-Vq
- for ath10k@lists.infradead.org; Tue, 07 May 2019 14:04:27 +0000
+ id 1hO0iw-00010j-QP
+ for ath10k@lists.infradead.org; Tue, 07 May 2019 14:05:43 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id AF01060A33; Tue,  7 May 2019 14:04:23 +0000 (UTC)
+ id 7B155609CD; Tue,  7 May 2019 14:05:38 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1557237863;
- bh=Rh2Tb9urtGdokt8As1N1nKrD1+2/gAmYvJ/otuz1q7k=;
+ s=default; t=1557237938;
+ bh=v7qjRgtjkDLbuRHaqLLhB5f9cQm29Ik3EIwdZG4r99A=;
  h=Subject:From:In-Reply-To:References:To:Cc:Date:From;
- b=YbZrBmPSWNqypS0/n3YVqCzBs+FoTHC3m9TDZqFOzA9xLrmAci9nWIcmH+Jd89SBB
- RoxXcBdoGeUQRWu2pKjgrcNpowcOJJ1TQ7U9K+lWWSL7FNmvjEPjuv2sdpvd131s7C
- SXHG9foVBnVywWOBDgRLcPX+dRpSgBMogLhXQtdY=
+ b=UFGjFjQITF+DBTDljMzv4yOq1sBytKdjtv5yvRmtHArROKsg2CFcvAxQvD0JUfVha
+ 2UtUGZlLVBfb/VMzgMvSPH8anJY7qdsLlK4uc/m6fImV+TF5apW78YElnhts+TqBJK
+ /01NCwrwxHaHUFenxwFphJal1W398Vx3jY8vchOs=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
@@ -43,32 +43,32 @@ Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
  (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
  (Authenticated sender: kvalo@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id A7C7E60350;
- Tue,  7 May 2019 14:04:22 +0000 (UTC)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 0778460350;
+ Tue,  7 May 2019 14:05:36 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1557237863;
- bh=Rh2Tb9urtGdokt8As1N1nKrD1+2/gAmYvJ/otuz1q7k=;
+ s=default; t=1557237938;
+ bh=v7qjRgtjkDLbuRHaqLLhB5f9cQm29Ik3EIwdZG4r99A=;
  h=Subject:From:In-Reply-To:References:To:Cc:From;
- b=giYbXG1QioGxoB6xlpg3U/TJw8iZmWOvvyIimkrV+zD3XAzhApT868BbyqY4GzS1H
- J1UNhR3qzldt2OUU/rHX+L457FEhZKrjc1fXdIRiVW9mOXcHjDzyoJ4McdMOLVFAjR
- vSCdxy5YplTpfENQgOwkJLZHuEtxOiETPdbj715M=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org A7C7E60350
+ b=gxwYORSWZr+tTAkFgtn5cLyC30eQFL00bJ5NHd5fHhqTGW7ZXyzOR6cKylm2LepB2
+ VIo8MtTO2tybLNxOG6aLNs7LWbdul5sAARWp1pCTNjHGBS7pUlQSWHmtvM0jrk0wGh
+ e/eOUKFYSCAH5+CWMdqIZL4EFmuY6/3A+q9gZp8Q=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 0778460350
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  spf=none smtp.mailfrom=kvalo@codeaurora.org
 MIME-Version: 1.0
-Subject: Re: [PATCH] ath10k: Check tx_stats before use it
+Subject: Re: [PATCH v2] ath10k: fix different tx duration output
 From: Kalle Valo <kvalo@codeaurora.org>
-In-Reply-To: <1556804210-28599-1-git-send-email-yintang@codeaurora.org>
-References: <1556804210-28599-1-git-send-email-yintang@codeaurora.org>
-To: Yingying Tang <yintang@codeaurora.org>
+In-Reply-To: <1555489045-18070-1-git-send-email-leiwa@codeaurora.org>
+References: <1555489045-18070-1-git-send-email-leiwa@codeaurora.org>
+To: Lei Wang <leiwa@codeaurora.org>
 User-Agent: pwcli/0.0.0-git (https://github.com/kvalo/pwcli/) Python/2.7.12
-Message-Id: <20190507140423.AF01060A33@smtp.codeaurora.org>
-Date: Tue,  7 May 2019 14:04:23 +0000 (UTC)
+Message-Id: <20190507140538.7B155609CD@smtp.codeaurora.org>
+Date: Tue,  7 May 2019 14:05:38 +0000 (UTC)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190507_070424_044534_990B3EB7 
-X-CRM114-Status: UNSURE (   7.44  )
+X-CRM114-CacheID: sfid-20190507_070538_883956_71949888 
+X-CRM114-Status: UNSURE (   6.18  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -96,28 +96,30 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org
+Cc: Lei Wang <leiwa@codeaurora.org>, linux-wireless@vger.kernel.org,
+ ath10k@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Yingying Tang <yintang@codeaurora.org> wrote:
+Lei Wang <leiwa@codeaurora.org> wrote:
 
-> tx_stats will be freed and set to NULL before debugfs_sta node is
-> removed in station disconnetion process. So if read the debugfs_sta
-> node there may be NULL pointer error. Add check for tx_stats before
-> use it to resove this issue.
+> TX duration output of tx_stats in debugfs and station dump had big
+> difference because they got tx duration value from different statistic
+> data. We should use the same statistic data.
 > 
-> Signed-off-by: Yingying Tang <yintang@codeaurora.org>
+> Tested: QCA988X with firmware ver 10.2.4-1.0-00043
+> 
+> Signed-off-by: Lei Wang <leiwa@codeaurora.org>
 > Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 
-Patch applied to ath-next branch of ath.git, thanks.
+Dropping per discussion, please resend once everything is clarified.
 
-9e7251fa3897 ath10k: Check tx_stats before use it
+Patch set to Changes Requested.
 
 -- 
-https://patchwork.kernel.org/patch/10926861/
+https://patchwork.kernel.org/patch/10904909/
 
 https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
 
