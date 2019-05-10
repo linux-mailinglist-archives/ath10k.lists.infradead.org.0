@@ -2,73 +2,69 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id BE39019D69
-	for <lists+ath10k@lfdr.de>; Fri, 10 May 2019 14:47:31 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id F31AA19E87
+	for <lists+ath10k@lfdr.de>; Fri, 10 May 2019 15:54:20 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=wsB7TGyKI4jzCQQGrksmmaS6/AE8VP6bwJl7Ww5JyFQ=; b=soX6yQjkBOrDeB
-	KJkj5ZtL4k70pmaci2Q3hHWgjK+ISIN1/7O4IO1JceqLbb8bV9qHqxClt0FKZOz+Wh5n0eyDa21Ad
-	dYsgEvC4YoneBxpQRTR5ADGQ9u17lbUvAweXJaNGxaXqTXuzBkhFxhZJgMmMaNOnmXchuKdri1dgw
-	jGVC6LGlTGp3eBJ6dHkY9BzdXcthseyfeJib/EulPZD1FnyRM3gKPDY0727wtO8KmLymygYK05U+Z
-	FIHGNMJIRC3uHmXBxixf84SY4ry7FZ4+QmD3hWj2LyGEnGROr0GcEtNomlpzpy2iREbbCJ4yhZf7S
-	Ewl9NCEIiafdbSEelJNA==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
+	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=OEnmCC14ltiy1LOm6wL/u8CJ8UiBqyC7QtdJvD2+m8s=; b=UXEi3vzeHlt+lKPHrvnO2y6A0
+	TYU0h/Dkn4XVq4LKLA/26sGyzk3tKsK/an0aZRXRWnmPNnnxJ/tGOry0Cnavkj0p5Pm7KhYPEypDI
+	7CSIIjsy+0dinf9ZmpP8te3pOCg7uwSEUY2stjME8aL3wSH3kTUhNXBZe0LFvAN2mfuc5dhHsAUJp
+	Lstqlno6hczCMhcWmexATLX41w4dcaXXey9+gRrTtJe7C1TeBfhjGJi+Y1Np08G8Q1M/eieIaUhNm
+	JAvVxqWxwpQIwqMTIFk3ppIIjgvdszod97IHM/e3R4HEVjUaJf7QypU+tV6y75EEaOU0CjtDTZJcc
+	cW6Sn4y1A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hP4vx-0000yF-QG; Fri, 10 May 2019 12:47:29 +0000
-Received: from mail-wm1-f67.google.com ([209.85.128.67])
- by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hP4vt-0000xh-Ru
- for ath10k@lists.infradead.org; Fri, 10 May 2019 12:47:27 +0000
-Received: by mail-wm1-f67.google.com with SMTP id 7so1398640wmo.2
- for <ath10k@lists.infradead.org>; Fri, 10 May 2019 05:47:25 -0700 (PDT)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=NfKfWn7DrHOX0wH6sUILo7m2dpOkoTaI5+lqVCQ9btI=;
- b=ea5OlnROMf2yj3dzX+6IITRy9ln4WmOB8QkZ4tEQjsK/Z4xcbE/Bl4kfjx5aWjb8Nr
- cQQKCJZ6LcQ2DQtsqCp3/TrmhqkKlu73R7AmSpyjBsTSKOnZEBcIsebQacfqm81Z92mO
- h/XY2TjuslbBXEuMblV81Z0WdiNfMhLAfcT6IcIwSUalKFX5KlqYrZ16EFq1s8wU8zeW
- Ba1HkM2KtKTS7rfy4mxUytMVPXHS1VTPFtuDK8jJ2c74bvf2aqFuP007yXDeMU/rJHyB
- 8lktTsrO2KeCOUl/Uvvzyi7JnN8iiJaNmxUhPVC4phYRKUywB52M4qBrI2hfsXvyVhXn
- X8RQ==
-X-Gm-Message-State: APjAAAWugRgyklVWd4op+9RLpBHj3B7yU4JQFc7Iq3MGtwAxU+BM+19E
- 8lcu+5SzLnLp+MYPCn9B8wnSMWH6vH0CgAaLJy4w5w==
-X-Google-Smtp-Source: APXvYqwl4fmlBHIWyOyXhNJ/RQGdsE5FAvjUfSmvQcPC2FPI3JGABeHdQ42/np61DNZCj1ClM0pGOlO00Rgfmaq8dbU=
-X-Received: by 2002:a05:600c:2283:: with SMTP id
- 3mr6662373wmf.125.1557492443500; 
- Fri, 10 May 2019 05:47:23 -0700 (PDT)
-MIME-Version: 1.0
-References: <CAHk-=wim_asb1MRpis39SDghBNN5SpKDvUvF6cTtwa9w8cS8_Q@mail.gmail.com>
-In-Reply-To: <CAHk-=wim_asb1MRpis39SDghBNN5SpKDvUvF6cTtwa9w8cS8_Q@mail.gmail.com>
-From: Adrian Chadd <adrian@freebsd.org>
-Date: Fri, 10 May 2019 05:47:10 -0700
-Message-ID: <CAJ-Vmonr0wbSV4hgcF=BWVM9-y3axAuTgsfys8q7cTP96FbYgQ@mail.gmail.com>
+	id 1hP5yb-0005B8-42; Fri, 10 May 2019 13:54:17 +0000
+Received: from [208.74.158.174] (helo=mail3.candelatech.com)
+ by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
+ id 1hP5yX-0005AV-0W
+ for ath10k@lists.infradead.org; Fri, 10 May 2019 13:54:14 +0000
+Received: from [192.168.1.47] (104-235-164-208.evrt.wa.frontiernet.net
+ [104.235.164.208])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested)
+ by mail3.candelatech.com (Postfix) with ESMTPSA id CD96513C283;
+ Fri, 10 May 2019 06:54:11 -0700 (PDT)
+DKIM-Filter: OpenDKIM Filter v2.11.0 mail3.candelatech.com CD96513C283
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=candelatech.com;
+ s=default; t=1557496452;
+ bh=SD2iaM25OGZpVoHMXCi7d1tiOWYCcYtQ0kNfQVS6+Ec=;
+ h=Subject:To:References:Cc:From:Date:In-Reply-To:From;
+ b=U22QaP23wkNdjAUxm+UXVnDaQFKGPQzgvmRnDt+tmjZLauikdxmmLoj/MNAIXXQh5
+ QyYlF/2JfsG/Yy09B8u50VuLXfSqu5SITtBkDcefGt08ZIMEEIH/Hj9TqU+EXsHQDD
+ KCsuCmyyMOWapBOMGjxAbbPnt/Ag52xObnSz48Ro=
 Subject: Re: ath10k: wmi service ready event not received
-To: Linus Torvalds <torvalds@linux-foundation.org>
+To: Linus Torvalds <torvalds@linux-foundation.org>,
+ Kalle Valo <kvalo@codeaurora.org>
+References: <CAHk-=wim_asb1MRpis39SDghBNN5SpKDvUvF6cTtwa9w8cS8_Q@mail.gmail.com>
+From: Ben Greear <greearb@candelatech.com>
+Message-ID: <6e530d73-91e9-faaf-31d0-cd5fadc66ffc@candelatech.com>
+Date: Fri, 10 May 2019 06:54:11 -0700
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101
+ Thunderbird/45.8.0
+MIME-Version: 1.0
+In-Reply-To: <CAHk-=wim_asb1MRpis39SDghBNN5SpKDvUvF6cTtwa9w8cS8_Q@mail.gmail.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190510_054725_904940_D34EA886 
-X-CRM114-Status: GOOD (  13.83  )
-X-Spam-Score: 0.3 (/)
+X-CRM114-CacheID: sfid-20190510_065413_097796_816BA39D 
+X-CRM114-Status: GOOD (  16.32  )
+X-Spam-Score: 1.1 (+)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.3 points)
+ Content analysis details:   (1.1 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.128.67 listed in list.dnswl.org]
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.128.67 listed in wl.mailspike.net]
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (adrian.chadd[at]gmail.com)
- 0.1 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -80,15 +76,15 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: ath10k@lists.infradead.org, Kalle Valo <kvalo@codeaurora.org>
-Content-Type: text/plain; charset="us-ascii"
+Cc: ath10k@lists.infradead.org
 Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On Fri, 10 May 2019 at 05:28, Linus Torvalds
-<torvalds@linux-foundation.org> wrote:
->
+
+
+On 05/10/2019 05:28 AM, Linus Torvalds wrote:
 > Hmm.
 >
 > I have a nice new laptop, and it works fine. Except today it lost
@@ -103,11 +99,7 @@ On Fri, 10 May 2019 at 05:28, Linus Torvalds
 >   ath10k_pci 0000:02:00.0: could not probe fw (-110)
 >
 > and then nothing works. -110 is ETIMEDOUT, fwiw.
-
-Which NIC is it?
-
-That's super, super early after NIC wake-up.
-
+>
 > Rebooting got wireless back. It's possible I could have done something
 > less drastic, but I was thinking that it would be the new kernel and
 > rebooted into an older version. But then rebooting into the new one
@@ -116,20 +108,23 @@ That's super, super early after NIC wake-up.
 >
 > Is there anything I can do to debug this if it happens again?
 
-I'd see whether it detached from the PCI bus or not - sometimes a
-firmware crash super early does that. You could also rmmod reload
-ath10k/ath10k_pci to see if that's enough. It's almost always enough.
+Please provide 'lspci' or other info on the NIC chipset, for reference.
 
-We've been poking at this in FreeBSD for a bit. Some NICs don't reset
-right after PCI reset is deasserted; some don't like being reset via
-registers and need a PCI bus reset; some just take longer to wake-up
-than the service ready event timeout is. Some just .. crash super
-early :-) Someone ended up submitting a patch to my driver fork that
-attempts this a few times in a loop with resets in between to ensure
-it does load at boot.
+Sometimes a work-around is:
 
+rmmod ath10k_pci ath10k_core; modprobe ath10k_pci
 
--adrian
+Sometimes you will get a firmware register dump in this crash case, and then someone
+from QCA might can get a backtrace if you post that with the chipset info and
+such (or if it is one of the NICs my ath10k-ct firmware supports and you can reproduce
+an issue with that firmware, then I can debug it).
+
+Thanks,
+Ben
+
+-- 
+Ben Greear <greearb@candelatech.com>
+Candela Technologies Inc  http://www.candelatech.com
 
 _______________________________________________
 ath10k mailing list
