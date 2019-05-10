@@ -2,59 +2,79 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 057C119EA9
-	for <lists+ath10k@lfdr.de>; Fri, 10 May 2019 16:04:25 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A234719F17
+	for <lists+ath10k@lfdr.de>; Fri, 10 May 2019 16:25:30 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
-	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=vMQG50Qt/GdSUeCrH79Fq0Gcr96emaCkU02Q3WTyuTQ=; b=t9oal4D4pwp4JrEZN/OHAlYSJ
-	xyT+GajJ4o34xlBqZU8odm9beEeuy16Rqo9oOMiJVfnJkwYMfkviv7OaESWRO4acXHVoH/a1AUHEC
-	rvB8VwZjK712LFNUT7N5db146+9IUue5B4wPONsCpRJdVftHfNzEreZeVTRShUU4hyMlo9hHAbzz6
-	KRlchfGor+GTuMa1KKNVuEVZmISBtoZpukP49i9F9BN9AuYtx3DJ/jY+0IO7PGoICfCKZi34G4fqf
-	7sFeCtaawqcR+QhnqzW3qC96c49gg52ttGeC2PEOCUGQdDdF5MR8Ey8LH7WcPR/X63DfS9VhFiZKr
-	39AsYcKyQ==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
+	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=JIB4IOazk8M4y1tbPK05rSxS3L+kAAPTzYqJPFK2Dq8=; b=dbA8vCr9i311r7
+	7LAnw+pvTnQmt3odtdK/RER4eqfmGTix8n/Wi2a4eLvBusyi9g0wUZndyyt2njcHDWPHFWpI8dk7m
+	DstL1hAYJ5z8xIUhGXTD+66zKZ5Wm7N+l1DYbD7KiGhc6eaMb5bxJQmS40Nxb7svN+ApWjFr44AZx
+	bJzpemgLeml4Z/WkaFSnsEN8NDuFmhHKfgQEC33Bx0Hx1Ms37T/9U15TRheNSufvKefCOn6DqPqMy
+	shTGXE6KaiPADN000USa1dr6uTi/JDUjUlgYcKTL1kCEsDVExzutqj2+4kichFEpT4oBW3T6JqjRW
+	j0ugzSP/i9TrZnBroubg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hP68M-0001FV-CZ; Fri, 10 May 2019 14:04:22 +0000
-Received: from [208.74.158.174] (helo=mail3.candelatech.com)
- by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hP68I-0001Em-5D
- for ath10k@lists.infradead.org; Fri, 10 May 2019 14:04:19 +0000
-Received: from [192.168.1.47] (104-235-164-208.evrt.wa.frontiernet.net
- [104.235.164.208])
+	id 1hP6Sm-0001xD-Ja; Fri, 10 May 2019 14:25:28 +0000
+Received: from smtp.codeaurora.org ([198.145.29.96])
+ by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
+ id 1hP6Si-0001wc-Ii
+ for ath10k@lists.infradead.org; Fri, 10 May 2019 14:25:25 +0000
+Received: by smtp.codeaurora.org (Postfix, from userid 1000)
+ id C9C716086B; Fri, 10 May 2019 14:25:22 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1557498322;
+ bh=TOjSb30Zdcej/HdIITsAg0UehrXktW2IehXD/8hozkg=;
+ h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
+ b=iIP6N+sDsXk0HN40iq6bYwZR+vyUZHzF6WNVZM7F9LKTtAn271NdW6qqUK4OGpU6O
+ 13lMyQAjiCc7kwB+rTl6nDvJfWGojgnPshsr4yNK55az/WJnKxKSROaxQKBAY69UD+
+ EhfNYN/QN3cZwdlO5+Hy1dvcA9TWwcdowrePwl94=
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ pdx-caf-mail.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
+ DKIM_INVALID,DKIM_SIGNED autolearn=no autolearn_force=no version=3.4.0
+Received: from x230.qca.qualcomm.com (unknown [85.235.16.11])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail3.candelatech.com (Postfix) with ESMTPSA id 475A513C283;
- Fri, 10 May 2019 07:04:17 -0700 (PDT)
-DKIM-Filter: OpenDKIM Filter v2.11.0 mail3.candelatech.com 475A513C283
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=candelatech.com;
- s=default; t=1557497057;
- bh=UT7XXwLjv+cm5Bmav1pIo62BEvkN/zYwL30xac0ShlA=;
- h=Subject:To:References:Cc:From:Date:In-Reply-To:From;
- b=nkWtPSrlPt6sNP/H4ZxnnzlbLA963kuEK05IWqfADSYK72x+VAMDGIJiZJiaqA2TV
- IvwpBjytGHqiVmYPW11uuGvG+BNY/JVfcXL3XNtBQGJk/SS2N/e3GionZPSVMK9eDa
- 6cwf+lL9w64UmTztIbnVE3nFS7NCiUPwLGuiIi2s=
-Subject: Re: [PATCH] mac80211: remove warning message
-To: Yibo Zhao <yiboz@codeaurora.org>, linux-wireless@vger.kernel.org
-References: <1557471662-1355-1-git-send-email-yiboz@codeaurora.org>
-From: Ben Greear <greearb@candelatech.com>
-Message-ID: <7119f24f-5b88-629a-d507-73776b841f65@candelatech.com>
-Date: Fri, 10 May 2019 07:04:16 -0700
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101
- Thunderbird/45.8.0
+ (Authenticated sender: kvalo@smtp.codeaurora.org)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id CAC7D60275;
+ Fri, 10 May 2019 14:25:21 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1557498322;
+ bh=TOjSb30Zdcej/HdIITsAg0UehrXktW2IehXD/8hozkg=;
+ h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
+ b=iIP6N+sDsXk0HN40iq6bYwZR+vyUZHzF6WNVZM7F9LKTtAn271NdW6qqUK4OGpU6O
+ 13lMyQAjiCc7kwB+rTl6nDvJfWGojgnPshsr4yNK55az/WJnKxKSROaxQKBAY69UD+
+ EhfNYN/QN3cZwdlO5+Hy1dvcA9TWwcdowrePwl94=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org CAC7D60275
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ spf=none smtp.mailfrom=kvalo@codeaurora.org
+From: Kalle Valo <kvalo@codeaurora.org>
+To: Linus Torvalds <torvalds@linux-foundation.org>
+Subject: Re: ath10k: wmi service ready event not received
+References: <CAHk-=wim_asb1MRpis39SDghBNN5SpKDvUvF6cTtwa9w8cS8_Q@mail.gmail.com>
+Date: Fri, 10 May 2019 17:25:19 +0300
+In-Reply-To: <CAHk-=wim_asb1MRpis39SDghBNN5SpKDvUvF6cTtwa9w8cS8_Q@mail.gmail.com>
+ (Linus Torvalds's message of "Fri, 10 May 2019 05:28:11 -0700")
+Message-ID: <87r296jsj4.fsf@codeaurora.org>
+User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/24.5 (gnu/linux)
 MIME-Version: 1.0
-In-Reply-To: <1557471662-1355-1-git-send-email-yiboz@codeaurora.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190510_070418_224426_6933F633 
-X-CRM114-Status: GOOD (  19.63  )
-X-Spam-Score: 1.1 (+)
+X-CRM114-CacheID: sfid-20190510_072524_639915_F301D53B 
+X-CRM114-Status: GOOD (  15.42  )
+X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (1.1 points)
+ Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [198.145.29.96 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -63,7 +83,6 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  envelope-from domain
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
- 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -75,64 +94,44 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Zhi Chen <zhichen@codeaurora.org>, ath10k@lists.infradead.org
+Cc: ath10k@lists.infradead.org
+Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
+Linus Torvalds <torvalds@linux-foundation.org> writes:
 
+> I have a nice new laptop, and it works fine. Except today it lost
+> wireless, and I have no idea why.
+>
+> It's not happened before (but it's fairly new and I'm actually on my
+> first trip with it), so I don't know how common this is, but the
+> kernel messages seem to say that the cause of it was
+>
+>   ath10k_pci 0000:02:00.0: wmi service ready event not received
+>   ath10k_pci 0000:02:00.0: could not init core (-110)
+>   ath10k_pci 0000:02:00.0: could not probe fw (-110)
+>
+> and then nothing works. -110 is ETIMEDOUT, fwiw.
+>
+> Rebooting got wireless back. It's possible I could have done something
+> less drastic, but I was thinking that it would be the new kernel and
+> rebooted into an older version. But then rebooting into the new one
+> afterwards (double-checking before starting a bisect) and it all
+> worked.
+>
+> Is there anything I can do to debug this if it happens again?
 
-On 05/10/2019 12:01 AM, Yibo Zhao wrote:
-> In multiple SSID cases, it takes time to prepare every AP interface
-> to be ready in initializing phase. If a sta already knows everything it
-> needs to join one of the APs and sends authentication to the AP which
-> is not fully prepared at this point of time, AP's channel context
-> could be NULL. As a result, warning message occurs.
->
-> Even worse, if the AP is under attack via tools such as MDK3 and massive
-> authentication requests are received in a very short time, console will
-> be hung due to kernel warning messages.
-
-Since it is a WARN_ON_ONCE, how it the console hang due to warnings?  You should
-get no more than once per boot?
-
-I have no problem with removing it though.  Seems a harmless splat and I removed
-it from my tree some time back as well.
-
-Thanks,
-Ben
-
->
-> If this case can be hit during normal functionality, there should be no
-> WARN_ON(). Those should be reserved to cases that are not supposed to be
-> hit at all or some other more specific cases like indicating obsolete
-> interface.
->
-> Signed-off-by: Zhi Chen <zhichen@codeaurora.org>
-> Signed-off-by: Yibo Zhao <yiboz@codeaurora.org>
-> ---
->  net/mac80211/ieee80211_i.h | 2 +-
->  1 file changed, 1 insertion(+), 1 deletion(-)
->
-> diff --git a/net/mac80211/ieee80211_i.h b/net/mac80211/ieee80211_i.h
-> index 2ae0364..f39c289 100644
-> --- a/net/mac80211/ieee80211_i.h
-> +++ b/net/mac80211/ieee80211_i.h
-> @@ -1435,7 +1435,7 @@ struct ieee80211_local {
->  	rcu_read_lock();
->  	chanctx_conf = rcu_dereference(sdata->vif.chanctx_conf);
->
-> -	if (WARN_ON_ONCE(!chanctx_conf)) {
-> +	if (!chanctx_conf) {
->  		rcu_read_unlock();
->  		return NULL;
->  	}
->
+Can you post dmesg log when ath10k starts so that we know what hardware
+and firmware you are using? "dmesg | grep ath10k" should tell that, I
+assume this is a QCA6174 PCI device. Even better if you can provide full
+dmesg so that we could see what was happening before this timeout, even
+if just privately to me. Did this happen during laptop startup or after
+resume?
 
 -- 
-Ben Greear <greearb@candelatech.com>
-Candela Technologies Inc  http://www.candelatech.com
+Kalle Valo
 
 _______________________________________________
 ath10k mailing list
