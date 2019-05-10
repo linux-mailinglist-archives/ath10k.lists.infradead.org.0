@@ -2,73 +2,75 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 44EA919602
-	for <lists+ath10k@lfdr.de>; Fri, 10 May 2019 02:24:32 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A35C0198AE
+	for <lists+ath10k@lfdr.de>; Fri, 10 May 2019 09:02:11 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=89s3O0iIl4bmTzdXP/X3jjFh165+YtzsnmYQoKsCRHc=; b=Vamq37SQtl7akC
-	xvPgXOjX4+AOkk48grw1aw7UChFaYeOz17rkoZd5Sn4w5AwDAlyRp/iAicVNMvM0FmUTdRqz+B/fn
-	MQ7Url0YTuT83AR3KH4xrZ4KfR+A/FpmzuTrybD6xYyzlHypTPCdNhBiUg2PGOY4tlMrpnVN/uDs9
-	yKiHHoMib4bVnezjcsoX8dgjyU/CYjjA75+cft0n4CQPY96RGYGXIpN26K+opGueCaB+asGpCF9tS
-	LH4crUDGCya7lcxSET1lxigo+qiSLJGBu/xckWfTou5u6nucQdeCbgPtHLvHkGbUB6IY4nQwjBByt
-	xL02AE4KynpFRLCUL1cA==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
+	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=1/32pXa9kQzDWiXgzymSHfSxZdvlb1Z3RQ64vqd/wNw=; b=Cqk
+	J6xSN7cgzcDbc5+IUo6C/2qlv4ImYpNmvieMZ1LBasvYjYrnkE8Vqw1ohD2AynyZtUNsRlaLaMMVr
+	96rrWi5Wnv+vvW10Fqi+VOSgROTSUXq6kgi1F4R8Mc5dn8WhhJC1gVdaQ/DvrkxrGNkrc8cACxKUL
+	9WXBJS4L7UzgxIKasj3+nTwqDzYmS4ixAWAK/ipjdbZf1lNjrKXDaFrJ99HFvpRiSOKQXHnuVUZPZ
+	iNJAVfwTVrfSq7SgaEyFVujGhvHb34Ay4XkzPmW3fMJ/WsVcoyrJcbiOFgb2rfqB5E/4Gr3or7NnU
+	m1yVwTZmEiqu8fYreukCBgINRfgj0hQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hOtKr-00053E-Ql; Fri, 10 May 2019 00:24:25 +0000
-Received: from [66.55.73.32] (helo=ushosting.nmnhosting.com)
- by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hOtKn-00050R-RL
- for ath10k@lists.infradead.org; Fri, 10 May 2019 00:24:23 +0000
-Received: from mail2.nmnhosting.com (unknown [202.169.106.97])
- by ushosting.nmnhosting.com (Postfix) with ESMTPS id B6DC82DC0070;
- Thu,  9 May 2019 20:17:22 -0400 (EDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=d-silva.org;
- s=201810a; t=1557447443;
- bh=rJY0+D6TdRtTv0MtwykFJbYOSu46lpL7vkuRS2Zg75k=;
- h=Subject:From:To:Cc:Date:In-Reply-To:References:From;
- b=FgHPIPlYLmuLNtrMoQ1JdXOJBzIramXRU528FDdwgmUbYDUSurbrKOmk66MlGYzGl
- 0ruDR9MsmWn6Wa1JGtiiUa7MDmH9NnRiXxafLrfVNihMUrJYoUiQlr9ZF1I4HIM0PV
- bZ9W5c9BAYVyzA9PfwGf5o+hGD2hYyBjKLixvrQ1vno4Whs2Nw5LmAFMtjJBE96JB5
- 3A/TpZPKlUH/LZ9QviX5sPNxejvENaMBIYUal2Z2Hup4BijYTYYiF1F+eWLEYbhMu2
- YBrAElUv44shUa1aHwy6Pfl3sYtAppFsneNmta4kToubNSSN/EMWCAgt+GOmMNuiZU
- dScx2/r4DfVPHVsLyA/C0IlAGJW5xx1NFqr3GJcu3u2ljmH/j2VABFWX8mKiViOjya
- UMzCeSKOTZj7GhaZKQ4wNLMdnnGeX0xRzwZxBPPwQPpa98wFjqGa4P4+HDIkphprBS
- cLR2rNyVdb5sI8TuETSE/d/sK5ExHhfuWol5Jk5PXVNE/IO16n6e0dCf3bBoCa8bTw
- zs4jlO1owv47NzN5dYrbV7R3mEfn3Wk/R8zsonqePsZtnUOe/9EZUeGRp5ITrVsRIK
- bdLoMtcOXzpm23UAwIN2Fr4caFvxOuuMjHxqg9nDMraA52HHWsxcudXZEv+JQvxYxU
- WRl4Hh/Ieej3f+hWeieXK7mA=
-Received: from adsilva.ozlabs.ibm.com (static-82-10.transact.net.au
- [122.99.82.10] (may be forged)) (authenticated bits=0)
- by mail2.nmnhosting.com (8.15.2/8.15.2) with ESMTPSA id x4A0GhJ3030327
- (version=TLSv1.2 cipher=AES256-GCM-SHA384 bits=256 verify=NO);
- Fri, 10 May 2019 10:17:01 +1000 (AEST)
- (envelope-from alastair@d-silva.org)
-Message-ID: <80e51facb280e96018a4220adf8efa6fac823a94.camel@d-silva.org>
-Subject: Re: [PATCH v2 3/7] lib/hexdump.c: Optionally suppress lines of
- repeated bytes
-From: "Alastair D'Silva" <alastair@d-silva.org>
-To: Randy Dunlap <rdunlap@infradead.org>
-Date: Fri, 10 May 2019 10:16:42 +1000
-In-Reply-To: <dc093079-43a0-0a45-f5dd-88b20702fd93@infradead.org>
-References: <20190508070148.23130-1-alastair@au1.ibm.com>
- <20190508070148.23130-4-alastair@au1.ibm.com>
- <dc093079-43a0-0a45-f5dd-88b20702fd93@infradead.org>
-User-Agent: Evolution 3.32.1 (3.32.1-1.fc30) 
-MIME-Version: 1.0
-X-Greylist: Sender succeeded SMTP AUTH, not delayed by milter-greylist-4.6.2
- (mail2.nmnhosting.com [10.0.1.20]); Fri, 10 May 2019 10:17:17 +1000 (AEST)
+	id 1hOzXj-0006N9-1x; Fri, 10 May 2019 07:02:07 +0000
+Received: from smtp.codeaurora.org ([198.145.29.96])
+ by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
+ id 1hOzXe-0006MU-OT
+ for ath10k@lists.infradead.org; Fri, 10 May 2019 07:02:04 +0000
+Received: by smtp.codeaurora.org (Postfix, from userid 1000)
+ id C5EB960744; Fri, 10 May 2019 07:02:01 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1557471721;
+ bh=jOTxeffynwtDEKNRNC1OxZc+a8+J8mZ7VRSufbn91VU=;
+ h=From:To:Cc:Subject:Date:From;
+ b=bArGWL9nJ66fYJj7+WZZ3ygFZH0RM7D4Z7nht3etTIzG/CiAZ4pQonmD/cm+Hdf7E
+ dLC8hd68qQXZ4xvLVQHN1+G8SCpBSA+6+NimHoDr90TFnWbjtVxQmVOPuitKptC4R7
+ maq0EB1zXdUP3zOHtqVjVGRJxy3rLFnbVL611j7o=
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ pdx-caf-mail.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
+ DKIM_INVALID,DKIM_SIGNED autolearn=no autolearn_force=no version=3.4.0
+Received: from ybzhao-Latitude-E5440.ap.qualcomm.com (unknown [180.166.53.21])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
+ (No client certificate requested)
+ (Authenticated sender: yiboz@codeaurora.org)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 00A8F6076C;
+ Fri, 10 May 2019 07:01:59 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1557471721;
+ bh=jOTxeffynwtDEKNRNC1OxZc+a8+J8mZ7VRSufbn91VU=;
+ h=From:To:Cc:Subject:Date:From;
+ b=bArGWL9nJ66fYJj7+WZZ3ygFZH0RM7D4Z7nht3etTIzG/CiAZ4pQonmD/cm+Hdf7E
+ dLC8hd68qQXZ4xvLVQHN1+G8SCpBSA+6+NimHoDr90TFnWbjtVxQmVOPuitKptC4R7
+ maq0EB1zXdUP3zOHtqVjVGRJxy3rLFnbVL611j7o=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 00A8F6076C
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ spf=none smtp.mailfrom=yiboz@codeaurora.org
+From: Yibo Zhao <yiboz@codeaurora.org>
+To: linux-wireless@vger.kernel.org
+Subject: [PATCH] mac80211: remove warning message
+Date: Fri, 10 May 2019 15:01:02 +0800
+Message-Id: <1557471662-1355-1-git-send-email-yiboz@codeaurora.org>
+X-Mailer: git-send-email 1.9.1
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190509_172421_904946_015C0F75 
-X-CRM114-Status: GOOD (  16.30  )
-X-Spam-Score: 1.1 (+)
+X-CRM114-CacheID: sfid-20190510_000202_821912_D877C4C2 
+X-CRM114-Status: GOOD (  11.77  )
+X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (1.1 points)
+ Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [198.145.29.96 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
@@ -77,7 +79,6 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  valid
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
- 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -89,106 +90,50 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-fbdev@vger.kernel.org, Stanislaw Gruszka <sgruszka@redhat.com>,
- Tom Lendacky <thomas.lendacky@amd.com>, David Airlie <airlied@linux.ie>,
- Joonas Lahtinen <joonas.lahtinen@linux.intel.com>,
- dri-devel@lists.freedesktop.org, devel@driverdev.osuosl.org,
- linux-scsi@vger.kernel.org, Jassi Brar <jassisinghbrar@gmail.com>,
- ath10k@lists.infradead.org, "James E.J. Bottomley" <jejb@linux.ibm.com>,
- Dan Carpenter <dan.carpenter@oracle.com>, Jose Abreu <Jose.Abreu@synopsys.com>,
- Petr Mladek <pmladek@suse.com>, intel-gfx@lists.freedesktop.org,
- Jani Nikula <jani.nikula@linux.intel.com>,
- Enric Balletbo i Serra <enric.balletbo@collabora.com>,
- Steven Rostedt <rostedt@goodmis.org>, Rodrigo Vivi <rodrigo.vivi@intel.com>,
- Benson Leung <bleung@chromium.org>, Kalle Valo <kvalo@codeaurora.org>,
- Karsten Keil <isdn@linux-pingi.de>,
- "Martin K. Petersen" <martin.petersen@oracle.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
- Sergey Senozhatsky <sergey.senozhatsky@gmail.com>,
- David Laight <David.Laight@ACULAB.COM>, Daniel Vetter <daniel@ffwll.ch>,
- netdev@vger.kernel.org, linux-fsdevel@vger.kernel.org,
- Andrew Morton <akpm@linux-foundation.org>,
- "David S. Miller" <davem@davemloft.net>,
- Alexander Viro <viro@zeniv.linux.org.uk>
+Cc: Zhi Chen <zhichen@codeaurora.org>, Yibo Zhao <yiboz@codeaurora.org>,
+ ath10k@lists.infradead.org
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On Wed, 2019-05-08 at 17:58 -0700, Randy Dunlap wrote:
-> On 5/8/19 12:01 AM, Alastair D'Silva wrote:
-> > From: Alastair D'Silva <alastair@d-silva.org>
-> > 
-> > Some buffers may only be partially filled with useful data, while
-> > the rest
-> > is padded (typically with 0x00 or 0xff).
-> > 
-> > This patch introduces a flag to allow the supression of lines of
-> > repeated
-> > bytes, which are replaced with '** Skipped %u bytes of value 0x%x
-> > **'
-> > 
-> > An inline wrapper function is provided for backwards compatibility
-> > with
-> > existing code, which maintains the original behaviour.
-> > 
-> > Signed-off-by: Alastair D'Silva <alastair@d-silva.org>
-> > ---
-> >  include/linux/printk.h | 25 +++++++++---
-> >  lib/hexdump.c          | 91 ++++++++++++++++++++++++++++++++++++
-> > ------
-> >  2 files changed, 99 insertions(+), 17 deletions(-)
-> > 
-> 
-> Hi,
-> Did you do "make htmldocs" or something similar on this?
-> 
-> > diff --git a/lib/hexdump.c b/lib/hexdump.c
-> > index 3943507bc0e9..d61a1e4f19fa 100644
-> > --- a/lib/hexdump.c
-> > +++ b/lib/hexdump.c
-> > @@ -212,8 +212,44 @@ int hex_dump_to_buffer(const void *buf, size_t
-> > len, int rowsize, int groupsize,
-> >  EXPORT_SYMBOL(hex_dump_to_buffer);
-> >  
-> >  #ifdef CONFIG_PRINTK
-> > +
-> > +/**
-> > + * Check if a buffer contains only a single byte value
-> > + * @buf: pointer to the buffer
-> > + * @len: the size of the buffer in bytes
-> > + * @val: outputs the value if if the bytes are identical
-> 
-> Does this work without a function name?
-> Documentation/doc-guide/kernel-doc.rst says the general format is:
-> 
->   /**
->    * function_name() - Brief description of function.
->    * @arg1: Describe the first argument.
->    * @arg2: Describe the second argument.
->    *        One can provide multiple line descriptions
->    *        for arguments.
->    *
-> 
-> > + */
-> >  /**
-> > - * print_hex_dump - print a text hex dump to syslog for a binary
-> > blob of data
-> > + * print_hex_dump_ext: dump a binary blob of data to syslog in
-> > hexadecimal
-> 
-> Also not in the general documented format.
-> 
+In multiple SSID cases, it takes time to prepare every AP interface
+to be ready in initializing phase. If a sta already knows everything it
+needs to join one of the APs and sends authentication to the AP which
+is not fully prepared at this point of time, AP's channel context
+could be NULL. As a result, warning message occurs.
 
-Thanks Randy, I'll address these.
+Even worse, if the AP is under attack via tools such as MDK3 and massive
+authentication requests are received in a very short time, console will
+be hung due to kernel warning messages.
 
+If this case can be hit during normal functionality, there should be no
+WARN_ON(). Those should be reserved to cases that are not supposed to be
+hit at all or some other more specific cases like indicating obsolete
+interface.
+
+Signed-off-by: Zhi Chen <zhichen@codeaurora.org>
+Signed-off-by: Yibo Zhao <yiboz@codeaurora.org>
+---
+ net/mac80211/ieee80211_i.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/net/mac80211/ieee80211_i.h b/net/mac80211/ieee80211_i.h
+index 2ae0364..f39c289 100644
+--- a/net/mac80211/ieee80211_i.h
++++ b/net/mac80211/ieee80211_i.h
+@@ -1435,7 +1435,7 @@ struct ieee80211_local {
+ 	rcu_read_lock();
+ 	chanctx_conf = rcu_dereference(sdata->vif.chanctx_conf);
+ 
+-	if (WARN_ON_ONCE(!chanctx_conf)) {
++	if (!chanctx_conf) {
+ 		rcu_read_unlock();
+ 		return NULL;
+ 	}
 -- 
-Alastair D'Silva           mob: 0423 762 819
-skype: alastair_dsilva    
-Twitter: @EvilDeece
-blog: http://alastair.d-silva.org
-
+1.9.1
 
 
 _______________________________________________
