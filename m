@@ -2,63 +2,70 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2F7E71E7A6
-	for <lists+ath10k@lfdr.de>; Wed, 15 May 2019 06:27:01 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A984D1F3C7
+	for <lists+ath10k@lfdr.de>; Wed, 15 May 2019 14:20:32 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
 	Content-Transfer-Encoding:List-Subscribe:List-Help:List-Post:List-Archive:
 	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
 	References:To:Subject:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:
 	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=8FmsD8f3QvQXmsU2zS4Ugwz9Lyrs2LMIbLVxC2VrYBE=; b=ZFfKAavRz7Y7D51fpZV16uoXB
-	kDXBWvAxz4vMWHibVDla5HQ0Ho5RYnB7AmLxokIz3RVuHvMjbojfhGKbUIrXtukKagRxTveo5VsfE
-	cUs+gdkyz0h5gAwf+jqhiAI5BPT6KMY4CZ4bCEi4LDNrDWf2TXbfwGaAclFAAaLSuTRd3hav9TqWj
-	DOiQnohsVdc68mzrSVJKWgUdjCgrzrwxrQN45Uth4WT8koSQRbqDyEXG/alc1nEH5cIge3QjgZX6N
-	lto01lk2SbzDV3XvYuM4DIUAHiqDidRbX01WDWEuQ9R3dNaRey8MJ/rlfHOTPJmenJZpp4xsIo+gw
-	0fM+htr6g==;
+	 bh=o42loR2anFHEwBP47wDou4wXMRNQKQw9iROsCgFPX1s=; b=arPiAsYqPf1w4yk97N8LMPInF
+	e//50OJjsIn+Z8UxMQ+YfeyDXv7jcfxeQhJ+omz/Tj5BAEVK6MfkSd9U4q75+hMlUY0jZ2TAkZMp2
+	zYDZvRoGRT6EbfWY21wBcwzxAhVR/D0JkOp6seIhkNhkRXNmEMrYj/6o15LBIs7ptxczwyC2W3XUb
+	zoEqK2GlQHMT+dO7HwOalt+wr3vhub/DkFBVNpIA5ovzVTVyUek/jJrQ8E9tLXpYQTSaFc0z34Luj
+	ytXFkY5aB2QmjLhsArkqOEOLgK90J4OQNVsBJ3m+QdilgKcLHz0NFbE1JcYeORlLlKkyPAHqbDNiy
+	6GUmdfgNQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hQlVJ-0004Sz-C5; Wed, 15 May 2019 04:26:57 +0000
-Received: from smtps.newmedia-net.de ([2a05:a1c0:0:de::167]
- helo=webmail.newmedia-net.de)
- by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hQlVE-0004Ma-Ir
- for ath10k@lists.infradead.org; Wed, 15 May 2019 04:26:54 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=newmedia-net.de; s=mikd; 
- h=Content-Transfer-Encoding:Content-Type:In-Reply-To:MIME-Version:Date:Message-ID:From:References:To:Subject;
- bh=u25I9uDYl7wdf2UQ1EM1g3E9cCS7V7tUVEluz+h3po0=; 
- b=xnALyOu6JtUrWiWL8Dr5YHDqKs9AbaFiuj1Sn+LyvTI9ErnXIjHr8mugGURczdGWHOcajnfDIGZuwXrk6FXLn41oAzv6zqhbNvvYV+HjL6bfR+uesMF+gA+6E8s/BJYXflCx4WOGW0SUqLCq3nbwXQyNf8KTDqo7e/4KLO4HgNM=;
+	id 1hQstX-0005fp-Hc; Wed, 15 May 2019 12:20:27 +0000
+Received: from [208.74.158.174] (helo=mail3.candelatech.com)
+ by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
+ id 1hQstS-0005fT-O6
+ for ath10k@lists.infradead.org; Wed, 15 May 2019 12:20:24 +0000
+Received: from [192.168.1.47] (104-235-164-208.evrt.wa.frontiernet.net
+ [104.235.164.208])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested)
+ by mail3.candelatech.com (Postfix) with ESMTPSA id 9076B13755C;
+ Wed, 15 May 2019 05:20:21 -0700 (PDT)
+DKIM-Filter: OpenDKIM Filter v2.11.0 mail3.candelatech.com 9076B13755C
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=candelatech.com;
+ s=default; t=1557922822;
+ bh=7TBJ+Ese6Jo2u0vscBpVhZpsifmMW04+J7DzCeLpQq8=;
+ h=Subject:To:References:From:Date:In-Reply-To:From;
+ b=qLmuonWRccaTHmMxIGhlzTMzIUtfeQ0M48RfPDecVK4W9FOmCbkQqRw6QQDhiI5I+
+ dbtPsqgZDhl+Rla16j74nr4gumAk2Hyrs00WwR0/3Rn8WFOXrZVr7M6tENor9ovIKk
+ /vcb2xr4wPifSC+3K6ag9gYU7nIJkdfLfpwlRfEI=
 Subject: Re: Problem with 9984 in routed mode with 512b frames.
-To: Ben Greear <greearb@candelatech.com>, ath10k <ath10k@lists.infradead.org>
+To: Sebastian Gottschall <s.gottschall@newmedia-net.de>,
+ ath10k <ath10k@lists.infradead.org>
 References: <e11b8d7f-bc28-bc66-fb8c-ff4db22d7c46@candelatech.com>
-From: Sebastian Gottschall <s.gottschall@newmedia-net.de>
-Message-ID: <daaad6d3-cf60-4ddc-af20-279a0cbbbe0c@newmedia-net.de>
-Date: Wed, 15 May 2019 06:26:33 +0200
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101
- Thunderbird/60.6.1
+ <daaad6d3-cf60-4ddc-af20-279a0cbbbe0c@newmedia-net.de>
+From: Ben Greear <greearb@candelatech.com>
+Message-ID: <10ed4e39-4364-c8ef-2b38-15ea7672ad94@candelatech.com>
+Date: Wed, 15 May 2019 05:20:20 -0700
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101
+ Thunderbird/45.8.0
 MIME-Version: 1.0
-In-Reply-To: <e11b8d7f-bc28-bc66-fb8c-ff4db22d7c46@candelatech.com>
-X-Received: from [2003:c9:3f07:6200:f0a7:95a7:7499:ec6a]
- by webmail.newmedia-net.de with esmtpsa (TLSv1:AES128-SHA:128)
- (Exim 4.72) (envelope-from <s.gottschall@newmedia-net.de>)
- id 1hQlVD-0000mJ-JT; Wed, 15 May 2019 06:26:51 +0200
+In-Reply-To: <daaad6d3-cf60-4ddc-af20-279a0cbbbe0c@newmedia-net.de>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190514_212653_057345_024A6047 
-X-CRM114-Status: GOOD (  11.41  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190515_052022_839267_BC187CDF 
+X-CRM114-Status: GOOD (  15.17  )
+X-Spam-Score: 1.1 (+)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (1.1 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -70,34 +77,60 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Content-Transfer-Encoding: base64
-Content-Type: text/plain; charset="utf-8"; Format="flowed"
+Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Y2FuIHlvdSBzZW5kIG1lIGEgZGV0YWlsZWQgaW5zdHJ1Y3Rpb24gZm9yIHRlc3RpbmcgdGhpcyBv
-biBteSBkZXZpY2VzPyAKc28gd2hpY2ggY29tbWFuZHMgaGF2ZSBiZWVuIHVzZWQgZm9yIGdlbmVy
-YXRpbmcgdGhlIHRyYWZmaWMgZXRjLiAoaXBlcmYzPykKClNlYmFzdGlhbgoKQW0gMTUuMDUuMjAx
-OSB1bSAwMzo1MiBzY2hyaWViIEJlbiBHcmVlYXI6Cj4gSGVsbG8sCj4KPiBJIGZvdW5kIGEgc3Ry
-YW5nZSBpc3N1ZSBhbmQgY3VyaW91cyBpZiBzb21lb25lIGhhcyBzZWVuIHNpbWlsYXIuCj4KPiBJ
-IG1hZGUgYW4gQVAgd2hlcmUgdGhlIEFQIGludGVyZmFjZSBhY3RzIGFzIGEgcm91dGVkIGludGVy
-ZmFjZS7CoCBJIAo+IGdlbmVyYXRlCj4gdHJhZmZpYyB0aHJvdWdoIGFub3RoZXIgaW50ZXJmYWNl
-IGluIHRoZSByb3V0ZXIuwqAgV2hlbiBzZW5kaW5nIDMwME1icHMgCj4gb2YgNTEyIGJ5dGUKPiBV
-RFAgcGF5bG9hZHMsIGluIHRoZSBkb3duc3RyZWFtIGRpcmVjdGlvbiwgYW5kIHdpdGggdGhlIHN0
-YXRpb24gYmVpbmcgCj4gYSAxeDEgL0FDIGRldmljZSwKPiB0aGVuIHRoZSBBUCBOSUMgYXBwZWFy
-cyB0byBtb3N0bHkgbG9jayB1cCB3aXRoaW4gYWJvdXQgMSBtaW51dGUuIEkgCj4gc3RpbGwgc2Vl
-IGJlYWNvbnMsIGJ1dCBubwo+IGRhdGEgZnJhbWVzLsKgIEluIHNvbWUgY2FzZXMsIEkgcmVwcm9k
-dWNlZCB3aXRoIHZlcnkgc2xvdyBzcGVlZCB0cmFmZmljIAo+IGFzIHdlbGwuCj4KPiBJIHRyaWVk
-IHVzaW5nIGEgbW9zdGx5IHVuLW1vZGlmaWVkIGZpcm13YXJlIChpZSwgc2ltaWxhciB0byB1cHN0
-cmVhbSAKPiBRQ0EpLCBhcyB3ZWxsIGFzIG15Cj4gaGFja2VkIHVwb24gZmlybXdhcmUsIGFuZCBh
-bGwgYWN0IHNpbWlsYXJseS7CoCBJJ20gdXNpbmcgdGhlIDQuMjAgCj4ga2VybmVsLCBidXQgYXQg
-bGVhc3QgZm9yIG5vdywKPiBpdCBkb2VzIG5vdCBhcHBlYXIgdG8gYmUgYSBrZXJuZWwgaXNzdWUu
-Cj4KPiBJZiBJIHVzZSBsYXJnZXIgTVRVIHNpemVkIGZyYW1lcywgb3IgaGF2ZSBhIDJ4MiBzdGF0
-aW9uIGluc3RlYWQgb2YgMXgxIAo+IHRoZW4gaXQgaXMgbXVjaCBoYXJkZXIKPiB0byByZXByb2R1
-Y2UgKGFuZCBtYXliZSBjYW5ub3QgYmUgcmVwcm9kdWNlZCkuwqAgQWxzbywgd2hlbiBnZW5lcmF0
-aW5nIAo+IHRyYWZmaWMgZGlyZWN0bHkgb24KPiB0aGUgQVAgZGV2aWNlIGluc3RlYWQgb2YgdXNp
-bmcgdGhlIHJvdXRlZCBpbnRlcmZhY2UgYXMgYSB0cmFmZmljIAo+IHNvdXJjZSwgaXQgaXMgaGFy
-ZGVyIHRvCj4gcmVwcm9kdWNlLgo+Cj4gVGhhbmtzLAo+IEJlbgo+CgpfX19fX19fX19fX19fX19f
-X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXwphdGgxMGsgbWFpbGluZyBsaXN0CmF0aDEw
-a0BsaXN0cy5pbmZyYWRlYWQub3JnCmh0dHA6Ly9saXN0cy5pbmZyYWRlYWQub3JnL21haWxtYW4v
-bGlzdGluZm8vYXRoMTBrCg==
+On 05/14/2019 09:26 PM, Sebastian Gottschall wrote:
+> can you send me a detailed instruction for testing this on my devices? so which commands have been used for generating the traffic etc. (iperf3?)
+
+I am using our own traffic generator, but I imagine iperf3 should work fine too.
+
+I am testing on x86-64 and so forth.  Maybe you can test with UDP small-packet load on your platform
+in routed mode (ie, external iperf generator through your AP) and see if you see issues?
+
+ From debugging yesterday, I see a lot of tx-hang notifications in the firmware, and
+I also believe I saw it trying to transmit with a 0 rate-indx, which is 11Mbps CCK,
+which is invalid for 5Ghz.  I'll be debugging that more today.  I don't know if stock
+firmware fails for the same reasons, but the symptom looked the same.
+
+Thanks,
+Ben
+
+>
+> Sebastian
+>
+> Am 15.05.2019 um 03:52 schrieb Ben Greear:
+>> Hello,
+>>
+>> I found a strange issue and curious if someone has seen similar.
+>>
+>> I made an AP where the AP interface acts as a routed interface.  I generate
+>> traffic through another interface in the router.  When sending 300Mbps of 512 byte
+>> UDP payloads, in the downstream direction, and with the station being a 1x1 /AC device,
+>> then the AP NIC appears to mostly lock up within about 1 minute. I still see beacons, but no
+>> data frames.  In some cases, I reproduced with very slow speed traffic as well.
+>>
+>> I tried using a mostly un-modified firmware (ie, similar to upstream QCA), as well as my
+>> hacked upon firmware, and all act similarly.  I'm using the 4.20 kernel, but at least for now,
+>> it does not appear to be a kernel issue.
+>>
+>> If I use larger MTU sized frames, or have a 2x2 station instead of 1x1 then it is much harder
+>> to reproduce (and maybe cannot be reproduced).  Also, when generating traffic directly on
+>> the AP device instead of using the routed interface as a traffic source, it is harder to
+>> reproduce.
+>>
+>> Thanks,
+>> Ben
+>>
+>
+
+-- 
+Ben Greear <greearb@candelatech.com>
+Candela Technologies Inc  http://www.candelatech.com
+
+_______________________________________________
+ath10k mailing list
+ath10k@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/ath10k
