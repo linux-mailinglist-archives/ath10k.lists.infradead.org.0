@@ -2,76 +2,76 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6675320F47
-	for <lists+ath10k@lfdr.de>; Thu, 16 May 2019 21:40:31 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C9FC120F67
+	for <lists+ath10k@lfdr.de>; Thu, 16 May 2019 21:55:41 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:References:
-	To:From:Subject:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=aLZK69Zsy0ikExlPyxNOMDogiaS4sW7XFGKHRv4u/BM=; b=t6lSU2STJoF0Pq0Y/sw8uPGA5
-	twA/DQojQ0Z/iw8WuHlpAs6cnDDtlRJuzUDfLHdrTqUAtEqeEkLOJCsPSB7GhdtZgZqoGlSV5Iz26
-	Nzq1iYeKpPyLXf//Zqrj/GU6BX++HhDG9Vw0G6/ktU/Jdwajyodl7ipDm0SZAvPP07fC0AH3qm++6
-	5TQmZ1qDrs/A/1IuHmBHdcuZeE2vxEHwQuV/s+XmriDi922XUJkNrYScwd72qo/BJUUIGptrKnzkm
-	a2GITcNxL0pKT1B5Qm6L5anrYMZTC2LbL23elFGRGdwISOobbAAT4imvAcScQIuvmKDIaaQKsQWNl
-	nB9nm7zRQ==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=nhkHIgv2Y0MYxJaK1/A3RQz7ZbYgR8gAAHwz1AtMkk4=; b=Uggm4+0mJievRh
+	fbR0atZydzhcbZDxQPLE9kBDrxOizmVxC97QB2ItKXU9dKK3uOmSnOEhOncHVZL8Psi1A4ID+OTrM
+	sy64fgaG280MqIPb6sFlXoPpBjwg3a0gghc2mUE6F8qtuOrkUt+ouF7kvhFiDQvtsiPnee89ClVY2
+	nymOO2nFU510i13gh+KVOoyXCEj+U5bjaPXmzpWDaUvNJPL3EebkWSz17H2w+BlQBclMcbcWIwmjV
+	9HdpEvAgSkEwVg2giwdVMgCBgE6e71thP9sa64b49OXB1n/gviRWB5hZudwmhlziA5h8zRVYxF6FA
+	cy0IGWCef68nqlek0I6w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hRMEo-0003hc-KU; Thu, 16 May 2019 19:40:22 +0000
-Received: from [208.74.158.174] (helo=mail3.candelatech.com)
- by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hRMEk-0003hI-N9
- for ath10k@lists.infradead.org; Thu, 16 May 2019 19:40:20 +0000
-Received: from [192.168.100.195] (50-251-239-81-static.hfc.comcastbusiness.net
- [50.251.239.81])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
- (No client certificate requested)
- by mail3.candelatech.com (Postfix) with ESMTPSA id 0AF5527C05;
- Thu, 16 May 2019 12:40:15 -0700 (PDT)
-DKIM-Filter: OpenDKIM Filter v2.11.0 mail3.candelatech.com 0AF5527C05
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=candelatech.com;
- s=default; t=1558035615;
- bh=naQ9wu0R/BjuBcabyPT0dOjKBahp2Ieuh4dCRU7aJX8=;
- h=Subject:From:To:References:Date:In-Reply-To:From;
- b=jfTNWo8yvPEVEnsRVbV2e3lwPk61jzYycYz2bOE6QpxrDTzMnag8S/8YIv0q1afXj
- yFJFly0aJolneO6p3PCLDktFdsXZiyyjgjT+/9iNVPhPfxxnY9kgO5+b9oSh+0Vc3R
- LF/iQNBM4QzV4Bsj0b5IJhKBjTudT+Rklhw7bECI=
-Subject: Re: Problem with 9984 in routed mode with 512b frames.
-From: Ben Greear <greearb@candelatech.com>
-To: Sebastian Gottschall <s.gottschall@newmedia-net.de>,
- ath10k <ath10k@lists.infradead.org>
+	id 1hRMTa-00085b-8U; Thu, 16 May 2019 19:55:38 +0000
+Received: from mail-wr1-f47.google.com ([209.85.221.47])
+ by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
+ id 1hRMTV-000855-Pv
+ for ath10k@lists.infradead.org; Thu, 16 May 2019 19:55:35 +0000
+Received: by mail-wr1-f47.google.com with SMTP id r7so4645976wrr.13
+ for <ath10k@lists.infradead.org>; Thu, 16 May 2019 12:55:30 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=LvPoMvL5r3aovHz336V8xYeXbMwPRztBXpSYIuV5oXo=;
+ b=M839LGehDKUsFcDKbl3DYUH+mbUNGvm1mqp66iM32K5h88ZIwPVY0MPBsHyJOjPmrt
+ RvXGXzT8D5hHgk1l+Z/Jr+0YfGpw9p+EVPqJinmE32kd82Aqr5IB3VdzKxxX8fAuDru/
+ nBjkVSMX1DG/h2DBDVAjlVX/N5taoxODViSKDbeoh20YUWZCuGSaSgdJjkF0YKQpUHhA
+ 8/LI0db+YSIcI06lKmttmiNkpGY7ufcpDjTJPaanDMRr6vL5iKcpdCgFvNka75CTHi7d
+ tWve5hC1HRWqew5Zah7Dy+mRw5Kp0h3TUDfSP/AoocagEoiWz8KF0kbgfff0SMKSTUhD
+ ZGcw==
+X-Gm-Message-State: APjAAAVYl18+fuxhx5vzVngVu5ReuX7Ns5u6WpRfN25+ZjVQPqZ71a96
+ ysHd1dJMrq1k3YmN1rglYbZONVLOnXV0jQJqFUrTSg==
+X-Google-Smtp-Source: APXvYqwfVQSRDx3WLX3z/o9J0UBJ+u+Tc/REKihNOPKjdW4ftfTkBWduhDcw7ovkOK8GoXxpfjCTijo3r+7A5atn0IQ=
+X-Received: by 2002:a5d:45c7:: with SMTP id b7mr8933417wrs.176.1558036529473; 
+ Thu, 16 May 2019 12:55:29 -0700 (PDT)
+MIME-Version: 1.0
 References: <e11b8d7f-bc28-bc66-fb8c-ff4db22d7c46@candelatech.com>
  <daaad6d3-cf60-4ddc-af20-279a0cbbbe0c@newmedia-net.de>
  <10ed4e39-4364-c8ef-2b38-15ea7672ad94@candelatech.com>
  <2ec6f626-6391-f9b5-918c-99ad7e6b3e31@newmedia-net.de>
  <ad97576c-d6dd-e29c-10d4-00b8aff77805@candelatech.com>
-Organization: Candela Technologies
-Message-ID: <55b50a9a-49f4-d669-22d4-84e2efabf451@candelatech.com>
-Date: Thu, 16 May 2019 12:40:14 -0700
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
- Thunderbird/60.4.0
-MIME-Version: 1.0
-In-Reply-To: <ad97576c-d6dd-e29c-10d4-00b8aff77805@candelatech.com>
-Content-Language: en-US
+ <55b50a9a-49f4-d669-22d4-84e2efabf451@candelatech.com>
+In-Reply-To: <55b50a9a-49f4-d669-22d4-84e2efabf451@candelatech.com>
+From: Adrian Chadd <adrian@freebsd.org>
+Date: Thu, 16 May 2019 12:55:17 -0700
+Message-ID: <CAJ-Vmo=MgeKdUj+d7L6oJKfdSMb84D_nYHZ+BMSr6guB4Q_Y2Q@mail.gmail.com>
+Subject: Re: Problem with 9984 in routed mode with 512b frames.
+To: Ben Greear <greearb@candelatech.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190516_124018_831883_08EAB442 
-X-CRM114-Status: GOOD (  14.01  )
-X-Spam-Score: 1.1 (+)
+X-CRM114-CacheID: sfid-20190516_125533_842076_E4A7B103 
+X-CRM114-Status: GOOD (  16.60  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (1.1 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [209.85.221.47 listed in list.dnswl.org]
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (adrian.chadd[at]gmail.com)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 1.3 RDNS_NONE Delivered to internal network by a host with no rDNS
+ 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -83,44 +83,69 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Content-Transfer-Encoding: base64
-Content-Type: text/plain; charset="utf-8"; Format="flowed"
+Cc: Sebastian Gottschall <s.gottschall@newmedia-net.de>,
+ ath10k <ath10k@lists.infradead.org>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-T24gNS8xNS8xOSA2OjAwIEFNLCBCZW4gR3JlZWFyIHdyb3RlOgo+IE9uIDUvMTUvMTkgNToyNiBB
-TSwgU2ViYXN0aWFuIEdvdHRzY2hhbGwgd3JvdGU6Cj4+Cj4+IEFtIDE1LjA1LjIwMTkgdW0gMTQ6
-MjAgc2NocmllYiBCZW4gR3JlZWFyOgo+Pj4gT24gMDUvMTQvMjAxOSAwOToyNiBQTSwgU2ViYXN0
-aWFuIEdvdHRzY2hhbGwgd3JvdGU6Cj4+Pj4gY2FuIHlvdSBzZW5kIG1lIGEgZGV0YWlsZWQgaW5z
-dHJ1Y3Rpb24gZm9yIHRlc3RpbmcgdGhpcyBvbiBteSBkZXZpY2VzPyBzbyB3aGljaCBjb21tYW5k
-cyBoYXZlIGJlZW4gdXNlZCBmb3IgZ2VuZXJhdGluZyB0aGUgdHJhZmZpYyBldGMuIChpcGVyZjM/
-KQo+Pj4KPj4+IEkgYW0gdXNpbmcgb3VyIG93biB0cmFmZmljIGdlbmVyYXRvciwgYnV0IEkgaW1h
-Z2luZSBpcGVyZjMgc2hvdWxkIHdvcmsgZmluZSB0b28uCj4+Pgo+Pj4gSSBhbSB0ZXN0aW5nIG9u
-IHg4Ni02NCBhbmQgc28gZm9ydGguwqAgTWF5YmUgeW91IGNhbiB0ZXN0IHdpdGggVURQIHNtYWxs
-LXBhY2tldCBsb2FkIG9uIHlvdXIgcGxhdGZvcm0KPj4+IGluIHJvdXRlZCBtb2RlIChpZSwgZXh0
-ZXJuYWwgaXBlcmYgZ2VuZXJhdG9yIHRocm91Z2ggeW91ciBBUCkgYW5kIHNlZSBpZiB5b3Ugc2Vl
-IGlzc3Vlcz8KPj4gdGhhdHMgdGhlIHBsYW4uIGNhbiB5b3UgZG8gYSB0ZXN0IHdpdGggaXBlcmYz
-IHRvIHNlZSBpZiBpdHMgcmVwcm9kdWNlYWJsZS4gaSBtZWFuIGkgd2lsbCB0ZXN0IGl0IG9uIGlw
-cSBiYXNlZCBib2FyZHMgYW5kIHg2NC4gYnV0IHRvIG1ha2Ugc3VyZSB0aGF0IHRoZSBzY2VuYXJp
-bwo+PiBpcyBpZGVudGljYWwgd2hpY2ggcmFpc2VkIHVwIHlvdXIgaXNzdWUsIGl0IHdvdWxkIGJl
-IGZpbmQgaWYgd2UgaGF2ZSBpZGVudGljYWwgc29mdHdhcmUgZm9yIHRlc3RpbmcgaW5jbHVkaW5n
-IHRoZSBzYW1lIG9wdGlvbnMKCkkgdGhpbmsgSSBmb3VuZCB0aGUgaXNzdWUuICBUaGUgcmF0ZS1j
-dHJsIGxvZ2ljIGluIHRoZSBmaXJtd2FyZSBhbGxvd3MgYSB0cmFuc2l0aW9uIGZyb20gSFQvVkhU
-IDIwIE1DUzAgZG93biB0byBPRkRNIHJhdGVzLgpJdCBzZWVtcyB0aGUgaGFyZHdhcmUgZG9lcyBu
-b3QgbGlrZSB0byBzZWUgYW4gQU1QRFUgd2l0aCBhbiBPRkRNIHJhdGUgZm9yIDIwTWh6IGFuZCBh
-IFZIVCByYXRlIGZvciA4ME1oeiAob3IgbWF5YmUganVzdCB0aGUKc2luZ2xlIE9GRE0gcmF0ZSBp
-cyB0aGUgZmF1bHQpLgoKSWYgeW91IGNhbiBlZGl0IGZpcm13YXJlLCB0aGVuIHNldHRpbmcgdGhp
-cyB0byAwIHByb2JhYmx5IGZpeGVzIHRoZSBpc3N1ZS4KCmdfcmNfY2NrX3JhdGVfYWxsb3dlZAoK
-SSB0aGluayB0byByZXByb2R1Y2UgeW91J2QgbmVlZCB0byBzZW5kIGhpZ2ggc3BlZWQgdHJhZmZp
-YyBpbiBhIHNpdHVhdGlvbiB3aGVyZSB0aGUKUkYgZW52aXJvbm1lbnQgaXMgZ29pbmcgdG8gbWFr
-ZSByYXRlLWN0cmwgZmFpbCBxdWl0ZSBhIGJpdC4gIChTbG93IHNwZWVkIHNob3VsZAp3b3JrIHRv
-bywgYnV0IGl0IHdvdWxkIGxpa2VseSB0YWtlIGEgbG90IGxvbmdlcikuCgpBbmQsIGl0IGlzIGFs
-d2F5cyBwb3NzaWJsZSB0aGF0IHdoYXRldmVyIEkgc2F3IHdoZW4gdGVzdGluZyBtb3N0bHktc3Rv
-Y2sgRlcgaXMgZGlmZmVyZW50CmZyb20gd2hhdCBJIGV2ZW50dWFsbHkgZGVidWdnZWQgdG8gaW4g
-bXkgZmlybXdhcmUuICBTdGlsbCwgZnJvbSBsb29raW5nIGF0IE1DUyB2cyBTTlIKY2hhcnRzLCB0
-aGVyZSBzZWVtcyB0byBiZSBubyBhZHZhbnRhZ2UgdG8gdHJ5aW5nIE9GRE0gdnMgTUNTMCBmb3Ig
-MjBNaHouCgpUaGFua3MsCkJlbgoKLS0gCkJlbiBHcmVlYXIgPGdyZWVhcmJAY2FuZGVsYXRlY2gu
-Y29tPgpDYW5kZWxhIFRlY2hub2xvZ2llcyBJbmMgIGh0dHA6Ly93d3cuY2FuZGVsYXRlY2guY29t
-CgoKX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18KYXRoMTBr
-IG1haWxpbmcgbGlzdAphdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZwpodHRwOi8vbGlzdHMuaW5m
-cmFkZWFkLm9yZy9tYWlsbWFuL2xpc3RpbmZvL2F0aDEwawo=
+You can totally go down to OFDM yeah but you then need to send it at
+20MHz and non-AMPDU.
+
+Is it maybe the retry code + rate control code is retagging an AMPDU
+at a lower rate and it's transitioning down to CCK/OFDM without
+breaking the AMPDU apart?
+
+
+-a
+
+On Thu, 16 May 2019 at 12:40, Ben Greear <greearb@candelatech.com> wrote:
+>
+> On 5/15/19 6:00 AM, Ben Greear wrote:
+> > On 5/15/19 5:26 AM, Sebastian Gottschall wrote:
+> >>
+> >> Am 15.05.2019 um 14:20 schrieb Ben Greear:
+> >>> On 05/14/2019 09:26 PM, Sebastian Gottschall wrote:
+> >>>> can you send me a detailed instruction for testing this on my devices? so which commands have been used for generating the traffic etc. (iperf3?)
+> >>>
+> >>> I am using our own traffic generator, but I imagine iperf3 should work fine too.
+> >>>
+> >>> I am testing on x86-64 and so forth.  Maybe you can test with UDP small-packet load on your platform
+> >>> in routed mode (ie, external iperf generator through your AP) and see if you see issues?
+> >> thats the plan. can you do a test with iperf3 to see if its reproduceable. i mean i will test it on ipq based boards and x64. but to make sure that the scenario
+> >> is identical which raised up your issue, it would be find if we have identical software for testing including the same options
+>
+> I think I found the issue.  The rate-ctrl logic in the firmware allows a transition from HT/VHT 20 MCS0 down to OFDM rates.
+> It seems the hardware does not like to see an AMPDU with an OFDM rate for 20Mhz and a VHT rate for 80Mhz (or maybe just the
+> single OFDM rate is the fault).
+>
+> If you can edit firmware, then setting this to 0 probably fixes the issue.
+>
+> g_rc_cck_rate_allowed
+>
+> I think to reproduce you'd need to send high speed traffic in a situation where the
+> RF environment is going to make rate-ctrl fail quite a bit.  (Slow speed should
+> work too, but it would likely take a lot longer).
+>
+> And, it is always possible that whatever I saw when testing mostly-stock FW is different
+> from what I eventually debugged to in my firmware.  Still, from looking at MCS vs SNR
+> charts, there seems to be no advantage to trying OFDM vs MCS0 for 20Mhz.
+>
+> Thanks,
+> Ben
+>
+> --
+> Ben Greear <greearb@candelatech.com>
+> Candela Technologies Inc  http://www.candelatech.com
+>
+>
+> _______________________________________________
+> ath10k mailing list
+> ath10k@lists.infradead.org
+> http://lists.infradead.org/mailman/listinfo/ath10k
+
+_______________________________________________
+ath10k mailing list
+ath10k@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/ath10k
