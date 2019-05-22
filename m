@@ -2,80 +2,83 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3ABBB25E02
-	for <lists+ath10k@lfdr.de>; Wed, 22 May 2019 08:24:45 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8C31E25E11
+	for <lists+ath10k@lfdr.de>; Wed, 22 May 2019 08:33:09 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:
-	Message-ID:Date:To:From:Subject:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=TTJ30NUsexEMEfdeWjMeoVxvqcWMe9EtySThVCKpjgM=; b=KzD8gynJofFKcZ
-	KGM7LsIbl3A99fJsB0uwAmKRz3eYxB2tPwFXh+BKYhEOOZyiw1CIzUbRLNEt8+3c/y0CbdAok1TTU
-	X1lmXZwr3wl8bK0eJq9cvvJgQ/4IsDo/CNjZHOU755B1yydRwYq/RLinvWloQJRufybOzZhtTBVBX
-	LmWGe9Z639tgbjexWJmjAzkeicjApMWEFnPuWbRodrYMNGpKb7GRnuD6hZNYYYUrcbFTpLEhleSDC
-	UeAf+KivrLSFnuz16+nO/6XIfoJrZUsVk20dYQdb0kyXm9/dCDTtgKcR9PrdWEZOtc5exRSUNMl0z
-	BKLd+85Ss9ka1E2Pj8uw==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
+	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=TYVy7aEIA0wrVxQv67UyL91ABU7VhuStmklnjqkhSyM=; b=tVg
+	MMo3r3lLDvqTPwc+BJqFbZnySIF740weBcZaZVlZ/36dKIbWiBP9Km9weHe+DqQDy6SAYB/dApRFg
+	zH4b5N4pP3lcUwAw1ePkd7JoqM427/HS90ro1Z3gsXs2Z8LSS7LPKcMTPJxIYAZSB4SCT9A45RcNW
+	pmpOSttqmqZ2N7XUlxSC+sbiABmDhlZC9cRAD+1piwvOFZc+E+sPvYDkeVmwLr5E3cHusARom3//b
+	ICBx9576kuklWKbQjXTkaAQvzXmKKGJ4rzs9lw8wnGYIrucwdANOx6cRI84Q7m6YQtbd/9+eCTHEf
+	jCkOPT8JsucYKXw5E3JcmH26Vu5Th6Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hTKg4-0002Ql-J6; Wed, 22 May 2019 06:24:40 +0000
-Received: from alexa-out-tai-01.qualcomm.com ([103.229.16.226])
+	id 1hTKoF-0005Ma-3i; Wed, 22 May 2019 06:33:07 +0000
+Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hTKg0-0002QO-Ug
- for ath10k@lists.infradead.org; Wed, 22 May 2019 06:24:38 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
- d=qti.qualcomm.com; i=@qti.qualcomm.com; q=dns/txt;
- s=qcdkim; t=1558506277; x=1590042277;
- h=from:to:cc:date:message-id:references:in-reply-to:
- content-transfer-encoding:mime-version:subject;
- bh=cOHiQkwHCdKnpqdqLXnm29nEAGaGFK9XtWEviAGAfyI=;
- b=bzemokf3CBlc3+RzInPJYK6VTVkDc1AgzLjpAst3dFUUH025pjDV4fbx
- sDpwd2Cbu3l9cmETLyW0VQfX2M24TyphGyIO5mxl38dG8MXt8w8tqqXs4
- HGLWwz2bN5PIU5afExNy94WiR0yIl1l/G1OX2gbkfQsZVyvIYSfoPhBfb 4=;
-Subject: RE: [PATCH v2] ath10k: add support for simulate crash on SDIO chip
-Thread-Topic: [PATCH v2] ath10k: add support for simulate crash on SDIO chip
-Received: from ironmsg01-tai.qualcomm.com ([10.249.140.6])
- by alexa-out-tai-01.qualcomm.com with ESMTP; 22 May 2019 14:24:32 +0800
-X-IronPort-AV: E=McAfee;i="5900,7806,9264"; a="29982290"
-Received: from aptaiexm02f.ap.qualcomm.com ([10.249.150.16])
- by ironmsg01-tai.qualcomm.com with ESMTP/TLS/AES256-SHA;
- 22 May 2019 14:24:27 +0800
-Received: from aptaiexm02f.ap.qualcomm.com (10.249.150.16) by
- aptaiexm02f.ap.qualcomm.com (10.249.150.16) with Microsoft SMTP Server (TLS)
- id 15.0.1395.4; Wed, 22 May 2019 14:24:24 +0800
-Received: from aptaiexm02f.ap.qualcomm.com ([fe80::4152:1436:e436:faa1]) by
- aptaiexm02f.ap.qualcomm.com ([fe80::4152:1436:e436:faa1%19]) with mapi id
- 15.00.1395.000; Wed, 22 May 2019 14:24:24 +0800
-From: Wen Gong <wgong@qti.qualcomm.com>
-To: Claire Chang <tientzu@google.com>, Wen Gong <wgong@codeaurora.org>
-Thread-Index: AQHVCslW/u/fYzi78E+Y5SXBgv663aZ2uDcw
-Date: Wed, 22 May 2019 06:24:24 +0000
-Message-ID: <5b1f1d8619524128894e5f31ca4733af@aptaiexm02f.ap.qualcomm.com>
-References: <1556524457-17469-1-git-send-email-wgong@codeaurora.org>
- <CALiNf29_GwSEUJ_vdp+_1DeDyFZj0uuUY9kYh94w4P_eeDT=8g@mail.gmail.com>
-In-Reply-To: <CALiNf29_GwSEUJ_vdp+_1DeDyFZj0uuUY9kYh94w4P_eeDT=8g@mail.gmail.com>
-Accept-Language: en-US
-Content-Language: en-US
-X-MS-Has-Attach: 
-X-MS-TNEF-Correlator: 
-x-ms-exchange-transport-fromentityheader: Hosted
-x-originating-ip: [10.249.136.10]
-MIME-Version: 1.0
+ id 1hTKoA-0005MF-RT
+ for ath10k@lists.infradead.org; Wed, 22 May 2019 06:33:04 +0000
+Received: by smtp.codeaurora.org (Postfix, from userid 1000)
+ id D6FCC60275; Wed, 22 May 2019 06:33:01 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1558506781;
+ bh=xih2u75Xh2oTi6oW2MYjWqkYO01ltdet1FO94AJV884=;
+ h=From:To:Cc:Subject:Date:From;
+ b=J9OmIXFrJaKDIKVLoXkG3EUmvRrwWBxiqkevnBWfBbZXWHQmBiGFXLeR83O7ezpLJ
+ CstVBAiUQ2aSjbMbNwGS06lZqh/KjwYMOL5YSUhk7PqSL8/JTPmf2mll7BGW0+QGtk
+ kaPoqH3+qbVGAjNNNM3GKeHN/NarY2Z3Cw9Rdjic=
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ pdx-caf-mail.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
+ DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
+ version=3.4.0
+Received: from localhost.localdomain (unknown [180.166.53.21])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
+ (No client certificate requested)
+ (Authenticated sender: wgong@smtp.codeaurora.org)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 81F666076A;
+ Wed, 22 May 2019 06:33:00 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1558506781;
+ bh=xih2u75Xh2oTi6oW2MYjWqkYO01ltdet1FO94AJV884=;
+ h=From:To:Cc:Subject:Date:From;
+ b=J9OmIXFrJaKDIKVLoXkG3EUmvRrwWBxiqkevnBWfBbZXWHQmBiGFXLeR83O7ezpLJ
+ CstVBAiUQ2aSjbMbNwGS06lZqh/KjwYMOL5YSUhk7PqSL8/JTPmf2mll7BGW0+QGtk
+ kaPoqH3+qbVGAjNNNM3GKeHN/NarY2Z3Cw9Rdjic=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 81F666076A
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ spf=none smtp.mailfrom=wgong@codeaurora.org
+From: Wen Gong <wgong@codeaurora.org>
+To: ath10k@lists.infradead.org
+Subject: [PATCH v3] ath10k: add support for firmware crash recovery on SDIO
+ chip
+Date: Wed, 22 May 2019 14:32:56 +0800
+Message-Id: <1558506776-19702-1-git-send-email-wgong@codeaurora.org>
+X-Mailer: git-send-email 1.9.1
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190521_232437_423400_8F2685D4 
-X-CRM114-Status: UNSURE (   8.29  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -2.4 (--)
+X-CRM114-CacheID: sfid-20190521_233302_925044_CBF1A8D8 
+X-CRM114-Status: GOOD (  12.85  )
+X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.4 points)
+ Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [103.229.16.226 listed in list.dnswl.org]
+ medium trust [198.145.29.96 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
@@ -90,35 +93,77 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: "open list:NETWORKING DRIVERS \(WIRELESS\)"
- <linux-wireless@vger.kernel.org>,
- "ath10k@lists.infradead.org" <ath10k@lists.infradead.org>
+Cc: linux-wireless@vger.kernel.org
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-> -----Original Message-----
-> From: ath10k <ath10k-bounces@lists.infradead.org> On Behalf Of Claire
-> Chang
-> Sent: Wednesday, May 15, 2019 10:53 AM
-> To: Wen Gong <wgong@codeaurora.org>
-> Cc: open list:NETWORKING DRIVERS (WIRELESS) <linux-
-> wireless@vger.kernel.org>; ath10k@lists.infradead.org
-> Subject: [EXT] Re: [PATCH v2] ath10k: add support for simulate crash on SDIO
-> chip
-> 
-> Tested-by: Claire Chang <tientzu@chromium.org>
-> 
-> If this patch adds support for detecting the real firmware assert,
-> maybe the title should be "add support for _crash recovery_ on SDIO
-> chip"
-Yes, seems this title is more appropriate.
-> 
-> _______________________________________________
-> ath10k mailing list
-> ath10k@lists.infradead.org
-> http://lists.infradead.org/mailman/listinfo/ath10k
+The command to simulate firmware crash:
+echo soft > /sys/kernel/debug/ieee80211/phy0/ath10k/simulate_fw_crash
+
+It will send WMI_FORCE_FW_HANG_ASSERT to firmware, then it will trigger
+CPU interrupt status register for SDIO chip, ath10k driver need to
+configure it while enable SDIO interrupt, otherwise ath10k driver will
+not get the assert error info.
+
+After this change, it will success for simulate firmware crash.
+
+Tested with QCA6174 SDIO with firmware
+WLAN.RMH.4.4.1-00007-QCARMSWP-1.
+
+Signed-off-by: Wen Gong <wgong@codeaurora.org>
+---
+v3: change commit log title
+v2: add MBOX_CPU_STATUS_ENABLE_ASSERT_MASK for fw assert check
+ drivers/net/wireless/ath/ath10k/hw.h   |  1 +
+ drivers/net/wireless/ath/ath10k/sdio.c | 10 ++++++++--
+ 2 files changed, 9 insertions(+), 2 deletions(-)
+
+diff --git a/drivers/net/wireless/ath/ath10k/hw.h b/drivers/net/wireless/ath/ath10k/hw.h
+index 7131499..60521ed 100644
+--- a/drivers/net/wireless/ath/ath10k/hw.h
++++ b/drivers/net/wireless/ath/ath10k/hw.h
+@@ -1095,6 +1095,7 @@ struct ath10k_hw_ops {
+ #define MBOX_CPU_INT_STATUS_ENABLE_ADDRESS	0x00000819
+ #define MBOX_CPU_INT_STATUS_ENABLE_BIT_LSB	0
+ #define MBOX_CPU_INT_STATUS_ENABLE_BIT_MASK	0x000000ff
++#define MBOX_CPU_STATUS_ENABLE_ASSERT_MASK 0x00000001
+ #define MBOX_ERROR_STATUS_ENABLE_ADDRESS	0x0000081a
+ #define MBOX_ERROR_STATUS_ENABLE_RX_UNDERFLOW_LSB  1
+ #define MBOX_ERROR_STATUS_ENABLE_RX_UNDERFLOW_MASK 0x00000002
+diff --git a/drivers/net/wireless/ath/ath10k/sdio.c b/drivers/net/wireless/ath/ath10k/sdio.c
+index fae56c6..1a3a7bf 100644
+--- a/drivers/net/wireless/ath/ath10k/sdio.c
++++ b/drivers/net/wireless/ath/ath10k/sdio.c
+@@ -850,6 +850,10 @@ static int ath10k_sdio_mbox_proc_cpu_intr(struct ath10k *ar)
+ 
+ out:
+ 	mutex_unlock(&irq_data->mtx);
++	if (cpu_int_status & MBOX_CPU_STATUS_ENABLE_ASSERT_MASK) {
++		ath10k_err(ar, "firmware crashed!\n");
++		queue_work(ar->workqueue, &ar->restart_work);
++	}
+ 	return ret;
+ }
+ 
+@@ -1495,8 +1499,10 @@ static int ath10k_sdio_hif_enable_intrs(struct ath10k *ar)
+ 	regs->int_status_en |=
+ 		FIELD_PREP(MBOX_INT_STATUS_ENABLE_MBOX_DATA_MASK, 1);
+ 
+-	/* Set up the CPU Interrupt status Register */
+-	regs->cpu_int_status_en = 0;
++	/* Set up the CPU Interrupt Status Register, enable CPU sourced interrupt #0
++	 * #0 is used for report assertion from target
++	 */
++	regs->cpu_int_status_en = FIELD_PREP(MBOX_CPU_STATUS_ENABLE_ASSERT_MASK, 1);
+ 
+ 	/* Set up the Error Interrupt status Register */
+ 	regs->err_int_status_en =
+-- 
+1.9.1
+
 
 _______________________________________________
 ath10k mailing list
