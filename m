@@ -2,84 +2,81 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6DFC025B9D
-	for <lists+ath10k@lfdr.de>; Wed, 22 May 2019 03:20:41 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C32C125BE7
+	for <lists+ath10k@lfdr.de>; Wed, 22 May 2019 04:19:19 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=0n/2CRPj1QkVf6zl8cLkzTpdaFWrmgzBGFqFv/DtPro=; b=s7bEpTa9FqqCnL
-	qHse7wU75E+2HRGTfl2OIFkvLC0KSYF2BSDfKPcZ0bpkd4plFeZAPC0fqNQNMz2021xQzHCC1xMYQ
-	fxjO5nttgSiTDrdMJ4UIunvY3fgaPyBuubM0z7wNws37aXFU47IJERpFpOvYxFYmGnFUm/liQA3xC
-	Rx/5uAcmPC/JwN/+3NOcBNtqVFtiAoaB0hGngXeKja8VCgz49Ta/l85mJu6jhRatqERQ3V/WjmnWY
-	5xgiRIhpkiCjEw1J7uch8w/KPRskiLigTOHUVy03bDWNWXQJK84llOHA7epdaMfw7jMUeX1YDsQqx
-	m4Tl+wLuT5w8gdPMW02Q==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
+	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=5eNkiV3T0KknpOW/+RDvpwUHCQurjk1xBvmg1a0NWQI=; b=qye
+	bdv3ocSu4pbAF4vEAZUnnZmnGjCMcSalZi/JZHcy+iPDRrmnAYffke0M2NaVTGyqXbqFb0w1OV1WJ
+	ysxcFnalEKcTY8mIOpHB41mP/0mBKwuAhyKN1x/Kbf62jZ82irKpQP5z49Poq1PVLVisah/g2Ods5
+	/ju81oFpAbf/8VJrw3umi8LHuNFQH5/jXt9FlC1Ol46YYb/yvv7YXITiRntY+QGRWA/iF4qOJKOBe
+	bwktL2X1Ur2bQU80kHoFUwnzNpAVzs91R3Vq4BwqiOhFwAIUG5K9N7daNhqlqWhtqFhWmIxjp4Np/
+	DB97v1dNzkVg+eVYuV/HBJA2MXdvrfw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hTFvm-000613-Tq; Wed, 22 May 2019 01:20:34 +0000
-Received: from mail-pl1-x641.google.com ([2607:f8b0:4864:20::641])
+	id 1hTGqZ-0006S4-M9; Wed, 22 May 2019 02:19:15 +0000
+Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hTFvj-00060j-BL
- for ath10k@lists.infradead.org; Wed, 22 May 2019 01:20:33 +0000
-Received: by mail-pl1-x641.google.com with SMTP id f12so203977plt.8
- for <ath10k@lists.infradead.org>; Tue, 21 May 2019 18:20:30 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
- h=date:from:to:cc:subject:message-id:references:mime-version
- :content-disposition:in-reply-to:user-agent;
- bh=CpB65cDLGq7XzI4hbeNnxT0sjgfejrvYYgurc14l3FA=;
- b=foLC0zWFki8g626LWwoIm9P7Y/sPGp9D7pwphRKciHL6EDPV7VvdPAFbJFCRNQzxgt
- 4zymNebs1ix8ktIUvErWLhKWi+MG87x45xFAIg6cs61grXFN6YN9iZBRpxBBZPkBWap0
- 24e4MeuUEbhdpeTjiFwxzYZh/sVSoLzd7F2WLaf5R10vP0dzeA5IR4zjgU2Dcmrvmyfy
- 7zSoYMzfO++/nFWCyuB5c3B0gDizywhcQyAtNP+rigD6o35M6lM32H7v1HpEAyCvoohN
- 5MlWcJqnxiPmhT+d7L2R2YuYB5m2TKHxlFWHyaQRJHRk8GGqhPdNXAzFLW78Oa2Ba9nU
- rvWw==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=CpB65cDLGq7XzI4hbeNnxT0sjgfejrvYYgurc14l3FA=;
- b=nzygBwfKaEIGk04qlCAmu9GJDl7GE8x0yi5tSbCjrzpxBfCSgUkFCvrgbmq2patuVr
- Y2J6Mro7tWFIaAoaL2Wa6TP2nmoM4tzo8Cag2d2iFM7idgunsjAZyFCUSEwD2n43BS6g
- e5RJa+KVCdsUVM9MeKOEBBpU3u5o6DKB/+J9NtnGC/2qCy/gCCUFXZ9mIZP3PJMwBWwM
- OcI4Bw0tL4gdb1/qEA2TSdNOOgiJfoNKHKb0z/J6IhFmlzadkfz6lvQDqfBpEnBMGW6d
- Q5aXhens33EeNhJIhNhQivWnQdbMPdcCT4yDrb1lMrFu7iUJ8fRdxyhovDJq8lqItU/C
- VQUg==
-X-Gm-Message-State: APjAAAWstIDY2mOeLFOPhW9fO/vjfHwVxv6YZV1Lih1PxOUwIWO3AegW
- n6tXdr1j5DY5nO5FhKOB5IA3tw==
-X-Google-Smtp-Source: APXvYqyZhWUzzp4/O4aq7qAxGkILoAxGI3ODU/VcMssF5wW4SifccjkV/WVJLbKw8ja9JMyfVqxQKw==
-X-Received: by 2002:a17:902:e00f:: with SMTP id
- ca15mr86084238plb.76.1558488029511; 
- Tue, 21 May 2019 18:20:29 -0700 (PDT)
-Received: from minitux (104-188-17-28.lightspeed.sndgca.sbcglobal.net.
- [104.188.17.28])
- by smtp.gmail.com with ESMTPSA id s66sm30146973pfb.37.2019.05.21.18.20.28
- (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Tue, 21 May 2019 18:20:28 -0700 (PDT)
-Date: Tue, 21 May 2019 18:20:27 -0700
-From: Bjorn Andersson <bjorn.andersson@linaro.org>
-To: Govind Singh <govinds@codeaurora.org>
-Subject: Re: [PATCH v2 1/1] ath10k: update HOST capability qmi message
-Message-ID: <20190522012026.GS31438@minitux>
-References: <20190204115555.17052-1-govinds@codeaurora.org>
-MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190204115555.17052-1-govinds@codeaurora.org>
-User-Agent: Mutt/1.11.3 (2019-02-01)
+ id 1hTGqV-0006Ra-JX
+ for ath10k@lists.infradead.org; Wed, 22 May 2019 02:19:13 +0000
+Received: by smtp.codeaurora.org (Postfix, from userid 1000)
+ id 9B1F76087F; Wed, 22 May 2019 02:19:10 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1558491550;
+ bh=SkQsYv4Wzws1m6n6fKUkPgVyPK6fBZDnqCfcZxGDIqM=;
+ h=From:To:Cc:Subject:Date:From;
+ b=VWIgSzC85BSAlK4jLsVCEEHGUtkvBaUaB4qo6R5/K2OF8BCPbjNzw8HaDhP1dxjCD
+ m1Nt3gABj1hwUnwkEFdJmBo84yTnbHr4xKKVU0Ui+Qogho4NQckug9pC4VChtQ2Hb5
+ OYQv+IyGqB34YpFo/D/R1QoRQJijgGCz3p9AVqxM=
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ pdx-caf-mail.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
+ DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
+ version=3.4.0
+Received: from smtp.codeaurora.org (unknown [180.166.53.21])
+ (using TLSv1 with cipher AES128-SHA (128/128 bits))
+ (No client certificate requested)
+ (Authenticated sender: miaoqing@smtp.codeaurora.org)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 3222E607DF;
+ Wed, 22 May 2019 02:19:07 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1558491550;
+ bh=SkQsYv4Wzws1m6n6fKUkPgVyPK6fBZDnqCfcZxGDIqM=;
+ h=From:To:Cc:Subject:Date:From;
+ b=VWIgSzC85BSAlK4jLsVCEEHGUtkvBaUaB4qo6R5/K2OF8BCPbjNzw8HaDhP1dxjCD
+ m1Nt3gABj1hwUnwkEFdJmBo84yTnbHr4xKKVU0Ui+Qogho4NQckug9pC4VChtQ2Hb5
+ OYQv+IyGqB34YpFo/D/R1QoRQJijgGCz3p9AVqxM=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 3222E607DF
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ spf=none smtp.mailfrom=miaoqing@codeaurora.org
+Received: by smtp.codeaurora.org (sSMTP sendmail emulation);
+ Wed, 22 May 2019 10:19:04 +0800
+From: Miaoqing Pan <miaoqing@codeaurora.org>
+To: ath10k@lists.infradead.org
+Subject: [PATCH] ath10k: fix fw crash by moving chip reset after napi disabled
+Date: Wed, 22 May 2019 10:18:29 +0800
+Message-Id: <1558491509-7755-1-git-send-email-miaoqing@codeaurora.org>
+X-Mailer: git-send-email 1.9.1
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190521_182031_404195_BF3BB241 
-X-CRM114-Status: GOOD (  17.96  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190521_191911_678518_4AF955C1 
+X-CRM114-Status: UNSURE (   9.15  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:641 listed in]
- [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [198.145.29.96 listed in list.dnswl.org]
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
@@ -98,349 +95,77 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org
+Cc: linux-wireless@vger.kernel.org, Miaoqing Pan <miaoqing@codeaurora.org>
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On Mon 04 Feb 03:55 PST 2019, Govind Singh wrote:
+On SMP platform, when continuously running wifi up/down, the napi
+poll can be scheduled during chip reset, which will call
+ath10k_pci_has_fw_crashed() to check the fw status. But in the reset
+period, the value from FW_INDICATOR_ADDRESS register will return
+0xdeadbeef, which also be treated as fw crash. Fix the issue by
+moving chip reset after napi disabled.
 
-> HOST capability interface data structures are updated
-> in HL3.1 fw version. Update the qmi host capability
-> members for compatibility across different firmware
-> versions.
-> Since this change breaks backward compatibility with
-> HL2.0 fw, HL2.0 fw upgrade to WLAN.HL.2.0-01617-QCAHLSWMTPLZ-1
-> or later version is required.
-> 
+ath10k_pci 0000:01:00.0: firmware crashed! (guid 73b30611-5b1e-4bdd-90b4-64c81eb947b6)
+ath10k_pci 0000:01:00.0: qca9984/qca9994 hw1.0 target 0x01000000 chip_id 0x00000000 sub 168c:cafe
+ath10k_pci 0000:01:00.0: htt-ver 2.2 wmi-op 6 htt-op 4 cal otp max-sta 512 raw 0 hwcrypto 1
+ath10k_pci 0000:01:00.0: failed to get memcpy hi address for firmware address 4: -16
+ath10k_pci 0000:01:00.0: failed to read firmware dump area: -16
+ath10k_pci 0000:01:00.0: Copy Engine register dump:
+ath10k_pci 0000:01:00.0: [00]: 0x0004a000   0   0   0   0
+ath10k_pci 0000:01:00.0: [01]: 0x0004a400   0   0   0   0
+ath10k_pci 0000:01:00.0: [02]: 0x0004a800   0   0   0   0
+ath10k_pci 0000:01:00.0: [03]: 0x0004ac00   0   0   0   0
+ath10k_pci 0000:01:00.0: [04]: 0x0004b000   0   0   0   0
+ath10k_pci 0000:01:00.0: [05]: 0x0004b400   0   0   0   0
+ath10k_pci 0000:01:00.0: [06]: 0x0004b800   0   0   0   0
+ath10k_pci 0000:01:00.0: [07]: 0x0004bc00   1   0   1   0
+ath10k_pci 0000:01:00.0: [08]: 0x0004c000   0   0   0   0
+ath10k_pci 0000:01:00.0: [09]: 0x0004c400   0   0   0   0
+ath10k_pci 0000:01:00.0: [10]: 0x0004c800   0   0   0   0
+ath10k_pci 0000:01:00.0: [11]: 0x0004cc00   0   0   0   0
 
-Sorry for not objecting earlier, I confused this with the "msa info req
-rejected: 90" error that we see on some 845 devices.
+Tested HW: QCA9984
+Tested FW: 10.4-3.9.0.2-00035
 
-Given that the wlan firmware is signed there's no way for people in the
-community to upgrade their firmware, until such version has propagated
-through the official channels for the specific device.
-As such this patch inhibits the ability of bringing up wifi on devices
-such as the Lenovo Yoga C630.
+Signed-off-by: Miaoqing Pan <miaoqing@codeaurora.org>
+---
+ drivers/net/wireless/ath/ath10k/pci.c | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
 
+diff --git a/drivers/net/wireless/ath/ath10k/pci.c b/drivers/net/wireless/ath/ath10k/pci.c
+index 2bd6cba..80bcb2e 100644
+--- a/drivers/net/wireless/ath/ath10k/pci.c
++++ b/drivers/net/wireless/ath/ath10k/pci.c
+@@ -2059,6 +2059,11 @@ static void ath10k_pci_hif_stop(struct ath10k *ar)
+ 
+ 	ath10k_dbg(ar, ATH10K_DBG_BOOT, "boot hif stop\n");
+ 
++	ath10k_pci_irq_disable(ar);
++	ath10k_pci_irq_sync(ar);
++	napi_synchronize(&ar->napi);
++	napi_disable(&ar->napi);
++
+ 	/* Most likely the device has HTT Rx ring configured. The only way to
+ 	 * prevent the device from accessing (and possible corrupting) host
+ 	 * memory is to reset the chip now.
+@@ -2072,10 +2077,6 @@ static void ath10k_pci_hif_stop(struct ath10k *ar)
+ 	 */
+ 	ath10k_pci_safe_chip_reset(ar);
+ 
+-	ath10k_pci_irq_disable(ar);
+-	ath10k_pci_irq_sync(ar);
+-	napi_synchronize(&ar->napi);
+-	napi_disable(&ar->napi);
+ 	ath10k_pci_flush(ar);
+ 
+ 	spin_lock_irqsave(&ar_pci->ps_lock, flags);
+-- 
+1.9.1
 
-Is there any way we can detect if we're using the "old" firmware?
-
-Regards,
-Bjorn
-
-> Testing:
->         Tested on QCS404 platform(WCN3990 HW).
->         Tested FW: WLAN.HL.3.1-00784-QCAHLSWMTPLZ-1,
->                    WLAN.HL.2.0-01617-QCAHLSWMTPLZ-1
-> ---
->  .../net/wireless/ath/ath10k/qmi_wlfw_v01.c    | 229 +++++++++++++++++-
->  .../net/wireless/ath/ath10k/qmi_wlfw_v01.h    |  34 ++-
->  2 files changed, 257 insertions(+), 6 deletions(-)
-> 
-> diff --git a/drivers/net/wireless/ath/ath10k/qmi_wlfw_v01.c b/drivers/net/wireless/ath/ath10k/qmi_wlfw_v01.c
-> index ba79c2e4aed6..4102f7b0b5c3 100644
-> --- a/drivers/net/wireless/ath/ath10k/qmi_wlfw_v01.c
-> +++ b/drivers/net/wireless/ath/ath10k/qmi_wlfw_v01.c
-> @@ -1763,14 +1763,239 @@ struct qmi_elem_info wlfw_host_cap_req_msg_v01_ei[] = {
->  					   daemon_support_valid),
->  	},
->  	{
-> -		.data_type      = QMI_UNSIGNED_1_BYTE,
-> +		.data_type      = QMI_UNSIGNED_4_BYTE,
->  		.elem_len       = 1,
-> -		.elem_size      = sizeof(u8),
-> +		.elem_size      = sizeof(u32),
->  		.array_type     = NO_ARRAY,
->  		.tlv_type       = 0x10,
->  		.offset         = offsetof(struct wlfw_host_cap_req_msg_v01,
->  					   daemon_support),
->  	},
-> +	{
-> +		.data_type      = QMI_OPT_FLAG,
-> +		.elem_len       = 1,
-> +		.elem_size      = sizeof(u8),
-> +		.array_type     = NO_ARRAY,
-> +		.tlv_type       = 0x11,
-> +		.offset         = offsetof(struct wlfw_host_cap_req_msg_v01,
-> +					   wake_msi_valid),
-> +	},
-> +	{
-> +		.data_type      = QMI_UNSIGNED_4_BYTE,
-> +		.elem_len       = 1,
-> +		.elem_size      = sizeof(u32),
-> +		.array_type     = NO_ARRAY,
-> +		.tlv_type       = 0x11,
-> +		.offset         = offsetof(struct wlfw_host_cap_req_msg_v01,
-> +					   wake_msi),
-> +	},
-> +	{
-> +		.data_type      = QMI_OPT_FLAG,
-> +		.elem_len       = 1,
-> +		.elem_size      = sizeof(u8),
-> +		.array_type     = NO_ARRAY,
-> +		.tlv_type       = 0x12,
-> +		.offset         = offsetof(struct wlfw_host_cap_req_msg_v01,
-> +					   gpios_valid),
-> +	},
-> +	{
-> +		.data_type      = QMI_DATA_LEN,
-> +		.elem_len       = 1,
-> +		.elem_size      = sizeof(u32),
-> +		.array_type     = NO_ARRAY,
-> +		.tlv_type       = 0x12,
-> +		.offset         = offsetof(struct wlfw_host_cap_req_msg_v01,
-> +					   gpios_len),
-> +	},
-> +	{
-> +		.data_type      = QMI_UNSIGNED_4_BYTE,
-> +		.elem_len       = QMI_WLFW_MAX_NUM_GPIO_V01,
-> +		.elem_size      = sizeof(u32),
-> +		.array_type     = VAR_LEN_ARRAY,
-> +		.tlv_type       = 0x12,
-> +		.offset         = offsetof(struct wlfw_host_cap_req_msg_v01,
-> +					   gpios),
-> +	},
-> +	{
-> +		.data_type      = QMI_OPT_FLAG,
-> +		.elem_len       = 1,
-> +		.elem_size      = sizeof(u8),
-> +		.array_type     = NO_ARRAY,
-> +		.tlv_type       = 0x13,
-> +		.offset         = offsetof(struct wlfw_host_cap_req_msg_v01,
-> +					   nm_modem_valid),
-> +	},
-> +	{
-> +		.data_type      = QMI_UNSIGNED_1_BYTE,
-> +		.elem_len       = 1,
-> +		.elem_size      = sizeof(u8),
-> +		.array_type     = NO_ARRAY,
-> +		.tlv_type       = 0x13,
-> +		.offset         = offsetof(struct wlfw_host_cap_req_msg_v01,
-> +					   nm_modem),
-> +	},
-> +	{
-> +		.data_type      = QMI_OPT_FLAG,
-> +		.elem_len       = 1,
-> +		.elem_size      = sizeof(u8),
-> +		.array_type     = NO_ARRAY,
-> +		.tlv_type       = 0x14,
-> +		.offset         = offsetof(struct wlfw_host_cap_req_msg_v01,
-> +					   bdf_support_valid),
-> +	},
-> +	{
-> +		.data_type      = QMI_UNSIGNED_1_BYTE,
-> +		.elem_len       = 1,
-> +		.elem_size      = sizeof(u8),
-> +		.array_type     = NO_ARRAY,
-> +		.tlv_type       = 0x14,
-> +		.offset         = offsetof(struct wlfw_host_cap_req_msg_v01,
-> +					   bdf_support),
-> +	},
-> +	{
-> +		.data_type      = QMI_OPT_FLAG,
-> +		.elem_len       = 1,
-> +		.elem_size      = sizeof(u8),
-> +		.array_type     = NO_ARRAY,
-> +		.tlv_type       = 0x15,
-> +		.offset         = offsetof(struct wlfw_host_cap_req_msg_v01,
-> +					   bdf_cache_support_valid),
-> +	},
-> +	{
-> +		.data_type      = QMI_UNSIGNED_1_BYTE,
-> +		.elem_len       = 1,
-> +		.elem_size      = sizeof(u8),
-> +		.array_type     = NO_ARRAY,
-> +		.tlv_type       = 0x15,
-> +		.offset         = offsetof(struct wlfw_host_cap_req_msg_v01,
-> +					   bdf_cache_support),
-> +	},
-> +	{
-> +		.data_type      = QMI_OPT_FLAG,
-> +		.elem_len       = 1,
-> +		.elem_size      = sizeof(u8),
-> +		.array_type     = NO_ARRAY,
-> +		.tlv_type       = 0x16,
-> +		.offset         = offsetof(struct wlfw_host_cap_req_msg_v01,
-> +					   m3_support_valid),
-> +	},
-> +	{
-> +		.data_type      = QMI_UNSIGNED_1_BYTE,
-> +		.elem_len       = 1,
-> +		.elem_size      = sizeof(u8),
-> +		.array_type     = NO_ARRAY,
-> +		.tlv_type       = 0x16,
-> +		.offset         = offsetof(struct wlfw_host_cap_req_msg_v01,
-> +					   m3_support),
-> +	},
-> +	{
-> +		.data_type      = QMI_OPT_FLAG,
-> +		.elem_len       = 1,
-> +		.elem_size      = sizeof(u8),
-> +		.array_type     = NO_ARRAY,
-> +		.tlv_type       = 0x17,
-> +		.offset         = offsetof(struct wlfw_host_cap_req_msg_v01,
-> +					   m3_cache_support_valid),
-> +	},
-> +	{
-> +		.data_type      = QMI_UNSIGNED_1_BYTE,
-> +		.elem_len       = 1,
-> +		.elem_size      = sizeof(u8),
-> +		.array_type     = NO_ARRAY,
-> +		.tlv_type       = 0x17,
-> +		.offset         = offsetof(struct wlfw_host_cap_req_msg_v01,
-> +					   m3_cache_support),
-> +	},
-> +	{
-> +		.data_type      = QMI_OPT_FLAG,
-> +		.elem_len       = 1,
-> +		.elem_size      = sizeof(u8),
-> +		.array_type     = NO_ARRAY,
-> +		.tlv_type       = 0x18,
-> +		.offset         = offsetof(struct wlfw_host_cap_req_msg_v01,
-> +					   cal_filesys_support_valid),
-> +	},
-> +	{
-> +		.data_type      = QMI_UNSIGNED_1_BYTE,
-> +		.elem_len       = 1,
-> +		.elem_size      = sizeof(u8),
-> +		.array_type     = NO_ARRAY,
-> +		.tlv_type       = 0x18,
-> +		.offset         = offsetof(struct wlfw_host_cap_req_msg_v01,
-> +					   cal_filesys_support),
-> +	},
-> +	{
-> +		.data_type      = QMI_OPT_FLAG,
-> +		.elem_len       = 1,
-> +		.elem_size      = sizeof(u8),
-> +		.array_type     = NO_ARRAY,
-> +		.tlv_type       = 0x19,
-> +		.offset         = offsetof(struct wlfw_host_cap_req_msg_v01,
-> +					   cal_cache_support_valid),
-> +	},
-> +	{
-> +		.data_type      = QMI_UNSIGNED_1_BYTE,
-> +		.elem_len       = 1,
-> +		.elem_size      = sizeof(u8),
-> +		.array_type     = NO_ARRAY,
-> +		.tlv_type       = 0x19,
-> +		.offset         = offsetof(struct wlfw_host_cap_req_msg_v01,
-> +					   cal_cache_support),
-> +	},
-> +	{
-> +		.data_type      = QMI_OPT_FLAG,
-> +		.elem_len       = 1,
-> +		.elem_size      = sizeof(u8),
-> +		.array_type     = NO_ARRAY,
-> +		.tlv_type       = 0x1A,
-> +		.offset         = offsetof(struct wlfw_host_cap_req_msg_v01,
-> +					   cal_done_valid),
-> +	},
-> +	{
-> +		.data_type      = QMI_UNSIGNED_1_BYTE,
-> +		.elem_len       = 1,
-> +		.elem_size      = sizeof(u8),
-> +		.array_type     = NO_ARRAY,
-> +		.tlv_type       = 0x1A,
-> +		.offset         = offsetof(struct wlfw_host_cap_req_msg_v01,
-> +					   cal_done),
-> +	},
-> +	{
-> +		.data_type      = QMI_OPT_FLAG,
-> +		.elem_len       = 1,
-> +		.elem_size      = sizeof(u8),
-> +		.array_type     = NO_ARRAY,
-> +		.tlv_type       = 0x1B,
-> +		.offset         = offsetof(struct wlfw_host_cap_req_msg_v01,
-> +					   mem_bucket_valid),
-> +	},
-> +	{
-> +		.data_type      = QMI_UNSIGNED_4_BYTE,
-> +		.elem_len       = 1,
-> +		.elem_size      = sizeof(u32),
-> +		.array_type     = NO_ARRAY,
-> +		.tlv_type       = 0x1B,
-> +		.offset         = offsetof(struct wlfw_host_cap_req_msg_v01,
-> +					   mem_bucket),
-> +	},
-> +	{
-> +		.data_type      = QMI_OPT_FLAG,
-> +		.elem_len       = 1,
-> +		.elem_size      = sizeof(u8),
-> +		.array_type     = NO_ARRAY,
-> +		.tlv_type       = 0x1C,
-> +		.offset         = offsetof(struct wlfw_host_cap_req_msg_v01,
-> +					   mem_cfg_mode_valid),
-> +	},
-> +	{
-> +		.data_type      = QMI_UNSIGNED_1_BYTE,
-> +		.elem_len       = 1,
-> +		.elem_size      = sizeof(u8),
-> +		.array_type     = NO_ARRAY,
-> +		.tlv_type       = 0x1C,
-> +		.offset         = offsetof(struct wlfw_host_cap_req_msg_v01,
-> +					   mem_cfg_mode),
-> +	},
->  	{}
->  };
->  
-> diff --git a/drivers/net/wireless/ath/ath10k/qmi_wlfw_v01.h b/drivers/net/wireless/ath/ath10k/qmi_wlfw_v01.h
-> index c5e3870b8871..ff668f5d8afd 100644
-> --- a/drivers/net/wireless/ath/ath10k/qmi_wlfw_v01.h
-> +++ b/drivers/net/wireless/ath/ath10k/qmi_wlfw_v01.h
-> @@ -553,12 +553,38 @@ struct wlfw_mac_addr_resp_msg_v01 {
->  #define WLFW_MAC_ADDR_RESP_MSG_V01_MAX_MSG_LEN 7
->  extern struct qmi_elem_info wlfw_mac_addr_resp_msg_v01_ei[];
->  
-> +#define QMI_WLFW_MAX_NUM_GPIO_V01 32
->  struct wlfw_host_cap_req_msg_v01 {
->  	u8 daemon_support_valid;
-> -	u8 daemon_support;
-> -};
-> -
-> -#define WLFW_HOST_CAP_REQ_MSG_V01_MAX_MSG_LEN 4
-> +	u32 daemon_support;
-> +	u8 wake_msi_valid;
-> +	u32 wake_msi;
-> +	u8 gpios_valid;
-> +	u32 gpios_len;
-> +	u32 gpios[QMI_WLFW_MAX_NUM_GPIO_V01];
-> +	u8 nm_modem_valid;
-> +	u8 nm_modem;
-> +	u8 bdf_support_valid;
-> +	u8 bdf_support;
-> +	u8 bdf_cache_support_valid;
-> +	u8 bdf_cache_support;
-> +	u8 m3_support_valid;
-> +	u8 m3_support;
-> +	u8 m3_cache_support_valid;
-> +	u8 m3_cache_support;
-> +	u8 cal_filesys_support_valid;
-> +	u8 cal_filesys_support;
-> +	u8 cal_cache_support_valid;
-> +	u8 cal_cache_support;
-> +	u8 cal_done_valid;
-> +	u8 cal_done;
-> +	u8 mem_bucket_valid;
-> +	u32 mem_bucket;
-> +	u8 mem_cfg_mode_valid;
-> +	u8 mem_cfg_mode;
-> +};
-> +
-> +#define WLFW_HOST_CAP_REQ_MSG_V01_MAX_MSG_LEN 189
->  extern struct qmi_elem_info wlfw_host_cap_req_msg_v01_ei[];
->  
->  struct wlfw_host_cap_resp_msg_v01 {
-> -- 
-> The Qualcomm Innovation Center, Inc. is a member of the Code Aurora Forum,
-> a Linux Foundation Collaborative Project
-> 
-> 
-> _______________________________________________
-> ath10k mailing list
-> ath10k@lists.infradead.org
-> http://lists.infradead.org/mailman/listinfo/ath10k
 
 _______________________________________________
 ath10k mailing list
