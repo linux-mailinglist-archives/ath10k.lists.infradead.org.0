@@ -2,83 +2,92 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 19CAF2BD3E
-	for <lists+ath10k@lfdr.de>; Tue, 28 May 2019 04:32:44 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9E7622BD62
+	for <lists+ath10k@lfdr.de>; Tue, 28 May 2019 04:49:52 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:
+	Message-ID:Date:To:From:Subject:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=hLJGFpuijapASDBwr9uholHj7s0q2xahsrW1QUaHZ08=; b=DD3oz4q3Vb16uw
-	4go6PW+aRBP0BpJYoOe8BKUwBmUjg9Ohysj0FFKwQDNX+Su9qzca/eM/gIt1QjcGFY3gAyk+eofh+
-	cwlu4RvhUyjkhy9b1o967Xw30JphIb4qX22MkNQtBp4FFlAfZp5Uor3xakgjizUnGCMU98q3IZ8Q8
-	sEp2IAgul4jWMAwuF284PEv/jzEXmsj/SNRoIDWG8bRZ3Dv3aN8qE0j+Bo9JqHCuCbmqF46MJLNR5
-	hV7mNDmiuJnV2Hdag2oHXwVQIybCrqGmIlL+imXxBwvl1iGJUBsyx/FpOAm6Vrb8zE9jdiHUk6PDi
-	AvLbzW9jm95GWkOH3J9Q==;
+	List-Owner; bh=ZJXVUq4p7IlasZVFUdjuAV3iIMXx6GUP+uNVeZdJUKk=; b=b2HLf54awRTeHg
+	NjTLoVfYVNWp9U4/4DfwK3I8VfuaJeeKyW/iUfhdrdXmKt5IJJ4+8W2L6GSFHYNuLjp7sYuAsaXBH
+	z3hBCgRb7mHsE5MF9EUVJvTPla13q358dtg9HRDVKuTtxWY4G3wke4QJR0HPA10HW4glxD3sARNqI
+	9nXZYX5tnQvLHUFnE7CgAAOcIfGOe0weI4/dmEnkIGbR9u5zoYfSmO01xf+AZ7SmvOJi1w0CrotHJ
+	W7IoPzuB6L3XfgXRFhU16GrecQRwEWbU8TpaKPaPe7ifuAkACxQqzppu3zLxKKj9smuTwHEUc94Sl
+	MDYRC6EYFOyVX2qVm05g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hVRus-0004RJ-BD; Tue, 28 May 2019 02:32:42 +0000
-Received: from mail-qk1-x743.google.com ([2607:f8b0:4864:20::743])
+	id 1hVSBQ-0002v3-0w; Tue, 28 May 2019 02:49:48 +0000
+Received: from alexa-out-tai-02.qualcomm.com ([103.229.16.227])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hVRun-0004Qe-Tx
- for ath10k@lists.infradead.org; Tue, 28 May 2019 02:32:39 +0000
-Received: by mail-qk1-x743.google.com with SMTP id m14so1241650qka.10
- for <ath10k@lists.infradead.org>; Mon, 27 May 2019 19:32:36 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=gazIaoRjX4+ZH2UoFthw+2LC5GJZT06O6CMr8RDmhSw=;
- b=OyRdXpdzi3s1S8noasNbxCVQTvgCNb1jt09tkwpfQtEiqBFrGZ5Xq1rHdJVguW0jWk
- D3JYNTEpjDsifZXfusqjvSRUOM8ECBijRcu5fVIdGa+zpuQT7cV7rYICzI9hQqwaErSn
- lIRXLxi2ERkQ2stkbKgVTw718AJhQjZPMLoS8=
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=gazIaoRjX4+ZH2UoFthw+2LC5GJZT06O6CMr8RDmhSw=;
- b=m71f0c9B12UDSuop1esnRvig4XECgiDgf7oOJmAqCbh031xJPFLwXfqyTFbQ+h7c/g
- 1ecmYBbd+ri6ZUQ3qN0jLLcouFc6e2sI4WOkEOTIfIX4EZ6Wa7mQesW5ZsJZN5g+nGsj
- t00V5yGK8A5xbnsD+bTpSHukZMxChkq7MQYcE0AsToMUh9N47hbfz95b36IyWq7er6xf
- MPqOmNscxLCykSpKrrFU9iTLiV14wNDZBqQ1ifGEGEM9GbohKSqpe1zv8n9k2ICRbcSr
- yrVy1hDB7YzAWJ1jvhbM3Tladt/B68SGVAEenHGpnl0UXn+xT3svNbIRmYEHU6TeeVTv
- B3lA==
-X-Gm-Message-State: APjAAAVFk0/DePYgwVNWePspdYU8NRBVk76DaL3rwUYwiMTneU95A7Cf
- LD5IK4tKbegwBBR1W9nmsvwNz2zR/CmerLwkLRsBsA==
-X-Google-Smtp-Source: APXvYqyK1ZwSczQWrH4SrzKh0yrWlc2AguPwpnCRPMfy2AHPig+E94P5GmmGBxVJdD/ddu2rbTk+c+FmOzkVavmkeRw=
-X-Received: by 2002:ac8:2907:: with SMTP id y7mr61840750qty.278.1559010756074; 
- Mon, 27 May 2019 19:32:36 -0700 (PDT)
+ id 1hVSBL-0002uc-8y
+ for ath10k@lists.infradead.org; Tue, 28 May 2019 02:49:45 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
+ d=qti.qualcomm.com; i=@qti.qualcomm.com; q=dns/txt;
+ s=qcdkim; t=1559011783; x=1590547783;
+ h=from:to:cc:date:message-id:references:in-reply-to:
+ content-transfer-encoding:mime-version:subject;
+ bh=nRkNCMt05aLNGjQ9q8m2WKD2+ZjBBj2uPIxe4Au82VQ=;
+ b=Id73tOt6909oU/gyAe60VP+S9Ikm1Evx2BwxDP+E0KgES48wUCRGzosy
+ rnV6FXqYEoYhwmBz2W85jxudWJzZli1HiBzFkwXPzle7uBeRzM4j38PhO
+ uJResU5OfqTWy8GKOIDMlW9FbBaAgsfyFuSnbgW+vKDu+wDmjUtADQ+7u w=;
+Subject: RE: [PATCH] ath10k: Remove ATH10K_STATE_RESTARTED in simulate fw crash
+Thread-Topic: [PATCH] ath10k: Remove ATH10K_STATE_RESTARTED in simulate fw
+ crash
+Received: from ironmsg02-tai.qualcomm.com ([10.249.140.7])
+ by alexa-out-tai-02.qualcomm.com with ESMTP; 28 May 2019 10:49:38 +0800
+X-IronPort-AV: E=McAfee;i="5900,7806,9270"; a="30539829"
+Received: from aptaiexm02b.ap.qualcomm.com ([10.249.150.12])
+ by ironmsg02-tai.qualcomm.com with ESMTP/TLS/AES256-SHA;
+ 28 May 2019 10:49:32 +0800
+Received: from aptaiexm02f.ap.qualcomm.com (10.249.150.16) by
+ aptaiexm02b.ap.qualcomm.com (10.249.150.12) with Microsoft SMTP Server (TLS)
+ id 15.0.1395.4; Tue, 28 May 2019 10:49:30 +0800
+Received: from aptaiexm02f.ap.qualcomm.com ([fe80::4152:1436:e436:faa1]) by
+ aptaiexm02f.ap.qualcomm.com ([fe80::4152:1436:e436:faa1%19]) with mapi id
+ 15.00.1395.000; Tue, 28 May 2019 10:49:30 +0800
+From: Wen Gong <wgong@qti.qualcomm.com>
+To: Brian Norris <briannorris@chromium.org>
+Thread-Index: AQHUpmQJz5XVQIMvMUei5K703fyTnaYnTmZwgAtNzTD///F7AIABLCiAgADKTICAAL2CYIBLcTDg
+Date: Tue, 28 May 2019 02:49:30 +0000
+Message-ID: <301c4b127ea74abd8a9d8221d93656fd@aptaiexm02f.ap.qualcomm.com>
+References: <1542163824-795-1-git-send-email-wgong@codeaurora.org>
+ <CABvG-CWg-VXAtoN8HZumW-ZdP6dX9cO_8fWJ58C22kD2yDcXdw@mail.gmail.com>
+ <195f3bb0c88c43a6b1ca0ad336f947c0@aptaiexm02f.ap.qualcomm.com>
+ <CABvG-CWAfB8jjCDW4ggjJ8_YC++CjttJOMOt4s24F3mymvNR9A@mail.gmail.com>
+ <02904ba8682441e1a89668c1345cbec9@aptaiexm02f.ap.qualcomm.com>
+ <54b4dab1191d41b8b329f3ceb7017626@aptaiexm02f.ap.qualcomm.com>
+ <CABvG-CWz0rBCXfF7mX9L62=fmdcYhpOaO5JNLtvSE87o_XJFng@mail.gmail.com>
+ <1fec49e1b6794860a1eff2330bcdea28@aptaiexm02f.ap.qualcomm.com>
+ <CA+ASDXP1Ftpi93p=Bp2w1rRd3xVtNn_+diwkKTMXbTqK0B3ahA@mail.gmail.com>
+ <b073fa90e9a3437c9846ce2d22fab15f@aptaiexm02f.ap.qualcomm.com>
+In-Reply-To: <b073fa90e9a3437c9846ce2d22fab15f@aptaiexm02f.ap.qualcomm.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+x-ms-exchange-transport-fromentityheader: Hosted
+x-originating-ip: [10.249.136.10]
 MIME-Version: 1.0
-References: <1558506776-19702-1-git-send-email-wgong@codeaurora.org>
- <CALiNf28PQFtAM6uZVPhh-_ASnYeeAtm8kWpP0b8k_P6zGwxbcQ@mail.gmail.com>
-In-Reply-To: <CALiNf28PQFtAM6uZVPhh-_ASnYeeAtm8kWpP0b8k_P6zGwxbcQ@mail.gmail.com>
-From: Nicolas Boichat <drinkcat@chromium.org>
-Date: Tue, 28 May 2019 10:32:25 +0800
-Message-ID: <CANMq1KDgafzxyVc6H6i0OtKW32T2mpMSp4di81qNChDv-5RBKw@mail.gmail.com>
-Subject: Re: [PATCH v3] ath10k: add support for firmware crash recovery on
- SDIO chip
-To: Claire Chang <tientzu@google.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190527_193237_990121_F567E024 
-X-CRM114-Status: UNSURE (   4.59  )
+X-CRM114-CacheID: sfid-20190527_194943_593027_4551536C 
+X-CRM114-Status: UNSURE (   6.38  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-Spam-Score: -2.4 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-2.4 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:743 listed in]
- [list.dnswl.org]
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [103.229.16.227 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
- -0.0 T_DKIMWL_WL_HIGH       DKIMwl.org - Whitelisted High sender
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -90,23 +99,28 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: "open list:NETWORKING DRIVERS \(WIRELESS\)"
- <linux-wireless@vger.kernel.org>, ath10k@lists.infradead.org,
+Cc: =?utf-8?B?TWljaGHFgiBLYXppb3I=?= <kazikcz@gmail.com>,
+ linux-wireless <linux-wireless@vger.kernel.org>,
+ "ath10k@lists.infradead.org" <ath10k@lists.infradead.org>,
  Wen Gong <wgong@codeaurora.org>
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Change to the interrupt handler since v1 sounds good to me.
-
-Reviewed-by: Nicolas Boichat <drinkcat@chromium.org>
-
-On Thu, May 23, 2019 at 4:53 PM Claire Chang <tientzu@google.com> wrote:
->
-> Tested-by: Claire Chang <tientzu@chromium.org>
-
-_______________________________________________
-ath10k mailing list
-ath10k@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/ath10k
+PiAtLS0tLU9yaWdpbmFsIE1lc3NhZ2UtLS0tLQ0KPiBGcm9tOiBhdGgxMGsgPGF0aDEway1ib3Vu
+Y2VzQGxpc3RzLmluZnJhZGVhZC5vcmc+IE9uIEJlaGFsZiBPZiBXZW4gR29uZw0KPiBTZW50OiBX
+ZWRuZXNkYXksIEFwcmlsIDEwLCAyMDE5IDEwOjQ1IEFNDQo+IFRvOiBCcmlhbiBOb3JyaXMgPGJy
+aWFubm9ycmlzQGNocm9taXVtLm9yZz4NCj4gQ2M6IE1pY2hhxYIgS2F6aW9yIDxrYXppa2N6QGdt
+YWlsLmNvbT47IGxpbnV4LXdpcmVsZXNzIDxsaW51eC0NCj4gd2lyZWxlc3NAdmdlci5rZXJuZWwu
+b3JnPjsgYXRoMTBrQGxpc3RzLmluZnJhZGVhZC5vcmc7IFdlbiBHb25nDQo+IDx3Z29uZ0Bjb2Rl
+YXVyb3JhLm9yZz4NCj4gU3ViamVjdDogW0VYVF0gUkU6IFtQQVRDSF0gYXRoMTBrOiBSZW1vdmUg
+QVRIMTBLX1NUQVRFX1JFU1RBUlRFRCBpbg0KPiBzaW11bGF0ZSBmdyBjcmFzaA0KPiANCj4gSWYg
+Q2hyb21lT1MgaXMgZWFzeSB0byBjaGFuZ2UgdG9vbCwNCj4gSSB0aGluayBJIHdpbGwgY2hhbmdl
+IHRoZSBtZWNoYW5pc20gb2YgdGhlIHNpbXVsYXRlX2Z3X2NyYXNoLg0KPiBUaGVuIGFsbCB0b29s
+cyB3aWxsIHdvcmsgbm9ybWFsbHkuDQo+IA0KTmV3IHBhdGNoIHVwbG9hZGVkDQpodHRwczovL3Bh
+dGNod29yay5rZXJuZWwub3JnL3BhdGNoLzEwODk3NTg3Lw0KW3YyXSBhdGgxMGs6IFJlbW92ZSBB
+VEgxMEtfU1RBVEVfUkVTVEFSVEVEIGluIHNpbXVsYXRlIGZ3IGNyYXNoDQpfX19fX19fX19fX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXwphdGgxMGsgbWFpbGluZyBsaXN0CmF0
+aDEwa0BsaXN0cy5pbmZyYWRlYWQub3JnCmh0dHA6Ly9saXN0cy5pbmZyYWRlYWQub3JnL21haWxt
+YW4vbGlzdGluZm8vYXRoMTBrCg==
