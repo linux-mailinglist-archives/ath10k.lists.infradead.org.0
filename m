@@ -2,77 +2,73 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 869A32BD37
-	for <lists+ath10k@lfdr.de>; Tue, 28 May 2019 04:27:24 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 19CAF2BD3E
+	for <lists+ath10k@lfdr.de>; Tue, 28 May 2019 04:32:44 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
-	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
-	References:List-Owner; bh=StTLdslCl4VSqVq7KQ/hnZqoYq1deMTsfDSN1dMEjFs=; b=GnK
-	gwAcopVMy0+EW6mUZdP+AFf+5bHbZRn62cAC+JqvR9veCBxi+TnK9pE8r82ogjBSix6wLKTpGqvQG
-	QkPnl26n1aRYLHXmV/CSBvmECpIFfkwQyrDysngI8Ei0ezQ1bhL262xcQOxBhmr7lA92OKomQm0Cr
-	PT12ZJiII9NYpZdHuFvweSY0BGBIDkHI6Z5Ij8bLCBuw6nfi0/rs6yX3qu+E0Taf/fbNJpc/o/vlp
-	SAexycc5uHSgrF44TJGvUIsG+5afRi7e4Y2SJg1Ejkgc8Z+RhMupoUGpEmFOlFHY8IcsDkiAz9Jil
-	tr8bOPgeaEeKwy4Zt2ald0ejyXcfCbg==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=hLJGFpuijapASDBwr9uholHj7s0q2xahsrW1QUaHZ08=; b=DD3oz4q3Vb16uw
+	4go6PW+aRBP0BpJYoOe8BKUwBmUjg9Ohysj0FFKwQDNX+Su9qzca/eM/gIt1QjcGFY3gAyk+eofh+
+	cwlu4RvhUyjkhy9b1o967Xw30JphIb4qX22MkNQtBp4FFlAfZp5Uor3xakgjizUnGCMU98q3IZ8Q8
+	sEp2IAgul4jWMAwuF284PEv/jzEXmsj/SNRoIDWG8bRZ3Dv3aN8qE0j+Bo9JqHCuCbmqF46MJLNR5
+	hV7mNDmiuJnV2Hdag2oHXwVQIybCrqGmIlL+imXxBwvl1iGJUBsyx/FpOAm6Vrb8zE9jdiHUk6PDi
+	AvLbzW9jm95GWkOH3J9Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hVRpi-0002j0-Nx; Tue, 28 May 2019 02:27:22 +0000
-Received: from smtp.codeaurora.org ([198.145.29.96])
+	id 1hVRus-0004RJ-BD; Tue, 28 May 2019 02:32:42 +0000
+Received: from mail-qk1-x743.google.com ([2607:f8b0:4864:20::743])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hVRpf-0002ii-Em
- for ath10k@lists.infradead.org; Tue, 28 May 2019 02:27:20 +0000
-Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 9D7B7602F2; Tue, 28 May 2019 02:27:18 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1559010438;
- bh=y9wrH93AEtY/dSSBGwE2/AeQp/kcOUnUyK/HjZpO2TQ=;
- h=From:To:Cc:Subject:Date:From;
- b=L2PsX31e3C6cZzjQO/Hd82mhgxrkyYAKS0Hb4gcHCXV2Wg2O0qn/TF4CrWAhDAugy
- 4bqmQnDiSEEgc3KIBCtu/ImuzXy32peYKPR5EwLqbr8iBpQ0qr3zho0J6XnXBsM4Z/
- 0//ltIQvS3w3CBeKrsNr+j4qzFeB1marjLygTr+A=
-X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
- pdx-caf-mail.web.codeaurora.org
-X-Spam-Level: 
-X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
- DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
- version=3.4.0
-Received: from localhost.localdomain (unknown [180.166.53.21])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
- (No client certificate requested)
- (Authenticated sender: wgong@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 48D88602F2;
- Tue, 28 May 2019 02:27:17 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1559010438;
- bh=y9wrH93AEtY/dSSBGwE2/AeQp/kcOUnUyK/HjZpO2TQ=;
- h=From:To:Cc:Subject:Date:From;
- b=L2PsX31e3C6cZzjQO/Hd82mhgxrkyYAKS0Hb4gcHCXV2Wg2O0qn/TF4CrWAhDAugy
- 4bqmQnDiSEEgc3KIBCtu/ImuzXy32peYKPR5EwLqbr8iBpQ0qr3zho0J6XnXBsM4Z/
- 0//ltIQvS3w3CBeKrsNr+j4qzFeB1marjLygTr+A=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 48D88602F2
-Authentication-Results: pdx-caf-mail.web.codeaurora.org;
- dmarc=none (p=none dis=none) header.from=codeaurora.org
-Authentication-Results: pdx-caf-mail.web.codeaurora.org;
- spf=none smtp.mailfrom=wgong@codeaurora.org
-From: Wen Gong <wgong@codeaurora.org>
-To: ath10k@lists.infradead.org
-Subject: [PATCH] ath10k: add report MIC error for sdio chip
-Date: Tue, 28 May 2019 10:27:12 +0800
-Message-Id: <1559010432-1005-1-git-send-email-wgong@codeaurora.org>
-X-Mailer: git-send-email 1.9.1
+ id 1hVRun-0004Qe-Tx
+ for ath10k@lists.infradead.org; Tue, 28 May 2019 02:32:39 +0000
+Received: by mail-qk1-x743.google.com with SMTP id m14so1241650qka.10
+ for <ath10k@lists.infradead.org>; Mon, 27 May 2019 19:32:36 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=gazIaoRjX4+ZH2UoFthw+2LC5GJZT06O6CMr8RDmhSw=;
+ b=OyRdXpdzi3s1S8noasNbxCVQTvgCNb1jt09tkwpfQtEiqBFrGZ5Xq1rHdJVguW0jWk
+ D3JYNTEpjDsifZXfusqjvSRUOM8ECBijRcu5fVIdGa+zpuQT7cV7rYICzI9hQqwaErSn
+ lIRXLxi2ERkQ2stkbKgVTw718AJhQjZPMLoS8=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=gazIaoRjX4+ZH2UoFthw+2LC5GJZT06O6CMr8RDmhSw=;
+ b=m71f0c9B12UDSuop1esnRvig4XECgiDgf7oOJmAqCbh031xJPFLwXfqyTFbQ+h7c/g
+ 1ecmYBbd+ri6ZUQ3qN0jLLcouFc6e2sI4WOkEOTIfIX4EZ6Wa7mQesW5ZsJZN5g+nGsj
+ t00V5yGK8A5xbnsD+bTpSHukZMxChkq7MQYcE0AsToMUh9N47hbfz95b36IyWq7er6xf
+ MPqOmNscxLCykSpKrrFU9iTLiV14wNDZBqQ1ifGEGEM9GbohKSqpe1zv8n9k2ICRbcSr
+ yrVy1hDB7YzAWJ1jvhbM3Tladt/B68SGVAEenHGpnl0UXn+xT3svNbIRmYEHU6TeeVTv
+ B3lA==
+X-Gm-Message-State: APjAAAVFk0/DePYgwVNWePspdYU8NRBVk76DaL3rwUYwiMTneU95A7Cf
+ LD5IK4tKbegwBBR1W9nmsvwNz2zR/CmerLwkLRsBsA==
+X-Google-Smtp-Source: APXvYqyK1ZwSczQWrH4SrzKh0yrWlc2AguPwpnCRPMfy2AHPig+E94P5GmmGBxVJdD/ddu2rbTk+c+FmOzkVavmkeRw=
+X-Received: by 2002:ac8:2907:: with SMTP id y7mr61840750qty.278.1559010756074; 
+ Mon, 27 May 2019 19:32:36 -0700 (PDT)
+MIME-Version: 1.0
+References: <1558506776-19702-1-git-send-email-wgong@codeaurora.org>
+ <CALiNf28PQFtAM6uZVPhh-_ASnYeeAtm8kWpP0b8k_P6zGwxbcQ@mail.gmail.com>
+In-Reply-To: <CALiNf28PQFtAM6uZVPhh-_ASnYeeAtm8kWpP0b8k_P6zGwxbcQ@mail.gmail.com>
+From: Nicolas Boichat <drinkcat@chromium.org>
+Date: Tue, 28 May 2019 10:32:25 +0800
+Message-ID: <CANMq1KDgafzxyVc6H6i0OtKW32T2mpMSp4di81qNChDv-5RBKw@mail.gmail.com>
+Subject: Re: [PATCH v3] ath10k: add support for firmware crash recovery on
+ SDIO chip
+To: Claire Chang <tientzu@google.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190527_192719_517343_D22F70F5 
-X-CRM114-Status: UNSURE (   8.91  )
+X-CRM114-CacheID: sfid-20190527_193237_990121_F567E024 
+X-CRM114-Status: UNSURE (   4.59  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -2.5 (--)
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.5 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [198.145.29.96 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:743 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
@@ -82,6 +78,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
+ -0.0 T_DKIMWL_WL_HIGH       DKIMwl.org - Whitelisted High sender
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.21
 Precedence: list
@@ -93,58 +90,21 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless@vger.kernel.org
-MIME-Version: 1.0
+Cc: "open list:NETWORKING DRIVERS \(WIRELESS\)"
+ <linux-wireless@vger.kernel.org>, ath10k@lists.infradead.org,
+ Wen Gong <wgong@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Firmware will report flag with HTT_RX_IND_MPDU_STATUS_TKIP_MIC_ERR
-if MIC error, the flag will be used in mac80211.
+Change to the interrupt handler since v1 sounds good to me.
 
-ieee80211_rx_h_michael_mic_verify will check the flag and start TKIP
-countermeasures.
+Reviewed-by: Nicolas Boichat <drinkcat@chromium.org>
 
-Now countermeasure tests pass both with WPA only and WPA2/WPA mixed
-mode.
-
-Tested with QCA6174 SDIO with firmware
-WLAN.RMH.4.4.1-00007-QCARMSWP-1.
-
-Signed-off-by: Wen Gong <wgong@codeaurora.org>
----
- drivers/net/wireless/ath/ath10k/htt_rx.c | 7 ++++++-
- 1 file changed, 6 insertions(+), 1 deletion(-)
-
-diff --git a/drivers/net/wireless/ath/ath10k/htt_rx.c b/drivers/net/wireless/ath/ath10k/htt_rx.c
-index a20ea27..c0b0061 100644
---- a/drivers/net/wireless/ath/ath10k/htt_rx.c
-+++ b/drivers/net/wireless/ath/ath10k/htt_rx.c
-@@ -2101,7 +2101,9 @@ static bool ath10k_htt_rx_proc_rx_ind_hl(struct ath10k_htt *htt,
- 			    num_mpdu_ranges);
- 
- 	if (mpdu_ranges->mpdu_range_status !=
--	    HTT_RX_IND_MPDU_STATUS_OK) {
-+	    HTT_RX_IND_MPDU_STATUS_OK &&
-+	    mpdu_ranges->mpdu_range_status !=
-+	    HTT_RX_IND_MPDU_STATUS_TKIP_MIC_ERR) {
- 		ath10k_warn(ar, "MPDU range status: %d\n",
- 			    mpdu_ranges->mpdu_range_status);
- 		goto err;
-@@ -2162,6 +2164,9 @@ static bool ath10k_htt_rx_proc_rx_ind_hl(struct ath10k_htt *htt,
- 				   RX_FLAG_MMIC_STRIPPED;
- 	}
- 
-+	if (mpdu_ranges->mpdu_range_status == HTT_RX_IND_MPDU_STATUS_TKIP_MIC_ERR)
-+		rx_status->flag |= RX_FLAG_MMIC_ERROR;
-+
- 	ieee80211_rx_ni(ar->hw, skb);
- 
- 	/* We have delivered the skb to the upper layers (mac80211) so we
--- 
-1.9.1
-
+On Thu, May 23, 2019 at 4:53 PM Claire Chang <tientzu@google.com> wrote:
+>
+> Tested-by: Claire Chang <tientzu@chromium.org>
 
 _______________________________________________
 ath10k mailing list
