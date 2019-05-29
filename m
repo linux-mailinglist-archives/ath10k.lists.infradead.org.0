@@ -2,83 +2,85 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A75AD2CE9E
-	for <lists+ath10k@lfdr.de>; Tue, 28 May 2019 20:28:26 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 749C02D776
+	for <lists+ath10k@lfdr.de>; Wed, 29 May 2019 10:14:07 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=e/CY1TUkh6vmw4YtsdHT7SwDjlz0P+oqqVujsW84h9M=; b=nQLvETAbFgtJ3t
-	spFkzc+vZDzMdKPVS10ukafsTM7310zmQ7xQuI8pdUsJJhJNcK3yyNhOtLdYD13EehdJXhx+pWhM2
-	k+N2O48Lct+LJrdlE6mR7Aqr0vww1FZjhd/9fn+e678V4Qg/DU53RZVAQSVaX0VzH/mXD/gPs/wXS
-	X2LxfW8YRZ7rOWcdQo5SNoJ1j+QyEEiljXb1XClx7hlb5+0xZ+gNe2qTR/zYegZYbT/HwL2aP/eEU
-	KeZjKxMn8/NE1IrqOw4YuyWmxOc2SrPK9dtQBroynPnC092LBgKDzNOnZT66sDMNsAN3e4aa8vq54
-	tsZ7dBK0W+uRDKsRMl/g==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
+	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=+g5WjO9tgr7QccESXO28KhHd42lb1+1Kb0JXA+MLLsM=; b=Qf1
+	vjch0LKAqNO7eJAQk7cA+Yg/yZ+kaTvY7L8tg+pg1YZL4L1dvu2eYsA5tBoP7wI0wHwHVceqMNmo5
+	GIqO9mqGVRfwMbl+DPrJDmP50oXIZAHY3I2J1hyCRAmUZ5UhXFvMfizteTMfWJ934JU2yFfSkfXQF
+	7d5oVVAxueJ6DBXoJAfieLA1ejPKe0Bups4qK/lFjDzUAZBr7VMbwe+mPqz4cr2XNZOjot81rYyW3
+	tn8YheqA0kw4Xc+L+8bD7Mpj3+1TrSXi0EfaOuM/OppP3UEDYq/HWrwav7OxqC8k+lrQATp0E+BSs
+	3JufegyiQ9jCqfLnAZH95mbJ6t+jpQQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hVgoK-00005I-Lz; Tue, 28 May 2019 18:26:56 +0000
-Received: from mail-vs1-xe43.google.com ([2607:f8b0:4864:20::e43])
+	id 1hVtij-00046F-Hw; Wed, 29 May 2019 08:14:01 +0000
+Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hVglO-0007BE-Pm
- for ath10k@lists.infradead.org; Tue, 28 May 2019 18:24:13 +0000
-Received: by mail-vs1-xe43.google.com with SMTP id x8so841652vsx.13
- for <ath10k@lists.infradead.org>; Tue, 28 May 2019 11:23:24 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=AbbGUa5QC2xe7AYUr1cYkKzWdfdzuMNdBgUD1GR4Vac=;
- b=WIeVIAnAKLUpluz0nSQkuc9B1nTJhyNRYL4z7I8U3KCG6jn+eDg6gzEBCLobXbPw1k
- AbIrUkfzbiIyjzc+a5Q84P4qorvMwvQhY1PPOnPPR/tR5ZK3Hei1XigDkcHvR3BiSz79
- OV34AmbWEHIP3ydGrOZMyAj6dLyvtKOIyMZWHvtXpxTwJipLV7++dv+oz2T+tNkIDPRe
- i7QJihTa84+nYUoGcMCoCmQNIkh39MNQa+lSr8faPbkz+5jlF2YfgIYygxrxdrRgzp0u
- 7oTDQk20yY9S33wZyapzu4As9K0FKEmAS8mv1N8QBh3Nix94PDJl3r4baM7fvDWN9z7a
- NrPw==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=AbbGUa5QC2xe7AYUr1cYkKzWdfdzuMNdBgUD1GR4Vac=;
- b=ellyF3gdig9a9gkSu2SVkbKSJV5IW5cWCihrjtmsy26ALkiPCq3zWBuCoLO5RirvsJ
- Rd1UsSWqiDg+IkZH+sPtdYTKqBo1tR2WJEasYSD5E6SZA0GuowgpyP+yt4RUAoJBS4bZ
- Gw+/U6Hpk9/4hZVml8p/Oa7p9prWoQMD0G3DAe1o5YlPTfymKyEEV4Wokx+Gx3741NCb
- 6c0OYrG/edJ/7WFKVr9JbyhR/pkSKAFEcYCW93FirUNQDi+/v35jgIqyMkgoSHDD8krL
- lwrzvpugqpf7jG9MKvKz2fIdFvLbB8w19DHcjgsue1oByA+cY9cxiXZMhH1rClR/JLxK
- YuQA==
-X-Gm-Message-State: APjAAAUGw+yuL1ksvGxFrSTaGoyQXeoMpoBonQNbx4rVvfBKeoyJAAVO
- TuQ7QUAKzAVErzK1ftGS0OiFatjLvnn3vgSE4DyMtmcO
-X-Google-Smtp-Source: APXvYqwlYKPXu+iTkMb2GzEju5UUcvoGyI7596wkfFR+6QFKNE+GUjrtVq1mMxu90kRbjNfFyn7dB/1H5HUxfN82Ssk=
-X-Received: by 2002:a67:fa58:: with SMTP id j24mr66267709vsq.177.1559067795702; 
- Tue, 28 May 2019 11:23:15 -0700 (PDT)
-MIME-Version: 1.0
-References: <CAC_j7i3ZAcfaQ-on5mXTKxd--erzCChKhEEU_6Yk+j2w57PeVg@mail.gmail.com>
- <8736ky6cyp.fsf@kamboji.qca.qualcomm.com>
-In-Reply-To: <8736ky6cyp.fsf@kamboji.qca.qualcomm.com>
-From: Vjaceslavs Klimovs <vklimovs@gmail.com>
-Date: Tue, 28 May 2019 11:23:03 -0700
-Message-ID: <CAC_j7i0eQfHu=9r8biPkpGhxrSqbYQdf2cxT0tDfnH7YgGxO6w@mail.gmail.com>
-Subject: Re: ath10k panic with 5.1 kernel and qca9984 on association
-To: Kalle Valo <kvalo@codeaurora.org>
+ id 1hVtif-00045j-C8
+ for ath10k@lists.infradead.org; Wed, 29 May 2019 08:13:59 +0000
+Received: by smtp.codeaurora.org (Postfix, from userid 1000)
+ id B20EC6074C; Wed, 29 May 2019 08:13:56 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1559117636;
+ bh=QoI/EH1Ufz4EVydGEkruQZ9oa4zP1BkjXVvzzsPlRpQ=;
+ h=From:To:Cc:Subject:Date:From;
+ b=nOUqKxkNTakA86fL3r2ZwDZRRxJRCm7w63gV4yyZXwTE13EzBzaklo+fpq3XPyNlV
+ Xsq5IGb+Taise13F7+F/m1G/0AsgnQocNZ7glT7FHTPS5BVQY7NpcnxgPUCrlCErZS
+ noJCC4DVV1FmSc6wvFD3Q2opBTo680ZBYHufLw0M=
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ pdx-caf-mail.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
+ DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
+ version=3.4.0
+Received: from smtp.codeaurora.org (unknown [180.166.53.21])
+ (using TLSv1 with cipher AES128-SHA (128/128 bits))
+ (No client certificate requested)
+ (Authenticated sender: miaoqing@smtp.codeaurora.org)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 0F52860592;
+ Wed, 29 May 2019 08:13:53 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1559117636;
+ bh=QoI/EH1Ufz4EVydGEkruQZ9oa4zP1BkjXVvzzsPlRpQ=;
+ h=From:To:Cc:Subject:Date:From;
+ b=nOUqKxkNTakA86fL3r2ZwDZRRxJRCm7w63gV4yyZXwTE13EzBzaklo+fpq3XPyNlV
+ Xsq5IGb+Taise13F7+F/m1G/0AsgnQocNZ7glT7FHTPS5BVQY7NpcnxgPUCrlCErZS
+ noJCC4DVV1FmSc6wvFD3Q2opBTo680ZBYHufLw0M=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 0F52860592
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ spf=none smtp.mailfrom=miaoqing@codeaurora.org
+Received: by smtp.codeaurora.org (sSMTP sendmail emulation);
+ Wed, 29 May 2019 16:13:45 +0800
+From: Miaoqing Pan <miaoqing@codeaurora.org>
+To: ath10k@lists.infradead.org
+Subject: [PATCH v2] ath10k: fix failure to set multiple fixed rate
+Date: Wed, 29 May 2019 16:13:28 +0800
+Message-Id: <1559117608-11117-1-git-send-email-miaoqing@codeaurora.org>
+X-Mailer: git-send-email 1.9.1
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190528_112354_835663_A3E55DA0 
-X-CRM114-Status: GOOD (  17.58  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190529_011357_444207_03871716 
+X-CRM114-Status: GOOD (  18.51  )
+X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:e43 listed in]
- [list.dnswl.org]
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [198.145.29.96 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (vklimovs[at]gmail.com)
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
 X-BeenThere: ath10k@lists.infradead.org
@@ -92,93 +94,317 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Abhishek Ambure <aambure@codeaurora.org>, ath10k@lists.infradead.org
+Cc: linux-wireless@vger.kernel.org, Miaoqing Pan <miaoqing@codeaurora.org>
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Abhishek,
-I am happy to test a proposed fix, let me know.
+Currently, below fixed rate commands are broken,
+iw wlanx set bitrates legacy-<2.4|5> ht-mcs-<2.4|5> vht-mcs-<2.4|5> \
+<NSS:MCSx>
+iw wlanx set bitrates legacy-<2.4|5> <legacy rate> ht-mcs-<2.4|5> \
+vht-mcs-<2.4|5> <NSS:MCSx>
 
-On Tue, May 28, 2019 at 4:22 AM Kalle Valo <kvalo@codeaurora.org> wrote:
->
-> + Abhishek
->
-> Vjaceslavs Klimovs <vklimovs@gmail.com> writes:
->
-> > With 5.1 and head kernel, machine running as AP with qca9984 locks up
-> > without being able to complete stack trace to console after a client
-> > tries to associate with it. Following are (OCR transcribed) error
-> > messages:
-> >
-> > [ 177.161539] BUG: unable to handle kernel paging request at fffffffffffff7bo
-> > [ 177.161553] #PF error: (normal kernel read fault)
-> > [ 177.161561] PGD 703812067 P4D 703812067 PUD 20381406 PMD 0
-> > [ 177.161571] Oops: 0000 (#1) SMP PTI
-> > [ 177.161577] CPU: 6 PID: 0 Comm: swapper/6 Tainted: G OE 5.1.3-gentoo #1
-> >
-> > [Garbage on screen after that point]
-> >
-> > and
-> >
-> > [67.805490] RBP: ffff9c4c57983d 18 R08: 0000000000000000 R09:
-> > 0000000000000000 [67.805501] R10: 0000000000000002 R11:
-> > 0000000000000000 R12: 0000000000000001 [67.805512] R13:
-> > 0000000000000000 R14: 0000000000060002 R15: 0000000000000000
-> > [67.805523] FS: 000000000000000000000) GS:ffff9c4c57980000 (0000)
-> > knIGS:000000000 [67.805535] CS: 0010 DS: 0000 ES: 0000 CRO:
-> > 0000000080050033
-> > [67.805544] CR2: fffffffffffff7b0 CR3: 00000005f7e0e006 CR4: 00000000003606e0
-> > [67.805555] DRO: 0000000000000000 DR1: 0000000000000000 DR2:
-> > 0000000000000000 [67.805566] DR3: 0000000000000000 DR6:
-> > 00000000fffeoffO DR7: 0000000000000400 [67.805577] Call Trace:
-> > [67.805582] <IRQ>
-> > [67.805592] ath10k_htt_t2h_msg_handler+0xbda/0xf80 [ath10k_core]
-> > [67.805603] ? _raw_spin_unlock_bh+0xie/0x20
-> > [67.805614] ? ath1ok_ce_per_engine_service+0xf1/0x100 [ath10k_corel
-> > [67.805626] ath10k_pci_htt_rx_cb+0x172/0x260 [ath10k_pci]
-> > [67.8056391] ath10k_ce_per_engine_service+0x9e/0x100 [ath10k_core)
-> >
-> > [Garbage on screen after that point]
-> >
-> > The issue does not reproduce on 5.0.17 but is reliably reproducible in
-> > 5.1+ by just trying to associate to that AP. So I thought I'd run git
-> > bisect. After bisecting,
-> >
-> > 6ddc3860a5668808bacbfcb1f1bf50d5d7ad1956, ath10k: add support for ack
-> > rssi value of data tx packets
-> >
-> > is the first commit that triggers the problem. Reverting that commit
-> > from head or from 5.1.5 reliably makes everything work as expected.
->
-> Thank you for the bisect, this is really helpful. Full commit log below.
-> Abhishek, please fix this or send a revert for 5.2.
->
-> commit 6ddc3860a5668808bacbfcb1f1bf50d5d7ad1956
-> Author:     Abhishek Ambure <aambure@codeaurora.org>
-> AuthorDate: Mon Feb 25 11:45:48 2019 +0200
-> Commit:     Kalle Valo <kvalo@codeaurora.org>
-> CommitDate: Tue Feb 26 14:58:06 2019 +0200
->
->     ath10k: add support for ack rssi value of data tx packets
->
->     In WCN3990, WMI_TLV_SERVICE_TX_DATA_MGMT_ACK_RSSI service Indicates that
->     the firmware has the capability to send the RSSI value of the ACK for all
->     data and management packets transmitted.
->
->     If WMI_RSRC_CFG_FLAG_TX_ACK_RSSI is set in host capability then firmware
->     sends RSSI value in "data" tx completion event. Host extracts ack rssi
->     values of data packets from their tx completion event.
->
->     Tested HW: WCN3990
->     Tested FW: WLAN.HL.2.0-01617-QCAHLSWMTPLZ-1
->
->     Signed-off-by: Abhishek Ambure <aambure@codeaurora.org>
->     Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
->
-> --
-> Kalle Valo
+There are two methods to set fixed rate, both failed,
+- Use vdev fixed rate command
+  This command only support one single rate, but it's broken due to
+  mac80211 change commit e8e4f5280ddd ("mac80211: reject/clear user
+  rate mask if not usable"), which requires user to specify at least
+  one legacy rate. So we can't use this command to set ht/vht single
+  rate any more.
+- Use peer_assoc command
+  This command can update rx capability for multiple rates, it will
+  work fine for ht mcs rates, as each supported mcs can be advertised
+  in ht_mcs index mask. But this will not work with vht rates because,
+  as per the vht mcs capability advertisement, there are only two bits
+  to indicate the supported mcs. E.g. only support 0-7, 0-8, 0-9.
+
+So introduced new WMI command: WMI_PEER_PARAM_FIXED_RATE. After peer
+assoc, the peer fixed rate cmd will work for that specific peer.
+Remaining peers will use auto rate. If both vdev fixed rate and peer
+fixed rates are given, peer fixed rate will take effect to peers for
+which this cmd is given. Remaining peers in that vdev, will use vdev
+fixed rate.
+
+Tested HW: QCA9984
+Tested FW: 10.4-3.9.0.2-00035
+
+Signed-off-by: Miaoqing Pan <miaoqing@codeaurora.org>
+---
+Changes since v1
+- update commit message, remove 2nd broken command
+---
+ drivers/net/wireless/ath/ath10k/core.c |   1 +
+ drivers/net/wireless/ath/ath10k/core.h |   7 +++
+ drivers/net/wireless/ath/ath10k/mac.c  | 111 +++++++++++++++++++++++++++++----
+ drivers/net/wireless/ath/ath10k/wmi.h  |   1 +
+ 4 files changed, 108 insertions(+), 12 deletions(-)
+
+diff --git a/drivers/net/wireless/ath/ath10k/core.c b/drivers/net/wireless/ath/ath10k/core.c
+index 61ef903..811cf38 100644
+--- a/drivers/net/wireless/ath/ath10k/core.c
++++ b/drivers/net/wireless/ath/ath10k/core.c
+@@ -612,6 +612,7 @@
+ 	[ATH10K_FW_FEATURE_MGMT_TX_BY_REF] = "mgmt-tx-by-reference",
+ 	[ATH10K_FW_FEATURE_NON_BMI] = "non-bmi",
+ 	[ATH10K_FW_FEATURE_SINGLE_CHAN_INFO_PER_CHANNEL] = "single-chan-info-per-channel",
++	[ATH10K_FW_FEATURE_PEER_FIXED_RATE] = "peer-fixed-rate",
+ };
+ 
+ static unsigned int ath10k_core_get_fw_feature_str(char *buf,
+diff --git a/drivers/net/wireless/ath/ath10k/core.h b/drivers/net/wireless/ath/ath10k/core.h
+index 2d109c0..fe6e88d 100644
+--- a/drivers/net/wireless/ath/ath10k/core.h
++++ b/drivers/net/wireless/ath/ath10k/core.h
+@@ -579,6 +579,10 @@ struct ath10k_vif {
+ 	struct work_struct ap_csa_work;
+ 	struct delayed_work connection_loss_work;
+ 	struct cfg80211_bitrate_mask bitrate_mask;
++
++	/* For setting VHT peer fixed rate, protected by conf_mutex */
++	int vht_num_rates;
++	u8 vht_pfr;
+ };
+ 
+ struct ath10k_vif_iter {
+@@ -770,6 +774,9 @@ enum ath10k_fw_features {
+ 	/* Firmware sends only one chan_info event per channel */
+ 	ATH10K_FW_FEATURE_SINGLE_CHAN_INFO_PER_CHANNEL = 20,
+ 
++	/* Firmware allows setting peer fixed rate */
++	ATH10K_FW_FEATURE_PEER_FIXED_RATE = 21,
++
+ 	/* keep last */
+ 	ATH10K_FW_FEATURE_COUNT,
+ };
+diff --git a/drivers/net/wireless/ath/ath10k/mac.c b/drivers/net/wireless/ath/ath10k/mac.c
+index b500fd4..e555a22 100644
+--- a/drivers/net/wireless/ath/ath10k/mac.c
++++ b/drivers/net/wireless/ath/ath10k/mac.c
+@@ -7107,18 +7107,23 @@ static int ath10k_get_survey(struct ieee80211_hw *hw, int idx,
+ static bool
+ ath10k_mac_bitrate_mask_has_single_rate(struct ath10k *ar,
+ 					enum nl80211_band band,
+-					const struct cfg80211_bitrate_mask *mask)
++					const struct cfg80211_bitrate_mask *mask,
++					int *vht_num_rates)
+ {
+ 	int num_rates = 0;
+-	int i;
++	int i, tmp;
+ 
+ 	num_rates += hweight32(mask->control[band].legacy);
+ 
+ 	for (i = 0; i < ARRAY_SIZE(mask->control[band].ht_mcs); i++)
+ 		num_rates += hweight8(mask->control[band].ht_mcs[i]);
+ 
+-	for (i = 0; i < ARRAY_SIZE(mask->control[band].vht_mcs); i++)
+-		num_rates += hweight16(mask->control[band].vht_mcs[i]);
++	*vht_num_rates = 0;
++	for (i = 0; i < ARRAY_SIZE(mask->control[band].vht_mcs); i++) {
++		tmp = hweight16(mask->control[band].vht_mcs[i]);
++		num_rates += tmp;
++		*vht_num_rates += tmp;
++	}
+ 
+ 	return num_rates == 1;
+ }
+@@ -7176,7 +7181,7 @@ static int ath10k_get_survey(struct ieee80211_hw *hw, int idx,
+ ath10k_mac_bitrate_mask_get_single_rate(struct ath10k *ar,
+ 					enum nl80211_band band,
+ 					const struct cfg80211_bitrate_mask *mask,
+-					u8 *rate, u8 *nss)
++					u8 *rate, u8 *nss, bool vht_only)
+ {
+ 	int rate_idx;
+ 	int i;
+@@ -7184,6 +7189,9 @@ static int ath10k_get_survey(struct ieee80211_hw *hw, int idx,
+ 	u8 preamble;
+ 	u8 hw_rate;
+ 
++	if (vht_only)
++		goto next;
++
+ 	if (hweight32(mask->control[band].legacy) == 1) {
+ 		rate_idx = ffs(mask->control[band].legacy) - 1;
+ 
+@@ -7217,6 +7225,7 @@ static int ath10k_get_survey(struct ieee80211_hw *hw, int idx,
+ 		}
+ 	}
+ 
++next:
+ 	for (i = 0; i < ARRAY_SIZE(mask->control[band].vht_mcs); i++) {
+ 		if (hweight16(mask->control[band].vht_mcs[i]) == 1) {
+ 			*nss = i + 1;
+@@ -7278,7 +7287,8 @@ static int ath10k_mac_set_fixed_rate_params(struct ath10k_vif *arvif,
+ static bool
+ ath10k_mac_can_set_bitrate_mask(struct ath10k *ar,
+ 				enum nl80211_band band,
+-				const struct cfg80211_bitrate_mask *mask)
++				const struct cfg80211_bitrate_mask *mask,
++				bool allow_pfr)
+ {
+ 	int i;
+ 	u16 vht_mcs;
+@@ -7297,7 +7307,8 @@ static int ath10k_mac_set_fixed_rate_params(struct ath10k_vif *arvif,
+ 		case BIT(10) - 1:
+ 			break;
+ 		default:
+-			ath10k_warn(ar, "refusing bitrate mask with missing 0-7 VHT MCS rates\n");
++			if (!allow_pfr)
++				ath10k_warn(ar, "refusing bitrate mask with missing 0-7 VHT MCS rates\n");
+ 			return false;
+ 		}
+ 	}
+@@ -7305,6 +7316,26 @@ static int ath10k_mac_set_fixed_rate_params(struct ath10k_vif *arvif,
+ 	return true;
+ }
+ 
++static bool ath10k_mac_set_vht_bitrate_mask_fixup(struct ath10k *ar,
++						  struct ath10k_vif *arvif,
++						  struct ieee80211_sta *sta)
++{
++	int err;
++	u8 rate = arvif->vht_pfr;
++
++	/* skip non vht and multiple rate peers */
++	if (!sta->vht_cap.vht_supported || arvif->vht_num_rates != 1)
++		return false;
++
++	err = ath10k_wmi_peer_set_param(ar, arvif->vdev_id, sta->addr,
++					WMI_PEER_PARAM_FIXED_RATE, rate);
++	if (err)
++		ath10k_warn(ar, "failed to eanble STA %pM peer fixed rate: %d\n",
++			    sta->addr, err);
++
++	return true;
++}
++
+ static void ath10k_mac_set_bitrate_mask_iter(void *data,
+ 					     struct ieee80211_sta *sta)
+ {
+@@ -7315,6 +7346,9 @@ static void ath10k_mac_set_bitrate_mask_iter(void *data,
+ 	if (arsta->arvif != arvif)
+ 		return;
+ 
++	if (ath10k_mac_set_vht_bitrate_mask_fixup(ar, arvif, sta))
++		return;
++
+ 	spin_lock_bh(&ar->data_lock);
+ 	arsta->changed |= IEEE80211_RC_SUPP_RATES_CHANGED;
+ 	spin_unlock_bh(&ar->data_lock);
+@@ -7322,6 +7356,26 @@ static void ath10k_mac_set_bitrate_mask_iter(void *data,
+ 	ieee80211_queue_work(ar->hw, &arsta->update_wk);
+ }
+ 
++static void ath10k_mac_clr_bitrate_mask_iter(void *data,
++					     struct ieee80211_sta *sta)
++{
++	struct ath10k_vif *arvif = data;
++	struct ath10k_sta *arsta = (struct ath10k_sta *)sta->drv_priv;
++	struct ath10k *ar = arvif->ar;
++	int err;
++
++	/* clear vht peers only */
++	if (arsta->arvif != arvif || !sta->vht_cap.vht_supported)
++		return;
++
++	err = ath10k_wmi_peer_set_param(ar, arvif->vdev_id, sta->addr,
++					WMI_PEER_PARAM_FIXED_RATE,
++					WMI_FIXED_RATE_NONE);
++	if (err)
++		ath10k_warn(ar, "failed to clear STA %pM peer fixed rate: %d\n",
++			    sta->addr, err);
++}
++
+ static int ath10k_mac_op_set_bitrate_mask(struct ieee80211_hw *hw,
+ 					  struct ieee80211_vif *vif,
+ 					  const struct cfg80211_bitrate_mask *mask)
+@@ -7338,6 +7392,9 @@ static int ath10k_mac_op_set_bitrate_mask(struct ieee80211_hw *hw,
+ 	u8 ldpc;
+ 	int single_nss;
+ 	int ret;
++	int vht_num_rates, allow_pfr;
++	u8 vht_pfr;
++	bool update_bitrate_mask = true;
+ 
+ 	if (ath10k_mac_vif_chan(vif, &def))
+ 		return -EPERM;
+@@ -7351,9 +7408,21 @@ static int ath10k_mac_op_set_bitrate_mask(struct ieee80211_hw *hw,
+ 	if (sgi == NL80211_TXRATE_FORCE_LGI)
+ 		return -EINVAL;
+ 
+-	if (ath10k_mac_bitrate_mask_has_single_rate(ar, band, mask)) {
++	allow_pfr = test_bit(ATH10K_FW_FEATURE_PEER_FIXED_RATE,
++			     ar->normal_mode_fw.fw_file.fw_features);
++	if (allow_pfr) {
++		mutex_lock(&ar->conf_mutex);
++		ieee80211_iterate_stations_atomic(ar->hw,
++						  ath10k_mac_clr_bitrate_mask_iter,
++						  arvif);
++		mutex_unlock(&ar->conf_mutex);
++	}
++
++	if (ath10k_mac_bitrate_mask_has_single_rate(ar, band, mask,
++						    &vht_num_rates)) {
+ 		ret = ath10k_mac_bitrate_mask_get_single_rate(ar, band, mask,
+-							      &rate, &nss);
++							      &rate, &nss,
++							      false);
+ 		if (ret) {
+ 			ath10k_warn(ar, "failed to get single rate for vdev %i: %d\n",
+ 				    arvif->vdev_id, ret);
+@@ -7369,12 +7438,30 @@ static int ath10k_mac_op_set_bitrate_mask(struct ieee80211_hw *hw,
+ 			  max(ath10k_mac_max_ht_nss(ht_mcs_mask),
+ 			      ath10k_mac_max_vht_nss(vht_mcs_mask)));
+ 
+-		if (!ath10k_mac_can_set_bitrate_mask(ar, band, mask))
+-			return -EINVAL;
++		if (!ath10k_mac_can_set_bitrate_mask(ar, band, mask,
++						     allow_pfr)) {
++			u8 vht_nss;
++
++			if (!allow_pfr || vht_num_rates != 1)
++				return -EINVAL;
++
++			/* Reach here, firmware supports peer fixed rate and has
++			 * single vht rate, and don't update vif birate_mask, as
++			 * the rate only for specific peer.
++			 */
++			ath10k_mac_bitrate_mask_get_single_rate(ar, band, mask,
++								&vht_pfr,
++								&vht_nss,
++								true);
++			update_bitrate_mask = false;
++		}
+ 
+ 		mutex_lock(&ar->conf_mutex);
+ 
+-		arvif->bitrate_mask = *mask;
++		if (update_bitrate_mask)
++			arvif->bitrate_mask = *mask;
++		arvif->vht_num_rates = vht_num_rates;
++		arvif->vht_pfr = vht_pfr;
+ 		ieee80211_iterate_stations_atomic(ar->hw,
+ 						  ath10k_mac_set_bitrate_mask_iter,
+ 						  arvif);
+diff --git a/drivers/net/wireless/ath/ath10k/wmi.h b/drivers/net/wireless/ath/ath10k/wmi.h
+index 12f57f9..bd54da6 100644
+--- a/drivers/net/wireless/ath/ath10k/wmi.h
++++ b/drivers/net/wireless/ath/ath10k/wmi.h
+@@ -6260,6 +6260,7 @@ enum wmi_peer_param {
+ 	WMI_PEER_CHAN_WIDTH = 0x4,
+ 	WMI_PEER_NSS        = 0x5,
+ 	WMI_PEER_USE_4ADDR  = 0x6,
++	WMI_PEER_PARAM_FIXED_RATE = 0x9,
+ 	WMI_PEER_DEBUG      = 0xa,
+ 	WMI_PEER_PHYMODE    = 0xd,
+ 	WMI_PEER_DUMMY_VAR  = 0xff, /* dummy parameter for STA PS workaround */
+-- 
+1.9.1
+
 
 _______________________________________________
 ath10k mailing list
