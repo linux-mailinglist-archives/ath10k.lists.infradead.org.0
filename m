@@ -2,70 +2,67 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2406E2F9D6
-	for <lists+ath10k@lfdr.de>; Thu, 30 May 2019 11:47:43 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2734A2FCC1
+	for <lists+ath10k@lfdr.de>; Thu, 30 May 2019 15:58:18 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
-	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
-	References:List-Owner; bh=ZOA9BtJ38BYXNFDTF5SaOgHLwHyv0L0l43VJcCDNBXE=; b=Tid
-	wxcudTgwjHNwBHei3ggecHvlnhKQKzgwv2vC8bap5OTGlkWPH1bhLyb4HnxlQPotXlWzZ05mN0KGE
-	38Fwb4JrxqhyehbeV8TTefwsZ7OeuKeXp0jfjwFiOxPXHV1/lZRxUdFz4pzmgM6nJP3tL/2MRrO1O
-	SD/5iGeIaKTMwU7mqAN+7S6NhCsqFOURZuGwrqpdHPt+Z1b+5FCr1Yv1SlLxuNfSdx6PBbUnGyKF6
-	w+peDfxhx1wbok3MRwiOiXGRaRBuk8lZQXfV3wuzgQAC2aUISZ/1opDhq+7xhCaNwjc/JDrMzVJaK
-	zCepGjUkN8KGwgmYbf9dAMvwVQhIRMw==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:Message-ID:References:In-Reply-To:Subject:To:From:
+	Date:MIME-Version:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=dBwXFsd8W/q5VooJz4qg6/PnfvPDFmyvzkFx4iJ7MCA=; b=i2k76MKcRIpHcyh0yI6uJRuGC
+	eaxKT2q1jkYudLyGGsKkW7cPM51CxQ0S2wzBNO2cXjymlmQsRrzDDJL/wNxaGX7TJTddMtckRN6fW
+	SfEZ7UFhFGVU8BPSi/r92psaV+AkE+NQD6ZIv2nsjZKFXiUzAO/py0enwMhFENprm2AtJlYMuOfUB
+	6lEaEYH+bGMfvBhSPbDmkvoLTPRc/dP/oNBfajVU7OYA4fWU5IUgknRNv9OZji03PXVrDqg6VIIU9
+	KL69c7BfvGta8K3oFDj6Ol1UCtvW/TXmaDz0imjO137DUtOCnScTck+QJz2KB07xMfXcbe6j7vzFE
+	3rSwS7qcA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.90_1 #2 (Red Hat Linux))
-	id 1hWHes-0004Ov-FR; Thu, 30 May 2019 09:47:38 +0000
+	id 1hWLZN-0001bE-KH; Thu, 30 May 2019 13:58:13 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.90_1 #2 (Red Hat Linux))
- id 1hWHeh-0004H6-45
- for ath10k@lists.infradead.org; Thu, 30 May 2019 09:47:28 +0000
+ id 1hWLZJ-0001WN-Kq
+ for ath10k@lists.infradead.org; Thu, 30 May 2019 13:58:11 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id B9E3961215; Thu, 30 May 2019 09:47:25 +0000 (UTC)
+ id B957C605FC; Thu, 30 May 2019 13:58:07 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1559209645;
- bh=ZIFNe1Vm8PNCgpBZ186FQ8xv/J8gFD9jafYqAPeOhac=;
- h=From:To:Cc:Subject:Date:From;
- b=eo6VEAvylndsN5/hiklVKkpfHpwjj19uYKKDN596+HunCCtUtuBXmXommEdtb2bIB
- yT3N9aT290021y019QFrkmmoflVrt7y7zJP7XhU4LwkWYojc/7T+9rNgBiFKtRWFSo
- jgH1cy6elVRtiQTKlfm0H54We3OWXBmVZ7oVQZoY=
+ s=default; t=1559224687;
+ bh=XdJJqRXE3zAPfFrmsgZYUg+Xb0DjUwwiqawcDL9fDTE=;
+ h=Date:From:To:Cc:Subject:In-Reply-To:References:From;
+ b=ipSS8H1+BEgA9WRdloQDqRfREZTylAMaXODQk7APacoCpHl+AcEZrEpULOF5Hmvy+
+ BQCrZyr6zwdOQ6mGERbsUwmMQlwGmz+OP/wJU00atCTaETe1AqYDPHMElAd+abn6nr
+ IZoaVHP1lIP5Lx3u8wuR6u3e+TuFE+FkbFaHG+So=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
 X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
- DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
- version=3.4.0
-Received: from checstex0244823-lin.qca.qualcomm.com
- (blr-c-bdr-fw-01_globalnat_allzones-outside.qualcomm.com [103.229.19.19])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
- (No client certificate requested)
- (Authenticated sender: bpothuno@codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 6289760F3E;
- Thu, 30 May 2019 09:47:23 +0000 (UTC)
+ DKIM_INVALID,DKIM_SIGNED autolearn=no autolearn_force=no version=3.4.0
+Received: from mail.codeaurora.org (localhost.localdomain [127.0.0.1])
+ by smtp.codeaurora.org (Postfix) with ESMTP id 22A2360303;
+ Thu, 30 May 2019 13:58:07 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1559209644;
- bh=ZIFNe1Vm8PNCgpBZ186FQ8xv/J8gFD9jafYqAPeOhac=;
- h=From:To:Cc:Subject:Date:From;
- b=oBco/EeSI4+ucNl24bTOTDTlvVSyLVXiaPZkApiiU1BJTNb2obPEFgBoyfzgdERvX
- OCXFQ/Plb2vmZyMFPNlBJKec0RvRKfYHnZaBY2rsKntWyQEerMMvzfaCYraok4uzsM
- u+GjA0FoipFKs/lkr+mKIUEqfOTlGc6xqAMXFXWE=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 6289760F3E
-Authentication-Results: pdx-caf-mail.web.codeaurora.org;
- dmarc=none (p=none dis=none) header.from=codeaurora.org
-Authentication-Results: pdx-caf-mail.web.codeaurora.org;
- spf=none smtp.mailfrom=bpothuno@codeaurora.org
+ s=default; t=1559224687;
+ bh=XdJJqRXE3zAPfFrmsgZYUg+Xb0DjUwwiqawcDL9fDTE=;
+ h=Date:From:To:Cc:Subject:In-Reply-To:References:From;
+ b=ipSS8H1+BEgA9WRdloQDqRfREZTylAMaXODQk7APacoCpHl+AcEZrEpULOF5Hmvy+
+ BQCrZyr6zwdOQ6mGERbsUwmMQlwGmz+OP/wJU00atCTaETe1AqYDPHMElAd+abn6nr
+ IZoaVHP1lIP5Lx3u8wuR6u3e+TuFE+FkbFaHG+So=
+MIME-Version: 1.0
+Date: Thu, 30 May 2019 19:28:07 +0530
 From: Balaji Pothunoori <bpothuno@codeaurora.org>
-To: ath10k@lists.infradead.org
-Subject: [PATCH v5] ath10k: add support for controlling tx power to a station
-Date: Thu, 30 May 2019 15:17:18 +0530
-Message-Id: <1559209638-23887-1-git-send-email-bpothuno@codeaurora.org>
-X-Mailer: git-send-email 2.7.4
+To: Vjaceslavs Klimovs <vklimovs@gmail.com>, kvalo@codeaurora.org
+Subject: Re: ath10k panic with 5.1 kernel and qca9984 on association
+In-Reply-To: <000001d516ec$fed6f190$fc84d4b0$@codeaurora.org>
+References: <CAC_j7i3ZAcfaQ-on5mXTKxd--erzCChKhEEU_6Yk+j2w57PeVg@mail.gmail.com>
+ <8736ky6cyp.fsf@kamboji.qca.qualcomm.com>
+ <CAC_j7i0eQfHu=9r8biPkpGhxrSqbYQdf2cxT0tDfnH7YgGxO6w@mail.gmail.com>
+ <000001d516ec$fed6f190$fc84d4b0$@codeaurora.org>
+Message-ID: <dd642aad7d2f83ebb3c955a9475ed85f@codeaurora.org>
+X-Sender: bpothuno@codeaurora.org
+User-Agent: Roundcube Webmail/1.2.5
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190530_024727_199610_0CD5E208 
-X-CRM114-Status: GOOD (  17.62  )
+X-CRM114-CacheID: sfid-20190530_065809_716870_32F0D1F7 
+X-CRM114-Status: GOOD (  15.51  )
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-2.5 points)
@@ -93,183 +90,123 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Balaji Pothunoori <bpothuno@codeaurora.org>,
- Ashok Raj Nagarajan <arnagara@codeaurora.org>, linux-wireless@vger.kernel.org
-MIME-Version: 1.0
-Content-Type: text/plain; charset="us-ascii"
+Cc: Abhishek Ambure <aambure@codeaurora.org>, ath10k@lists.infradead.org
 Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-From: Ashok Raj Nagarajan <arnagara@codeaurora.org>
+Hi,
 
-This patch will add the support to control the transmit power for traffic
-to a station associated with the AP.
+We are not seeing mentioned issue with following setup.
+Setup details are :
+AP - X86 with 5.1.0 kernel + QCA9984.
+STA - Standard STA.
+Observation : Crash is not observed during STA join.
 
-Underlying firmware will enforce that the maximum tx power will be based
-on the regulatory requirements. If the user given transmit power is greater
-than the allowed tx power in the given channel, then the firmware will use
-the maximum tx power in the same channel.
+Could you please share the steps what you have followed ?
 
-Max and Min tx power values will depends on no of tx chain masks,
-for QCA9984 allowed tx power range values from 6 to 23.
+Regards,
+Balaji.
 
-When 0 is sent to the firmware as tx power, it will revert to the default
-tx power for the station.
-
-Tested Hardware : QCA9984
-Tested Firmware : 10.4-3.9.0.2-00046
-
-Co-developed-by: Balaji Pothunoori <bpothuno@codeaurora.org>
-Signed-off-by: Ashok Raj Nagarajan <arnagara@codeaurora.org>
-Signed-off-by: Balaji Pothunoori <bpothuno@codeaurora.org>
----
-v2: removed mBm to dBm conversion
-v3: rebased wmi.h changes
-v4: no changes, rebased 
-v5: updated firmware details which 
-    addresses Bob comments.
-    updated commit log.
-
-Note: mac80211/cfg80211 patches got merged hence sending
-      ath10k alone with v5 and mentioned 10.4-3.9.0.2-00046
-      firmware is yet to be upstream.
-
-patchwork links :
- 	https://patchwork.kernel.org/patch/10876859/
-	https://patchwork.kernel.org/patch/10876853/
-
- drivers/net/wireless/ath/ath10k/debug.h |  3 +++
- drivers/net/wireless/ath/ath10k/mac.c   | 39 +++++++++++++++++++++++++++++++++
- drivers/net/wireless/ath/ath10k/wmi.h   |  6 +++++
- 3 files changed, 48 insertions(+)
-
-diff --git a/drivers/net/wireless/ath/ath10k/debug.h b/drivers/net/wireless/ath/ath10k/debug.h
-index db78e85..2e43d8d 100644
---- a/drivers/net/wireless/ath/ath10k/debug.h
-+++ b/drivers/net/wireless/ath/ath10k/debug.h
-@@ -71,6 +71,9 @@ struct ath10k_pktlog_hdr {
- /* FIXME: How to calculate the buffer size sanely? */
- #define ATH10K_FW_STATS_BUF_SIZE (1024 * 1024)
- 
-+#define ATH10K_TX_POWER_MAX_VAL 70
-+#define ATH10K_TX_POWER_MIN_VAL 0
-+
- extern unsigned int ath10k_debug_mask;
- 
- __printf(2, 3) void ath10k_info(struct ath10k *ar, const char *fmt, ...);
-diff --git a/drivers/net/wireless/ath/ath10k/mac.c b/drivers/net/wireless/ath/ath10k/mac.c
-index b500fd4..7e3e403 100644
---- a/drivers/net/wireless/ath/ath10k/mac.c
-+++ b/drivers/net/wireless/ath/ath10k/mac.c
-@@ -6358,6 +6358,41 @@ static void ath10k_mac_dec_num_stations(struct ath10k_vif *arvif,
- 	ar->num_stations--;
- }
- 
-+static int ath10k_sta_set_txpwr(struct ieee80211_hw *hw,
-+				struct ieee80211_vif *vif,
-+				struct ieee80211_sta *sta)
-+{
-+	struct ath10k *ar = hw->priv;
-+	struct ath10k_vif *arvif = (void *)vif->drv_priv;
-+	int ret = 0;
-+	s16 txpwr;
-+
-+	if (sta->txpwr.type == NL80211_TX_POWER_AUTOMATIC) {
-+		txpwr = 0;
-+	} else {
-+		txpwr = sta->txpwr.power;
-+		if (!txpwr)
-+			return -EINVAL;
-+	}
-+
-+	if (txpwr > ATH10K_TX_POWER_MAX_VAL || txpwr < ATH10K_TX_POWER_MIN_VAL)
-+		return -EINVAL;
-+
-+	mutex_lock(&ar->conf_mutex);
-+
-+	ret = ath10k_wmi_peer_set_param(ar, arvif->vdev_id, sta->addr,
-+					WMI_PEER_USE_FIXED_PWR, txpwr);
-+	if (ret) {
-+		ath10k_warn(ar, "failed to set tx power for station ret: %d\n",
-+			    ret);
-+		goto out;
-+	}
-+
-+out:
-+	mutex_unlock(&ar->conf_mutex);
-+	return ret;
-+}
-+
- static int ath10k_sta_state(struct ieee80211_hw *hw,
- 			    struct ieee80211_vif *vif,
- 			    struct ieee80211_sta *sta,
-@@ -8015,6 +8050,7 @@ static const struct ieee80211_ops ath10k_ops = {
- 	.set_key			= ath10k_set_key,
- 	.set_default_unicast_key        = ath10k_set_default_unicast_key,
- 	.sta_state			= ath10k_sta_state,
-+	.sta_set_txpwr			= ath10k_sta_set_txpwr,
- 	.conf_tx			= ath10k_conf_tx,
- 	.remain_on_channel		= ath10k_remain_on_channel,
- 	.cancel_remain_on_channel	= ath10k_cancel_remain_on_channel,
-@@ -8703,6 +8739,9 @@ int ath10k_mac_register(struct ath10k *ar)
- 		wiphy_ext_feature_set(ar->hw->wiphy,
- 				      NL80211_EXT_FEATURE_ENABLE_FTM_RESPONDER);
- 
-+	if (test_bit(WMI_SERVICE_TX_PWR_PER_PEER, ar->wmi.svc_map))
-+		wiphy_ext_feature_set(ar->hw->wiphy,
-+				      NL80211_EXT_FEATURE_STA_TX_PWR);
- 	/*
- 	 * on LL hardware queues are managed entirely by the FW
- 	 * so we only advertise to mac we can do the queues thing
-diff --git a/drivers/net/wireless/ath/ath10k/wmi.h b/drivers/net/wireless/ath/ath10k/wmi.h
-index 12f57f9..a0ed078 100644
---- a/drivers/net/wireless/ath/ath10k/wmi.h
-+++ b/drivers/net/wireless/ath/ath10k/wmi.h
-@@ -200,6 +200,7 @@ enum wmi_service {
- 	WMI_SERVICE_RTT_RESPONDER_ROLE,
- 	WMI_SERVICE_PER_PACKET_SW_ENCRYPT,
- 	WMI_SERVICE_REPORT_AIRTIME,
-+	WMI_SERVICE_TX_PWR_PER_PEER,
- 
- 	/* Remember to add the new value to wmi_service_name()! */
- 
-@@ -367,6 +368,7 @@ enum wmi_10_4_service {
- 	WMI_10_4_SERVICE_RTT_RESPONDER_ROLE,
- 	WMI_10_4_SERVICE_EXT_PEER_TID_CONFIGS_SUPPORT,
- 	WMI_10_4_SERVICE_REPORT_AIRTIME,
-+	WMI_10_4_SERVICE_TX_PWR_PER_PEER,
- };
- 
- static inline char *wmi_service_name(enum wmi_service service_id)
-@@ -491,6 +493,7 @@ static inline char *wmi_service_name(enum wmi_service service_id)
- 	SVCSTR(WMI_SERVICE_RTT_RESPONDER_ROLE);
- 	SVCSTR(WMI_SERVICE_PER_PACKET_SW_ENCRYPT);
- 	SVCSTR(WMI_SERVICE_REPORT_AIRTIME);
-+	SVCSTR(WMI_SERVICE_TX_PWR_PER_PEER);
- 
- 	case WMI_SERVICE_MAX:
- 		return NULL;
-@@ -818,6 +821,8 @@ static inline void wmi_10_4_svc_map(const __le32 *in, unsigned long *out,
- 	       WMI_SERVICE_PER_PACKET_SW_ENCRYPT, len);
- 	SVCMAP(WMI_10_4_SERVICE_REPORT_AIRTIME,
- 	       WMI_SERVICE_REPORT_AIRTIME, len);
-+	SVCMAP(WMI_10_4_SERVICE_TX_PWR_PER_PEER,
-+	       WMI_SERVICE_TX_PWR_PER_PEER, len);
- }
- 
- #undef SVCMAP
-@@ -6262,6 +6267,7 @@ enum wmi_peer_param {
- 	WMI_PEER_USE_4ADDR  = 0x6,
- 	WMI_PEER_DEBUG      = 0xa,
- 	WMI_PEER_PHYMODE    = 0xd,
-+	WMI_PEER_USE_FIXED_PWR = 0x8,
- 	WMI_PEER_DUMMY_VAR  = 0xff, /* dummy parameter for STA PS workaround */
- };
- 
--- 
-2.7.4
-
+> -----Original Message-----
+> From: ath10k <ath10k-bounces@lists.infradead.org> On Behalf Of 
+> Vjaceslavs Klimovs
+> Sent: Tuesday, May 28, 2019 11:53 PM
+> To: kvalo@codeaurora.org
+> Cc: Abhishek Ambure <aambure@codeaurora.org>; 
+> ath10k@lists.infradead.org
+> Subject: [EXT] Re: ath10k panic with 5.1 kernel and qca9984 on 
+> association
+> 
+> Abhishek,
+> I am happy to test a proposed fix, let me know.
+> 
+> On Tue, May 28, 2019 at 4:22 AM Kalle Valo <kvalo@codeaurora.org> 
+> wrote:
+>> 
+>> + Abhishek
+>> 
+>> Vjaceslavs Klimovs <vklimovs@gmail.com> writes:
+>> 
+>> > With 5.1 and head kernel, machine running as AP with qca9984 locks
+>> > up without being able to complete stack trace to console after a
+>> > client tries to associate with it. Following are (OCR transcribed)
+>> > error
+>> > messages:
+>> >
+>> > [ 177.161539] BUG: unable to handle kernel paging request at
+>> > fffffffffffff7bo [ 177.161553] #PF error: (normal kernel read fault)
+>> > [ 177.161561] PGD 703812067 P4D 703812067 PUD 20381406 PMD 0 [
+>> > 177.161571] Oops: 0000 (#1) SMP PTI [ 177.161577] CPU: 6 PID: 0
+>> > Comm: swapper/6 Tainted: G OE 5.1.3-gentoo #1
+>> >
+>> > [Garbage on screen after that point]
+>> >
+>> > and
+>> >
+>> > [67.805490] RBP: ffff9c4c57983d 18 R08: 0000000000000000 R09:
+>> > 0000000000000000 [67.805501] R10: 0000000000000002 R11:
+>> > 0000000000000000 R12: 0000000000000001 [67.805512] R13:
+>> > 0000000000000000 R14: 0000000000060002 R15: 0000000000000000
+>> > [67.805523] FS: 000000000000000000000) GS:ffff9c4c57980000 (0000)
+>> > knIGS:000000000 [67.805535] CS: 0010 DS: 0000 ES: 0000 CRO:
+>> > 0000000080050033
+>> > [67.805544] CR2: fffffffffffff7b0 CR3: 00000005f7e0e006 CR4:
+>> > 00000000003606e0 [67.805555] DRO: 0000000000000000 DR1: 0000000000000000 DR2:
+>> > 0000000000000000 [67.805566] DR3: 0000000000000000 DR6:
+>> > 00000000fffeoffO DR7: 0000000000000400 [67.805577] Call Trace:
+>> > [67.805582] <IRQ>
+>> > [67.805592] ath10k_htt_t2h_msg_handler+0xbda/0xf80 [ath10k_core]
+>> > [67.805603] ? _raw_spin_unlock_bh+0xie/0x20 [67.805614] ?
+>> > ath1ok_ce_per_engine_service+0xf1/0x100 [ath10k_corel [67.805626]
+>> > ath10k_pci_htt_rx_cb+0x172/0x260 [ath10k_pci] [67.8056391]
+>> > ath10k_ce_per_engine_service+0x9e/0x100 [ath10k_core)
+>> >
+>> > [Garbage on screen after that point]
+>> >
+>> > The issue does not reproduce on 5.0.17 but is reliably reproducible
+>> > in 5.1+ by just trying to associate to that AP. So I thought I'd run
+>> > git bisect. After bisecting,
+>> >
+>> > 6ddc3860a5668808bacbfcb1f1bf50d5d7ad1956, ath10k: add support for
+>> > ack rssi value of data tx packets
+>> >
+>> > is the first commit that triggers the problem. Reverting that commit
+>> > from head or from 5.1.5 reliably makes everything work as expected.
+>> 
+>> Thank you for the bisect, this is really helpful. Full commit log 
+>> below.
+>> Abhishek, please fix this or send a revert for 5.2.
+>> 
+>> commit 6ddc3860a5668808bacbfcb1f1bf50d5d7ad1956
+>> Author:     Abhishek Ambure <aambure@codeaurora.org>
+>> AuthorDate: Mon Feb 25 11:45:48 2019 +0200
+>> Commit:     Kalle Valo <kvalo@codeaurora.org>
+>> CommitDate: Tue Feb 26 14:58:06 2019 +0200
+>> 
+>>     ath10k: add support for ack rssi value of data tx packets
+>> 
+>>     In WCN3990, WMI_TLV_SERVICE_TX_DATA_MGMT_ACK_RSSI service 
+>> Indicates that
+>>     the firmware has the capability to send the RSSI value of the ACK 
+>> for all
+>>     data and management packets transmitted.
+>> 
+>>     If WMI_RSRC_CFG_FLAG_TX_ACK_RSSI is set in host capability then 
+>> firmware
+>>     sends RSSI value in "data" tx completion event. Host extracts ack 
+>> rssi
+>>     values of data packets from their tx completion event.
+>> 
+>>     Tested HW: WCN3990
+>>     Tested FW: WLAN.HL.2.0-01617-QCAHLSWMTPLZ-1
+>> 
+>>     Signed-off-by: Abhishek Ambure <aambure@codeaurora.org>
+>>     Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
+>> 
+>> --
+>> Kalle Valo
 
 _______________________________________________
 ath10k mailing list
