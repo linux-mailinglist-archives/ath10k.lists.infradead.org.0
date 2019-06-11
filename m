@@ -2,81 +2,103 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4F6313C3B9
-	for <lists+ath10k@lfdr.de>; Tue, 11 Jun 2019 08:02:17 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5DE143C992
+	for <lists+ath10k@lfdr.de>; Tue, 11 Jun 2019 12:59:51 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=XnfVtOKtZ8X6LRe3X+o0LpwkJjotNtLLwHcRLi+I80Y=; b=K0P+jVu4R8QbTM
-	Slur0ywogMXaJjRVk0T1WSH/Q/Ws4G1zDwe6x//7o+dBxMQxKBZ2QxgOsnMA0/s8Ga6+65lT2H7t7
-	1azEd5N+LnBhFcl6WuJdm8eBzP1y1KOBP/frGfRwz3ZtKhGIKCYAVBodLtmWGLB+oRqjJfvYJnqff
-	GQjZXq1PVE2Xqs3xb/cpVRxCHdLM6xARxlv5WiMw46/ykkl3IW4Wmj0rcZTqt29xkRDLb4WuoRQnj
-	QS+ZEmZSwARJAk6G6CCjdF+fR5/YLKsX8J/4M3MTQdKWOvsj6RRrH+j6MUUC1BWR08RF04F22WZfo
-	d15ErVOoomZA3rv6uxgg==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:Cc:
+	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
+	MIME-Version:Message-ID:Date:Subject:To:From:Reply-To:
+	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=yOXNQIVmI7PCjCyr3Hr2KGMKOXh9V2bKd9qmuLPpVf8=; b=tnS
+	Bls2wrhhyisxAfUQA5/NvTOVwSf/bVYmllsfvA79vZLz9zhNJGLJsqOMYjmqiGil9rwJkbTe7xSaV
+	TGpg7NNcCK/dtRqOnHQ4JcD1xILCyEnCeDQqD/qDedIUdwyfgBzm2n9Nn3vEf7sxSaejg/EhkD3uC
+	clGFimsknYFW3uEByU2MJ9ETH1Lxmw28oBexNEq1pTlcenpelM6FAb0UGk/77jqtCtyK+Iw6bKwoH
+	QqZhtSQEn1bqS/ChdWN2qzW83iJccWhyRkYQS/0/dgUXZ1PbvEdR3uWyHBu0oUD46oBF3be1lbPXS
+	uBXU+doBO4NZc2y0N9fl737UF8FpqKg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1haZrI-0002yw-9a; Tue, 11 Jun 2019 06:02:12 +0000
-Received: from mail-qt1-x836.google.com ([2607:f8b0:4864:20::836])
+	id 1haeVI-0003V0-HI; Tue, 11 Jun 2019 10:59:48 +0000
+Received: from us-smtp-delivery-195.mimecast.com ([63.128.21.195])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1haZrC-0002hA-Vm
- for ath10k@lists.infradead.org; Tue, 11 Jun 2019 06:02:08 +0000
-Received: by mail-qt1-x836.google.com with SMTP id a15so13157045qtn.7
- for <ath10k@lists.infradead.org>; Mon, 10 Jun 2019 23:02:05 -0700 (PDT)
+ id 1haeVE-0003L7-6S
+ for ath10k@lists.infradead.org; Tue, 11 Jun 2019 10:59:45 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=datto.com;
+ s=mimecast20190208; t=1560250780;
+ h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+ to:to:cc:cc:mime-version:mime-version:content-type:content-type;
+ bh=+v87z0P4rM7EEZQPcCwg9tFlDOKnvISf9XezE2nHIAc=;
+ b=aCIdcAtVqN6OvPn8qWBdNAmC3bYraiX0NuEdndHxNbMmbhUidoWQKgTbEveGChXv3fnDy3
+ C1ejVfW0vRAxBvTatT1Jjt/hzgu8SWVha8/vFEodbOHxE7UFaQcUsax7WYyqHEcOOntReg
+ EN7WM4gH7NzuquekQaIF96Q23Wz6MXc=
+Received: from mail-qk1-f198.google.com (mail-qk1-f198.google.com
+ [209.85.222.198]) (Using TLS) by relay.mimecast.com with ESMTP id
+ us-mta-102-sk6jwVElOhuGTTE18BoHxw-1; Tue, 11 Jun 2019 06:59:38 -0400
+X-MC-Unique: sk6jwVElOhuGTTE18BoHxw-1
+Received: by mail-qk1-f198.google.com with SMTP id c4so10580603qkd.16
+ for <ath10k@lists.infradead.org>; Tue, 11 Jun 2019 03:59:38 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=endlessm-com.20150623.gappssmtp.com; s=20150623;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=24nWy+FWO5DbLf1W2l/ocge/pj2/4txv8/6/17vj9UU=;
- b=chKAVt7RsItNuyPFoOQgj3xFGEXvynDiPQjG1E7Ae5tNHPoZ0SZANcjCrF3oPs1hfM
- 2BSb4vV/kZFHFIBR4XC2pzyck36Sk3fxc7O7aNh+0QJTKUWUArjhBjSeX59p0VbGjAOc
- /WFNdxp8snMMK0NVxJPQaYvrv1bM5zrB8SSNORtUOT8oQTxKUKDcmHFAnvcXu7yaaXkV
- z320Ora10hFvSQ52CbS41sqCRKA1ZGSZJaS06L0yaaHQdOqEfcvD2ClLJ5CO35cFLGRp
- ElvqO1OZgj/VmH4gMH83xbm9gTkJ9damZ1Yl3SB0MvwxdknHCUKgMfcwqlagez6RD4Nl
- x1PQ==
+ d=datto-com.20150623.gappssmtp.com; s=20150623;
+ h=from:to:cc:subject:date:message-id:mime-version;
+ bh=+v87z0P4rM7EEZQPcCwg9tFlDOKnvISf9XezE2nHIAc=;
+ b=eEFTHnHFGdrxcXLROJ4pKUgsuns+teuMl1ALAtaIJbmVmtGEH/lhLJTKdu4PccgKrl
+ k89n6zOoPdzE5+BhOiTeYGcG0d5r+YQkmB38m4FNIWh7VljLFIBhKgu+3dZX+aeF0hkP
+ MCXw5S1nCvCho5+REfADk1VJ7xRcLcIM+z8yuWSZd1ptbjeI5EBfhaPk6LjWNBroglJY
+ mFuiRs2DI7fCZR/XHznVEtrCzlc7Mk+6QLbAQ6Ebut7Pf4V/PoE++JfPyFqJzpwtP5p8
+ xgKlr/wRGurpvsWhIwhwM00VadS5bx1jTg4bQTI1PcgoOicZnaVvEuz+Oo6jREtGOSqI
+ 5Mgw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=24nWy+FWO5DbLf1W2l/ocge/pj2/4txv8/6/17vj9UU=;
- b=JEDqPYLdz5+9YRAz4kq2/Vet/X7BVK0y6A6YR6ryZF2rQ/sbB52VwsT95p0KhwM5N0
- ZBRTq4sI3y+CVxBbDhJTYUnEpAnWvmr1jtc1xJ2XZ4Lb0Htf/vuBp+fafwFwdCm2+fNw
- FtFN/fmElFUy3O7Rb6AtQVQtDiMhkdyRVFliKt8gk/F5EFaRV/z2AqCdbJPAkbkd2fJk
- nPFYjHnvoKXZQ76dJZZ5JpFDwyBGbeToSqtxtN2Xkdr8jV2fgRcKXOuwUrvJZI/VYEpT
- wjZdliYT/W5SEfINzFkNEaiZw3/0WkgpyM1jBsYgEVWLcWXDghV2g8uFfuMOoc9g3PvJ
- MBmg==
-X-Gm-Message-State: APjAAAVhd5IaY3uLbxBn9wxSGWMaG8VGDJoqI9AvNmlWFqxF6zxufSUm
- C632XpM41wG/zjhlraMHkl/Wohn+hTT2b5jQWVbYEQ==
-X-Google-Smtp-Source: APXvYqw+jAN4EGphnEuM72KJ8pOLtyMrnPXrI4aLvx/M6bZFWQmdeOMoVQWqciQOwI+ECZmWJP8hp+nSDWELFOazjuc=
-X-Received: by 2002:a0c:d24d:: with SMTP id o13mr7602665qvh.86.1560232924408; 
- Mon, 10 Jun 2019 23:02:04 -0700 (PDT)
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version;
+ bh=+v87z0P4rM7EEZQPcCwg9tFlDOKnvISf9XezE2nHIAc=;
+ b=BZsWmP2fA1+tNzhlBqP0QF/BTqAiAjL2wAmia93NJ3CYHIYq1pszsOWZjKUeS3VUZY
+ R/BYRAMy4lRmmYQnRGiBJf8Gh8aJbiagBnrgaHZDkqMrT+JxYEUzlq3qutfdVRb1Felx
+ C0udmFi/+LnArhZWvpB9EO43K/bXUx17YHxbWIEKcfIkTQ6TcKk9nM5+PdC2mXe1UkAI
+ J5X0vxwxq0KNvGguTg02Kils0zoumSeHexRsWVewAg06tZQm2+lwJmbmLoAiMRegNA2m
+ XNYAoK3kAQ/qaaNInd5xjuputBPLg50p1JBJELQg7Kra1e/JesWaov7kJRMo77Zr+j9r
+ aSow==
+X-Gm-Message-State: APjAAAVf+xf2l4Od3mFELd9/wR/6zjv/YUMC+EkhBL04fVAY8hZUfKxT
+ p9tRmcPGPClpsZVSRU/gmSaYhCtn3LjWTuqmX+zX3WljJKyQ0kodbPE7m+UuatyVlUjukgSrb4h
+ 9EaYuieT8319ZFrCFIsEoMQ==
+X-Received: by 2002:a0c:baa7:: with SMTP id x39mr42437007qvf.100.1560250777926; 
+ Tue, 11 Jun 2019 03:59:37 -0700 (PDT)
+X-Google-Smtp-Source: APXvYqwiBT46ZMMI4lfewxn/+KqxsSFq+eKTsqdQ+QIQoglT0IHcV5hWQf4J1vcO9dEBJ0veQO16vw==
+X-Received: by 2002:a0c:baa7:: with SMTP id x39mr42436993qvf.100.1560250777661; 
+ Tue, 11 Jun 2019 03:59:37 -0700 (PDT)
+Received: from bentobox.localnet
+ (p200300C5970379EE000000000000070D.dip0.t-ipconnect.de.
+ [2003:c5:9703:79ee::70d])
+ by smtp.gmail.com with ESMTPSA id y3sm2850426qtj.46.2019.06.11.03.59.35
+ (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
+ Tue, 11 Jun 2019 03:59:36 -0700 (PDT)
+From: Sven Eckelmann <seckelmann@datto.com>
+To: ath10k@lists.infradead.org
+Subject: ath10k: TPC: Max antenna gain
+Date: Tue, 11 Jun 2019 12:59:25 +0200
+Message-ID: <17533428.x5EMhTv9h2@bentobox>
 MIME-Version: 1.0
-References: <CAD8Lp45wxQ3vL_ttq-yKYDxscjn2KyJVCx_vJBCn+u8Yc5QtOQ@mail.gmail.com>
- <87h89lei7e.fsf@kamboji.qca.qualcomm.com>
-In-Reply-To: <87h89lei7e.fsf@kamboji.qca.qualcomm.com>
-From: Daniel Drake <drake@endlessm.com>
-Date: Tue, 11 Jun 2019 14:01:53 +0800
-Message-ID: <CAD8Lp455PaQYqC0PKYK_2_nP2dP_bn=eCJnpiJP3=Dh34B0whw@mail.gmail.com>
-Subject: Re: ath10k QCA9377 firmware crashes and fails to recover
-To: Kalle Valo <kvalo@codeaurora.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190610_230207_093853_9A0DB769 
-X-CRM114-Status: UNSURE (   7.69  )
+X-CRM114-CacheID: sfid-20190611_035944_525014_817825E8 
+X-CRM114-Status: UNSURE (   5.52  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.0 (/)
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:836 listed in]
- [list.dnswl.org]
+ -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
+ low trust [63.128.21.195 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.7 LOCALPART_IN_SUBJECT   Local part of To: address appears in
+ Subject
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -88,87 +110,77 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Endless Linux Upstreaming Team <linux@endlessm.com>,
- linux-wireless <linux-wireless@vger.kernel.org>, ath10k@lists.infradead.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: Maharaja Kennadyrajan <mkenna@codeaurora.org>,
+ Maharaja Kennadyrajan <c_mkenna@qti.qualcomm.com>
+Content-Type: multipart/mixed; boundary="===============4035565249572160864=="
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Hi Kalle,
+--===============4035565249572160864==
+Content-Type: multipart/signed; boundary="nextPart62412551.3YSEZU2eEr"; micalg="pgp-sha512"; protocol="application/pgp-signature"
 
-On Thu, May 23, 2019 at 3:36 PM Kalle Valo <kvalo@codeaurora.org> wrote:
->
-> Daniel Drake <drake@endlessm.com> writes:
->
-> > We are experiencing failures with QCA9377 wifi, using Linux 4.18 and
-> > Linux 5.0 with the latest firmware version:
-> >
-> > ath10k_pci 0000:02:00.0: firmware crashed! (guid
-> > 54a4649a-1240-4459-9442-9d498c49de79)
-> > ath10k_pci 0000:02:00.0: qca9377 hw1.1 target 0x05020001 chip_id
-> > 0x003821ff sub 1a3b:2b31
-> > ath10k_pci 0000:02:00.0: kconfig debug 0 debugfs 1 tracing 1 dfs 0 testmode 0
-> > ath10k_pci 0000:02:00.0: firmware ver WLAN.TF.1.0-00002-QCATFSWPZ-5
-> > api 5 features ignore-otp crc32 c3e0d04f
->
-> Is this a regression? For example, have you tried older firmware
-> versions?
+--nextPart62412551.3YSEZU2eEr
+Content-Transfer-Encoding: 7Bit
+Content-Type: text/plain; charset="us-ascii"
 
-Sorry for the delayed response, as we were testing old versions.
-It doesn't seem to be a regression, at least we tested:
+Hi,
 
-Linux 5.0 / latest firmware API 6
-ath10k_pci 0000:02:00.0: firmware crashed! (guid
-697a3b62-bf3a-4953-bf3d-058eb3b828ff)
-ath10k_pci 0000:02:00.0: qca9377 hw1.1 target 0x05020001 chip_id
-0x003821ff sub 1a3b:2b31
-ath10k_pci 0000:02:00.0: kconfig debug 0 debugfs 1 tracing 1 dfs 0 testmode 0
-ath10k_pci 0000:02:00.0: firmware ver WLAN.TF.2.1-00021-QCARMSWP-1 api
-6 features wowlan,ignore-otp crc32 42e41877
-ath10k_pci 0000:02:00.0: board_file api 2 bmi_id N/A crc32 8aedfa4a
-ath10k_pci 0000:02:00.0: htt-ver 3.56 wmi-op 4 htt-op 3 cal otp
-max-sta 32 raw 0 hwcrypto 1
+the firmware doesn't seem to parse the max_antenna gain from 
+ath10k_update_channel_list anymore. At least the 
+/sys/kernel/debug/ieee80211/phy0/ath10k/tpc_stats shows me max antenna gain 0 
+when I set it in ath10k_update_channel_list to 12.
 
-Linux 4.18 / latest firmware API 5
-ath10k_pci 0000:02:00.0: firmware crashed! (guid
-54a4649a-1240-4459-9442-9d498c49de79)
-ath10k_pci 0000:02:00.0: qca9377 hw1.1 target 0x05020001 chip_id
-0x003821ff sub 1a3b:2b31
-ath10k_pci 0000:02:00.0: kconfig debug 0 debugfs 1 tracing 1 dfs 0 testmode 0
-ath10k_pci 0000:02:00.0: firmware ver WLAN.TF.1.0-00002-QCATFSWPZ-5
-api 5 features ignore-otp crc32 c3e0d04f
+    grep Gain /sys/kernel/debug/ieee80211/phy*/ath10k/tpc_stats
+    /sys/kernel/debug/ieee80211/phy0/ath10k/tpc_stats:Antenna Gain  =  9 Reg. Max Antenna Gain      =   0
+    /sys/kernel/debug/ieee80211/phy1/ath10k/tpc_stats:Antenna Gain  =  8 Reg. Max Antenna Gain      =   0
+    /sys/kernel/debug/ieee80211/phy2/ath10k/tpc_stats:Antenna Gain  =  9 Reg. Max Antenna Gain      =   0
 
-Linux 4.15 / older firmware
-ath10k_pci 0000:02:00.0: firmware crashed! (guid
-7e1505fa-49e1-4fab-a7c5-a2352f1a47f6)
-ath10k_pci 0000:02:00.0: qca9377 hw1.1 target 0x05020001 chip_id
-0x003821ff sub 1a3b:2b31
-ath10k_pci 0000:02:00.0: kconfig debug 0 debugfs 1 tracing 1 dfs 0 testmode 0
-ath10k_pci 0000:02:00.0: firmware ver WLAN.TF.1.0-00267-1 api 5
-features ignore-otp crc32 79cea2c7
-ath10k_pci 0000:02:00.0: board_file api 2 bmi_id N/A crc32 8aedfa4a
-ath10k_pci 0000:02:00.0: htt-ver 3.1 wmi-op 4 htt-op 3 cal otp max-sta
-32 raw 0 hwcrypto 1
+Just tested it here on QCA9888 and QCA4019 with 10.4-3.5.3-00057. Is there a 
+version which is known to work?
 
-Linux 4.13 / same older firmware
-ath10k_pci 0000:02:00.0: firmware crashed! (uuid
-701e7d5e-b405-408c-ae27-7de285c38c8f)
-ath10k_pci 0000:02:00.0: qca9377 hw1.1 target 0x05020001 chip_id
-0x003821ff sub 1a3b:2b31
-ath10k_pci 0000:02:00.0: kconfig debug 0 debugfs 1 tracing 1 dfs 0 testmode 0
-ath10k_pci 0000:02:00.0: firmware ver WLAN.TF.1.0-00267-1 api 5
-features ignore-otp crc32 79cea2c7
-ath10k_pci 0000:02:00.0: board_file api 2 bmi_id N/A crc32 8aedfa4a
-ath10k_pci 0000:02:00.0: htt-ver 3.1 wmi-op 4 htt-op 3 cal otp max-sta
-32 raw 0 hwcrypto 1
+Kind regards,
+	Sven
+--nextPart62412551.3YSEZU2eEr
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: This is a digitally signed message part.
+Content-Transfer-Encoding: 7Bit
 
-Any further suggestions?
+-----BEGIN PGP SIGNATURE-----
 
-Thanks
-Daniel
+iQIzBAABCgAdFiEEF10rh2Elc9zjMuACXYcKB8Eme0YFAlz/iY0ACgkQXYcKB8Em
+e0an3g/9F6ErLA2Im+jiRNViy3FEAK//N7Mw2GhbNWoaInJRzgUTuLggpBARrNxZ
+YnwXHUGc4vNrbBd9cMhDfKEkhdLn3B7O9a/yWzN9dTiP1Dd/aghJ+i+aprhxOhGJ
+gkUScQk7pMMVzRH4JYtIJusD60h48Xbu8VkstmrgE3teWh/Dp9rob9qtIEhQk3EB
+BkPHvjdWLA1I/QF5UK6bQFDbO2TeRq+1IvjdSttLoBQ5faSw463kZugf50U5FECU
+G+DhVzpdcKUxp79BFz0v+85zT2yJ4ZLk5VdmF2UDSasTTidNHdMtEcu9tfDrvhFT
+8g0HuFkxuMV7H94GenL6ZfEoau4wSyX7iV5N2fcxBm4RtHLxsLqaOU5DE5MH3BM8
+AUwmZFQiq9BMXAZhaBbo9nXjAIzMdHkNKh9JFbA3t6LLfsMcjGLGfFs87eKNEKPw
+JZ/OFmxv6dq8a2s5qEILZOoHDv+pVUkJm13WKR2cXPbMf2u2VPIxlJruUims6QNK
+7kY7Qvetwsh6tZWgUKo+4vMHl0QWGYPtmR0NrOFZEOBReI3jEY+bbA/djaDr9rER
+9oQyD3irgNqtwlY2nXFUSOJr/8g4J2LP8o/xA2BO8Q+bEJfnvqtL0wTX6o4We5bN
+L08VzY1SfI56CNEH+zRcH6TtNJFEA3ELlUmTqHXZPsigKdUT5/U=
+=jCCs
+-----END PGP SIGNATURE-----
+
+--nextPart62412551.3YSEZU2eEr--
+
+
+
+
+
+--===============4035565249572160864==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
 
 _______________________________________________
 ath10k mailing list
 ath10k@lists.infradead.org
 http://lists.infradead.org/mailman/listinfo/ath10k
+
+--===============4035565249572160864==--
+
+
+
+
