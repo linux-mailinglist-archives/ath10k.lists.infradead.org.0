@@ -2,55 +2,48 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7B5A24347A
-	for <lists+ath10k@lfdr.de>; Thu, 13 Jun 2019 11:03:33 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E8AA24347B
+	for <lists+ath10k@lfdr.de>; Thu, 13 Jun 2019 11:04:46 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Content-ID:In-Reply-To:
-	References:Message-ID:Date:Subject:To:From:Reply-To:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=hkGxgbofU+uuXXpXs1f5zXVZvz/ftT+RFyoxrqyYk1A=; b=ER+XXMG8zDPb9f
-	De9eNbQFV9GoQGuWH2vqVTGqYwmmzIZgvUDxaEJRza71Dh/ANpEeZV7jff1KIpMrMmUZ701H3aRVh
-	OwIxrpHOp9JiScxTA8ECNIuZb1wbfAXBvB8xZbqBEFLjNFxu2eu3hHIqRXbraRO9RhDD6BpvxQhG8
-	DMgjPwCzZyMG57zzKm7nxBjtuZnK/hjisJLdR2qFJfMJyMx509XM+QV6OO8U1xn2XnP2kG6WwfpZT
-	hp+8VQiiMgVpxyTrQBau7VzKeoL5k+DO1x4IQDB+J1rf1BZrP0uFn0yN2hUoxUnCPfN3MzJqHlMeK
-	a0I4OyR9OoNcGgwDrOtg==;
+	Content-Transfer-Encoding:Content-Type:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Content-ID:Message-ID:Date
+	:Subject:To:From:Reply-To:Cc:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=9dmMz675cR0CDdSBpebXkDOZzKEO4qcx8YOMT1LDV70=; b=rkVS16M9xvlJxD
+	JbZa4DArOWOfduJNoeeLTjnYOYG+PBWLTq/iHcRQVjEIWaK5rX9XV8bUH48pheb8Y2rXXwkm0E5kD
+	Q+r4nrviFIDsOOr/0+YCpgYYbAj9hFhufhGP++ExK5exERw2IpMADcu0vmI2DE1aQ6726ANYlDbLr
+	PEvoyiK8SFBcoA+LEuyUhpa+2q1s7P3CquSUeOdNKELl+HKqtZKq31YpMQ+tzgpasSLD3iA7xrjj6
+	xkQWdRXSCJJTYOvVRgMHLO4xR90Rb461Afacix6EboW/BQlQRcN7OoX+Zwxhp6XUKvaAEsXGeA4Ub
+	k3Xcd73QNO5uTqyPhNgA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hbLdq-000088-I0; Thu, 13 Jun 2019 09:03:30 +0000
-Received: from mail-eopbgr770090.outbound.protection.outlook.com
- ([40.107.77.90] helo=NAM02-SN1-obe.outbound.protection.outlook.com)
+	id 1hbLf2-0000HM-W8; Thu, 13 Jun 2019 09:04:45 +0000
+Received: from mail-eopbgr770133.outbound.protection.outlook.com
+ ([40.107.77.133] helo=NAM02-SN1-obe.outbound.protection.outlook.com)
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hbLdm-00007W-G7
- for ath10k@lists.infradead.org; Thu, 13 Jun 2019 09:03:27 +0000
+ id 1hbLer-0000GV-AQ
+ for ath10k@lists.infradead.org; Thu, 13 Jun 2019 09:04:38 +0000
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=dedrone.com;
  s=selector1;
  h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
- bh=qDxrmBco6u90NV6MhYvNmE6+Cn8GmTVtRuANS/XZHwE=;
- b=ejXb/ZEEP+vHl9nDin/5Q8y7SBylIv11jTFbQV7TBpSw2teCFvis2xXXbbwfl2vJ+D4LtS+wICDqyS8PQAw3AZvn5r49InfUSCh4p86TCy2soII9l3uWhKSJYuWWGc970E831WIPvearcZcc8s69BaVBrswD0RlBtfRKoGBiSe4=
+ bh=Pxaaj7zau7r7hxbv7TClXIqsdvSO1ojuBRBwXFwv0sY=;
+ b=tYigceLxstylmtv2C7nyDtPcSOtpgDjtb8wZbDI5UojoirPJuPol/DRlp9MnwuTO1ONIrw5KMHCPukrN4jSqeRff2YOgyP1a9fzbGkQJCbPRBA0bnIy4TrFFKh7lQOJAORiT4JR0HIdR/vYIr+nCf3zauk4KEpkYPm4ug+lNzC8=
 Received: from BN8PR15MB3169.namprd15.prod.outlook.com (20.179.72.152) by
- BN8PR15MB2819.namprd15.prod.outlook.com (20.179.140.138) with Microsoft SMTP
+ BN8PR15MB3233.namprd15.prod.outlook.com (20.179.73.153) with Microsoft SMTP
  Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
- 15.20.1965.15; Thu, 13 Jun 2019 09:03:22 +0000
+ 15.20.1965.15; Thu, 13 Jun 2019 09:04:31 +0000
 Received: from BN8PR15MB3169.namprd15.prod.outlook.com
  ([fe80::a48c:35eb:52c6:d1c3]) by BN8PR15MB3169.namprd15.prod.outlook.com
  ([fe80::a48c:35eb:52c6:d1c3%5]) with mapi id 15.20.1965.018; Thu, 13 Jun 2019
- 09:03:22 +0000
+ 09:04:31 +0000
 From: Patrick Daume <patrick.daume@dedrone.com>
-To: "kvalo@codeaurora.org" <kvalo@codeaurora.org>
-Subject: Re: Qualcomm Atheros QCA6174 monitoring mode receiving no data
-Thread-Topic: Qualcomm Atheros QCA6174 monitoring mode receiving no data
-Thread-Index: AQHVF5c28GKXVbl/KUKifPWHGZ9U+6aJrXN/gAA5U4CAAqPKg4AAr7wAgAwhpoCAAAKTAA==
-Date: Thu, 13 Jun 2019 09:03:22 +0000
-Message-ID: <1560416602.23005.13.camel@dedrone.com>
-References: <1559296628.11260.4.camel@dedrone.com>
- <87lfyjyq9c.fsf@kamboji.qca.qualcomm.com>
- <1559566253.12864.47.camel@dedrone.com>
- <87zhmwvcs5.fsf@kamboji.qca.qualcomm.com>
- <1559749116.10289.19.camel@dedrone.com>
- <1560416049.23005.9.camel@dedrone.com>
-In-Reply-To: <1560416049.23005.9.camel@dedrone.com>
+To: "ath10k@lists.infradead.org" <ath10k@lists.infradead.org>
+Subject: ath10k kernel cannot allocate memory after some ifupdown cycles
+Thread-Topic: ath10k kernel cannot allocate memory after some ifupdown cycles
+Thread-Index: AQHVIccCJWosMi+xpE6AO5nT/Iuu7Q==
+Date: Thu, 13 Jun 2019 09:04:30 +0000
+Message-ID: <1560416670.23005.15.camel@dedrone.com>
 Accept-Language: de-DE, en-US
 Content-Language: en-US
 X-MS-Has-Attach: 
@@ -59,36 +52,36 @@ authentication-results: spf=none (sender IP is )
  smtp.mailfrom=patrick.daume@dedrone.com; 
 x-originating-ip: [80.69.200.138]
 x-ms-publictraffictype: Email
-x-ms-office365-filtering-correlation-id: 44b14710-6c1a-42e2-3080-08d6efddfcbb
+x-ms-office365-filtering-correlation-id: 9d62609b-45b7-4023-4779-08d6efde257c
 x-microsoft-antispam: BCL:0; PCL:0;
  RULEID:(2390118)(7020095)(4652040)(7021145)(8989299)(4534185)(7022145)(4603075)(4627221)(201702281549075)(8990200)(7048125)(7024125)(7027125)(7023125)(5600148)(711020)(4605104)(1401327)(2017052603328)(7193020);
- SRVR:BN8PR15MB2819; 
-x-ms-traffictypediagnostic: BN8PR15MB2819:
-x-microsoft-antispam-prvs: <BN8PR15MB281970795DA6F815587B633CE6EF0@BN8PR15MB2819.namprd15.prod.outlook.com>
-x-ms-oob-tlc-oobclassifiers: OLM:7691;
+ SRVR:BN8PR15MB3233; 
+x-ms-traffictypediagnostic: BN8PR15MB3233:
+x-microsoft-antispam-prvs: <BN8PR15MB32331120E76B0DBB4AE40028E6EF0@BN8PR15MB3233.namprd15.prod.outlook.com>
+x-ms-oob-tlc-oobclassifiers: OLM:4714;
 x-forefront-prvs: 0067A8BA2A
 x-forefront-antispam-report: SFV:NSPM;
- SFS:(10019020)(39830400003)(346002)(366004)(136003)(376002)(396003)(189003)(199004)(3846002)(6246003)(71200400001)(6512007)(6506007)(66556008)(6486002)(76116006)(8936002)(66476007)(6436002)(73956011)(64756008)(5640700003)(316002)(91956017)(66446008)(81166006)(8676002)(25786009)(5660300002)(6116002)(1730700003)(229853002)(4326008)(2906002)(81156014)(102836004)(86362001)(71190400001)(53936002)(66946007)(305945005)(68736007)(11346002)(14454004)(44832011)(476003)(14444005)(256004)(4744005)(7736002)(36756003)(486006)(66066001)(2351001)(99286004)(186003)(6916009)(26005)(2501003)(446003)(76176011)(508600001)(2616005)(103116003);
- DIR:OUT; SFP:1102; SCL:1; SRVR:BN8PR15MB2819;
+ SFS:(10019020)(136003)(376002)(346002)(39840400004)(366004)(396003)(199004)(189003)(25786009)(14454004)(99286004)(8936002)(66066001)(508600001)(5660300002)(6512007)(256004)(486006)(86362001)(2616005)(476003)(8676002)(102836004)(2906002)(7736002)(44832011)(26005)(53936002)(6506007)(305945005)(5640700003)(186003)(81156014)(66946007)(81166006)(66556008)(6916009)(76116006)(71200400001)(66476007)(103116003)(73956011)(3846002)(64756008)(6486002)(6436002)(36756003)(2351001)(66446008)(68736007)(316002)(2501003)(91956017)(71190400001)(6116002);
+ DIR:OUT; SFP:1102; SCL:1; SRVR:BN8PR15MB3233;
  H:BN8PR15MB3169.namprd15.prod.outlook.com; FPR:; SPF:None; LANG:en;
- PTR:InfoNoRecords; MX:1; A:1; 
+ PTR:InfoNoRecords; A:1; MX:1; 
 received-spf: None (protection.outlook.com: dedrone.com does not designate
  permitted sender hosts)
 x-ms-exchange-senderadcheck: 1
-x-microsoft-antispam-message-info: fmLHpaGjW5v7z7UtPJzkDr+lgT7+j6X2W/DdNd1yEjFKB76wo3OBcYFmxiy+onGSi2ALK9Jo5MsmXZLEHcslVRYHC8/XsAyeI+OGRXUOjQ26lPhxlgQKOKiVemC0PrEN3ygkT1YWsPzdm9thB50q5t8cio9N46ovLUjEB/puqvl+CVYyU4rJNHla8h2jyiciYa7D8enlfOiHYk73Dy4bCqVRjiv+ctSemQurrm9bhrLSv9Bw5WnCwvoV5WguYxmQ/NP9IYJ6zZMSUW9iUjLsELtlVryz1+MbLGLAndNDDKe8jqDuHeJ9eouUVvYGwoFnVk9mGfiswnEuofE3f/BKxveIZrLBYK4uzdM4+ZaGkV0lXLNG6ApsUXGPFDJFLYym24zRN9brwb2Kdjuutu6mkUv4qr71jq4LkZXrF8mCxqc=
-Content-ID: <DD3FBA7EAC5A444999594522A6F09F38@namprd15.prod.outlook.com>
+x-microsoft-antispam-message-info: 5v2vTLxGDeDdxCbEdJ7So7UsxVr+DFvGtLFoTK5VLgisU+6EN6VBLOGE4qZBLHa8DNxqQNmlHdxTTEdboo8OW1TjftKqohSBbgFzSvge4CDVT7VcV35TWBYT4bZWxjFVm6V+2bML2T/FgeiCqppKWpF1ZaiPZo4D/egdQYMGjmsJfDTDuIAbR1xJ1QhIPv78NZL4Yro8U/GsifPBOwGJLAU3KhtA1x49l7ZOnl06CLSxEHxIK3y1QPV/RmoVYZmL/VubNJoQA+0n1ho8UC9osJYwoqbE+lGQ8EywT2TfsZKteRR8SQGkldyFXy6jOZs4N5GyO1n+3/nDbESC6i6+8nt8OOsb9YEHe4iZzvLAuOdJJLTCiKtSjrTCXNx9Z0fm31XZmppph2GB54ufn/Ls2HiJ0biYEBEbujp/vcAnFps=
+Content-ID: <B76E552F0675CC48B7C86964F5658E2E@namprd15.prod.outlook.com>
 MIME-Version: 1.0
 X-OriginatorOrg: dedrone.com
-X-MS-Exchange-CrossTenant-Network-Message-Id: 44b14710-6c1a-42e2-3080-08d6efddfcbb
-X-MS-Exchange-CrossTenant-originalarrivaltime: 13 Jun 2019 09:03:22.4801 (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 9d62609b-45b7-4023-4779-08d6efde257c
+X-MS-Exchange-CrossTenant-originalarrivaltime: 13 Jun 2019 09:04:30.7935 (UTC)
 X-MS-Exchange-CrossTenant-fromentityheader: Hosted
 X-MS-Exchange-CrossTenant-id: ea7e0db4-c796-41ba-a144-9bdd2f4c6231
 X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
 X-MS-Exchange-CrossTenant-userprincipalname: patrick.daume@dedrone.com
-X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN8PR15MB2819
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN8PR15MB3233
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190613_020326_543010_FEAE0E04 
-X-CRM114-Status: UNSURE (   4.06  )
+X-CRM114-CacheID: sfid-20190613_020433_624373_52630016 
+X-CRM114-Status: UNSURE (   4.68  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -96,7 +89,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [40.107.77.90 listed in list.dnswl.org]
+ no trust [40.107.77.133 listed in list.dnswl.org]
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
@@ -117,27 +110,81 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: "ath10k@lists.infradead.org" <ath10k@lists.infradead.org>
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-SSBoYXZlIGEgc29sdXRpb24gZm9yIHRoaXMgaXNzdWUsDQpwbGVhc2UgZmluZCBvdXQgaWYgaXRz
-IHRoZSByaWdodCB3YXkNCg0KaHR0Lmg6MjIyNg0KDQovKg0KwqAqIFNob3VsZCBiZTogc2l6ZW9m
-KHN0cnVjdCBodHRfaG9zdF9yeF9kZXNjKSArIG1heCByeCBNU0RVIHNpemUsDQo+PiAqIHNpemVv
-ZihzdHJ1Y3QgaHR0X2hvc3RfcnhfZGVzYykgMzYwIGJ5dGVzICsgbWF4IE1QRFUvfk1EU1Ugc2l6
-ZQ0KODAyLjExQUMgMTYuMzg0IGJ5dGVzICgyXjE0KSArICgyXjkpDQrCoCogcm91bmRlZCB1cCB0
-byBhIGNhY2hlIGxpbmUgc2l6ZS4NCsKgKi8NCj4+ICNkZWZpbmUgSFRUX1JYX0JVRl9TSVpFIDE2
-ODk2DQojZGVmaW5lIEhUVF9SWF9NU0RVX1NJWkUgKEhUVF9SWF9CVUZfU0laRSAtIChpbnQpc2l6
-ZW9mKHN0cnVjdA0KaHR0X3J4X2Rlc2MpKQ0KDQoNCg0KDQoNCmh0dF9yeC5jOjEzOTAsIGF0aDEw
-a19odHRfcnhfaF91bmRlY2FwX3Jhdw0KDQppZiAoV0FSTl9PTl9PTkNFKCEoaXNfZmlyc3QgJiYg
-aXNfbGFzdCkgJiYgIW1zZHVfbGltaXRfZXJyKSkNCsKgwqDCoMKgwqDCoMKgwqByZXR1cm47DQoN
-Ci8qIFdlIHNlZSB6ZXJvIGxlbmd0aCBtc2R1cyBhbmQgZ3JlYXRlciBtYXggbGVuZ2h0IG1zZHVz
-LA0KwqAqIG5vdCBzdXJlIHdoeS4gQXQgbGVhc3QgZG9uJ3QgdHJ5IHRvIHRyaW0gaXQgZnVydGhl
-ci4NCsKgKi8NCj4+IGlmICh1bmxpa2VseShtc2R1LT5sZW4gPCBGQ1NfTEVOIHx8IG1zZHUtPmxl
-biA+IEhUVF9SWF9NU0RVX1NJWkUpKQ0KPj7CoMKgwqDCoMKgwqByZXR1cm47DQoNCnNrYl90cmlt
-KG1zZHUsIG1zZHUtPmxlbiAtIEZDU19MRU4pOwpfX19fX19fX19fX19fX19fX19fX19fX19fX19f
-X19fX19fX19fX19fX19fX19fXwphdGgxMGsgbWFpbGluZyBsaXN0CmF0aDEwa0BsaXN0cy5pbmZy
-YWRlYWQub3JnCmh0dHA6Ly9saXN0cy5pbmZyYWRlYWQub3JnL21haWxtYW4vbGlzdGluZm8vYXRo
-MTBrCg==
+I've an SparkLan WPEQ-261ACN(BT) Qualcomm Atheros QCA6174 chipset on an 4.4.38 Kernel with the newest kernel backport 'v5.1-rc2'.
+When i toggle the wlan0 interface in 10s cycles then the kernel cannot allocate memory after a while.
+Can anyone point out which patches may be relavant to fix this issue?
+
+watch -n 10 sudo ./toggle.sh
++ sudo ifup wlan0
+RTNETLINK answers: Cannot allocate memory
++ sleep 10s
++ sudo ifdown wlan0
+
+dmesg
+[ 1917.775193] ath10k_pci 0000:01:00.0: unsupported HTC service id: 1536
+[ 1917.812460] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[ 1943.467822] ath10k_pci 0000:01:00.0: unsupported HTC service id: 1536
+[ 1943.508383] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[ 1969.157238] ath10k_pci 0000:01:00.0: unsupported HTC service id: 1536
+[ 1969.196090] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[ 1994.850710] ath10k_pci 0000:01:00.0: unsupported HTC service id: 1536
+[ 1994.891609] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[ 2020.546382] ath10k_pci 0000:01:00.0: unsupported HTC service id: 1536
+[ 2020.587174] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[ 2046.241897] ath10k_pci 0000:01:00.0: unsupported HTC service id: 1536
+[ 2046.283581] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[ 2071.937823] ath10k_pci 0000:01:00.0: unsupported HTC service id: 1536
+[ 2071.979395] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[ 2097.633628] ath10k_pci 0000:01:00.0: unsupported HTC service id: 1536
+[ 2097.675403] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[ 2123.330689] ath10k_pci 0000:01:00.0: unsupported HTC service id: 1536
+[ 2123.381449] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[ 2149.033861] ath10k_pci 0000:01:00.0: unsupported HTC service id: 1536
+[ 2149.080214] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[ 2174.734434] ath10k_pci 0000:01:00.0: unsupported HTC service id: 1536
+[ 2174.776393] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[ 2200.413865] ath10k_pci 0000:01:00.0: failed to write diag value at 0xa7000: -12
+[ 2200.423219] ath10k_pci 0000:01:00.0: failed to download firmware via diag interface:-12
+[ 2200.433298] ath10k_pci 0000:01:00.0: failed to upload firmware via diag ce, trying BMI: -12
+[ 2200.992785] ath10k_pci 0000:01:00.0: unsupported HTC service id: 1536
+[ 2201.034673] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[ 2216.242340] ath10k_pci 0000:01:00.0: failed to read hi_board_data address: -12
+[ 2226.622023] ath10k_pci 0000:01:00.0: Failed to get pcie state addr: -12
+[ 2226.629859] ath10k_pci 0000:01:00.0: failed to setup init config: -12
+[ 2226.637622] ath10k_pci 0000:01:00.0: Could not init hif: -12
+
+
+hwinfo
+description: Ethernet interface
+product: QCA6174 802.11ac Wireless Network Adapter
+vendor: Qualcomm Atheros
+physical id: 0
+bus info: pci@0000:01:00.0
+logical name: wlan0
+version: 32
+serial: [REMOVED]
+width: 64 bits
+clock: 33MHz
+capabilities: bus_master cap_list ethernet physical
+configuration: broadcast=yes driver=ath10k_pci driverversion=4.4.38 firmware=WLAN.RM.4.4.1.c3-00030 latency=0 link=no multicast=yes
+resources: irq:452 memory:50200000-503fffff
+
+
+>>
+#/bin/bash
+
+set -x
+
+sudo ifup wlan0
+sleep 10s
+sudo ifdown wlan0
+<<
+_______________________________________________
+ath10k mailing list
+ath10k@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/ath10k
