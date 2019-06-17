@@ -2,64 +2,85 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 44E0448833
-	for <lists+ath10k@lfdr.de>; Mon, 17 Jun 2019 18:04:05 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id AE6A8490B5
+	for <lists+ath10k@lfdr.de>; Mon, 17 Jun 2019 22:02:31 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
-	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=3yuQnSYbZ3yVRPKsQsnr2P7m0o6sMHbdqqgPGbHJzp4=; b=ZPXall//iGpbSNPQbBUVES3oZ
-	mOSOOV7Zg9p2e4RJnYANriV46cWvxjCr8rtxqcLZq+1OzfmhhKruFuYoKv3ZQrVY2F68eHX8ntaYY
-	mX4y/nTmq4+JApiUJ8dCGuxK27lGWxdnimjituJNoRoe7CeTrIQMEulHc6ic6fH6tEpOLiByyyyRQ
-	VLQX6wXDiaMMe+hecyisweCUqSntljycTOZ37PFIu7AVlI1sejJyfd9tJ9+oUKbFp2NtIAUlUjhs2
-	lr/L/TzWrAQXapVlYFa7yNbr9reMo+fsSIJopW+SE0JIoMSrIv5bwQ9+HVfMgwkIMMh7HPZ+MBb/4
-	zwDgxPpzg==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=adMlMu+1GS2r/EZB3jLjVbp1sL+MQe5qvNA3TUX+FWQ=; b=ZXMU4tVjIorsoj
+	uaVKfp8bxW8BzcUotnVz+FDgDJyCzwNIvMtw4HLLh5aXz+6ywjcQLhX4HJVjGPYBQ9B0v7WlxObFC
+	C0ToGZQZTGYoO51GVyiqFjbR+eQkgMjO8cb4qKvc0ZiZ2k91DNGt8e5gMIZVejvr4G4dRJVwqKNpU
+	vTPP0lxOTJDIJyicWhKb5yoXdP32yT5kA8ckOVqkn1Hfy0uY9y06yJnzgNAb9UihQSt0LhyUIEyJK
+	r8pWinwsDZfVzCJhAgb5vWvP+FxUKqOgg/N+RKV1i54seYKV2nAI/oJ5a7wjasxlHnbrjd0+JQm6j
+	QI87ZIq0/JV2z44gZmUg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hcu6u-0004pj-PX; Mon, 17 Jun 2019 16:03:56 +0000
-Received: from mail2.candelatech.com ([208.74.158.173]
- helo=mail3.candelatech.com)
- by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
- id 1hcu6n-0004oz-OB
- for ath10k@lists.infradead.org; Mon, 17 Jun 2019 16:03:51 +0000
-Received: from [192.168.100.195] (50-251-239-81-static.hfc.comcastbusiness.net
- [50.251.239.81])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
- (No client certificate requested)
- by mail3.candelatech.com (Postfix) with ESMTPSA id 934D3137560;
- Mon, 17 Jun 2019 09:03:41 -0700 (PDT)
-DKIM-Filter: OpenDKIM Filter v2.11.0 mail3.candelatech.com 934D3137560
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=candelatech.com;
- s=default; t=1560787426;
- bh=qihpQ4YKC1KRJjLDZybHBWXT8408PGMnM4qg5Rm7KFA=;
- h=Subject:To:Cc:References:From:Date:In-Reply-To:From;
- b=rfDc/qpVAlPnKwIZc1ZWo9TY/Op2f2us3q7+pIKREi7w3andOvWefCRLNTTtEhjaE
- 0pGlm+pVSEiUTIPVZ/28S3z0fSWrrXYw0GeXCi6NwdHMuSiId7UlyBtZprJgT01Kw0
- kcv5oUkw4ucKhfTLrCbRh7nFbH1WrRGohXI77Z1c=
-Subject: Re: [PATCH] ath10k: add mic bytes for pmf management packet
-To: Wen Gong <wgong@codeaurora.org>, ath10k@lists.infradead.org
-References: <1560757079-19266-1-git-send-email-wgong@codeaurora.org>
-From: Ben Greear <greearb@candelatech.com>
-Organization: Candela Technologies
-Message-ID: <136d04d4-671b-8dde-2abd-63070b07bd26@candelatech.com>
-Date: Mon, 17 Jun 2019 09:03:41 -0700
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
- Thunderbird/60.4.0
+	id 1hcxpk-0004L2-Hs; Mon, 17 Jun 2019 20:02:28 +0000
+Received: from mail-lf1-x141.google.com ([2a00:1450:4864:20::141])
+ by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
+ id 1hcxpg-0004KV-Kf
+ for ath10k@lists.infradead.org; Mon, 17 Jun 2019 20:02:25 +0000
+Received: by mail-lf1-x141.google.com with SMTP id y17so7515476lfe.0
+ for <ath10k@lists.infradead.org>; Mon, 17 Jun 2019 13:02:23 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=B4P8y1ay39d+E4yB3whFfRjMbB7BKe2MvBm/2WeUpIM=;
+ b=of2v7ANgL9ex0bkfxQas0p6u4QAhgHfu5y1Y/3T039pKxnMxEKpETvUBNF+8c1SwzE
+ 6jM+sSE/03uQiaK5khEyZjMn2Ut7hPZRVxfcfuB5s8/czVUudhGS8uBNby58nmRYHg69
+ jn8kPcsad2kZqqBr1UrtE+dhV6vvELpupT3ZxTaA8dppC/XbeeaIzyWX9rxSinYJr/AP
+ VuwG/cZSBh4kCIVhDAUFubuU7NFQ5//HE1i5I30jy3VIVYvNes3Ea6emUDfNfZbnW9gS
+ coS2IUV+LeoGPjZ/uwVAQAvVVDy6x/tYs5jZx5qfrHDh+buF7MNVzMCuWil7YJPZqgus
+ iXPA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=B4P8y1ay39d+E4yB3whFfRjMbB7BKe2MvBm/2WeUpIM=;
+ b=fsCWJGhIvVraMN4aMIuxr6yIxMcFfRmLmZbcdLpZYyLOSL0RodCNyHsdRFy59y1WLV
+ 4KkIr9AYRRS6OA62bNCV4brXZlZCAe2vuN5ZtaPrOrwpO0v2WYzTdm2XfdWH+tcn9TVb
+ wqhg6vB/YrE0mu9vbqdjDOpzKe8bw0RjcnEWznOyghPvqjXG0Gz7BKfBj9W3F/OhPhD5
+ se326Std3IriGVrA2KkmUSd8P9Lg6YtsJtvEtj317Hp3lBls+CrXEvhzGy6TRQLVuorO
+ 3yfX2/tP1sJHOwvC9AuTL2pnIqYhSMm5bteTk0irNWphPh8UXGHPfl3tyrjVED6bQnm9
+ MSJw==
+X-Gm-Message-State: APjAAAXpMlt7Dc4CW0R2Wzl8HRrPXBLMkwaDtPM2jiR1waeF6XKP/LmS
+ 9ZoedSXiwDnfbxRNKC+OKm8=
+X-Google-Smtp-Source: APXvYqzALujpPOG2xk/DqMQhHr3m6lA+WF68otalfSbL7+uhlJM7kYppPXRpUxk4fkH0Eui/GOj7vg==
+X-Received: by 2002:a19:5007:: with SMTP id e7mr60072377lfb.76.1560801742672; 
+ Mon, 17 Jun 2019 13:02:22 -0700 (PDT)
+Received: from localhost.localdomain (81-233-89-221-no75.tbcn.telia.com.
+ [81.233.89.221])
+ by smtp.gmail.com with ESMTPSA id j90sm2245780ljb.29.2019.06.17.13.02.21
+ (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
+ Mon, 17 Jun 2019 13:02:22 -0700 (PDT)
+From: Erik Stromdahl <erik.stromdahl@gmail.com>
+To: johannes@sipsolutions.net, kvalo@codeaurora.org, davem@davemloft.net,
+ linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
+ linux-kernel@vger.kernel.org
+Subject: [PATCH 1/2] mac80211: add tx dequeue function for process context
+Date: Mon, 17 Jun 2019 22:01:39 +0200
+Message-Id: <20190617200140.6189-1-erik.stromdahl@gmail.com>
+X-Mailer: git-send-email 2.22.0
 MIME-Version: 1.0
-In-Reply-To: <1560757079-19266-1-git-send-email-wgong@codeaurora.org>
-Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190617_090349_880156_3CA03E65 
-X-CRM114-Status: GOOD (  18.60  )
+X-CRM114-CacheID: sfid-20190617_130224_680742_4C8C63B4 
+X-CRM114-Status: UNSURE (   9.37  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:141 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (erik.stromdahl[at]gmail.com)
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
@@ -78,106 +99,85 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless@vger.kernel.org
+Cc: Erik Stromdahl <erik.stromdahl@gmail.com>
+Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On 6/17/19 12:37 AM, Wen Gong wrote:
-> For PMF case, the action,deauth,disassoc management need to encrypt
-> by hardware, it need to reserve 8 bytes for encryption, otherwise
-> the packet will be sent out with error format, then PMF case will
-> fail.
-> 
-> After add the 8 bytes, it will pass the PMF case.
-> 
-> Tested with QCA6174 SDIO with firmware
-> WLAN.RMH.4.4.1-00005-QCARMSWP-1.
-> 
-> Signed-off-by: Wen Gong <wgong@codeaurora.org>
-> ---
->   drivers/net/wireless/ath/ath10k/htt_tx.c | 8 ++++++++
->   1 file changed, 8 insertions(+)
-> 
-> diff --git a/drivers/net/wireless/ath/ath10k/htt_tx.c b/drivers/net/wireless/ath/ath10k/htt_tx.c
-> index d8e9cc0..7bef9d9 100644
-> --- a/drivers/net/wireless/ath/ath10k/htt_tx.c
-> +++ b/drivers/net/wireless/ath/ath10k/htt_tx.c
-> @@ -1236,6 +1236,7 @@ static int ath10k_htt_tx_hl(struct ath10k_htt *htt, enum ath10k_hw_txrx_mode txm
->   	struct ath10k *ar = htt->ar;
->   	int res, data_len;
->   	struct htt_cmd_hdr *cmd_hdr;
-> +	struct ieee80211_hdr *hdr = (struct ieee80211_hdr *)msdu->data;
->   	struct htt_data_tx_desc *tx_desc;
->   	struct ath10k_skb_cb *skb_cb = ATH10K_SKB_CB(msdu);
->   	struct sk_buff *tmp_skb;
-> @@ -1245,6 +1246,13 @@ static int ath10k_htt_tx_hl(struct ath10k_htt *htt, enum ath10k_hw_txrx_mode txm
->   	u8 flags0 = 0;
->   	u16 flags1 = 0;
->   
-> +	if ((ieee80211_is_action(hdr->frame_control) ||
-> +	     ieee80211_is_deauth(hdr->frame_control) ||
-> +	     ieee80211_is_disassoc(hdr->frame_control)) &&
-> +	     ieee80211_has_protected(hdr->frame_control)) {
-> +		skb_put(msdu, IEEE80211_CCMP_MIC_LEN);
-> +	}
+Since ieee80211_tx_dequeue() must not be called with softirqs enabled
+(i.e. from process context without proper disable of bottom halves),
+we add a wrapper that disables bottom halves before calling
+ieee80211_tx_dequeue()
 
-I was looking at mac80211 code recently, and it seems some action
-frames are NOT supposed to be protected.  I added my own helper
-method to my local ath10k.  Maybe you want to use this?
+The new function is named ieee80211_tx_dequeue_ni() just as all other
+from-process-context versions found in mac80211.
 
+The documentation of ieee80211_tx_dequeue() is also updated so it
+mentions that the function should not be called from process context.
 
-/* Copied from ieee80211_is_robust_mgmt_frame, but disable the check for has_protected
-  * since we do tx hw crypt, and it won't actually be encrypted even when this flag is
-  * set.
+Signed-off-by: Erik Stromdahl <erik.stromdahl@gmail.com>
+---
+ include/net/mac80211.h | 26 ++++++++++++++++++++++++++
+ net/mac80211/tx.c      |  2 ++
+ 2 files changed, 28 insertions(+)
+
+diff --git a/include/net/mac80211.h b/include/net/mac80211.h
+index 72080d9d617e..c47990d8db79 100644
+--- a/include/net/mac80211.h
++++ b/include/net/mac80211.h
+@@ -6251,10 +6251,36 @@ void ieee80211_unreserve_tid(struct ieee80211_sta *sta, u8 tid);
+  * but for the duration of the frame handling.
+  * However, also note that while in the wake_tx_queue() method,
+  * rcu_read_lock() is already held.
++ *
++ * softirqs must also be disabled when this function is called.
++ * In process context, use ieee80211_tx_dequeue_ni() instead.
   */
-bool ieee80211_is_robust_mgmt_frame_tx(struct ieee80211_hdr *hdr)
-{
-         if (ieee80211_is_disassoc(hdr->frame_control) ||
-             ieee80211_is_deauth(hdr->frame_control))
-                 return true;
-
-         if (ieee80211_is_action(hdr->frame_control)) {
-                 u8 *category;
-
-                 /*
-                  * Action frames, excluding Public Action frames, are Robust
-                  * Management Frames. However, if we are looking at a Protected
-                  * frame, skip the check since the data may be encrypted and
-                  * the frame has already been found to be a Robust Management
-                  * Frame (by the other end).
-                  */
-		/*
-		if (ieee80211_has_protected(hdr->frame_control))
-                         return true;
-		*/
-                 category = ((u8 *) hdr) + 24;
-                 return *category != WLAN_CATEGORY_PUBLIC &&
-                         *category != WLAN_CATEGORY_HT &&
-                         *category != WLAN_CATEGORY_WNM_UNPROTECTED &&
-                         *category != WLAN_CATEGORY_SELF_PROTECTED &&
-                         *category != WLAN_CATEGORY_UNPROT_DMG &&
-                         *category != WLAN_CATEGORY_VHT &&
-                         *category != WLAN_CATEGORY_VENDOR_SPECIFIC;
-         }
-
-         return false;
-}
-
-Thanks,
-Ben
-
-> +
->   	data_len = msdu->len;
->   
->   	switch (txmode) {
-> 
-
-
+ struct sk_buff *ieee80211_tx_dequeue(struct ieee80211_hw *hw,
+ 				     struct ieee80211_txq *txq);
+ 
++/**
++ * ieee80211_tx_dequeue_ni - dequeue a packet from a software tx queue
++ * (in process context)
++ *
++ * Like ieee80211_tx_dequeue() but can be called in process context
++ * (internally disables bottom halves).
++ *
++ * @hw: pointer as obtained from ieee80211_alloc_hw()
++ * @txq: pointer obtained from station or virtual interface, or from
++ *	ieee80211_next_txq()
++ */
++static inline struct sk_buff *ieee80211_tx_dequeue_ni(struct ieee80211_hw *hw,
++						      struct ieee80211_txq *txq)
++{
++	struct sk_buff *skb;
++
++	local_bh_disable();
++	skb = ieee80211_tx_dequeue(hw, txq);
++	local_bh_enable();
++
++	return skb;
++}
++
+ /**
+  * ieee80211_next_txq - get next tx queue to pull packets from
+  *
+diff --git a/net/mac80211/tx.c b/net/mac80211/tx.c
+index dd220b977025..4bd0066ea7cd 100644
+--- a/net/mac80211/tx.c
++++ b/net/mac80211/tx.c
+@@ -3550,6 +3550,8 @@ struct sk_buff *ieee80211_tx_dequeue(struct ieee80211_hw *hw,
+ 	ieee80211_tx_result r;
+ 	struct ieee80211_vif *vif = txq->vif;
+ 
++	WARN_ON_ONCE(softirq_count() == 0);
++
+ begin:
+ 	spin_lock_bh(&fq->lock);
+ 
 -- 
-Ben Greear <greearb@candelatech.com>
-Candela Technologies Inc  http://www.candelatech.com
+2.22.0
 
 
 _______________________________________________
