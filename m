@@ -2,52 +2,88 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id DDAB5498E0
-	for <lists+ath10k@lfdr.de>; Tue, 18 Jun 2019 08:28:27 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A795F49988
+	for <lists+ath10k@lfdr.de>; Tue, 18 Jun 2019 08:55:57 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ZgPN3ywgFYX4236yNr2I0gkoPL4BPiwz6PNcBvLjOlo=; b=YplXLwUkgX7c0k
-	YQ6xljLVF5d6bk2slGb43iYUUw5s0Qe8x7wUh+N3pE1eheBJkJP0sJGtBv5qeVEEWXmJ4S5Q7HIeW
-	xltVIvp/HOsyzHJjvZcg4urKxu3icjyMnVY5jq/CSHpEUIFTX2Qo5kueUsPfuHqCsZ4Ii3ow7Ne5X
-	EO7qEcPpGp74PWGUXHIuHaTC/6L72Tkw9liXOsdik4V+IyQPisRTrGfy9sSQFHQMYq99hcGZJEJ7g
-	0/AKOhFQhQw5qZEfDVwffaoHJ3hYJInIiNnBH3Hliz7ARS0cLnl/oW2VkxsWsJ3p19yfSWWMqsGK7
-	rRxCZqsH23Ur/c2vnh6A==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Subject:To:From
+	:Date:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=Npk3AN3OtKgj5eHdRalHCAUNOS8T1xGsfZ/j6yeW+7U=; b=sys/UYr4F2CXbj
+	Ni37ExDXiZMsup8MrKo1B3N2y9kUJ5sHUITHf6N0fVOph6IPNUw+f92puIc2G95yTN9PqDzoFVz4Q
+	h3b6PcU6ZEPY259f7soXa4U1uCPY7NqCAqG8bwLYkv8NtvpGgWnE6OwfKdapeyE4YrGASVABcKafM
+	y3qxiUNmfTuBBHYbi8gAx/zq1znMTDuB3ZO9lEtCPyD+ltnFPRz04OHdiQ7xQ9A61uvnmwmztbZ16
+	1eKiG2JeUipE8A09Feov0XLkbZFe5KUl25jViT+af7+abW+cxTLLZCoHVk5F9oaw+9gXplGgidLIb
+	29V2Y4ip5LWU9OT9ouFg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hd7bW-0006ho-79; Tue, 18 Jun 2019 06:28:26 +0000
-Received: from nbd.name ([2a01:4f8:221:3d45::2])
+	id 1hd827-0003WN-JB; Tue, 18 Jun 2019 06:55:55 +0000
+Received: from userp2130.oracle.com ([156.151.31.86])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hd7bP-0006fX-8T
- for ath10k@lists.infradead.org; Tue, 18 Jun 2019 06:28:21 +0000
-Received: from p5dcfbabb.dip0.t-ipconnect.de ([93.207.186.187]
- helo=bertha.fritz.box) by ds12 with esmtpa (Exim 4.89)
- (envelope-from <john@phrozen.org>)
- id 1hd7bK-0000gk-MQ; Tue, 18 Jun 2019 08:28:14 +0200
-From: John Crispin <john@phrozen.org>
-To: Johannes Berg <johannes@sipsolutions.net>,
- Kalle Valo <kvalo@codeaurora.org>
-Subject: [PATCH V6 2/2] ath10k: add tx hw 802.11 encapusaltion offloading
- suppor
-Date: Tue, 18 Jun 2019 08:28:07 +0200
-Message-Id: <20190618062807.17158-3-john@phrozen.org>
-X-Mailer: git-send-email 2.20.1
-In-Reply-To: <20190618062807.17158-1-john@phrozen.org>
-References: <20190618062807.17158-1-john@phrozen.org>
+ id 1hd81x-0003P2-1Z
+ for ath10k@lists.infradead.org; Tue, 18 Jun 2019 06:55:47 +0000
+Received: from pps.filterd (userp2130.oracle.com [127.0.0.1])
+ by userp2130.oracle.com (8.16.0.27/8.16.0.27) with SMTP id x5I6sQ15102210;
+ Tue, 18 Jun 2019 06:55:41 GMT
+Received: from aserp3020.oracle.com (aserp3020.oracle.com [141.146.126.70])
+ by userp2130.oracle.com with ESMTP id 2t4r3tjekj-1
+ (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
+ Tue, 18 Jun 2019 06:55:40 +0000
+Received: from pps.filterd (aserp3020.oracle.com [127.0.0.1])
+ by aserp3020.oracle.com (8.16.0.27/8.16.0.27) with SMTP id x5I6rK13015826;
+ Tue, 18 Jun 2019 06:53:40 GMT
+Received: from userv0122.oracle.com (userv0122.oracle.com [156.151.31.75])
+ by aserp3020.oracle.com with ESMTP id 2t5mgbs8gc-1
+ (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
+ Tue, 18 Jun 2019 06:53:40 +0000
+Received: from abhmp0009.oracle.com (abhmp0009.oracle.com [141.146.116.15])
+ by userv0122.oracle.com (8.14.4/8.14.4) with ESMTP id x5I6rcrM004500;
+ Tue, 18 Jun 2019 06:53:38 GMT
+Received: from kadam (/41.57.98.10) by default (Oracle Beehive Gateway v4.0)
+ with ESMTP ; Mon, 17 Jun 2019 23:53:37 -0700
+Date: Tue, 18 Jun 2019 09:53:29 +0300
+From: kbuild test robot <lkp@intel.com>
+To: kbuild@01.org, John Crispin <john@phrozen.org>
+Subject: [ath6kl:pending-ath11k 198/205]
+ drivers/net/wireless/ath/ath11k/mac.c:1274 ath11k_peer_assoc_h_he() error:
+ memcpy() 'he_cap->he_cap_elem.mac_cap_info' too small (6 vs 8)
+Message-ID: <20190618065329.GY1893@kadam>
 MIME-Version: 1.0
+Content-Disposition: inline
+User-Agent: Mutt/1.9.4 (2018-02-28)
+X-Proofpoint-Virus-Version: vendor=nai engine=6000 definitions=9291
+ signatures=668687
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 suspectscore=0
+ malwarescore=0
+ phishscore=0 bulkscore=0 spamscore=0 mlxscore=0 mlxlogscore=999
+ adultscore=0 classifier=spam adjust=0 reason=mlx scancount=1
+ engine=8.0.1-1810050000 definitions=main-1906180057
+X-Proofpoint-Virus-Version: vendor=nai engine=6000 definitions=9291
+ signatures=668687
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0
+ priorityscore=1501 malwarescore=0
+ suspectscore=0 phishscore=0 bulkscore=0 spamscore=0 clxscore=1011
+ lowpriorityscore=0 mlxscore=0 impostorscore=0 mlxlogscore=999 adultscore=0
+ classifier=spam adjust=0 reason=mlx scancount=1 engine=8.0.1-1810050000
+ definitions=main-1906180057
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190617_232819_464215_7593398F 
-X-CRM114-Status: GOOD (  17.70  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190617_235545_191772_032842C3 
+X-CRM114-Status: UNSURE (   9.19  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -1.4 (-)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-1.4 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [156.151.31.86 listed in list.dnswl.org]
+ 0.9 SPF_FAIL               SPF: sender does not match SPF record (fail)
+ [SPF failed: Please see http://www.openspf.org/Why?s=mfrom; id=lkp%40intel.com;
+ ip=156.151.31.86; r=bombadil.infradead.org]
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -59,342 +95,132 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Vasanthakumar Thiagarajan <vthiagar@qti.qualcomm.com>,
- linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
- John Crispin <john@phrozen.org>
+Cc: Kalle Valo <kvalo@codeaurora.org>, ath10k@lists.infradead.org,
+ kbuild-all@01.org, Dan Carpenter <dan.carpenter@oracle.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-From: Vasanthakumar Thiagarajan <vthiagar@qti.qualcomm.com>
+tree:   https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git pending-ath11k
+head:   0f82fec5679664bb91d6c167fd1a146f113e4197
+commit: cbdb3159fdf450b7b3999a06600aa0e1fb78383f [198/205] ath11k: set additional values inside wmi_peer_assoc_complete_cmd
 
-This patch adds support for ethernet rxtx mode to the driver. The feature
-is enabled via a new module parameter. If enabled to driver will enable
-the feature on a per vif basis if all other requirements were met.
+If you fix the issue, kindly add following tag
+Reported-by: kbuild test robot <lkp@intel.com>
+Reported-by: Dan Carpenter <dan.carpenter@oracle.com>
 
-Testing on a IPQ4019 based hardware shows a increase in TCP throughput
-of ~20% when the feature is enabled.
+New smatch warnings:
+drivers/net/wireless/ath/ath11k/mac.c:1274 ath11k_peer_assoc_h_he() error: memcpy() 'he_cap->he_cap_elem.mac_cap_info' too small (6 vs 8)
 
-Signed-off-by: Vasanthakumar Thiagarajan <vthiagar@qti.qualcomm.com>
-Signed-off-by: John Crispin <john@phrozen.org>
+Old smatch warnings:
+drivers/net/wireless/ath/ath11k/mac.c:1276 ath11k_peer_assoc_h_he() error: memcpy() 'he_cap->he_cap_elem.phy_cap_info' too small (11 vs 12)
+
+# https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git/commit/?id=cbdb3159fdf450b7b3999a06600aa0e1fb78383f
+git remote add ath6kl https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git
+git remote update ath6kl
+git checkout cbdb3159fdf450b7b3999a06600aa0e1fb78383f
+vim +1274 drivers/net/wireless/ath/ath11k/mac.c
+
+258bbf52 Kalle Valo   2019-02-05  1260  
+258bbf52 Kalle Valo   2019-02-05  1261  static void ath11k_peer_assoc_h_he(struct ath11k *ar,
+258bbf52 Kalle Valo   2019-02-05  1262  				   struct ieee80211_vif *vif,
+258bbf52 Kalle Valo   2019-02-05  1263  				   struct ieee80211_sta *sta,
+258bbf52 Kalle Valo   2019-02-05  1264  				   struct peer_assoc_params *arg)
+258bbf52 Kalle Valo   2019-02-05  1265  {
+17aca2d9 John Crispin 2019-06-03  1266  	const struct ieee80211_sta_he_cap *he_cap = &sta->he_cap;
+3db59a23 Kalle Valo   2019-06-12  1267  	u16 v;
+17aca2d9 John Crispin 2019-06-03  1268  
+17aca2d9 John Crispin 2019-06-03  1269  	if (!he_cap->has_he)
+17aca2d9 John Crispin 2019-06-03  1270  		return;
+17aca2d9 John Crispin 2019-06-03  1271  
+17aca2d9 John Crispin 2019-06-03  1272  	arg->he_flag = true;
+17aca2d9 John Crispin 2019-06-03  1273  
+17aca2d9 John Crispin 2019-06-03 @1274  	memcpy(&arg->peer_he_cap_macinfo, he_cap->he_cap_elem.mac_cap_info,
+17aca2d9 John Crispin 2019-06-03  1275  	       sizeof(arg->peer_he_cap_macinfo));
+
+Smatch thinks these are different sizes...  I don't have a copy of
+struct peer_assoc_params so I can't check.
+
+17aca2d9 John Crispin 2019-06-03  1276  	memcpy(&arg->peer_he_cap_phyinfo, he_cap->he_cap_elem.phy_cap_info,
+17aca2d9 John Crispin 2019-06-03  1277  	       sizeof(arg->peer_he_cap_phyinfo));
+17aca2d9 John Crispin 2019-06-03  1278  	memcpy(&arg->peer_he_ops, &vif->bss_conf.he_operation,
+17aca2d9 John Crispin 2019-06-03  1279  	       sizeof(arg->peer_he_ops));
+cbdb3159 John Crispin 2019-06-17  1280  	arg->peer_he_cap_macinfo_internal = 0x0;
+17aca2d9 John Crispin 2019-06-03  1281  
+17aca2d9 John Crispin 2019-06-03  1282  	if (he_cap->he_cap_elem.phy_cap_info[6] &
+17aca2d9 John Crispin 2019-06-03  1283  	    IEEE80211_HE_PHY_CAP6_PPE_THRESHOLD_PRESENT) {
+17aca2d9 John Crispin 2019-06-03  1284  		int bit = 7;
+17aca2d9 John Crispin 2019-06-03  1285  		int nss, ru;
+17aca2d9 John Crispin 2019-06-03  1286  
+17aca2d9 John Crispin 2019-06-03  1287  		arg->peer_ppet.numss_m1 = he_cap->ppe_thres[0] &
+17aca2d9 John Crispin 2019-06-03  1288  					  IEEE80211_PPE_THRES_NSS_MASK;
+17aca2d9 John Crispin 2019-06-03  1289  		arg->peer_ppet.ru_bit_mask =
+17aca2d9 John Crispin 2019-06-03  1290  			(he_cap->ppe_thres[0] &
+17aca2d9 John Crispin 2019-06-03  1291  			 IEEE80211_PPE_THRES_RU_INDEX_BITMASK_MASK) >>
+17aca2d9 John Crispin 2019-06-03  1292  			IEEE80211_PPE_THRES_RU_INDEX_BITMASK_POS;
+17aca2d9 John Crispin 2019-06-03  1293  
+17aca2d9 John Crispin 2019-06-03  1294  		for (nss = 0; nss <= arg->peer_ppet.numss_m1; nss++) {
+17aca2d9 John Crispin 2019-06-03  1295  			for (ru = 0; ru < 4; ru++) {
+17aca2d9 John Crispin 2019-06-03  1296  				u32 val = 0;
+17aca2d9 John Crispin 2019-06-03  1297  				int i;
+17aca2d9 John Crispin 2019-06-03  1298  
+17aca2d9 John Crispin 2019-06-03  1299  				if ((arg->peer_ppet.ru_bit_mask & BIT(ru)) == 0)
+17aca2d9 John Crispin 2019-06-03  1300  					continue;
+17aca2d9 John Crispin 2019-06-03  1301  				for (i = 0; i < 6; i++) {
+17aca2d9 John Crispin 2019-06-03  1302  					val >>= 1;
+17aca2d9 John Crispin 2019-06-03  1303  					val |= ((he_cap->ppe_thres[bit / 8] >>
+17aca2d9 John Crispin 2019-06-03  1304  						 (bit % 8)) & 0x1) << 5;
+17aca2d9 John Crispin 2019-06-03  1305  					bit++;
+17aca2d9 John Crispin 2019-06-03  1306  				}
+17aca2d9 John Crispin 2019-06-03  1307  				arg->peer_ppet.ppet16_ppet8_ru3_ru0[nss] |=
+17aca2d9 John Crispin 2019-06-03  1308  								val << (ru * 6);
+17aca2d9 John Crispin 2019-06-03  1309  			}
+17aca2d9 John Crispin 2019-06-03  1310  		}
+17aca2d9 John Crispin 2019-06-03  1311  	}
+17aca2d9 John Crispin 2019-06-03  1312  
+17aca2d9 John Crispin 2019-06-03  1313  	switch (sta->bandwidth) {
+17aca2d9 John Crispin 2019-06-03  1314  	case IEEE80211_STA_RX_BW_160:
+17aca2d9 John Crispin 2019-06-03  1315  		if (he_cap->he_cap_elem.phy_cap_info[0] &
+17aca2d9 John Crispin 2019-06-03  1316  		    IEEE80211_HE_PHY_CAP0_CHANNEL_WIDTH_SET_80PLUS80_MHZ_IN_5G) {
+3db59a23 Kalle Valo   2019-06-12  1317  			v = le16_to_cpu(he_cap->he_mcs_nss_supp.rx_mcs_80p80);
+3db59a23 Kalle Valo   2019-06-12  1318  			arg->peer_he_rx_mcs_set[WMI_HECAP_TXRX_MCS_NSS_IDX_80_80] = v;
+3db59a23 Kalle Valo   2019-06-12  1319  
+3db59a23 Kalle Valo   2019-06-12  1320  			v = le16_to_cpu(he_cap->he_mcs_nss_supp.tx_mcs_80p80);
+3db59a23 Kalle Valo   2019-06-12  1321  			arg->peer_he_tx_mcs_set[WMI_HECAP_TXRX_MCS_NSS_IDX_80_80] = v;
+3db59a23 Kalle Valo   2019-06-12  1322  
+17aca2d9 John Crispin 2019-06-03  1323  			arg->peer_he_mcs_count++;
+17aca2d9 John Crispin 2019-06-03  1324  		}
+3db59a23 Kalle Valo   2019-06-12  1325  
+3db59a23 Kalle Valo   2019-06-12  1326  		v = le16_to_cpu(he_cap->he_mcs_nss_supp.rx_mcs_160);
+3db59a23 Kalle Valo   2019-06-12  1327  		arg->peer_he_rx_mcs_set[WMI_HECAP_TXRX_MCS_NSS_IDX_160] = v;
+3db59a23 Kalle Valo   2019-06-12  1328  
+3db59a23 Kalle Valo   2019-06-12  1329  		v = le16_to_cpu(he_cap->he_mcs_nss_supp.tx_mcs_160);
+3db59a23 Kalle Valo   2019-06-12  1330  		arg->peer_he_tx_mcs_set[WMI_HECAP_TXRX_MCS_NSS_IDX_160] = v;
+3db59a23 Kalle Valo   2019-06-12  1331  
+17aca2d9 John Crispin 2019-06-03  1332  		arg->peer_he_mcs_count++;
+17aca2d9 John Crispin 2019-06-03  1333  		/* drop through */
+17aca2d9 John Crispin 2019-06-03  1334  
+17aca2d9 John Crispin 2019-06-03  1335  	default:
+3db59a23 Kalle Valo   2019-06-12  1336  		v = le16_to_cpu(he_cap->he_mcs_nss_supp.rx_mcs_80);
+3db59a23 Kalle Valo   2019-06-12  1337  		arg->peer_he_rx_mcs_set[WMI_HECAP_TXRX_MCS_NSS_IDX_80] = v;
+3db59a23 Kalle Valo   2019-06-12  1338  		v = le16_to_cpu(he_cap->he_mcs_nss_supp.tx_mcs_80);
+3db59a23 Kalle Valo   2019-06-12  1339  		arg->peer_he_tx_mcs_set[WMI_HECAP_TXRX_MCS_NSS_IDX_80] = v;
+17aca2d9 John Crispin 2019-06-03  1340  		arg->peer_he_mcs_count++;
+17aca2d9 John Crispin 2019-06-03  1341  		break;
+17aca2d9 John Crispin 2019-06-03  1342  	}
+258bbf52 Kalle Valo   2019-02-05  1343  }
+258bbf52 Kalle Valo   2019-02-05  1344  
+
+:::::: The code at line 1274 was first introduced by commit
+:::::: 17aca2d9a969788a7f1e3e0c72b5485bf6a432a4 ath11k: add HE support
+
+:::::: TO: John Crispin <john@phrozen.org>
+:::::: CC: Kalle Valo <kvalo@codeaurora.org>
+
 ---
- drivers/net/wireless/ath/ath10k/core.c   | 11 ++++
- drivers/net/wireless/ath/ath10k/core.h   |  3 +
- drivers/net/wireless/ath/ath10k/htt_tx.c | 24 +++++---
- drivers/net/wireless/ath/ath10k/mac.c    | 70 +++++++++++++++++++-----
- drivers/net/wireless/ath/ath10k/txrx.c   | 11 +++-
- 5 files changed, 94 insertions(+), 25 deletions(-)
-
-diff --git a/drivers/net/wireless/ath/ath10k/core.c b/drivers/net/wireless/ath/ath10k/core.c
-index aff585658fc0..ac6e41f09f2a 100644
---- a/drivers/net/wireless/ath/ath10k/core.c
-+++ b/drivers/net/wireless/ath/ath10k/core.c
-@@ -30,6 +30,7 @@ static unsigned int ath10k_cryptmode_param;
- static bool uart_print;
- static bool skip_otp;
- static bool rawmode;
-+static bool ethernetmode;
- 
- unsigned long ath10k_coredump_mask = BIT(ATH10K_FW_CRASH_DUMP_REGISTERS) |
- 				     BIT(ATH10K_FW_CRASH_DUMP_CE_DATA);
-@@ -41,6 +42,7 @@ module_param(uart_print, bool, 0644);
- module_param(skip_otp, bool, 0644);
- module_param(rawmode, bool, 0644);
- module_param_named(coredump_mask, ath10k_coredump_mask, ulong, 0444);
-+module_param(ethernetmode, bool, 0644);
- 
- MODULE_PARM_DESC(debug_mask, "Debugging mask");
- MODULE_PARM_DESC(uart_print, "Uart target debugging");
-@@ -48,6 +50,7 @@ MODULE_PARM_DESC(skip_otp, "Skip otp failure for calibration in testmode");
- MODULE_PARM_DESC(cryptmode, "Crypto mode: 0-hardware, 1-software");
- MODULE_PARM_DESC(rawmode, "Use raw 802.11 frame datapath");
- MODULE_PARM_DESC(coredump_mask, "Bitfield of what to include in firmware crash file");
-+MODULE_PARM_DESC(ethernetmode, "Use ethernet frame datapath");
- 
- static const struct ath10k_hw_params ath10k_hw_params_list[] = {
- 	{
-@@ -2939,6 +2942,14 @@ static void ath10k_core_register_work(struct work_struct *work)
- 	/* peer stats are enabled by default */
- 	set_bit(ATH10K_FLAG_PEER_STATS, &ar->dev_flags);
- 
-+	if (ethernetmode && rawmode) {
-+		ath10k_err(ar, "ethernet and raw mode cannot co-exist\n");
-+		status = -EINVAL;
-+		goto err;
-+	}
-+
-+	ar->ethernetmode = ethernetmode;
-+
- 	status = ath10k_core_probe_fw(ar);
- 	if (status) {
- 		ath10k_err(ar, "could not probe fw (%d)\n", status);
-diff --git a/drivers/net/wireless/ath/ath10k/core.h b/drivers/net/wireless/ath/ath10k/core.h
-index e35aae5146f1..1bc463a39d6c 100644
---- a/drivers/net/wireless/ath/ath10k/core.h
-+++ b/drivers/net/wireless/ath/ath10k/core.h
-@@ -109,6 +109,7 @@ enum ath10k_skb_flags {
- 	ATH10K_SKB_F_MGMT = BIT(3),
- 	ATH10K_SKB_F_QOS = BIT(4),
- 	ATH10K_SKB_F_RAW_TX = BIT(5),
-+	ATH10K_SKB_F_HW_80211_ENCAP = BIT(6),
- };
- 
- struct ath10k_skb_cb {
-@@ -1190,6 +1191,8 @@ struct ath10k {
- 	struct work_struct radar_confirmation_work;
- 	struct ath10k_bus_params bus_param;
- 
-+	bool ethernetmode;
-+
- 	/* must be last */
- 	u8 drv_priv[0] __aligned(sizeof(void *));
- };
-diff --git a/drivers/net/wireless/ath/ath10k/htt_tx.c b/drivers/net/wireless/ath/ath10k/htt_tx.c
-index d8e9cc0bb772..ae4c48b8b706 100644
---- a/drivers/net/wireless/ath/ath10k/htt_tx.c
-+++ b/drivers/net/wireless/ath/ath10k/htt_tx.c
-@@ -1143,6 +1143,10 @@ static u8 ath10k_htt_tx_get_tid(struct sk_buff *skb, bool is_eth)
- 	struct ieee80211_hdr *hdr = (void *)skb->data;
- 	struct ath10k_skb_cb *cb = ATH10K_SKB_CB(skb);
- 
-+	/* Firmware takes care of tid classification for ethernet format */
-+	if (cb->flags & ATH10K_SKB_F_HW_80211_ENCAP)
-+		return skb->priority % IEEE80211_QOS_CTL_TID_MASK;
-+
- 	if (!is_eth && ieee80211_is_mgmt(hdr->frame_control))
- 		return HTT_DATA_TX_EXT_TID_MGMT;
- 	else if (cb->flags & ATH10K_SKB_F_QOS)
-@@ -1351,15 +1355,17 @@ static int ath10k_htt_tx_32(struct ath10k_htt *htt,
- 	txbuf_paddr = htt->txbuf.paddr +
- 		      (sizeof(struct ath10k_htt_txbuf_32) * msdu_id);
- 
--	if ((ieee80211_is_action(hdr->frame_control) ||
--	     ieee80211_is_deauth(hdr->frame_control) ||
--	     ieee80211_is_disassoc(hdr->frame_control)) &&
--	     ieee80211_has_protected(hdr->frame_control)) {
--		skb_put(msdu, IEEE80211_CCMP_MIC_LEN);
--	} else if (!(skb_cb->flags & ATH10K_SKB_F_NO_HWCRYPT) &&
--		   txmode == ATH10K_HW_TXRX_RAW &&
--		   ieee80211_has_protected(hdr->frame_control)) {
--		skb_put(msdu, IEEE80211_CCMP_MIC_LEN);
-+	if (!(info->control.flags & IEEE80211_TX_CTRL_HW_80211_ENCAP)) {
-+		if ((ieee80211_is_action(hdr->frame_control) ||
-+		     ieee80211_is_deauth(hdr->frame_control) ||
-+		     ieee80211_is_disassoc(hdr->frame_control)) &&
-+		    ieee80211_has_protected(hdr->frame_control)) {
-+			skb_put(msdu, IEEE80211_CCMP_MIC_LEN);
-+		} else if (!(skb_cb->flags & ATH10K_SKB_F_NO_HWCRYPT) &&
-+			   txmode == ATH10K_HW_TXRX_RAW &&
-+			   ieee80211_has_protected(hdr->frame_control)) {
-+			skb_put(msdu, IEEE80211_CCMP_MIC_LEN);
-+		}
- 	}
- 
- 	skb_cb->paddr = dma_map_single(dev, msdu->data, msdu->len,
-diff --git a/drivers/net/wireless/ath/ath10k/mac.c b/drivers/net/wireless/ath/ath10k/mac.c
-index 9c703d287333..6918587951cb 100644
---- a/drivers/net/wireless/ath/ath10k/mac.c
-+++ b/drivers/net/wireless/ath/ath10k/mac.c
-@@ -3386,12 +3386,16 @@ ath10k_mac_tx_h_get_txmode(struct ath10k *ar,
- 			   struct sk_buff *skb)
- {
- 	const struct ieee80211_hdr *hdr = (void *)skb->data;
-+	struct ieee80211_tx_info *tx_info = IEEE80211_SKB_CB(skb);
- 	const struct ath10k_skb_cb *skb_cb = ATH10K_SKB_CB(skb);
- 	__le16 fc = hdr->frame_control;
- 
- 	if (!vif || vif->type == NL80211_IFTYPE_MONITOR)
- 		return ATH10K_HW_TXRX_RAW;
- 
-+	if (tx_info->control.flags & IEEE80211_TX_CTRL_HW_80211_ENCAP)
-+		return ATH10K_HW_TXRX_ETHERNET;
-+
- 	if (ieee80211_is_mgmt(fc))
- 		return ATH10K_HW_TXRX_MGMT;
- 
-@@ -3544,6 +3548,15 @@ static void ath10k_mac_tx_h_fill_cb(struct ath10k *ar,
- 			ieee80211_is_data_qos(hdr->frame_control);
- 
- 	cb->flags = 0;
-+	cb->vif = vif;
-+	cb->txq = txq;
-+	cb->airtime_est = airtime;
-+
-+	if (info->control.flags & IEEE80211_TX_CTRL_HW_80211_ENCAP) {
-+		cb->flags |= ATH10K_SKB_F_HW_80211_ENCAP;
-+		return;
-+	}
-+
- 	if (!ath10k_tx_h_use_hwcrypto(vif, skb))
- 		cb->flags |= ATH10K_SKB_F_NO_HWCRYPT;
- 
-@@ -3562,10 +3575,6 @@ static void ath10k_mac_tx_h_fill_cb(struct ath10k *ar,
- 		cb->flags |= ATH10K_SKB_F_NO_HWCRYPT;
- 		cb->flags |= ATH10K_SKB_F_RAW_TX;
- 	}
--
--	cb->vif = vif;
--	cb->txq = txq;
--	cb->airtime_est = airtime;
- }
- 
- bool ath10k_mac_tx_frm_has_freq(struct ath10k *ar)
-@@ -3675,6 +3684,9 @@ static int ath10k_mac_tx(struct ath10k *ar,
- 	const struct ath10k_skb_cb *skb_cb = ATH10K_SKB_CB(skb);
- 	int ret;
- 
-+	if (info->control.flags & IEEE80211_TX_CTRL_HW_80211_ENCAP)
-+		goto skip_encap;
-+
- 	/* We should disable CCK RATE due to P2P */
- 	if (info->flags & IEEE80211_TX_CTL_NO_CCK_RATE)
- 		ath10k_dbg(ar, ATH10K_DBG_MAC, "IEEE80211_TX_CTL_NO_CCK_RATE\n");
-@@ -3698,6 +3710,7 @@ static int ath10k_mac_tx(struct ath10k *ar,
- 		}
- 	}
- 
-+skip_encap:
- 	if (info->flags & IEEE80211_TX_CTL_TX_OFFCHAN) {
- 		if (!ath10k_mac_tx_frm_has_freq(ar)) {
- 			ath10k_dbg(ar, ATH10K_DBG_MAC, "queued offchannel skb %pK\n",
-@@ -3747,6 +3760,7 @@ void ath10k_offchan_tx_work(struct work_struct *work)
- 	int ret;
- 	unsigned long time_left;
- 	bool tmp_peer_created = false;
-+	struct ieee80211_tx_info *info;
- 
- 	/* FW requirement: We must create a peer before FW will send out
- 	 * an offchannel frame. Otherwise the frame will be stuck and
-@@ -3766,8 +3780,14 @@ void ath10k_offchan_tx_work(struct work_struct *work)
- 		ath10k_dbg(ar, ATH10K_DBG_MAC, "mac offchannel skb %pK\n",
- 			   skb);
- 
--		hdr = (struct ieee80211_hdr *)skb->data;
--		peer_addr = ieee80211_get_DA(hdr);
-+		info = IEEE80211_SKB_CB(skb);
-+
-+		if (info->control.flags & IEEE80211_TX_CTRL_HW_80211_ENCAP) {
-+			peer_addr = skb->data;
-+		} else {
-+			hdr = (struct ieee80211_hdr *)skb->data;
-+			peer_addr = ieee80211_get_DA(hdr);
-+		}
- 
- 		spin_lock_bh(&ar->data_lock);
- 		vdev_id = ar->scan.vdev_id;
-@@ -4295,7 +4315,7 @@ static void ath10k_mac_op_tx(struct ieee80211_hw *hw,
- 	struct ieee80211_vif *vif = info->control.vif;
- 	struct ieee80211_sta *sta = control->sta;
- 	struct ieee80211_txq *txq = NULL;
--	struct ieee80211_hdr *hdr = (void *)skb->data;
-+	struct ieee80211_hdr *hdr;
- 	enum ath10k_hw_txrx_mode txmode;
- 	enum ath10k_mac_tx_path txpath;
- 	bool is_htt;
-@@ -4326,14 +4346,20 @@ static void ath10k_mac_op_tx(struct ieee80211_hw *hw,
- 			return;
- 		}
- 
--		ret = ath10k_htt_tx_mgmt_inc_pending(htt, is_mgmt, is_presp);
--		if (ret) {
--			ath10k_dbg(ar, ATH10K_DBG_MAC, "failed to increase tx mgmt pending count: %d, dropping\n",
--				   ret);
--			ath10k_htt_tx_dec_pending(htt);
--			spin_unlock_bh(&ar->htt.tx_lock);
--			ieee80211_free_txskb(ar->hw, skb);
--			return;
-+		if (is_mgmt) {
-+			hdr = (struct ieee80211_hdr *)skb->data;
-+			is_presp = ieee80211_is_probe_resp(hdr->frame_control);
-+
-+			ret = ath10k_htt_tx_mgmt_inc_pending(htt, is_mgmt,
-+							     is_presp);
-+			if (ret) {
-+				ath10k_dbg(ar, ATH10K_DBG_MAC, "failed to increase tx mgmt pending count: %d, dropping\n",
-+					   ret);
-+				ath10k_htt_tx_dec_pending(htt);
-+				spin_unlock_bh(&ar->htt.tx_lock);
-+				ieee80211_free_txskb(ar->hw, skb);
-+				return;
-+			}
- 		}
- 		spin_unlock_bh(&ar->htt.tx_lock);
- 	}
-@@ -5094,6 +5120,7 @@ static int ath10k_add_interface(struct ieee80211_hw *hw,
- 	struct ath10k_vif *arvif = (void *)vif->drv_priv;
- 	struct ath10k_peer *peer;
- 	enum wmi_sta_powersave_param param;
-+	int hw_encap = 0;
- 	int ret = 0;
- 	u32 value;
- 	int bit;
-@@ -5185,6 +5212,17 @@ static int ath10k_add_interface(struct ieee80211_hw *hw,
- 		break;
- 	}
- 
-+	switch (vif->type) {
-+	case NL80211_IFTYPE_STATION:
-+	case NL80211_IFTYPE_AP_VLAN:
-+	case NL80211_IFTYPE_AP:
-+		hw_encap = 1;
-+		break;
-+	default:
-+		break;
-+	}
-+	ieee80211_set_hw_80211_encap(vif, ar->ethernetmode & hw_encap);
-+
- 	/* Using vdev_id as queue number will make it very easy to do per-vif
- 	 * tx queue locking. This shouldn't wrap due to interface combinations
- 	 * but do a modulo for correctness sake and prevent using offchannel tx
-@@ -8602,6 +8640,8 @@ int ath10k_mac_register(struct ath10k *ar)
- 	ieee80211_hw_set(ar->hw, QUEUE_CONTROL);
- 	ieee80211_hw_set(ar->hw, SUPPORTS_TX_FRAG);
- 	ieee80211_hw_set(ar->hw, REPORTS_LOW_ACK);
-+	if (ar->ethernetmode)
-+		ieee80211_hw_set(ar->hw, SUPPORTS_80211_ENCAP);
- 
- 	if (!test_bit(ATH10K_FLAG_RAW_MODE, &ar->dev_flags))
- 		ieee80211_hw_set(ar->hw, SW_CRYPTO_CONTROL);
-diff --git a/drivers/net/wireless/ath/ath10k/txrx.c b/drivers/net/wireless/ath/ath10k/txrx.c
-index c5818d28f55a..bad5e7335c0e 100644
---- a/drivers/net/wireless/ath/ath10k/txrx.c
-+++ b/drivers/net/wireless/ath/ath10k/txrx.c
-@@ -50,6 +50,8 @@ int ath10k_txrx_tx_unref(struct ath10k_htt *htt,
- 	struct ath10k_skb_cb *skb_cb;
- 	struct ath10k_txq *artxq;
- 	struct sk_buff *msdu;
-+	struct ieee80211_vif *vif;
-+	u8 flags;
- 
- 	ath10k_dbg(ar, ATH10K_DBG_HTT,
- 		   "htt tx completion msdu_id %u status %d\n",
-@@ -78,6 +80,9 @@ int ath10k_txrx_tx_unref(struct ath10k_htt *htt,
- 		artxq->num_fw_queued--;
- 	}
- 
-+	flags = skb_cb->flags;
-+	vif = skb_cb->vif;
-+
- 	ath10k_htt_tx_free_msdu_id(htt, tx_done->msdu_id);
- 	ath10k_htt_tx_dec_pending(htt);
- 	if (htt->num_pending_tx == 0)
-@@ -121,7 +126,11 @@ int ath10k_txrx_tx_unref(struct ath10k_htt *htt,
- 		info->status.is_valid_ack_signal = true;
- 	}
- 
--	ieee80211_tx_status(htt->ar->hw, msdu);
-+	if (flags & ATH10K_SKB_F_HW_80211_ENCAP)
-+		ieee80211_tx_status_8023(htt->ar->hw, vif, msdu);
-+	else
-+		ieee80211_tx_status(htt->ar->hw, msdu);
-+
- 	/* we do not own the msdu anymore */
- 
- 	return 0;
--- 
-2.20.1
-
+0-DAY kernel test infrastructure                Open Source Technology Center
+https://lists.01.org/pipermail/kbuild-all                   Intel Corporation
 
 _______________________________________________
 ath10k mailing list
