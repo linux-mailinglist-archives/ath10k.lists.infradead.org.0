@@ -2,73 +2,80 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3811949680
-	for <lists+ath10k@lfdr.de>; Tue, 18 Jun 2019 02:57:43 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id CDBB9498A5
+	for <lists+ath10k@lfdr.de>; Tue, 18 Jun 2019 07:27:47 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=AsJSFe6OIO4Kz3hWBBA0eWHgp1HF/wV4BHBCEOp6SwI=; b=ZGlpanjJHS4Rnb
-	R8CWo/gwJKntxRtjz+7rrnXMqXa6d9WRakp9Gs2K1C9L2P9+lf/YiUoSDD8H+8IyXwMMgfMnyHQlq
-	A3OfxDR5ugpl2iIL0hACp48i02QE4Uv0Uqq/QPUkgeCRrkcNSIjAZTmyLHP6kxp8dCNirutuEtEXO
-	LuMSvNUpPeQNPqNoBdlOfWD0Lutg4pBP0gKOHyuK0N1dx82QolWFMRTJMPtMRwiVnzUsIDmaWsFHO
-	fs/kEcpeVA3iO6yxONK5q0Zv/waFvHDgsB2my21t50vH9NVlxMj2lVFPeSW+XTIxixCsKGNdsKt8E
-	rWvTdq5QFfZwkGzKQ/mw==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
+	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=aOBlk4AuJXTOdrZGuzdza9jAhJ7lMruBWjWz4L9QaZM=; b=fTJ
+	GRgBEfG119x3vYmJKJAg+9Hn4QIex52kZrVsRqw+ijwBu4hozNXMVjXPzKWozX3TZ+9QZljfssnbA
+	ntHpe/f2qr1NrYL9xq46PAMdxYzZRodxzMzJqgS0DZ+dsX1R+ybGUGVvOM4d0/srbcE/yq6+bsjkK
+	RjwvrivaSzNd0Rg9ICsZYI9IIbtYjfOgINh1qIqXKEzsgtKbzpYT0DpIm3C4BEzcrq81r3A1lmMmA
+	26hOtRkLqPzAEo/9dv5DgB1snKpoqaTjIKAxoUK3W9J3d9pdnIUNJCC3PzUjvLQWCUOwoG1ySHi61
+	8JltMHtymXsqPd/glU+q0a8OtpIDfnw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hd2RM-00075n-Sh; Tue, 18 Jun 2019 00:57:36 +0000
-Received: from ushosting.nmnhosting.com ([66.55.73.32])
- by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
- id 1hd2RJ-00075T-8d
- for ath10k@lists.infradead.org; Tue, 18 Jun 2019 00:57:34 +0000
-Received: from mail2.nmnhosting.com (unknown [202.169.106.97])
- by ushosting.nmnhosting.com (Postfix) with ESMTPS id 2797C2DC0096;
- Mon, 17 Jun 2019 20:57:31 -0400 (EDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=d-silva.org;
- s=201810a; t=1560819452;
- bh=u7VpYNn8JpTLdyHPUljh2Z7wehVtDH+n9nHQNgN6N2A=;
- h=Subject:From:To:Cc:Date:In-Reply-To:References:From;
- b=jvSabEdrNHOl7NlBGL5YcdZQfi+fpB9BO+GaqBWlR/PP+V/1JX3MOC/vdfprE+d4q
- W0UTx/depws8/q6fCe4qsmxzaHqtVkUa+v+Mp2PYjaUrKq1XeKLKJ3TPmwKDKYb7Ix
- tm9Ggg2c204E7SWf1Kzm3b7UURvQRUF+YtE1qaFXWb7M1bSsECs2dxPGyAy4TwdTwu
- YrzjrIAdGWVZDKXuSQHyDOqmmePgS4sV2lw+tlA9IZJRT1DXVvYEFcSGBy5FTId/0l
- fqkDcrBYmDhMWn+3CZbnwx7qgnLFWM0LDHsbAyxHAnRZtM+pOmK0XpTf0aiYcsAURz
- JAHTKkLHxAgXWfC3qIJOHW9mN0wLp5AYzfNmMC3C5ks7bZYsWq3PGnPXMMgDkMzyop
- xeuPVBo2+37GGuWiHd1PVStu6wl0eKfSBJgyWJvhXbnAdDsbuqzYFH9Boz+O6C1oWT
- 2Stkwa1MvSezs7en91awfFUNUzrvwbjOv/IZIK0ZFoGni+dz4kIbQSJzdLLHGKQkgV
- TVlkQn6TAJU90DRRiC92kuMldKfElutBjDwzhohJifPcEvF9T9IrE1SS4Zaz3ft2Rz
- ho6zF2/9j+ouJCRd5AcHglBo4L8CMDItufZhI5pCGZ7PhbKy0bPXekMmqRlgelk8er
- vDFIJF20+9ye5cMw79l/tHxg=
-Received: from adsilva.ozlabs.ibm.com (static-82-10.transact.net.au
- [122.99.82.10] (may be forged)) (authenticated bits=0)
- by mail2.nmnhosting.com (8.15.2/8.15.2) with ESMTPSA id x5I0v17n063106
- (version=TLSv1.2 cipher=AES256-GCM-SHA384 bits=256 verify=NO);
- Tue, 18 Jun 2019 10:57:17 +1000 (AEST)
- (envelope-from alastair@d-silva.org)
-Message-ID: <b2651117ca8a55d94b7e14e273d25199515039c3.camel@d-silva.org>
-Subject: Re: [PATCH v3 2/7] lib/hexdump.c: Relax rowsize checks in
- hex_dump_to_buffer
-From: "Alastair D'Silva" <alastair@d-silva.org>
-To: Randy Dunlap <rdunlap@infradead.org>
-Date: Tue, 18 Jun 2019 10:57:00 +1000
-In-Reply-To: <94413756-c927-a4ca-dd59-47e3cc87d58d@infradead.org>
-References: <20190617020430.8708-1-alastair@au1.ibm.com>
- <20190617020430.8708-3-alastair@au1.ibm.com>
- <94413756-c927-a4ca-dd59-47e3cc87d58d@infradead.org>
-User-Agent: Evolution 3.32.2 (3.32.2-1.fc30) 
-MIME-Version: 1.0
-X-Greylist: Sender succeeded SMTP AUTH, not delayed by milter-greylist-4.6.2
- (mail2.nmnhosting.com [10.0.1.20]); Tue, 18 Jun 2019 10:57:27 +1000 (AEST)
+	id 1hd6eh-0006in-FZ; Tue, 18 Jun 2019 05:27:39 +0000
+Received: from smtp.codeaurora.org ([198.145.29.96])
+ by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
+ id 1hd6ee-0006iL-7O
+ for ath10k@lists.infradead.org; Tue, 18 Jun 2019 05:27:37 +0000
+Received: by smtp.codeaurora.org (Postfix, from userid 1000)
+ id 130C760312; Tue, 18 Jun 2019 05:27:34 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1560835655;
+ bh=5all+4v3xe8x8XDGTOIA6q4p47cOQMRMUu1s+MqNhX0=;
+ h=From:To:Cc:Subject:Date:From;
+ b=RjTRZnhj1d+l1898eT8YEiP2yHFoQsl6CeMntjpVgM/CebZVRjJnyvfvt5Co4M9Wc
+ KOPf/jGLNUzkVJW5flU4pULrxzZxU81OFbShTEDDNUBmDrdmd57rI0Q2Ws3YZTFaAn
+ oXIfT7A238+BPXtqpIjSZQWmne9uUWdrg3XLoDak=
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ pdx-caf-mail.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
+ DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
+ version=3.4.0
+Received: from akolli-ThinkPad-L560.qca.qualcomm.com
+ (blr-c-bdr-fw-01_globalnat_allzones-outside.qualcomm.com [103.229.19.19])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
+ (No client certificate requested)
+ (Authenticated sender: tamizhr@smtp.codeaurora.org)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 1883B602FE;
+ Tue, 18 Jun 2019 05:27:32 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1560835654;
+ bh=5all+4v3xe8x8XDGTOIA6q4p47cOQMRMUu1s+MqNhX0=;
+ h=From:To:Cc:Subject:Date:From;
+ b=RFYKcx4p2Xiaudog4bKAq4pz3MwxflDLB/twndPsLGTn7VgRmMOo4aOmvFzRTODAE
+ EeblF+/xspw6JUvxUWKCPaGU3r5mHIVe2preZJ3S2Qc203uaKLA3r1r0z1iBDBcVcI
+ fb2ndKF8VXgheG4pwXK7uL/Ls2xrBVdMupd6lKqI=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 1883B602FE
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ spf=none smtp.mailfrom=tamizhr@codeaurora.org
+From: Tamizh chelvam <tamizhr@codeaurora.org>
+To: johannes@sipsolutions.net,
+	ath10k@lists.infradead.org
+Subject: [PATCHv6 0/9] cfg80211/mac80211: Add support for TID specific
+ configuration
+Date: Tue, 18 Jun 2019 10:57:03 +0530
+Message-Id: <1560835632-17405-1-git-send-email-tamizhr@codeaurora.org>
+X-Mailer: git-send-email 1.9.1
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190617_175733_329704_159D2B76 
-X-CRM114-Status: GOOD (  16.19  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190617_222736_301783_21239803 
+X-CRM114-Status: UNSURE (   8.14  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [198.145.29.96 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -89,105 +96,82 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-fbdev@vger.kernel.org, Stanislaw Gruszka <sgruszka@redhat.com>,
- Petr Mladek <pmladek@suse.com>, David Airlie <airlied@linux.ie>,
- Joonas Lahtinen <joonas.lahtinen@linux.intel.com>,
- dri-devel@lists.freedesktop.org, devel@driverdev.osuosl.org,
- linux-scsi@vger.kernel.org, Jassi Brar <jassisinghbrar@gmail.com>,
- ath10k@lists.infradead.org, intel-gfx@lists.freedesktop.org,
- Dan Carpenter <dan.carpenter@oracle.com>, Jose Abreu <Jose.Abreu@synopsys.com>,
- Tom Lendacky <thomas.lendacky@amd.com>,
- "James E.J. Bottomley" <jejb@linux.ibm.com>,
- Jani Nikula <jani.nikula@linux.intel.com>, linux-fsdevel@vger.kernel.org,
- Steven Rostedt <rostedt@goodmis.org>, Rodrigo Vivi <rodrigo.vivi@intel.com>,
- Benson Leung <bleung@chromium.org>, Kalle Valo <kvalo@codeaurora.org>,
- Karsten Keil <isdn@linux-pingi.de>,
- "Martin K. Petersen" <martin.petersen@oracle.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
- Sergey Senozhatsky <sergey.senozhatsky@gmail.com>,
- David Laight <David.Laight@ACULAB.COM>, Daniel Vetter <daniel@ffwll.ch>,
- netdev@vger.kernel.org, Enric Balletbo i Serra <enric.balletbo@collabora.com>,
- Andrew Morton <akpm@linux-foundation.org>,
- "David S. Miller" <davem@davemloft.net>,
- Alexander Viro <viro@zeniv.linux.org.uk>
+Cc: linux-wireless@vger.kernel.org, Tamizh chelvam <tamizhr@codeaurora.org>
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On Mon, 2019-06-17 at 15:47 -0700, Randy Dunlap wrote:
-> Hi,
-> Just a comment style nit below...
-> 
-> On 6/16/19 7:04 PM, Alastair D'Silva wrote:
-> > From: Alastair D'Silva <alastair@d-silva.org>
-> > 
-> > This patch removes the hardcoded row limits and allows for
-> > other lengths. These lengths must still be a multiple of
-> > groupsize.
-> > 
-> > This allows structs that are not 16/32 bytes to display on
-> > a single line.
-> > 
-> > This patch also expands the self-tests to test row sizes
-> > up to 64 bytes (though they can now be arbitrarily long).
-> > 
-> > Signed-off-by: Alastair D'Silva <alastair@d-silva.org>
-> > ---
-> >  lib/hexdump.c      | 48 ++++++++++++++++++++++++++++--------------
-> >  lib/test_hexdump.c | 52 ++++++++++++++++++++++++++++++++++++++--
-> > ------
-> >  2 files changed, 75 insertions(+), 25 deletions(-)
-> > 
-> > diff --git a/lib/hexdump.c b/lib/hexdump.c
-> > index 81b70ed37209..3943507bc0e9 100644
-> > --- a/lib/hexdump.c
-> > +++ b/lib/hexdump.c
-> > @@ -246,17 +248,29 @@ void print_hex_dump(const char *level, const
-> > char *prefix_str, int prefix_type,
-> >  {
-> >  	const u8 *ptr = buf;
-> >  	int i, linelen, remaining = len;
-> > -	unsigned char linebuf[32 * 3 + 2 + 32 + 1];
-> > +	unsigned char *linebuf;
-> > +	unsigned int linebuf_len;
-> >  
-> > -	if (rowsize != 16 && rowsize != 32)
-> > -		rowsize = 16;
-> > +	if (rowsize % groupsize)
-> > +		rowsize -= rowsize % groupsize;
-> > +
-> > +	/* Worst case line length:
-> > +	 * 2 hex chars + space per byte in, 2 spaces, 1 char per byte
-> > in, NULL
-> > +	 */
-> 
-> According to Documentation/process/coding-style.rst:
-> 
-> The preferred style for long (multi-line) comments is:
-> 
-> .. code-block:: c
-> 
-> 	/*
-> 	 * This is the preferred style for multi-line
-> 	 * comments in the Linux kernel source code.
-> 	 * Please use it consistently.
-> 	 *
-> 	 * Description:  A column of asterisks on the left side,
-> 	 * with beginning and ending almost-blank lines.
-> 	 */
-> 
+Add infrastructure to support per TID configurations like noack policy,
+retry count, AMPDU control(disable/enable), RTSCTS control(enable/disable)
+and TX rate mask configurations.
+This will be useful for the driver which can supports data TID
+specific configuration rather than phy level configurations.
+Here NL80211_CMD_SET_TID_CONFIG added to support this operation by
+accepting TID configuration.
+This command can accept STA mac addreess to make the configuration
+station specific rather than applying to all the connected stations
+to the netdev.
+And this nested command configuration can accept multiple number of
+data TID specific configuration in a single command,
+enum ieee80211_tid_conf_mask used to notify the driver that which
+configuration got modified for the TID.
 
-Thanks Randy, I'll address this.
+Tamizh chelvam (9):
+  nl80211: New netlink command for TID specific configuration
+  nl80211: Add new netlink attribute for TID speicific retry count
+  nl80211: Add netlink attribute for AMPDU aggregation enable/disable
+  nl80211: Add netlink attribute to enable/disable RTS_CTS
+  nl80211: Add netlink attribute to configure TID specific tx rate
+  mac80211: Add api to support configuring TID specific configuration
+  ath10k: Add wmi command support for station specific TID config
+  ath10k: Add new api to support TID specific configuration
+  ath10k: Add extended TID configuration support
 
+v6:
+  * Addressed Johannes comments.
+
+v5:
+  * Fixed possible memleak of 'tid_conf' in nl80211_set_tid_config.
+
+v4:
+  * Fixed kbuild warnings.
+
+v3:
+  * Modified "nl80211: Add netlink attribute to configure TID specific tx rate" patch
+    to accept multiple TX rate configuration at a time.
+  * Modified noack and ampdu variable data type to int in
+    "mac80211: Add api to support configuring TID specific configuration" patch to store
+    default configuration.
+  * Modified "ath10k: Add new api to support TID specific configuration" patch to handle
+    default values for noack and ampdu. And added sta pointer sanity check in
+    ath10k_mac_tid_bitrate_config function.
+  * Fixed "ath10k: Add extended TID configuration support" wmi command parameters
+    assigned part.
+
+v2:
+  * Added support to accept multiple TID configuration
+  * Added support to configure TX rate and RTSCTS control
+
+ drivers/net/wireless/ath/ath10k/core.c    |    4 +
+ drivers/net/wireless/ath/ath10k/core.h    |    6 +
+ drivers/net/wireless/ath/ath10k/mac.c     |  681 +++++++++++++++++++++++++----
+ drivers/net/wireless/ath/ath10k/wmi-ops.h |   19 +
+ drivers/net/wireless/ath/ath10k/wmi.c     |   35 ++
+ drivers/net/wireless/ath/ath10k/wmi.h     |   72 +++
+ include/net/cfg80211.h                    |   57 +++
+ include/net/mac80211.h                    |   38 ++
+ include/uapi/linux/nl80211.h              |  188 ++++++++
+ net/mac80211/cfg.c                        |   28 ++
+ net/mac80211/driver-ops.h                 |   15 +
+ net/wireless/nl80211.c                    |  284 +++++++++++-
+ net/wireless/rdev-ops.h                   |   12 +
+ net/wireless/trace.h                      |   17 +
+ 14 files changed, 1371 insertions(+), 85 deletions(-)
 
 -- 
-Alastair D'Silva           mob: 0423 762 819
-skype: alastair_dsilva    
-Twitter: @EvilDeece
-blog: http://alastair.d-silva.org
-
+1.7.9.5
 
 
 _______________________________________________
