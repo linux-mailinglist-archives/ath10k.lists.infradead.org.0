@@ -2,62 +2,96 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B28DC4CC38
-	for <lists+ath10k@lfdr.de>; Thu, 20 Jun 2019 12:48:07 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 68EC052109
+	for <lists+ath10k@lfdr.de>; Tue, 25 Jun 2019 05:19:50 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:References
-	:In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=hO3FQtejVL5IHf3wCBo2fLPcNIzLfYB08AmolAJfORE=; b=PJwEDqbbPI954f
-	bH6TiPYlrsqDxb48XrbHQQc6XuJgmievA9GKerXt9KRlNB1S/zxsRc5dGJ7YiWoffX5Cqx059B5zc
-	FnSE6bepwxfF8Z1Tc80V+vVUjxHhLQuO5ixdl2Ej/5muxzQim4qIGR/ag5m0QgxK7Wx8/qMVSOlBh
-	VQ+ze+dial/rXn7oeEuz1f0cuWcREZXjubh1GemmbgxS6/QsTKK7U4k5zPDbDITLuRZwJ0BTVhK44
-	pfleVPyXoKDXkmDqNe1pGAkDa1Wyb3nvOEISwCdxiY5qiEIq6U4r6R9H6k/bHp2EL2L+p/oyOWyyl
-	TGggufmRkM/s6F4W8Ibg==;
+	List-Archive:List-Unsubscribe:List-Id:Message-Id:MIME-Version:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=XdUoPr2cbOWV4+IMJNmAnuZOk7C7mopgYPdHdr/35yA=; b=W8lBmo5zLR+NQu
+	e+l3WAvXLInkFuFHDaL9rLFg0FW807l3zl8GzciWY0S1Rxp/U3q0SrF4cU+ibJwF2eiP6RI/SitPv
+	ND+MLUC29rKDBg1P2Xwx/ta73UxAK7/b0nxC4iywSjWgCInWu/eVMeFhjPYUICEat0+lKmkuCh7au
+	ETTyxprTC6WHOTC1RqS4TITZKJw2f5Na22UkT9XQMFQc5tbRmLc1F322XERPqgKLU20S/EswrugHa
+	gTb6hPkr0x8ak5X1vTQDUEIjLG/nqhijSEJUjnKqn72LBYYfef0V3BEJQzYq5LHsj0eYXE7yHcEgG
+	G23JsuCUopLDUt/mM04w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hdubo-0004Ng-Ck; Thu, 20 Jun 2019 10:48:00 +0000
-Received: from mga06.intel.com ([134.134.136.31])
+	id 1hfbzp-0006Wd-21; Tue, 25 Jun 2019 03:19:49 +0000
+Received: from mx0a-001b2d01.pphosted.com ([148.163.156.1])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hdubf-0004Mn-QE
- for ath10k@lists.infradead.org; Thu, 20 Jun 2019 10:47:53 +0000
-X-Amp-Result: SKIPPED(no attachment in message)
-X-Amp-File-Uploaded: False
-Received: from fmsmga001.fm.intel.com ([10.253.24.23])
- by orsmga104.jf.intel.com with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384;
- 20 Jun 2019 03:47:49 -0700
-X-ExtLoop1: 1
-X-IronPort-AV: E=Sophos;i="5.63,396,1557212400"; d="scan'208";a="181838324"
-Received: from jnikula-mobl3.fi.intel.com (HELO localhost) ([10.237.66.150])
- by fmsmga001.fm.intel.com with ESMTP; 20 Jun 2019 03:47:41 -0700
-From: Jani Nikula <jani.nikula@linux.intel.com>
-To: Joe Perches <joe@perches.com>, Alastair D'Silva <alastair@d-silva.org>
-Subject: Re: [PATCH v3 0/7] Hexdump Enhancements
-In-Reply-To: <fcf57339aea60fb1744cea2a2593656c728c4ec4.camel@perches.com>
-Organization: Intel Finland Oy - BIC 0357606-4 - Westendinkatu 7, 02160 Espoo
-References: <20190617020430.8708-1-alastair@au1.ibm.com>
- <9a000734375c0801fc16b71f4be1235f9b857772.camel@perches.com>
- <c68cb819257f251cbb66f8998a95c31cebe2d72e.camel@d-silva.org>
- <d8316be322f33ea67640ff83f2248fe433078407.camel@perches.com>
- <9456ca2a4ae827635bb6d864e5095a9e51f2ac45.camel@d-silva.org>
- <fcf57339aea60fb1744cea2a2593656c728c4ec4.camel@perches.com>
-Date: Thu, 20 Jun 2019 13:50:33 +0300
-Message-ID: <87sgs4sf7q.fsf@intel.com>
+ id 1hfbzc-0006OB-Ia
+ for ath10k@lists.infradead.org; Tue, 25 Jun 2019 03:19:39 +0000
+Received: from pps.filterd (m0098404.ppops.net [127.0.0.1])
+ by mx0a-001b2d01.pphosted.com (8.16.0.27/8.16.0.27) with SMTP id
+ x5P36hhs098663
+ for <ath10k@lists.infradead.org>; Mon, 24 Jun 2019 23:19:34 -0400
+Received: from e06smtp02.uk.ibm.com (e06smtp02.uk.ibm.com [195.75.94.98])
+ by mx0a-001b2d01.pphosted.com with ESMTP id 2tbagtj7rg-1
+ (version=TLSv1.2 cipher=AES256-GCM-SHA384 bits=256 verify=NOT)
+ for <ath10k@lists.infradead.org>; Mon, 24 Jun 2019 23:19:34 -0400
+Received: from localhost
+ by e06smtp02.uk.ibm.com with IBM ESMTP SMTP Gateway: Authorized Use Only!
+ Violators will be prosecuted
+ for <ath10k@lists.infradead.org> from <alastair@au1.ibm.com>;
+ Tue, 25 Jun 2019 04:19:31 +0100
+Received: from b06cxnps3075.portsmouth.uk.ibm.com (9.149.109.195)
+ by e06smtp02.uk.ibm.com (192.168.101.132) with IBM ESMTP SMTP Gateway:
+ Authorized Use Only! Violators will be prosecuted; 
+ (version=TLSv1/SSLv3 cipher=AES256-GCM-SHA384 bits=256/256)
+ Tue, 25 Jun 2019 04:19:22 +0100
+Received: from d06av26.portsmouth.uk.ibm.com (d06av26.portsmouth.uk.ibm.com
+ [9.149.105.62])
+ by b06cxnps3075.portsmouth.uk.ibm.com (8.14.9/8.14.9/NCO v10.0) with ESMTP id
+ x5P3JLkE57212948
+ (version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
+ Tue, 25 Jun 2019 03:19:21 GMT
+Received: from d06av26.portsmouth.uk.ibm.com (unknown [127.0.0.1])
+ by IMSVA (Postfix) with ESMTP id 2310FAE057;
+ Tue, 25 Jun 2019 03:19:21 +0000 (GMT)
+Received: from d06av26.portsmouth.uk.ibm.com (unknown [127.0.0.1])
+ by IMSVA (Postfix) with ESMTP id 76678AE056;
+ Tue, 25 Jun 2019 03:19:20 +0000 (GMT)
+Received: from ozlabs.au.ibm.com (unknown [9.192.253.14])
+ by d06av26.portsmouth.uk.ibm.com (Postfix) with ESMTP;
+ Tue, 25 Jun 2019 03:19:20 +0000 (GMT)
+Received: from adsilva.ozlabs.ibm.com (haven.au.ibm.com [9.192.254.114])
+ (using TLSv1.2 with cipher DHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by ozlabs.au.ibm.com (Postfix) with ESMTPSA id 1790BA01B9;
+ Tue, 25 Jun 2019 13:19:19 +1000 (AEST)
+From: "Alastair D'Silva" <alastair@au1.ibm.com>
+To: alastair@d-silva.org
+Subject: [PATCH v4 0/7] Hexdump Enhancements
+Date: Tue, 25 Jun 2019 13:17:19 +1000
+X-Mailer: git-send-email 2.21.0
 MIME-Version: 1.0
+X-TM-AS-GCONF: 00
+x-cbid: 19062503-0008-0000-0000-000002F6B5BD
+X-IBM-AV-DETECTION: SAVI=unused REMOTE=unused XFE=unused
+x-cbparentid: 19062503-0009-0000-0000-00002263E424
+Message-Id: <20190625031726.12173-1-alastair@au1.ibm.com>
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:, ,
+ definitions=2019-06-25_02:, , signatures=0
+X-Proofpoint-Spam-Details: rule=outbound_notspam policy=outbound score=0
+ priorityscore=1501
+ malwarescore=0 suspectscore=1 phishscore=0 bulkscore=0 spamscore=0
+ clxscore=1015 lowpriorityscore=0 mlxscore=0 impostorscore=0
+ mlxlogscore=999 adultscore=0 classifier=spam adjust=0 reason=mlx
+ scancount=1 engine=8.0.1-1810050000 definitions=main-1906250024
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190620_034751_900872_3787928B 
-X-CRM114-Status: GOOD (  19.93  )
-X-Spam-Score: -2.3 (--)
+X-CRM114-CacheID: sfid-20190624_201936_717187_FDCCCF81 
+X-CRM114-Status: GOOD (  20.92  )
+X-Spam-Score: -0.7 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.3 points)
+ Content analysis details:   (-0.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [134.134.136.31 listed in list.dnswl.org]
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
+ low trust [148.163.156.1 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -78,10 +112,10 @@ Cc: linux-fbdev@vger.kernel.org, Stanislaw Gruszka <sgruszka@redhat.com>,
  Dan Carpenter <dan.carpenter@oracle.com>, Jose Abreu <Jose.Abreu@synopsys.com>,
  Tom Lendacky <thomas.lendacky@amd.com>,
  "James E.J. Bottomley" <jejb@linux.ibm.com>,
- Steven Rostedt <rostedt@goodmis.org>, linux-fsdevel@vger.kernel.org,
- Alexander Viro <viro@zeniv.linux.org.uk>,
- Rodrigo Vivi <rodrigo.vivi@intel.com>, Benson Leung <bleung@chromium.org>,
- Kalle Valo <kvalo@codeaurora.org>, Karsten Keil <isdn@linux-pingi.de>,
+ Jani Nikula <jani.nikula@linux.intel.com>, linux-fsdevel@vger.kernel.org,
+ Steven Rostedt <rostedt@goodmis.org>, Rodrigo Vivi <rodrigo.vivi@intel.com>,
+ Benson Leung <bleung@chromium.org>, Kalle Valo <kvalo@codeaurora.org>,
+ Karsten Keil <isdn@linux-pingi.de>,
  "Martin K. Petersen" <martin.petersen@oracle.com>,
  Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
  linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
@@ -89,96 +123,83 @@ Cc: linux-fbdev@vger.kernel.org, Stanislaw Gruszka <sgruszka@redhat.com>,
  David Laight <David.Laight@ACULAB.COM>, Daniel Vetter <daniel@ffwll.ch>,
  netdev@vger.kernel.org, Enric Balletbo i Serra <enric.balletbo@collabora.com>,
  Andrew Morton <akpm@linux-foundation.org>,
- "David S. Miller" <davem@davemloft.net>
+ "David S. Miller" <davem@davemloft.net>,
+ Alexander Viro <viro@zeniv.linux.org.uk>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On Wed, 19 Jun 2019, Joe Perches <joe@perches.com> wrote:
-> On Thu, 2019-06-20 at 11:14 +1000, Alastair D'Silva wrote:
->> On Wed, 2019-06-19 at 17:35 -0700, Joe Perches wrote:
->> > On Thu, 2019-06-20 at 09:15 +1000, Alastair D'Silva wrote:
->> > > On Wed, 2019-06-19 at 09:31 -0700, Joe Perches wrote:
->> > > > On Mon, 2019-06-17 at 12:04 +1000, Alastair D'Silva wrote:
->> > > > > From: Alastair D'Silva <alastair@d-silva.org>
->> > > > > 
->> > > > > Apologies for the large CC list, it's a heads up for those
->> > > > > responsible
->> > > > > for subsystems where a prototype change in generic code causes
->> > > > > a
->> > > > > change
->> > > > > in those subsystems.
->> > > > > 
->> > > > > This series enhances hexdump.
->> > > > 
->> > > > Still not a fan of these patches.
->> > > 
->> > > I'm afraid there's not too much action I can take on that, I'm
->> > > happy to
->> > > address specific issues though.
->> > > 
->> > > > > These improve the readability of the dumped data in certain
->> > > > > situations
->> > > > > (eg. wide terminals are available, many lines of empty bytes
->> > > > > exist,
->> > > > > etc).
->> > 
->> > I think it's generally overkill for the desired uses.
->> 
->> I understand where you're coming from, however, these patches make it a
->> lot easier to work with large chucks of binary data. I think it makes
->> more sense to have these patches upstream, even though committed code
->> may not necessarily have all the features enabled, as it means that
->> devs won't have to apply out-of-tree patches during development to make
->> larger dumps manageable.
->> 
->> > > > Changing hexdump's last argument from bool to int is odd.
->> > > > 
->> > > 
->> > > Think of it as replacing a single boolean with many booleans.
->> > 
->> > I understand it.  It's odd.
->> > 
->> > I would rather not have a mixture of true, false, and apparently
->> > random collections of bitfields like 0xd or 0b1011 or their
->> > equivalent or'd defines.
->> > 
->> 
->> Where's the mixture? What would you propose instead?
->
-> create a hex_dump_to_buffer_ext with a new argument
-> and a new static inline for the old hex_dump_to_buffer
-> without modifying the argument list that calls
-> hex_dump_to_buffer with whatever added argument content
-> you need.
->
-> Something like:
->
-> static inline
-> int hex_dump_to_buffer(const void *buf, size_t len, int rowsize,
-> 		       int groupsize, char *linebuf, size_t linebuflen,
-> 		       bool ascii)
-> {
-> 	return hex_dump_to_buffer_ext(buf, len, rowsize, groupsize,
-> 				      linebuf, linebuflen, ascii, 0);
-> }
->
-> and remove EXPORT_SYMBOL(hex_dump_to_buffer)
+From: Alastair D'Silva <alastair@d-silva.org>
 
-If you decide to do something like this, I'd actually suggest you drop
-the bool ascii parameter from hex_dump_to_buffer() altogether, and
-replace the callers that do require ascii with
-hex_dump_to_buffer_ext(..., HEXDUMP_ASCII). Even if that also requires
-touching all callers.
+Apologies for the large CC list, it's a heads up for those responsible
+for subsystems where a prototype change in generic code causes a change
+in those subsystems.
 
-But no strong opinions, really.
+This series enhances hexdump.
 
-BR,
-Jani.
+These improve the readability of the dumped data in certain situations
+(eg. wide terminals are available, many lines of empty bytes exist, etc).
+
+The default behaviour of hexdump is unchanged, however, the prototype
+for hex_dump_to_buffer() has changed, and print_hex_dump() has been
+renamed to print_hex_dump_ext(), with a wrapper replacing it for
+compatibility with existing code, which would have been too invasive to
+change.
+
+Hexdump selftests have be run & confirmed passed.
+
+Changelog:
+V4:
+ - Add missing header (linux/bits.h)
+ - Fix comment formatting
+ - Create hex_dump_to_buffer_ext & make hex_dump_to_buffer a wrapper
+V3:
+ - Fix inline documention
+ - use BIT macros
+ - use u32 rather than u64 for flags
+V2:
+ - Fix failing selftests
+ - Fix precedence bug in 'Replace ascii bool in hex_dump_to_buffer...'
+ - Remove hardcoded new lengths & instead relax the checks in
+   hex_dump_to_buffer, allocating the buffer from the heap instead of the
+   stack.
+ - Replace the skipping of lines of 0x00/0xff with skipping lines of
+   repeated characters, announcing what has been skipped.
+ - Add spaces as an optional N-group separator
+ - Allow byte ordering to be maintained when HEXDUMP_RETAIN_BYTE_ORDERING
+   is set.
+ - Updated selftests to cover 'Relax rowsize checks' &
+   'Optionally retain byte ordering'
+
+Alastair D'Silva (7):
+  lib/hexdump.c: Fix selftests
+  lib/hexdump.c: Relax rowsize checks in hex_dump_to_buffer
+  lib/hexdump.c: Optionally suppress lines of repeated bytes
+  lib/hexdump.c: Replace ascii bool in hex_dump_to_buffer with flags
+  lib/hexdump.c: Allow multiple groups to be separated by lines '|'
+  lib/hexdump.c: Allow multiple groups to be separated by spaces
+  lib/hexdump.c: Optionally retain byte ordering
+
+ drivers/gpu/drm/i915/intel_engine_cs.c        |   5 +-
+ drivers/isdn/hardware/mISDN/mISDNisar.c       |  10 +-
+ drivers/mailbox/mailbox-test.c                |   8 +-
+ drivers/net/ethernet/amd/xgbe/xgbe-drv.c      |   2 +-
+ .../net/ethernet/synopsys/dwc-xlgmac-common.c |   2 +-
+ drivers/net/wireless/ath/ath10k/debug.c       |   7 +-
+ .../net/wireless/intel/iwlegacy/3945-mac.c    |   4 +-
+ drivers/platform/chrome/wilco_ec/debugfs.c    |  10 +-
+ drivers/scsi/scsi_logging.c                   |   8 +-
+ drivers/staging/fbtft/fbtft-core.c            |   2 +-
+ fs/seq_file.c                                 |   6 +-
+ include/linux/printk.h                        |  75 ++++-
+ lib/hexdump.c                                 | 267 +++++++++++++++---
+ lib/test_hexdump.c                            | 154 +++++++---
+ 14 files changed, 438 insertions(+), 122 deletions(-)
 
 -- 
-Jani Nikula, Intel Open Source Graphics Center
+2.21.0
+
 
 _______________________________________________
 ath10k mailing list
