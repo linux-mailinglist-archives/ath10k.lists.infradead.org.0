@@ -2,36 +2,36 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 148E055012
-	for <lists+ath10k@lfdr.de>; Tue, 25 Jun 2019 15:17:55 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C701D55110
+	for <lists+ath10k@lfdr.de>; Tue, 25 Jun 2019 16:06:52 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
 	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=S35jj3DKQmEXRhcWhREiO3wbN4BVcrA/prXyoDfM860=; b=VaSTzbVTS4Pvq5
-	zHh3l1rsaTs6Oc5lzOgEI2+0eJlboe7N3VA27ROQh8aruXbUFhXfNPCsLdKmwDv3Mbp5Q/M3B8Etj
-	85IU5LL+DYHEfjM0sysaeULXV7r/JrteF/wSHk+NOgpRFru5u2bO2KXaFTBe1eMPt2QkEU+nLCLv0
-	mJTveiyRheUYgZVULTmHjBwmMfvDMruvFeYz1AUG6ig0JofiX/C4boev5ko4spl8tW7US+WZHZKew
-	BRyfBWHToie5szjx6r3OyziZfK3ZJO/Frb2xuIt80nDyDrGOnh3IE3iNTCky0Qkh2+F0hesxsAdFs
-	VEwmraJ7yhSGDpQb1QRw==;
+	List-Owner; bh=BWN6viTkrVKwFis9R53HTGIORqWWXGInncstUoZzDHs=; b=QbJfzfAEsZPren
+	eKVs1O0couxRCgIN5uqLXdJ+2U9TeD9hTW0LCOEi+vkGRUI3EIqDM1usS3FeBj1mZNj3DLzabdrBn
+	xNVsd8ar6wEHoE+wQL0X3o1EU98xJ6fhOjgBbfAR75rXJFpm0lmUxsOajFtbRiMOqUCHrI80tGqH3
+	zeksDM65tjdj9cbhvssvrUUj/zpC24GGxtIZyPPA4wZWj1CRRlsm9dgzP6BID1u75ugABAk47eJJ3
+	7/Zj0rYRsYM5psrpSBMfRn7od5o3Gziz9/q7F3X4lE8h7I2vKbuaC+//J+l3zLpoPfjOnd4TRg8Mr
+	48rfVAZvD6kOlZhLENtw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hflKb-0003jY-Pr; Tue, 25 Jun 2019 13:17:53 +0000
+	id 1hfm5y-0008Ta-B5; Tue, 25 Jun 2019 14:06:50 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hflKW-0003g2-4V
- for ath10k@lists.infradead.org; Tue, 25 Jun 2019 13:17:49 +0000
+ id 1hfm5u-0008TD-39
+ for ath10k@lists.infradead.org; Tue, 25 Jun 2019 14:06:47 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 8FDB860AD1; Tue, 25 Jun 2019 13:17:47 +0000 (UTC)
+ id A32456085C; Tue, 25 Jun 2019 14:06:45 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1561468667;
- bh=KEJdrdhw6An0ZkLpTtNp8OmOcc9f2AmcB1N4w/cLrBM=;
+ s=default; t=1561471605;
+ bh=cXRc0B/OOGCbX6QM2Qm2hXR9TSxjZMnQrVVkT9t0maY=;
  h=Subject:From:In-Reply-To:References:To:Cc:Date:From;
- b=UmJKSXiVI5oL0iK6SsygCzmA+InHlk7dsPZMrXT52iHlu8Gv0Ir/l8G0L2PDW5hNQ
- /+6Sjc1CCLoGxdhwlErXa1TsbykG7la4gkpwmmfAgcjLYdcnN9dUQHUS4lwxzWWlNe
- 0NOU96McVu0P4JmJn9a41KtKE0diAZ4eLdCmVJrM=
+ b=YuCR9WfwOUb0KiWdIwLjteAx6nEhDnpikWFh0DTW38/qI/nXC/zxKKP2hRmQha2Rn
+ jzK7zAJFY8o2kyky/RQ3tb/IIF8/If3N4kP7/VMorBrikxAg9ccYiKpeNXt/flvzaM
+ r/GfAaqTeTwDUwt0iqznEuvJ19FwAYm7jWa85Lw8=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
@@ -43,32 +43,32 @@ Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
  (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
  (Authenticated sender: kvalo@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 108EF60DAD;
- Tue, 25 Jun 2019 13:17:45 +0000 (UTC)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 30EB56016D;
+ Tue, 25 Jun 2019 14:06:43 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1561468667;
- bh=KEJdrdhw6An0ZkLpTtNp8OmOcc9f2AmcB1N4w/cLrBM=;
+ s=default; t=1561471605;
+ bh=cXRc0B/OOGCbX6QM2Qm2hXR9TSxjZMnQrVVkT9t0maY=;
  h=Subject:From:In-Reply-To:References:To:Cc:From;
- b=BEU6vT+iQfNY84qci03bMADcGb0RrNMXWsxOlp3cLb4IO9oGhOhuLj+WSZO1vu42V
- JVtlQd/lkIrYGQh26s96kt8hKfzMIw2ZrnFgcysjG0VO8AbHIzsV+D59d8E9U9iGeK
- Irl6uVMrJQnqlKUlgpD91pyTfut2R5eC2ndY8w2Y=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 108EF60DAD
+ b=ZtGvEBBcxSgVUDZJK3rMsvf+hFd1KL5hMUOnGnDqENAfW5UDM02iVvNebij6vbjll
+ ouL7PtzpVIAIhdJAOTMbLv4TzGf3b/CldQ+1ovxms5EcxhdxQfJ0AEPnrRuFXYM//o
+ Aab8+pDQk3G12YfLMJNoOtsdCtRCo79FwzwLxmuM=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 30EB56016D
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  spf=none smtp.mailfrom=kvalo@codeaurora.org
 MIME-Version: 1.0
-Subject: Re: [PATCH] ath10k: Add WMI diag fw logging support for WCN3990
+Subject: Re: [PATCH v3] ath10k: Enable MSA region dump support for WCN3990
 From: Kalle Valo <kvalo@codeaurora.org>
-In-Reply-To: <20190401132202.29626-1-govinds@codeaurora.org>
-References: <20190401132202.29626-1-govinds@codeaurora.org>
+In-Reply-To: <20190610091759.29508-1-govinds@codeaurora.org>
+References: <20190610091759.29508-1-govinds@codeaurora.org>
 To: Govind Singh <govinds@codeaurora.org>
 User-Agent: pwcli/0.0.0-git (https://github.com/kvalo/pwcli/) Python/2.7.12
-Message-Id: <20190625131747.8FDB860AD1@smtp.codeaurora.org>
-Date: Tue, 25 Jun 2019 13:17:47 +0000 (UTC)
+Message-Id: <20190625140645.A32456085C@smtp.codeaurora.org>
+Date: Tue, 25 Jun 2019 14:06:45 +0000 (UTC)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190625_061748_209991_302DFED9 
-X-CRM114-Status: UNSURE (   6.63  )
+X-CRM114-CacheID: sfid-20190625_070646_158103_05331CB4 
+X-CRM114-Status: UNSURE (   6.73  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -106,32 +106,26 @@ Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
 Govind Singh <govinds@codeaurora.org> wrote:
 
-> Integrated WiFi chipset ex:WCN399x supports fw logging
-> using WMI copy engine and shared mem DIAG based fw logging.
-> By default shared mem DIAG based fw logging is enabled.
-> To support WMI copy engine based fw logging add QMI
-> control message to enable WMI copy engine based fw logging.
+> MSA memory region caries the hw descriptors information.
+> Dump MSA region in core dump as this is very helpful in debugging
+> hw issues.
 > 
-> Enable WMI based fw logging using fw_diag_log module parameter.
-> 
-> insmod ath10k_core.ko fw_diag_log=1
-> 
-> DIAG utility(https://github.com/andersson/diag) implements extraction
-> of diagnostics related messages between application processor and
-> various subsystems while shared mem DIAG based fw logging is enabled.
-> 
-> Testing: Tested on WCN3990/QCA6174 HW
+> Testing: Tested on WCN3990 HW
 > Tested FW: WLAN.HL.3.1-00959-QCAHLSWMTPLZ-1
 > 
 > Signed-off-by: Govind Singh <govinds@codeaurora.org>
-> Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 
-Patch applied to ath-next branch of ath.git, thanks.
+New warning:
 
-d9e47698965d ath10k: Add WMI diag fw logging support for WCN3990
+drivers/net/wireless/ath/ath10k/snoc.c: In function 'ath10k_msa_dump_memory':
+drivers/net/wireless/ath/ath10k/snoc.c:1662:25: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+  hdr->start = cpu_to_le32(ar_snoc->qmi->msa_va);
+                         ^
+
+Patch set to Changes Requested.
 
 -- 
-https://patchwork.kernel.org/patch/10879943/
+https://patchwork.kernel.org/patch/10984519/
 
 https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
 
