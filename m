@@ -2,36 +2,36 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7E78454F70
-	for <lists+ath10k@lfdr.de>; Tue, 25 Jun 2019 14:56:48 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id F321354F7A
+	for <lists+ath10k@lfdr.de>; Tue, 25 Jun 2019 14:58:56 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
 	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=X0d0+h9s+GBTYlujkdUsxvpext0A5cB9HGk6jJ59ujU=; b=e6d+7q7pV2MA51
-	saeMe8BwlnaWMnhBLDkf5+AHUF2AiS8qTDt+6tFCzEyyf3ZXnyOEQMi9PzYQdFba5eUbkF04YxfDU
-	NHtOQGyxtRwEp8gYhOM/v2+jW6C/+ZPUeWQ6KcY+knA0VRUIM87JxuYUHhfQFLBivJvvwa8oZ+YDu
-	/ItxDq8N/QSGmS09OPQisKtP79VyJJaYL9MpYQz0gqCdqK1HYhzyKNUeDO72R47sTNaNVMvYvOlx1
-	YKkTvbf3lSTmDEweRY3QoS5N+0vUpB8kWKvWJmqYWY2W/W0gs6kt4cluuQrzQQmc2reZyGiY+VmDg
-	EXSgx3xQwvne9gsZ6AjA==;
+	List-Owner; bh=7sSwknwt61RQbBX4T/eCq9AHBkL3rpexXsRUwxJSx1I=; b=pRM+AfGC7wDJLR
+	mUDDQ2cKvahhneayOt0Udx/GAOxa3avR2yovSaS33G3JHAI6J7BWcU6zdV1DZuvcugyBEyBR7L6OT
+	owDQ9wmNWexjrwsO6j4D6U6p0/0Cv8xOWh+8NPtZibze+6fex8CkTtfa0hJaDrLjkZBzWj5PhH0+L
+	FE42VFnay9eDWMwcO/iWBjUEZYuOygjiejsrQDq+5IOoYu7qRzLLJ2elAm0wHW0IqFqkxhk2mB99K
+	elmQ56izJGlBZINMXLUgqCtA0LbuOCnjEMx7HXmNW/WziqEyJUowXuljpgdllH3BSXUlxg7N59M9D
+	8D6QlCkK24UeY/IYf1Ug==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hfl0A-0006aS-Og; Tue, 25 Jun 2019 12:56:46 +0000
+	id 1hfl2F-000725-5z; Tue, 25 Jun 2019 12:58:55 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hfl06-0006Zz-PD
- for ath10k@lists.infradead.org; Tue, 25 Jun 2019 12:56:44 +0000
+ id 1hfl2B-00071m-Lz
+ for ath10k@lists.infradead.org; Tue, 25 Jun 2019 12:58:53 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 14A2860867; Tue, 25 Jun 2019 12:56:41 +0000 (UTC)
+ id 44127602F4; Tue, 25 Jun 2019 12:58:51 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1561467402;
- bh=FTPTJcuABQER6lKniScqhPccKzGnG+MXaGguW45oagg=;
+ s=default; t=1561467531;
+ bh=a8Rca21arwvNo+iIyTeF4mU7wZ/+IYY/W7PLD8V0MaU=;
  h=Subject:From:In-Reply-To:References:To:Cc:Date:From;
- b=CZg8V71fdFN8G2TwOhBU5ULG/Rvvquywsx/jcI+fKdVOObQbbLzVUcIxW3P7dAksF
- fTEJrR+ozwUpUGTJPZg/esni3VMbcQnfb2KKoHkhJ6EtJx92x8vgvdU5Hy0j+TegZI
- ijQ8DwhA5qsxsDm3UsRfTJa6QfHF2uh/1nPCDg44=
+ b=jYUsyjhsWEPvPGUPvMjb5s1HE8IvJZ4VC/Fw/0vok5fAIUoHtxtgOTQ2P6uiHAJ2u
+ VDzizHexxXzBfpTIowMVuCXpNtgXTxdK1ubQlXswXvXN8NlOiIRFEkTrjgYmDGemxw
+ hD5bqJu0ln8eXzsqS6qp5QnUG2CBjmzx7H2eSO1E=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
@@ -43,32 +43,32 @@ Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
  (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
  (Authenticated sender: kvalo@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 604B960300;
- Tue, 25 Jun 2019 12:56:39 +0000 (UTC)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id C6CE6601B4;
+ Tue, 25 Jun 2019 12:58:49 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1561467400;
- bh=FTPTJcuABQER6lKniScqhPccKzGnG+MXaGguW45oagg=;
+ s=default; t=1561467531;
+ bh=a8Rca21arwvNo+iIyTeF4mU7wZ/+IYY/W7PLD8V0MaU=;
  h=Subject:From:In-Reply-To:References:To:Cc:From;
- b=AMsOKW0frEvliFqXooRtEoMC5u8hmXYuifdQsCM85ZOnF0A4xxVm6UbYFuAyvIUDt
- YC/EHdzZ6uiD6NqJL0QIqfC6srSedR9yyMgB7yQK04M9VEfc9giJKuP/JG/UMWwFky
- kxJ76+bYdvSYeMlsdxhJsqEBTIbFCsOQzSKy5+L4=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 604B960300
+ b=n49b72GnReoYeQbLR0U6ni1ZKl+EZbJBYvF9TyXel8akMEfgKKDkeoYS/gWtD4bke
+ iAh3CPMrxVMajg8Z9FHtJvM0ISHXgGekw6VKrhhx/TI360ljG7anf6He+zm9aPyalh
+ K6N8aXhT4PbVl/DMj5PfSNayxoSWhcVk3MN9Uo1I=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org C6CE6601B4
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  spf=none smtp.mailfrom=kvalo@codeaurora.org
 MIME-Version: 1.0
-Subject: Re: [PATCH] ath10k: enabling tx stats support over pktlog
+Subject: Re: [PATCH] ath10k: add missing error handling
 From: Kalle Valo <kvalo@codeaurora.org>
-In-Reply-To: <1557759187-23910-1-git-send-email-bpothuno@codeaurora.org>
-References: <1557759187-23910-1-git-send-email-bpothuno@codeaurora.org>
-To: Balaji Pothunoori <bpothuno@codeaurora.org>
+In-Reply-To: <20190523071534.254611-1-tientzu@chromium.org>
+References: <20190523071534.254611-1-tientzu@chromium.org>
+To: Claire Chang <tientzu@chromium.org>
 User-Agent: pwcli/0.0.0-git (https://github.com/kvalo/pwcli/) Python/2.7.12
-Message-Id: <20190625125642.14A2860867@smtp.codeaurora.org>
-Date: Tue, 25 Jun 2019 12:56:41 +0000 (UTC)
+Message-Id: <20190625125851.44127602F4@smtp.codeaurora.org>
+Date: Tue, 25 Jun 2019 12:58:51 +0000 (UTC)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190625_055642_836462_75BC4475 
-X-CRM114-Status: UNSURE (   7.77  )
+X-CRM114-CacheID: sfid-20190625_055851_731658_B57A760E 
+X-CRM114-Status: UNSURE (   8.92  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -97,38 +97,38 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Balaji Pothunoori <bpothuno@codeaurora.org>, linux-wireless@vger.kernel.org,
- ath10k@lists.infradead.org
+Cc: Claire Chang <tientzu@chromium.org>, linux-wireless@vger.kernel.org,
+ ath10k@lists.infradead.org, wgong@codeaurora.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Balaji Pothunoori <bpothuno@codeaurora.org> wrote:
+Claire Chang <tientzu@chromium.org> wrote:
 
-> For QCA988X target, pktlog gives details of the tx bitrate
-> which is used in the driver for station info.
+> In function ath10k_sdio_mbox_rx_alloc() [sdio.c],
+> ath10k_sdio_mbox_alloc_rx_pkt() is called without handling the error cases.
+> This will make the driver think the allocation for skb is successful and
+> try to access the skb. If we enable failslab, system will easily crash with
+> NULL pointer dereferencing.
 > 
-> Enabling pktlog by default will cause more interrupts
-> in target to host CE pipe, which can impact more CPU usage
-> for targets ex:WCN3990 and also not required for all other
-> platforms (eg: WCN3990), for getting tx bitrate.
+> Call trace of CONFIG_FAILSLAB:
+> ath10k_sdio_irq_handler+0x570/0xa88 [ath10k_sdio]
+> process_sdio_pending_irqs+0x4c/0x174
+> sdio_run_irqs+0x3c/0x64
+> sdio_irq_work+0x1c/0x28
 > 
-> Enable pktlog only for QCA988X based on hardware params.
-> 
-> Tested HW : WCN3990
-> Tested FW : WLAN.HL.3.1-00784-QCAHLSWMTPLZ-1
-> 
-> Fixes: e8123bb74c4e ("ath10k: add per peer tx stats support for 10.2.4")
-> Signed-off-by: Balaji Pothunoori <bpothuno@codeaurora.org>
+> Fixes: d96db25d2025 ("ath10k: add initial SDIO support")
+> Signed-off-by: Claire Chang <tientzu@chromium.org>
+> Reviewed-by: Brian Norris <briannorris@chromium.org>
 > Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 
 Patch applied to ath-next branch of ath.git, thanks.
 
-4fa42adebe5b ath10k: enabling tx stats support over pktlog
+4b553f3ca4cb ath10k: add missing error handling
 
 -- 
-https://patchwork.kernel.org/patch/10941167/
+https://patchwork.kernel.org/patch/10957013/
 
 https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
 
