@@ -2,36 +2,36 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5806754F62
-	for <lists+ath10k@lfdr.de>; Tue, 25 Jun 2019 14:54:42 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B365854F67
+	for <lists+ath10k@lfdr.de>; Tue, 25 Jun 2019 14:55:45 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
 	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=yX+UPJt7G/kJ3Xu/yb1HG41QxsPM/IqmosVe8VEUotw=; b=nANHqcSznVaqEz
-	mwN7fsopnZnCksvX3E38rQt5hup2eCAdBRrBSHl5fTIpV+p6fjpzaTfttg3Nt8xKSlCNUCtG//s/G
-	SxJ/ErB/qhqnMZLxEhnSGnUeoGgEq6phoODx4jJCy8MGgDY/RA3dvcyESyLlWXoaS/VDGOUs0RYjk
-	6xiS2w2oiwzKjB27qbrDcVPvPEXHDa4A8hRcwfhMuvBinLbsMagAjtfDZ+EqSoaxT+t0rzGxj8JXh
-	zMPsIRuALKKpUpZnzFtN16//Wxelse+38Frg3dBFaACHj8x4il9D0RxeUw2tLl3l+Db6ZxEo5QtvB
-	+06IV3EVyJzU3GMjdhyw==;
+	List-Owner; bh=Rfua7Oo5wDd1nFEOeMJwQphMhktPRKbTAGe0G0730s0=; b=H6q+3zkv4Cjr5K
+	cOAG+rBYvWoRAG+T+uQMqOvBgBBJAPtakj/jflJRsrL4lr63sl3gzv131jADX/cItYZEj1ER+NRu6
+	fE/imMXVf742jlC3BuTK5t8l6dGZ65t/eYBwTvjFXwcKg3T8DJN21E/nmeAcDbOytqStpM65Iko75
+	s6X7LggSiYMaJG0wCIAuifTISbMs2+w1AedmN1XY0lvj1OFqQE5mOLlkYI3snrAqSyYRTjqexQBGO
+	Kc5s0rZuIsT5tFk4Qn3hnBP1vpau8PYMrnGqaRK7s8s5QmoIfT6mIYinTqmxC4zI1XN/XeeK7OWRN
+	vjvj+cuJkfXTEiwtGWzw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hfky8-0004aA-QL; Tue, 25 Jun 2019 12:54:40 +0000
+	id 1hfkz9-000639-NS; Tue, 25 Jun 2019 12:55:43 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hfky2-0004ZE-US
- for ath10k@lists.infradead.org; Tue, 25 Jun 2019 12:54:38 +0000
+ id 1hfkyw-0005uZ-RZ
+ for ath10k@lists.infradead.org; Tue, 25 Jun 2019 12:55:32 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id A1769602F4; Tue, 25 Jun 2019 12:54:34 +0000 (UTC)
+ id 7E8E260312; Tue, 25 Jun 2019 12:55:30 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1561467274;
- bh=dsJbZ4vezWjBrvQo8nbQEM9bBb+TA4WNjY2o/eWWC6E=;
+ s=default; t=1561467330;
+ bh=9mHyf51T1LY6v1BR1u/RU6KOZF5ZuRVx48WIzvXtED4=;
  h=Subject:From:In-Reply-To:References:To:Cc:Date:From;
- b=d8G8dg+Hq6BVfdXEF+aznQpcS+QWjCeDBjZkiS42Mry/qIsuwNnSHH3v+zpW8lW30
- Duk4SomKhrnqWU6QfIDxkLaxcrDe6M71pHTzWcaKKcodxxCdolfw9gW8OJu0pdjBss
- FVhnlbitEefmprkL33kkE+fIQNPkZ6xbdEb4++z0=
+ b=V8mx96r/5MoFYHD2pXe56dN17nmHh+uWseWk/jLuXnptmLnh259pWffRa7G0h7qom
+ mvpaxy/xFJPsIcsrwh3akMTVAwmvMh4Dzglr/HfWbfUmiqvOW8Y6BKasmFU5KbxRnA
+ edzEc1Hw+0kR8FnUtqEPOfrSNfgnnH94rbPOazeo=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
@@ -43,32 +43,32 @@ Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
  (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
  (Authenticated sender: kvalo@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 1EA77601B4;
- Tue, 25 Jun 2019 12:54:32 +0000 (UTC)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 80ABD601E7;
+ Tue, 25 Jun 2019 12:55:28 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1561467273;
- bh=dsJbZ4vezWjBrvQo8nbQEM9bBb+TA4WNjY2o/eWWC6E=;
+ s=default; t=1561467329;
+ bh=9mHyf51T1LY6v1BR1u/RU6KOZF5ZuRVx48WIzvXtED4=;
  h=Subject:From:In-Reply-To:References:To:Cc:From;
- b=hrjatzPNWfi+A8gHtkLAO2J1lRvOuLnSnUitT9EQyvYIZ+muTyPPTUGz96rbmAiUq
- rP8utmMMdg2hvaSenHUMML/NU5gZMN9P6VVpcSXxHH1pGO/05qWoTb88iG/Uiv1RGE
- LwwgTddpPfBF+FHI8rS9hWvfdngLd8gbzT0k18as=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 1EA77601B4
+ b=ojrQLi+R1zq1dXQxP6Pb9isdf0Ob7Ds5lRZWhciqa3X+VujI4Iegk8Kvol5WeHPyn
+ 8DlqUOJQEr52vZs/Oyq6oMD75ApyKdlpxuA2EjLtgimZStlTmE+njmmzbt2tU3cDW1
+ VHVmmFg+yRusm3mJKjreLBJBd8HgZIxyrLA/9ZlU=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 80ABD601E7
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  spf=none smtp.mailfrom=kvalo@codeaurora.org
 MIME-Version: 1.0
-Subject: Re: [PATCH] ath10k: change firmware file name for UTF mode of SDIO/USB
+Subject: Re: [PATCH] ath10k: acquire lock to fix lockdep's warning
 From: Kalle Valo <kvalo@codeaurora.org>
-In-Reply-To: <1557891047-16606-1-git-send-email-wgong@codeaurora.org>
-References: <1557891047-16606-1-git-send-email-wgong@codeaurora.org>
-To: Wen Gong <wgong@codeaurora.org>
+In-Reply-To: <20190506073836.184059-1-tientzu@chromium.org>
+References: <20190506073836.184059-1-tientzu@chromium.org>
+To: Claire Chang <tientzu@chromium.org>
 User-Agent: pwcli/0.0.0-git (https://github.com/kvalo/pwcli/) Python/2.7.12
-Message-Id: <20190625125434.A1769602F4@smtp.codeaurora.org>
-Date: Tue, 25 Jun 2019 12:54:34 +0000 (UTC)
+Message-Id: <20190625125530.7E8E260312@smtp.codeaurora.org>
+Date: Tue, 25 Jun 2019 12:55:30 +0000 (UTC)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190625_055437_236947_EF84F00D 
-X-CRM114-Status: UNSURE (   8.00  )
+X-CRM114-CacheID: sfid-20190625_055530_928161_4901B282 
+X-CRM114-Status: UNSURE (   6.80  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -97,33 +97,37 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org
+Cc: Claire Chang <tientzu@chromium.org>, drinkcat@chromium.org,
+ linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
+ wgong@codeaurora.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Wen Gong <wgong@codeaurora.org> wrote:
+Claire Chang <tientzu@chromium.org> wrote:
 
-> Firmware name for UTF mode of SDIO has changed from utf-2.bin to
-> utf-sdio-2.bin, so it need to change in ath10k, otherwise it will
-> fail for UTF mode.
+> Lockdep warns at lockdep_assert_held(&ar->data_lock) in
+> ath10k_htt_rx_pn_check_replay_hl(). Acquire ar->data_lock before calling
+> ath10k_htt_rx_pn_check_replay_hl() to fix it.
 > 
-> After change the name in ath10k, it will success for UTF mode of
-> SDIO/USB.
+> Call trace:
+> ath10k_htt_rx_pn_check_replay_hl+0x118/0x134 [ath10k_core]
+> ath10k_htt_rx_proc_rx_ind_hl+0xd8/0x250 [ath10k_core]
+> ath10k_htt_t2h_msg_handler+0x148/0xf30 [ath10k_core]
+> ath10k_htt_htc_t2h_msg_handler+0x24/0x40 [ath10k_core]
+> ath10k_sdio_irq_handler+0x374/0xaa4 [ath10k_sdio]
 > 
-> Tested with QCA6174 SDIO with firmware
-> WLAN.RMH.4.4.1-00007-QCARMSWP-1.
-> 
-> Signed-off-by: Wen Gong <wgong@codeaurora.org>
+> Fixes: 130c77495708 ("ath10k: add PN replay protection for high latency devices")
+> Signed-off-by: Claire Chang <tientzu@chromium.org>
 > Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 
 Patch applied to ath-next branch of ath.git, thanks.
 
-54f6643bf19e ath10k: change firmware file name for UTF mode of SDIO/USB
+ef9cc0c44394 ath10k: acquire lock to fix lockdep's warning
 
 -- 
-https://patchwork.kernel.org/patch/10944213/
+https://patchwork.kernel.org/patch/10930667/
 
 https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
 
