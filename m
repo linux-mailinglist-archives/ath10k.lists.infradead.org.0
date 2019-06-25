@@ -2,36 +2,36 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id F227254FED
-	for <lists+ath10k@lfdr.de>; Tue, 25 Jun 2019 15:12:14 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 11A9554FF6
+	for <lists+ath10k@lfdr.de>; Tue, 25 Jun 2019 15:13:41 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
 	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=auDb5JK+QC0m8tLjp4Dyw4iwVyN2Z7mqqu/FnWmpgNU=; b=fEMjTum+MQJPpe
-	2UmNLJ+XhHDINUcVWI7NADmTnXQ2IQL1qeYo+lq10G7kfvT5JYMuMV16+HgTMWYyBLJfWIZWpd54U
-	gmYPGjUBAJS0L3xKdTOGyNMmuai54D20CcTut01b2rasH36XQQki6n5GjXBfdcZSTkesRs8lfXk0v
-	ktHG/107xceyE+LBh+xt364w+ZFlGjKsfNAjS+w2pMSbFfuo3RmpX+WgA/lArTMgCQGFW5miEt7Qs
-	MuShZeGYDeelU5QUDZVihcTLrtatjtABaFnK14V8b7fX/DP+7HTfo9/edUI7RVFyG1AAWVSXvz0QB
-	cUOe5tOU1Utm+nToQI0w==;
+	List-Owner; bh=Jwag27mMZJSW7cfehm/qAhhevf3CO/1XpYnv5TfhjhI=; b=Ax9VKl+zyOACgv
+	jHf/YtXkimP4lo0wwcmrQDg+EKdeA6T9IaZUDOAl41XCQ28aJtTwJJglKfR2B/z4rwa27NcBfYTA4
+	8V2KrtholTyLig6BoEJrmGidjrcHgYYbngyceFD2Hnj2XWdFymqdLXMQklC/IB4Mu0FQGs1PImI35
+	Yfmoen2Zid3ZPjssNIs88BE3rIvOsoJ/RmDiT7PPopGR9Z1wrzZcVE4m6CZir/21HnkZmlvIwkvFa
+	mOnhDtpxzt1wabX1czJQt+W8g6RiSt2D33sMDW3qs4qWOG2iKoRpoFiugw6hoi9qyHR6quaE1oaOB
+	XBaNfx+z7yNk9S2CC2aQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hflF7-0001Ll-72; Tue, 25 Jun 2019 13:12:13 +0000
+	id 1hflGU-0001lJ-J2; Tue, 25 Jun 2019 13:13:38 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hflEV-0000jc-An
- for ath10k@lists.infradead.org; Tue, 25 Jun 2019 13:11:38 +0000
+ id 1hflGN-0001gx-49
+ for ath10k@lists.infradead.org; Tue, 25 Jun 2019 13:13:32 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 0D6F661A7E; Tue, 25 Jun 2019 13:11:32 +0000 (UTC)
+ id 13D96616D3; Tue, 25 Jun 2019 13:13:29 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1561468293;
- bh=+2UpMqcLGW54KLTCIw1QJtWU/Gfje6EkNK0xBkaLM2I=;
+ s=default; t=1561468410;
+ bh=zjou1/WnfU1huNpIrswarKMERzdgOIeCb4I1Jwojw0s=;
  h=Subject:From:In-Reply-To:References:To:Cc:Date:From;
- b=e3goeRFmnUIp/N5Q9+rUqbIaaCCplqDetjE/uBaOpLHrGlrQj+OCGpsJClbnaCf9L
- advuP7x13JHlmVOhQnWUCCdc+9FBVCUop082MqhBQzQKvXfXX3qMdhf57bLcuUCIy9
- x9QOI8WD1PmFbJcLNHFrxh3xYFEDKi6EllkOKmmc=
+ b=T2Y3/YKse19ubmhp1Ki6L9kh5+lMws1Fk45et9eo9o8fS4eOs/hRZQcB91Vo7lvg6
+ ATbReDqutoNK4ucvp0+WHiNg6tNWncu51TKhj9BMspMGsC/0hkbmNnyKQdhPw/Og0j
+ DOk1OUe/YFXqUse9o1pMsT7B7TFoJ541HKx1/TeE=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
@@ -43,32 +43,32 @@ Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
  (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
  (Authenticated sender: kvalo@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 254A461A7A;
- Tue, 25 Jun 2019 13:11:30 +0000 (UTC)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id DEA4761633;
+ Tue, 25 Jun 2019 13:13:27 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1561468292;
- bh=+2UpMqcLGW54KLTCIw1QJtWU/Gfje6EkNK0xBkaLM2I=;
+ s=default; t=1561468409;
+ bh=zjou1/WnfU1huNpIrswarKMERzdgOIeCb4I1Jwojw0s=;
  h=Subject:From:In-Reply-To:References:To:Cc:From;
- b=e+kT3sTyWdQFL0g14lBsvEYQuw0fJ3hlxGK3PQVKzR3wneGjIVm4flMxMD7IbqOCl
- 6MbUGTz6IQI4r8pb2FCALvQVB4R864Agb0xb/KhhyNXbdxlPvB+MC7pzR+XZmb2tfp
- OWny185+tJ8GA49RPZ7tLX8t7Vpx6Fv8sENqBN70=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 254A461A7A
+ b=oTRIOfvoS7WaotVJX8qZtiG3t0LGUk8D+p5AjglO8Cap85dlXqC35oil+XLVi5E5V
+ C6eAZ0ymtwzYZblLdaxkjRDod16HsUvFpCWFVc6XIfaqb3E/U/FSfIFYt/Uow0Dfee
+ uqnMzxgyABf2blzSAK2LxuAmS0ZsXsH6ppxNtB20=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org DEA4761633
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  spf=none smtp.mailfrom=kvalo@codeaurora.org
 MIME-Version: 1.0
-Subject: Re: [PATCH v2] ath10k: wait for vdev delete response from firmware
+Subject: Re: [PATCH] ath10k: Add peer delete response event
 From: Kalle Valo <kvalo@codeaurora.org>
-In-Reply-To: <1550411479-32253-1-git-send-email-pillair@codeaurora.org>
-References: <1550411479-32253-1-git-send-email-pillair@codeaurora.org>
+In-Reply-To: <1550673001-8779-1-git-send-email-pillair@codeaurora.org>
+References: <1550673001-8779-1-git-send-email-pillair@codeaurora.org>
 To: Rakesh Pillai <pillair@codeaurora.org>
 User-Agent: pwcli/0.0.0-git (https://github.com/kvalo/pwcli/) Python/2.7.12
-Message-Id: <20190625131133.0D6F661A7E@smtp.codeaurora.org>
-Date: Tue, 25 Jun 2019 13:11:32 +0000 (UTC)
+Message-Id: <20190625131330.13D96616D3@smtp.codeaurora.org>
+Date: Tue, 25 Jun 2019 13:13:29 +0000 (UTC)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190625_061135_397648_F9D2F61B 
-X-CRM114-Status: UNSURE (   6.98  )
+X-CRM114-CacheID: sfid-20190625_061331_215823_EC33D4BC 
+X-CRM114-Status: UNSURE (   8.28  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -98,7 +98,7 @@ List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
 Cc: Rakesh Pillai <pillair@codeaurora.org>, linux-wireless@vger.kernel.org,
- ath10k@lists.infradead.org
+ ath10k@lists.infradead.org, Dundi Raviteja <dundi@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
@@ -106,26 +106,29 @@ Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
 Rakesh Pillai <pillair@codeaurora.org> wrote:
 
-> When we add an interface immediately after removing
-> the interface the vdev deletion in firmware might not
-> have been completed. We need to synchronize the vdev creation
-> with the firmware.
+> Peer creation in firmware fails if last peer deletion is still
+> in progress.
 > 
-> Wait for vdev delete response from firmware when we
-> remove an interface.
+> The firmware sends a peer delete response event if it advertises
+> the service WMI_SERVICE_SYNC_DELETE_CMDS. This peer delete response
+> event is used to synchronize the peer deletion.
+> 
+> Add peer delete response event and wait for the event after
+> deleting every peer from host driver to synchronize with firmware.
 > 
 > Tested HW: WCN3990
 > Tested FW: WLAN.HL.2.0-01188-QCAHLSWMTPLZ-1
 > 
+> Signed-off-by: Dundi Raviteja <dundi@codeaurora.org>
 > Signed-off-by: Rakesh Pillai <pillair@codeaurora.org>
 > Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 
 Patch applied to ath-next branch of ath.git, thanks.
 
-fe36e70f766e ath10k: wait for vdev delete response from firmware
+c6f537a11b81 ath10k: Add peer delete response event
 
 -- 
-https://patchwork.kernel.org/patch/10817047/
+https://patchwork.kernel.org/patch/10822207/
 
 https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
 
