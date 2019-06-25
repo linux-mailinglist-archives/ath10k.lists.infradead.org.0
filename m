@@ -2,36 +2,36 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7AD9154FA4
-	for <lists+ath10k@lfdr.de>; Tue, 25 Jun 2019 15:03:39 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id F227254FED
+	for <lists+ath10k@lfdr.de>; Tue, 25 Jun 2019 15:12:14 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
 	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=7qNQk2qeweQMdt7pKHd5Kium2QwOGm7ybDqlFUuDkF8=; b=SjF1THlqY0YDDj
-	TOQ+EQP//MdXwshQW9quOJBuh6RJdn4sQS6VijQ2LlfmTsxhoT+wloUEopTkgmTx1hnHw4WUaiDow
-	fuYyawvtZZXedFuEkf8Z/OLhhuIaz2Nrfaoe+pnHpuPpLe1e6XjX9/QRSSNXrzlza02A7yWkWuD/3
-	o5hfTJJS3rHjyGMrNxfjkYYbZlE543idWTuRFkB+U9FZ13Qs/1lFBJaXU6hHevvliDhChhpQ0Gtbh
-	ODuc6wV3eA4IXlPvLOvfS5BQzT1vDLfofsA7QCEvpWTU/r7MS/et1XgAvWbZ9ovWeX0J0O4ottr0N
-	/8Yb0rMc9/4jA1k6xdUQ==;
+	List-Owner; bh=auDb5JK+QC0m8tLjp4Dyw4iwVyN2Z7mqqu/FnWmpgNU=; b=fEMjTum+MQJPpe
+	2UmNLJ+XhHDINUcVWI7NADmTnXQ2IQL1qeYo+lq10G7kfvT5JYMuMV16+HgTMWYyBLJfWIZWpd54U
+	gmYPGjUBAJS0L3xKdTOGyNMmuai54D20CcTut01b2rasH36XQQki6n5GjXBfdcZSTkesRs8lfXk0v
+	ktHG/107xceyE+LBh+xt364w+ZFlGjKsfNAjS+w2pMSbFfuo3RmpX+WgA/lArTMgCQGFW5miEt7Qs
+	MuShZeGYDeelU5QUDZVihcTLrtatjtABaFnK14V8b7fX/DP+7HTfo9/edUI7RVFyG1AAWVSXvz0QB
+	cUOe5tOU1Utm+nToQI0w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hfl6n-0000c5-DS; Tue, 25 Jun 2019 13:03:37 +0000
+	id 1hflF7-0001Ll-72; Tue, 25 Jun 2019 13:12:13 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hfl6i-0000bG-Lj
- for ath10k@lists.infradead.org; Tue, 25 Jun 2019 13:03:34 +0000
+ id 1hflEV-0000jc-An
+ for ath10k@lists.infradead.org; Tue, 25 Jun 2019 13:11:38 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 57C5E6085C; Tue, 25 Jun 2019 13:03:32 +0000 (UTC)
+ id 0D6F661A7E; Tue, 25 Jun 2019 13:11:32 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1561467812;
- bh=um0kHOu56NQbK5nO8lUc7zcQhQj4obdC0w6F4FGf9D4=;
+ s=default; t=1561468293;
+ bh=+2UpMqcLGW54KLTCIw1QJtWU/Gfje6EkNK0xBkaLM2I=;
  h=Subject:From:In-Reply-To:References:To:Cc:Date:From;
- b=KgXcpo5rkLVxVfTZeUZybrFUh2lr8YmlVrInBwI0DEIQZHuiMu7O/A6ZiFii4co1V
- ehqVMRJDhhhJGLNAoh5ox2jk5kmd4De3whC4eOuowy+FWEWGNBbArkjYhRciV2Zkup
- +EXWjGqIdqw0GpgajwRLLNmnl3dkIbdGFZ0fWhUM=
+ b=e3goeRFmnUIp/N5Q9+rUqbIaaCCplqDetjE/uBaOpLHrGlrQj+OCGpsJClbnaCf9L
+ advuP7x13JHlmVOhQnWUCCdc+9FBVCUop082MqhBQzQKvXfXX3qMdhf57bLcuUCIy9
+ x9QOI8WD1PmFbJcLNHFrxh3xYFEDKi6EllkOKmmc=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
@@ -43,32 +43,33 @@ Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
  (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
  (Authenticated sender: kvalo@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id CB62360254;
- Tue, 25 Jun 2019 13:03:30 +0000 (UTC)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 254A461A7A;
+ Tue, 25 Jun 2019 13:11:30 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1561467811;
- bh=um0kHOu56NQbK5nO8lUc7zcQhQj4obdC0w6F4FGf9D4=;
+ s=default; t=1561468292;
+ bh=+2UpMqcLGW54KLTCIw1QJtWU/Gfje6EkNK0xBkaLM2I=;
  h=Subject:From:In-Reply-To:References:To:Cc:From;
- b=Hhe28dB69sZBItE+56FZ02t2jUHK37GZ4DS8o801xrm5hq1L7vEkvMSUPrae35iXP
- TmEGYaa35xrRDPDyIe+qRuf1gsIuvBBqzRDgyK/Wbi9PwVHJ0sqUB3HpvUUm0HwoLn
- oMaN0oXh+Wjd0D4qCGfDnmGL+Mm90/baxBmuN30Q=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org CB62360254
+ b=e+kT3sTyWdQFL0g14lBsvEYQuw0fJ3hlxGK3PQVKzR3wneGjIVm4flMxMD7IbqOCl
+ 6MbUGTz6IQI4r8pb2FCALvQVB4R864Agb0xb/KhhyNXbdxlPvB+MC7pzR+XZmb2tfp
+ OWny185+tJ8GA49RPZ7tLX8t7Vpx6Fv8sENqBN70=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 254A461A7A
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  spf=none smtp.mailfrom=kvalo@codeaurora.org
 MIME-Version: 1.0
-Subject: Re: [PATCH] ath10k: fix PCIE device wake up failed
+Subject: Re: [PATCH v2] ath10k: wait for vdev delete response from firmware
 From: Kalle Valo <kvalo@codeaurora.org>
-In-Reply-To: <1559180960-13565-1-git-send-email-miaoqing@codeaurora.org>
-References: <1559180960-13565-1-git-send-email-miaoqing@codeaurora.org>
-To: Miaoqing Pan <miaoqing@codeaurora.org>
+In-Reply-To: <1550411479-32253-1-git-send-email-pillair@codeaurora.org>
+References: <1550411479-32253-1-git-send-email-pillair@codeaurora.org>
+To: Rakesh Pillai <pillair@codeaurora.org>
 User-Agent: pwcli/0.0.0-git (https://github.com/kvalo/pwcli/) Python/2.7.12
-Message-Id: <20190625130332.57C5E6085C@smtp.codeaurora.org>
-Date: Tue, 25 Jun 2019 13:03:32 +0000 (UTC)
+Message-Id: <20190625131133.0D6F661A7E@smtp.codeaurora.org>
+Date: Tue, 25 Jun 2019 13:11:32 +0000 (UTC)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190625_060332_735011_21412A84 
-X-CRM114-Status: GOOD (  10.07  )
+X-CRM114-CacheID: sfid-20190625_061135_397648_F9D2F61B 
+X-CRM114-Status: UNSURE (   6.98  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-2.5 points)
@@ -96,43 +97,35 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
- Miaoqing Pan <miaoqing@codeaurora.org>
+Cc: Rakesh Pillai <pillair@codeaurora.org>, linux-wireless@vger.kernel.org,
+ ath10k@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Miaoqing Pan <miaoqing@codeaurora.org> wrote:
+Rakesh Pillai <pillair@codeaurora.org> wrote:
 
-> Observed PCIE device wake up failed after ~120 iterations of
-> soft-reboot test. The error message is
-> "ath10k_pci 0000:01:00.0: failed to wake up device : -110"
+> When we add an interface immediately after removing
+> the interface the vdev deletion in firmware might not
+> have been completed. We need to synchronize the vdev creation
+> with the firmware.
 > 
-> The call trace as below:
-> ath10k_pci_probe -> ath10k_pci_force_wake -> ath10k_pci_wake_wait ->
-> ath10k_pci_is_awake
+> Wait for vdev delete response from firmware when we
+> remove an interface.
 > 
-> Once trigger the device to wake up, we will continuously check the RTC
-> state until it returns RTC_STATE_V_ON or timeout.
+> Tested HW: WCN3990
+> Tested FW: WLAN.HL.2.0-01188-QCAHLSWMTPLZ-1
 > 
-> But for QCA99x0 chips, we use wrong value for RTC_STATE_V_ON.
-> Occasionally, we get 0x7 on the fist read, we thought as a failure
-> case, but actually is the right value, also verified with the spec.
-> So fix the issue by changing RTC_STATE_V_ON from 0x5 to 0x7, passed
-> ~2000 iterations.
-> 
-> Tested HW: QCA9984
-> 
-> Signed-off-by: Miaoqing Pan <miaoqing@codeaurora.org>
+> Signed-off-by: Rakesh Pillai <pillair@codeaurora.org>
 > Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 
 Patch applied to ath-next branch of ath.git, thanks.
 
-011d4111c8c6 ath10k: fix PCIE device wake up failed
+fe36e70f766e ath10k: wait for vdev delete response from firmware
 
 -- 
-https://patchwork.kernel.org/patch/10968039/
+https://patchwork.kernel.org/patch/10817047/
 
 https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
 
