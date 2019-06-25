@@ -2,36 +2,36 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C779754F82
-	for <lists+ath10k@lfdr.de>; Tue, 25 Jun 2019 15:00:52 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9D51354F91
+	for <lists+ath10k@lfdr.de>; Tue, 25 Jun 2019 15:02:38 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
 	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=xAnTpzHEWc8gmNVot+qlvxY+VmlmjhZ/CYtMuLRTrLQ=; b=YLokw3dv8iee0G
-	Nr6BR60/dLdTe1X/FXljXCVbNqQY3ODq7u7sx9fJJ1xlc0QcurIw6SF6pwcoThjEcAy5BvlLAOxAS
-	JAZUnhZdIHzBhyJdT+2p4Dk91Q6FJRdDctH+SmYGOM92qh5O/uvZf0jSPTs8nL2yN+ax+El2NgCc7
-	1BvMhso8eZrbZCB5+hR2KxXTVXJQ4wLxLPGmW0+IwJXJrXhzrYnmh41DhSAfJ4mIz4wuDm/uRYQKq
-	YoGsWg3m4K8evlqZZ/KMTnOGVT/QdEC6F25xImQ+j4vanCb6pMADCAZaWf/JytR5sSR6gdIU4YizH
-	tW5HSyiGBbsNaGbYsVYA==;
+	List-Owner; bh=ourc7MiNAk0kl+T+ZrUSQUw18Mfdh7mP52JM+CPe9Tk=; b=hMQBA9McGF/O9L
+	lL69+3wz+3Nsnz6q57QmAHeCZwgx5I66LA6zrxVjx52SIxzpaWletOe4ZuWEjOZ82hGJHYg7i6tGl
+	5revYVwe1ZXin48C4uS6YRoX6gV92G/FQ2tSKiJ2cxs2L0zBbFTIywCMqo6PSJY4BBBWnN0swFm86
+	wo4gsj0gD/qW6QgDuRA5ENx+gKM/QE6m75Ib3cylzBrGfoJKtqgEzrVlfwIRaI4Vg4t8yShrDcBDq
+	Xj2OnQCOYmvVgRQRaHH//YeP91PAyv/Yc9FKapsuN5P9jnVWsmqWJT4q+2z2OVxYYMJ6uckUx4eal
+	XgVbcB4xXp7EMo+Ej4IQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hfl47-000059-Hu; Tue, 25 Jun 2019 13:00:51 +0000
+	id 1hfl5p-0000S9-1b; Tue, 25 Jun 2019 13:02:37 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hfl42-0008W9-QB
- for ath10k@lists.infradead.org; Tue, 25 Jun 2019 13:00:48 +0000
+ id 1hfl5k-0000Ri-I1
+ for ath10k@lists.infradead.org; Tue, 25 Jun 2019 13:02:33 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 57209606DC; Tue, 25 Jun 2019 13:00:45 +0000 (UTC)
+ id 451AB6085C; Tue, 25 Jun 2019 13:02:32 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1561467645;
- bh=l1ftwfLHJSnmxo9eNQhQI7nfLkar2T3uSvhlFW2ynL4=;
+ s=default; t=1561467752;
+ bh=goyYnP7cy9ipwr1KfMe6m/clr8EHIElroEeXKJsdJfc=;
  h=Subject:From:In-Reply-To:References:To:Cc:Date:From;
- b=WcCZVsvhDeatju/DcxVxe+2WffICy1m0yPEl+cKmpAfr6Jpd39QhY6sggYGaBAt6x
- dC5AWPOdS+82dLoW0mibvk7NsBSTyr622yoKZGG8R8xoY6jHo/ItnbIGoWJxXav0W0
- y17ojP4qCS4BP3Pyf3JgEKRot6anJDwk6nUEqX20=
+ b=JG21v+zjk3kqYzQF2gVFpo7X+fkwF0+mtIVUpB8KB00hNYtX24sBNWB2ahXeiuo21
+ WrC8zZhbl2orzADeSc2wiyN0f+PHlnhQIrGfXzu3GYSvNG3bixz0Eashd2SZzrbZA1
+ 6MSpAJnKdrSEuBWQqxvNJG6PN3SQPy3Sw4wQ49YE=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
@@ -43,32 +43,32 @@ Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
  (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
  (Authenticated sender: kvalo@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id A00916019D;
- Tue, 25 Jun 2019 13:00:43 +0000 (UTC)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id E59BE601B4;
+ Tue, 25 Jun 2019 13:02:30 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1561467645;
- bh=l1ftwfLHJSnmxo9eNQhQI7nfLkar2T3uSvhlFW2ynL4=;
+ s=default; t=1561467751;
+ bh=goyYnP7cy9ipwr1KfMe6m/clr8EHIElroEeXKJsdJfc=;
  h=Subject:From:In-Reply-To:References:To:Cc:From;
- b=gNemgL90Yn1+T04AKPx0XrSd2vGag8XT0zAwDzrkYSx3q9PxF7X33LKBVfX0nK3ma
- /mb4o/UvIMbmi6uqQ1jPrc3l+h2fWYUzWgqQMzu4DsWjvlliyvi+WtqWosbpGGjavZ
- wfd5rZ97oczVlhjIpGOmneUi88oKRdRRzK00lbU0=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org A00916019D
+ b=B2V+cB6nj33RpaDjy7APHFG83RyGsW9OkR77WdH6hG7d/o7E/1FOUn8tFl4Bv5jvO
+ tPt/T2wkolZ0S5LS2bVxeclGVg0XwHQ5QDHQdTwyuaQE27LXgaBLiHUg8Re3CKAmrd
+ 1Gib72gS7qW19WmO78wHcaI4eYrS6O2y+gSOSRys=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org E59BE601B4
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  spf=none smtp.mailfrom=kvalo@codeaurora.org
 MIME-Version: 1.0
-Subject: Re: [PATCH] ath10k: Change the warning message string
+Subject: Re: [PATCH v2] ath10k: fix failure to set multiple fixed rate
 From: Kalle Valo <kvalo@codeaurora.org>
-In-Reply-To: <20190509121500.4730-1-festevam@gmail.com>
-References: <20190509121500.4730-1-festevam@gmail.com>
-To: Fabio Estevam <festevam@gmail.com>
+In-Reply-To: <1559117608-11117-1-git-send-email-miaoqing@codeaurora.org>
+References: <1559117608-11117-1-git-send-email-miaoqing@codeaurora.org>
+To: Miaoqing Pan <miaoqing@codeaurora.org>
 User-Agent: pwcli/0.0.0-git (https://github.com/kvalo/pwcli/) Python/2.7.12
-Message-Id: <20190625130045.57209606DC@smtp.codeaurora.org>
-Date: Tue, 25 Jun 2019 13:00:45 +0000 (UTC)
+Message-Id: <20190625130232.451AB6085C@smtp.codeaurora.org>
+Date: Tue, 25 Jun 2019 13:02:32 +0000 (UTC)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190625_060046_869763_1F204250 
-X-CRM114-Status: UNSURE (   6.51  )
+X-CRM114-CacheID: sfid-20190625_060232_629076_7A56767C 
+X-CRM114-Status: UNSURE (   9.85  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -97,35 +97,54 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: andreyknvl@google.com, Fabio Estevam <festevam@gmail.com>,
- linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
- gregkh@linuxfoundation.org
+Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
+ Miaoqing Pan <miaoqing@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Fabio Estevam <festevam@gmail.com> wrote:
+Miaoqing Pan <miaoqing@codeaurora.org> wrote:
 
-> The "WARNING" string confuses syzbot, which thinks it found
-> a crash [1].
+> Currently, below fixed rate commands are broken,
+> iw wlanx set bitrates legacy-<2.4|5> ht-mcs-<2.4|5> vht-mcs-<2.4|5> \
+> <NSS:MCSx>
+> iw wlanx set bitrates legacy-<2.4|5> <legacy rate> ht-mcs-<2.4|5> \
+> vht-mcs-<2.4|5> <NSS:MCSx>
 > 
-> Change the string to avoid such problem.
+> There are two methods to set fixed rate, both failed,
+> - Use vdev fixed rate command
+>   This command only support one single rate, but it's broken due to
+>   mac80211 change commit e8e4f5280ddd ("mac80211: reject/clear user
+>   rate mask if not usable"), which requires user to specify at least
+>   one legacy rate. So we can't use this command to set ht/vht single
+>   rate any more.
+> - Use peer_assoc command
+>   This command can update rx capability for multiple rates, it will
+>   work fine for ht mcs rates, as each supported mcs can be advertised
+>   in ht_mcs index mask. But this will not work with vht rates because,
+>   as per the vht mcs capability advertisement, there are only two bits
+>   to indicate the supported mcs. E.g. only support 0-7, 0-8, 0-9.
 > 
-> [1] https://lkml.org/lkml/2019/5/9/243
+> So introduced new WMI command: WMI_PEER_PARAM_FIXED_RATE. After peer
+> assoc, the peer fixed rate cmd will work for that specific peer.
+> Remaining peers will use auto rate. If both vdev fixed rate and peer
+> fixed rates are given, peer fixed rate will take effect to peers for
+> which this cmd is given. Remaining peers in that vdev, will use vdev
+> fixed rate.
 > 
-> Reported-by: syzbot+c1b25598aa60dcd47e78@syzkaller.appspotmail.com
-> Suggested-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-> Signed-off-by: Fabio Estevam <festevam@gmail.com>
-> Reviewed-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+> Tested HW: QCA9984
+> Tested FW: 10.4-3.9.0.2-00035
+> 
+> Signed-off-by: Miaoqing Pan <miaoqing@codeaurora.org>
 > Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 
 Patch applied to ath-next branch of ath.git, thanks.
 
-265df32eae58 ath10k: Change the warning message string
+8b97b055dc9d ath10k: fix failure to set multiple fixed rate
 
 -- 
-https://patchwork.kernel.org/patch/10937077/
+https://patchwork.kernel.org/patch/10966425/
 
 https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
 
