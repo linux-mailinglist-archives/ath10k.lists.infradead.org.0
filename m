@@ -2,36 +2,36 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 11A9554FF6
-	for <lists+ath10k@lfdr.de>; Tue, 25 Jun 2019 15:13:41 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id AAAE555003
+	for <lists+ath10k@lfdr.de>; Tue, 25 Jun 2019 15:14:57 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
 	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Jwag27mMZJSW7cfehm/qAhhevf3CO/1XpYnv5TfhjhI=; b=Ax9VKl+zyOACgv
-	jHf/YtXkimP4lo0wwcmrQDg+EKdeA6T9IaZUDOAl41XCQ28aJtTwJJglKfR2B/z4rwa27NcBfYTA4
-	8V2KrtholTyLig6BoEJrmGidjrcHgYYbngyceFD2Hnj2XWdFymqdLXMQklC/IB4Mu0FQGs1PImI35
-	Yfmoen2Zid3ZPjssNIs88BE3rIvOsoJ/RmDiT7PPopGR9Z1wrzZcVE4m6CZir/21HnkZmlvIwkvFa
-	mOnhDtpxzt1wabX1czJQt+W8g6RiSt2D33sMDW3qs4qWOG2iKoRpoFiugw6hoi9qyHR6quaE1oaOB
-	XBaNfx+z7yNk9S2CC2aQ==;
+	List-Owner; bh=WTM6YkXjfOod9Fc+nGGKCeOixAvmB/46QNpUn8y2tQA=; b=HmcwNb0G/IP2R+
+	R4nwP2EiLZvw1ykKOtK5A7LtAdg7IplwBKQhYafgGpTBRCSNuYmQ/OaXtf8wNhO4MGVlAtvyfWQVx
+	8vjVYkNymjitKvO0yE4h5UumIi82mJT0Ub8V9OLjFYyIqed+okFvafO8gjbPXWmIHdksxqZAspdIy
+	ZupJIuQOzYUoaOALOe85N2pOwgXUZoumX/JTiFBLk3O0folQfmrCKjCr7esOZEIGzi/4b6EHJiOd9
+	DAC0JxKehGawS9A1hnNcfVOU+PTFbBxjLIoIcdfpZqrmZsn+5XOdZqm979SZVYPHX0I79nZYKhy0p
+	Gi2ByAq/mp3lXS/P+pug==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hflGU-0001lJ-J2; Tue, 25 Jun 2019 13:13:38 +0000
+	id 1hflHk-00023u-6P; Tue, 25 Jun 2019 13:14:56 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hflGN-0001gx-49
- for ath10k@lists.infradead.org; Tue, 25 Jun 2019 13:13:32 +0000
+ id 1hflHg-00023I-4P
+ for ath10k@lists.infradead.org; Tue, 25 Jun 2019 13:14:53 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 13D96616D3; Tue, 25 Jun 2019 13:13:29 +0000 (UTC)
+ id D07FA6028D; Tue, 25 Jun 2019 13:14:51 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1561468410;
- bh=zjou1/WnfU1huNpIrswarKMERzdgOIeCb4I1Jwojw0s=;
+ s=default; t=1561468491;
+ bh=XCoX9Dil4UwfqX5wbBt4vZpqhxU4FoaYfE6brIoyU/k=;
  h=Subject:From:In-Reply-To:References:To:Cc:Date:From;
- b=T2Y3/YKse19ubmhp1Ki6L9kh5+lMws1Fk45et9eo9o8fS4eOs/hRZQcB91Vo7lvg6
- ATbReDqutoNK4ucvp0+WHiNg6tNWncu51TKhj9BMspMGsC/0hkbmNnyKQdhPw/Og0j
- DOk1OUe/YFXqUse9o1pMsT7B7TFoJ541HKx1/TeE=
+ b=H7qmR58hT99aG05dNuOI9lGapd2up4dWgH9MFA/nhuhh1odTtjIwMceQTH4gj/GDW
+ UJg0DBKAhpa6TpWU3VLDvDTPU3aYupP0rYwRkdRwLZvYJQpqKIQ1zqoEcKjRWeMzOL
+ FUjJIJ9S0PqsVOGnaaomVoPQqaC4oXv8dQZnRpOs=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
@@ -43,33 +43,33 @@ Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
  (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
  (Authenticated sender: kvalo@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id DEA4761633;
- Tue, 25 Jun 2019 13:13:27 +0000 (UTC)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id E80FE606DC;
+ Tue, 25 Jun 2019 13:14:48 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1561468409;
- bh=zjou1/WnfU1huNpIrswarKMERzdgOIeCb4I1Jwojw0s=;
+ s=default; t=1561468490;
+ bh=XCoX9Dil4UwfqX5wbBt4vZpqhxU4FoaYfE6brIoyU/k=;
  h=Subject:From:In-Reply-To:References:To:Cc:From;
- b=oTRIOfvoS7WaotVJX8qZtiG3t0LGUk8D+p5AjglO8Cap85dlXqC35oil+XLVi5E5V
- C6eAZ0ymtwzYZblLdaxkjRDod16HsUvFpCWFVc6XIfaqb3E/U/FSfIFYt/Uow0Dfee
- uqnMzxgyABf2blzSAK2LxuAmS0ZsXsH6ppxNtB20=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org DEA4761633
+ b=pBTD6yDpjlLRMQBhidbXWeekPKFMgNS4DU7EUmsDtYZEfxC3qS3CdNd09xv4TtjCt
+ +83Gyz0K2d2ZrME2qQtBNgsrcsIe/TX1Epm8zydVkvUuyZ5/oMh/2uq69JpKKHqQtR
+ gjcRP3OEiYzoUOHnwUvgj6E2mIdTJyon6hU2p4ZE=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org E80FE606DC
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  spf=none smtp.mailfrom=kvalo@codeaurora.org
 MIME-Version: 1.0
-Subject: Re: [PATCH] ath10k: Add peer delete response event
+Subject: Re: [PATCH v5] ath10k: add support for controlling tx power to a
+ station
 From: Kalle Valo <kvalo@codeaurora.org>
-In-Reply-To: <1550673001-8779-1-git-send-email-pillair@codeaurora.org>
-References: <1550673001-8779-1-git-send-email-pillair@codeaurora.org>
-To: Rakesh Pillai <pillair@codeaurora.org>
+In-Reply-To: <1559209638-23887-1-git-send-email-bpothuno@codeaurora.org>
+References: <1559209638-23887-1-git-send-email-bpothuno@codeaurora.org>
+To: Balaji Pothunoori <bpothuno@codeaurora.org>
 User-Agent: pwcli/0.0.0-git (https://github.com/kvalo/pwcli/) Python/2.7.12
-Message-Id: <20190625131330.13D96616D3@smtp.codeaurora.org>
-Date: Tue, 25 Jun 2019 13:13:29 +0000 (UTC)
+Message-Id: <20190625131451.D07FA6028D@smtp.codeaurora.org>
+Date: Tue, 25 Jun 2019 13:14:51 +0000 (UTC)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190625_061331_215823_EC33D4BC 
-X-CRM114-Status: UNSURE (   8.28  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190625_061452_189223_15793421 
+X-CRM114-Status: GOOD (  12.56  )
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-2.5 points)
@@ -97,38 +97,44 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Rakesh Pillai <pillair@codeaurora.org>, linux-wireless@vger.kernel.org,
- ath10k@lists.infradead.org, Dundi Raviteja <dundi@codeaurora.org>
+Cc: Balaji Pothunoori <bpothuno@codeaurora.org>,
+ Ashok Raj Nagarajan <arnagara@codeaurora.org>, linux-wireless@vger.kernel.org,
+ ath10k@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Rakesh Pillai <pillair@codeaurora.org> wrote:
+Balaji Pothunoori <bpothuno@codeaurora.org> wrote:
 
-> Peer creation in firmware fails if last peer deletion is still
-> in progress.
+> This patch will add the support to control the transmit power for traffic
+> to a station associated with the AP.
 > 
-> The firmware sends a peer delete response event if it advertises
-> the service WMI_SERVICE_SYNC_DELETE_CMDS. This peer delete response
-> event is used to synchronize the peer deletion.
+> Underlying firmware will enforce that the maximum tx power will be based
+> on the regulatory requirements. If the user given transmit power is greater
+> than the allowed tx power in the given channel, then the firmware will use
+> the maximum tx power in the same channel.
 > 
-> Add peer delete response event and wait for the event after
-> deleting every peer from host driver to synchronize with firmware.
+> Max and Min tx power values will depends on no of tx chain masks,
+> for QCA9984 allowed tx power range values from 6 to 23.
 > 
-> Tested HW: WCN3990
-> Tested FW: WLAN.HL.2.0-01188-QCAHLSWMTPLZ-1
+> When 0 is sent to the firmware as tx power, it will revert to the default
+> tx power for the station.
 > 
-> Signed-off-by: Dundi Raviteja <dundi@codeaurora.org>
-> Signed-off-by: Rakesh Pillai <pillair@codeaurora.org>
+> Tested Hardware : QCA9984
+> Tested Firmware : 10.4-3.9.0.2-00046
+> 
+> Co-developed-by: Balaji Pothunoori <bpothuno@codeaurora.org>
+> Signed-off-by: Ashok Raj Nagarajan <arnagara@codeaurora.org>
+> Signed-off-by: Balaji Pothunoori <bpothuno@codeaurora.org>
 > Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 
 Patch applied to ath-next branch of ath.git, thanks.
 
-c6f537a11b81 ath10k: Add peer delete response event
+33410a51468f ath10k: add support for controlling tx power to a station
 
 -- 
-https://patchwork.kernel.org/patch/10822207/
+https://patchwork.kernel.org/patch/10968517/
 
 https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
 
