@@ -2,80 +2,81 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 50F2B58917
-	for <lists+ath10k@lfdr.de>; Thu, 27 Jun 2019 19:45:51 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C293358962
+	for <lists+ath10k@lfdr.de>; Thu, 27 Jun 2019 19:59:25 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
-	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
-	References:List-Owner; bh=hXY9zh1u1UiUj0DW8ep+d3x/tbVA4dw3QC0v7faYy2k=; b=fjy
-	vVh3NVBG+tNpym21gkx/11LWeaLPjMH7E1P/pPM+XFmlxDFXws5IDVuolKlBQbgbcBzxWew7cY88R
-	pO0DF+vajW9vskkop/9MPj0XeZwKKrLISNfwU1Iw3nVDHsf6dyjWEr8HvzakddRDkD2NtZkgcZt9O
-	Us+dadgcJEaqUN0JBB4M6sWa3v+r9kRNfE4Ml1if5tvoghnEnkXcahES+ke9o99NO+n53fayM3ly2
-	IC7VVQUcuZB+psAd3/ZmgKq/pE+xBUXwQ6oAI6SqTeHQvm45NmyDaiww6Ua7Xsm2RD9a243rq+FwC
-	mfX0jrRcmvgcP0Tb6fQa5x1EGkT+KrQ==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
+	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=BcYLQF4gldWyPNJg5vzUXJCz7PQofZrm/hwS/OgPTsk=; b=gab8lIS9Az5BIC
+	KFqJDd8Q42FDy3rR3Pfk7Y6bGInPz0BscD4zww8S30ypoUq7WOcWyZu2/3dZqQc8U8pS5mnVaj2i+
+	Zby3FYwu86ZiOoM4fxdw9dcrL+YyG0HWPf/ZvcOFp1IzOoNRIBESo+2ajHTaz6wMSwfRHICmb9exb
+	/wwCPLdgU81wxtYyKicZro7Gv/+cg/WcP+2H6oGfKCpQq034N+5tF9zMIAXEcQurKP9equTnN66/k
+	9DAzlemwUfSfkX945H6oHNcBYgtyWMh48yWMtPwZqETDc+d10LsrBvP6ZwNhu01jJw73JScsbx1ll
+	b9zLoUijGF2Mh3MQ5Orw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hgYSu-00087g-9N; Thu, 27 Jun 2019 17:45:44 +0000
-Received: from mail-pl1-x644.google.com ([2607:f8b0:4864:20::644])
+	id 1hgYg6-00051p-U9; Thu, 27 Jun 2019 17:59:22 +0000
+Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hgYSm-00086v-7p
- for ath10k@lists.infradead.org; Thu, 27 Jun 2019 17:45:37 +0000
-Received: by mail-pl1-x644.google.com with SMTP id bh12so1679900plb.4
- for <ath10k@lists.infradead.org>; Thu, 27 Jun 2019 10:45:36 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=from:to:cc:subject:date:message-id;
- bh=YcrOIML8x2OsusC75WoEHjxhMdfGqgM3ZNHf/dMTePc=;
- b=jf7n5fH2A5HNpS8PTM3S811DsWred9JfeFur4PDK5+BudkEiGv0uONGRk5LPBKX5G1
- igwiiPl5vGHIZPuIqoEe5l0Qs+cin2RFFIMudj7GJPW0mPr66sKSrbwTUKz249EJoPSn
- 8Hs7tWuLze0yhunJHSGizmLFFeiJw1o1IfQxO04RFUiW4KlfMkSZlJD6Z6L4W7C9ei4U
- X1li4zYSgq37mTn1irKNa1ka/hTFpj0qgHUsNHsiM9uMWD1hSSpiGrnJ9rOHWYQwnOeh
- B1pYgzlYTDmPbk2zt7ht/oTG6uJ34b/ldweUXOBJXiIDRBLwMqAA0fdEwR8lwPbU8Q7o
- /IZQ==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id;
- bh=YcrOIML8x2OsusC75WoEHjxhMdfGqgM3ZNHf/dMTePc=;
- b=ZRlgNdQc0wKPI0yGCd+qb+i4h5N/0SuR79Xga1RPBL0k1FycMtZDs3bVb+TLmTiarS
- XgsZ4SrdiW00Lw+ttcZDiE6AZ+m+5MyfOvZTZXg4bwKMlTMIv5v3QGJVPX4Hk1vqAwMH
- AeeC8VX/mAZa7aL45kOt4vd6FeYzIi9mI43xr1BJ1cJgK89uSE/Zsy5GlfohGUAWTCOR
- r6p/6ELKdB6d1vjDMbgi54lrDN+y1uBokXwoHG0ro43yieL48G2vqoy3HxAFbRMuk11O
- 2948aw/DhgYc2vlOAzMQSB6JjTrqNRe5z2fafn533t0R/uFZ4ViBueyTzEdSoPByzQqO
- /a/A==
-X-Gm-Message-State: APjAAAVSU3bjNYHsgzhwcYqjjgw+XGTIr3f/aQKAaJOYYgL6yn0u33Ha
- mEhc6BOqcqqXgzK88t4Mlcc=
-X-Google-Smtp-Source: APXvYqzbE72vwOnzbiDPERLuny3jJnLY2gpyWJh7MxzsMwmFnRrKeXVhleKt5228V1zkdGf43LmBdw==
-X-Received: by 2002:a17:902:110b:: with SMTP id
- d11mr6279856pla.213.1561657535820; 
- Thu, 27 Jun 2019 10:45:35 -0700 (PDT)
-Received: from hfq-skylake.ipads-lab.se.sjtu.edu.cn ([202.120.40.82])
- by smtp.googlemail.com with ESMTPSA id t7sm4641393pjq.15.2019.06.27.10.45.33
- (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Thu, 27 Jun 2019 10:45:35 -0700 (PDT)
-From: Fuqian Huang <huangfq.daxian@gmail.com>
-To: 
-Subject: [PATCH 78/87] wireless: ath10k: remove memset after dma_alloc_coherent
-Date: Fri, 28 Jun 2019 01:45:27 +0800
-Message-Id: <20190627174527.5987-1-huangfq.daxian@gmail.com>
-X-Mailer: git-send-email 2.11.0
+ id 1hgYg1-00051O-N1
+ for ath10k@lists.infradead.org; Thu, 27 Jun 2019 17:59:19 +0000
+Received: by smtp.codeaurora.org (Postfix, from userid 1000)
+ id 7D99D60A05; Thu, 27 Jun 2019 17:59:14 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1561658354;
+ bh=TDt+TsIJojoSi3nFbwHzrAxp6vhuwRTs7dV6p+GiuOQ=;
+ h=Subject:From:In-Reply-To:References:To:Cc:Date:From;
+ b=dVC46lenHyoEMljBFU9ZsiUt93wtfp0geWHqWvkX3+6/e3A3RFV1PPhbiISMiGvUi
+ uu7b79vx8/gPCg40agLksbKrS9+XD3oI2h8luPOAfBFQv1VumHXaBedgBftDJT7gTz
+ 0Ln0++VueDQ9BuwqqG9U+4RIdj9OMBncXEwjKrI8=
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ pdx-caf-mail.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-0.8 required=2.0 tests=ALL_TRUSTED,BAYES_00,
+ DKIM_INVALID,DKIM_SIGNED,MISSING_DATE,MISSING_MID,SPF_NONE autolearn=no
+ autolearn_force=no version=3.4.0
+Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
+ [88.114.240.156])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ (Authenticated sender: kvalo@smtp.codeaurora.org)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 5031B60741;
+ Thu, 27 Jun 2019 17:59:13 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1561658354;
+ bh=TDt+TsIJojoSi3nFbwHzrAxp6vhuwRTs7dV6p+GiuOQ=;
+ h=Subject:From:In-Reply-To:References:To:Cc:From;
+ b=cNkHgbLRUj1HY7Cqf9E1ov5EEVCB4M/ylnsuvpElf5ItxEpVwcygxkW4BJ9aNt0vi
+ jwrQtiOp4Or8IBR7NAkoo315jD8jMdOuL13pFVeXL5ycRVeVknzMKHFkhJCKVBJH7D
+ lJWvtjwyxvKDAoGIiuGJHrSVYejyW+gkLc62MaPM=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 5031B60741
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ spf=none smtp.mailfrom=kvalo@codeaurora.org
+MIME-Version: 1.0
+Subject: Re: [PATCH] ath10k: add new hw_ops for sdio chip
+From: Kalle Valo <kvalo@codeaurora.org>
+In-Reply-To: <1560757048-19223-1-git-send-email-wgong@codeaurora.org>
+References: <1560757048-19223-1-git-send-email-wgong@codeaurora.org>
+To: Wen Gong <wgong@codeaurora.org>
+User-Agent: pwcli/0.0.0-git (https://github.com/kvalo/pwcli/) Python/2.7.12
+Message-Id: <20190627175914.7D99D60A05@smtp.codeaurora.org>
+Date: Thu, 27 Jun 2019 17:59:14 +0000 (UTC)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190627_104536_289047_974E212A 
-X-CRM114-Status: UNSURE (   8.51  )
+X-CRM114-CacheID: sfid-20190627_105917_773350_B88AD397 
+X-CRM114-Status: UNSURE (   8.62  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: 1.3 (+)
+X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (1.3 points)
+ Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 1.5 RCVD_IN_SORBS_WEB      RBL: SORBS: sender is an abusable web server
- [202.120.40.82 listed in dnsbl.sorbs.net]
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:644 listed in]
- [list.dnswl.org]
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (huangfq.daxian[at]gmail.com)
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [198.145.29.96 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
@@ -96,51 +97,53 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: netdev@vger.kernel.org, linux-wireless@vger.kernel.org,
- linux-kernel@vger.kernel.org, ath10k@lists.infradead.org,
- Fuqian Huang <huangfq.daxian@gmail.com>,
- "David S. Miller" <davem@davemloft.net>, Kalle Valo <kvalo@codeaurora.org>
-MIME-Version: 1.0
+Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-In commit af7ddd8a627c
-("Merge tag 'dma-mapping-4.21' of git://git.infradead.org/users/hch/dma-mapping"),
-dma_alloc_coherent has already zeroed the memory.
-So memset is not needed.
+Wen Gong <wgong@codeaurora.org> wrote:
 
-Signed-off-by: Fuqian Huang <huangfq.daxian@gmail.com>
----
- drivers/net/wireless/ath/ath10k/ce.c | 5 -----
- 1 file changed, 5 deletions(-)
+> It report error message while suspend/resume test.
+> dmesg log:
+> [  150.749962] ath10k_sdio mmc1:0001:1: hif read32 not supported
+> [  150.755728] ath10k_sdio mmc1:0001:1: failed to set coverage class: expected integer microsecond value in register
+> 
+> Reason is sdio chip does not support set_coverage_class as well as
+> pcie chip, remove the set_coverage_class handler will avoid it.
+> 
+> callstack of the error message:
+> OUTLINED_FUNCTION_6+0xc/0x14 [ath10k_core]
+> ath10k_mac_op_set_coverage_class+0x2c/0x40 [ath10k_core]
+> ieee80211_reconfig+0x5d0/0x108c [mac80211]
+> ieee80211_resume+0x34/0x6c [mac80211]
+> wiphy_resume+0xbc/0x13c [cfg80211]
+> dpm_run_callback+0xa4/0x168
+> device_resume+0x1d4/0x200
+> async_resume+0x1c/0x34
+> async_run_entry_fn+0x48/0xf8
+> process_one_work+0x178/0x2f8
+> worker_thread+0x1d8/0x2cc
+> kthread+0x11c/0x12c
+> ret_from_fork+0x10/0x18
+> 
+> the error log will not happen after this patch applied.
+> 
+> Tested with QCA6174 SDIO with firmware
+> WLAN.RMH.4.4.1-00007-QCARMSWP-1.
+> 
+> Signed-off-by: Wen Gong <wgong@codeaurora.org>
+> Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 
-diff --git a/drivers/net/wireless/ath/ath10k/ce.c b/drivers/net/wireless/ath/ath10k/ce.c
-index eca87f7c5b6c..294fbc1e89ab 100644
---- a/drivers/net/wireless/ath/ath10k/ce.c
-+++ b/drivers/net/wireless/ath/ath10k/ce.c
-@@ -1704,9 +1704,6 @@ ath10k_ce_alloc_dest_ring_64(struct ath10k *ar, unsigned int ce_id,
- 	/* Correctly initialize memory to 0 to prevent garbage
- 	 * data crashing system when download firmware
- 	 */
--	memset(dest_ring->base_addr_owner_space_unaligned, 0,
--	       nentries * sizeof(struct ce_desc_64) + CE_DESC_RING_ALIGN);
--
- 	dest_ring->base_addr_owner_space =
- 			PTR_ALIGN(dest_ring->base_addr_owner_space_unaligned,
- 				  CE_DESC_RING_ALIGN);
-@@ -2019,8 +2016,6 @@ void ath10k_ce_alloc_rri(struct ath10k *ar)
- 		value |= ar->hw_ce_regs->upd->mask;
- 		ath10k_ce_write32(ar, ce_base_addr + ctrl1_regs, value);
- 	}
--
--	memset(ce->vaddr_rri, 0, CE_COUNT * sizeof(u32));
- }
- EXPORT_SYMBOL(ath10k_ce_alloc_rri);
- 
+Patch applied to ath-next branch of ath.git, thanks.
+
+6b4021deb03f ath10k: add new hw_ops for sdio chip
+
 -- 
-2.11.0
+https://patchwork.kernel.org/patch/10998099/
+
+https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
 
 
 _______________________________________________
