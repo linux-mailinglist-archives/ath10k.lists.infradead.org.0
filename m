@@ -2,77 +2,71 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id ABB4D59335
-	for <lists+ath10k@lfdr.de>; Fri, 28 Jun 2019 07:08:23 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id DFB7B59504
+	for <lists+ath10k@lfdr.de>; Fri, 28 Jun 2019 09:32:01 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
-	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=tNq76cRJ+WSh+RXlINNrE1jCvhVfIPghM9JNQ2yzebc=; b=ZWxA2NUX2woWYj
-	dXVSY82gNKyh5WSayc3BB+UVp5EwMgRLwOeuYD4PSKtkBozOllFLIcWNzDslJuMoDV0HE7Hp5lTGk
-	7iPmSjfI7WvaEISP/BpDcC8oOL/126sNuJnQw6fKcNUug2Zt41tLEy+4PN19BApOw0+etN845qTof
-	I9Pf4IpZqtQLpUZenpKCuGkQ5SmJPsit7G1aO+08P4cHiIOZQZ4UfT/snvsKuZM0Sa20DAeDa0SQU
-	6aIDAOyFXwTpyVDxddF52mOnFXHBA13vEB4VhuTFWyJ14AEU3XYaBr0vV4r4kugAmz/437/5JpPNq
-	WYHYIOLsy6acDEqn3LvA==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
+	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=KiJYLcfouiSrJtFWh0P/jWJkINQ0bPKoCdeG3nJEaEg=; b=lNw
+	+9Na0PQKt02GsNPDNLZNM6bIs3kCb+Nd3SE8sh+3dFTUeTbOoCXNGO0EivZwm9sbcuCLoV529kqgz
+	bOTwTg2cwKpy6TEPnpGyviZuxSs57ypy6MO4PpRvko9cVlPHgpC7qUkzdmgjRjgGy1DuH6NW9nEc1
+	jLYAjYElh73PQA1De9w3TxHy2VoXPmFMsuql/lODxCoFV3+9mhqerIlyUFnkv31r56c7ObtlJ3Btf
+	dvrIksF1P3ugRSj+sxMPql4rNhHofMNRVP2ctOxqgKl1hoE1x9eYP7SOrOY7zQhbiklo9KBdEeU8q
+	Yf/nHF4MZcF5A/2g7HicnGuP3kS7W7A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hgj7V-00047z-Sg; Fri, 28 Jun 2019 05:08:21 +0000
+	id 1hglMQ-0003oZ-2d; Fri, 28 Jun 2019 07:31:54 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hgj7I-00042m-90
- for ath10k@lists.infradead.org; Fri, 28 Jun 2019 05:08:09 +0000
+ id 1hglMK-0003o9-Ho
+ for ath10k@lists.infradead.org; Fri, 28 Jun 2019 07:31:49 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id ECF4260E40; Fri, 28 Jun 2019 05:08:07 +0000 (UTC)
+ id 6024260A43; Fri, 28 Jun 2019 07:31:46 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1561698487;
- bh=rb7ZCFwECe0+1BB4kbofLdYTkobYyf8xm5XvPY+X28k=;
- h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=K+qxu1wmpEacp/1rtwuUS46ONjSuQSWqb76Wj/NjxihP4DQKdSLVRMrcQO89KZR0J
- taLLRWai3ZEc0sDY9UgAWS8kll+VU4FEDQ2xFt5izeC3TTxSZxDVZX8468CpLKUERh
- c4L7O51ZDD8MpBtaBvL2vJcifAdQfK/nSs/gfvEg=
+ s=default; t=1561707106;
+ bh=+9xyXiRYLpw9BcxZ6J8Eald2gfGG5pwOx3yOKjDlG2c=;
+ h=From:To:Cc:Subject:Date:From;
+ b=l0Ue87SaEui7QLMfCTfLA5CNBX0mNTbAPq3sR3rfS0bjTZ8xXehZcN80WyQUEmt1H
+ eE1/HQeYdz9qAvoKkELGeqUoZ0S3cr7lazezr1Vs9RCn2ypwnJQ1XDPyD4uehwYzWF
+ IfLScK690AwQxsbwraGjtVZONVQ/LHiE9E9T/FBs=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
 X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
  DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
  version=3.4.0
-Received: from x230.qca.qualcomm.com (88-114-240-156.elisa-laajakaista.fi
- [88.114.240.156])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+Received: from bpothuno-linux.qualcomm.com
+ (blr-c-bdr-fw-01_globalnat_allzones-outside.qualcomm.com [103.229.19.19])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
  (No client certificate requested)
- (Authenticated sender: kvalo@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 979C1607C3;
- Fri, 28 Jun 2019 05:08:06 +0000 (UTC)
+ (Authenticated sender: bpothuno@codeaurora.org)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 8D64160A97;
+ Fri, 28 Jun 2019 07:31:44 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1561698487;
- bh=rb7ZCFwECe0+1BB4kbofLdYTkobYyf8xm5XvPY+X28k=;
- h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=K+qxu1wmpEacp/1rtwuUS46ONjSuQSWqb76Wj/NjxihP4DQKdSLVRMrcQO89KZR0J
- taLLRWai3ZEc0sDY9UgAWS8kll+VU4FEDQ2xFt5izeC3TTxSZxDVZX8468CpLKUERh
- c4L7O51ZDD8MpBtaBvL2vJcifAdQfK/nSs/gfvEg=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 979C1607C3
+ s=default; t=1561707106;
+ bh=+9xyXiRYLpw9BcxZ6J8Eald2gfGG5pwOx3yOKjDlG2c=;
+ h=From:To:Cc:Subject:Date:From;
+ b=l0Ue87SaEui7QLMfCTfLA5CNBX0mNTbAPq3sR3rfS0bjTZ8xXehZcN80WyQUEmt1H
+ eE1/HQeYdz9qAvoKkELGeqUoZ0S3cr7lazezr1Vs9RCn2ypwnJQ1XDPyD4uehwYzWF
+ IfLScK690AwQxsbwraGjtVZONVQ/LHiE9E9T/FBs=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 8D64160A97
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
- spf=none smtp.mailfrom=kvalo@codeaurora.org
-From: Kalle Valo <kvalo@codeaurora.org>
-To: Johannes Berg <johannes@sipsolutions.net>
-Subject: Re: [PATCH 2/2] ath10k: pci: remove unnecessary casts
-References: <1561661250-30528-1-git-send-email-kvalo@codeaurora.org>
- <1561661250-30528-2-git-send-email-kvalo@codeaurora.org>
- <58e8952b87c8aa533c15fe5650f3f71288377f36.camel@sipsolutions.net>
- <a6c87741bc3e992bf61d2706834e069917018745.camel@sipsolutions.net>
-Date: Fri, 28 Jun 2019 08:08:04 +0300
-In-Reply-To: <a6c87741bc3e992bf61d2706834e069917018745.camel@sipsolutions.net>
- (Johannes Berg's message of "Thu, 27 Jun 2019 21:15:48 +0200")
-Message-ID: <87r27eqouj.fsf@codeaurora.org>
-User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/24.5 (gnu/linux)
-MIME-Version: 1.0
+ spf=none smtp.mailfrom=bpothuno@codeaurora.org
+From: Balaji Pothunoori <bpothuno@codeaurora.org>
+To: ath10k@lists.infradead.org
+Subject: [PATCH] ath10k: check data ack rssi enabled/disabled in htt rx event
+Date: Fri, 28 Jun 2019 13:01:24 +0530
+Message-Id: <1561707084-10021-1-git-send-email-bpothuno@codeaurora.org>
+X-Mailer: git-send-email 2.7.4
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190627_220808_432896_E486080B 
-X-CRM114-Status: GOOD (  12.28  )
+X-CRM114-CacheID: sfid-20190628_003148_609385_D3149299 
+X-CRM114-Status: UNSURE (   8.78  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-2.5 points)
@@ -100,38 +94,46 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org
+Cc: Abhishek Ambure <aambure@codeaurora.org>, linux-wireless@vger.kernel.org,
+ Balaji Pothunoori <bpothuno@codeaurora.org>
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Johannes Berg <johannes@sipsolutions.net> writes:
+From: Abhishek Ambure <aambure@codeaurora.org>
 
-> On Thu, 2019-06-27 at 21:12 +0200, Johannes Berg wrote:
->> On Thu, 2019-06-27 at 21:47 +0300, Kalle Valo wrote:
->> > Fixes checkpatch warnings:
->> > 
->> > drivers/net/wireless/ath/ath10k/pci.c:926: unnecessary cast may
->> > hide bugs, see http://c-faq.com/malloc/ma
->> > drivers/net/wireless/ath/ath10k/pci.c:1072: unnecessary cast may
->> > hide bugs, see http://c-faq.com/malloc/m
->> 
->> I think you cut off the link there, did you mean
->> http://c-faq.com/malloc/mallocnocast.html perhaps?
+For all data packets trasmmited, host gets htt tx completion event.
 
-Yes, thanks. Fixed now in the pending branch.
+QCA9984 firmware gives data ack rssi values to host through
+htt event of data tx completion. Data ack rssi values are valid
+if A0 bit is set in HTT rx message.
 
-> Which I should've read before replying ... WHAT? We consider calling
-> undeclared functions an *error* in the kernel, this is quite pointless.
+Tested HW: QCA9984
+Tested FW: 10.4-3.9.0.2-00044
 
-Yeah, the link checkpatch provides is pointless. TBH I didn't even read
-it until you commented on it :) But the patch is still good to have as
-there's no point of use casting on void pointers, it's just extra cruft.
-Right?
+Signed-off-by: Abhishek Ambure <aambure@codeaurora.org>
+Signed-off-by: Balaji Pothunoori <bpothuno@codeaurora.org>
+---
+ drivers/net/wireless/ath/ath10k/hw.c | 1 +
+ 1 file changed, 1 insertion(+)
 
+diff --git a/drivers/net/wireless/ath/ath10k/hw.c b/drivers/net/wireless/ath/ath10k/hw.c
+index ad082b7..303f17d 100644
+--- a/drivers/net/wireless/ath/ath10k/hw.c
++++ b/drivers/net/wireless/ath/ath10k/hw.c
+@@ -1145,6 +1145,7 @@ static bool ath10k_qca99x0_rx_desc_msdu_limit_error(struct htt_rx_desc *rxd)
+ const struct ath10k_hw_ops qca99x0_ops = {
+ 	.rx_desc_get_l3_pad_bytes = ath10k_qca99x0_rx_desc_get_l3_pad_bytes,
+ 	.rx_desc_get_msdu_limit_error = ath10k_qca99x0_rx_desc_msdu_limit_error,
++	.is_rssi_enable = ath10k_htt_tx_rssi_enable,
+ };
+ 
+ const struct ath10k_hw_ops qca6174_ops = {
 -- 
-Kalle Valo
+2.7.4
+
 
 _______________________________________________
 ath10k mailing list
