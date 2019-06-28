@@ -2,36 +2,36 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D0D6459CFD
-	for <lists+ath10k@lfdr.de>; Fri, 28 Jun 2019 15:35:56 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7732759CFF
+	for <lists+ath10k@lfdr.de>; Fri, 28 Jun 2019 15:36:14 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
 	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ijHndqNAaJyuVLP+8HtoSSzOOcosuzPP9ZmiTE1nHcM=; b=lrAmXDitrgOuLv
-	jv7BtjjkwpunFDBJiXIjw9/y75BXgWjELlbbpdQ0R0EWz4avHLU7EGzmM6znwzdAHTqrKhuRDegZy
-	rW/kRUDQqR9dNXns5Z9nF7843SQgwUr371e2IbCwx2Vnho0EifE3A3+9IIIx24bECxFBgMGNfnbN8
-	jJH+yrZrc0OQttCi2BkC5K2CoydI49FdZ1lrHVeW2ZORJfsM5fslWtRLW4ZeZi3DWf8f5l/k3Gs5Y
-	Aj9vuY2WJDOj66f1Mr+FIW/sMyIgiV9qSsXUq/7+rxT4yOEBprv7qC5VXui219Pe/jb5gqUO+9fa1
-	oua5GFhRxR8LbswTlLLg==;
+	List-Owner; bh=rb1mHchFE4pQWBOG3d27UvBvxxQi3qNiGaUdvcYWSwA=; b=dwGZr3Rh00cLyM
+	JtVpuaGFZ5ISapnSV+jFItyVdh1pOuql5kia/lGDUVSkYrd5D8Wb/jC9a/LPQkIMZqEisEBxOyLJ5
+	RC/4RURGsRGe3Ghu49PkGXhgF1Ox8WikSom6zkVAYdmrTN1rtKVRKqr0Ip3Bn63hDbxLWaZoBcC3m
+	7qUJ16Z0n9JbhW5pplPCp6B83JC8ZWLYGSZS4GnhISuAjiYEcevjATk7uI6+5jRp/szNI3XlSHgQR
+	bLmkZJUarMxgZZL1qj16lZpnvEoYCjkIw3taQnaiV2TVrs04I+IqpM8d1ZHMJ2LsoUwPjj6pCRqR6
+	5hsfxITXSD/u2z02gnmA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hgr2h-0006oK-IK; Fri, 28 Jun 2019 13:35:55 +0000
+	id 1hgr2y-0006uZ-00; Fri, 28 Jun 2019 13:36:12 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hgr2d-0006o0-5t
- for ath10k@lists.infradead.org; Fri, 28 Jun 2019 13:35:52 +0000
+ id 1hgr2s-0006te-1j
+ for ath10k@lists.infradead.org; Fri, 28 Jun 2019 13:36:07 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id E3274602DC; Fri, 28 Jun 2019 13:35:50 +0000 (UTC)
+ id BD09760A97; Fri, 28 Jun 2019 13:36:05 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1561728950;
- bh=E4iuvxrhPqp/fQgXow6u9wJmgBjM4g9BI1mfC8tzpDE=;
+ s=default; t=1561728965;
+ bh=dCdOeCtvtO0Nt/DkBVM9j//E47E+fC7PxIPwN+EpYo0=;
  h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=Z4QvRrxtNDrKN68bj9mBuyZA3ZFl+uuTpP5a/tAts51TWgJ/m60g2Zc2iGAWdfmp2
- zwX/lBTw4cbIVclONJ/Ce8sa02qIMCSOz5H2Qmukvig7h8bNlXfDKFhnSL54ln9/TR
- So9asVPnSOGwHeIWdoDs+V5bfTRZcQosQMDfORfM=
+ b=m+L0qhtMj+iFwmPlrakWc3/J3gMbvG/y8V490N/Qm8peh1mZF7fRUIZh9WDihV7j4
+ fGx9tHJVuAyzrJnKvX6D3OwGgIJKAi+GE/R9zrJi2FbvrU5W+iJe4mZgtZi3rWc/bh
+ niyv1q0qvLxOTOf2ew5n3l3fNP+bL2k1V7U5peuQ=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
@@ -43,16 +43,16 @@ Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
  (Authenticated sender: kvalo@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id B8BEF60767;
- Fri, 28 Jun 2019 13:35:49 +0000 (UTC)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 95AE36070D;
+ Fri, 28 Jun 2019 13:36:04 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1561728950;
- bh=E4iuvxrhPqp/fQgXow6u9wJmgBjM4g9BI1mfC8tzpDE=;
+ s=default; t=1561728965;
+ bh=dCdOeCtvtO0Nt/DkBVM9j//E47E+fC7PxIPwN+EpYo0=;
  h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=Z4QvRrxtNDrKN68bj9mBuyZA3ZFl+uuTpP5a/tAts51TWgJ/m60g2Zc2iGAWdfmp2
- zwX/lBTw4cbIVclONJ/Ce8sa02qIMCSOz5H2Qmukvig7h8bNlXfDKFhnSL54ln9/TR
- So9asVPnSOGwHeIWdoDs+V5bfTRZcQosQMDfORfM=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org B8BEF60767
+ b=m+L0qhtMj+iFwmPlrakWc3/J3gMbvG/y8V490N/Qm8peh1mZF7fRUIZh9WDihV7j4
+ fGx9tHJVuAyzrJnKvX6D3OwGgIJKAi+GE/R9zrJi2FbvrU5W+iJe4mZgtZi3rWc/bh
+ niyv1q0qvLxOTOf2ew5n3l3fNP+bL2k1V7U5peuQ=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 95AE36070D
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
@@ -60,16 +60,16 @@ Authentication-Results: pdx-caf-mail.web.codeaurora.org;
 From: Kalle Valo <kvalo@codeaurora.org>
 To: "Theone" <1805692831@qq.com>
 Subject: Re: ath10k-firmware: QCA4019 hw1.0: Add Qxwlan E2600AC specific BDFs
-References: <tencent_9DDF95DF96EF68F50B6B6DC8FE5D21E63C0A@qq.com>
-Date: Fri, 28 Jun 2019 16:35:47 +0300
-In-Reply-To: <tencent_9DDF95DF96EF68F50B6B6DC8FE5D21E63C0A@qq.com> (Theone's
- message of "Sat, 5 Jan 2019 10:26:44 +0800")
-Message-ID: <87ef3desss.fsf@kamboji.qca.qualcomm.com>
+References: <tencent_C743F5CF1BF1E399A55CAD3C5B4B40F87805@qq.com>
+Date: Fri, 28 Jun 2019 16:36:02 +0300
+In-Reply-To: <tencent_C743F5CF1BF1E399A55CAD3C5B4B40F87805@qq.com> (Theone's
+ message of "Mon, 7 Jan 2019 10:49:49 +0800")
+Message-ID: <87a7e1essd.fsf@kamboji.qca.qualcomm.com>
 User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/24.5 (gnu/linux)
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190628_063551_239060_9B0700D9 
-X-CRM114-Status: GOOD (  13.77  )
+X-CRM114-CacheID: sfid-20190628_063606_112943_7C78F2FA 
+X-CRM114-Status: GOOD (  14.67  )
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-2.5 points)
@@ -105,6 +105,8 @@ Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
 "Theone" <1805692831@qq.com> writes:
 
+> For the questions from the wiki page:
+>
 > * description for what hardware this is:
 >
 >   - it is a IPQ4018 based board (AP-DK07-C1)
