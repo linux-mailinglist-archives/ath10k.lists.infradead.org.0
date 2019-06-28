@@ -2,36 +2,36 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 79DED59D35
-	for <lists+ath10k@lfdr.de>; Fri, 28 Jun 2019 15:49:40 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7792459D37
+	for <lists+ath10k@lfdr.de>; Fri, 28 Jun 2019 15:50:04 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
 	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=QDsnAtFkenhxuyoo83uww8EdKvKNCzl4Z5flcGicI1g=; b=BD+e6qgVlQr5pD
-	TcSHX7jtH8GQqUpvq4gtiWoonL5WSOzvUQX970WKxgYNCbaXgn1o2uMHgzASEbR61c0yxRoSU3+D1
-	JaPOhBPyfyaG1YGUMNnwcr4vvOVMODKcGUWy8otKbZrGxL5y1PtOqICbr/bpinS/0ufrxw3E0qwo+
-	yXEOVt5yy48WerDcKepu3X5h+rj8NLaNUO/mdUdzjH/xMdbA+LRauMP6gy0KxaXxpocaPO5W4jDLY
-	A9Gv/BzAHsNQG0ejgeMz/nzzW9K77/ZZ7VkYZ0nA4Uth9jqEsrU0BQ33Al+jvRyzcwdLgLQFBqY0Q
-	3ijziphnFq+P44f1+hjw==;
+	List-Owner; bh=wHH+3VlXgbaG2gIhUX0S9EuLIYvIbIivMiLduRr/t3c=; b=e1VC1s9mRPsHzp
+	uQaCbjPIY4tBBNDINvro4tQxuaPNzSBptPr6TdQNvEARJiW/rGSD09CezjpJPUK6aGyYSPd/J4lIu
+	2iiGaduboe/idWhwtHG22lQKxhPnIqaIlyex1Uj6TPLPOBxV+2Gytj33o3Axrx8eXwzIa7/446Ybf
+	+P9bLji87Di4d95dv0xsg5SLdWbQg7ljaqX0O/rlIdvrpRK9wQAavrm6b63Yl3Ls+FY/xPYqahpRM
+	cO8TymmhwgNQGYU8Z9GHnCpBMhlZjPcM5Z7aZsLiUp433MheXaunWjECZL0hQMML0ANJOYIWoTjmB
+	U/hAwgK3z2lkhb6C+M0g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hgrFy-00038s-OL; Fri, 28 Jun 2019 13:49:38 +0000
+	id 1hgrGM-0003EU-Bo; Fri, 28 Jun 2019 13:50:02 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hgrFt-00038Y-Kg
- for ath10k@lists.infradead.org; Fri, 28 Jun 2019 13:49:35 +0000
+ id 1hgrGG-0003E8-9y
+ for ath10k@lists.infradead.org; Fri, 28 Jun 2019 13:49:57 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 4BDDF6087F; Fri, 28 Jun 2019 13:49:33 +0000 (UTC)
+ id 139E4607B9; Fri, 28 Jun 2019 13:49:56 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1561729773;
- bh=g/Z+bzugPhwoF+fd2p4l8D4g9G/UHIfhP12PoFrfFjc=;
+ s=default; t=1561729796;
+ bh=xTrysWDliXhoqOvMsPVdzToNBXpuJ2qvsZzFBg1HE/o=;
  h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=jyRFqcfqd/hWl2qyvutt7ouey12AfqY86+YgIeaj7Ws1kXCXOCYqUavINB6bQHbMP
- 8alLVXNF5pdI/mGafOyVu4oZ2kmEzEJNM/aH4D1Kcpk+cmC/rztv8y17mcd9Xa7IP2
- Txd6q8NfwK2nvo6QNmrkEL853J8yv/0Wj7RHlOP0=
+ b=Co0oAb8/wyhZSqkZx07OK/cjs/JQByVUMkX0RLTyvjgHXo6kzyKSKeVeCfYuHYLkf
+ aGIRyoZWqMqjF6H7x2xEpL5D72/RwjUka36+rNRs9Fe6OoXkhnZcKa0XFkZ2odnxnE
+ qTvvy3gA3iWOr1Iqypk3scKvlIpxdPxQ28Q6qs8c=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
@@ -43,32 +43,32 @@ Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
  (Authenticated sender: kvalo@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id C79656087F;
- Fri, 28 Jun 2019 13:49:31 +0000 (UTC)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id A07FF602F4;
+ Fri, 28 Jun 2019 13:49:54 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1561729772;
- bh=g/Z+bzugPhwoF+fd2p4l8D4g9G/UHIfhP12PoFrfFjc=;
+ s=default; t=1561729795;
+ bh=xTrysWDliXhoqOvMsPVdzToNBXpuJ2qvsZzFBg1HE/o=;
  h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=mxo8V7iUs5vsTvSapEn8z4rmQSCnSiPmhmZkB0fmsMhhwdZ3nxWgJ4wUhDuANoQ+J
- Z39fE/i3081B5rmhuoA/jjUDqNAgYUgZRserll7aMospjb8wisIqeQCDRtAmyMHkPI
- dj8Cjbrv2AvJ5JDvJx4HRR/HRRt3CGOyVKsa83yE=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org C79656087F
+ b=FudEDp0II7sVNuhVyLjvxW3NoQnv0bCEZtvFtdZ44/m0XEVufkas+gQep4hfI+087
+ R5AVYVKLYDnvVhHR8HwB9N7oY9anwRhaoES/mq59egNwI1j1hXyVPTfM0iVhHmVdQX
+ w3nwoius2QpqRdwU9lSxm6FT+UcnDUrv54FCSgs0=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org A07FF602F4
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  spf=none smtp.mailfrom=kvalo@codeaurora.org
 From: Kalle Valo <kvalo@codeaurora.org>
 To: Jeff Kletsky <lede@allycomm.com>
-Subject: Re: ath10k-firmware: IPQ4019 hw1.0: Add BDF for Linksys EA8300 [1/2]
-References: <d84cb3b1-6708-6a87-9181-9c2319742111@allycomm.com>
-Date: Fri, 28 Jun 2019 16:49:29 +0300
-In-Reply-To: <d84cb3b1-6708-6a87-9181-9c2319742111@allycomm.com> (Jeff
- Kletsky's message of "Fri, 17 May 2019 09:38:40 -0700")
-Message-ID: <87tvc9bz12.fsf@kamboji.qca.qualcomm.com>
+Subject: Re: ath10k-firmware: QCA9888 hw2.0: Add BDF for Linksys EA8300 [2/2]
+References: <ac097652-455f-cd1f-0f48-f19fad61933c@allycomm.com>
+Date: Fri, 28 Jun 2019 16:49:52 +0300
+In-Reply-To: <ac097652-455f-cd1f-0f48-f19fad61933c@allycomm.com> (Jeff
+ Kletsky's message of "Fri, 17 May 2019 09:39:05 -0700")
+Message-ID: <87pnmxbz0f.fsf@kamboji.qca.qualcomm.com>
 User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/24.5 (gnu/linux)
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190628_064933_722572_64A17D2F 
+X-CRM114-CacheID: sfid-20190628_064956_375956_6F5E90D5 
 X-CRM114-Status: GOOD (  14.77  )
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -167,58 +167,27 @@ Jeff Kletsky <lede@allycomm.com> writes:
 >
 >
 >
-> For the IPQ4019:
+> For the QCA9888:
 >
->     ath10k_ahb a000000.wifi: qca4019 hw1.0 target 0x01000000 chip_id 0x003b00ff sub 0000:0000
+>     ath10k_pci 0000:01:00.0: qca9888 hw2.0 target 0x01000000 chip_id 0x00000000 sub 0000:0000
 >
->     ath10k_ahb a000000.wifi: board_file api 2 bmi_id 0:20 crc32 8fda7e22
->     ath10k_ahb a800000.wifi: board_file api 2 bmi_id 0:21 crc32 8fda7e22
->
->
-> bus=ahb,bmi-chip-id=0,bmi-board-id=20,variant=linksys-ea8300-ah
-> a8e23769dc98da97b6c70a4f601ffca8
->
-> bus=ahb,bmi-chip-id=0,bmi-board-id=20,variant=linksys-ea8300-fcc
-> 057ed5528e360197c2239796710cb61c
->
-> bus=ahb,bmi-chip-id=0,bmi-board-id=20,variant=linksys-ea8300-eu
-> 5cef8208a0345c1469494e44e1f370f1
->
-> bus=ahb,bmi-chip-id=0,bmi-board-id=20,variant=linksys-ea8300-ic
-> e8858ab9259f7d4372040da1c592d1cc
+>     ath10k_pci 0000:01:00.0: board_file api 2 bmi_id 0:23 crc32 b050e9d6
 >
 >
-> bus=ahb,bmi-chip-id=0,bmi-board-id=21,variant=linksys-ea8300-eu
-> d6d7ed00db985b4d8c48ccc3fe10fa87
+> bus=pci,bmi-chip-id=0,bmi-board-id=23,variant=linksys-ea8300-eu
+> 7f2f0de6c0fb2df1d642895d8233d3ef
 >
-> bus=ahb,bmi-chip-id=0,bmi-board-id=21,variant=linksys-ea8300-ic
-> 435d236890521515feffc834218ca594
+> bus=pci,bmi-chip-id=0,bmi-board-id=23,variant=linksys-ea8300-ic
+> 27d9dfe1e86c3befe808f89dd3cd105b
 >
-> bus=ahb,bmi-chip-id=0,bmi-board-id=21,variant=linksys-ea8300-fcc
-> 0e820f5946b5773ad9f4a74809c05b79
+> bus=pci,bmi-chip-id=0,bmi-board-id=23,variant=linksys-ea8300-ah
+> 27d71485fc4987bc1c11b7744c373b59
 >
-> bus=ahb,bmi-chip-id=0,bmi-board-id=21,variant=linksys-ea8300-ah
-> 0171919a4576199ae88e8831f72c03fe
+> bus=pci,bmi-chip-id=0,bmi-board-id=23,variant=linksys-ea8300-fcc
+> 62049f88a498e51870973143e376e7af
 
 My script expects that the attachments end with '.bin' suffix. Could you
 please fix that and resend everything?
-
-[2. application/octet-stream; bus=ahb,bmi-chip-id=0,bmi-board-id=20,variant=linksys-ea8300-ah]...
-
-[3. application/octet-stream; bus=ahb,bmi-chip-id=0,bmi-board-id=20,variant=linksys-ea8300-eu]...
-
-[4. application/octet-stream; bus=ahb,bmi-chip-id=0,bmi-board-id=20,variant=linksys-ea8300-fcc]...
-
-[5. application/octet-stream; bus=ahb,bmi-chip-id=0,bmi-board-id=20,variant=linksys-ea8300-ic]...
-
-[6. application/octet-stream; bus=ahb,bmi-chip-id=0,bmi-board-id=21,variant=linksys-ea8300-ah]...
-
-[7. application/octet-stream; bus=ahb,bmi-chip-id=0,bmi-board-id=21,variant=linksys-ea8300-eu]...
-
-[8. application/octet-stream; bus=ahb,bmi-chip-id=0,bmi-board-id=21,variant=linksys-ea8300-fcc]...
-
-[9. application/octet-stream; bus=ahb,bmi-chip-id=0,bmi-board-id=21,variant=linksys-ea8300-ic]...
-
 
 -- 
 Kalle Valo
