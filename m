@@ -2,75 +2,74 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id DD63459D3E
-	for <lists+ath10k@lfdr.de>; Fri, 28 Jun 2019 15:53:30 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id F21EF5A4EB
+	for <lists+ath10k@lfdr.de>; Fri, 28 Jun 2019 21:11:52 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
-	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=D51ZgrCqU/GzUOkCz6sKlS0Gr3HsO3EyGmqkdBJC5NM=; b=etw/66rDIfgl29
-	T8dTbbsUk2e1b5efTjw6ILwEzLXyp1ZoFwWougJZalxfeNNeGE7iZaGHpc37hy0avoOGzY9r9MuS/
-	N4MUKvVGDLIJ+4tPQCig14/d5hEuWTYHlRLW35FgnbGxD3N+8/Ac30tQ71Nb/gnKYozUl4zHX+EJD
-	lVrLHgAF1iDqgIWP/va784G2HIN0xA/Axhvm4Jqi8wa+7ClIH3Sk5dAY847RnXVxI8+nH11kxLToL
-	0kHqVtO9Q25ql8krvldfYvn26v9bSaIAaBhLnenT7VvB49v1S4B18qGyuz38WSOUw09BjzPpyah6S
-	ZjM3QNcOri9eM+URGyxA==;
+	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
+	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=FSUARHOgpEt1TSg1x/2MnRviAJpHDjDfYmW4D8u9/eE=; b=ECoGT+tQfHr53d
+	Chbk7eH5s0321QQ5+Pmyp38YzKEnyHhTyhA6ikFqLkp6OGND7twodXQSi+gm/pBdeTJ4pfj76OzR6
+	PiwMfZnPMXBbbbh+t8EWV8cXDwN5mMhdovmKhng9pfXprGLiVmDuuI1OOAfTUEx+OLeBiPMrN9/Bv
+	acnYMpQkgodsany2pJzL4VKyFFPDt2vMyyDP2SLUldmx8jvYxODwjneHYSjSAnPwMzO/hHZznqk0m
+	Fn9eVYI46dQgcCxwVHdOl+cGNCwjTUlu5NYHtEpY3iCeC+XScPrbS7BesOTMd/FigWASJde1wluDr
+	edoq805Z5boLiEpmIz6A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hgrJf-0004i0-No; Fri, 28 Jun 2019 13:53:27 +0000
+	id 1hgwHj-0002jj-2R; Fri, 28 Jun 2019 19:11:47 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hgrJc-0004hV-0p
- for ath10k@lists.infradead.org; Fri, 28 Jun 2019 13:53:25 +0000
+ id 1hgwHc-0002iT-Qn
+ for ath10k@lists.infradead.org; Fri, 28 Jun 2019 19:11:43 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id B31076090E; Fri, 28 Jun 2019 13:53:23 +0000 (UTC)
+ id 242FE6070D; Fri, 28 Jun 2019 19:11:39 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1561730003;
- bh=cqB89pXcx8FVZkWdCb/y/j3j2eb/XLqw45C4hlN5OT0=;
- h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=O8kNW4xzCWm3uNyixIYCTgfTulHG5BUugaVq2RxwcsjHL9pid/64Bjx7L4/L02cZE
- tx8wSktms6p0JoAQNIk0zKLWVpHKbx+m3ZqBcDc4hSyHJ786P/WB7Yrl8499ecIOnN
- 9myaLwYRi5vdf7u4C5R4Y2EHy5DQ73xdW1SxlZX4=
+ s=default; t=1561749099;
+ bh=ddt8Rhhf568xP/qGFkl2nTNQ1Jq4FVEQ6cpM76H63AQ=;
+ h=Subject:From:In-Reply-To:References:To:Cc:Date:From;
+ b=Z0m7q+OirlXfY9yZB9p3g0IuHFY/sK7tVHHkCxoDGE6M1i6E3E/R3OAzMTNDeFfOP
+ taNJ6FFZsJcRtyUUJb+IFQWyemiQAKWkT1VaTn2SLhyvwt3rjhscjLlHAM0sONt4CB
+ yJ/HgTA7MqHOywjq9+ivZ+RcovIJPVu+OeiJil5s=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
-X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
- DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
- version=3.4.0
+X-Spam-Status: No, score=-0.8 required=2.0 tests=ALL_TRUSTED,BAYES_00,
+ DKIM_INVALID,DKIM_SIGNED,MISSING_DATE,MISSING_MID,SPF_NONE autolearn=no
+ autolearn_force=no version=3.4.0
 Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
  [88.114.240.156])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
  (Authenticated sender: kvalo@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 9F0BD602F4;
- Fri, 28 Jun 2019 13:53:22 +0000 (UTC)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id C21F0604BE;
+ Fri, 28 Jun 2019 19:11:37 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1561730003;
- bh=cqB89pXcx8FVZkWdCb/y/j3j2eb/XLqw45C4hlN5OT0=;
- h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=O8kNW4xzCWm3uNyixIYCTgfTulHG5BUugaVq2RxwcsjHL9pid/64Bjx7L4/L02cZE
- tx8wSktms6p0JoAQNIk0zKLWVpHKbx+m3ZqBcDc4hSyHJ786P/WB7Yrl8499ecIOnN
- 9myaLwYRi5vdf7u4C5R4Y2EHy5DQ73xdW1SxlZX4=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 9F0BD602F4
+ s=default; t=1561749098;
+ bh=ddt8Rhhf568xP/qGFkl2nTNQ1Jq4FVEQ6cpM76H63AQ=;
+ h=Subject:From:In-Reply-To:References:To:Cc:From;
+ b=BmlWLChMo7PPNPArfzwZ/CXAYBvIx/8hezYAXqFDTb+WNiM9XRHDjfdbwQJ/rliyb
+ Xs+gCHdNdJEfndx/qpDDS6q3N7UHjwm5589rpHArsYsg3jhcZco4kVjEeEAj0UfAAd
+ n72mCuZOSWoJBRGn0JCFUF8LXgtmiBvl95eQjvW8=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org C21F0604BE
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  spf=none smtp.mailfrom=kvalo@codeaurora.org
-From: Kalle Valo <kvalo@codeaurora.org>
-To: Robert Marko <robimarko@gmail.com>
-Subject: Re: ath10k-firmware: QCA9984 hw1.0: Update Netgear Orbi Pro SRK60
- specific BDFs
-References: <CAOX2RU4qYWap-yWCoPsFT2o7K-Fwz7Xjdzo=aLc1rR2ytWNLOw@mail.gmail.com>
-Date: Fri, 28 Jun 2019 16:53:20 +0300
-In-Reply-To: <CAOX2RU4qYWap-yWCoPsFT2o7K-Fwz7Xjdzo=aLc1rR2ytWNLOw@mail.gmail.com>
- (Robert Marko's message of "Wed, 27 Mar 2019 14:16:57 +0100")
-Message-ID: <87lfxlbyun.fsf@kamboji.qca.qualcomm.com>
-User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/24.5 (gnu/linux)
 MIME-Version: 1.0
+Subject: Re: [PATCH] ath10k: Fix memory leak in qmi
+From: Kalle Valo <kvalo@codeaurora.org>
+In-Reply-To: <1561472748-28467-1-git-send-email-dundi@codeaurora.org>
+References: <1561472748-28467-1-git-send-email-dundi@codeaurora.org>
+To: Dundi Raviteja <dundi@codeaurora.org>
+User-Agent: pwcli/0.0.0-git (https://github.com/kvalo/pwcli/) Python/2.7.12
+Message-Id: <20190628191139.242FE6070D@smtp.codeaurora.org>
+Date: Fri, 28 Jun 2019 19:11:39 +0000 (UTC)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190628_065324_180233_5D24209F 
-X-CRM114-Status: GOOD (  17.58  )
+X-CRM114-CacheID: sfid-20190628_121140_890201_49E7ED20 
+X-CRM114-Status: UNSURE (   7.57  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-2.5 points)
@@ -98,69 +97,37 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: ath10k@lists.infradead.org
+Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
+ Dundi Raviteja <dundi@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Robert Marko <robimarko@gmail.com> writes:
+Dundi Raviteja <dundi@codeaurora.org> wrote:
 
-> I am currently working on the Netgear Orbi Pro SRK60 support for
-> OpenWrt. This
-> AP requires three special BDFs to get the Wi-Fi PHYs working (correctly). The
-> bmi-board-id='s would clash with one of the the IPQ401X AP-DK boards because
-> QCA doesn't provide special IDs for customers and seems to use the AP-DK
-> board-ids in the wifi firmware to change its behavior.
->
-> This update finally makes the QCA9984 stable, this is v6 of Netgear
-> BDFs and previous ones
-> would crash the firmware and driver after couple of minutes.
->
-> Now to the questions from the wiki page [1]:
->
-> * description for what hardware this is:
->
->   - it is a QCA4019 based module (based on qcom-ipq4019-ap.dk04.1-c1)
->   - one QCA4019 radio is used as 2.4GHz radio
->   - one QCA4019 radio is used as 5GHz radio
->   - an additional QCA9984 5GHz radio is attached via PCI
->
-> * origin of the board file (did you create it yourself or where you
->   downloaded)
->
->   - it was pulled from the factory firmware image
->   - it is based on latest 2.3.0.0 firmware
->
-> * ids to be used with the board file (ATH10K_BD_IE_BOARD_NAME in ath10k)
->
->   - QCA9984 hw1.0
->
->   + bus=pci,bmi-chip-id=0,bmi-board-id=6,variant=Netgear-Orbi-Pro-SRK60
->      md5sum:
->      7002a32bac187b47b5e14fb7d1659836
->
-> * attach the actual board file (board.bin)
->
->   - The name of the files are equal to the id string in the board-2.bin
->     (minus the ".bin")
+> Currently the memory allocated for qmi handle is
+> not being freed during de-init which leads to memory leak.
+> 
+> Free the allocated qmi memory in qmi deinit
+> to avoid memory leak.
+> 
+> Tested HW: WCN3990
+> Tested FW: WLAN.HL.3.1-01040-QCAHLSWMTPLZ-1
+> 
+> Fixes: fda6fee0001e ("ath10k: add QMI message handshake for wcn3990 client")
+> Signed-off-by: Dundi Raviteja <dundi@codeaurora.org>
+> Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 
-Thanks, added to QCA9984/hw1.0/board-2.bin:
+Patch applied to ath-next branch of ath.git, thanks.
 
-New:
-
-
-Changed:
-bus=pci,bmi-chip-id=0,bmi-board-id=6,variant=Netgear-Orbi-Pro-SRK60
-
-Deleted:
-
-0 board image(s) added, 1 changed, 0 deleted, 15 in total
-
-https://github.com/kvalo/ath10k-firmware/commit/7651f5bb299c40e34e05179b1bd15b211856a4b0
+c709df58832c ath10k: Fix memory leak in qmi
 
 -- 
-Kalle Valo
+https://patchwork.kernel.org/patch/11015647/
+
+https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
+
 
 _______________________________________________
 ath10k mailing list
