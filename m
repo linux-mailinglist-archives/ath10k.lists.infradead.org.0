@@ -2,36 +2,36 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 70EEF5932C
-	for <lists+ath10k@lfdr.de>; Fri, 28 Jun 2019 07:01:22 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id ABB4D59335
+	for <lists+ath10k@lfdr.de>; Fri, 28 Jun 2019 07:08:23 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
 	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=pB2xUv2QhRhnM7ErWE3RZQeE2ONp4IkceBWbTKGGAD0=; b=KRecNBTkkJrGJc
-	Xqnp7NtunAhUJkcvRvCBGVa6VznkmQhdw2ZszdQ2NYjqeIlL0/7mlWX5ZEJnlw2fduZj3vKVJBQ6p
-	swZ2uCPQKB1rhvJCY2p89dWEfHPwSR1jEcYTZrm4zYK+EgjJos9YSnYeZ2Gi+EO9yc6qs9UQ3YjdJ
-	WztuIJrxOehIru1KvldtDSER7+DB2h4fMfXE1n7YywG1O2zrz4RV9j0KDf/taM+4DCsbQYREXN0le
-	i3OR+hhSGSmJfpIMbqreXKSRtjmIrNN+d387T1/2wzrNxYugPI9bjtTcLWIMLcHyeRskZLR1pTILQ
-	1xm6Jqc1XlmNaLCBfEmQ==;
+	List-Owner; bh=tNq76cRJ+WSh+RXlINNrE1jCvhVfIPghM9JNQ2yzebc=; b=ZWxA2NUX2woWYj
+	dXVSY82gNKyh5WSayc3BB+UVp5EwMgRLwOeuYD4PSKtkBozOllFLIcWNzDslJuMoDV0HE7Hp5lTGk
+	7iPmSjfI7WvaEISP/BpDcC8oOL/126sNuJnQw6fKcNUug2Zt41tLEy+4PN19BApOw0+etN845qTof
+	I9Pf4IpZqtQLpUZenpKCuGkQ5SmJPsit7G1aO+08P4cHiIOZQZ4UfT/snvsKuZM0Sa20DAeDa0SQU
+	6aIDAOyFXwTpyVDxddF52mOnFXHBA13vEB4VhuTFWyJ14AEU3XYaBr0vV4r4kugAmz/437/5JpPNq
+	WYHYIOLsy6acDEqn3LvA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hgj0c-0002Ni-Fb; Fri, 28 Jun 2019 05:01:14 +0000
+	id 1hgj7V-00047z-Sg; Fri, 28 Jun 2019 05:08:21 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hgj0X-0002Ms-Nz
- for ath10k@lists.infradead.org; Fri, 28 Jun 2019 05:01:11 +0000
+ id 1hgj7I-00042m-90
+ for ath10k@lists.infradead.org; Fri, 28 Jun 2019 05:08:09 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 116F060A0A; Fri, 28 Jun 2019 05:01:08 +0000 (UTC)
+ id ECF4260E40; Fri, 28 Jun 2019 05:08:07 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1561698069;
- bh=UORO3oPOjeGKjaBkyjyEVQW+lgyIBiFxDiBpVNYg1ms=;
+ s=default; t=1561698487;
+ bh=rb7ZCFwECe0+1BB4kbofLdYTkobYyf8xm5XvPY+X28k=;
  h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=LeZzEq3kW6cc2RvNrjqSBsuivWj3+d7IIWebZJDcCiVI8mmaQFanVJZH15RNIZUIY
- iE2Y651vvrO7PSdjaKQcMMD7rXoTzqEsZX34/n14UUI/bWUfv1rTiZ2XAKi0ATwXmP
- WweywrIv7Cwbg+ln+hB/smNmkd1w3sY/Kppnswds=
+ b=K+qxu1wmpEacp/1rtwuUS46ONjSuQSWqb76Wj/NjxihP4DQKdSLVRMrcQO89KZR0J
+ taLLRWai3ZEc0sDY9UgAWS8kll+VU4FEDQ2xFt5izeC3TTxSZxDVZX8468CpLKUERh
+ c4L7O51ZDD8MpBtaBvL2vJcifAdQfK/nSs/gfvEg=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
@@ -43,33 +43,36 @@ Received: from x230.qca.qualcomm.com (88-114-240-156.elisa-laajakaista.fi
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
  (Authenticated sender: kvalo@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 8AAA26028D;
- Fri, 28 Jun 2019 05:00:57 +0000 (UTC)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 979C1607C3;
+ Fri, 28 Jun 2019 05:08:06 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1561698067;
- bh=UORO3oPOjeGKjaBkyjyEVQW+lgyIBiFxDiBpVNYg1ms=;
+ s=default; t=1561698487;
+ bh=rb7ZCFwECe0+1BB4kbofLdYTkobYyf8xm5XvPY+X28k=;
  h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=hsvY8U0IZ7PCTctOLfgGV2GKoYYebu1X9c7Ww3Sbuh34ctYWUbETxpDbGZspV+Jei
- Y5w7NenFruz6Zq7n2/aLPckTSF7liCxFFehsa4tQmzLXfB3eWs3TKRGxeqQs5q6ff/
- UFh4N9F8ShBAR5Wy/K2zjzRLh1rqIjYoT/4Nddac=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 8AAA26028D
+ b=K+qxu1wmpEacp/1rtwuUS46ONjSuQSWqb76Wj/NjxihP4DQKdSLVRMrcQO89KZR0J
+ taLLRWai3ZEc0sDY9UgAWS8kll+VU4FEDQ2xFt5izeC3TTxSZxDVZX8468CpLKUERh
+ c4L7O51ZDD8MpBtaBvL2vJcifAdQfK/nSs/gfvEg=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 979C1607C3
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  spf=none smtp.mailfrom=kvalo@codeaurora.org
 From: Kalle Valo <kvalo@codeaurora.org>
-To: Fuqian Huang <huangfq.daxian@gmail.com>
-Subject: Re: [PATCH v2 16/27] net: remove unneeded memset
-References: <20190628024843.15635-1-huangfq.daxian@gmail.com>
-Date: Fri, 28 Jun 2019 08:00:54 +0300
-In-Reply-To: <20190628024843.15635-1-huangfq.daxian@gmail.com> (Fuqian Huang's
- message of "Fri, 28 Jun 2019 10:48:31 +0800")
-Message-ID: <87v9wqqp6h.fsf@codeaurora.org>
+To: Johannes Berg <johannes@sipsolutions.net>
+Subject: Re: [PATCH 2/2] ath10k: pci: remove unnecessary casts
+References: <1561661250-30528-1-git-send-email-kvalo@codeaurora.org>
+ <1561661250-30528-2-git-send-email-kvalo@codeaurora.org>
+ <58e8952b87c8aa533c15fe5650f3f71288377f36.camel@sipsolutions.net>
+ <a6c87741bc3e992bf61d2706834e069917018745.camel@sipsolutions.net>
+Date: Fri, 28 Jun 2019 08:08:04 +0300
+In-Reply-To: <a6c87741bc3e992bf61d2706834e069917018745.camel@sipsolutions.net>
+ (Johannes Berg's message of "Thu, 27 Jun 2019 21:15:48 +0200")
+Message-ID: <87r27eqouj.fsf@codeaurora.org>
 User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/24.5 (gnu/linux)
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190627_220109_819970_75AA2F88 
-X-CRM114-Status: GOOD (  10.60  )
+X-CRM114-CacheID: sfid-20190627_220808_432896_E486080B 
+X-CRM114-Status: GOOD (  12.28  )
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-2.5 points)
@@ -97,79 +100,35 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Ronak Doshi <doshir@vmware.com>,
- Sergey Matyukevich <smatyukevich@quantenna.com>, "VMware,
- Inc." <pv-drivers@vmware.com>, Chris Snook <chris.snook@gmail.com>,
- Chi-Hsien Lin <chi-hsien.lin@cypress.com>,
- Arend van Spriel <arend.vanspriel@broadcom.com>, linux-kernel@vger.kernel.org,
- Vishal Kulkarni <vishal@chelsio.com>, Samuel Chessman <chessman@tux.org>,
- =?utf-8?Q?Rafa=C5=82_Mi=C5=82ecki?= <rafal@milecki.pl>, netdev@vger.kernel.org,
- Avinash Patil <avinashp@quantenna.com>, Thomas Gleixner <tglx@linutronix.de>,
- Manish Chopra <manishc@marvell.com>, linux-rdma@vger.kernel.org,
- Will Deacon <will@kernel.org>, Guo-Fu Tseng <cooldavid@cooldavid.org>,
- Rahul Verma <rahulv@marvell.com>, ath10k@lists.infradead.org,
- brcm80211-dev-list@cypress.com, Saeed Mahameed <saeedm@mellanox.com>,
- linux-hippi@sunsite.dk, Franky Lin <franky.lin@broadcom.com>,
- Yang Wei <yang.wei9@zte.com.cn>, Jes Sorensen <jes@trained-monkey.org>,
- Jay Cliburn <jcliburn@gmail.com>, YueHaibing <yuehaibing@huawei.com>,
- Hante Meuleman <hante.meuleman@broadcom.com>,
- Ido Schimmel <idosch@mellanox.com>, Hans de Goede <hdegoede@redhat.com>,
- Jiri Pirko <jiri@mellanox.com>, Wright Feng <wright.feng@cypress.com>,
- Michael Chan <michael.chan@broadcom.com>, zhong jiang <zhongjiang@huawei.com>,
- Allison Randal <allison@lohutok.net>, Mirko Lindner <mlindner@marvell.com>,
- Igor Mitsyanko <imitsyanko@quantenna.com>, brcm80211-dev-list.pdl@broadcom.com,
- GR-Linux-NIC-Dev@marvell.com, Fugang Duan <fugang.duan@nxp.com>,
- Leon Romanovsky <leon@kernel.org>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- linux-wireless@vger.kernel.org, Mao Wenan <maowenan@huawei.com>,
- Stephen Hemminger <stephen@networkplumber.org>,
- Luis Chamberlain <mcgrof@kernel.org>, Jon Mason <jdmason@kudzu.us>,
- Andrey Shevchenko <ashevchenko@quantenna.com>,
- Colin Ian King <colin.king@canonical.com>,
- "David S. Miller" <davem@davemloft.net>, Tariq Toukan <tariqt@mellanox.com>
+Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Fuqian Huang <huangfq.daxian@gmail.com> writes:
+Johannes Berg <johannes@sipsolutions.net> writes:
 
-> The memset with 0 after zeroing allocator is unneeded.
->
-> pci_alloc_persistent calls dma_alloc_coherent directly.
-> In commit af7ddd8a627c
-> ("Merge tag 'dma-mapping-4.21' of git://git.infradead.org/users/hch/dma-mapping"),
-> dma_alloc_coherent has already zeroed the memory.
-> So the memset after these functions is unneeded.
->
-> Signed-off-by: Fuqian Huang <huangfq.daxian@gmail.com>
-> ---
->  drivers/net/ethernet/atheros/atlx/atl1.c                   | 2 --
->  drivers/net/ethernet/atheros/atlx/atl2.c                   | 1 -
->  drivers/net/ethernet/broadcom/bnxt/bnxt.c                  | 2 --
->  drivers/net/ethernet/chelsio/cxgb4/sched.c                 | 1 -
->  drivers/net/ethernet/freescale/fec_main.c                  | 2 --
->  drivers/net/ethernet/jme.c                                 | 5 -----
->  drivers/net/ethernet/marvell/skge.c                        | 2 --
->  drivers/net/ethernet/mellanox/mlx4/eq.c                    | 2 --
->  drivers/net/ethernet/mellanox/mlx5/core/eswitch.c          | 1 -
->  drivers/net/ethernet/mellanox/mlx5/core/eswitch_offloads.c | 2 --
->  drivers/net/ethernet/mellanox/mlxsw/pci.c                  | 1 -
->  drivers/net/ethernet/neterion/s2io.c                       | 1 -
->  drivers/net/ethernet/qlogic/netxen/netxen_nic_ctx.c        | 3 ---
->  drivers/net/ethernet/ti/tlan.c                             | 1 -
->  drivers/net/hippi/rrunner.c                                | 2 --
->  drivers/net/vmxnet3/vmxnet3_drv.c                          | 1 -
->  drivers/net/wireless/ath/ath10k/ce.c                       | 5 -----
->  drivers/net/wireless/broadcom/brcm80211/brcmfmac/pcie.c    | 2 --
->  drivers/net/wireless/quantenna/qtnfmac/pcie/pearl_pcie.c   | 2 --
->  drivers/net/wireless/quantenna/qtnfmac/pcie/topaz_pcie.c   | 2 --
+> On Thu, 2019-06-27 at 21:12 +0200, Johannes Berg wrote:
+>> On Thu, 2019-06-27 at 21:47 +0300, Kalle Valo wrote:
+>> > Fixes checkpatch warnings:
+>> > 
+>> > drivers/net/wireless/ath/ath10k/pci.c:926: unnecessary cast may
+>> > hide bugs, see http://c-faq.com/malloc/ma
+>> > drivers/net/wireless/ath/ath10k/pci.c:1072: unnecessary cast may
+>> > hide bugs, see http://c-faq.com/malloc/m
+>> 
+>> I think you cut off the link there, did you mean
+>> http://c-faq.com/malloc/mallocnocast.html perhaps?
 
-For the wireless part:
+Yes, thanks. Fixed now in the pending branch.
 
-Acked-by: Kalle Valo <kvalo@codeaurora.org>
+> Which I should've read before replying ... WHAT? We consider calling
+> undeclared functions an *error* in the kernel, this is quite pointless.
 
-I assume Dave will take this.
+Yeah, the link checkpatch provides is pointless. TBH I didn't even read
+it until you commented on it :) But the patch is still good to have as
+there's no point of use casting on void pointers, it's just extra cruft.
+Right?
 
 -- 
 Kalle Valo
