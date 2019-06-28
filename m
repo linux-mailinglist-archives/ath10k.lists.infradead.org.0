@@ -2,36 +2,36 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id F21EF5A4EB
-	for <lists+ath10k@lfdr.de>; Fri, 28 Jun 2019 21:11:52 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8929D5A4EE
+	for <lists+ath10k@lfdr.de>; Fri, 28 Jun 2019 21:12:32 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
 	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=FSUARHOgpEt1TSg1x/2MnRviAJpHDjDfYmW4D8u9/eE=; b=ECoGT+tQfHr53d
-	Chbk7eH5s0321QQ5+Pmyp38YzKEnyHhTyhA6ikFqLkp6OGND7twodXQSi+gm/pBdeTJ4pfj76OzR6
-	PiwMfZnPMXBbbbh+t8EWV8cXDwN5mMhdovmKhng9pfXprGLiVmDuuI1OOAfTUEx+OLeBiPMrN9/Bv
-	acnYMpQkgodsany2pJzL4VKyFFPDt2vMyyDP2SLUldmx8jvYxODwjneHYSjSAnPwMzO/hHZznqk0m
-	Fn9eVYI46dQgcCxwVHdOl+cGNCwjTUlu5NYHtEpY3iCeC+XScPrbS7BesOTMd/FigWASJde1wluDr
-	edoq805Z5boLiEpmIz6A==;
+	List-Owner; bh=DafBsw3IeDV+8t3TjNmkDu07BysLTNjMejkpNKxNOEQ=; b=AXbDJGIZ/KNv3B
+	d7EDc2kYjnHky1nCflimdxtP8oirePb26t9k8+CMr0jSCGomO6585DzAPF4iO2ihDqPXeIWilmWCS
+	M4QA71OfUNAAfIalqzPAK7n0gj0nJqPtmTXI5cpBEufZk5tsf1HDXUc4IsiUGek6bAcRo6kGKbcBi
+	FAQhrK9OlyQkRCF7WMCJP0xocqz7/SUShiNba71Z4vLwL3Nr3jFPpUP+EAblAYXk0Uq1BOJxOBWD4
+	GcEIyAl0GOaWUSLy6ESLzM2GU6C62qSVfAOsRRRq36jPWdeZT0An3PbXYjMl5Kjb2GGV6p3Bs69st
+	fK3FOksHyvIBPasQhopQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hgwHj-0002jj-2R; Fri, 28 Jun 2019 19:11:47 +0000
+	id 1hgwIR-0002qz-5f; Fri, 28 Jun 2019 19:12:31 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hgwHc-0002iT-Qn
- for ath10k@lists.infradead.org; Fri, 28 Jun 2019 19:11:43 +0000
+ id 1hgwII-0002qZ-An
+ for ath10k@lists.infradead.org; Fri, 28 Jun 2019 19:12:27 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 242FE6070D; Fri, 28 Jun 2019 19:11:39 +0000 (UTC)
+ id 15B1660909; Fri, 28 Jun 2019 19:12:22 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1561749099;
- bh=ddt8Rhhf568xP/qGFkl2nTNQ1Jq4FVEQ6cpM76H63AQ=;
+ s=default; t=1561749142;
+ bh=57OsG2MJk+mmMG66aedSpU3o/1LIsF95/LTgFx7hbvQ=;
  h=Subject:From:In-Reply-To:References:To:Cc:Date:From;
- b=Z0m7q+OirlXfY9yZB9p3g0IuHFY/sK7tVHHkCxoDGE6M1i6E3E/R3OAzMTNDeFfOP
- taNJ6FFZsJcRtyUUJb+IFQWyemiQAKWkT1VaTn2SLhyvwt3rjhscjLlHAM0sONt4CB
- yJ/HgTA7MqHOywjq9+ivZ+RcovIJPVu+OeiJil5s=
+ b=XCl1QNVRoNPPLMlYG3PsUrDtTgBfY/McZnMqt+MP8+7tUpjTXHbuTBE9wsXeZJP2L
+ nJUgPmaGIon+qcIRbU0NUA7wzhjxj+3w7a/HVGjkK9PwLAJa+dGguMKSjsBIMREs1O
+ xxwOtqAlfg/BNyMQpwvvNlWDDyvnm3MjZ6Lo+wgk=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
@@ -43,32 +43,33 @@ Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
  (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
  (Authenticated sender: kvalo@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id C21F0604BE;
- Fri, 28 Jun 2019 19:11:37 +0000 (UTC)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id C3890604BE;
+ Fri, 28 Jun 2019 19:12:20 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1561749098;
- bh=ddt8Rhhf568xP/qGFkl2nTNQ1Jq4FVEQ6cpM76H63AQ=;
+ s=default; t=1561749141;
+ bh=57OsG2MJk+mmMG66aedSpU3o/1LIsF95/LTgFx7hbvQ=;
  h=Subject:From:In-Reply-To:References:To:Cc:From;
- b=BmlWLChMo7PPNPArfzwZ/CXAYBvIx/8hezYAXqFDTb+WNiM9XRHDjfdbwQJ/rliyb
- Xs+gCHdNdJEfndx/qpDDS6q3N7UHjwm5589rpHArsYsg3jhcZco4kVjEeEAj0UfAAd
- n72mCuZOSWoJBRGn0JCFUF8LXgtmiBvl95eQjvW8=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org C21F0604BE
+ b=g69xoJ+ns/k2o4FbbMT/EKiPKodZFdUb7YgwDn6x5K8iubQcHhMWZEYUZb2EtYXkV
+ iVHNLxn/XXfL7pVkkeGSETFhoiKwcQ+/eEVFOlcWMLkE6ofa07ao7zmdFZlBX6Moe9
+ 0xDcqqgz8FtBhsJcgUz7UOIPQSTW5H5x1vdqrpOc=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org C3890604BE
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  spf=none smtp.mailfrom=kvalo@codeaurora.org
 MIME-Version: 1.0
-Subject: Re: [PATCH] ath10k: Fix memory leak in qmi
+Subject: Re: [PATCH] ath10k: Move non-fatal warn logs to dbg level for SDIO
+ chip
 From: Kalle Valo <kvalo@codeaurora.org>
-In-Reply-To: <1561472748-28467-1-git-send-email-dundi@codeaurora.org>
-References: <1561472748-28467-1-git-send-email-dundi@codeaurora.org>
-To: Dundi Raviteja <dundi@codeaurora.org>
+In-Reply-To: <1561516175-13873-1-git-send-email-wgong@codeaurora.org>
+References: <1561516175-13873-1-git-send-email-wgong@codeaurora.org>
+To: Wen Gong <wgong@codeaurora.org>
 User-Agent: pwcli/0.0.0-git (https://github.com/kvalo/pwcli/) Python/2.7.12
-Message-Id: <20190628191139.242FE6070D@smtp.codeaurora.org>
-Date: Fri, 28 Jun 2019 19:11:39 +0000 (UTC)
+Message-Id: <20190628191222.15B1660909@smtp.codeaurora.org>
+Date: Fri, 28 Jun 2019 19:12:22 +0000 (UTC)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190628_121140_890201_49E7ED20 
-X-CRM114-Status: UNSURE (   7.57  )
+X-CRM114-CacheID: sfid-20190628_121222_384705_B826379C 
+X-CRM114-Status: UNSURE (   7.15  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -97,34 +98,35 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
- Dundi Raviteja <dundi@codeaurora.org>
+Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Dundi Raviteja <dundi@codeaurora.org> wrote:
+Wen Gong <wgong@codeaurora.org> wrote:
 
-> Currently the memory allocated for qmi handle is
-> not being freed during de-init which leads to memory leak.
+> ath10k will receive some message with invalid peer id from firmware.
+> reason is:
+> There are incoming frames to MAC hardware that NOT find relative
+> address search table, then peer id is invalid set by MAC hardware,
+> it is hardware's logic, so fix it in ath10k will be more convenient.
 > 
-> Free the allocated qmi memory in qmi deinit
-> to avoid memory leak.
+> log:
+> ath10k_sdio mmc1:0001:1: Got RX ind from invalid peer: 65535
 > 
-> Tested HW: WCN3990
-> Tested FW: WLAN.HL.3.1-01040-QCAHLSWMTPLZ-1
+> Tested with QCA6174 SDIO with firmware
+> WLAN.RMH.4.4.1-00007-QCARMSWP-1.
 > 
-> Fixes: fda6fee0001e ("ath10k: add QMI message handshake for wcn3990 client")
-> Signed-off-by: Dundi Raviteja <dundi@codeaurora.org>
+> Signed-off-by: Wen Gong <wgong@codeaurora.org>
 > Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 
 Patch applied to ath-next branch of ath.git, thanks.
 
-c709df58832c ath10k: Fix memory leak in qmi
+bd1a4ac556df ath10k: Move non-fatal warn logs to dbg level for SDIO chip
 
 -- 
-https://patchwork.kernel.org/patch/11015647/
+https://patchwork.kernel.org/patch/11016771/
 
 https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
 
