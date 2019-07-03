@@ -2,88 +2,77 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E049E5DD2F
-	for <lists+ath10k@lfdr.de>; Wed,  3 Jul 2019 05:57:44 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A80FF5E669
+	for <lists+ath10k@lfdr.de>; Wed,  3 Jul 2019 16:20:15 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=u6kug5Hbag2jmoFNPwyFi5U685Wbh7Uvj47vJcOZSQU=; b=jqg+Mzw+stGFlZ
-	Af5ldKEA2zgE/Zm88XUs31jqUnBh/J9TLrXqbgV+6HE7jPdSB8NcvRKqcewBV1e97SGTlhNhA5Kxw
-	qKa05PuT/1P25/29kpajC4NKfeEDXo7F9GfNc0JRm6xA1IyBwTXZ5HS6NvvBRPmZB05r0mXT5i2ic
-	2YYb/3WeLxj7gQTsTWVG2esM3iUO7QQZsgqJO6uvYxbRvHmZFum/M4cVDC7Iyl9OwSiDo5PSYrTRV
-	jB94dJ6lkZBm03d+cbnE2lUc7iZYfUby9UZH12sB2MioNxzglAg1uCutj6/ADMWxsESkxuG5DRksY
-	QxpxpaJfgtnT3d7KufTQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=EUa7Vtp4M0btzJ6RH5zHSqhyEkCURf6XFR6MPjUN4Rk=; b=iRPlPNbW67Njb0
+	nipzzu4TPMot7gE+jdE69384KamVFEvOdz/ARkMVSdZYkBnYQUOK8VTZLf++muTiwfFuhkgE7f3hn
+	/mizKgxxnEJmgLlspIp0FtuO1mhoa8DTFQcKqv63PJHKgnY0JthusmuG8SYjhtLJobQPTueHMacin
+	Q+WUAmugs2Oh8/lcGAJhXrLxvgdOgVq8anxGkI0EiGVd90O+ZH0saHo7cWXGArTbpWlGi7mxKT9Mu
+	PkQLGKMjET+t7Eu/IIqGAs0FluEBvmwpErkO5Xf75qZI7cACTsDeK8MSYE5p00r22A/Euk/7bUEdq
+	CZJaefvW5jMZIsqXneNw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hiWOt-00030n-9S; Wed, 03 Jul 2019 03:57:43 +0000
-Received: from smtp.codeaurora.org ([198.145.29.96])
+	id 1hig7F-0006sq-5N; Wed, 03 Jul 2019 14:20:09 +0000
+Received: from dvalin.narfation.org ([213.160.73.56])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hiWOa-0002pS-76
- for ath10k@lists.infradead.org; Wed, 03 Jul 2019 03:57:26 +0000
-Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 0130F60A24; Wed,  3 Jul 2019 03:57:23 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1562126244;
- bh=lT+3JP6Q5Qzd8cH72nFr7WWzGlN+4tb3P640dP5zzwo=;
- h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=MiNwKyVlmQvbxlJnk/JXOUsAy9aC0fwQsvvKHsHPUz+eT6cMTjFfRyX2RpzvOwlh3
- ijymBO0F5V5hNsJMZAvifj/OyM6qCrLX54JBkFMl/M9l5+4rHfWDNzEIRjQoC7xwUq
- mLqADnJTIhf6GVBogPnV7D7nIHlSbjzLmDm1z3JY=
-X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
- pdx-caf-mail.web.codeaurora.org
-X-Spam-Level: 
-X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
- DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
- version=3.4.0
-Received: from govinds-linux.qualcomm.com
- (blr-c-bdr-fw-01_globalnat_allzones-outside.qualcomm.com [103.229.19.19])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
- (No client certificate requested)
- (Authenticated sender: govinds@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 0059D608FF;
- Wed,  3 Jul 2019 03:57:21 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1562126243;
- bh=lT+3JP6Q5Qzd8cH72nFr7WWzGlN+4tb3P640dP5zzwo=;
- h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=QzQJqv3gGuhq1avojbYfdCY5zmmXBQmXD+9r486Sd0P/gl21hRVDBnlkzBzmcG1RD
- wfMhLsGaiTPN0I15D41hrxLIEyttaa24+atCXSozWvjo7nVvOuK/rHrDDkGaXpTsGV
- lO1fhQrEFpVqlSHz+9OfIHC8RReNF+ozab5zEY+o=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 0059D608FF
-Authentication-Results: pdx-caf-mail.web.codeaurora.org;
- dmarc=none (p=none dis=none) header.from=codeaurora.org
-Authentication-Results: pdx-caf-mail.web.codeaurora.org;
- spf=none smtp.mailfrom=govinds@codeaurora.org
-From: Govind Singh <govinds@codeaurora.org>
+ id 1hig76-0006LW-As
+ for ath10k@lists.infradead.org; Wed, 03 Jul 2019 14:20:02 +0000
+Received: from sven-desktop.home.narfation.org (p4FCB2E24.dip0.t-ipconnect.de
+ [79.203.46.36])
+ by dvalin.narfation.org (Postfix) with ESMTPSA id 7D51A208EF;
+ Wed,  3 Jul 2019 14:19:57 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=narfation.org;
+ s=20121; t=1562163597;
+ h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+ to:to:cc:cc:mime-version:mime-version:
+ content-transfer-encoding:content-transfer-encoding;
+ bh=MYt/pi4ZaqYfxhdq3CCToSFwdfb9v4RHhLfc0xm19CU=;
+ b=I/OLfzS2swNiq061jAVEuubW0hbcy8KQWOlvFTSgX3Rhx8pr/BkTrJSDf1gIsZGjNFgxB1
+ ENp6NV06HMygVStP1p40YY5taE42n3MyOkP8MtKxfKMFO0PZhH+IYRlH+QauiNUPs2Q3+u
+ yWaFt8F7cF+xGs+MQWKkOspyY9b36Ak=
+From: Sven Eckelmann <sven@narfation.org>
 To: ath10k@lists.infradead.org
-Subject: [PATCH 3/3] arm64: dts: qcom: qcs404: Modify wifi dt node for
- SDM845/QCS404 devices
-Date: Wed,  3 Jul 2019 09:27:11 +0530
-Message-Id: <20190703035711.25592-4-govinds@codeaurora.org>
-X-Mailer: git-send-email 2.21.0
-In-Reply-To: <20190703035711.25592-1-govinds@codeaurora.org>
-References: <20190703035711.25592-1-govinds@codeaurora.org>
+Subject: [PATCH v3] ath10k: avoid leaving .bss_info_changed prematurely
+Date: Wed,  3 Jul 2019 16:19:49 +0200
+Message-Id: <20190703141949.9295-1-sven@narfation.org>
+X-Mailer: git-send-email 2.20.1
 MIME-Version: 1.0
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=narfation.org; 
+ s=20121; t=1562163597;
+ h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+ to:to:cc:cc:mime-version:mime-version:
+ content-transfer-encoding:content-transfer-encoding;
+ bh=MYt/pi4ZaqYfxhdq3CCToSFwdfb9v4RHhLfc0xm19CU=;
+ b=AqIMeDALqpJxoP4P66EPitpwdaoMpva7lIDEgU0giqU/e+boWgVZ1L8I3oEDWp95oLG/Wp
+ yP/c5/AatvZMQJDeKft1ncgQyyLUxHil8ORaAkjPpP7+ZSXLOisqJjrp4CBwx5fsq74vgb
+ aijGoh192/AQeBvzs2LH+Eak7yUIRnA=
+ARC-Seal: i=1; s=20121; d=narfation.org; t=1562163597; a=rsa-sha256; cv=none;
+ b=GAwlcKcYSHsDZuiHLQ1fAHcPFrDtI4dFlTb3MQeKYYojmuXZFY+jb9BLUeiEql6uJQptzo
+ qkFhOLsoXgPst5KsRAX8vUVMLjhQ53tGuKYAJVms2tD0qNJmQ6y7fRSfB9hkCn+Hxn06oR
+ PGCj4XBwR+UlWqQ9gcdHoJkxWL/50vk=
+ARC-Authentication-Results: i=1; ORIGINATING;
+ auth=pass smtp.auth=sven smtp.mailfrom=sven@narfation.org
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190702_205725_373602_397E1128 
-X-CRM114-Status: GOOD (  11.65  )
-X-Spam-Score: -2.5 (--)
+X-CRM114-CacheID: sfid-20190703_072000_699504_FFFE2ED9 
+X-CRM114-Status: GOOD (  10.41  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.5 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [198.145.29.96 listed in list.dnswl.org]
- -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
 X-BeenThere: ath10k@lists.infradead.org
@@ -97,68 +86,136 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-arm-msm@vger.kernel.org, Govind Singh <govinds@codeaurora.org>,
- linux-wireless@vger.kernel.org, devicetree@vger.kernel.org
+Cc: linux-wireless@vger.kernel.org, Kalle Valo <kvalo@codeaurora.org>,
+ Sven Eckelmann <seckelmann@datto.com>, Sriram R <srirrama@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Modify the compatible string of wifi node for SDM845/QCS404 devices.
-Add wifi regulators in qcs404 dt node for proxy vote. Proxy votes are
-required for handling driver recovery scenarios to prevent
-un-clocked register access during driver recovery.
+From: Sven Eckelmann <seckelmann@datto.com>
 
-Signed-off-by: Govind Singh <govinds@codeaurora.org>
+ath10k_bss_info_changed() handles various events from the upper layers. It
+parses the changed bitfield and then configures the driver/firmware
+accordingly. Each detected event is handled in a separate scope which is
+independent of each other - but in the same function.
+
+The commit f279294e9ee2 ("ath10k: add support for configuring management
+packet rate") changed this behavior by returning from this function
+prematurely when some precondition was not fulfilled. All new event
+handlers added after the BSS_CHANGED_BASIC_RATES event handler would then
+also be skipped.
+
+Signed-off-by: Sven Eckelmann <seckelmann@datto.com>
 ---
- arch/arm64/boot/dts/qcom/qcs404-evb.dtsi | 3 +++
- arch/arm64/boot/dts/qcom/qcs404.dtsi     | 2 +-
- arch/arm64/boot/dts/qcom/sdm845.dtsi     | 2 +-
- 3 files changed, 5 insertions(+), 2 deletions(-)
+Cc: Kalle Valo <kvalo@codeaurora.org>
+Cc: Sriram R <srirrama@codeaurora.org>
 
-diff --git a/arch/arm64/boot/dts/qcom/qcs404-evb.dtsi b/arch/arm64/boot/dts/qcom/qcs404-evb.dtsi
-index 50b3589c7f15..ff81b9c5b057 100644
---- a/arch/arm64/boot/dts/qcom/qcs404-evb.dtsi
-+++ b/arch/arm64/boot/dts/qcom/qcs404-evb.dtsi
-@@ -190,6 +190,9 @@
+Only compile tested
+
+v3:
+
+* rebased on top of commit 9e80ad37f678 ("ath10k: Drop WARN_ON()s that always
+  trigger during system resume")
+
+v2:
+
+* rebased on top of commit 9e7251fa3897 ("ath10k: Check tx_stats before
+  use it")
+
+ drivers/net/wireless/ath/ath10k/mac.c | 62 ++++++++++++++++-----------
+ 1 file changed, 36 insertions(+), 26 deletions(-)
+
+diff --git a/drivers/net/wireless/ath/ath10k/mac.c b/drivers/net/wireless/ath/ath10k/mac.c
+index e43a566eef77..329c052a8dc0 100644
+--- a/drivers/net/wireless/ath/ath10k/mac.c
++++ b/drivers/net/wireless/ath/ath10k/mac.c
+@@ -5634,6 +5634,37 @@ static void ath10k_configure_filter(struct ieee80211_hw *hw,
+ 	mutex_unlock(&ar->conf_mutex);
+ }
  
- &wifi {
- 	status = "okay";
-+	vdd-0.8-cx-mx-supply = <&vreg_l2_1p275>;
-+	vdd-1.8-xo-supply = <&vreg_l5_1p8>;
-+	vdd-1.3-rfa-supply = <&vreg_l1_1p3>;
- };
++static void ath10k_recalculate_mgmt_rate(struct ath10k *ar,
++					 struct ieee80211_vif *vif,
++					 struct cfg80211_chan_def *def)
++{
++	struct ath10k_vif *arvif = (void *)vif->drv_priv;
++	const struct ieee80211_supported_band *sband;
++	u8 basic_rate_idx;
++	int hw_rate_code;
++	u32 vdev_param;
++	u16 bitrate;
++	int ret;
++
++	lockdep_assert_held(&ar->conf_mutex);
++
++	sband = ar->hw->wiphy->bands[def->chan->band];
++	basic_rate_idx = ffs(vif->bss_conf.basic_rates) - 1;
++	bitrate = sband->bitrates[basic_rate_idx].bitrate;
++
++	hw_rate_code = ath10k_mac_get_rate_hw_value(bitrate);
++	if (hw_rate_code < 0) {
++		ath10k_warn(ar, "bitrate not supported %d\n", bitrate);
++		return;
++	}
++
++	vdev_param = ar->wmi.vdev_param->mgmt_rate;
++	ret = ath10k_wmi_vdev_set_param(ar, arvif->vdev_id, vdev_param,
++					hw_rate_code);
++	if (ret)
++		ath10k_warn(ar, "failed to set mgmt tx rate %d\n", ret);
++}
++
+ static void ath10k_bss_info_changed(struct ieee80211_hw *hw,
+ 				    struct ieee80211_vif *vif,
+ 				    struct ieee80211_bss_conf *info,
+@@ -5644,10 +5675,9 @@ static void ath10k_bss_info_changed(struct ieee80211_hw *hw,
+ 	struct cfg80211_chan_def def;
+ 	u32 vdev_param, pdev_param, slottime, preamble;
+ 	u16 bitrate, hw_value;
+-	u8 rate, basic_rate_idx, rateidx;
+-	int ret = 0, hw_rate_code, mcast_rate;
++	u8 rate, rateidx;
++	int ret = 0, mcast_rate;
+ 	enum nl80211_band band;
+-	const struct ieee80211_supported_band *sband;
  
- /* PINCTRL - additions to nodes defined in qcs404.dtsi */
-diff --git a/arch/arm64/boot/dts/qcom/qcs404.dtsi b/arch/arm64/boot/dts/qcom/qcs404.dtsi
-index e8fd26633d57..d9e2173cd3e9 100644
---- a/arch/arm64/boot/dts/qcom/qcs404.dtsi
-+++ b/arch/arm64/boot/dts/qcom/qcs404.dtsi
-@@ -480,7 +480,7 @@
- 		};
+ 	mutex_lock(&ar->conf_mutex);
  
- 		wifi: wifi@a000000 {
--			compatible = "qcom,wcn3990-wifi";
-+			compatible = "qcom,qcs40x-wcn39xx-wifi";
- 			reg = <0xa000000 0x800000>;
- 			reg-names = "membase";
- 			memory-region = <&wlan_msa_mem>;
-diff --git a/arch/arm64/boot/dts/qcom/sdm845.dtsi b/arch/arm64/boot/dts/qcom/sdm845.dtsi
-index 5308f1671824..fdb5fcd814f4 100644
---- a/arch/arm64/boot/dts/qcom/sdm845.dtsi
-+++ b/arch/arm64/boot/dts/qcom/sdm845.dtsi
-@@ -2235,7 +2235,7 @@
- 		};
+@@ -5871,29 +5901,9 @@ static void ath10k_bss_info_changed(struct ieee80211_hw *hw,
+ 				    arvif->vdev_id,  ret);
+ 	}
  
- 		wifi: wifi@18800000 {
--			compatible = "qcom,wcn3990-wifi";
-+			compatible = "qcom,sdm845-wcn39xx-wifi";
- 			status = "disabled";
- 			reg = <0 0x18800000 0 0x800000>;
- 			reg-names = "membase";
+-	if (changed & BSS_CHANGED_BASIC_RATES) {
+-		if (ath10k_mac_vif_chan(vif, &def)) {
+-			mutex_unlock(&ar->conf_mutex);
+-			return;
+-		}
+-
+-		sband = ar->hw->wiphy->bands[def.chan->band];
+-		basic_rate_idx = ffs(vif->bss_conf.basic_rates) - 1;
+-		bitrate = sband->bitrates[basic_rate_idx].bitrate;
+-
+-		hw_rate_code = ath10k_mac_get_rate_hw_value(bitrate);
+-		if (hw_rate_code < 0) {
+-			ath10k_warn(ar, "bitrate not supported %d\n", bitrate);
+-			mutex_unlock(&ar->conf_mutex);
+-			return;
+-		}
+-
+-		vdev_param = ar->wmi.vdev_param->mgmt_rate;
+-		ret = ath10k_wmi_vdev_set_param(ar, arvif->vdev_id, vdev_param,
+-						hw_rate_code);
+-		if (ret)
+-			ath10k_warn(ar, "failed to set mgmt tx rate %d\n", ret);
+-	}
++	if (changed & BSS_CHANGED_BASIC_RATES &&
++	    !ath10k_mac_vif_chan(arvif->vif, &def))
++		ath10k_recalculate_mgmt_rate(ar, vif, &def);
+ 
+ 	mutex_unlock(&ar->conf_mutex);
+ }
 -- 
-The Qualcomm Innovation Center, Inc. is a member of the Code Aurora Forum,
-a Linux Foundation Collaborative Project
+2.20.1
 
 
 _______________________________________________
