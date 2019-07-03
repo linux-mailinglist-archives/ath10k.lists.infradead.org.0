@@ -2,36 +2,36 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1CE405DD2C
+	by mail.lfdr.de (Postfix) with ESMTPS id 1FA3A5DD2D
 	for <lists+ath10k@lfdr.de>; Wed,  3 Jul 2019 05:57:35 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=F95Rj6MsitcV8cbqS3EQvRZNOj1f3lMwcs5o9L1JwTM=; b=sca9qhREZlnVkA
-	xqDxnb5FLKf5tevz8cDY4MrDdSvKB81dt4V+BF6HUpWhsxEiJW9dZkqCKtleAFHaXPSztJToV77mZ
-	VAOqpdidU8akHkvYlZo9yV7HLq3fBdmjQqWErXLJzPuum3b2SmmGtKsUf26SdhvKHci2p90bFDy7e
-	bAkwvC4vKxDxuk/NmZO2X4qm5qrVxoJmyLsSTdFxhhXoN83ncXNfBqM/O2Ob+2EjtlygoB8Xbjd2+
-	lRsrPc0o6wZX9832kLlSRxBA930zmeOjpNba1GjN5WqEEnBmfyQXMmmHJvqb12FUtoOV/20eLuPm+
-	7g6oa9rTZXZRJU3IIjhw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=/+9Hlw0McXoiSlIelI0b2MzOdHMrRYSXPAQZv7laFMk=; b=cuqcXY4IyZKp9+
+	Fxv4zQRE4IRHAmIcQmbhoJOeScGFYJ9kBn5xgr/fRjI2pzu4cb/7GM/U0vR3L5gREcPQXXZTPAZwb
+	ME2w6lVtkZne0Ozn7yg1+5ce11MVUJepx/G6f4pg7ui9aK4RmMJKESSbfytBxig5mA1I3NHE66GI0
+	XlxSc8NntOnGj9feRXa0DTAt0AXVjbCZVejZyNYLrc9sj9FtB77FwmAdKLsOYc/d705AXZaUVCl9r
+	OD9mhuYtnHcxYFTGxSutPsInR0XBhvGN5RwmeMszYQcTXFDHpnppO19OdN0/vaK+3lCxSeIBs4JBp
+	HD6910nSek/FDrz2AKPQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hiWOc-0002o4-DW; Wed, 03 Jul 2019 03:57:26 +0000
+	id 1hiWOh-0002qW-Q1; Wed, 03 Jul 2019 03:57:31 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hiWOU-0002nT-7T
- for ath10k@lists.infradead.org; Wed, 03 Jul 2019 03:57:19 +0000
+ id 1hiWOV-0002no-Mp
+ for ath10k@lists.infradead.org; Wed, 03 Jul 2019 03:57:20 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 40095605FC; Wed,  3 Jul 2019 03:57:17 +0000 (UTC)
+ id 76C3D607EB; Wed,  3 Jul 2019 03:57:19 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1562126237;
- bh=Aq4cCJDxYrULJtxL5b8KPbo01q6oair5ivvgUrHGj6Y=;
- h=From:To:Cc:Subject:Date:From;
- b=a18CdN/RaEcu548QrtYRLupKrQAp2ZRPD+2Ht2MuLkNTeAYVz3i8DlToH0menNywH
- dprrU6XyNbkWRIRuiOMcT4JLrtq+UgLVWUcOwT2O1sDCecYhFLx0RD5+hYvK6VUbmj
- r906kT8IdA9KO48nWcaYRP2l4lXLAe97H6cgn0JM=
+ s=default; t=1562126239;
+ bh=swA+By0KKqoGjcIDAfeGafYPVgkUut5vD1yu9dPbk6Y=;
+ h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
+ b=eY0N3cfJlRy2Gg+Uy6ransk3hDgDsftv8b92JZz+umrw998ZUddTR6YqA4tSqeJNv
+ 2MT8zneUfDFzV6DDgtImTvSs1oa8TbWu7a1xPXSmukI5tzs6pnSXgsvx9E+jvQnV7x
+ aVwFGk/jLp3kPzN7k7gYA4e+8jeVOwqE/71cJd8Y=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
@@ -43,30 +43,33 @@ Received: from govinds-linux.qualcomm.com
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
  (No client certificate requested)
  (Authenticated sender: govinds@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 337DF6038E;
- Wed,  3 Jul 2019 03:57:14 +0000 (UTC)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 7499360770;
+ Wed,  3 Jul 2019 03:57:17 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1562126236;
- bh=Aq4cCJDxYrULJtxL5b8KPbo01q6oair5ivvgUrHGj6Y=;
- h=From:To:Cc:Subject:Date:From;
- b=n6JWO34Mw4XbxIkJ5pVYQLK0Kb9XAhSRICWo/9GRxn8NWvJHLkgpuaUnUHUylBQBS
- hEhydJy1vV7e281f9BHERULra8pGFSIPprxkrfrBkcGuQEShSkBbIb4T+/SKs7fFta
- YtAP734tO2DRzgqOopGQpt34xYQhrIwklYGIhu8o=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 337DF6038E
+ s=default; t=1562126239;
+ bh=swA+By0KKqoGjcIDAfeGafYPVgkUut5vD1yu9dPbk6Y=;
+ h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
+ b=eY0N3cfJlRy2Gg+Uy6ransk3hDgDsftv8b92JZz+umrw998ZUddTR6YqA4tSqeJNv
+ 2MT8zneUfDFzV6DDgtImTvSs1oa8TbWu7a1xPXSmukI5tzs6pnSXgsvx9E+jvQnV7x
+ aVwFGk/jLp3kPzN7k7gYA4e+8jeVOwqE/71cJd8Y=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 7499360770
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  spf=none smtp.mailfrom=govinds@codeaurora.org
 From: Govind Singh <govinds@codeaurora.org>
 To: ath10k@lists.infradead.org
-Subject: [PATCH 0/3] Move voltage regulator config to driver private data
-Date: Wed,  3 Jul 2019 09:27:08 +0530
-Message-Id: <20190703035711.25592-1-govinds@codeaurora.org>
+Subject: [PATCH 1/3] dt: bindings: update compatible dt properties for WCN3990
+ wifi node
+Date: Wed,  3 Jul 2019 09:27:09 +0530
+Message-Id: <20190703035711.25592-2-govinds@codeaurora.org>
 X-Mailer: git-send-email 2.21.0
+In-Reply-To: <20190703035711.25592-1-govinds@codeaurora.org>
+References: <20190703035711.25592-1-govinds@codeaurora.org>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190702_205718_294101_8F6BF598 
-X-CRM114-Status: UNSURE (   7.35  )
+X-CRM114-CacheID: sfid-20190702_205719_766035_86D2C5CA 
+X-CRM114-Status: UNSURE (   8.90  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -102,27 +105,27 @@ Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-WCN3990 voltage regulator config is varying b/w different MSM platforms ex: SDM845/
-QCS404. In order to have scalable config, move regulator config to driver
-private data.
+update compatible dt properties for WCN3990 wifi node to be
+compatible across different MSM platforms.
 
-Tested HW: WCN3990(SDM845/QCS404)
-Tested FW: WLAN.HL.3.1-01040-QCAHLSWMTPLZ-1
+Signed-off-by: Govind Singh <govinds@codeaurora.org>
+---
+ Documentation/devicetree/bindings/net/wireless/qcom,ath10k.txt | 2 ++
+ 1 file changed, 2 insertions(+)
 
-Govind Singh (3):
-  dt: bindings: update compatible dt properties for WCN3990 wifi node
-  ath10k: Move regulator config to driver private data
-  arm64: dts: qcom: qcs404: Modify wifi dt node for SDM845/QCS404
-    devices
-
- .../bindings/net/wireless/qcom,ath10k.txt     |  2 +
- arch/arm64/boot/dts/qcom/qcs404-evb.dtsi      |  3 ++
- arch/arm64/boot/dts/qcom/qcs404.dtsi          |  2 +-
- arch/arm64/boot/dts/qcom/sdm845.dtsi          |  2 +-
- drivers/net/wireless/ath/ath10k/snoc.c        | 38 +++++++++++++++----
- drivers/net/wireless/ath/ath10k/snoc.h        | 23 ++++++-----
- 6 files changed, 51 insertions(+), 19 deletions(-)
-
+diff --git a/Documentation/devicetree/bindings/net/wireless/qcom,ath10k.txt b/Documentation/devicetree/bindings/net/wireless/qcom,ath10k.txt
+index ae661e65354e..baaa3f32ae44 100644
+--- a/Documentation/devicetree/bindings/net/wireless/qcom,ath10k.txt
++++ b/Documentation/devicetree/bindings/net/wireless/qcom,ath10k.txt
+@@ -5,6 +5,8 @@ Required properties:
+ 	* "qcom,ath10k"
+ 	* "qcom,ipq4019-wifi"
+ 	* "qcom,wcn3990-wifi"
++	* "qcom,sdm845-wcn39xx-wifi"
++	* "qcom,qcs40x-wcn39xx-wifi"
+ 
+ PCI based devices uses compatible string "qcom,ath10k" and takes calibration
+ data along with board specific data via "qcom,ath10k-calibration-data".
 -- 
 The Qualcomm Innovation Center, Inc. is a member of the Code Aurora Forum,
 a Linux Foundation Collaborative Project
