@@ -2,81 +2,78 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4F33F62A68
-	for <lists+ath10k@lfdr.de>; Mon,  8 Jul 2019 22:34:56 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D11E56300D
+	for <lists+ath10k@lfdr.de>; Tue,  9 Jul 2019 07:36:43 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=x6L+mL5+StJecf6f7FMbyTtl5lj9Zd+VRW/Anbe6sHE=; b=drg1NFJ2p738nE
-	WBH3dXelr6ZTIDuj4EdyIVPrZZCeMs3bHbS0DrR0A0/Vq8u0ANXMvhE6e5jz4RTZgEJlW206ew/Kj
-	Mqc1cZ3FZoxbfWOzrevZB/Q0Sd3iSuiKWdS/XX68D5uqrYq+w+tAwzQjZs4T0T0cpyRniQH0Gly/s
-	mvQEYt1WZFCrAvZkdABr/N9lJ969LStvQj6PDCgquBVBdzdwEXsr0SB96Xb67vu/TktCIDM6PGXba
-	4w9Ik9O4rHj30sJ3MC0k086zlMTKpEocVIPMdfjMxOQ6RWAzR2NkdRtfZqkTkn3fLnXv0apRUNPwZ
-	y9Qj6RVva2hgD+MzZYyg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=Czw+DtD3uc26w7u9NrW+Ytb9cByuRaVAiQwNeullAg0=; b=aSCG5ijLPvjBgE
+	TCOVsyioEK/2nj6nL0YwgoepJmVSnAzA8Ff3HsCNsWHccdH7ct/j0nstIWmS5cG4Rf/8i02W1ClIU
+	pbrcwRAVctjscahrZX+8CCXXcbyIZre9aCMuHDaGDrWMFfPi67JnTgTxfa+LnCcU7QxNAKJRHkTvD
+	ZH/jAg8biFgOlxWgi8a8dGe3IzcdxXGvlRO80S4/z7Ife5PdxTEBOUtCRGnwMnzM7MT4SRanKF4DL
+	TDhmRP0xLBxKX7LIyXgyn1tQZlqBu87Nt05gjr4HpAmHCy2uhJawiNKwKdtqROfXdxVeshjFS8eKp
+	j0QRE9YHoot122ThgQRQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hkaLa-0004aN-Eh; Mon, 08 Jul 2019 20:34:50 +0000
-Received: from mail-lj1-x241.google.com ([2a00:1450:4864:20::241])
+	id 1hkinq-0008JQ-JK; Tue, 09 Jul 2019 05:36:34 +0000
+Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hkaLR-0004Zr-KV
- for ath10k@lists.infradead.org; Mon, 08 Jul 2019 20:34:43 +0000
-Received: by mail-lj1-x241.google.com with SMTP id r9so17286797ljg.5
- for <ath10k@lists.infradead.org>; Mon, 08 Jul 2019 13:34:40 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=dBFZRyCyJk4RFRv9CPsI2krQKYXMzg0NzprO2zX7A1I=;
- b=G3xgqReYoo3GSkZMfROj+G1V+LsFfZ+sxdSupWo479mM+nBsMYlhwh+Tu04N5jaNWt
- nSlvIFgmIAVDBnUi4N+s4Uy6bZFZl6VTNh1UzuKHMWRPTrDbrjkZlx85TsEJQarYbBFz
- 9AW5ty334qmUJCphkzlsWNJG3h+Tk1sDgUuCo=
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=dBFZRyCyJk4RFRv9CPsI2krQKYXMzg0NzprO2zX7A1I=;
- b=YkvFkSvQirPpgCTN/nMvpKfkA86SQJR/43pPXmODcq08OYlzYnadzKIlW+3iVHYtvZ
- 5I8KPP5KeM+ktbAx1pRgJzcBZbQJSOvTPFi6tvp0pBnZi6dKnKcjMmRjvyf1454iDvuG
- 2ViIb9A9tHdziZ4DKEBZYTynqq50AR7zoptnUL4ibPI7yYxyYLNKrQpVof/OzSgowyvp
- RZA1215nM4aBJ77Kl/ga+4dcLXKKlbH5earLrFhVJpTE3AD/5r1Y8tZ1jZbnilR9BsLG
- /2fUlM+poZXxRn30XaPbrOAl9Ln5OxhAVYdMiNCS2aWdrxHaypCbPOvQXeC1OqISNUZw
- Uq8w==
-X-Gm-Message-State: APjAAAX1i/iCYO/iN8QxjBf5j67l1ko8jwCcusaRCPuS1DXjQIvuVhZp
- i+hkWmucNqMUVE2yHlkFrQ5hknhEJ9w=
-X-Google-Smtp-Source: APXvYqx3CPrI3LIn5SN42utT4CTErjx49ZoPxR6uwCFu4xl0vqX4GPOt9RpufcSqfouKYUTZXtUYWQ==
-X-Received: by 2002:a2e:98f:: with SMTP id 137mr10770932ljj.232.1562618078758; 
- Mon, 08 Jul 2019 13:34:38 -0700 (PDT)
-Received: from mail-lj1-f177.google.com (mail-lj1-f177.google.com.
- [209.85.208.177])
- by smtp.gmail.com with ESMTPSA id m4sm3870665ljc.56.2019.07.08.13.34.34
- for <ath10k@lists.infradead.org>
- (version=TLS1_3 cipher=AEAD-AES128-GCM-SHA256 bits=128/128);
- Mon, 08 Jul 2019 13:34:35 -0700 (PDT)
-Received: by mail-lj1-f177.google.com with SMTP id z28so8379865ljn.4
- for <ath10k@lists.infradead.org>; Mon, 08 Jul 2019 13:34:34 -0700 (PDT)
-X-Received: by 2002:a2e:b0e6:: with SMTP id h6mr5676774ljl.18.1562618073778;
- Mon, 08 Jul 2019 13:34:33 -0700 (PDT)
+ id 1hkink-0008Ip-NF
+ for ath10k@lists.infradead.org; Tue, 09 Jul 2019 05:36:30 +0000
+Received: by smtp.codeaurora.org (Postfix, from userid 1000)
+ id 053F960E3F; Tue,  9 Jul 2019 05:36:26 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1562650586;
+ bh=eFoNPVJ8oQY08MejN6f2VJRgodrzr5SFd+w6tRc2tVE=;
+ h=From:To:Cc:Subject:Date:From;
+ b=OhE6G5QlEMT41OOWwiHjBVTzZ5E+UB/z/H4f06lZWfu/mGeYOAuuLYiUIbza81fsA
+ Mr6ravMHzatVoLVRofaEms7rCog9i1HZ/R8cJBKxQFwkqEz+lMqTwNbCAAR8h4ygei
+ wvytMKfOG80I1ePXUYb42KMIsnMtGH13Gw0CfSWM=
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ pdx-caf-mail.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
+ DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
+ version=3.4.0
+Received: from govinds-linux.qualcomm.com
+ (blr-c-bdr-fw-01_globalnat_allzones-outside.qualcomm.com [103.229.19.19])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
+ (No client certificate requested)
+ (Authenticated sender: govinds@smtp.codeaurora.org)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 440F7607EB;
+ Tue,  9 Jul 2019 05:36:23 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1562650585;
+ bh=eFoNPVJ8oQY08MejN6f2VJRgodrzr5SFd+w6tRc2tVE=;
+ h=From:To:Cc:Subject:Date:From;
+ b=EMHhVctM320x9lNvofMPRe/wPixggRh1kev0genCtAlYjyaIVhJh/K59GxSfqOhfb
+ 3R1s1KfjkrJszoFvb4KwlHuYhc6wBfQu0RuU7hLKc3YEsNBLAm7rjrX/rvJNfbeiph
+ ZaiJu4/eB9SxXIriQH/LsT6gIA+pF4pTMiSN38+U=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 440F7607EB
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ spf=none smtp.mailfrom=govinds@codeaurora.org
+From: Govind Singh <govinds@codeaurora.org>
+To: ath10k@lists.infradead.org
+Subject: [PATCH v4] ath10k: Enable MSA region dump support for WCN3990
+Date: Tue,  9 Jul 2019 11:06:17 +0530
+Message-Id: <20190709053617.32042-1-govinds@codeaurora.org>
+X-Mailer: git-send-email 2.21.0
 MIME-Version: 1.0
-References: <20190708125050.3689133-1-arnd@arndb.de>
-In-Reply-To: <20190708125050.3689133-1-arnd@arndb.de>
-From: Brian Norris <briannorris@chromium.org>
-Date: Mon, 8 Jul 2019 13:34:22 -0700
-X-Gmail-Original-Message-ID: <CA+ASDXOjPbZ0k8dvWr3b6ns_Y3c_ydanYA9+HVUA00btJB5rxQ@mail.gmail.com>
-Message-ID: <CA+ASDXOjPbZ0k8dvWr3b6ns_Y3c_ydanYA9+HVUA00btJB5rxQ@mail.gmail.com>
-Subject: Re: [PATCH] ath10k: work around uninitialized vht_pfr variable
-To: Arnd Bergmann <arnd@arndb.de>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190708_133441_698315_B2D93FC3 
-X-CRM114-Status: GOOD (  17.02  )
-X-Spam-Score: 1.1 (+)
+X-CRM114-CacheID: sfid-20190708_223628_795489_03459380 
+X-CRM114-Status: GOOD (  15.43  )
+X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (1.1 points)
+ Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:241 listed in]
- [list.dnswl.org]
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [198.145.29.96 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -86,8 +83,6 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 1.3 PDS_NO_HELO_DNS        High profile HELO but no A record
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -99,82 +94,204 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Sriram R <srirrama@codeaurora.org>, Miaoqing Pan <miaoqing@codeaurora.org>,
- Pradeep kumar Chitrapu <pradeepc@codeaurora.org>,
- Balaji Pothunoori <bpothuno@codeaurora.org>,
- linux-wireless <linux-wireless@vger.kernel.org>,
- Linux Kernel <linux-kernel@vger.kernel.org>, ath10k@lists.infradead.org,
- clang-built-linux@googlegroups.com,
- "<netdev@vger.kernel.org>" <netdev@vger.kernel.org>,
- Rakesh Pillai <pillair@codeaurora.org>, Wen Gong <wgong@codeaurora.org>,
- "David S. Miller" <davem@davemloft.net>, Kalle Valo <kvalo@codeaurora.org>
+Cc: Govind Singh <govinds@codeaurora.org>, linux-wireless@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Hi Arnd,
+MSA memory region caries the hw descriptors information.
+Dump MSA region in core dump as this is very helpful in debugging
+hw issues.
 
-On Mon, Jul 8, 2019 at 5:50 AM Arnd Bergmann <arnd@arndb.de> wrote:
->
-> As clang points out, the vht_pfr is assigned to a struct member
-> without being initialized in one case:
->
-> drivers/net/wireless/ath/ath10k/mac.c:7528:7: error: variable 'vht_pfr' is used uninitialized whenever 'if' condition
->       is false [-Werror,-Wsometimes-uninitialized]
->                 if (!ath10k_mac_can_set_bitrate_mask(ar, band, mask,
->                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-> drivers/net/wireless/ath/ath10k/mac.c:7551:20: note: uninitialized use occurs here
->                 arvif->vht_pfr = vht_pfr;
->                                  ^~~~~~~
-> drivers/net/wireless/ath/ath10k/mac.c:7528:3: note: remove the 'if' if its condition is always true
->                 if (!ath10k_mac_can_set_bitrate_mask(ar, band, mask,
->                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-> drivers/net/wireless/ath/ath10k/mac.c:7483:12: note: initialize the variable 'vht_pfr' to silence this warning
->         u8 vht_pfr;
->
-> Add an explicit but probably incorrect initialization here.
-> I suspect we want a better fix here, but chose this approach to
-> illustrate the issue.
->
-> Fixes: 8b97b055dc9d ("ath10k: fix failure to set multiple fixed rate")
-> Signed-off-by: Arnd Bergmann <arnd@arndb.de>
-> ---
->  drivers/net/wireless/ath/ath10k/mac.c | 2 ++
->  1 file changed, 2 insertions(+)
->
-> diff --git a/drivers/net/wireless/ath/ath10k/mac.c b/drivers/net/wireless/ath/ath10k/mac.c
-> index e43a566eef77..0606416dc971 100644
-> --- a/drivers/net/wireless/ath/ath10k/mac.c
-> +++ b/drivers/net/wireless/ath/ath10k/mac.c
-> @@ -7541,6 +7541,8 @@ static int ath10k_mac_op_set_bitrate_mask(struct ieee80211_hw *hw,
->                                                                 &vht_nss,
->                                                                 true);
+Testing: Tested on WCN3990 HW
+Tested FW: WLAN.HL.3.1-00959-QCAHLSWMTPLZ-1
 
-^^ Technically, this call to ath10k_mac_bitrate_mask_get_single_rate()
-can fail to assign 'vht_pfr' as well. I can't immediately tell whether
-it provably will never hit the -EINVAL case, but if we do, then you'd
-have another uninitialized case.
+Signed-off-by: Govind Singh <govinds@codeaurora.org>
 
-I *believe* it shouldn't fail, since we already pre-checked the VHT
-MCS lists for "exactly 1" rate. But it still seems like better code to
-pre-initialize and/or add error-handling, so we don't rely on that
-implicit proof.
+---
+Changes from v3:
+- Fixed error reported in v2.
 
-I'm not quite sure yet what the "better" answer should be for
-resolving this, but at a minimum, I think the above could be improved.
+Changes from v2:
+- Rebased on top of 38faed150438 ath10k: perform crash dump collection in workqueue.
+- Removed redundant msa permission call.
+---
+ drivers/net/wireless/ath/ath10k/coredump.c | 21 +++++++
+ drivers/net/wireless/ath/ath10k/coredump.h |  1 +
+ drivers/net/wireless/ath/ath10k/qmi.c      |  4 ++
+ drivers/net/wireless/ath/ath10k/snoc.c     | 66 ++++++++++++++++++++++
+ drivers/net/wireless/ath/ath10k/snoc.h     |  1 +
+ 5 files changed, 93 insertions(+)
 
-Brian
+diff --git a/drivers/net/wireless/ath/ath10k/coredump.c b/drivers/net/wireless/ath/ath10k/coredump.c
+index aa04fbf146e0..0ec690b49fb1 100644
+--- a/drivers/net/wireless/ath/ath10k/coredump.c
++++ b/drivers/net/wireless/ath/ath10k/coredump.c
+@@ -962,6 +962,19 @@ static const struct ath10k_mem_region qca4019_hw10_mem_regions[] = {
+ 	},
+ };
+ 
++static const struct ath10k_mem_region wcn399x_hw10_mem_regions[] = {
++	{
++		/* MSA region start is not fixed, hence it is assigned at runtime */
++		.type = ATH10K_MEM_REGION_TYPE_MSA,
++		.len = 0x100000,
++		.name = "DRAM",
++		.section_table = {
++			.sections = NULL,
++			.size = 0,
++		},
++	},
++};
++
+ static const struct ath10k_hw_mem_layout hw_mem_layouts[] = {
+ 	{
+ 		.hw_id = QCA6174_HW_1_0_VERSION,
+@@ -1059,6 +1072,14 @@ static const struct ath10k_hw_mem_layout hw_mem_layouts[] = {
+ 			.size = ARRAY_SIZE(qca4019_hw10_mem_regions),
+ 		},
+ 	},
++	{
++		.hw_id = WCN3990_HW_1_0_DEV_VERSION,
++		.hw_rev = ATH10K_HW_WCN3990,
++		.region_table = {
++			.regions = wcn399x_hw10_mem_regions,
++			.size = ARRAY_SIZE(wcn399x_hw10_mem_regions),
++		},
++	},
+ };
+ 
+ static u32 ath10k_coredump_get_ramdump_size(struct ath10k *ar)
+diff --git a/drivers/net/wireless/ath/ath10k/coredump.h b/drivers/net/wireless/ath/ath10k/coredump.h
+index 5dac653e1649..9802e90483f4 100644
+--- a/drivers/net/wireless/ath/ath10k/coredump.h
++++ b/drivers/net/wireless/ath/ath10k/coredump.h
+@@ -126,6 +126,7 @@ enum ath10k_mem_region_type {
+ 	ATH10K_MEM_REGION_TYPE_IRAM2	= 5,
+ 	ATH10K_MEM_REGION_TYPE_IOSRAM	= 6,
+ 	ATH10K_MEM_REGION_TYPE_IOREG	= 7,
++	ATH10K_MEM_REGION_TYPE_MSA	= 8,
+ };
+ 
+ /* Define a section of the region which should be copied. As not all parts
+diff --git a/drivers/net/wireless/ath/ath10k/qmi.c b/drivers/net/wireless/ath/ath10k/qmi.c
+index ba8f5a8f83d1..8eb0f0f0d3a7 100644
+--- a/drivers/net/wireless/ath/ath10k/qmi.c
++++ b/drivers/net/wireless/ath/ath10k/qmi.c
+@@ -817,9 +817,13 @@ ath10k_qmi_driver_event_post(struct ath10k_qmi *qmi,
+ static void ath10k_qmi_event_server_exit(struct ath10k_qmi *qmi)
+ {
+ 	struct ath10k *ar = qmi->ar;
++	struct ath10k_snoc *ar_snoc = ath10k_snoc_priv(ar);
+ 
+ 	ath10k_qmi_remove_msa_permission(qmi);
+ 	ath10k_core_free_board_files(ar);
++	if (!test_bit(ATH10K_SNOC_FLAG_UNREGISTERING, &ar_snoc->flags))
++		ath10k_snoc_fw_crashed_dump(ar);
++
+ 	ath10k_snoc_fw_indication(ar, ATH10K_QMI_EVENT_FW_DOWN_IND);
+ 	ath10k_dbg(ar, ATH10K_DBG_QMI, "wifi fw qmi service disconnected\n");
+ }
+diff --git a/drivers/net/wireless/ath/ath10k/snoc.c b/drivers/net/wireless/ath/ath10k/snoc.c
+index 0be12996beba..6c362c928e4e 100644
+--- a/drivers/net/wireless/ath/ath10k/snoc.c
++++ b/drivers/net/wireless/ath/ath10k/snoc.c
+@@ -24,6 +24,7 @@
+ #include <linux/regulator/consumer.h>
+ 
+ #include "ce.h"
++#include "coredump.h"
+ #include "debug.h"
+ #include "hif.h"
+ #include "htc.h"
+@@ -1586,6 +1587,71 @@ static int ath10k_hw_power_off(struct ath10k *ar)
+ 	return ret;
+ }
+ 
++static void ath10k_msa_dump_memory(struct ath10k *ar,
++				   struct ath10k_fw_crash_data *crash_data)
++{
++	struct ath10k_snoc *ar_snoc = ath10k_snoc_priv(ar);
++	const struct ath10k_hw_mem_layout *mem_layout;
++	const struct ath10k_mem_region *current_region;
++	struct ath10k_dump_ram_data_hdr *hdr;
++	size_t buf_len;
++	u8 *buf;
++
++	if (!crash_data && !crash_data->ramdump_buf)
++		return;
++
++	mem_layout = ath10k_coredump_get_mem_layout(ar);
++	if (!mem_layout)
++		return;
++
++	current_region = &mem_layout->region_table.regions[0];
++
++	buf = crash_data->ramdump_buf;
++	buf_len = crash_data->ramdump_buf_len;
++	memset(buf, 0, buf_len);
++
++	/* Reserve space for the header. */
++	hdr = (void *)buf;
++	buf += sizeof(*hdr);
++	buf_len -= sizeof(*hdr);
++
++	hdr->region_type = cpu_to_le32(current_region->type);
++	hdr->start = cpu_to_le32((unsigned long)ar_snoc->qmi->msa_va);
++	hdr->length = cpu_to_le32(ar_snoc->qmi->msa_mem_size);
++
++	if (current_region->len < ar_snoc->qmi->msa_mem_size) {
++		memcpy(buf, ar_snoc->qmi->msa_va, current_region->len);
++		ath10k_warn(ar, "msa dump length is less than msa size %x, %x\n",
++			    current_region->len, ar_snoc->qmi->msa_mem_size);
++	} else {
++		memcpy(buf, ar_snoc->qmi->msa_va, ar_snoc->qmi->msa_mem_size);
++	}
++}
++
++void ath10k_snoc_fw_crashed_dump(struct ath10k *ar)
++{
++	struct ath10k_fw_crash_data *crash_data;
++	char guid[UUID_STRING_LEN + 1];
++
++	mutex_lock(&ar->dump_mutex);
++
++	spin_lock_bh(&ar->data_lock);
++	ar->stats.fw_crash_counter++;
++	spin_unlock_bh(&ar->data_lock);
++
++	crash_data = ath10k_coredump_new(ar);
++
++	if (crash_data)
++		scnprintf(guid, sizeof(guid), "%pUl", &crash_data->guid);
++	else
++		scnprintf(guid, sizeof(guid), "n/a");
++
++	ath10k_err(ar, "firmware crashed! (guid %s)\n", guid);
++	ath10k_print_driver_info(ar);
++	ath10k_msa_dump_memory(ar, crash_data);
++	mutex_unlock(&ar->dump_mutex);
++}
++
+ static const struct of_device_id ath10k_snoc_dt_match[] = {
+ 	{ .compatible = "qcom,wcn3990-wifi",
+ 	 .data = &drv_priv,
+diff --git a/drivers/net/wireless/ath/ath10k/snoc.h b/drivers/net/wireless/ath/ath10k/snoc.h
+index 25383de8f17d..6d28a6290a94 100644
+--- a/drivers/net/wireless/ath/ath10k/snoc.h
++++ b/drivers/net/wireless/ath/ath10k/snoc.h
+@@ -101,5 +101,6 @@ static inline struct ath10k_snoc *ath10k_snoc_priv(struct ath10k *ar)
+ }
+ 
+ int ath10k_snoc_fw_indication(struct ath10k *ar, u64 type);
++void ath10k_snoc_fw_crashed_dump(struct ath10k *ar);
+ 
+ #endif /* _SNOC_H_ */
+-- 
+The Qualcomm Innovation Center, Inc. is a member of the Code Aurora Forum,
+a Linux Foundation Collaborative Project
 
->                         update_bitrate_mask = false;
-> +               } else {
-> +                       vht_pfr = 0;
->                 }
->
->                 mutex_lock(&ar->conf_mutex);
-> --
-> 2.20.0
->
 
 _______________________________________________
 ath10k mailing list
