@@ -2,129 +2,130 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id AF38B65763
-	for <lists+ath10k@lfdr.de>; Thu, 11 Jul 2019 14:55:36 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C7FFA65762
+	for <lists+ath10k@lfdr.de>; Thu, 11 Jul 2019 14:55:33 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Content-ID:In-Reply-To:
 	References:Message-ID:Date:Subject:To:From:Reply-To:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=PXjAcqp2D7Af2CDqwvo7GHxG1BkUFowaCiBD1EVYzo4=; b=sNGfpP38y4njeO
-	xvXHvN/Z3BNAOLc8fThQyzSsflg7tyLXNQEcmUatZ1/ly8WeIBmApbE9cpzpjo81TzXx7RNmVnfba
-	zXBmU49CspI9DKC9JdGhcjS+pyUsfx/IILfS3+EDAJRIWCtqTLcKwHwWhY2eAKNfVSlSpM2Ts79Sr
-	RMoopfGkWI788ZpDSy4Geu29CsyFY9xiffXnFrniQxy+sKi0/73UNgGTDL288lOK51yfonsT7B3Y/
-	aQIKbhjeH2KFiU3xNpUJ7QFCVwmwZL0n5G8e/j6xa7uRoHKsKE6sqVmfDJ/EYVLzc+P3LP0t+Y4wD
-	jcZ5hst1mP8izfBUU/Zw==;
+	List-Owner; bh=bLYtUo7PegXAT1FnqhbJc4Qqn6oM9naYZx9GbtQKE/U=; b=hDbwJlyd9up5e7
+	j0mYpJ6i8nlSG12s8bCAnzbZXMugrEWQIFx+e21jZ4BG6IKt58wvItu2U8d9db/cOrY9HFWxrsXkh
+	fGSNz+Pu7gNRZESryODtohCe7nMshf3TfptOA1AkUbNnihGbJlUqHyjCErOp4KM1Kwa62U+9Opkgs
+	9NbPrMl+/8SFtAR2zema0HA6tYkEEQj4DZp7I/V7kt2+Zp7dWkNUNo9NmcahZcphvHHkBXkym/I5Z
+	01iEFtf4g4f8ygoOvyyn6Bq6R86bbajMwHIKqhwkTzVfxwgKDncABHNpscvQs8pRx+tckBdJNCUfZ
+	om3bh6YETvCxoJUTu56A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hlYbm-0000mh-KY; Thu, 11 Jul 2019 12:55:34 +0000
-Received: from mx0a-00183b01.pphosted.com ([67.231.149.44])
+	id 1hlYbd-0000gh-UJ; Thu, 11 Jul 2019 12:55:25 +0000
+Received: from mx0b-00183b01.pphosted.com ([67.231.157.42]
+ helo=mx0a-00183b01.pphosted.com)
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hlYbP-0007v9-NE
- for ath10k@lists.infradead.org; Thu, 11 Jul 2019 12:55:16 +0000
-Received: from pps.filterd (m0048105.ppops.net [127.0.0.1])
- by mx0a-00183b01.pphosted.com (8.16.0.27/8.16.0.27) with SMTP id
- x6BCoboM022322; Thu, 11 Jul 2019 06:55:00 -0600
+ id 1hlYbO-0008I3-1G
+ for ath10k@lists.infradead.org; Thu, 11 Jul 2019 12:55:12 +0000
+Received: from pps.filterd (m0048104.ppops.net [127.0.0.1])
+ by mx0b-00183b01.pphosted.com (8.16.0.27/8.16.0.27) with SMTP id
+ x6BCqZYt008240; Thu, 11 Jul 2019 06:55:05 -0600
 Received: from nam03-by2-obe.outbound.protection.outlook.com
- (mail-by2nam03lp2051.outbound.protection.outlook.com [104.47.42.51])
- by mx0a-00183b01.pphosted.com with ESMTP id 2tnxyah3ns-1
+ (mail-by2nam03lp2056.outbound.protection.outlook.com [104.47.42.56])
+ by mx0b-00183b01.pphosted.com with ESMTP id 2tnxk30vnf-1
  (version=TLSv1.2 cipher=ECDHE-RSA-AES256-SHA384 bits=256 verify=NOT);
- Thu, 11 Jul 2019 06:55:00 -0600
+ Thu, 11 Jul 2019 06:55:05 -0600
 ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
- b=Ay3RdJOSkEvDhap6VOCpXOTkqjNgJwG/fWox+xkl1886KBYaKke2fPPtnXzdHCzn9V92WRSktOKJ5bGsyXQvu2D1qM3ts92ucjxar32ddof27WHF6FslQEEUXHuFadalcBZhUo9eAEyrYN7ZnsX+pcztYRd4L9gPGIb2GriPDJaAEmQK/LP3e1I9xv5JN8GA3E1pb5ivi+WMHOh1IniF/BBjPW+cA/eNb6PxQIi0WwNKIpviHaqDzf8OoCr2H1+qp48tbhpeeGVTzT4UC8bojWx5ITwGVsI6ux214jK9Oc/4muS0pEUKgRno1mSG8tkcXEZTe+i/uIpXrdw+i5xR8g==
+ b=GImgMg5qkeZx6+pUQm3rLjEt1a3ExO58Rce0YFmNdqV/U3X4l+GsWki8pVy9H27WAHP8xB2id3guYZQ3wa0DpPPhP9CWBlQLmg+TyNuPN0zWT1QRQ18Dob45cI8sMoBEYO2tkf++2B6lgRlmihGCC34pXSgviq7MIc9re6zQUlmr1MlY5i3b1A3eN1DsJpafh4MZU1zCbjauM2Fabgq6sJXYmuxWNTSOcVAfQck+xhxQPW2cwxAQqYQc68THK+cbFkNFNU57fMpFBcO5BxwbIPsZFmX/GsCrrHDdWNkN8GRE4+lOEuCS/RjMO38G9nx9oi8Nau63NH3rW/Fmls3V+w==
 ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; 
  s=arcselector9901;
  h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
- bh=vO2iSO4+MKy8mqJ0BeX3elWoWZhzMhC08a0MtDB9Bds=;
- b=RXWNeCxMCGBgb3z9bpvve437lg+iDtCjeERvh1zUSLniyOfm2Zdv4gBw+C2AoGwDZWretBqWvqLc4o5a/WCdPMdtFssnKqor//+abRcvoCNgv3oJdt8QYXAa6GhNPjXhI6Hv2/c4GI3x2zJW+bCYa0dIbyS8rfFaAicM32YZCOuPqU8ntnOutiNK0uV1soe9s9N6Bc/Ey6Tmt4+Mrj0WqSN8DchD2JsulFoB4bL6E7BsIJ7R2gT1MO9FxJ73UJ66ga3D3K528OvtZPE24IL3tpmiySWvz9x5h8ic+fJRWmTjiNCzrVnWarNozU2XUmUs5hMOghzts5rUBwV7pOks1A==
+ bh=F95ylwJbTc+FmO+HI4xSEopLm/KBYGzwjZW5lB9o4+U=;
+ b=jH0+67RXVTX/DBlzizokBPDRY5nIdlfL6vGPViFYTvnlClgfCTLK0mI50InxTv6F9M0GgXZjosqDpmbqoYi/H9CQGz7xCXcRSaSbWasyh9ePE1CK9JgqzYc0KHBTsLt47kQmnFgNDBny2xLtu1fQFi9OdF3ZfuYVESEX4LmQiccHfcIOVsugZ5V7pUa+3UouC0v93fWxkyKWz03U6bAun+SRTvCmL7rHb0o1F5pXlZDd1Jn/tAPSfNPahhH8JYXPvEeyTAcYYHw7/tLYDLMQMYHqoPfe4QEQ3byMFTM7Pxa/kVj5Tsp4ShPCMETxCatMbzuIpPFk+SF2RcwIONJgew==
 ARC-Authentication-Results: i=1; mx.microsoft.com 1;spf=pass
  smtp.mailfrom=quantenna.com;dmarc=pass action=none
  header.from=quantenna.com;dkim=pass header.d=quantenna.com;arc=none
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=quantenna.com;
  s=selector2;
  h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
- bh=vO2iSO4+MKy8mqJ0BeX3elWoWZhzMhC08a0MtDB9Bds=;
- b=rmRgEIckxRNsxZAw0DDfhbiCWEyhzLXiIGspq60ttHxzPqNEuLNwDOnd79+GP5apHnw7g4OqO6k/5WJ6Kz3WLc1jTDex7F9ytxt5M8DyDYFcfnDNyFHYJKeGSVK1S+XKfi+Id5ZuhEyNo+2KVtN+9H92VxBwEnkN4S494oNsUTU=
-Received: from BN6PR05MB3105.namprd05.prod.outlook.com (10.172.146.135) by
- BN6PR05MB3585.namprd05.prod.outlook.com (10.174.233.167) with Microsoft SMTP
+ bh=F95ylwJbTc+FmO+HI4xSEopLm/KBYGzwjZW5lB9o4+U=;
+ b=V44bUxq1au7cT2s2yPiIvIzpaD4Cjpvs7mU/Xl20+PpuIA4coeOnk40g/j5QUMp9vMyUIa7Gjhg+JmzE5/D0+7jXiUkncW9G1l6DPyxX8Q+UvWHwnoErvMy5vj+H9MWd7oq1tC2B6W+z3rKK6PS/pT4+E0kCoRsdwDGn5C9El8g=
+Received: from SN6PR05MB4174.namprd05.prod.outlook.com (52.135.67.141) by
+ SN6PR05MB5790.namprd05.prod.outlook.com (20.178.7.17) with Microsoft SMTP
  Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
- 15.20.2073.10; Thu, 11 Jul 2019 12:54:59 +0000
-Received: from BN6PR05MB3105.namprd05.prod.outlook.com
- ([fe80::a8c7:9a47:4458:f22]) by BN6PR05MB3105.namprd05.prod.outlook.com
- ([fe80::a8c7:9a47:4458:f22%11]) with mapi id 15.20.2073.008; Thu, 11 Jul 2019
- 12:54:59 +0000
+ 15.20.2094.7; Thu, 11 Jul 2019 12:55:03 +0000
+Received: from SN6PR05MB4174.namprd05.prod.outlook.com
+ ([fe80::68da:521d:d75c:5dad]) by SN6PR05MB4174.namprd05.prod.outlook.com
+ ([fe80::68da:521d:d75c:5dad%7]) with mapi id 15.20.2073.008; Thu, 11 Jul 2019
+ 12:55:03 +0000
 Received: from SN6PR05MB4928.namprd05.prod.outlook.com (52.135.117.74) by
  SN6PR05MB5647.namprd05.prod.outlook.com (52.135.111.202) with Microsoft SMTP
  Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
- 15.20.2073.10; Thu, 11 Jul 2019 12:51:18 +0000
+ 15.20.2073.10; Thu, 11 Jul 2019 12:54:49 +0000
 Received: from SN6PR05MB4928.namprd05.prod.outlook.com
  ([fe80::13f:5819:79e7:ea8f]) by SN6PR05MB4928.namprd05.prod.outlook.com
  ([fe80::13f:5819:79e7:ea8f%5]) with mapi id 15.20.2073.008; Thu, 11 Jul 2019
- 12:51:17 +0000
+ 12:54:49 +0000
 From: Sergey Matyukevich <sergey.matyukevich.os@quantenna.com>
 To: Tamizh chelvam <tamizhr@codeaurora.org>
-Subject: Re: [PATCHv6 1/9] nl80211: New netlink command for TID specific
- configuration
-Thread-Topic: [PATCHv6 1/9] nl80211: New netlink command for TID specific
- configuration
-Thread-Index: AQHVJaGvTjP0r5cPcEi6bnoTD8w66KbFg18A
-Date: Thu, 11 Jul 2019 12:51:17 +0000
-Message-ID: <20190711125111.vd4rfixmotyusuai@bars>
+Subject: Re: [PATCHv6 5/9] nl80211: Add netlink attribute to configure TID
+ specific tx rate
+Thread-Topic: [PATCHv6 5/9] nl80211: Add netlink attribute to configure TID
+ specific tx rate
+Thread-Index: AQHVJaGs5+plNin5xE2WE4mORkW386bFhFqA
+Date: Thu, 11 Jul 2019 12:54:48 +0000
+Message-ID: <20190711125442.unlaqjl5nnqgsbod@bars>
 References: <1560835632-17405-1-git-send-email-tamizhr@codeaurora.org>
- <1560835632-17405-2-git-send-email-tamizhr@codeaurora.org>
-In-Reply-To: <1560835632-17405-2-git-send-email-tamizhr@codeaurora.org>
+ <1560835632-17405-6-git-send-email-tamizhr@codeaurora.org>
+In-Reply-To: <1560835632-17405-6-git-send-email-tamizhr@codeaurora.org>
 Accept-Language: en-US
 Content-Language: en-US
 X-MS-Has-Attach: 
 X-MS-TNEF-Correlator: 
-x-clientproxiedby: BYAPR04CA0036.namprd04.prod.outlook.com
- (2603:10b6:a03:40::49) To SN6PR05MB4928.namprd05.prod.outlook.com
+x-clientproxiedby: BYAPR08CA0056.namprd08.prod.outlook.com
+ (2603:10b6:a03:117::33) To SN6PR05MB4928.namprd05.prod.outlook.com
  (2603:10b6:805:9d::10)
 x-ms-exchange-messagesentrepresentingtype: 1
 x-originating-ip: [195.182.157.78]
 x-ms-publictraffictype: Email
-x-ms-office365-filtering-correlation-id: c2e7e871-1d77-482f-11ea-08d705fe7715
+x-ms-office365-filtering-correlation-id: 38eeecce-f6b0-4bb6-86d3-08d705fef50f
 x-microsoft-antispam: BCL:0; PCL:0;
  RULEID:(2390118)(7020095)(4652040)(8989299)(4534185)(4627221)(201703031133081)(201702281549075)(8990200)(5600148)(711020)(4605104)(1401327)(2017052603328)(7193020);
  SRVR:SN6PR05MB5647; 
-x-ms-traffictypediagnostic: SN6PR05MB5647:|BN6PR05MB3585:
-x-microsoft-antispam-prvs: <SN6PR05MB564711CBCFE8E21D5D280A77A3F30@SN6PR05MB5647.namprd05.prod.outlook.com>
-x-moderation-data: 7/11/2019 12:54:57 PM
-x-ms-oob-tlc-oobclassifiers: OLM:7691;
+x-ms-traffictypediagnostic: SN6PR05MB5647:|SN6PR05MB5790:
+x-microsoft-antispam-prvs: <SN6PR05MB56478C25D2E8B9993B9A1694A3F30@SN6PR05MB5647.namprd05.prod.outlook.com>
+x-moderation-data: 7/11/2019 12:55:02 PM
+x-ms-oob-tlc-oobclassifiers: OLM:8882;
 x-forefront-prvs: 0095BCF226
 x-forefront-antispam-report: SFV:NSPM;
- SFS:(10009020)(7916004)(136003)(39850400004)(366004)(376002)(396003)(346002)(189003)(199004)(86362001)(6512007)(9686003)(478600001)(53936002)(4326008)(25786009)(66066001)(256004)(316002)(6436002)(33716001)(229853002)(6486002)(476003)(8676002)(54906003)(486006)(1076003)(8936002)(436003)(68736007)(5660300002)(386003)(14454004)(6506007)(66946007)(76176011)(66556008)(66476007)(64756008)(66446008)(186003)(446003)(102836004)(26005)(7736002)(305945005)(81156014)(81166006)(2906002)(6116002)(3846002)(52116002)(71200400001)(6916009)(6246003)(71190400001)(99286004)(11346002);
- DIR:OUT; SFP:1101; SCL:1; SRVR:BN6PR05MB3585;
- H:BN6PR05MB3105.namprd05.prod.outlook.com; FPR:; SPF:None; LANG:en;
+ SFS:(10009020)(7916004)(346002)(366004)(39830400003)(396003)(376002)(136003)(189003)(199004)(436003)(81166006)(81156014)(26005)(102836004)(7736002)(2906002)(5660300002)(25786009)(8676002)(54906003)(1076003)(305945005)(186003)(6916009)(9686003)(316002)(66446008)(64756008)(6512007)(66556008)(256004)(66946007)(66476007)(6246003)(53936002)(8936002)(71200400001)(71190400001)(4326008)(6486002)(6436002)(33716001)(229853002)(99286004)(6116002)(3846002)(386003)(6506007)(86362001)(52116002)(76176011)(478600001)(486006)(476003)(11346002)(66066001)(14454004)(68736007)(446003);
+ DIR:OUT; SFP:1101; SCL:1; SRVR:SN6PR05MB5790;
+ H:SN6PR05MB4174.namprd05.prod.outlook.com; FPR:; SPF:None; LANG:en;
  PTR:InfoNoRecords; MX:1; A:1; 
 received-spf: None (protection.outlook.com: quantenna.com does not designate
  permitted sender hosts)
 x-ms-exchange-senderadcheck: 1
-x-microsoft-antispam-message-info: Euj+f7CPDDdSA7UEwcxzTxAGezN8mHlQM4e4RfqEuJWaxyst95uGYEVJ2edx66PzwseNETq70fzu8jFrkp3DDbCmPs8yWr0LnoAA9LMkW52fK18XYsW7+Lp/0K9GtfbAUuHVK0wo6xwit15vex/vYGBwAok25HrtkUGbhtb5VlO1PHVzG+oT382jmDVHSK7u79liC0Xj78lgerYGUtpCnAcJtvakV6ULamjJz/hG0oOArOcvlRuR+NSHJgXJwhIFEd8Vb3HnoN5oep8Qr5mdElnRb5wbO7geyAAxGjgc5ea5yUHJv40xPi4mjHMC8xVBXKpMt4sB6SKbUcjXyQvrmgSoMx68q/lSSMbEmEmunmcO4w48hlQ15TsKU1ezZfDl8z13VNjj9q0rR6rqq+3mWuk1wnrBbpeBCHtEOChwZkM=
-Content-ID: <0558E3923765CB498C7AE30F0AA63429@namprd05.prod.outlook.com>
+x-microsoft-antispam-message-info: 0wNR0BIQWsmekyo/uvWPnQR4REYZuIVyOf0uWSiIPb4NBCsUjWuuPmGheC/xwUFqCm5s/eUZ+9zho9IyUFvwwJtYYQmpqBDiIXHggSelfHTy5HzwjJZSSI2b8gfdUFqIu22pXa7ltemixdQHbNY8LgOo6WKyrET+7dxAokauCsegpDXM109vM3W+Y+h2J8gkO/GS5NhScgD/MVuo2/neAwFoCUCjS7Oy/1YMLXOZ9sUvXsip0rqTzclc1KJ601MAWmJTFNDDlHY9gQzUgb1iX15OFOPnIpZWXtD7bBZPBr/lHrQ6sAx5RU2LxSRSuF8yAM9UqeFq5O9IRwhhQ4X1Xtuzc6xo06D3o8CiVd6Ytioa3R0G/eH0BczQ5RtHgndqPVzs8ww12BcvXYeQFm/+vGtQw9auJ/McSVxhS0Ml0ak=
+Content-ID: <1C243749BB147E41A5268EBD4E997466@namprd05.prod.outlook.com>
 MIME-Version: 1.0
 X-OriginatorOrg: quantenna.com
-X-MS-Exchange-CrossTenant-Network-Message-Id: c2e7e871-1d77-482f-11ea-08d705fe7715
+X-MS-Exchange-CrossTenant-Network-Message-Id: 38eeecce-f6b0-4bb6-86d3-08d705fef50f
 X-MS-Exchange-CrossTenant-fromentityheader: Hosted
 X-MS-Exchange-CrossTenant-id: a355dbce-62b4-4789-9446-c1d5582180ff
 X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
-X-MS-Exchange-CrossTenant-userprincipalname: SPO_Arbitration_7f80e2f9-1cc0-4787-aa3c-3cdfbd49c073@quantenna.onmicrosoft.com
-X-MS-Exchange-CrossTenant-originalarrivaltime: 11 Jul 2019 12:54:59.2992 (UTC)
-X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN6PR05MB3585
+X-MS-Exchange-CrossTenant-userprincipalname: SPO_Arbitration_9454465f-4b3d-47c4-906a-0e3cbbb71a30@quantenna.onmicrosoft.com
+X-MS-Exchange-CrossTenant-originalarrivaltime: 11 Jul 2019 12:55:03.6490 (UTC)
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SN6PR05MB5790
 X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:, ,
  definitions=2019-07-11_02:, , signatures=0
 X-Proofpoint-Spam-Reason: safe
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190711_055511_925923_8F8CD5AC 
-X-CRM114-Status: GOOD (  12.89  )
+X-CRM114-CacheID: sfid-20190711_055510_483352_389DDE30 
+X-CRM114-Status: GOOD (  10.56  )
 X-Spam-Score: -0.9 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.9 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [67.231.149.44 listed in list.dnswl.org]
+ low trust [67.231.157.42 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
@@ -153,91 +154,40 @@ Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-> Add a new NL command, NL80211_CMD_SET_TID_CONFIG to support
-> data TID specific configuration. This per TID configurations
-> are passed in NL80211_ATTR_TID_CONFIG which is a nested
-> attribute. This patch adds support to configure per TID
-> noack policy through NL80211_TID_ATTR_CONFIG_NOACK attribute.
-> Data TID value for this configuration will be passed through
-> NL80211_TID_ATTR_CONFIG_TID attribute. When the user-space wants
-> this configuration peer specific rather than being applied for
-> all the connected stations, MAC address of the peer can be passed
-> in NL80211_ATTR_MAC attribute. This patch introduced
-> enum ieee80211_tid_conf_mask to notify the driver that which
-> configuration modified.
-> Driver supporting data TID specific noack policy configuration
-> should be advertise through NL80211_EXT_FEATURE_PER_TID_NOACK_CONFIG
-> and supporting per STA data TID noack policy configuration
-> should be advertise through NL80211_EXT_FEATURE_PER_STA_NOACK_CONFIG
+> Introduce NL80211_TID_ATTR_CONFIG_TX_RATES in nl80211_tid_attr_config
+> to accept data TID specific TX bitrate configuration
+> through NL80211_CMD_SET_TID_CONFIG command. TID for which the
+> this configuration is to be applied is passed in
+> NL80211_TID_ATTR_CONFIG_TID attribute. TX bitrate mask values passed
+> in NL80211_ATTR_TX_RATES attribute and NL80211_TID_ATTR_CONFIG_TX_RATES
+> attribute will have types of the TX rate should be applied.
+> When the user-space wants this configuration peer specific
+> rather than being applied for all the connected stations,
+> MAC address of the peer can be passed in NL80211_ATTR_MAC attribute.
+> 
+> Driver supporting this feature should advertise
+> NL80211_EXT_FEATURE_PER_TID_TX_BITRATE_MASK and supporting per-STA data TID
+> TX bitrate configuration should advertise
+> NL80211_EXT_FEATURE_PER_STA_TX_BITRATE_MASK.
 > 
 > Signed-off-by: Tamizh chelvam <tamizhr@codeaurora.org>
 
 ...
 
-> +static int parse_tid_conf(struct cfg80211_registered_device *rdev,
-> +                         struct nlattr *attrs[],
-> +                         struct ieee80211_tid_cfg *tid_conf,
-> +                         struct genl_info *info, const u8 *peer)
-> +{
+>         if (info->attrs[NL80211_ATTR_TX_RATES]) {
+> -               err = nl80211_parse_tx_bitrate_mask(info, &params.beacon_rate);
+> +               err = nl80211_parse_tx_bitrate_mask(info, info->attrs,
+> +                                                   NL80211_ATTR_TX_RATES,
+> +                                                   &params.beacon_rate);
+>                 if (err)
+>                         return err;
+> 
 
-...
+Could you please clarify this change of nl80211_parse_tx_bitrate_mask arguments.
+Unless I missing something, the appropriate change for nl80211_parse_tx_bitrate_mask
+is not included into this patch set.
 
-
-> +static int nl80211_set_tid_config(struct sk_buff *skb,
-> +                                 struct genl_info *info)
-> +{
-> +       struct cfg80211_registered_device *rdev = info->user_ptr[0];
-> +       struct nlattr *attrs[NL80211_TID_ATTR_CONFIG_MAX + 1];
-> +       struct net_device *dev = info->user_ptr[1];
-> +       struct ieee80211_tid_config *tid_config;
-> +       struct nlattr *tid;
-> +       int conf_idx = 0, rem_conf;
-> +       int ret = -EINVAL;
-> +       u32 num_conf = 0;
-> +
-> +       if (!info->attrs[NL80211_ATTR_TID_CONFIG])
-> +               return -EINVAL;
-> +
-> +       if (!rdev->ops->set_tid_config)
-> +               return -EOPNOTSUPP;
-> +
-> +       nla_for_each_nested(tid, info->attrs[NL80211_ATTR_TID_CONFIG],
-> +                           rem_conf)
-> +               num_conf++;
-> +
-> +       tid_config = kzalloc(struct_size(tid_config, tid_conf, num_conf),
-> +                            GFP_KERNEL);
-> +       if (!tid_config)
-> +               return -ENOMEM;
-> +
-> +       tid_config->n_tid_conf = num_conf;
-> +
-> +       if (info->attrs[NL80211_ATTR_MAC])
-> +               tid_config->peer = nla_data(info->attrs[NL80211_ATTR_MAC]);
-> +
-> +       nla_for_each_nested(tid, info->attrs[NL80211_ATTR_TID_CONFIG],
-> +                           rem_conf) {
-> +               ret = nla_parse_nested_deprecated(attrs, NL80211_TID_ATTR_CONFIG_MAX,
-> +                                                 tid, NULL, NULL);
-> +
-> +               if (ret)
-> +                       goto bad_tid_conf;
-> +
-> +               if (!attrs[NL80211_TID_ATTR_CONFIG_TID]) {
-> +                       ret = -EINVAL;
-> +                       goto bad_tid_conf;
-> +               }
-> +
-> +               ret = parse_tid_conf(rdev, attrs,
-> +                                    &tid_config->tid_conf[conf_idx],
-> +                                    tid_config->peer);
-
-
-Argument 'info' is missing here from parse_tid_conf. IIUC, appropriate
-fixup is included into patch #5. So it looks like rebase issue. But it
-makes sense to fix it since this issue makes the patch set non-bisectable.
-
-Regareds,
+Regards,
 Sergey
 
 _______________________________________________
