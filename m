@@ -2,55 +2,52 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id F140268B48
-	for <lists+ath10k@lfdr.de>; Mon, 15 Jul 2019 15:40:24 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D6BDA68BCC
+	for <lists+ath10k@lfdr.de>; Mon, 15 Jul 2019 15:47:06 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=YsR74VlpemsirTOZ9WjP7h5fMXJ44muxstUKpIlMtG8=; b=P+PAGcsfAAakoH
-	wOpwNPrbAsHHyR1S9Qa2XUJ/VB0yJzwFzNrHIMRqobiQyeU099h+7k96gOXstnEGTL2cGRmleh2p7
-	XzBj9/22ToOUze7fSHwE1fQPgDRYf0QyZHST1LTFc0dg8LlwwCy+ray6tFKsF6bMRRELhLEHg8viM
-	v1CfCNuWDzEmnBObtbixQ0VANDePoG52vfuB3gRcarb75esrSUDwVGqDHo1REjpS9+Soer8LeEc8J
-	PumqdY7/i19svKHPyo9jN7I1YZ62+qlN5qtdBHGEt/dQ+37zEt25n6/b3HGKSw99StowNzXnJykoz
-	SUsV4VCpoE55pjksG/6Q==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=qDrpE1uc0l0fhSjlYzS2t6LYdcvZ3+MXbmaw0RvuWwM=; b=poeFaz9Ggo38rg
+	0B+k2elGgPbQRf4Xtsp60NSgG6l0QKGpaeQBguIMMqGyu8306eqWowOXbZDe2I+/9JushJGtIWs5B
+	lqZKq0BTChpO4SiWtJcl6eTgJGyvbWaO/48D2BqCLMhKS6OQ61QXeSY3NUwLfhWL+P83XR5o/fGIK
+	s827QOKdvac8vooue0SpbH/96wSvalOPTUgcjF260q2dYK7fVcxQQi/gB9zn29Ik92chIemugVrd5
+	bl0iEsssrxbbGVAkv6xgO9meMTXx6YpUNiYTrAwlStIi4YemQ2oBMm2eV+RSnGPcGRby3MJ2zSndr
+	+IusWM28hGwx7eOoYCKg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hn1DL-0006zr-0c; Mon, 15 Jul 2019 13:40:23 +0000
+	id 1hn1Jp-00013w-2x; Mon, 15 Jul 2019 13:47:05 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hn1DG-0006zY-UV
- for ath10k@lists.infradead.org; Mon, 15 Jul 2019 13:40:20 +0000
+ id 1hn1Jl-00013M-1g
+ for ath10k@lists.infradead.org; Mon, 15 Jul 2019 13:47:02 +0000
 Received: from sasha-vm.mshome.net (unknown [73.61.17.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 876AF2086C;
- Mon, 15 Jul 2019 13:40:16 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id 86CB52067C;
+ Mon, 15 Jul 2019 13:46:58 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1563198018;
- bh=8MFIeyxHNO4CRPVVo0iFOLtHIhxgcEGt+NoS7XE7A2k=;
- h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=wChblI5+6Rl3NFmdHu8kPoz3voYXHA+MMrzeB+HcQ6iMlEFUwCA6KzVxdfvO+tJ0s
- IN4dHQQDt9bCQchNxUNh/7s93sjuaLbHzLgoXePqo2DCPRg5kf62rYsGa7eXIrgLrF
- 0MOrbHbB3r23DKA9IFtFK5XXngpWboXEfycpicYE=
+ s=default; t=1563198420;
+ bh=NZraKEDuaB6vwvz8xVUkIR+7IQqLDfLfw8tb08+gex4=;
+ h=From:To:Cc:Subject:Date:From;
+ b=nL8WyFnDkqcBZFpe2k5Of7A6taGE/vwj4VfzIt+rhtRQvptujAcLblNmnzoBJav3a
+ lo5LPp5NDzNn6IcugPWhPHzgrI3BqwkodOm3ak/qp/zy/wxnAN3Cgfm17ovwXwOKy/
+ MWTKgcVdv3jw5GNsik7XS7tZ5GdYWHS6nLaweH/0=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 4.14 002/105] ath10k: Do not send probe response
- template for mesh
-Date: Mon, 15 Jul 2019 09:38:28 -0400
-Message-Id: <20190715134012.3226-2-sashal@kernel.org>
+Subject: [PATCH AUTOSEL 5.2 001/249] ath10k: Check tx_stats before use it
+Date: Mon, 15 Jul 2019 09:42:46 -0400
+Message-Id: <20190715134655.4076-1-sashal@kernel.org>
 X-Mailer: git-send-email 2.20.1
-In-Reply-To: <20190715134012.3226-1-sashal@kernel.org>
-References: <20190715134012.3226-1-sashal@kernel.org>
 MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190715_064018_995047_3782CF29 
-X-CRM114-Status: UNSURE (   8.97  )
+X-CRM114-CacheID: sfid-20190715_064701_102424_8BA2F135 
+X-CRM114-Status: UNSURE (   9.11  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -82,49 +79,46 @@ List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
 Cc: Sasha Levin <sashal@kernel.org>, netdev@vger.kernel.org,
  linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
- Kalle Valo <kvalo@codeaurora.org>, Surabhi Vishnoi <svishnoi@codeaurora.org>
+ Yingying Tang <yintang@codeaurora.org>, Kalle Valo <kvalo@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-From: Surabhi Vishnoi <svishnoi@codeaurora.org>
+From: Yingying Tang <yintang@codeaurora.org>
 
-[ Upstream commit 97354f2c432788e3163134df6bb144f4b6289d87 ]
+[ Upstream commit 9e7251fa38978b85108c44743e1436d48e8d0d76 ]
 
-Currently mac80211 do not support probe response template for
-mesh point. When WMI_SERVICE_BEACON_OFFLOAD is enabled, host
-driver tries to configure probe response template for mesh, but
-it fails because the interface type is not NL80211_IFTYPE_AP but
-NL80211_IFTYPE_MESH_POINT.
+tx_stats will be freed and set to NULL before debugfs_sta node is
+removed in station disconnetion process. So if read the debugfs_sta
+node there may be NULL pointer error. Add check for tx_stats before
+use it to resove this issue.
 
-To avoid this failure, skip sending probe response template to
-firmware for mesh point.
-
-Tested HW: WCN3990/QCA6174/QCA9984
-
-Signed-off-by: Surabhi Vishnoi <svishnoi@codeaurora.org>
+Signed-off-by: Yingying Tang <yintang@codeaurora.org>
 Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 Signed-off-by: Sasha Levin <sashal@kernel.org>
 ---
- drivers/net/wireless/ath/ath10k/mac.c | 4 ++++
- 1 file changed, 4 insertions(+)
+ drivers/net/wireless/ath/ath10k/debugfs_sta.c | 7 +++++++
+ 1 file changed, 7 insertions(+)
 
-diff --git a/drivers/net/wireless/ath/ath10k/mac.c b/drivers/net/wireless/ath/ath10k/mac.c
-index cdcfb175ad9b..58a3c42c4aed 100644
---- a/drivers/net/wireless/ath/ath10k/mac.c
-+++ b/drivers/net/wireless/ath/ath10k/mac.c
-@@ -1611,6 +1611,10 @@ static int ath10k_mac_setup_prb_tmpl(struct ath10k_vif *arvif)
- 	if (arvif->vdev_type != WMI_VDEV_TYPE_AP)
- 		return 0;
+diff --git a/drivers/net/wireless/ath/ath10k/debugfs_sta.c b/drivers/net/wireless/ath/ath10k/debugfs_sta.c
+index c704ae371c4d..42931a669b02 100644
+--- a/drivers/net/wireless/ath/ath10k/debugfs_sta.c
++++ b/drivers/net/wireless/ath/ath10k/debugfs_sta.c
+@@ -663,6 +663,13 @@ static ssize_t ath10k_dbg_sta_dump_tx_stats(struct file *file,
  
-+	 /* For mesh, probe response and beacon share the same template */
-+	if (ieee80211_vif_is_mesh(vif))
+ 	mutex_lock(&ar->conf_mutex);
+ 
++	if (!arsta->tx_stats) {
++		ath10k_warn(ar, "failed to get tx stats");
++		mutex_unlock(&ar->conf_mutex);
++		kfree(buf);
 +		return 0;
++	}
 +
- 	prb = ieee80211_proberesp_get(hw, vif);
- 	if (!prb) {
- 		ath10k_warn(ar, "failed to get probe resp template from mac80211\n");
+ 	spin_lock_bh(&ar->data_lock);
+ 	for (k = 0; k < ATH10K_STATS_TYPE_MAX; k++) {
+ 		for (j = 0; j < ATH10K_COUNTER_TYPE_MAX; j++) {
 -- 
 2.20.1
 
