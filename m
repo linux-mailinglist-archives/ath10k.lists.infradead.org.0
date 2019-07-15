@@ -2,46 +2,46 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2427568FFC
-	for <lists+ath10k@lfdr.de>; Mon, 15 Jul 2019 16:18:21 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id BE7D969002
+	for <lists+ath10k@lfdr.de>; Mon, 15 Jul 2019 16:18:30 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=cFrM8q9Rjh27RCnACkd9ws6fxgx1IkrFfhXx+tZ8uFA=; b=s/+9yA1twQCceR
-	HeVQ1zYaxbY8tbgHz2EnnrfOKsa3rZAGpfrxGNNA7oVnN5XksSuttINZW6zfy8RuiWWTbTIfUwQ0G
-	kwE35rvO+kIf2/Gppiwh61PYl1lo0MywQ9kJHQ2BHJB1+zgMUJy6OvWAkiBBaqpO/Unm2IwGDcH9H
-	7PPgSN/bG6EFxn/45vSSkSR4M1RTCPJjVRjf+QrZljCvilTKDsgOYAaz3n4k+cTjh2SujJevRzX4i
-	Ogn1A0h4Oy1QyUGnf51qhDCdjeANAXBffh6Re7FDMvhCMw/7iTDbfcTojWl9rEMPrfQdueLgFUwpE
-	thuJlvUaMtU3mBmcI53w==;
+	List-Owner; bh=UaGKKKbuy0rUg+lr/QoBmCOnIEWlKueDcfGv+CHm59c=; b=mIw3GUGWMkCQbN
+	vfI0es7cR2JBb7dKm5WYX4X0pEiaI2+oljz49AVbSnILuE0sQ6chLomG89g1h9u1g0UBxXtg3ZJ64
+	hGw81sqCG19XRRjfu/RiJn8r2QKvLJzNYK9299Rma/rzO7Nf34Zvi9ZrcRlOWdbukaw2ZMu4C8Ves
+	amQO4+t6IrrfbgFTAkEv6RaB91bPJR0B4fWViUUjHq7ENrjodQV5n2xwtuiVuRY+wVuBo3bT0b9bv
+	LHzkxDHTe/K3nzCMpCXGJnXmRTnDUCkorG0mMCkx4Hf+omc5EczRIlK6LyUGccerbeZAcGSBjHMbW
+	SHL1kNee5x0j+HWJDHHQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hn1o3-00032O-MN; Mon, 15 Jul 2019 14:18:19 +0000
+	id 1hn1oD-00037E-5X; Mon, 15 Jul 2019 14:18:29 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hn1nz-000320-Mf
- for ath10k@lists.infradead.org; Mon, 15 Jul 2019 14:18:16 +0000
+ id 1hn1o8-00036c-NK
+ for ath10k@lists.infradead.org; Mon, 15 Jul 2019 14:18:25 +0000
 Received: from sasha-vm.mshome.net (unknown [73.61.17.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id F1DDB206B8;
- Mon, 15 Jul 2019 14:18:13 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id 0EC5A2081C;
+ Mon, 15 Jul 2019 14:18:22 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1563200295;
- bh=XaAjnu12IndW/tEV9TQigJdi6gSZY5u27R/Bpm9PgKs=;
+ s=default; t=1563200304;
+ bh=PjotlXJDX9u0DWYVZV9CvhTezXZPphkRfNwjbqDKScA=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=RRWeAnOXWvWkueP8KNBwZ2EWDG+UFNqKFPJB3QV1JpAK3sBaY9J+2OjyLDwJzlIDp
- 12Y7/g7RYkA+21sQhU6djJBLhz6NP7UxjFd5i7KL1IxYVIqtHvDMKoa94c32ZuWEJK
- YkevGEKvnjjwmimq1Mi+LeuHEtqmaNqFmhdGekUg=
+ b=yXUkrupi9nEq5ePPjx7o9wghUVCBEKnkDlDI/3mz/qLH22qgKMaTTrslaiCN/iLii
+ 6lLHo92SXhDXTAI/qWt0EdaZg+pvovB6WRyUaN/8T3iueNfDaj2CwSmy7+P09frU26
+ dudH0jhkbZQ4IwL/fk4w2aZPP8kZTrrTbzTyu1bY=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 4.19 002/158] ath10k: Do not send probe response
- template for mesh
-Date: Mon, 15 Jul 2019 10:15:33 -0400
-Message-Id: <20190715141809.8445-2-sashal@kernel.org>
+Subject: [PATCH AUTOSEL 4.19 005/158] ath10k: add peer id check in
+ ath10k_peer_find_by_id
+Date: Mon, 15 Jul 2019 10:15:36 -0400
+Message-Id: <20190715141809.8445-5-sashal@kernel.org>
 X-Mailer: git-send-email 2.20.1
 In-Reply-To: <20190715141809.8445-1-sashal@kernel.org>
 References: <20190715141809.8445-1-sashal@kernel.org>
@@ -49,8 +49,8 @@ MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190715_071815_757798_E9A58D54 
-X-CRM114-Status: UNSURE (   8.97  )
+X-CRM114-CacheID: sfid-20190715_071824_775280_20DA9746 
+X-CRM114-Status: UNSURE (   8.88  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -82,49 +82,73 @@ List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
 Cc: Sasha Levin <sashal@kernel.org>, netdev@vger.kernel.org,
  linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
- Kalle Valo <kvalo@codeaurora.org>, Surabhi Vishnoi <svishnoi@codeaurora.org>
+ Wen Gong <wgong@codeaurora.org>, Kalle Valo <kvalo@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-From: Surabhi Vishnoi <svishnoi@codeaurora.org>
+From: Wen Gong <wgong@codeaurora.org>
 
-[ Upstream commit 97354f2c432788e3163134df6bb144f4b6289d87 ]
+[ Upstream commit 49ed34b835e231aa941257394716bc689bc98d9f ]
 
-Currently mac80211 do not support probe response template for
-mesh point. When WMI_SERVICE_BEACON_OFFLOAD is enabled, host
-driver tries to configure probe response template for mesh, but
-it fails because the interface type is not NL80211_IFTYPE_AP but
-NL80211_IFTYPE_MESH_POINT.
+For some SDIO chip, the peer id is 65535 for MPDU with error status,
+then test_bit will trigger buffer overflow for peer's memory, if kasan
+enabled, it will report error.
 
-To avoid this failure, skip sending probe response template to
-firmware for mesh point.
+Reason is when station is in disconnecting status, firmware do not delete
+the peer info since it not disconnected completely, meanwhile some AP will
+still send data packet to station, then hardware will receive the packet
+and send to firmware, firmware's logic will report peer id of 65535 for
+MPDU with error status.
 
-Tested HW: WCN3990/QCA6174/QCA9984
+Add check for overflow the size of peer's peer_ids will avoid the buffer
+overflow access.
 
-Signed-off-by: Surabhi Vishnoi <svishnoi@codeaurora.org>
+Call trace of kasan:
+dump_backtrace+0x0/0x2ec
+show_stack+0x20/0x2c
+__dump_stack+0x20/0x28
+dump_stack+0xc8/0xec
+print_address_description+0x74/0x240
+kasan_report+0x250/0x26c
+__asan_report_load8_noabort+0x20/0x2c
+ath10k_peer_find_by_id+0x180/0x1e4 [ath10k_core]
+ath10k_htt_t2h_msg_handler+0x100c/0x2fd4 [ath10k_core]
+ath10k_htt_htc_t2h_msg_handler+0x20/0x34 [ath10k_core]
+ath10k_sdio_irq_handler+0xcc8/0x1678 [ath10k_sdio]
+process_sdio_pending_irqs+0xec/0x370
+sdio_run_irqs+0x68/0xe4
+sdio_irq_work+0x1c/0x28
+process_one_work+0x3d8/0x8b0
+worker_thread+0x508/0x7cc
+kthread+0x24c/0x264
+ret_from_fork+0x10/0x18
+
+Tested with QCA6174 SDIO with firmware
+WLAN.RMH.4.4.1-00007-QCARMSWP-1.
+
+Signed-off-by: Wen Gong <wgong@codeaurora.org>
 Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 Signed-off-by: Sasha Levin <sashal@kernel.org>
 ---
- drivers/net/wireless/ath/ath10k/mac.c | 4 ++++
- 1 file changed, 4 insertions(+)
+ drivers/net/wireless/ath/ath10k/txrx.c | 3 +++
+ 1 file changed, 3 insertions(+)
 
-diff --git a/drivers/net/wireless/ath/ath10k/mac.c b/drivers/net/wireless/ath/ath10k/mac.c
-index f3b1cfacfe9d..1419f9d1505f 100644
---- a/drivers/net/wireless/ath/ath10k/mac.c
-+++ b/drivers/net/wireless/ath/ath10k/mac.c
-@@ -1624,6 +1624,10 @@ static int ath10k_mac_setup_prb_tmpl(struct ath10k_vif *arvif)
- 	if (arvif->vdev_type != WMI_VDEV_TYPE_AP)
- 		return 0;
+diff --git a/drivers/net/wireless/ath/ath10k/txrx.c b/drivers/net/wireless/ath/ath10k/txrx.c
+index cda164f6e9f6..6f62ddc0494c 100644
+--- a/drivers/net/wireless/ath/ath10k/txrx.c
++++ b/drivers/net/wireless/ath/ath10k/txrx.c
+@@ -156,6 +156,9 @@ struct ath10k_peer *ath10k_peer_find_by_id(struct ath10k *ar, int peer_id)
+ {
+ 	struct ath10k_peer *peer;
  
-+	 /* For mesh, probe response and beacon share the same template */
-+	if (ieee80211_vif_is_mesh(vif))
-+		return 0;
++	if (peer_id >= BITS_PER_TYPE(peer->peer_ids))
++		return NULL;
 +
- 	prb = ieee80211_proberesp_get(hw, vif);
- 	if (!prb) {
- 		ath10k_warn(ar, "failed to get probe resp template from mac80211\n");
+ 	lockdep_assert_held(&ar->data_lock);
+ 
+ 	list_for_each_entry(peer, &ar->peers, list)
 -- 
 2.20.1
 
