@@ -2,46 +2,45 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 19B3E68F24
-	for <lists+ath10k@lfdr.de>; Mon, 15 Jul 2019 16:12:35 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B0B9768F29
+	for <lists+ath10k@lfdr.de>; Mon, 15 Jul 2019 16:12:41 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=mIMkfg3EtDiSzEww+vPWdSXgN0xE18BAJm8D87mZLxM=; b=t6K0n0lQXvIW5m
-	JDyojwP9vOlVSfALr/pSiQUcF+QIaIYiDWu/DHKEgHOac7KOEA9dMkPqcZcm7OIyAm5c82U0hNSNj
-	8hA5DGDIy+ysRIAHkTDUsWskOO1FD9cYesOu+zQJvDixCW+uYLo0+TltQYkNQFUv1Cylg5GG/D1cw
-	CvTRoGNjPaMdaqwkcQyCwBA5WgBnX8tDYdknVZ843/F5bofjNCUNNLLgnXT3cfefWgW9/0Epl/ui2
-	ip6mEiZvs+YOwdw06yAgXkq4I0PEBgqy8sAaMg1YyoYkG5NlLPdi+23Bm7jJmSb0ua3+I3tEl5t0y
-	4MvF1fd2oEvH75CwSbLw==;
+	List-Owner; bh=Uzof/g27dACVlewVkjt8ijB+jQlFiWmbTmHd3wa9l4E=; b=UWdYg1lO1Fj25r
+	OyhdalTjtLBR3TRFRQcsRcCAFYnm4qUyIJxGBONOusCkl76oz3Hfx7wg/WcACi+fPuhzfQmieAi6Q
+	Ie2Qx3+VS7qUxX/rVHgLzQLqAUfzfD/JfppKnKxkU3YNmYcwh9Aikuk6Pu7VdgN5tFcxRJkKN50jX
+	K+ggIcJoLgarEKN/QbzrUZLyg0AvErNv4bP1Xc/j3iZR30J+qhpja+r4VMwiXuHNH2ViEdBwsJtQT
+	0kAyWmIO/afj7AgIBEaW5G/JVtXSs4cIJPEvHwZk3y9vMqaQLdJ2UqjX1tiJRmOQcyEB/KlRSSEbl
+	lxp9K8MBvF44NjRkovrQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hn1iT-0000JP-9W; Mon, 15 Jul 2019 14:12:33 +0000
+	id 1hn1iY-0000Oj-T8; Mon, 15 Jul 2019 14:12:38 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hn1iK-0000FO-5N
- for ath10k@lists.infradead.org; Mon, 15 Jul 2019 14:12:25 +0000
+ id 1hn1iP-0000KQ-P7
+ for ath10k@lists.infradead.org; Mon, 15 Jul 2019 14:12:31 +0000
 Received: from sasha-vm.mshome.net (unknown [73.61.17.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 62BE220651;
- Mon, 15 Jul 2019 14:12:22 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id 83012206B8;
+ Mon, 15 Jul 2019 14:12:24 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1563199943;
- bh=ULjxUzx+++yfz9jlrK8gl/SRLm6WxtHyr+F6CLcmbpo=;
+ s=default; t=1563199949;
+ bh=1vuppLEe4c9McwgEoTdwhfd5u9V66r5gDa7g32TfWCE=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=oq/NRPQWsxL2cmCDu+qMAYllKgP7746VZnyHHTdVHbk2rXNHm63V3ijtpNk/Car3z
- 21Yp3ED7jeU8VI4y9oBNwVjc9S59y39MEzo7QxNS6/Z6X3RRvgqodPRNG2nN40JzRF
- fftwyjDMoDQ896A+WVGRdxoCK475HlQqOzMf7d8Q=
+ b=y+/5G+yCiKEen+s8qXcwkLDj0trMIL5dux0tDGjBgx0rlfQmAp4VEXJU/WZg30d57
+ uhK+6G3Ei2L62rnwcIX/LwczajWLltof0qh/zver0QxIZtdiJto1XmiToflE2kOPQ4
+ jMj+AKu0AoBxFSSlPO3nj7lDs0bpA2Utq7asFTEs=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 5.1 145/219] ath10k: fix fw crash by moving chip reset
- after napi disabled
-Date: Mon, 15 Jul 2019 10:02:26 -0400
-Message-Id: <20190715140341.6443-145-sashal@kernel.org>
+Subject: [PATCH AUTOSEL 5.1 146/219] ath10k: fix PCIE device wake up failed
+Date: Mon, 15 Jul 2019 10:02:27 -0400
+Message-Id: <20190715140341.6443-146-sashal@kernel.org>
 X-Mailer: git-send-email 2.20.1
 In-Reply-To: <20190715140341.6443-1-sashal@kernel.org>
 References: <20190715140341.6443-1-sashal@kernel.org>
@@ -49,9 +48,8 @@ MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190715_071224_234016_6C9D66E5 
-X-CRM114-Status: UNSURE (   8.96  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190715_071230_050166_05F25A15 
+X-CRM114-Status: GOOD (  12.74  )
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-5.2 points)
@@ -90,70 +88,47 @@ Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
 From: Miaoqing Pan <miaoqing@codeaurora.org>
 
-[ Upstream commit 08d80e4cd27ba19f9bee9e5f788f9a9fc440a22f ]
+[ Upstream commit 011d4111c8c602ea829fa4917af1818eb0500a90 ]
 
-On SMP platform, when continuously running wifi up/down, the napi
-poll can be scheduled during chip reset, which will call
-ath10k_pci_has_fw_crashed() to check the fw status. But in the reset
-period, the value from FW_INDICATOR_ADDRESS register will return
-0xdeadbeef, which also be treated as fw crash. Fix the issue by
-moving chip reset after napi disabled.
+Observed PCIE device wake up failed after ~120 iterations of
+soft-reboot test. The error message is
+"ath10k_pci 0000:01:00.0: failed to wake up device : -110"
 
-ath10k_pci 0000:01:00.0: firmware crashed! (guid 73b30611-5b1e-4bdd-90b4-64c81eb947b6)
-ath10k_pci 0000:01:00.0: qca9984/qca9994 hw1.0 target 0x01000000 chip_id 0x00000000 sub 168c:cafe
-ath10k_pci 0000:01:00.0: htt-ver 2.2 wmi-op 6 htt-op 4 cal otp max-sta 512 raw 0 hwcrypto 1
-ath10k_pci 0000:01:00.0: failed to get memcpy hi address for firmware address 4: -16
-ath10k_pci 0000:01:00.0: failed to read firmware dump area: -16
-ath10k_pci 0000:01:00.0: Copy Engine register dump:
-ath10k_pci 0000:01:00.0: [00]: 0x0004a000   0   0   0   0
-ath10k_pci 0000:01:00.0: [01]: 0x0004a400   0   0   0   0
-ath10k_pci 0000:01:00.0: [02]: 0x0004a800   0   0   0   0
-ath10k_pci 0000:01:00.0: [03]: 0x0004ac00   0   0   0   0
-ath10k_pci 0000:01:00.0: [04]: 0x0004b000   0   0   0   0
-ath10k_pci 0000:01:00.0: [05]: 0x0004b400   0   0   0   0
-ath10k_pci 0000:01:00.0: [06]: 0x0004b800   0   0   0   0
-ath10k_pci 0000:01:00.0: [07]: 0x0004bc00   1   0   1   0
-ath10k_pci 0000:01:00.0: [08]: 0x0004c000   0   0   0   0
-ath10k_pci 0000:01:00.0: [09]: 0x0004c400   0   0   0   0
-ath10k_pci 0000:01:00.0: [10]: 0x0004c800   0   0   0   0
-ath10k_pci 0000:01:00.0: [11]: 0x0004cc00   0   0   0   0
+The call trace as below:
+ath10k_pci_probe -> ath10k_pci_force_wake -> ath10k_pci_wake_wait ->
+ath10k_pci_is_awake
 
-Tested HW: QCA9984,QCA9887,WCN3990
+Once trigger the device to wake up, we will continuously check the RTC
+state until it returns RTC_STATE_V_ON or timeout.
+
+But for QCA99x0 chips, we use wrong value for RTC_STATE_V_ON.
+Occasionally, we get 0x7 on the fist read, we thought as a failure
+case, but actually is the right value, also verified with the spec.
+So fix the issue by changing RTC_STATE_V_ON from 0x5 to 0x7, passed
+~2000 iterations.
+
+Tested HW: QCA9984
 
 Signed-off-by: Miaoqing Pan <miaoqing@codeaurora.org>
 Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 Signed-off-by: Sasha Levin <sashal@kernel.org>
 ---
- drivers/net/wireless/ath/ath10k/pci.c | 9 +++++----
- 1 file changed, 5 insertions(+), 4 deletions(-)
+ drivers/net/wireless/ath/ath10k/hw.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/drivers/net/wireless/ath/ath10k/pci.c b/drivers/net/wireless/ath/ath10k/pci.c
-index 2c27f407a851..6e5f7ae00253 100644
---- a/drivers/net/wireless/ath/ath10k/pci.c
-+++ b/drivers/net/wireless/ath/ath10k/pci.c
-@@ -2059,6 +2059,11 @@ static void ath10k_pci_hif_stop(struct ath10k *ar)
+diff --git a/drivers/net/wireless/ath/ath10k/hw.c b/drivers/net/wireless/ath/ath10k/hw.c
+index ad082b7d7643..b242085c3c16 100644
+--- a/drivers/net/wireless/ath/ath10k/hw.c
++++ b/drivers/net/wireless/ath/ath10k/hw.c
+@@ -158,7 +158,7 @@ const struct ath10k_hw_values qca6174_values = {
+ };
  
- 	ath10k_dbg(ar, ATH10K_DBG_BOOT, "boot hif stop\n");
- 
-+	ath10k_pci_irq_disable(ar);
-+	ath10k_pci_irq_sync(ar);
-+	napi_synchronize(&ar->napi);
-+	napi_disable(&ar->napi);
-+
- 	/* Most likely the device has HTT Rx ring configured. The only way to
- 	 * prevent the device from accessing (and possible corrupting) host
- 	 * memory is to reset the chip now.
-@@ -2072,10 +2077,6 @@ static void ath10k_pci_hif_stop(struct ath10k *ar)
- 	 */
- 	ath10k_pci_safe_chip_reset(ar);
- 
--	ath10k_pci_irq_disable(ar);
--	ath10k_pci_irq_sync(ar);
--	napi_synchronize(&ar->napi);
--	napi_disable(&ar->napi);
- 	ath10k_pci_flush(ar);
- 
- 	spin_lock_irqsave(&ar_pci->ps_lock, flags);
+ const struct ath10k_hw_values qca99x0_values = {
+-	.rtc_state_val_on		= 5,
++	.rtc_state_val_on		= 7,
+ 	.ce_count			= 12,
+ 	.msi_assign_ce_max		= 12,
+ 	.num_target_ce_config_wlan	= 10,
 -- 
 2.20.1
 
