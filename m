@@ -2,46 +2,46 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 09D0868E1B
-	for <lists+ath10k@lfdr.de>; Mon, 15 Jul 2019 16:04:17 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id ED64368E1D
+	for <lists+ath10k@lfdr.de>; Mon, 15 Jul 2019 16:04:26 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=gThovVScakZ9nHKpeVsXqKfhhOhtCyWPpv5XT6WYkdc=; b=mqQYta8TB2SFnO
-	6NQL2xcPajEF4uqSubHDZ8sULZsLrqtMTk6uY9kbN/ehp7cApuNxqNuHh/agVbqaovZZ+9r4BfTI6
-	usSzzBloWp0yhFFUyAM+bwdCNxK7b9uwvdDWHog6P6KWZH0FA6IgK+Ek3V0PjLZT6wO5tqvObxhW3
-	0sZmsfH/Q1cQLpjzJrKSHDFoIANoBxguxtrWPUbuycbmaeSvv11dafo6LOUlPx1TnwH11XNxITlhZ
-	1ww9gQ9cP0+2i39H9acrnu6WIi4acQSTwja5tFTr5U7IXtSkyirwNuGz4uis05CSdXbhbPOraSSBB
-	LDJGIZ5ClvaR5zm0gsMA==;
+	List-Owner; bh=t30nUUKxEa243BYpg4/elrnhkDMUF0Zgey9gnF8pL7g=; b=RQWNNCOy7Y0F5I
+	IMTSLNwUgUQzaimOK5s3Euzb7trqRVOZ5AEVbtn3yGAZK0/MY0pkuf0nfbWDaeOSYVRGXbQ/yqOqo
+	Mzhcd19jtSjY4xOTH1M/oxqPJfpdddSrMQ03OjsnUB18s6gAjFsrU6/MNcTTBKI9rLpJFkgp3PeVM
+	zXxiyJGQ3qpGtNZ/NIwg1oQvYLjHDdz7P+bWkZojzfAEx3axH7aH203lwXUu7+zuCP7bNWYFg8F1e
+	+U3bPEMIgF2yd1AnNFYTwI1iO14JHPFM1bkgStpE0MD62rRLUkQ/sD3CSGBcNJOHJ6kvKN6xtDMRD
+	TK0VXTeKKV5TEhrMxJ0w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hn1aQ-0002uJ-Ef; Mon, 15 Jul 2019 14:04:14 +0000
+	id 1hn1ab-00033O-D4; Mon, 15 Jul 2019 14:04:25 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hn1aJ-0002sH-8w
- for ath10k@lists.infradead.org; Mon, 15 Jul 2019 14:04:09 +0000
+ id 1hn1aQ-0002y0-Op
+ for ath10k@lists.infradead.org; Mon, 15 Jul 2019 14:04:19 +0000
 Received: from sasha-vm.mshome.net (unknown [73.61.17.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 119BC206B8;
- Mon, 15 Jul 2019 14:04:04 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id 65AA72081C;
+ Mon, 15 Jul 2019 14:04:12 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1563199447;
- bh=USYyIlXozhTDfeuNtXedF7A0tbFNdzrMU37qo5vlIGg=;
+ s=default; t=1563199454;
+ bh=1G7KjC91RtjcBKsDM3By3WOUgi19PQ09IvvPLlwt2kk=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=s+NOPWGau19r9ilRl9uqEVxQGdaJjsRyBnjXJMywnFA1pelJ3bWNbnjd/yBrINmBT
- s9UXgsjje8+vMkTV8MNWhpphH1/PrwKYtSYgLw+8KT3F8RWzbFJRL0Y7qOzS5BJxLZ
- 700/ApCAUcdEl5ivGyiEhY63KDtgLF5vk5Hgfxf0=
+ b=eempptlpa+iRpUpELg6P2luwVUg8sDDhiyiCJmQH2nwr+JHJb1sW7TypF+XUwaIVI
+ 6Tsd50jdesBoTgRt7r9gGAeuHHcrJNM0ZFxcoqmout4XWBnOv4pucvAph0AErzJ38T
+ ZH+m7u9g+k/+oyruv8Ed57IR5/JC8iqxC0prSPcY=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 5.1 006/219] ath10k: Do not send probe response
- template for mesh
-Date: Mon, 15 Jul 2019 10:00:07 -0400
-Message-Id: <20190715140341.6443-6-sashal@kernel.org>
+Subject: [PATCH AUTOSEL 5.1 009/219] ath10k: Fix the wrong value of enums for
+ wmi tlv stats id
+Date: Mon, 15 Jul 2019 10:00:10 -0400
+Message-Id: <20190715140341.6443-9-sashal@kernel.org>
 X-Mailer: git-send-email 2.20.1
 In-Reply-To: <20190715140341.6443-1-sashal@kernel.org>
 References: <20190715140341.6443-1-sashal@kernel.org>
@@ -49,8 +49,8 @@ MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190715_070407_355373_B4CC7A07 
-X-CRM114-Status: UNSURE (   8.97  )
+X-CRM114-CacheID: sfid-20190715_070414_836456_656F6454 
+X-CRM114-Status: UNSURE (   8.47  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -90,41 +90,44 @@ Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
 From: Surabhi Vishnoi <svishnoi@codeaurora.org>
 
-[ Upstream commit 97354f2c432788e3163134df6bb144f4b6289d87 ]
+[ Upstream commit 9280f4fc06f44d0b4dc9e831f72d97b3d7cd35d3 ]
 
-Currently mac80211 do not support probe response template for
-mesh point. When WMI_SERVICE_BEACON_OFFLOAD is enabled, host
-driver tries to configure probe response template for mesh, but
-it fails because the interface type is not NL80211_IFTYPE_AP but
-NL80211_IFTYPE_MESH_POINT.
+The enum value for WMI_TLV_STAT_PDEV, WMI_TLV_STAT_VDEV
+and WMI_TLV_STAT_PEER is wrong, due to which the vdev stats
+are not received from firmware in wmi_update_stats event.
 
-To avoid this failure, skip sending probe response template to
-firmware for mesh point.
+Fix the enum values for above stats to receive all stats
+from firmware in WMI_TLV_UPDATE_STATS_EVENTID.
 
-Tested HW: WCN3990/QCA6174/QCA9984
+Tested HW: WCN3990
+Tested FW: WLAN.HL.3.1-00784-QCAHLSWMTPLZ-1
 
+Fixes: f40a307eb92c ("ath10k: Fill rx duration for each peer in fw_stats for WCN3990)
 Signed-off-by: Surabhi Vishnoi <svishnoi@codeaurora.org>
 Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 Signed-off-by: Sasha Levin <sashal@kernel.org>
 ---
- drivers/net/wireless/ath/ath10k/mac.c | 4 ++++
- 1 file changed, 4 insertions(+)
+ drivers/net/wireless/ath/ath10k/wmi.h | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
 
-diff --git a/drivers/net/wireless/ath/ath10k/mac.c b/drivers/net/wireless/ath/ath10k/mac.c
-index e8997e22ceec..b500fd427595 100644
---- a/drivers/net/wireless/ath/ath10k/mac.c
-+++ b/drivers/net/wireless/ath/ath10k/mac.c
-@@ -1630,6 +1630,10 @@ static int ath10k_mac_setup_prb_tmpl(struct ath10k_vif *arvif)
- 	if (arvif->vdev_type != WMI_VDEV_TYPE_AP)
- 		return 0;
+diff --git a/drivers/net/wireless/ath/ath10k/wmi.h b/drivers/net/wireless/ath/ath10k/wmi.h
+index e1c40bb69932..12f57f9adbba 100644
+--- a/drivers/net/wireless/ath/ath10k/wmi.h
++++ b/drivers/net/wireless/ath/ath10k/wmi.h
+@@ -4535,9 +4535,10 @@ enum wmi_10_4_stats_id {
+ };
  
-+	 /* For mesh, probe response and beacon share the same template */
-+	if (ieee80211_vif_is_mesh(vif))
-+		return 0;
-+
- 	prb = ieee80211_proberesp_get(hw, vif);
- 	if (!prb) {
- 		ath10k_warn(ar, "failed to get probe resp template from mac80211\n");
+ enum wmi_tlv_stats_id {
+-	WMI_TLV_STAT_PDEV	= BIT(0),
+-	WMI_TLV_STAT_VDEV	= BIT(1),
+-	WMI_TLV_STAT_PEER	= BIT(2),
++	WMI_TLV_STAT_PEER	= BIT(0),
++	WMI_TLV_STAT_AP		= BIT(1),
++	WMI_TLV_STAT_PDEV	= BIT(2),
++	WMI_TLV_STAT_VDEV	= BIT(3),
+ 	WMI_TLV_STAT_PEER_EXTD  = BIT(10),
+ };
+ 
 -- 
 2.20.1
 
