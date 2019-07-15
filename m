@@ -2,46 +2,46 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E8B0468BCF
-	for <lists+ath10k@lfdr.de>; Mon, 15 Jul 2019 15:47:17 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 237F668BDC
+	for <lists+ath10k@lfdr.de>; Mon, 15 Jul 2019 15:47:28 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=z42GnENNr9IO0QIqTicJRYEzeZKNrrnAgNUYsufV+7Q=; b=Tn8NYXmWNSo+Tf
-	R6uxFZpZtUdEbekwr3eKJaqApFMXa1umXdmbdBSWK0wy+LzXxFg8ZETSXgskmIVWKR7cGLDPto+/c
-	HqUnRGnoG7YtoaV2dTEicK30wt5w+C1fHEa5nqFdsghUQTBVBMcI13fidr7jXjMwJnKsJKxHbM8sw
-	KApnAo8kvhQZ+vDYhGOR8BgOhmF4iu21O6rEQeTYQWYiL+rMXdWom9PzyyIUDRMPYgWwsAib6uKx1
-	jaaGlTzGpkx0x/VLDzLi36NWbPbox4rgvKuULmOOS+Jg2oNsL1jzNBsK6JGZz7N4IJF7jWeKJvZWM
-	XhoVHZXhuzn+y8otUlFQ==;
+	List-Owner; bh=gThovVScakZ9nHKpeVsXqKfhhOhtCyWPpv5XT6WYkdc=; b=fipK4qAoibbsj0
+	mp5u1qM378EKTQxA91EPYIn9qbrxlXxsupW5PeQJXbhMy/B+P4RWp9d7SEcR0L/E0Nd9WXA1MMM1c
+	GpEmHEAE0H6/gzsRzK9jpPuIasNwC3mvq5NWypg5x7bf05DNOEY+A921e+E3+0DeRQYGm+u2tCUNu
+	ig5fq4WfomBiW3tfoV9E0Bk7JcdcVWzS/60bijVsTqrzfzoRE9lkpkvabzvoPOX5sDVFcx/uG/bhu
+	wqivfA17SQfiBvbAXly5DmX5zM0WXVVeUgxS6BnpAJBtPMlf6THWm9WHugXmJ3U0xgy4VHXkGhQa2
+	q8soBSVPJrB08yK5BeSw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hn1K0-0001CV-3l; Mon, 15 Jul 2019 13:47:16 +0000
+	id 1hn1KA-0001LV-77; Mon, 15 Jul 2019 13:47:26 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hn1Jt-00018u-Aa
- for ath10k@lists.infradead.org; Mon, 15 Jul 2019 13:47:10 +0000
+ id 1hn1K2-0001Ji-FZ
+ for ath10k@lists.infradead.org; Mon, 15 Jul 2019 13:47:21 +0000
 Received: from sasha-vm.mshome.net (unknown [73.61.17.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 488852067C;
- Mon, 15 Jul 2019 13:47:07 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id 7854E2086C;
+ Mon, 15 Jul 2019 13:47:16 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1563198429;
- bh=26J0cNgRs2gDrMoGxYgt4ejtXtTwNyGDi1cQ8KooqFk=;
+ s=default; t=1563198438;
+ bh=USYyIlXozhTDfeuNtXedF7A0tbFNdzrMU37qo5vlIGg=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=kZDwaVrmVc4bFUEGT4txqw0kLmD7x5RqbUWrR37BdypYD43jyu6BzrkG95F1K6yR8
- +LnuuGhjJNPdHma5fhwohlGU49BqH1F6TECFCEwlc2jr3j0o+uLJ/5F2tUgwJiw83P
- 6EXzComnQPhhar5N0EAwgRV1EF/5GYbA1UDHwGYk=
+ b=w/Cqy34khm92qkKNpCQg9AFGf6vPlirQM4670gHDX/Zvv0rk8l3ONqw+QTJiRAQnG
+ Hstvj7jHpH4zwCH0R3bPvKLTNwzVIFkMzSmgv4IjASRsAjcPke6DUWNoLV7QPzklYM
+ XcvuPgBq5CtefGkzMl+6cM8vVKfJWz7Occw3r2Pg=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 5.2 003/249] ath10k: fix incorrect multicast/broadcast
- rate setting
-Date: Mon, 15 Jul 2019 09:42:48 -0400
-Message-Id: <20190715134655.4076-3-sashal@kernel.org>
+Subject: [PATCH AUTOSEL 5.2 006/249] ath10k: Do not send probe response
+ template for mesh
+Date: Mon, 15 Jul 2019 09:42:51 -0400
+Message-Id: <20190715134655.4076-6-sashal@kernel.org>
 X-Mailer: git-send-email 2.20.1
 In-Reply-To: <20190715134655.4076-1-sashal@kernel.org>
 References: <20190715134655.4076-1-sashal@kernel.org>
@@ -49,8 +49,8 @@ MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190715_064709_383605_91F1891D 
-X-CRM114-Status: UNSURE (   9.89  )
+X-CRM114-CacheID: sfid-20190715_064718_599395_E2C55471 
+X-CRM114-Status: UNSURE (   8.97  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -80,68 +80,51 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Sasha Levin <sashal@kernel.org>,
- Pradeep kumar Chitrapu <pradeepc@codeaurora.org>, netdev@vger.kernel.org,
+Cc: Sasha Levin <sashal@kernel.org>, netdev@vger.kernel.org,
  linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
- Zhi Chen <zhichen@codeaurora.org>, Sven Eckelmann <sven@narfation.org>,
- Kalle Valo <kvalo@codeaurora.org>
+ Kalle Valo <kvalo@codeaurora.org>, Surabhi Vishnoi <svishnoi@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-From: Pradeep kumar Chitrapu <pradeepc@codeaurora.org>
+From: Surabhi Vishnoi <svishnoi@codeaurora.org>
 
-[ Upstream commit 93ee3d108fc77e19efeac3ec5aa7d5886711bfef ]
+[ Upstream commit 97354f2c432788e3163134df6bb144f4b6289d87 ]
 
-Invalid rate code is sent to firmware when multicast rate value of 0 is
-sent to driver indicating disabled case, causing broken mesh path.
-so fix that.
+Currently mac80211 do not support probe response template for
+mesh point. When WMI_SERVICE_BEACON_OFFLOAD is enabled, host
+driver tries to configure probe response template for mesh, but
+it fails because the interface type is not NL80211_IFTYPE_AP but
+NL80211_IFTYPE_MESH_POINT.
 
-Tested on QCA9984 with firmware 10.4-3.6.1-00827
+To avoid this failure, skip sending probe response template to
+firmware for mesh point.
 
-Sven tested on IPQ4019 with 10.4-3.5.3-00057 and QCA9888 with 10.4-3.5.3-00053
-(ath10k-firmware) and 10.4-3.6-00140 (linux-firmware 2018-12-16-211de167).
+Tested HW: WCN3990/QCA6174/QCA9984
 
-Fixes: cd93b83ad92 ("ath10k: support for multicast rate control")
-Co-developed-by: Zhi Chen <zhichen@codeaurora.org>
-Signed-off-by: Zhi Chen <zhichen@codeaurora.org>
-Signed-off-by: Pradeep Kumar Chitrapu <pradeepc@codeaurora.org>
-Tested-by: Sven Eckelmann <sven@narfation.org>
+Signed-off-by: Surabhi Vishnoi <svishnoi@codeaurora.org>
 Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 Signed-off-by: Sasha Levin <sashal@kernel.org>
 ---
- drivers/net/wireless/ath/ath10k/mac.c | 10 +++++++---
- 1 file changed, 7 insertions(+), 3 deletions(-)
+ drivers/net/wireless/ath/ath10k/mac.c | 4 ++++
+ 1 file changed, 4 insertions(+)
 
 diff --git a/drivers/net/wireless/ath/ath10k/mac.c b/drivers/net/wireless/ath/ath10k/mac.c
-index 9c703d287333..e8997e22ceec 100644
+index e8997e22ceec..b500fd427595 100644
 --- a/drivers/net/wireless/ath/ath10k/mac.c
 +++ b/drivers/net/wireless/ath/ath10k/mac.c
-@@ -5588,8 +5588,8 @@ static void ath10k_bss_info_changed(struct ieee80211_hw *hw,
- 	struct cfg80211_chan_def def;
- 	u32 vdev_param, pdev_param, slottime, preamble;
- 	u16 bitrate, hw_value;
--	u8 rate, basic_rate_idx;
--	int rateidx, ret = 0, hw_rate_code;
-+	u8 rate, basic_rate_idx, rateidx;
-+	int ret = 0, hw_rate_code, mcast_rate;
- 	enum nl80211_band band;
- 	const struct ieee80211_supported_band *sband;
+@@ -1630,6 +1630,10 @@ static int ath10k_mac_setup_prb_tmpl(struct ath10k_vif *arvif)
+ 	if (arvif->vdev_type != WMI_VDEV_TYPE_AP)
+ 		return 0;
  
-@@ -5776,7 +5776,11 @@ static void ath10k_bss_info_changed(struct ieee80211_hw *hw,
- 	if (changed & BSS_CHANGED_MCAST_RATE &&
- 	    !ath10k_mac_vif_chan(arvif->vif, &def)) {
- 		band = def.chan->band;
--		rateidx = vif->bss_conf.mcast_rate[band] - 1;
-+		mcast_rate = vif->bss_conf.mcast_rate[band];
-+		if (mcast_rate > 0)
-+			rateidx = mcast_rate - 1;
-+		else
-+			rateidx = ffs(vif->bss_conf.basic_rates) - 1;
- 
- 		if (ar->phy_capability & WHAL_WLAN_11A_CAPABILITY)
- 			rateidx += ATH10K_MAC_FIRST_OFDM_RATE_IDX;
++	 /* For mesh, probe response and beacon share the same template */
++	if (ieee80211_vif_is_mesh(vif))
++		return 0;
++
+ 	prb = ieee80211_proberesp_get(hw, vif);
+ 	if (!prb) {
+ 		ath10k_warn(ar, "failed to get probe resp template from mac80211\n");
 -- 
 2.20.1
 
