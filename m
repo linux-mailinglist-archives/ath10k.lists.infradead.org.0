@@ -2,45 +2,45 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id F2D9F691D7
-	for <lists+ath10k@lfdr.de>; Mon, 15 Jul 2019 16:33:24 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 66BB1691D8
+	for <lists+ath10k@lfdr.de>; Mon, 15 Jul 2019 16:33:29 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=yNzWZ69jJ8CvDzD944skxi8MGODq6jYHk1JPwql93Gk=; b=pOvkGcGyAiSMTD
-	btqGXN+oZ2YNAND+N4FZcOoC1aWIFDOBlP3VkUZ9Ngij0PLU5xWjWz/PwT/0eDhLoExM/y/TCkMrK
-	3dgSfkOpkjqieMUR1Da6xzlKqeme3AZWZAmgZw0lCVu4efYsplm7W9nDmZkGBM9UOM5N/Y3GZQFtk
-	vp5f0aeDPgiXwvktw8v8u0/UEWvA+7xAbrD0vmPzXpXOp4K8YXgbK4jLrIS387zQs286giwynGe/Y
-	1y5m6T6i+eBV4MdbNqTuVWUqIl2zL41Ri9JZIvIjeHCJD0hScmaOOymNz7q/TA+9i++z8NXN6Z6yo
-	20BkewZPcNdFmqd2M55A==;
+	List-Owner; bh=RyfcedTGGNV05IWlRAWw1rGphISzbgN2cH42deiuJYI=; b=lxN4z/1+dhURKn
+	mFDkeczkcQiVpRP1wdtL8go62zkmrCWSfwnq6jvbOhTwyibX5GRu9I/RnNcQBnlaPwOdksC/3wQLr
+	1N+9XiRTP2FWeadpHOmZW9d6Sgk1bUajIRdSXTHGAAL/7APeHvp7ZCwyjwwadTehHrp1+g+ikTwJJ
+	MzVR+T83M0iwWmSv4bPTN2vYR6B+w/Dwk7y0SHugz2bADczDl/4/JkhYlZyLKQugHzSAolcxA4Lk/
+	FZXA75x/TijsGsSAJqrG6ytbNZPdHlcdyPrNBsrAzXeZmyobfHwsSGtBc6D3qXxRJowmQAHHxNJxd
+	jtpMg0jWT0kBcUjNM6Zw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hn22d-0004sB-2s; Mon, 15 Jul 2019 14:33:23 +0000
+	id 1hn22i-0004vh-0i; Mon, 15 Jul 2019 14:33:28 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hn22Y-0004rM-8N
- for ath10k@lists.infradead.org; Mon, 15 Jul 2019 14:33:19 +0000
+ id 1hn22b-0004sA-7F
+ for ath10k@lists.infradead.org; Mon, 15 Jul 2019 14:33:22 +0000
 Received: from sasha-vm.mshome.net (unknown [73.61.17.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 2E8E8204FD;
- Mon, 15 Jul 2019 14:33:14 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id 042C320C01;
+ Mon, 15 Jul 2019 14:33:18 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1563201197;
- bh=EqpABYRASP0eE8zEJyD05alujl9VaiaJ8aUMV4d0oK8=;
+ s=default; t=1563201201;
+ bh=jjEVs5KqU9OpXXP/Pb29F89W5465fLthxALJSS97XaE=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=OkwSk0CfjGgVd/Q9mrj4jIkbmyr6VsnwZsZJ+u8T6m7u2uQqY0WdT30FYSV1Rocmi
- cEDbdS+4xTTkKLt74ysmf9wiI6guroikCynjp0rIC/37VoihhIC9O+nz/JPN9NdVjU
- KEaAJ6hB9xoVkPpzurC7hJG8zYx7Rt+N/CiwYFgU=
+ b=U+uXI34KGAfEI6iZFanqYRqIrg4WAJUZ5u48yGA7NKasmuK8MQk2OJhNCStLuQbkS
+ j4rXo5NXJEwiu1doIqu9hIwCcAhpVss+/LiJ8KKfDT7xtoDA9OLA+QrOW/O+IgIqsp
+ bEI6M20EHW1uY+epTDXQ4faawGbWQV2vMH20UyNw=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 4.14 076/105] ath10k: add missing error handling
-Date: Mon, 15 Jul 2019 10:28:10 -0400
-Message-Id: <20190715142839.9896-76-sashal@kernel.org>
+Subject: [PATCH AUTOSEL 4.14 077/105] ath10k: fix PCIE device wake up failed
+Date: Mon, 15 Jul 2019 10:28:11 -0400
+Message-Id: <20190715142839.9896-77-sashal@kernel.org>
 X-Mailer: git-send-email 2.20.1
 In-Reply-To: <20190715142839.9896-1-sashal@kernel.org>
 References: <20190715142839.9896-1-sashal@kernel.org>
@@ -48,9 +48,8 @@ MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190715_073318_308919_8C5370FE 
-X-CRM114-Status: UNSURE (   9.76  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190715_073321_294744_F34448B2 
+X-CRM114-Status: GOOD (  12.25  )
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-5.2 points)
@@ -79,55 +78,57 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Sasha Levin <sashal@kernel.org>, netdev@vger.kernel.org,
- Brian Norris <briannorris@chromium.org>, linux-wireless@vger.kernel.org,
- ath10k@lists.infradead.org, Claire Chang <tientzu@chromium.org>,
- Kalle Valo <kvalo@codeaurora.org>
+Cc: Sasha Levin <sashal@kernel.org>, Miaoqing Pan <miaoqing@codeaurora.org>,
+ netdev@vger.kernel.org, linux-wireless@vger.kernel.org,
+ ath10k@lists.infradead.org, Kalle Valo <kvalo@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-From: Claire Chang <tientzu@chromium.org>
+From: Miaoqing Pan <miaoqing@codeaurora.org>
 
-[ Upstream commit 4b553f3ca4cbde67399aa3a756c37eb92145b8a1 ]
+[ Upstream commit 011d4111c8c602ea829fa4917af1818eb0500a90 ]
 
-In function ath10k_sdio_mbox_rx_alloc() [sdio.c],
-ath10k_sdio_mbox_alloc_rx_pkt() is called without handling the error cases.
-This will make the driver think the allocation for skb is successful and
-try to access the skb. If we enable failslab, system will easily crash with
-NULL pointer dereferencing.
+Observed PCIE device wake up failed after ~120 iterations of
+soft-reboot test. The error message is
+"ath10k_pci 0000:01:00.0: failed to wake up device : -110"
 
-Call trace of CONFIG_FAILSLAB:
-ath10k_sdio_irq_handler+0x570/0xa88 [ath10k_sdio]
-process_sdio_pending_irqs+0x4c/0x174
-sdio_run_irqs+0x3c/0x64
-sdio_irq_work+0x1c/0x28
+The call trace as below:
+ath10k_pci_probe -> ath10k_pci_force_wake -> ath10k_pci_wake_wait ->
+ath10k_pci_is_awake
 
-Fixes: d96db25d2025 ("ath10k: add initial SDIO support")
-Signed-off-by: Claire Chang <tientzu@chromium.org>
-Reviewed-by: Brian Norris <briannorris@chromium.org>
+Once trigger the device to wake up, we will continuously check the RTC
+state until it returns RTC_STATE_V_ON or timeout.
+
+But for QCA99x0 chips, we use wrong value for RTC_STATE_V_ON.
+Occasionally, we get 0x7 on the fist read, we thought as a failure
+case, but actually is the right value, also verified with the spec.
+So fix the issue by changing RTC_STATE_V_ON from 0x5 to 0x7, passed
+~2000 iterations.
+
+Tested HW: QCA9984
+
+Signed-off-by: Miaoqing Pan <miaoqing@codeaurora.org>
 Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 Signed-off-by: Sasha Levin <sashal@kernel.org>
 ---
- drivers/net/wireless/ath/ath10k/sdio.c | 4 ++++
- 1 file changed, 4 insertions(+)
+ drivers/net/wireless/ath/ath10k/hw.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/drivers/net/wireless/ath/ath10k/sdio.c b/drivers/net/wireless/ath/ath10k/sdio.c
-index da9dbf3ddaa5..c6440d28ab48 100644
---- a/drivers/net/wireless/ath/ath10k/sdio.c
-+++ b/drivers/net/wireless/ath/ath10k/sdio.c
-@@ -610,6 +610,10 @@ static int ath10k_sdio_mbox_rx_alloc(struct ath10k *ar,
- 						    full_len,
- 						    last_in_bundle,
- 						    last_in_bundle);
-+		if (ret) {
-+			ath10k_warn(ar, "alloc_rx_pkt error %d\n", ret);
-+			goto err;
-+		}
- 	}
+diff --git a/drivers/net/wireless/ath/ath10k/hw.c b/drivers/net/wireless/ath/ath10k/hw.c
+index a860691d635d..e96534cd3d8b 100644
+--- a/drivers/net/wireless/ath/ath10k/hw.c
++++ b/drivers/net/wireless/ath/ath10k/hw.c
+@@ -168,7 +168,7 @@ const struct ath10k_hw_values qca6174_values = {
+ };
  
- 	ar_sdio->n_rx_pkts = i;
+ const struct ath10k_hw_values qca99x0_values = {
+-	.rtc_state_val_on		= 5,
++	.rtc_state_val_on		= 7,
+ 	.ce_count			= 12,
+ 	.msi_assign_ce_max		= 12,
+ 	.num_target_ce_config_wlan	= 10,
 -- 
 2.20.1
 
