@@ -2,45 +2,46 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C3C7868F6E
-	for <lists+ath10k@lfdr.de>; Mon, 15 Jul 2019 16:14:31 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 81FE268F6F
+	for <lists+ath10k@lfdr.de>; Mon, 15 Jul 2019 16:14:35 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=f+M/TdINlP605Ef/NNy1Df5Zlx/TLKi+tLYpjobp9z0=; b=J3GHVeUVfzRdo4
-	QkKgqaxRnMcJtTw2frMNcDGe7oRHzZ+Ckv8yZjPQ//pPuPJTvFynqGf1yiGM2tqGzbiSyAjIyDS5a
-	RJ2iUeCMdmkT04xRylC9d88N/K1aJIE+k2UNjMrWZ3pjyhxfnhbhcZxxxYKCsGoaQ0Q8mQyLKkraJ
-	9ANVTpFDznIlOVPTMQK4bWy24KvpdSDrQD/TkWBQu7T9vi1j0HOvmDpE1vrAkomr0GeTzAMbDqkxw
-	0VVvqAQFqTM3NH8RWCdNYFJV0AVJijP+RS0mFPGSFUSEhQ8Yb1D79T4nSQOkG8WNtEm1Zn5sVVsQr
-	5W02x+R7LkP7CDyS8dOg==;
+	List-Owner; bh=UckNfz6t1Gsc6qBcQ5mjBZSATgdVdp+1w6zXDzcJTbg=; b=MVpKtY4OZXEP9d
+	LiRJ1LGYComh7fEuXYnn0zUecWRtZLKR3ySxsJCP7zqnAefyO4qzj2v5sxlyKZ7pnThLjz9Wh8Nat
+	I/ht6Uwlm9thfMb2Z5U1NBC6eiesJPBT/KtKdKsmcws0cCmb6KYIaFpvmz3yq4Husll2vmCtJTRqq
+	c+QilVEiLkTDIt39El/p1v+31XO8Wulln4C5jQuzH06ky3szJa03jY8WRoMK7P75uNiPOxo4HWVTV
+	2DIWjnZCDPJWgRz+lvx+W1I+sUa/L+jRyAD/1msKekvTmMJIB+Tmn8Sw7EiWno5odDiMbVuJEuEhM
+	O0aCc59zSf1cZw2ujT1g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hn1kL-0000gm-1L; Mon, 15 Jul 2019 14:14:29 +0000
+	id 1hn1kP-0000kO-UU; Mon, 15 Jul 2019 14:14:34 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hn1kH-0000gE-9P
- for ath10k@lists.infradead.org; Mon, 15 Jul 2019 14:14:26 +0000
+ id 1hn1kJ-0000hG-SL
+ for ath10k@lists.infradead.org; Mon, 15 Jul 2019 14:14:29 +0000
 Received: from sasha-vm.mshome.net (unknown [73.61.17.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id C8163206B8;
- Mon, 15 Jul 2019 14:14:22 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id DDDA32081C;
+ Mon, 15 Jul 2019 14:14:25 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1563200065;
- bh=JTd+nvtYMDH2bpBgUYGzSZ3B/HMdCsAQwzi9WqHURoo=;
+ s=default; t=1563200067;
+ bh=zCIDhSB8tQwfVsTJsHL/cCYz/niRuZtwHbRkO4YI1aQ=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=cnbJNYqqaqh6PsOz/ak85W1bT6mfkaVpetkBD/yrZETvv9pvVxcpxvHdeTh59sSfY
- Pvi/C7F54VUY8u6pn/6/0S/HrvOVTPRvv9tBOo8iWEIvRfsh4Aqvayw6qwgHfTU29F
- +qa7qB9Nh6O4/AMbO1tzFUvY4zSSzdD3PwYjUKTo=
+ b=wVTD6Ys7KAvMLUVdjIzmAYpFajdNsXuVYV1r7jRvjHE+iwLD/rx3sp/3J8LSPSupR
+ tdxSCdVPUTHNpvDTYSIJmUHdhNBsHcFEu5ROQc6T9ZmHeqf0S67PpUmZE7VE3+BZmt
+ dSFn7hN41TTbOpm9F75L4aa1osg5f6J0rUU9jeaA=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 5.1 175/219] ath10k: Fix memory leak in qmi
-Date: Mon, 15 Jul 2019 10:02:56 -0400
-Message-Id: <20190715140341.6443-175-sashal@kernel.org>
+Subject: [PATCH AUTOSEL 5.1 176/219] ath10k: destroy sdio workqueue while
+ remove sdio module
+Date: Mon, 15 Jul 2019 10:02:57 -0400
+Message-Id: <20190715140341.6443-176-sashal@kernel.org>
 X-Mailer: git-send-email 2.20.1
 In-Reply-To: <20190715140341.6443-1-sashal@kernel.org>
 References: <20190715140341.6443-1-sashal@kernel.org>
@@ -48,8 +49,8 @@ MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190715_071425_346390_60938FEC 
-X-CRM114-Status: UNSURE (   8.94  )
+X-CRM114-CacheID: sfid-20190715_071427_961471_5BCCCD96 
+X-CRM114-Status: UNSURE (   8.37  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -79,47 +80,46 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Sasha Levin <sashal@kernel.org>, Dundi Raviteja <dundi@codeaurora.org>,
- netdev@vger.kernel.org, linux-wireless@vger.kernel.org,
- ath10k@lists.infradead.org, Kalle Valo <kvalo@codeaurora.org>
+Cc: Sasha Levin <sashal@kernel.org>, netdev@vger.kernel.org,
+ linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
+ Wen Gong <wgong@codeaurora.org>, Kalle Valo <kvalo@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-From: Dundi Raviteja <dundi@codeaurora.org>
+From: Wen Gong <wgong@codeaurora.org>
 
-[ Upstream commit c709df58832c5f575f0255bea4b09ad477fc62ea ]
+[ Upstream commit 3ed39f8e747a7aafeec07bb244f2c3a1bdca5730 ]
 
-Currently the memory allocated for qmi handle is
-not being freed during de-init which leads to memory leak.
+The workqueue need to flush and destory while remove sdio module,
+otherwise it will have thread which is not destory after remove
+sdio modules.
 
-Free the allocated qmi memory in qmi deinit
-to avoid memory leak.
+Tested with QCA6174 SDIO with firmware
+WLAN.RMH.4.4.1-00007-QCARMSWP-1.
 
-Tested HW: WCN3990
-Tested FW: WLAN.HL.3.1-01040-QCAHLSWMTPLZ-1
-
-Fixes: fda6fee0001e ("ath10k: add QMI message handshake for wcn3990 client")
-Signed-off-by: Dundi Raviteja <dundi@codeaurora.org>
+Signed-off-by: Wen Gong <wgong@codeaurora.org>
 Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 Signed-off-by: Sasha Levin <sashal@kernel.org>
 ---
- drivers/net/wireless/ath/ath10k/qmi.c | 1 +
- 1 file changed, 1 insertion(+)
+ drivers/net/wireless/ath/ath10k/sdio.c | 3 +++
+ 1 file changed, 3 insertions(+)
 
-diff --git a/drivers/net/wireless/ath/ath10k/qmi.c b/drivers/net/wireless/ath/ath10k/qmi.c
-index a7bc2c70d076..8f8f717a23ee 100644
---- a/drivers/net/wireless/ath/ath10k/qmi.c
-+++ b/drivers/net/wireless/ath/ath10k/qmi.c
-@@ -1002,6 +1002,7 @@ int ath10k_qmi_deinit(struct ath10k *ar)
- 	qmi_handle_release(&qmi->qmi_hdl);
- 	cancel_work_sync(&qmi->event_work);
- 	destroy_workqueue(qmi->event_wq);
-+	kfree(qmi);
- 	ar_snoc->qmi = NULL;
+diff --git a/drivers/net/wireless/ath/ath10k/sdio.c b/drivers/net/wireless/ath/ath10k/sdio.c
+index 73ef3e75d199..28bdf0212538 100644
+--- a/drivers/net/wireless/ath/ath10k/sdio.c
++++ b/drivers/net/wireless/ath/ath10k/sdio.c
+@@ -2081,6 +2081,9 @@ static void ath10k_sdio_remove(struct sdio_func *func)
+ 	cancel_work_sync(&ar_sdio->wr_async_work);
+ 	ath10k_core_unregister(ar);
+ 	ath10k_core_destroy(ar);
++
++	flush_workqueue(ar_sdio->workqueue);
++	destroy_workqueue(ar_sdio->workqueue);
+ }
  
- 	return 0;
+ static const struct sdio_device_id ath10k_sdio_devices[] = {
 -- 
 2.20.1
 
