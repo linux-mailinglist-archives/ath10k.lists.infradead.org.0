@@ -2,54 +2,54 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D80B9692D4
-	for <lists+ath10k@lfdr.de>; Mon, 15 Jul 2019 16:40:16 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 52E05693A4
+	for <lists+ath10k@lfdr.de>; Mon, 15 Jul 2019 16:45:46 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ULHp5LFrEPbJDCGY+aQx8DrPkgWfhn3P/Ey9WC68JLE=; b=JnZYVPZosfQm8b
-	J1hKoa1aUzuV1PKi/FRekozc3xCwg+z8gHzXh8uKwTBEvb3Z7N+8CMGYI4CaIRwyl72S44ZAc2rw6
-	keA7zg9hTi0wfwudld9vwJPtfCuD1BRFVRlRZv4IhqngTJjSk8LVMf50i/LCYXFRCeA0qxP3x/ovS
-	kn+k7GbxIj4UAAXzXAOVh2PE28N7StIW67/gTINEd6R1Muj3L+N/POGzQuhtMXWsxFSuK88sw4Jez
-	v5iFQc6fZm97yO7JkTEL4JlYbSC3qJOxXIJvFwqDaWhq1gA2mFjkrRH0lhm6xcfO50a0o0HT1+f4+
-	AYnG5cv2ueMujx73sBmw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=5HDtEPeC8KvE+WSeaaDS7Z61mr9igBBI8Najpf5d/rQ=; b=lK3zzpq5j7cvsY
+	lHn6cknehXCqHHmw9WrdPTZ7dHYHo3VJHLWom2qllGnknyNrJG3CUngeq18rTNWUVmqYN4i+H4vw2
+	7gCyS4rIlu29wjTaDNZe9TgDFtJ4R8pwLsZeLX/XiaINnRN21o82NAXy1/YlwKnfCJ7x37E4MD8E3
+	eR8mjjy14wwv7CJEChRwzRgc6oLMSs6JNYW6dae2ki6djvKXzP4DcuHZRtI66KJx99XKYToh2lesb
+	dkTu/RIqxquam8d2lbTFOjc7Dvce0cXJhZiX5H3MntW/ZIbjMNKz8vHMBhrMKYGjhn/2yGldpu8W0
+	7IgrifYhXpdisSBejhow==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hn29H-0000YG-BL; Mon, 15 Jul 2019 14:40:15 +0000
+	id 1hn2Ea-0002hx-TO; Mon, 15 Jul 2019 14:45:44 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hn29B-0000Xn-Qo
- for ath10k@lists.infradead.org; Mon, 15 Jul 2019 14:40:11 +0000
+ id 1hn2EW-0002hR-Ps
+ for ath10k@lists.infradead.org; Mon, 15 Jul 2019 14:45:42 +0000
 Received: from sasha-vm.mshome.net (unknown [73.61.17.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 0FCB820896;
- Mon, 15 Jul 2019 14:40:04 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id 3787620651;
+ Mon, 15 Jul 2019 14:45:37 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1563201609;
- bh=vg3VziCfrwV9ntClPdsZAzbjtHXg6uWp6pij3PoIk6w=;
- h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=IHKhQizZ/IKih/uGe3DXXRfLCLQPQattsoQIzWJpljC9xN8vY6YY12E2I5rc1HiYc
- ElyyKxIP4DSVR0vYA8ggI54adJ0w1ELYBBqTOD3GbCbwYiXMovHJzfB/v2xibgB1iX
- 3kfo2m4KzHHEiYVeuZyGrGgmgsjJMQ+QkafjLMRA=
+ s=default; t=1563201940;
+ bh=F/3Yu9F8Yg7390e8aDrvVnWJyw1DVgBdBCAfaAM2QtA=;
+ h=From:To:Cc:Subject:Date:From;
+ b=V7NQNNFirOKFuniarJ+o63vHV+ddFAo8dyl4DrWnwM/sJM4vFBmc7o09U3H2VWZ21
+ 6Ot5fQUV1cYiP0MMAIIbwWXOQGp36lJYjDQbXWyk2ZtKGrmsfAXpFirPOFB9qCi5e/
+ gez19cADwekduZ1I08i2fgfOQ17ZjT9FaDQEIjNA=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 4.9 54/73] ath10k: fix PCIE device wake up failed
-Date: Mon, 15 Jul 2019 10:36:10 -0400
-Message-Id: <20190715143629.10893-54-sashal@kernel.org>
+Subject: [PATCH AUTOSEL 4.4 01/53] ath10k: Do not send probe response template
+ for mesh
+Date: Mon, 15 Jul 2019 10:44:43 -0400
+Message-Id: <20190715144535.11636-1-sashal@kernel.org>
 X-Mailer: git-send-email 2.20.1
-In-Reply-To: <20190715143629.10893-1-sashal@kernel.org>
-References: <20190715143629.10893-1-sashal@kernel.org>
 MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190715_074009_886221_5A69E0AC 
-X-CRM114-Status: GOOD (  12.25  )
+X-CRM114-CacheID: sfid-20190715_074540_854252_22AE1634 
+X-CRM114-Status: UNSURE (   8.55  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-5.2 points)
@@ -78,57 +78,51 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Sasha Levin <sashal@kernel.org>, Miaoqing Pan <miaoqing@codeaurora.org>,
- netdev@vger.kernel.org, linux-wireless@vger.kernel.org,
- ath10k@lists.infradead.org, Kalle Valo <kvalo@codeaurora.org>
+Cc: Sasha Levin <sashal@kernel.org>, netdev@vger.kernel.org,
+ linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
+ Kalle Valo <kvalo@codeaurora.org>, Surabhi Vishnoi <svishnoi@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-From: Miaoqing Pan <miaoqing@codeaurora.org>
+From: Surabhi Vishnoi <svishnoi@codeaurora.org>
 
-[ Upstream commit 011d4111c8c602ea829fa4917af1818eb0500a90 ]
+[ Upstream commit 97354f2c432788e3163134df6bb144f4b6289d87 ]
 
-Observed PCIE device wake up failed after ~120 iterations of
-soft-reboot test. The error message is
-"ath10k_pci 0000:01:00.0: failed to wake up device : -110"
+Currently mac80211 do not support probe response template for
+mesh point. When WMI_SERVICE_BEACON_OFFLOAD is enabled, host
+driver tries to configure probe response template for mesh, but
+it fails because the interface type is not NL80211_IFTYPE_AP but
+NL80211_IFTYPE_MESH_POINT.
 
-The call trace as below:
-ath10k_pci_probe -> ath10k_pci_force_wake -> ath10k_pci_wake_wait ->
-ath10k_pci_is_awake
+To avoid this failure, skip sending probe response template to
+firmware for mesh point.
 
-Once trigger the device to wake up, we will continuously check the RTC
-state until it returns RTC_STATE_V_ON or timeout.
+Tested HW: WCN3990/QCA6174/QCA9984
 
-But for QCA99x0 chips, we use wrong value for RTC_STATE_V_ON.
-Occasionally, we get 0x7 on the fist read, we thought as a failure
-case, but actually is the right value, also verified with the spec.
-So fix the issue by changing RTC_STATE_V_ON from 0x5 to 0x7, passed
-~2000 iterations.
-
-Tested HW: QCA9984
-
-Signed-off-by: Miaoqing Pan <miaoqing@codeaurora.org>
+Signed-off-by: Surabhi Vishnoi <svishnoi@codeaurora.org>
 Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 Signed-off-by: Sasha Levin <sashal@kernel.org>
 ---
- drivers/net/wireless/ath/ath10k/hw.c | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+ drivers/net/wireless/ath/ath10k/mac.c | 4 ++++
+ 1 file changed, 4 insertions(+)
 
-diff --git a/drivers/net/wireless/ath/ath10k/hw.c b/drivers/net/wireless/ath/ath10k/hw.c
-index 675e75d66db2..14dc6548701c 100644
---- a/drivers/net/wireless/ath/ath10k/hw.c
-+++ b/drivers/net/wireless/ath/ath10k/hw.c
-@@ -157,7 +157,7 @@ const struct ath10k_hw_values qca6174_values = {
- };
+diff --git a/drivers/net/wireless/ath/ath10k/mac.c b/drivers/net/wireless/ath/ath10k/mac.c
+index 398068ad0b62..5a0138c1c045 100644
+--- a/drivers/net/wireless/ath/ath10k/mac.c
++++ b/drivers/net/wireless/ath/ath10k/mac.c
+@@ -1502,6 +1502,10 @@ static int ath10k_mac_setup_prb_tmpl(struct ath10k_vif *arvif)
+ 	if (arvif->vdev_type != WMI_VDEV_TYPE_AP)
+ 		return 0;
  
- const struct ath10k_hw_values qca99x0_values = {
--	.rtc_state_val_on		= 5,
-+	.rtc_state_val_on		= 7,
- 	.ce_count			= 12,
- 	.msi_assign_ce_max		= 12,
- 	.num_target_ce_config_wlan	= 10,
++	 /* For mesh, probe response and beacon share the same template */
++	if (ieee80211_vif_is_mesh(vif))
++		return 0;
++
+ 	prb = ieee80211_proberesp_get(hw, vif);
+ 	if (!prb) {
+ 		ath10k_warn(ar, "failed to get probe resp template from mac80211\n");
 -- 
 2.20.1
 
