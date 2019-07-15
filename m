@@ -2,45 +2,45 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B0B9768F29
-	for <lists+ath10k@lfdr.de>; Mon, 15 Jul 2019 16:12:41 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C3C7868F6E
+	for <lists+ath10k@lfdr.de>; Mon, 15 Jul 2019 16:14:31 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Uzof/g27dACVlewVkjt8ijB+jQlFiWmbTmHd3wa9l4E=; b=UWdYg1lO1Fj25r
-	OyhdalTjtLBR3TRFRQcsRcCAFYnm4qUyIJxGBONOusCkl76oz3Hfx7wg/WcACi+fPuhzfQmieAi6Q
-	Ie2Qx3+VS7qUxX/rVHgLzQLqAUfzfD/JfppKnKxkU3YNmYcwh9Aikuk6Pu7VdgN5tFcxRJkKN50jX
-	K+ggIcJoLgarEKN/QbzrUZLyg0AvErNv4bP1Xc/j3iZR30J+qhpja+r4VMwiXuHNH2ViEdBwsJtQT
-	0kAyWmIO/afj7AgIBEaW5G/JVtXSs4cIJPEvHwZk3y9vMqaQLdJ2UqjX1tiJRmOQcyEB/KlRSSEbl
-	lxp9K8MBvF44NjRkovrQ==;
+	List-Owner; bh=f+M/TdINlP605Ef/NNy1Df5Zlx/TLKi+tLYpjobp9z0=; b=J3GHVeUVfzRdo4
+	QkKgqaxRnMcJtTw2frMNcDGe7oRHzZ+Ckv8yZjPQ//pPuPJTvFynqGf1yiGM2tqGzbiSyAjIyDS5a
+	RJ2iUeCMdmkT04xRylC9d88N/K1aJIE+k2UNjMrWZ3pjyhxfnhbhcZxxxYKCsGoaQ0Q8mQyLKkraJ
+	9ANVTpFDznIlOVPTMQK4bWy24KvpdSDrQD/TkWBQu7T9vi1j0HOvmDpE1vrAkomr0GeTzAMbDqkxw
+	0VVvqAQFqTM3NH8RWCdNYFJV0AVJijP+RS0mFPGSFUSEhQ8Yb1D79T4nSQOkG8WNtEm1Zn5sVVsQr
+	5W02x+R7LkP7CDyS8dOg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hn1iY-0000Oj-T8; Mon, 15 Jul 2019 14:12:38 +0000
+	id 1hn1kL-0000gm-1L; Mon, 15 Jul 2019 14:14:29 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hn1iP-0000KQ-P7
- for ath10k@lists.infradead.org; Mon, 15 Jul 2019 14:12:31 +0000
+ id 1hn1kH-0000gE-9P
+ for ath10k@lists.infradead.org; Mon, 15 Jul 2019 14:14:26 +0000
 Received: from sasha-vm.mshome.net (unknown [73.61.17.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 83012206B8;
- Mon, 15 Jul 2019 14:12:24 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id C8163206B8;
+ Mon, 15 Jul 2019 14:14:22 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1563199949;
- bh=1vuppLEe4c9McwgEoTdwhfd5u9V66r5gDa7g32TfWCE=;
+ s=default; t=1563200065;
+ bh=JTd+nvtYMDH2bpBgUYGzSZ3B/HMdCsAQwzi9WqHURoo=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=y+/5G+yCiKEen+s8qXcwkLDj0trMIL5dux0tDGjBgx0rlfQmAp4VEXJU/WZg30d57
- uhK+6G3Ei2L62rnwcIX/LwczajWLltof0qh/zver0QxIZtdiJto1XmiToflE2kOPQ4
- jMj+AKu0AoBxFSSlPO3nj7lDs0bpA2Utq7asFTEs=
+ b=cnbJNYqqaqh6PsOz/ak85W1bT6mfkaVpetkBD/yrZETvv9pvVxcpxvHdeTh59sSfY
+ Pvi/C7F54VUY8u6pn/6/0S/HrvOVTPRvv9tBOo8iWEIvRfsh4Aqvayw6qwgHfTU29F
+ +qa7qB9Nh6O4/AMbO1tzFUvY4zSSzdD3PwYjUKTo=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 5.1 146/219] ath10k: fix PCIE device wake up failed
-Date: Mon, 15 Jul 2019 10:02:27 -0400
-Message-Id: <20190715140341.6443-146-sashal@kernel.org>
+Subject: [PATCH AUTOSEL 5.1 175/219] ath10k: Fix memory leak in qmi
+Date: Mon, 15 Jul 2019 10:02:56 -0400
+Message-Id: <20190715140341.6443-175-sashal@kernel.org>
 X-Mailer: git-send-email 2.20.1
 In-Reply-To: <20190715140341.6443-1-sashal@kernel.org>
 References: <20190715140341.6443-1-sashal@kernel.org>
@@ -48,8 +48,9 @@ MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190715_071230_050166_05F25A15 
-X-CRM114-Status: GOOD (  12.74  )
+X-CRM114-CacheID: sfid-20190715_071425_346390_60938FEC 
+X-CRM114-Status: UNSURE (   8.94  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-5.2 points)
@@ -78,7 +79,7 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Sasha Levin <sashal@kernel.org>, Miaoqing Pan <miaoqing@codeaurora.org>,
+Cc: Sasha Levin <sashal@kernel.org>, Dundi Raviteja <dundi@codeaurora.org>,
  netdev@vger.kernel.org, linux-wireless@vger.kernel.org,
  ath10k@lists.infradead.org, Kalle Valo <kvalo@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
@@ -86,49 +87,39 @@ Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-From: Miaoqing Pan <miaoqing@codeaurora.org>
+From: Dundi Raviteja <dundi@codeaurora.org>
 
-[ Upstream commit 011d4111c8c602ea829fa4917af1818eb0500a90 ]
+[ Upstream commit c709df58832c5f575f0255bea4b09ad477fc62ea ]
 
-Observed PCIE device wake up failed after ~120 iterations of
-soft-reboot test. The error message is
-"ath10k_pci 0000:01:00.0: failed to wake up device : -110"
+Currently the memory allocated for qmi handle is
+not being freed during de-init which leads to memory leak.
 
-The call trace as below:
-ath10k_pci_probe -> ath10k_pci_force_wake -> ath10k_pci_wake_wait ->
-ath10k_pci_is_awake
+Free the allocated qmi memory in qmi deinit
+to avoid memory leak.
 
-Once trigger the device to wake up, we will continuously check the RTC
-state until it returns RTC_STATE_V_ON or timeout.
+Tested HW: WCN3990
+Tested FW: WLAN.HL.3.1-01040-QCAHLSWMTPLZ-1
 
-But for QCA99x0 chips, we use wrong value for RTC_STATE_V_ON.
-Occasionally, we get 0x7 on the fist read, we thought as a failure
-case, but actually is the right value, also verified with the spec.
-So fix the issue by changing RTC_STATE_V_ON from 0x5 to 0x7, passed
-~2000 iterations.
-
-Tested HW: QCA9984
-
-Signed-off-by: Miaoqing Pan <miaoqing@codeaurora.org>
+Fixes: fda6fee0001e ("ath10k: add QMI message handshake for wcn3990 client")
+Signed-off-by: Dundi Raviteja <dundi@codeaurora.org>
 Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 Signed-off-by: Sasha Levin <sashal@kernel.org>
 ---
- drivers/net/wireless/ath/ath10k/hw.c | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+ drivers/net/wireless/ath/ath10k/qmi.c | 1 +
+ 1 file changed, 1 insertion(+)
 
-diff --git a/drivers/net/wireless/ath/ath10k/hw.c b/drivers/net/wireless/ath/ath10k/hw.c
-index ad082b7d7643..b242085c3c16 100644
---- a/drivers/net/wireless/ath/ath10k/hw.c
-+++ b/drivers/net/wireless/ath/ath10k/hw.c
-@@ -158,7 +158,7 @@ const struct ath10k_hw_values qca6174_values = {
- };
+diff --git a/drivers/net/wireless/ath/ath10k/qmi.c b/drivers/net/wireless/ath/ath10k/qmi.c
+index a7bc2c70d076..8f8f717a23ee 100644
+--- a/drivers/net/wireless/ath/ath10k/qmi.c
++++ b/drivers/net/wireless/ath/ath10k/qmi.c
+@@ -1002,6 +1002,7 @@ int ath10k_qmi_deinit(struct ath10k *ar)
+ 	qmi_handle_release(&qmi->qmi_hdl);
+ 	cancel_work_sync(&qmi->event_work);
+ 	destroy_workqueue(qmi->event_wq);
++	kfree(qmi);
+ 	ar_snoc->qmi = NULL;
  
- const struct ath10k_hw_values qca99x0_values = {
--	.rtc_state_val_on		= 5,
-+	.rtc_state_val_on		= 7,
- 	.ce_count			= 12,
- 	.msi_assign_ce_max		= 12,
- 	.num_target_ce_config_wlan	= 10,
+ 	return 0;
 -- 
 2.20.1
 
