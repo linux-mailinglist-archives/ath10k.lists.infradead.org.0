@@ -2,87 +2,84 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 010FA6D5CD
-	for <lists+ath10k@lfdr.de>; Thu, 18 Jul 2019 22:31:15 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 61B2E70D7F
+	for <lists+ath10k@lfdr.de>; Tue, 23 Jul 2019 01:40:52 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
-	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
-	References:List-Owner; bh=KlnxQJMdijDN0A+1/GMg++xNnM//8pu+D1vnw5iY+74=; b=V1f
-	Gqp4uuaRkoEOqPN8IpB5RZK6gY/tv/oNNUqqTcz6eNHpQiURZh74a0tKLV6NRyGDtSdrzMzj9kcKf
-	UT1I8m9pTBiQgsOJOQ1rf39v+D/iWgeQv2GfVCjAk5HxV7OD8NJ0t7sxlH/1H2GEIDSUAW5MNiY7w
-	4xawkxf55u5Jl9rxTga+lV96Abg3OP1BfUXvxWq7P78ziKN4gPKjXBgF6K1N/BzLHdv4O7APYcpBu
-	u39fjZnpjS8oVmQRnsp5yiRYPCHU9A6RnEID1IJwVRkl1+wH+jmUuUq1J3IxDIh14x6MMjUo0u/Fp
-	cfGvbFh3obDPYCt9QtFWmq3gyiMRtqg==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=wPk5fR4ls2uUXU0leootZNGgiZHBMvYWtzatx8wt854=; b=acEjYbCjuwmdSj
+	FBPXfcYcsZudy11PR4hqtJrqI/x1NmfZMT2+ChV8HXLzocCo0+kwjxNz1aOkJjssnKhmMYpa5BHBk
+	n+RGC13rIVSfzPi5Hl98hoa8eWEz0plTs13ZfQVExCO0Ls0O3ZCEnIry3iG9/fHegK2eace8NiDym
+	rDOfDbF+RW+6sffVEcK1ZvIsarl7fMf2uE0o8N3uUxy114UEofD6jwuoDphFbXdeS1ByhxV8t+LbO
+	LPG8YwL4hSi1LAX23QaDo370tFRQ8wLW7XFINOqNaYowJTIhklgvq9gLQyLAy7p3dahMIUGs21x9L
+	YRY/C10u/y57XbWWONBQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hoD3T-0002Jj-Fu; Thu, 18 Jul 2019 20:31:07 +0000
-Received: from mail-lj1-x242.google.com ([2a00:1450:4864:20::242])
+	id 1hphv6-0001we-9f; Mon, 22 Jul 2019 23:40:40 +0000
+Received: from mail-io1-f68.google.com ([209.85.166.68])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hoD3O-0002Iu-5f
- for ath10k@lists.infradead.org; Thu, 18 Jul 2019 20:31:03 +0000
-Received: by mail-lj1-x242.google.com with SMTP id r9so28638116ljg.5
- for <ath10k@lists.infradead.org>; Thu, 18 Jul 2019 13:30:59 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=from:to:cc:subject:date:message-id;
- bh=5uFK7MqKRb+oFVKD89Io/malOAroV84oVCRoYwQTVLs=;
- b=ByuNj8jVyAGVVYdET8ktdlDqRCowxA9phMWJ7m0Sg/hw15WKOcetKCoYWFrQQJQRKo
- LtEcfREetsclcT4WkgGXcEBP0H8PXdH/UinOi0mrnbXCaG1uU7JZ/TSnEnww/R4X/mTz
- oY9MWuFdVzOuJB5eaML5omcF2fQwGzk4Q2mCo4iQ+VdUEQ8P4ArKNmYpxQn4VQnZcBIm
- tZibUPoWhfIJRuQA9XBnVICH4JPqmb7LBSilxOxr8Kol1LQFKxRHzVLNBPcYd0GBe9qK
- UJK5HYVWYrK9uQ2rjRIQICntWRhJ/+09hxemcPaQHi7E/J8jQ2HvL+W709oR5yYvVCaO
- 1FkQ==
+ id 1hphux-0001wA-AS
+ for ath10k@lists.infradead.org; Mon, 22 Jul 2019 23:40:32 +0000
+Received: by mail-io1-f68.google.com with SMTP id q22so77864389iog.4
+ for <ath10k@lists.infradead.org>; Mon, 22 Jul 2019 16:40:30 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id;
- bh=5uFK7MqKRb+oFVKD89Io/malOAroV84oVCRoYwQTVLs=;
- b=uY3GnyrysWPwJd4cEhaO6OVLJ9qp5OM4DtDcb2op1yXqdmBz72nyzjvwUlEG2DKBd2
- z1pSvqSw+l5/px+c9BMRKxtRpsWWNEFzFig42AAon2bRY140ctgExvUhGEb4noYC88Iv
- /TWSsVE4A6JkTdIBtxkuNWeIsRqq+SPKgv+FGb+P5ZCiw7QmCCFGgPlWr2z6cO0xH2og
- pUAS7D/uVfjnKoSMOYoSeoG7WJfL3oZeH+ICkhMC0wq2O99grzDohXbk7uj7g9GKP81L
- fNorgXNcDsHLr5sZ2dHWCFqtZXtiUciKc4YGV6I4HOEpE5BCPw/OVR2xTB8cKdaMJXLM
- re8Q==
-X-Gm-Message-State: APjAAAXH9z1MlUpYcb3fAgzPOkwRLNrJ+K5cumCr8DzTVaiPuqTEzQpW
- 5poZd4zUwVWNgwTvn/Eig4Q=
-X-Google-Smtp-Source: APXvYqzYOuKKYg4wEuoB/Wrmt94ndQPSqKVzWpoKOkFOelXaVESsDwy8xn8HcjyigaNiphMBNBSVag==
-X-Received: by 2002:a2e:9a13:: with SMTP id o19mr26037315lji.102.1563481858169; 
- Thu, 18 Jul 2019 13:30:58 -0700 (PDT)
-Received: from ul001888.eu.tieto.com ([91.90.160.140])
- by smtp.gmail.com with ESMTPSA id d16sm5229387ljc.96.2019.07.18.13.30.56
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to:user-agent;
+ bh=5kbmdtyoIqqv6CwHcDBtSAQ4GBxL50XX+ghk096nEbg=;
+ b=Nlz+BPLCXDWyT72WDwD5dDmbY2H6hk/bu9oQ6c04Ge+BV9CTU4SFrP8I5r5jWRnjqJ
+ woSDLJc1QCtRkw9S9YORiEBYBz2iwRq6Qx8qCQNqqYkuXI9pMzgXK44nm6iESgT9GcA2
+ EBX3nX5wf4I57IMQ2tnb9LZfm10DioP/1VskGdCQeQW2EgB4sRBpqkiB/Ei7+HTJgxZN
+ RwmeWs3GsuzBMgXwNhRmITwCEql2M+4n0tb5K6gJ6m0KPcVv6IEbtiJnhdIqmIhhD5BP
+ xfpSKAs25lzzfpX82SRbu6mVEvveOEC0xFxNBwh25m1oNkDClG1SouC+h94/TbyWzr+1
+ /EqQ==
+X-Gm-Message-State: APjAAAWioLNUP8dYY4Ho5DybPx7v8MM1DGtZ+nyvyAfDhVJcvjUJcuEf
+ VD+KWVWd8XMYJo/TCSNVkA==
+X-Google-Smtp-Source: APXvYqy62yyWeiDelOvsPn92v9VPMA8T01uWGBXpV51/F9WWhSRt1TyGUnsdb2HOGw4UOR09ewfkmA==
+X-Received: by 2002:a5d:9711:: with SMTP id h17mr66640433iol.280.1563838830268; 
+ Mon, 22 Jul 2019 16:40:30 -0700 (PDT)
+Received: from localhost ([64.188.179.254])
+ by smtp.gmail.com with ESMTPSA id j23sm33872892ioo.6.2019.07.22.16.40.29
  (version=TLS1_3 cipher=AEAD-AES256-GCM-SHA384 bits=256/256);
- Thu, 18 Jul 2019 13:30:57 -0700 (PDT)
-From: Vasyl Gomonovych <gomonovych@gmail.com>
-To: kvalo@codeaurora.org, davem@davemloft.net, ath10k@lists.infradead.org,
- linux-wireless@vger.kernel.org
-Subject: [PATCH] ath10k: Use ARRAY_SIZE
-Date: Thu, 18 Jul 2019 22:30:32 +0200
-Message-Id: <20190718203032.15528-1-gomonovych@gmail.com>
-X-Mailer: git-send-email 2.17.1
+ Mon, 22 Jul 2019 16:40:29 -0700 (PDT)
+Date: Mon, 22 Jul 2019 17:40:28 -0600
+From: Rob Herring <robh@kernel.org>
+To: Govind Singh <govinds@codeaurora.org>
+Subject: Re: [PATCH 1/3] dt: bindings: update compatible dt properties for
+ WCN3990 wifi node
+Message-ID: <20190722234028.GA9986@bogus>
+References: <20190703035711.25592-1-govinds@codeaurora.org>
+ <20190703035711.25592-2-govinds@codeaurora.org>
+MIME-Version: 1.0
+Content-Disposition: inline
+In-Reply-To: <20190703035711.25592-2-govinds@codeaurora.org>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190718_133102_239686_67686FDB 
-X-CRM114-Status: UNSURE (   8.21  )
+X-CRM114-CacheID: sfid-20190722_164031_374147_B502EDF8 
+X-CRM114-Status: UNSURE (   6.82  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-Spam-Score: 0.5 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:242 listed in]
- [list.dnswl.org]
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (gomonovych[at]gmail.com)
+ no trust [209.85.166.68 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [209.85.166.68 listed in wl.mailspike.net]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (robherring2[at]gmail.com)
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit (robherring2[at]gmail.com)
+ 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -94,38 +91,25 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: netdev@vger.kernel.org, Vasyl Gomonovych <gomonovych@gmail.com>,
- linux-kernel@vger.kernel.org
-MIME-Version: 1.0
+Cc: linux-arm-msm@vger.kernel.org, Govind Singh <govinds@codeaurora.org>,
+ linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
+ devicetree@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-fix coccinelle warning, use ARRAY_SIZE
+On Wed,  3 Jul 2019 09:27:09 +0530, Govind Singh wrote:
+> update compatible dt properties for WCN3990 wifi node to be
+> compatible across different MSM platforms.
+> 
+> Signed-off-by: Govind Singh <govinds@codeaurora.org>
+> ---
+>  Documentation/devicetree/bindings/net/wireless/qcom,ath10k.txt | 2 ++
+>  1 file changed, 2 insertions(+)
+> 
 
-Signed-off-by: Vasyl Gomonovych <gomonovych@gmail.com>
----
- drivers/net/wireless/ath/ath10k/snoc.c | 3 +--
- 1 file changed, 1 insertion(+), 2 deletions(-)
-
-diff --git a/drivers/net/wireless/ath/ath10k/snoc.c b/drivers/net/wireless/ath/ath10k/snoc.c
-index b491361e6ed4..49fc04412e9b 100644
---- a/drivers/net/wireless/ath/ath10k/snoc.c
-+++ b/drivers/net/wireless/ath/ath10k/snoc.c
-@@ -976,8 +976,7 @@ static int ath10k_snoc_wlan_enable(struct ath10k *ar,
- 				  sizeof(struct ath10k_svc_pipe_cfg);
- 	cfg.ce_svc_cfg = (struct ath10k_svc_pipe_cfg *)
- 		&target_service_to_ce_map_wlan;
--	cfg.num_shadow_reg_cfg = sizeof(target_shadow_reg_cfg_map) /
--					sizeof(struct ath10k_shadow_reg_cfg);
-+	cfg.num_shadow_reg_cfg = ARRAY_SIZE(target_shadow_reg_cfg_map);
- 	cfg.shadow_reg_cfg = (struct ath10k_shadow_reg_cfg *)
- 		&target_shadow_reg_cfg_map;
- 
--- 
-2.17.1
-
+Reviewed-by: Rob Herring <robh@kernel.org>
 
 _______________________________________________
 ath10k mailing list
