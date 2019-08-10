@@ -2,67 +2,67 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6A23288B68
-	for <lists+ath10k@lfdr.de>; Sat, 10 Aug 2019 14:40:28 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id DE3EE88B6A
+	for <lists+ath10k@lfdr.de>; Sat, 10 Aug 2019 14:41:21 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
 	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
 	List-Unsubscribe:List-Id:Message-ID:References:In-Reply-To:Subject:To:From:
 	Date:MIME-Version:Reply-To:Content-ID:Content-Description:Resent-Date:
 	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=pwKl3iQCD2O35RWinowZ9Y596SmFxVjY3OaNmBNIUsQ=; b=OyFHWkVZc9luL97FEZ4gWOuBG
-	Fxx2WzwBYCsdgdwdeB76RaB7ugV0dyx6JTFFvcRgH5d+rtD8lZeBpcXn927Zvd2szdVCGhLRms9R3
-	0zapQ7jLZmOF/l5YFzbK0C/p8/9VtNTnBa9KCskXHwVJPgooXykodikG9JcRBVavquNF5ASrdnJOZ
-	+LZqptZwvXlg1Fc51XGZK9SXzBR4ON1LS742QlcmBPdaoajw21dIZFknSeHImbamLbJG4lhzdwcX5
-	xBPb8GKy90OSw8G1Jw1tNhdD7q1QwajAp55dP1bCvlmf6IzIH1pxNI2p3wE2d8EdlDISFreQBEnsE
-	rqvC8psCA==;
+	 bh=Fi/o0IE37BYlkFQqBx9S/txWYgZY8x6XHgUAxK5s5B0=; b=LVs1J0nzTtdEhWkQuJsKQf6uk
+	8dnpp4O76YJLVFFSL5FSj0/bqcyOmiiDjN6PtELeEj9Q/XjNcpQhq7Lo6AYMFTSqHeh04ptfvlv61
+	ej6cWPe02hnHfDewE6lemHwULfeRzg7Z5YhAdydnBaSW57WmL5QXmvMcvulJsdiHdCL4pk0WQeyx6
+	DUTVkIIC0MMOmlpj4kvnk51ejRW2IMDqO2iiqHdyVFJvx52fEu3SQi9pY199nQZNsZTWtQ+2uEbdK
+	D9/HL3m99wcQjxln4ig4c39SQfajmD5jBNHdwyoNXOIzE9AdmSBhuJafLyVMu6d8B6MlSvHGx8kjR
+	YwKRnsb2g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hwQfV-0003df-RZ; Sat, 10 Aug 2019 12:40:21 +0000
+	id 1hwQgS-0003jS-KJ; Sat, 10 Aug 2019 12:41:20 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hwQfR-0003dN-TL
- for ath10k@lists.infradead.org; Sat, 10 Aug 2019 12:40:19 +0000
+ id 1hwQgN-0003j5-Uf
+ for ath10k@lists.infradead.org; Sat, 10 Aug 2019 12:41:17 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 84087602B7; Sat, 10 Aug 2019 12:40:17 +0000 (UTC)
+ id 216C96074F; Sat, 10 Aug 2019 12:41:15 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1565440817;
- bh=bq2a9ifN2qcimVadgjGb2ULkBUInwogFiCmBKE8khQQ=;
+ s=default; t=1565440875;
+ bh=yJ1BlyP2N+MGDpUxAHU8VlyACH1I6LtPj6CRxZyqCX8=;
  h=Date:From:To:Cc:Subject:In-Reply-To:References:From;
- b=V4Vh8mrCDGwy09RRcOqjVRWZs9sQgrLXElgE24Ww422K+rE0Gi4j5VMPoPMQv+CgH
- uQ8kjQOyUB8CssLXM99IwrniwjsqXONvPweTCbFLOB2XN3tNdBvFP/Ujw74fdpOZmN
- OtRxvw/aW/I/lATlo7HIaIe5Ej6dtF64NoWNnbBg=
+ b=f+OFtFpgwFDZ07ppEVkE+P0/Huiv5wzYVmVKwVCOtHD6QGTvGb8j66QG5ztbCML5w
+ sWSjgNfQZ34zvldTFLAqCdiTI7mzApdRSBFSm9BMomKFu4nkAyZjC3Zb+PxPqentq5
+ l8tSiQu37Wlnyot29/zJomDI7dUsimElDHP3sxHw=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
 X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
  DKIM_INVALID,DKIM_SIGNED autolearn=no autolearn_force=no version=3.4.0
 Received: from mail.codeaurora.org (localhost.localdomain [127.0.0.1])
- by smtp.codeaurora.org (Postfix) with ESMTP id 38BB1602ED;
- Sat, 10 Aug 2019 12:40:17 +0000 (UTC)
+ by smtp.codeaurora.org (Postfix) with ESMTP id A3B56602ED;
+ Sat, 10 Aug 2019 12:41:14 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1565440817;
- bh=bq2a9ifN2qcimVadgjGb2ULkBUInwogFiCmBKE8khQQ=;
+ s=default; t=1565440874;
+ bh=yJ1BlyP2N+MGDpUxAHU8VlyACH1I6LtPj6CRxZyqCX8=;
  h=Date:From:To:Cc:Subject:In-Reply-To:References:From;
- b=V4Vh8mrCDGwy09RRcOqjVRWZs9sQgrLXElgE24Ww422K+rE0Gi4j5VMPoPMQv+CgH
- uQ8kjQOyUB8CssLXM99IwrniwjsqXONvPweTCbFLOB2XN3tNdBvFP/Ujw74fdpOZmN
- OtRxvw/aW/I/lATlo7HIaIe5Ej6dtF64NoWNnbBg=
+ b=TDowV+u6LOHcpW402dXkH7Nnj9bAKaX824lvHMaHyyevfnVn9Y6fyOFKEmeaiqiqn
+ 3PShPpe0Os4RVdOtTH0i8vdGxihb64Mh5zPORP1GQef/LE4IFfScA1bZmnlbGLAICQ
+ 63eJtLbUds1jnuLvTaPuDfmYWcc6Sgev3vuz/uJI=
 MIME-Version: 1.0
-Date: Sat, 10 Aug 2019 18:10:17 +0530
+Date: Sat, 10 Aug 2019 18:11:14 +0530
 From: Tamizh chelvam <tamizhr@codeaurora.org>
 To: Johannes Berg <johannes@sipsolutions.net>
-Subject: Re: [PATCHv6 1/9] nl80211: New netlink command for TID specific
- configuration
-In-Reply-To: <ea1f9969b52fed2da8b0e88ed8b06527bfc272aa.camel@sipsolutions.net>
+Subject: Re: [PATCHv6 3/9] nl80211: Add netlink attribute for AMPDU
+ aggregation enable/disable
+In-Reply-To: <1077c62701b31cfcb4436e6b13be64ade6b1ae1b.camel@sipsolutions.net>
 References: <1560835632-17405-1-git-send-email-tamizhr@codeaurora.org>
- <1560835632-17405-2-git-send-email-tamizhr@codeaurora.org>
- <ea1f9969b52fed2da8b0e88ed8b06527bfc272aa.camel@sipsolutions.net>
-Message-ID: <be096df17632b1a71441a23a373682bf@codeaurora.org>
+ <1560835632-17405-4-git-send-email-tamizhr@codeaurora.org>
+ <1077c62701b31cfcb4436e6b13be64ade6b1ae1b.camel@sipsolutions.net>
+Message-ID: <e704b7dd39c86c2596b6c0861a376117@codeaurora.org>
 X-Sender: tamizhr@codeaurora.org
 User-Agent: Roundcube Webmail/1.2.5
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190810_054017_972395_CDAC0463 
-X-CRM114-Status: UNSURE (   6.49  )
+X-CRM114-CacheID: sfid-20190810_054116_012841_85D1C462 
+X-CRM114-Status: UNSURE (   7.52  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -97,29 +97,41 @@ Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On 2019-07-31 14:55, Johannes Berg wrote:
+On 2019-07-31 14:58, Johannes Berg wrote:
 > On Tue, 2019-06-18 at 10:57 +0530, Tamizh chelvam wrote:
 >> 
->>  /**
->> + * enum nl80211_tid_config - TID config state
->> + * @NL80211_TID_CONFIG_DEFAULT: Default config for the TID
->> + * @NL80211_TID_CONFIG_ENABLE: Enable config for the TID
->> + * NL80211_TID_CONFIG_DISABLE: Disable config for the TID
->> + */
->> +enum nl80211_tid_config {
->> +	NL80211_TID_CONFIG_DEFAULT,
->> +	NL80211_TID_CONFIG_ENABLE,
->> +	NL80211_TID_CONFIG_DISABLE,
->> +};
+>> +		if (!wiphy_ext_feature_isset(&rdev->wiphy,
+>> +				NL80211_EXT_FEATURE_PER_TID_AMPDU_CTRL)) {
+>> +			NL_SET_ERR_MSG_ATTR(extack,
+>> +					    attrs[NL80211_TID_ATTR_CONFIG_AMPDU_CTRL],
+>> +					    "TID specific configuration not "
+>> +					    "supported");
+>> +			return -ENOTSUPP;
+>> +		}
+>> +
+>> +		if (peer && !wiphy_ext_feature_isset(&rdev->wiphy,
+>> +				NL80211_EXT_FEATURE_PER_STA_AMPDU_CTRL)) {
+>> +			NL_SET_ERR_MSG_ATTR(extack,
+>> +					    attrs[NL80211_TID_ATTR_CONFIG_AMPDU_CTRL],
+>> +					    "peer specfic TID configuration not "
+>> +					    "supported");
+>> +			return -ENOTSUPP;
+>> +		}
 > 
-> Hmm. Looking at this in more detail in patch 3, I don't understand.
+> I think you should probably make this be a function to which you pass
+> the attribute pointer and feature flags.
 > 
-> How is DEFAULT different from "attribute not present", i.e. "no
-> changes"?
+> err = nl80211_check_tid_config_supported(extack,
+> 					 attrs[NL80211_TID_ATTR_CONFIG_AMPDU_CTRL],
+> 					 NL80211_EXT_FEATURE_PER_TID_AMPDU_CTRL,
+> 					 NL80211_EXT_FEATURE_PER_STA_AMPDU_CTRL);
 > 
-This DEFAULT is used to notify the driver to use default configuration 
-value of driver/vif.
-This will be used when the attribute is not present.
+> since you have this code a lot?
+> 
+Sure, I will make that change in the next version of patchset.
+
+Thanks,
+Tamizh.
 
 _______________________________________________
 ath10k mailing list
