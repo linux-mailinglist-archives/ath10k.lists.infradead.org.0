@@ -2,82 +2,66 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 212FC90A0D
-	for <lists+ath10k@lfdr.de>; Fri, 16 Aug 2019 23:11:51 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9C2E590B26
+	for <lists+ath10k@lfdr.de>; Sat, 17 Aug 2019 00:43:07 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=+4FMdl/tAkba696jLSkc+WZ+km+M1zhBYqvEkwdlDO4=; b=S/vt7HxHwtfGG2
-	fCM/0PVo7IgnFqtBW1p9b/Y9Dd03alxGUw+bcrJBInugM1iIPTvU9nwoYl4+rg7zoLiw+vPtVU9dU
-	xkFn+0Q9iLxTYf2pJnd+sZ/mxXyCPPxUQ8k4wWlQSX7a3zl12GbyzS0YjQLXxA1+Ef4/udYTXsbUb
-	qeb3qgsaPs0bfgX5f5WQSyLOjoGxyHBIpAC26PiioCwIt96RM9v+K/XN4hQH+0qQi+KZGdKAK4cQq
-	5Lc4gRy7u9DlS2YvtQUPoZzBQU2mBadqIQ7tIdkTgB4gYSBEPZ21qj+Ne4wA/wKSaU2wr62BmdDb7
-	A3iqzt1Pp9iATajmBa4g==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
+	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=d6/UqY9qktQ9OFj3N5fqOrSFnOewimDKTcGZctno7QQ=; b=hwxlMkYP0ax4/55/98Bm6l82p
+	uhVoKxnonAKJFLKOvFhmDA7bHqQKSStJdjBrUXQIYctmeAScLVEGFPY+19wFC3510d/Utu8TE9z0D
+	ff+KYZQI6es4bnSuJQnlKbkuu577oJY8bsMO8q6E3t2gk7TEmApn4Xrbnqq6mWc/bd/Ug+ASJnH4U
+	enz91a1+cyY9MJbAZoFsGSFr6QIx0CXAL/SZeR5vjltJ33TrAj/eQOS7NHsInjnWF624OZ8FBiIno
+	4MMbiPx8wHOOhp6YQa3lr1n34rmt5NetRMlCFuB9oibqRzLaOQXp5ftF/IWpDPiXOsLUA4qAyeHGM
+	J1MTWtLAQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hyjVl-0007DS-Ky; Fri, 16 Aug 2019 21:11:49 +0000
-Received: from mail-oi1-f195.google.com ([209.85.167.195])
+	id 1hykw2-0002zn-9P; Fri, 16 Aug 2019 22:43:02 +0000
+Received: from mout2.fh-giessen.de ([212.201.18.46])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hyjVh-0007Ce-QY
- for ath10k@lists.infradead.org; Fri, 16 Aug 2019 21:11:47 +0000
-Received: by mail-oi1-f195.google.com with SMTP id v12so2121964oic.12
- for <ath10k@lists.infradead.org>; Fri, 16 Aug 2019 14:11:44 -0700 (PDT)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=0gC4sb2j3RWTm9xjuIK9kqivJqH0u782yHSmQQjFy/g=;
- b=GhGZsa0G57zrm66fxE9oMmA7O1E/mWEx05FQrW3dQacvFPBSYNXz0GMNBO1MIFJ5X6
- fuWmb6pFeXcDu00NVrq7c1OylVikFVXUS4WCoQWYOyoOAhOB8tUmwMSkuYQ9Z9+6WBpD
- r1wMTu/wtobfFnM+0p0AOCACGKj4hTVMmMR1UUzUR2n+EjlmbnCLwskd1/LSCOOsfqrT
- Rva3ZG4qPaqFno9svWAce2eB9A7r4X0UO1kfkR8Nh0tw73+37Z1zsZeMo+3TozkmEBpE
- vlB9s00i5lt9E0fvVRqhXrC7/ncnJ/FjZ3Sda3H6LpN4w4HWDjMBiuNVjJLj01j5hfIx
- qmKg==
-X-Gm-Message-State: APjAAAVdzTVlekzwxUZ9lr6GCr3GA/DeNioLhwH9Ms8XZ64DakRKtYCe
- iKo9kTG7drfY1UrdGeAt7w==
-X-Google-Smtp-Source: APXvYqxVNGZP55OO2DAvkxQON330c/WkMGGQCA7UZMyjdZKYVNzMAVMjLidQg+yRLMzc0LHLCzRN0Q==
-X-Received: by 2002:aca:5106:: with SMTP id f6mr6355037oib.69.1565989903418;
- Fri, 16 Aug 2019 14:11:43 -0700 (PDT)
-Received: from localhost (ip-173-126-47-137.ftwttx.spcsdns.net.
- [173.126.47.137])
- by smtp.gmail.com with ESMTPSA id z26sm1648410oih.16.2019.08.16.14.11.42
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Fri, 16 Aug 2019 14:11:42 -0700 (PDT)
-Date: Fri, 16 Aug 2019 16:11:41 -0500
-From: Rob Herring <robh@kernel.org>
-To: Bjorn Andersson <bjorn.andersson@linaro.org>
-Subject: Re: [PATCH] ath10k: Fix HOST capability QMI incompatibility
-Message-ID: <20190816211141.GA4468@bogus>
-References: <20190725063108.15790-1-bjorn.andersson@linaro.org>
+ id 1hykvy-0002yp-R1
+ for ath10k@lists.infradead.org; Fri, 16 Aug 2019 22:43:00 +0000
+Received: from mx1.fh-giessen.de ([212.201.18.40])
+ by mout2.fh-giessen.de with esmtps (TLS1.2:ECDHE_RSA_AES_256_GCM_SHA384:256)
+ (Exim 4.92) (envelope-from <tobias.johannes.klausmann@mni.thm.de>)
+ id 1hykvq-0007N2-AQ; Sat, 17 Aug 2019 00:42:50 +0200
+Received: from mailgate-2.its.fh-giessen.de ([212.201.18.14])
+ by mx1.fh-giessen.de with esmtps (TLS1.2:ECDHE_RSA_AES_256_GCM_SHA384:256)
+ (Exim 4.92) (envelope-from <tobias.johannes.klausmann@mni.thm.de>)
+ id 1hykvq-008QGk-5h; Sat, 17 Aug 2019 00:42:50 +0200
+Received: from p2e561b42.dip0.t-ipconnect.de ([46.86.27.66]
+ helo=[192.168.1.24]) by mailgate-2.its.fh-giessen.de with esmtpsa
+ (TLS1.2:ECDHE_RSA_AES_128_GCM_SHA256:128) (Exim 4.92)
+ (envelope-from <tobias.johannes.klausmann@mni.thm.de>)
+ id 1hykvp-000Exn-SB; Sat, 17 Aug 2019 00:42:49 +0200
+Subject: Re: regression in ath10k dma allocation
+To: Nicolin Chen <nicoleotsuka@gmail.com>
+References: <8fe8b415-2d34-0a14-170b-dcb31c162e67@mni.thm.de>
+ <20190816164301.GA3629@lst.de>
+ <af96ea6a-2b17-9b66-7aba-b7dae5bcbba5@mni.thm.de>
+ <20190816222506.GA24413@Asurada-Nvidia.nvidia.com>
+From: Tobias Klausmann <tobias.johannes.klausmann@mni.thm.de>
+Message-ID: <3f7475e3-e27b-aca7-c21e-71cac6cafc1c@mni.thm.de>
+Date: Sat, 17 Aug 2019 00:42:48 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:70.0) Gecko/20100101
+ Thunderbird/70.0a1
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190725063108.15790-1-bjorn.andersson@linaro.org>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+In-Reply-To: <20190816222506.GA24413@Asurada-Nvidia.nvidia.com>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190816_141145_865055_B19D3268 
-X-CRM114-Status: GOOD (  12.94  )
-X-Spam-Score: 0.5 (/)
+X-CRM114-CacheID: sfid-20190816_154259_027932_9ED79B93 
+X-CRM114-Status: GOOD (  12.26  )
+X-Spam-Score: -0.7 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.5 points)
+ Content analysis details:   (-0.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.167.195 listed in list.dnswl.org]
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (robherring2[at]gmail.com)
+ -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
+ low trust [212.201.18.46 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit (robherring2[at]gmail.com)
- -0.3 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.167.195 listed in wl.mailspike.net]
- 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -89,46 +73,49 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- netdev@vger.kernel.org, linux-wireless@vger.kernel.org,
- linux-kernel@vger.kernel.org, ath10k@lists.infradead.org,
- stable@vger.kernel.org, "David S. Miller" <davem@davemloft.net>,
- Kalle Valo <kvalo@codeaurora.org>
-Content-Type: text/plain; charset="us-ascii"
+Cc: netdev@vger.kernel.org, linux-wireless@vger.kernel.org,
+ linux-kernel@vger.kernel.org, ath10k@lists.infradead.org, davem@davemloft.net,
+ iommu@lists.linux-foundation.org, tobias.klausmann@freenet.de,
+ robin.murphy@arm.com, Christoph Hellwig <hch@lst.de>, kvalo@codeaurora.org,
+ m.szyprowski@samsung.com
 Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On Wed, Jul 24, 2019 at 11:31:08PM -0700, Bjorn Andersson wrote:
-> The introduction of 768ec4c012ac ("ath10k: update HOST capability QMI
-> message") served the purpose of supporting the new and extended HOST
-> capability QMI message.
-> 
-> But while the new message adds a slew of optional members it changes the
-> data type of the "daemon_support" member, which means that older
-> versions of the firmware will fail to decode the incoming request
-> message.
-> 
-> There is no way to detect this breakage from Linux and there's no way to
-> recover from sending the wrong message (i.e. we can't just try one
-> format and then fallback to the other), so a quirk is introduced in
-> DeviceTree to indicate to the driver that the firmware requires the 8bit
-> version of this message.
-> 
-> Cc: stable@vger.kernel.org
-> Fixes: 768ec4c012ac ("ath10k: update HOST capability qmi message")
-> Signed-off-by: Bjorn Andersson <bjorn.andersson@linaro.org>
-> ---
->  .../bindings/net/wireless/qcom,ath10k.txt     |  6 +++++
+Hi Nicolin,
 
-Acked-by: Rob Herring <robh@kernel.org>
+On 17.08.19 00:25, Nicolin Chen wrote:
+> Hi Tobias
+>
+> On Fri, Aug 16, 2019 at 10:16:45PM +0200, Tobias Klausmann wrote:
+>>> do you have CONFIG_DMA_CMA set in your config?  If not please make sure
+>>> you have this commit in your testing tree, and if the problem still
+>>> persists it would be a little odd and we'd have to dig deeper:
+>>>
+>>> commit dd3dcede9fa0a0b661ac1f24843f4a1b1317fdb6
+>>> Author: Nicolin Chen <nicoleotsuka@gmail.com>
+>>> Date:   Wed May 29 17:54:25 2019 -0700
+>>>
+>>>       dma-contiguous: fix !CONFIG_DMA_CMA version of dma_{alloc, free}_contiguous()
+>> yes CONFIG_DMA_CMA is set (=y, see attached config), the commit you mention
+>> above is included, if you have any hints how to go forward, please let me
+>> know!
+> For CONFIG_DMA_CMA=y, by judging the log with error code -12, I
+> feel this one should work for you. Would you please check if it
+> is included or try it out otherwise?
+>
+> dma-contiguous: do not overwrite align in dma_alloc_contiguous()
+> https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/commit/?id=c6622a425acd1d2f3a443cd39b490a8777b622d7
 
->  drivers/net/wireless/ath/ath10k/qmi.c         | 13 ++++++++---
->  .../net/wireless/ath/ath10k/qmi_wlfw_v01.c    | 22 +++++++++++++++++++
->  .../net/wireless/ath/ath10k/qmi_wlfw_v01.h    |  1 +
->  drivers/net/wireless/ath/ath10k/snoc.c        | 11 ++++++++++
->  drivers/net/wireless/ath/ath10k/snoc.h        |  1 +
->  6 files changed, 51 insertions(+), 3 deletions(-)
+
+Thanks for the hint, yet the commit is included and does not fix the 
+problem!
+
+Greetings,
+
+Tobias
+
 
 _______________________________________________
 ath10k mailing list
