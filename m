@@ -2,74 +2,65 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C72958F639
-	for <lists+ath10k@lfdr.de>; Thu, 15 Aug 2019 23:04:55 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 81E3390013
+	for <lists+ath10k@lfdr.de>; Fri, 16 Aug 2019 12:32:49 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
-	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
-	References:List-Owner; bh=1RXKggtvq9hopPas7rpvbncrvg6FVgGw7EWCgCDooFo=; b=U+E
-	HnzggIQ/di6vup99WCEJ4xBOAoji8GnbU095K6tirA9f6cf5pCjhOOZWeD9ysa5YtyHXzOdv4q49l
-	QdX8M03UqNx215RMVeMhZg5xSpS41s4K38P3rCJB+X9P6+yEeOFhdhFNbE0sBojLxYgPInIwg7VIL
-	UiQLQME/qN1aZXqpXU79OGainHVtWhUw90c+xbsOvGguoVIyCKLAFK48hbwFE5LXIcP2957UrwSct
-	Vppg+HLzG6HPhI2wA4xVrxqXTNbFIdXHybAf3MecvbFBkJKjM4PdkXpORMxr2btWj6UT4g2isw7tX
-	kJ3uvHU5QKsD5ptl9pZ+AxZ2C3uKynQ==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
+	References:To:Subject:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=JLG9KkHztltjtbs9BHYiEE/cTJxAqDDlMbhSyYHeli0=; b=Q1hHw9H1j0ROdNCdm9Pgftlqw
+	txj3gxYRS0tQESci3MM+cWxJQWEaL+PkexMSXlv+vYY/x729Y4FLvuEq+MaqjD65mP9qLh6GHQat7
+	/nq02uqjS7UKunSKfackzBhWkSWfpduCouRxAOYS+vy18VgfBs26rzODjURcK19/Ek03tEUM62OOi
+	kR64DWAHA1pbJI06+iSPh8sVXMzHfeq9+b06OGOONOfmgRQvZnvXOEaP8OsUHo6ymK4tRh9+F2VrP
+	sYADaP2w40cIxU5TNjN5rCoqtHl+VCVSAXt0AfP4drraAJQ6U2kQ5KvWT1Od/eaSrHFBcIIxQZ2Xy
+	hWsY1KoaQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hyMvN-0007OD-Ot; Thu, 15 Aug 2019 21:04:45 +0000
-Received: from mail-yw1-f65.google.com ([209.85.161.65])
+	id 1hyZXG-0007Y8-RE; Fri, 16 Aug 2019 10:32:42 +0000
+Received: from smtps.newmedia-net.de ([2a05:a1c0:0:de::167]
+ helo=webmail.newmedia-net.de)
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hyMvG-0007NH-HU
- for ath10k@lists.infradead.org; Thu, 15 Aug 2019 21:04:41 +0000
-Received: by mail-yw1-f65.google.com with SMTP id i138so1144467ywg.8
- for <ath10k@lists.infradead.org>; Thu, 15 Aug 2019 14:04:37 -0700 (PDT)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id;
- bh=+R4DESpyDCTZ4/02fHbOI51O/W8uEbFi4iGwP/pNzHY=;
- b=C2sEMgc7qAe2bPB33YLpNdbI8pmhgwypZ0QVW0Qf1PqhSQ8BZDTd/qxK9Q92DT2yKj
- kArHBwd/mMFfN6ozgRWq62xsrpkEjTh71AOUD/5/esJwlX9jC2PHda5yXwjnJvHUpEpW
- 9iI+e8S+CmF/1XJD8xT7h+OqFeFfgqtFSyIwXalWi1VhongQ7CQNbgLDrx5l5uZJyny1
- zOsX9ZBd5/jr1lMdtdWZXvYxvT5DJS1qovCIaSWeSynfnZqPO5QVw507uT7j8K163m+A
- 5at+vltpAOeqJlSs4If7vT2xA7j9d0hqmKAUNPzqFG3hVDPAqktYWb6ZIe/crBs6ql2z
- o73Q==
-X-Gm-Message-State: APjAAAVExCrA6T9Qp1+x28LYJqqTka5+TTIMkP3EAXUZpDiKDDo56o2z
- 1A+S6N+owGgqefJvz2dJZY4=
-X-Google-Smtp-Source: APXvYqz7fEvZy6Sm2rvk8VGtZJ+AorpI71niilpfuX4QYL55lDYQF0j9lQCgHV0uOFCk9Ksr1bp4hQ==
-X-Received: by 2002:a81:de4e:: with SMTP id o14mr4405193ywl.369.1565903076933; 
- Thu, 15 Aug 2019 14:04:36 -0700 (PDT)
-Received: from localhost.localdomain (24-158-240-219.dhcp.smyr.ga.charter.com.
- [24.158.240.219])
- by smtp.gmail.com with ESMTPSA id s188sm871287ywd.7.2019.08.15.14.04.35
- (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
- Thu, 15 Aug 2019 14:04:35 -0700 (PDT)
-From: Wenwen Wang <wenwen@cs.uga.edu>
-To: Wenwen Wang <wenwen@cs.uga.edu>
-Subject: [PATCH] ath10k: add cleanup in ath10k_sta_state()
-Date: Thu, 15 Aug 2019 16:04:31 -0500
-Message-Id: <1565903072-3948-1-git-send-email-wenwen@cs.uga.edu>
-X-Mailer: git-send-email 2.7.4
+ id 1hyZXA-0007XT-Rn
+ for ath10k@lists.infradead.org; Fri, 16 Aug 2019 10:32:39 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=newmedia-net.de; s=mikd; 
+ h=Content-Transfer-Encoding:Content-Type:In-Reply-To:MIME-Version:Date:Message-ID:From:References:To:Subject;
+ bh=5tTUYIqZMANCqpQFOW4qx51pb1j/Y/SoCUrl6o5lihk=; 
+ b=U69yoIk2dsH/OVMUuSzp1JCVnGpnOk71K+VGvv9VWF4w3xvGCelmSRjjvmAhEWpIFRJqilGur5oN/zBgv/N/rathGpPaLdf/wUbyFAynoRvqI5+d92ZvNrfykpVwklN3Cfw41BsiR747a6qK996z84HtOmwhEAhjMHTZTAU+k1M=;
+Subject: Re: [PATCH] ath10k: add cleanup in ath10k_sta_state()
+To: ath10k@lists.infradead.org
+References: <1565903072-3948-1-git-send-email-wenwen@cs.uga.edu>
+From: Sebastian Gottschall <s.gottschall@newmedia-net.de>
+Message-ID: <d6fd2268-4f71-99d6-7503-f9c9166164c4@newmedia-net.de>
+Date: Fri, 16 Aug 2019 12:31:36 +0200
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101
+ Thunderbird/60.8.0
+MIME-Version: 1.0
+In-Reply-To: <1565903072-3948-1-git-send-email-wenwen@cs.uga.edu>
+X-Received: from [212.111.244.1] (helo=[172.29.0.186])
+ by webmail.newmedia-net.de with esmtpsa (TLSv1:AES128-SHA:128)
+ (Exim 4.72) (envelope-from <s.gottschall@newmedia-net.de>)
+ id 1hyZXE-0000jQ-Ie
+ for ath10k@lists.infradead.org; Fri, 16 Aug 2019 12:32:40 +0200
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190815_140438_577573_61D58D0A 
-X-CRM114-Status: UNSURE (   9.68  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.5 (/)
+X-CRM114-CacheID: sfid-20190816_033237_335976_F4D14EE6 
+X-CRM114-Status: GOOD (  12.19  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.5 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.161.65 listed in list.dnswl.org]
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (wenwenict[at]gmail.com)
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -81,48 +72,43 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: "open list:NETWORKING DRIVERS" <netdev@vger.kernel.org>,
- "open list:NETWORKING DRIVERS WIRELESS" <linux-wireless@vger.kernel.org>,
- open list <linux-kernel@vger.kernel.org>,
- "open list:QUALCOMM ATHEROS ATH10K WIRELESS DRIVER"
- <ath10k@lists.infradead.org>, "David S. Miller" <davem@davemloft.net>,
- Kalle Valo <kvalo@codeaurora.org>
-MIME-Version: 1.0
-Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-If 'sta->tdls' is false, no cleanup is executed, leading to memory/resource
-leaks, e.g., 'arsta->tx_stats'. To fix this issue, perform cleanup before
-go to the 'exit' label.
+this patch will kick our any peer each time you call for statistics.so 
+it will not solve anything. it creates a massive bug. usually just kfree 
+is enough here but even this will maybe just kill existing stats
 
-Signed-off-by: Wenwen Wang <wenwen@cs.uga.edu>
----
- drivers/net/wireless/ath/ath10k/mac.c | 6 +++++-
- 1 file changed, 5 insertions(+), 1 deletion(-)
-
-diff --git a/drivers/net/wireless/ath/ath10k/mac.c b/drivers/net/wireless/ath/ath10k/mac.c
-index 0606416..f99e6d2 100644
---- a/drivers/net/wireless/ath/ath10k/mac.c
-+++ b/drivers/net/wireless/ath/ath10k/mac.c
-@@ -6548,8 +6548,12 @@ static int ath10k_sta_state(struct ieee80211_hw *hw,
- 
- 		spin_unlock_bh(&ar->data_lock);
- 
--		if (!sta->tdls)
-+		if (!sta->tdls) {
-+			ath10k_peer_delete(ar, arvif->vdev_id, sta->addr);
-+			ath10k_mac_dec_num_stations(arvif, sta);
-+			kfree(arsta->tx_stats);
- 			goto exit;
-+		}
- 
- 		ret = ath10k_wmi_update_fw_tdls_state(ar, arvif->vdev_id,
- 						      WMI_TDLS_ENABLE_ACTIVE);
--- 
-2.7.4
-
+Am 15.08.2019 um 23:04 schrieb Wenwen Wang:
+> If 'sta->tdls' is false, no cleanup is executed, leading to memory/resource
+> leaks, e.g., 'arsta->tx_stats'. To fix this issue, perform cleanup before
+> go to the 'exit' label.
+>
+> Signed-off-by: Wenwen Wang <wenwen@cs.uga.edu>
+> ---
+>   drivers/net/wireless/ath/ath10k/mac.c | 6 +++++-
+>   1 file changed, 5 insertions(+), 1 deletion(-)
+>
+> diff --git a/drivers/net/wireless/ath/ath10k/mac.c b/drivers/net/wireless/ath/ath10k/mac.c
+> index 0606416..f99e6d2 100644
+> --- a/drivers/net/wireless/ath/ath10k/mac.c
+> +++ b/drivers/net/wireless/ath/ath10k/mac.c
+> @@ -6548,8 +6548,12 @@ static int ath10k_sta_state(struct ieee80211_hw *hw,
+>   
+>   		spin_unlock_bh(&ar->data_lock);
+>   
+> -		if (!sta->tdls)
+> +		if (!sta->tdls) {
+> +			ath10k_peer_delete(ar, arvif->vdev_id, sta->addr);
+> +			ath10k_mac_dec_num_stations(arvif, sta);
+> +			kfree(arsta->tx_stats);
+>   			goto exit;
+> +		}
+>   
+>   		ret = ath10k_wmi_update_fw_tdls_state(ar, arvif->vdev_id,
+>   						      WMI_TDLS_ENABLE_ACTIVE);
 
 _______________________________________________
 ath10k mailing list
