@@ -2,57 +2,87 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 45E0E957F0
-	for <lists+ath10k@lfdr.de>; Tue, 20 Aug 2019 09:13:13 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2647995DFA
+	for <lists+ath10k@lfdr.de>; Tue, 20 Aug 2019 13:56:17 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=TKlrKEzlPjsVf4pEXvSBWUSo9+qLw11G1Dd3buljAus=; b=GQHhehNqD8XIRx
-	sbkmK8PyWIX168JH5mI28yFQJH310pYK06NS6QL9n2NZv8Mr1hLGd9ThYMFPFe01j0hXOIzXKyTWC
-	mOm6ena9Oo8F1Pgt38uZot7hwEqPc1NZwpoUY2nn32Bd/yJTkmySMTthG83zUDFdff3tc2AonC8gU
-	tomK7wDW9tGGRdb9arSpwsncguBrMii7dlHqP3V0ikZ/vZ8sRk8GV2P+IOxkTRCet+CGPNTCOc055
-	OPJ2VvVro9etupMy2N0bJ3gEZ1BmOsfTB2xTg+iB72dE6Eawaaeo1Fj9eGMyH0WCp6+yl5Gch4TEs
-	WwKOs8AgZ2D2CoCMKP9Q==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
+	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=shqWONTPST9C9mqBEKJzmgqzDQ88q3ijOX83UxeUsng=; b=PoZ
+	N0+S20OD4vZWetcPGRjLi1eHk8g5QYaxS4Hk6zBuCotU/QqCuO3BED+36RMBzgMXKPQr+pXwmSxHD
+	ZooEecUYn8Ly6PfJtkB18gRG2d5ITSpsYnTq8d0Zy20tI4kDVf3dIp2mnFJsrGG2JkZM8IWWe3b80
+	ku6w1PuyYmH1j1eFN2bmZLF4oTgVBkx1gK9fP67eR4Fwv2IXgkLjgkuBPbzqJh5K4/6bsYa3YpCUs
+	AYdN9vFEMs9CHPfByqzU9mSiyRbNcOOPZbOE4OtM26CgsoDmk7BhW56f4ctp6I3EnBsb7CXIEa/pk
+	1b5jj2kfShYHGv0Il+ANOjy/KnBYHVg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1hzyKK-0000bl-7g; Tue, 20 Aug 2019 07:13:08 +0000
-Received: from verein.lst.de ([213.95.11.211])
+	id 1i02kJ-00074c-Ih; Tue, 20 Aug 2019 11:56:15 +0000
+Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1hzyK6-0000V9-P1
- for ath10k@lists.infradead.org; Tue, 20 Aug 2019 07:12:56 +0000
-Received: by verein.lst.de (Postfix, from userid 2407)
- id 4F09A68B02; Tue, 20 Aug 2019 09:12:50 +0200 (CEST)
-Date: Tue, 20 Aug 2019 09:12:50 +0200
-From: Christoph Hellwig <hch@lst.de>
-To: Hillf Danton <hdanton@sina.com>
-Subject: Re: regression in ath10k dma allocation
-Message-ID: <20190820071250.GA28968@lst.de>
-References: <8fe8b415-2d34-0a14-170b-dcb31c162e67@mni.thm.de>
- <20190816164301.GA3629@lst.de>
- <af96ea6a-2b17-9b66-7aba-b7dae5bcbba5@mni.thm.de>
- <20190816222506.GA24413@Asurada-Nvidia.nvidia.com>
- <20190818031328.11848-1-hdanton@sina.com>
- <acd7a4b0-fde8-1aa2-af07-2b469e5d5ca7@mni.thm.de>
- <20190820065833.1628-1-hdanton@sina.com>
-MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20190820065833.1628-1-hdanton@sina.com>
-User-Agent: Mutt/1.5.17 (2007-11-01)
+ id 1i02jW-0006or-8N
+ for ath10k@lists.infradead.org; Tue, 20 Aug 2019 11:55:30 +0000
+Received: by smtp.codeaurora.org (Postfix, from userid 1000)
+ id 8C1A960A0A; Tue, 20 Aug 2019 11:55:24 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1566302124;
+ bh=Y2rU2d6q6MWwJstvhzKxo56Z5gKFJ7BHKuyQbjStoII=;
+ h=From:To:Cc:Subject:Date:From;
+ b=LmWLAMZIVj7Dl6FMi8IfPXgRyiE8H2PkkaOS9Knvzk+3R3B+FZvUl+Q+RrwPDqzHW
+ aj5/+Cxh1Pg1aggT140lu9bhlDimRUKCzat5XfqBX0b0L8U1IN3bpJCrcFbVJsxlQS
+ waylKDnKbolv4kxi455t2oj8Kc1O7/1YGn9yn0Yw=
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ pdx-caf-mail.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
+ DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
+ version=3.4.0
+Received: from wgong-HP-Z240-SFF-Workstation.qca.qualcomm.com (unknown
+ [180.166.53.21])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
+ (No client certificate requested)
+ (Authenticated sender: wgong@smtp.codeaurora.org)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 2A227608CC;
+ Tue, 20 Aug 2019 11:55:22 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1566302124;
+ bh=Y2rU2d6q6MWwJstvhzKxo56Z5gKFJ7BHKuyQbjStoII=;
+ h=From:To:Cc:Subject:Date:From;
+ b=LmWLAMZIVj7Dl6FMi8IfPXgRyiE8H2PkkaOS9Knvzk+3R3B+FZvUl+Q+RrwPDqzHW
+ aj5/+Cxh1Pg1aggT140lu9bhlDimRUKCzat5XfqBX0b0L8U1IN3bpJCrcFbVJsxlQS
+ waylKDnKbolv4kxi455t2oj8Kc1O7/1YGn9yn0Yw=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 2A227608CC
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ spf=none smtp.mailfrom=wgong@codeaurora.org
+From: Wen Gong <wgong@codeaurora.org>
+To: ath10k@lists.infradead.org
+Subject: [PATCH 0/7] ath10k: improve throughout of tcp/udp TX/RX of sdio
+Date: Tue, 20 Aug 2019 19:55:01 +0800
+Message-Id: <1566302108-18219-1-git-send-email-wgong@codeaurora.org>
+X-Mailer: git-send-email 1.9.1
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190820_001255_261407_18617BEF 
-X-CRM114-Status: GOOD (  15.05  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20190820_045527_253550_8D4CE1C3 
+X-CRM114-Status: UNSURE (   5.80  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [213.95.11.211 listed in list.dnswl.org]
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [198.145.29.96 listed in list.dnswl.org]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -64,153 +94,50 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: netdev@vger.kernel.org, linux-wireless@vger.kernel.org,
- linux-kernel@vger.kernel.org, ath10k@lists.infradead.org, davem@davemloft.net,
- Nicolin Chen <nicoleotsuka@gmail.com>, iommu@lists.linux-foundation.org,
- tobias.klausmann@freenet.de,
- Tobias Klausmann <tobias.johannes.klausmann@mni.thm.de>, robin.murphy@arm.com,
- Christoph Hellwig <hch@lst.de>, kvalo@codeaurora.org, m.szyprowski@samsung.com
+Cc: linux-wireless@vger.kernel.org
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On Tue, Aug 20, 2019 at 02:58:33PM +0800, Hillf Danton wrote:
-> 
-> On Tue, 20 Aug 2019 05:05:14 +0200 Christoph Hellwig wrote:
-> > 
-> > Tobias, plase try this patch:
-> > 
+The bottleneck of throughout on sdio chip is the bus bandwidth, to the
+patches are all to increase the use ratio of sdio bus.
 
-New version below:
+                      udp-rx    udp-tx    tcp-rx    tcp-tx
+without patches(Mbps)  320        180       170       151
+with patches(Mbps)     450        410       400       320
 
----
-From b8a805e93be5a5662323b8ac61fe686df839c4ac Mon Sep 17 00:00:00 2001
-From: Christoph Hellwig <hch@lst.de>
-Date: Tue, 20 Aug 2019 11:45:49 +0900
-Subject: dma-direct: fix zone selection after an unaddressable CMA allocation
+These patches only affect sdio bus chip, explanation is mentioned in each
+patch's commit log.
 
-The new dma_alloc_contiguous hides if we allocate CMA or regular
-pages, and thus fails to retry a ZONE_NORMAL allocation if the CMA
-allocation succeeds but isn't addressable.  That means we either fail
-outright or dip into a small zone that might not succeed either.
+Alagu Sankar (1):
+  ath10k: enable RX bundle receive for sdio
 
-Thanks to Hillf Danton for debugging this issue.
+Wen Gong (6):
+  ath10k: change max RX bundle size from 8 to 32 for sdio
+  ath10k: add workqueue for RX path of sdio
+  ath10k: disable TX complete indication of htt for sdio
+  ath10k: add htt TX bundle for sdio
+  ath10k: enable alt data of TX path for sdio
+  ath10k: enable napi on RX path for sdio
 
-Fixes: b1d2dc009dec ("dma-contiguous: add dma_{alloc,free}_contiguous() helpers")
-Reported-by: Tobias Klausmann <tobias.johannes.klausmann@mni.thm.de>
-Signed-off-by: Christoph Hellwig <hch@lst.de>
----
- drivers/iommu/dma-iommu.c      |  3 +++
- include/linux/dma-contiguous.h |  5 +----
- kernel/dma/contiguous.c        |  9 +++------
- kernel/dma/direct.c            | 10 +++++++++-
- 4 files changed, 16 insertions(+), 11 deletions(-)
+ drivers/net/wireless/ath/ath10k/core.c   |  36 ++-
+ drivers/net/wireless/ath/ath10k/core.h   |   4 +-
+ drivers/net/wireless/ath/ath10k/hif.h    |   9 +
+ drivers/net/wireless/ath/ath10k/htc.c    | 375 ++++++++++++++++++++++++++++---
+ drivers/net/wireless/ath/ath10k/htc.h    |  37 ++-
+ drivers/net/wireless/ath/ath10k/htt.c    |  15 ++
+ drivers/net/wireless/ath/ath10k/htt.h    |  21 +-
+ drivers/net/wireless/ath/ath10k/htt_rx.c |  85 ++++++-
+ drivers/net/wireless/ath/ath10k/htt_tx.c |  37 ++-
+ drivers/net/wireless/ath/ath10k/hw.h     |   2 +-
+ drivers/net/wireless/ath/ath10k/sdio.c   | 281 ++++++++++++++++++++---
+ drivers/net/wireless/ath/ath10k/sdio.h   |  31 ++-
+ 12 files changed, 846 insertions(+), 87 deletions(-)
 
-diff --git a/drivers/iommu/dma-iommu.c b/drivers/iommu/dma-iommu.c
-index d991d40f797f..f68a62c3c32b 100644
---- a/drivers/iommu/dma-iommu.c
-+++ b/drivers/iommu/dma-iommu.c
-@@ -965,10 +965,13 @@ static void *iommu_dma_alloc_pages(struct device *dev, size_t size,
- {
- 	bool coherent = dev_is_dma_coherent(dev);
- 	size_t alloc_size = PAGE_ALIGN(size);
-+	int node = dev_to_node(dev);
- 	struct page *page = NULL;
- 	void *cpu_addr;
- 
- 	page = dma_alloc_contiguous(dev, alloc_size, gfp);
-+	if (!page)
-+		page = alloc_pages_node(node, gfp, get_order(alloc_size));
- 	if (!page)
- 		return NULL;
- 
-diff --git a/include/linux/dma-contiguous.h b/include/linux/dma-contiguous.h
-index c05d4e661489..03f8e98e3bcc 100644
---- a/include/linux/dma-contiguous.h
-+++ b/include/linux/dma-contiguous.h
-@@ -160,10 +160,7 @@ bool dma_release_from_contiguous(struct device *dev, struct page *pages,
- static inline struct page *dma_alloc_contiguous(struct device *dev, size_t size,
- 		gfp_t gfp)
- {
--	int node = dev ? dev_to_node(dev) : NUMA_NO_NODE;
--	size_t align = get_order(PAGE_ALIGN(size));
--
--	return alloc_pages_node(node, gfp, align);
-+	return NULL;
- }
- 
- static inline void dma_free_contiguous(struct device *dev, struct page *page,
-diff --git a/kernel/dma/contiguous.c b/kernel/dma/contiguous.c
-index 2bd410f934b3..e6b450fdbeb6 100644
---- a/kernel/dma/contiguous.c
-+++ b/kernel/dma/contiguous.c
-@@ -230,9 +230,7 @@ bool dma_release_from_contiguous(struct device *dev, struct page *pages,
-  */
- struct page *dma_alloc_contiguous(struct device *dev, size_t size, gfp_t gfp)
- {
--	int node = dev ? dev_to_node(dev) : NUMA_NO_NODE;
--	size_t count = PAGE_ALIGN(size) >> PAGE_SHIFT;
--	size_t align = get_order(PAGE_ALIGN(size));
-+	size_t count = size >> PAGE_SHIFT;
- 	struct page *page = NULL;
- 	struct cma *cma = NULL;
- 
-@@ -243,14 +241,12 @@ struct page *dma_alloc_contiguous(struct device *dev, size_t size, gfp_t gfp)
- 
- 	/* CMA can be used only in the context which permits sleeping */
- 	if (cma && gfpflags_allow_blocking(gfp)) {
-+		size_t align = get_order(size);
- 		size_t cma_align = min_t(size_t, align, CONFIG_CMA_ALIGNMENT);
- 
- 		page = cma_alloc(cma, count, cma_align, gfp & __GFP_NOWARN);
- 	}
- 
--	/* Fallback allocation of normal pages */
--	if (!page)
--		page = alloc_pages_node(node, gfp, align);
- 	return page;
- }
- 
-@@ -258,6 +254,7 @@ struct page *dma_alloc_contiguous(struct device *dev, size_t size, gfp_t gfp)
-  * dma_free_contiguous() - release allocated pages
-  * @dev:   Pointer to device for which the pages were allocated.
-  * @page:  Pointer to the allocated pages.
-+	int node = dev ? dev_to_node(dev) : NUMA_NO_NODE;
-  * @size:  Size of allocated pages.
-  *
-  * This function releases memory allocated by dma_alloc_contiguous(). As the
-diff --git a/kernel/dma/direct.c b/kernel/dma/direct.c
-index 795c9b095d75..706113c6bebc 100644
---- a/kernel/dma/direct.c
-+++ b/kernel/dma/direct.c
-@@ -85,6 +85,8 @@ static bool dma_coherent_ok(struct device *dev, phys_addr_t phys, size_t size)
- struct page *__dma_direct_alloc_pages(struct device *dev, size_t size,
- 		dma_addr_t *dma_handle, gfp_t gfp, unsigned long attrs)
- {
-+	size_t alloc_size = PAGE_ALIGN(size);
-+	int node = dev_to_node(dev);
- 	struct page *page = NULL;
- 	u64 phys_mask;
- 
-@@ -95,8 +97,14 @@ struct page *__dma_direct_alloc_pages(struct device *dev, size_t size,
- 	gfp &= ~__GFP_ZERO;
- 	gfp |= __dma_direct_optimal_gfp_mask(dev, dev->coherent_dma_mask,
- 			&phys_mask);
-+	page = dma_alloc_contiguous(dev, alloc_size, gfp);
-+	if (page && !dma_coherent_ok(dev, page_to_phys(page), size)) {
-+		dma_free_contiguous(dev, page, alloc_size);
-+		page = NULL;
-+	}
- again:
--	page = dma_alloc_contiguous(dev, size, gfp);
-+	if (!page)
-+		page = alloc_pages_node(node, gfp, get_order(alloc_size));
- 	if (page && !dma_coherent_ok(dev, page_to_phys(page), size)) {
- 		dma_free_contiguous(dev, page, size);
- 		page = NULL;
 -- 
-2.20.1
+1.9.1
 
 
 _______________________________________________
