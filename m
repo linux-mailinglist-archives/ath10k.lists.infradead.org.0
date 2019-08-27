@@ -2,8 +2,8 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id CAE0D9E66B
-	for <lists+ath10k@lfdr.de>; Tue, 27 Aug 2019 13:03:50 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 311319E65F
+	for <lists+ath10k@lfdr.de>; Tue, 27 Aug 2019 13:03:16 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,28 +11,28 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=CtwkP4bIwR03l/Z0Xe3tCHFCO/c4RU5rbwBeLjhOFmk=; b=JZreP0ee1P6m2+Ecyh0wdE0xuH
-	xJ6RKj35qu2pC7TMZacGF1CTCALU2Iwa95B4s/DOPo7dgBwpAfYaX7Bcw5tgsC/K3pP7WfnvSTx/3
-	b6jyh2CHD7PSgv20+42onGldx41AG17/kRD6FaLkmV/By6aZUCm9w6FCmxO7PzaAUCufbWilKAmTF
-	wwiEv8ScnPRd8NfpXXiYfc8Z1lKmpffOJ2ycrEWvjuTT4K0MkdhGMILtwx4RUDo73UMn0urdu7EIB
-	uiHUCcFj+N6v/m/ZAvqg19Eaq91Y1yS9Jy7l6YT0o7xoULFuZcq4QOY2K6IsU1Os/DnroizxjM+4/
-	kqraW3tA==;
+	bh=XwkBKy2A3BZJSOC3nsBt0p9/rHKGE+OM9bMbfiv3+ec=; b=uanHtLSB9d4KBTdq7QVXr0Iux5
+	KmkElacJxyJ38Yg0VVa1XOVYZbnrSOwg1mCMyy/S/y4g2NMSdALqK+sRorh/hDN4JX8z6vKChzmp0
+	jbNW1yeE2EjBl1x7Cz/W4NB9QzRCXAimY+oP4mt4g0+32Z6DPRMeIIPiSp+zKGCVXXsi25jiBaFKl
+	Xz3a1hYIDj3VqjG/sXAAXAaKHA0UUsQdWV5rLFaIXqz4hFhPweRaUNte56BlHPAlmsatpkOl1k+bw
+	ZAGflTIOduo2dAvEE2E8XNrMZHEkDwoirIbXZWgpdnfFnVFEuaB7MkZtY3mdWtYmW5wzM2efUVXc4
+	qqq3CEAA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i2ZGP-0003jz-4o; Tue, 27 Aug 2019 11:03:49 +0000
+	id 1i2ZFq-0003E5-D9; Tue, 27 Aug 2019 11:03:14 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i2ZFc-0003A0-Kz
- for ath10k@lists.infradead.org; Tue, 27 Aug 2019 11:03:02 +0000
+ id 1i2ZFJ-0002ts-Bz
+ for ath10k@lists.infradead.org; Tue, 27 Aug 2019 11:02:44 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id DBD2C61C0B; Tue, 27 Aug 2019 11:02:26 +0000 (UTC)
+ id DF0AB61C7B; Tue, 27 Aug 2019 11:02:28 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1566903780;
- bh=NbCCwyT1TMgL5e+Laamk3/o5vb1zXr2GV1B8OIc8M5o=;
+ s=default; t=1566903761;
+ bh=oo2yYBlsfOIEAr5iwkcfyaH2VRCvDep518TdPipJnRg=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=W1mriuvIDVvwVS2Ta0gN7KvIuGJocKr7/yD39Igay9rWdWCxk0NvFwjALguSjhbB/
- 1JGgRqAQ86eky8YT9kcvLEkR7oeuCsPWuBn5IxtfIDy7jgd8DYVCnQOXWfgCQMAViJ
- 5TFKor6VozEOiP/ks3UOzOYjqmgGs/BIe7h+ZzLI=
+ b=Y/JOzch8TuHI7Uh7gSfLTUilHkgZcAhdfLIcD2Viz2NkpWLxgq2dbjIRmnDTyYVzx
+ pTTv+k858UhWWCYxZXEPzxBqOoovw8IfHpRt8GXZ9mEyRbd0EfvlUvssjVto7b3si9
+ NWPDPizhI041XzJObU2s+TUehiXTDp9ubqjTphCg=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
@@ -44,31 +44,31 @@ Received: from wgong-HP-Z240-SFF-Workstation.qca.qualcomm.com (unknown
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
  (No client certificate requested)
  (Authenticated sender: wgong@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 207FA61C73;
- Tue, 27 Aug 2019 11:02:23 +0000 (UTC)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id A5EFC61C9F;
+ Tue, 27 Aug 2019 11:02:25 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1566903745;
- bh=NbCCwyT1TMgL5e+Laamk3/o5vb1zXr2GV1B8OIc8M5o=;
+ s=default; t=1566903746;
+ bh=oo2yYBlsfOIEAr5iwkcfyaH2VRCvDep518TdPipJnRg=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=cAgQ2Ul2TSU6VnPYoehXjkq4L+fyUfYqLPuESgDxAsN5VgXFL0oUrv+/BivoAcLaz
- wyRE/rZN4ppeUqPX4xuvH03JxPKna3Gda7BfR20UD7ktGb8SL3Qd6hYNvWoLbHLYGy
- bGhb+mQlVXFCqSGRWxKj0gRqQpCwylVLIechd6o8=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 207FA61C73
+ b=YNPmzokMLw59+3nhXItYwyzhRuIvBhAKmRPOzBb9MaipKVGrV6f1OK+zpTKO1dzjR
+ 8q5dt8HjTxXoQYXI95ZVUEcAsFv/nUfM34z/lElpVNRjH2dr6B2himmc9frJRaTP/n
+ PxWqM6j8lGScLksGwc+XUArzHULKMa3Pnb3rxuuo=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org A5EFC61C9F
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  spf=none smtp.mailfrom=wgong@codeaurora.org
 From: Wen Gong <wgong@codeaurora.org>
 To: ath10k@lists.infradead.org
-Subject: [PATCH v2 6/7] ath10k: enable alt data of TX path for sdio
-Date: Tue, 27 Aug 2019 19:01:46 +0800
-Message-Id: <1566903707-27536-7-git-send-email-wgong@codeaurora.org>
+Subject: [PATCH v2 7/7] ath10k: enable napi on RX path for sdio
+Date: Tue, 27 Aug 2019 19:01:47 +0800
+Message-Id: <1566903707-27536-8-git-send-email-wgong@codeaurora.org>
 X-Mailer: git-send-email 1.9.1
 In-Reply-To: <1566903707-27536-1-git-send-email-wgong@codeaurora.org>
 References: <1566903707-27536-1-git-send-email-wgong@codeaurora.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190827_040300_815422_408D2DC7 
-X-CRM114-Status: GOOD (  14.91  )
+X-CRM114-CacheID: sfid-20190827_040241_591851_7D38BBFB 
+X-CRM114-Status: GOOD (  16.97  )
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-2.5 points)
@@ -103,131 +103,260 @@ Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-The default credit size is 1792 bytes, but the IP mtu is 1500 bytes,
-then it has about 290 bytes's waste for each data packet on sdio
-transfer path for TX bundle, it will reduce the transmission utilization
-ratio for data packet.
+For tcp RX, the quantity of tcp acks to remote is 1/2 of the quantity
+of tcp data from remote, then it will have many small length packets
+on TX path of sdio bus, then it reduce the RX packets's bandwidth of
+tcp.
 
-This patch enable the small credit size in firmware, firmware will use
-the new credit size 1556 bytes, it will increase the transmission
-utilization ratio for data packet on TX patch. It results in significant
-performance improvement on TX path.
+This patch enable napi on RX path, then the RX packet of tcp will not
+feed to tcp stack immeditely from mac80211 since GRO is enabled by
+default, it will feed to tcp stack after napi complete, if rx bundle
+is enabled, then it will feed to tcp stack one time for each bundle
+of RX. For example, RX bundle size is 32, then tcp stack will receive
+one large length packet, its length is neary 1500*32, then tcp stack
+will send a tcp ack for this large packet, this will reduce the tcp
+acks ratio from 1/2 to 1/32. This results in significant performance
+improvement for tcp RX.
 
-This patch only effect sdio chip, it will not effect PCI, SNOC etc.
+Tcp rx throughout is 240Mbps without this patch, and it arrive 390Mbps
+with this patch. The cpu usage has no obvious difference with and
+without NAPI.
+
+call stack for each RX packet on GRO path:
+(skb length is about 1500 bytes)
+  skb_gro_receive ([kernel.kallsyms])
+  tcp4_gro_receive ([kernel.kallsyms])
+  inet_gro_receive ([kernel.kallsyms])
+  dev_gro_receive ([kernel.kallsyms])
+  napi_gro_receive ([kernel.kallsyms])
+  ieee80211_deliver_skb ([mac80211])
+  ieee80211_rx_handlers ([mac80211])
+  ieee80211_prepare_and_rx_handle ([mac80211])
+  ieee80211_rx_napi ([mac80211])
+  ath10k_htt_rx_proc_rx_ind_hl ([ath10k_core])
+  ath10k_htt_rx_pktlog_completion_handler ([ath10k_core])
+  ath10k_sdio_napi_poll ([ath10k_sdio])
+  net_rx_action ([kernel.kallsyms])
+  softirqentry_text_start ([kernel.kallsyms])
+  do_softirq ([kernel.kallsyms])
+
+call stack for napi complete and send tcp ack from tcp stack:
+(skb length is about 1500*32 bytes)
+ _tcp_ack_snd_check ([kernel.kallsyms])
+ tcp_v4_do_rcv ([kernel.kallsyms])
+ tcp_v4_rcv ([kernel.kallsyms])
+ local_deliver_finish ([kernel.kallsyms])
+ ip_local_deliver ([kernel.kallsyms])
+ ip_rcv_finish ([kernel.kallsyms])
+ ip_rcv ([kernel.kallsyms])
+ netif_receive_skb_core ([kernel.kallsyms])
+ netif_receive_skb_one_core([kernel.kallsyms])
+ netif_receive_skb ([kernel.kallsyms])
+ netif_receive_skb_internal ([kernel.kallsyms])
+ napi_gro_complete ([kernel.kallsyms])
+ napi_gro_flush ([kernel.kallsyms])
+ napi_complete_done ([kernel.kallsyms])
+ ath10k_sdio_napi_poll ([ath10k_sdio])
+ net_rx_action ([kernel.kallsyms])
+ __softirqentry_text_start ([kernel.kallsyms])
+ do_softirq ([kernel.kallsyms])
 
 Tested with QCA6174 SDIO with firmware
-WLAN.RMH.4.4.1-00017-QCARMSWP-1.
+WLAN.RMH.4.4.1-00007-QCARMSWP-1.
 
 Signed-off-by: Wen Gong <wgong@codeaurora.org>
 ---
- drivers/net/wireless/ath/ath10k/core.c | 16 ++++++++++++++++
- drivers/net/wireless/ath/ath10k/htc.c  | 11 +++++++++--
- drivers/net/wireless/ath/ath10k/htc.h  | 11 +++++++++--
- 3 files changed, 34 insertions(+), 4 deletions(-)
+ drivers/net/wireless/ath/ath10k/htt.c    |  2 ++
+ drivers/net/wireless/ath/ath10k/htt.h    |  3 +++
+ drivers/net/wireless/ath/ath10k/htt_rx.c | 46 ++++++++++++++++++++++++++------
+ drivers/net/wireless/ath/ath10k/sdio.c   | 33 +++++++++++++++++++++++
+ 4 files changed, 76 insertions(+), 8 deletions(-)
 
-diff --git a/drivers/net/wireless/ath/ath10k/core.c b/drivers/net/wireless/ath/ath10k/core.c
-index 351f4ed..7593d19 100644
---- a/drivers/net/wireless/ath/ath10k/core.c
-+++ b/drivers/net/wireless/ath/ath10k/core.c
-@@ -31,6 +31,7 @@
- static unsigned int ath10k_cryptmode_param;
- static bool uart_print;
- static bool disable_tx_comp = true;
-+static bool alt_data = true;
- static bool skip_otp;
- static bool rawmode;
- static bool fw_diag_log;
-@@ -45,6 +46,15 @@
+diff --git a/drivers/net/wireless/ath/ath10k/htt.c b/drivers/net/wireless/ath/ath10k/htt.c
+index 127b4e4..f69346f 100644
+--- a/drivers/net/wireless/ath/ath10k/htt.c
++++ b/drivers/net/wireless/ath/ath10k/htt.c
+@@ -157,6 +157,8 @@ int ath10k_htt_connect(struct ath10k_htt *htt)
  
- /* If upper layer need the TX complete status, it can enable tx complete */
- module_param(disable_tx_comp, bool, 0644);
-+
-+/* alt_data is only used for sdio chip, for previous version of firmware, its
-+ * alt data size is 1544 which is not enough for native wifi, so it need to
-+ * alt_data for the firmware.
-+ * If the firmware has changed alt data size to 1556, then it can enable
-+ * alt_data for the firmware.
-+ * alt_data will not effect PCI, SNOC etc.
-+ */
-+module_param(alt_data, bool, 0644);
- module_param(skip_otp, bool, 0644);
- module_param(rawmode, bool, 0644);
- module_param(fw_diag_log, bool, 0644);
-@@ -701,6 +711,12 @@ static void ath10k_init_sdio(struct ath10k *ar, enum ath10k_firmware_mode mode)
- 	 */
- 	param &= ~HI_ACS_FLAGS_ALT_DATA_CREDIT_SIZE;
+ 	htt->eid = conn_resp.eid;
  
-+	/* If alternate credit size of 1556 as used by SDIO firmware is
-+	 * big enough for mac80211 / native wifi frames. enable it
-+	 */
-+	if (alt_data && mode == ATH10K_FIRMWARE_MODE_NORMAL)
-+		param |= HI_ACS_FLAGS_ALT_DATA_CREDIT_SIZE;
++	skb_queue_head_init(&htt->rx_indication_head);
 +
- 	if (mode == ATH10K_FIRMWARE_MODE_UTF)
- 		param &= ~HI_ACS_FLAGS_SDIO_SWAP_MAILBOX_SET;
- 	else
-diff --git a/drivers/net/wireless/ath/ath10k/htc.c b/drivers/net/wireless/ath/ath10k/htc.c
-index e0eb5f0..5cacab6 100644
---- a/drivers/net/wireless/ath/ath10k/htc.c
-+++ b/drivers/net/wireless/ath/ath10k/htc.c
-@@ -938,12 +938,15 @@ int ath10k_htc_wait_target(struct ath10k_htc *htc)
- 	 */
- 	if (htc->control_resp_len >=
- 	    sizeof(msg->hdr) + sizeof(msg->ready_ext)) {
-+		htc->alt_data_credit_size =
-+			__le16_to_cpu(msg->ready_ext.reserved) & 0x0fff;
- 		htc->max_msgs_per_htc_bundle =
- 			min_t(u8, msg->ready_ext.max_msgs_per_htc_bundle,
- 			      HTC_HOST_MAX_MSG_PER_RX_BUNDLE);
- 		ath10k_dbg(ar, ATH10K_DBG_HTC,
--			   "Extended ready message. RX bundle size: %d\n",
--			   htc->max_msgs_per_htc_bundle);
-+			   "Extended ready message. RX bundle size: %d, alt size:%d\n",
-+			   htc->max_msgs_per_htc_bundle,
-+			   htc->alt_data_credit_size);
+ 	if (ar->bus_param.dev_type == ATH10K_DEV_TYPE_HL) {
+ 		ep = &ar->htc.endpoint[htt->eid];
+ 		ath10k_htc_setup_tx_req(ep);
+diff --git a/drivers/net/wireless/ath/ath10k/htt.h b/drivers/net/wireless/ath/ath10k/htt.h
+index 4851a2e..462a25b 100644
+--- a/drivers/net/wireless/ath/ath10k/htt.h
++++ b/drivers/net/wireless/ath/ath10k/htt.h
+@@ -1879,6 +1879,8 @@ struct ath10k_htt {
+ 	struct ath10k *ar;
+ 	enum ath10k_htc_ep_id eid;
+ 
++	struct sk_buff_head rx_indication_head;
++
+ 	u8 target_version_major;
+ 	u8 target_version_minor;
+ 	struct completion target_version_received;
+@@ -2298,6 +2300,7 @@ int ath10k_htt_tx_mgmt_inc_pending(struct ath10k_htt *htt, bool is_mgmt,
+ void ath10k_htt_rx_pktlog_completion_handler(struct ath10k *ar,
+ 					     struct sk_buff *skb);
+ int ath10k_htt_txrx_compl_task(struct ath10k *ar, int budget);
++int ath10k_htt_rx_hl_indication(struct ath10k *ar, int budget);
+ void ath10k_htt_set_tx_ops(struct ath10k_htt *htt);
+ void ath10k_htt_set_rx_ops(struct ath10k_htt *htt);
+ #endif
+diff --git a/drivers/net/wireless/ath/ath10k/htt_rx.c b/drivers/net/wireless/ath/ath10k/htt_rx.c
+index e2d8b51..9340ae3 100644
+--- a/drivers/net/wireless/ath/ath10k/htt_rx.c
++++ b/drivers/net/wireless/ath/ath10k/htt_rx.c
+@@ -2263,7 +2263,7 @@ static bool ath10k_htt_rx_proc_rx_ind_hl(struct ath10k_htt *htt,
+ 	if (mpdu_ranges->mpdu_range_status == HTT_RX_IND_MPDU_STATUS_TKIP_MIC_ERR)
+ 		rx_status->flag |= RX_FLAG_MMIC_ERROR;
+ 
+-	ieee80211_rx_ni(ar->hw, skb);
++	ieee80211_rx_napi(ar->hw, NULL, skb, &ar->napi);
+ 
+ 	/* We have delivered the skb to the upper layers (mac80211) so we
+ 	 * must not free it.
+@@ -3664,14 +3664,12 @@ bool ath10k_htt_t2h_msg_handler(struct ath10k *ar, struct sk_buff *skb)
+ 		break;
+ 	}
+ 	case HTT_T2H_MSG_TYPE_RX_IND:
+-		if (ar->bus_param.dev_type == ATH10K_DEV_TYPE_HL)
+-			return ath10k_htt_rx_proc_rx_ind_hl(htt,
+-							    &resp->rx_ind_hl,
+-							    skb,
+-							    HTT_RX_PN_CHECK,
+-							    HTT_RX_NON_TKIP_MIC);
+-		else
++		if (ar->bus_param.dev_type != ATH10K_DEV_TYPE_HL) {
+ 			ath10k_htt_rx_proc_rx_ind_ll(htt, &resp->rx_ind);
++		} else {
++			skb_queue_tail(&htt->rx_indication_head, skb);
++			return false;
++		}
+ 		break;
+ 	case HTT_T2H_MSG_TYPE_PEER_MAP: {
+ 		struct htt_peer_map_event ev = {
+@@ -3895,6 +3893,38 @@ static int ath10k_htt_rx_deliver_msdu(struct ath10k *ar, int quota, int budget)
+ 	return quota;
+ }
+ 
++int ath10k_htt_rx_hl_indication(struct ath10k *ar, int budget)
++{
++	struct htt_resp *resp;
++	struct ath10k_htt *htt = &ar->htt;
++	struct sk_buff *skb;
++	bool release;
++	int quota = 0;
++
++	while (quota < budget) {
++		skb = skb_dequeue(&htt->rx_indication_head);
++		if (!skb)
++			break;
++
++		resp = (struct htt_resp *)skb->data;
++
++		release = ath10k_htt_rx_proc_rx_ind_hl(htt,
++						       &resp->rx_ind_hl,
++						       skb,
++						       HTT_RX_PN_CHECK,
++						       HTT_RX_NON_TKIP_MIC);
++
++		if (release)
++			dev_kfree_skb_any(skb);
++
++		ath10k_dbg(ar, ATH10K_DBG_HTT, "rx indication poll pending count:%d\n",
++			   skb_queue_len(&htt->rx_indication_head));
++		quota++;
++	}
++	return quota;
++}
++EXPORT_SYMBOL(ath10k_htt_rx_hl_indication);
++
+ int ath10k_htt_txrx_compl_task(struct ath10k *ar, int budget)
+ {
+ 	struct ath10k_htt *htt = &ar->htt;
+diff --git a/drivers/net/wireless/ath/ath10k/sdio.c b/drivers/net/wireless/ath/ath10k/sdio.c
+index a302eda..a1ef31e 100644
+--- a/drivers/net/wireless/ath/ath10k/sdio.c
++++ b/drivers/net/wireless/ath/ath10k/sdio.c
+@@ -1406,6 +1406,9 @@ static void ath10k_rx_indication_async_work(struct work_struct *work)
+ 		spin_lock_bh(&ar_sdio->wr_async_lock_rx);
  	}
  
- 	INIT_WORK(&ar->bundle_tx_work, ath10k_htc_bundle_tx_work);
-@@ -1095,6 +1098,10 @@ int ath10k_htc_connect_service(struct ath10k_htc *htc,
- 	ep->tx_credits = tx_alloc;
- 	ep->tx_credit_size = htc->target_credit_size;
- 
-+	if (conn_req->service_id == ATH10K_HTC_SVC_ID_HTT_DATA_MSG &&
-+	    htc->alt_data_credit_size != 0)
-+		ep->tx_credit_size = htc->alt_data_credit_size;
++	if (test_bit(ATH10K_FLAG_CORE_REGISTERED, &ar->dev_flags))
++		napi_schedule(&ar->napi);
 +
- 	/* copy all the callbacks */
- 	ep->ep_ops = conn_req->ep_ops;
+ 	spin_unlock_bh(&ar_sdio->wr_async_lock_rx);
+ }
  
-diff --git a/drivers/net/wireless/ath/ath10k/htc.h b/drivers/net/wireless/ath/ath10k/htc.h
-index d805ea5..f0a9e60af 100644
---- a/drivers/net/wireless/ath/ath10k/htc.h
-+++ b/drivers/net/wireless/ath/ath10k/htc.h
-@@ -139,8 +139,14 @@ struct ath10k_htc_ready_extended {
- 	struct ath10k_htc_ready base;
- 	u8 htc_version; /* @enum ath10k_htc_version */
- 	u8 max_msgs_per_htc_bundle;
--	u8 pad0;
--	u8 pad1;
-+	union {
-+		__le16 reserved;
-+		struct {
-+			u8 pad0;
-+			u8 pad1;
-+		} __packed;
-+	} __packed;
+@@ -1824,6 +1827,8 @@ static int ath10k_sdio_hif_start(struct ath10k *ar)
+ 	struct ath10k_sdio *ar_sdio = ath10k_sdio_priv(ar);
+ 	int ret;
+ 
++	napi_enable(&ar->napi);
 +
- } __packed;
+ 	/* Sleep 20 ms before HIF interrupts are disabled.
+ 	 * This will give target plenty of time to process the BMI done
+ 	 * request before interrupts are disabled.
+@@ -1962,6 +1967,9 @@ static void ath10k_sdio_hif_stop(struct ath10k *ar)
+ 	}
  
- struct ath10k_htc_conn_svc {
-@@ -377,6 +383,7 @@ struct ath10k_htc {
- 	int total_transmit_credits;
- 	int target_credit_size;
- 	u8 max_msgs_per_htc_bundle;
-+	int alt_data_credit_size;
- };
+ 	spin_unlock_bh(&ar_sdio->wr_async_lock);
++
++	napi_synchronize(&ar->napi);
++	napi_disable(&ar->napi);
+ }
  
- int ath10k_htc_init(struct ath10k *ar);
+ #ifdef CONFIG_PM
+@@ -2138,6 +2146,26 @@ static SIMPLE_DEV_PM_OPS(ath10k_sdio_pm_ops, ath10k_sdio_pm_suspend,
+ 
+ #endif /* CONFIG_PM_SLEEP */
+ 
++static int ath10k_sdio_napi_poll(struct napi_struct *ctx, int budget)
++{
++	struct ath10k *ar = container_of(ctx, struct ath10k, napi);
++	int done = 0;
++
++	done = ath10k_htt_rx_hl_indication(ar, budget);
++	ath10k_dbg(ar, ATH10K_DBG_SDIO, "napi poll: done: %d,budget:%d\n", done, budget);
++
++	if (done < budget)
++		napi_complete_done(ctx, done);
++
++	return done;
++}
++
++void ath10k_sdio_init_napi(struct ath10k *ar)
++{
++	netif_napi_add(&ar->napi_dev, &ar->napi, ath10k_sdio_napi_poll,
++		       ATH10K_NAPI_BUDGET);
++}
++
+ static int ath10k_sdio_probe(struct sdio_func *func,
+ 			     const struct sdio_device_id *id)
+ {
+@@ -2163,6 +2191,8 @@ static int ath10k_sdio_probe(struct sdio_func *func,
+ 		return -ENOMEM;
+ 	}
+ 
++	ath10k_sdio_init_napi(ar);
++
+ 	ath10k_dbg(ar, ATH10K_DBG_BOOT,
+ 		   "sdio new func %d vendor 0x%x device 0x%x block 0x%x/0x%x\n",
+ 		   func->num, func->vendor, func->device,
+@@ -2283,6 +2313,9 @@ static void ath10k_sdio_remove(struct sdio_func *func)
+ 		   func->num, func->vendor, func->device);
+ 
+ 	ath10k_core_unregister(ar);
++
++	netif_napi_del(&ar->napi);
++
+ 	ath10k_core_destroy(ar);
+ 
+ 	flush_workqueue(ar_sdio->workqueue);
 -- 
 1.9.1
 
