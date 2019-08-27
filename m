@@ -2,83 +2,87 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id DBBFF9E0A3
-	for <lists+ath10k@lfdr.de>; Tue, 27 Aug 2019 10:08:24 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 00FA39E669
+	for <lists+ath10k@lfdr.de>; Tue, 27 Aug 2019 13:03:45 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=0llORyS847r+qsm+NGuX5z+Qw9Aa+bY+zn7O9SVNP/0=; b=KvaKjRoi+nUIIq
-	p+NV4Z4YmmWM3UgetUUAoRJucC1zRIs62siB/0wUM3PEj+zPa43+gKgWITLrm6IeNcLpxDajKCCZE
-	CkdJN9HfYTDdEKl/D9wdxqSNdYQF9P2aNrOsvwrXdnpTs3h9Zxu2gPTJZ2VTzAbwF9ES7z23EpUEl
-	8M+PK2lofDdK17uQtzquChlkB9Wy5G0XcYJVQAh3nFD8/KfuBtOUcloQlPgwe8g1lPyex+Xsz7ivu
-	jcPH9rPYd1rKb3mZBUxt6j9aVmEeiMYWc/n3PBFN+DHwfrS4LV1BXGn5ExvLJ4VONVRbpo6lFrWOa
-	UJUIg8nM3PLTCsZMsREQ==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
+	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=EWOsGoSub0uzvW0rvJBFZBAgVTzFl0tYGU9KX3qbqgI=; b=Ft0
+	1MZ27Trw16dlgumnkRjQKJe7PRFxZd1IMHfeAe09VvFbmqJwD1CXhIlSvg9GUtWXAVVRG+yd/p2E7
+	dly+a5s7fzZdJQa0KTZl3Ktyp5OOUXNpQFo6u1GORJFiJF6i6NB+4pY1i6qjT89iHT9qOErcVHCLb
+	Y6+Jr77NGPcutPU+G3P3rAD/RaS41g45tqVBh3Y0o8wVDub0lV0ixNLkA3SvGEQyLmAsNxRA3eFsE
+	YkSFCJT52xktIBV9zd/4n0Yc+g2GCx5ZP5OtVacD6OZdeIpQhlxdVUtiCznj/ncJL5t290o0NPycY
+	0Meej4WpCYqw3PV2YdOmxvqwhiYqrXw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i2WWa-0001ZD-Uw; Tue, 27 Aug 2019 08:08:20 +0000
-Received: from mail-qk1-x742.google.com ([2607:f8b0:4864:20::742])
+	id 1i2ZGJ-0003eu-BV; Tue, 27 Aug 2019 11:03:43 +0000
+Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i2WWW-0001YV-Gs
- for ath10k@lists.infradead.org; Tue, 27 Aug 2019 08:08:18 +0000
-Received: by mail-qk1-x742.google.com with SMTP id m10so16300397qkk.1
- for <ath10k@lists.infradead.org>; Tue, 27 Aug 2019 01:08:16 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=YMyttUCQZ4ISy8V1dwK6zHFJylST2fDCu+TqHXmTfhk=;
- b=OwI9RAnGPIW0FSy18F1g8gNB+/QjYzphOy0byRLX7eoNfJyu7OVon5TzZadgdSk2lZ
- l4zE6zYQvcC46AD8t0iVx6/xkbmj7kkOURTQmLPGGXQEnMLheAe3f/xvXfkuTCbC1MgM
- Wtou6RDmjMuX/ph8M1XvPSUhkdCOmmxfPNxeE=
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=YMyttUCQZ4ISy8V1dwK6zHFJylST2fDCu+TqHXmTfhk=;
- b=PA2ClhiNDhrdiGbSkQ4TlP08KdsmfayvBMTWhtQvLvYrsErmwQSvpNyheLMyXJKefY
- IxMk9Jz/DB6DDrhr0LHIWKVCPDuoAuTvsBBEYsMP6keGbFr3TGJ0/gPHESL4A5ljIYFT
- bc+0E79RlZ9oNPmPq/NZazwdzOsR++rxaVHvD/pq4g/uY1L1NjE7C/ZqWevmQaPBXo+5
- 0HA3y7ndFnwBJCYiiT+aT9zMRaJfdQS3ve0kNBv4wgtZED56QzGg/jyoYMdRg7cBa8Ah
- HGZoR7W5dyfuZ2lXg4oMdvJXvpiVR9CySumXHHkLKTzg4Fjf6TFNnRDqOP7aEiiMHnSJ
- k4aA==
-X-Gm-Message-State: APjAAAV3rS7eFh6RoTzQTB1Gv+DIT3hr2FeGA26wsSHArAUm8PaApoRU
- dN5VzZvqiZ0ZrfGregZDzn2Z2tTteslRlVnpKtQEnw==
-X-Google-Smtp-Source: APXvYqzvhA+OprcDNMPqcvh7K2ub0bk8PJx6uICdSdi7h/udMi/13ymBwnoPwlSsQD/pN3WEtAZjW3uTv46J0XVrCP0=
-X-Received: by 2002:ae9:f301:: with SMTP id p1mr20784257qkg.353.1566893295132; 
- Tue, 27 Aug 2019 01:08:15 -0700 (PDT)
-MIME-Version: 1.0
-References: <1566302108-18219-1-git-send-email-wgong@codeaurora.org>
- <1566302108-18219-2-git-send-email-wgong@codeaurora.org>
- <CANMq1KBR0nd+XOJWpgWyoJdsFgZByQyjD-0dpttygiN0OfiD5Q@mail.gmail.com>
- <2ec213d88ebb4b89812826866b39886d@aptaiexm02f.ap.qualcomm.com>
-In-Reply-To: <2ec213d88ebb4b89812826866b39886d@aptaiexm02f.ap.qualcomm.com>
-From: Nicolas Boichat <drinkcat@chromium.org>
-Date: Tue, 27 Aug 2019 16:08:04 +0800
-Message-ID: <CANMq1KCiH8-16esCfwi+60=ArZKC0G83Qs-W2Hq5GARar=6D9g@mail.gmail.com>
-Subject: Re: [PATCH 1/7] ath10k: enable RX bundle receive for sdio
-To: Wen Gong <wgong@qti.qualcomm.com>
+ id 1i2ZFV-00034N-Ls
+ for ath10k@lists.infradead.org; Tue, 27 Aug 2019 11:02:55 +0000
+Received: by smtp.codeaurora.org (Postfix, from userid 1000)
+ id 14E5061779; Tue, 27 Aug 2019 11:02:16 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1566903773;
+ bh=LpEBqMTTYl3m6DImrwzQAPL4eEOspM6cbI3I/sdfpkY=;
+ h=From:To:Cc:Subject:Date:From;
+ b=UfqicrSvFgrWN+DJtKiUgQBV776IMbc0lnC9U5z8OsFg2prBxQOBPz8Qv+V/VQ7Cy
+ DHAU8cI5YWQhyXZV+V1KgP2fWYyMlyJmMq3/PH45mAd/wPIQ1NseW3TgrKY9DbAfgu
+ T1TlwAyxHyjcylPW2S5mt4iv0GORpYyoVKhUy3hE=
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ pdx-caf-mail.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
+ DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
+ version=3.4.0
+Received: from wgong-HP-Z240-SFF-Workstation.qca.qualcomm.com (unknown
+ [180.166.53.21])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
+ (No client certificate requested)
+ (Authenticated sender: wgong@smtp.codeaurora.org)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 9A2A561C22;
+ Tue, 27 Aug 2019 11:02:14 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1566903735;
+ bh=LpEBqMTTYl3m6DImrwzQAPL4eEOspM6cbI3I/sdfpkY=;
+ h=From:To:Cc:Subject:Date:From;
+ b=nEmn1DpZg7CmPbTHzaIRC969T/sfajpxYlTtKQNL48bdDI8Xnxx4zPv2VPy9BWBzT
+ Ix3DTdXx1GHJKhra6fQv4OwM6lgwn8I2flTAyYv5yI2jh/rBMpdeKCdAlU7Melajx1
+ erdgVz7yheaRZuHKgnGX3+bY3so/Xf31ETOTw/i4=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 9A2A561C22
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ spf=none smtp.mailfrom=wgong@codeaurora.org
+From: Wen Gong <wgong@codeaurora.org>
+To: ath10k@lists.infradead.org
+Subject: [PATCH v2 0/7] ath10k: improve throughout of tcp/udp TX/RX of sdio
+Date: Tue, 27 Aug 2019 19:01:40 +0800
+Message-Id: <1566903707-27536-1-git-send-email-wgong@codeaurora.org>
+X-Mailer: git-send-email 1.9.1
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190827_010816_588287_C69153FC 
-X-CRM114-Status: GOOD (  16.57  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190827_040253_832354_AC21C130 
+X-CRM114-Status: UNSURE (   6.25  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:742 listed in]
- [list.dnswl.org]
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [198.145.29.96 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -90,96 +94,56 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: "open list:NETWORKING DRIVERS \(WIRELESS\)"
- <linux-wireless@vger.kernel.org>,
- "ath10k@lists.infradead.org" <ath10k@lists.infradead.org>,
- Wen Gong <wgong@codeaurora.org>
+Cc: linux-wireless@vger.kernel.org
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On Tue, Aug 27, 2019 at 4:03 PM Wen Gong <wgong@qti.qualcomm.com> wrote:
->
-> > -----Original Message-----
-> > From: ath10k <ath10k-bounces@lists.infradead.org> On Behalf Of Nicolas
-> > Boichat
-> > Sent: Tuesday, August 27, 2019 3:41 PM
-> > To: Wen Gong <wgong@codeaurora.org>
-> > Cc: open list:NETWORKING DRIVERS (WIRELESS) <linux-
-> > wireless@vger.kernel.org>; ath10k@lists.infradead.org
-> > Subject: [EXT] Re: [PATCH 1/7] ath10k: enable RX bundle receive for sdio
-> >
-> > > -static int ath10k_sdio_mbox_rx_fetch(struct ath10k *ar)
-> > > +static int ath10k_sdio_mbox_rx_fetch_bundle(struct ath10k *ar)
-> > >  {
-> > >         struct ath10k_sdio *ar_sdio = ath10k_sdio_priv(ar);
-> > > +       struct ath10k_sdio_rx_data *pkt;
-> > >         int ret, i;
-> > > +       u32 pkt_offset, virt_pkt_len;
-> > >
-> > > +       virt_pkt_len = 0;
-> > >         for (i = 0; i < ar_sdio->n_rx_pkts; i++) {
-> > > -               ret = ath10k_sdio_mbox_rx_packet(ar,
-> > > -                                                &ar_sdio->rx_pkts[i]);
-> > > -               if (ret)
-> > > +               virt_pkt_len += ar_sdio->rx_pkts[i].alloc_len;
-> > > +       }
-> > > +
-> > > +       if (virt_pkt_len < ATH10K_SDIO_DMA_BUF_SIZE) {
-> > > +               ret = ath10k_sdio_readsb(ar, ar_sdio->mbox_info.htc_addr,
-> > > +                                        ar_sdio->vsg_buffer, virt_pkt_len);
-> > > +               if (ret) {
-> > > +                       i = 0;
-> > >                         goto err;
-> > > +               }
-> > > +       } else {
-> > > +               ath10k_err(ar, "size exceeding limit %d\n", virt_pkt_len);
-> > > +       }
-> > > +
-> > > +       pkt_offset = 0;
-> > > +       for (i = 0; i < ar_sdio->n_rx_pkts; i++) {
-> > > +               struct sk_buff *skb = ar_sdio->rx_pkts[i].skb;
-> > > +
-> > > +               pkt = &ar_sdio->rx_pkts[i];
-> > > +               memcpy(skb->data, ar_sdio->vsg_buffer + pkt_offset,
-> > > +                      pkt->alloc_len);
-> >
-> > Why do you copy alloc_len if you only plan to use act_len?
-> alloc_len is aligned to block size(256),  and act_len maybe not same for each packet in the bundle.
-> Eg a bundle:
-> Packet 1 len 240,   alloc_len: 256, 1st time: act_len 240, left padding size is 16,
-> Packet 1 len 250, alloc_len: 256, 1st time: act_len 240, left padding size is 6,
-> Packet 1 len 230,   alloc_len: 256, 1st time: act_len 240, left padding size is 26,
->
-> The bundled buffer len is 256 * 3 = 768, it has 256 bytes for each packet, the left size is padding which
-> Is not needed, but the left padding is not same for each packet, before read all the buffer from sdio bus,
-> It does not know each packet's act len, it only know the 1st packet's act len.
-> So it need to copy all the alloc_len's buffer to ensure it will not lose data.
+The bottleneck of throughout on sdio chip is the bus bandwidth, to the
+patches are all to increase the use ratio of sdio bus.
 
-Gotcha, thanks.
+                      udp-rx    udp-tx    tcp-rx    tcp-tx
+without patches(Mbps)  320        180       170       151
+with patches(Mbps)     450        410       400       320
 
-> > Actually, just use skb_put_data.
-> >
-> > Also, do you have the same issue as
-> > https://patchwork.kernel.org/patch/11116215/ w.r.t. act_len being
-> > incorrect?
-> >
-> > > +               pkt->status = 0;
-> > > +               skb_put(skb, pkt->act_len);
+These patches only affect sdio bus chip, explanation is mentioned in each
+patch's commit log.
 
-So I guess this is incorrect, see patchwork linked above.
+Alagu Sankar (1):
+  ath10k: enable RX bundle receive for sdio
+v2: fix incorrect skb tail of rx bundle in ath10k_sdio_mbox_rx_process_packet
 
-> > > +               pkt_offset += pkt->alloc_len;
-> > >         }
-> > >
-> > >         return 0;
-> > >
-> >
-> > _______________________________________________
-> > ath10k mailing list
-> > ath10k@lists.infradead.org
-> > http://lists.infradead.org/mailman/listinfo/ath10k
+Wen Gong (6):
+  ath10k: change max RX bundle size from 8 to 32 for sdio
+v2: change macro HTC_GET_BUNDLE_COUNT
+
+  ath10k: add workqueue for RX path of sdio
+  ath10k: disable TX complete indication of htt for sdio
+v2: change some code style
+
+  ath10k: add htt TX bundle for sdio
+  ath10k: enable alt data of TX path for sdio
+  ath10k: enable napi on RX path for sdio
+
+ drivers/net/wireless/ath/ath10k/core.c   |  36 ++-
+ drivers/net/wireless/ath/ath10k/core.h   |   4 +-
+ drivers/net/wireless/ath/ath10k/hif.h    |   9 +
+ drivers/net/wireless/ath/ath10k/htc.c    | 374 ++++++++++++++++++++++++++++---
+ drivers/net/wireless/ath/ath10k/htc.h    |  41 +++-
+ drivers/net/wireless/ath/ath10k/htt.c    |  15 ++
+ drivers/net/wireless/ath/ath10k/htt.h    |  20 +-
+ drivers/net/wireless/ath/ath10k/htt_rx.c |  82 ++++++-
+ drivers/net/wireless/ath/ath10k/htt_tx.c |  37 ++-
+ drivers/net/wireless/ath/ath10k/hw.h     |   2 +-
+ drivers/net/wireless/ath/ath10k/sdio.c   | 292 +++++++++++++++++++++---
+ drivers/net/wireless/ath/ath10k/sdio.h   |  31 ++-
+ 12 files changed, 850 insertions(+), 93 deletions(-)
+
+-- 
+1.9.1
+
 
 _______________________________________________
 ath10k mailing list
