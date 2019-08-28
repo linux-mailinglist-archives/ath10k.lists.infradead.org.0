@@ -2,76 +2,80 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9F6F7A0279
-	for <lists+ath10k@lfdr.de>; Wed, 28 Aug 2019 15:03:30 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 60ED1A0BA6
+	for <lists+ath10k@lfdr.de>; Wed, 28 Aug 2019 22:38:09 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:
-	Message-ID:Date:To:From:Subject:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=MN5PHG13gq3T68XuDd4c4UoG6mDNB6yIlcmpd/8SfqI=; b=lhPs2ACUb9LfIZ
-	iYnI/b/Rq+YklETQV+o6b2nIEcSZl50G6ngHF2lUiyQmZoevjcHtCz7ogigwA41lLA+Yz18iafFTw
-	KEKTMWIxACdGlWfLmgSRlwEyNemsg/1If2rwrHPzD0jxMeLzE1Ypg3i833eLfR/DI0LR4p0lyzRj4
-	CuKv2dXhMGq3Jorh5GXoLWrs2bqBktLpEzwBGwUIRCxeFgxzLxGBd66CMltnc0+oAOx+Q4fmQyMmP
-	Fhr2rFkIzRWfeueoQSWEKU2U/Rtd4+vCjUx+8SGcuoS8ZNNPcdr2xyHvLznLyq8fRXNotujra3sUz
-	0GfhrXk4JwWKgJGRYZ/A==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:References:
+	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:List-Owner;
+	bh=bxP0mAdIIp3UEQjyJiL8mY5plEUSUcMMNR3Xpicsq5E=; b=XlPe0ict1ob4RVtMEYnKOP8W94
+	cXv3+3VFzu6HZHFBLD8csCd3ZRkQmJKiVyJPyet5xXGog0olaWnPtLZezWK+4GV0S+XFW8RgV7Nco
+	u31FDdJKE/NwHz5SPZp4BJ/fhGXgyukItMvST+KabZiRnZty/6HCPCUBonTOm2jZV2kXcmsu7kq09
+	REfztz4x9q2fjDn4+QkTRyUmbJMUhtTSbH3CvvDkrQ16s1wDu2YrwBjq14oMXrZYNsEgx5F08X754
+	ZAEC7qXtcSFxPpJnwxKGAvBj6INqNDs5/vqtp9VM6BFJ5UB8P6ZpaIh8qPZD5LwT67hu8RGvQ4m03
+	48ysZpGg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i2xbl-0002jO-3p; Wed, 28 Aug 2019 13:03:29 +0000
-Received: from alexa-out-tai-02.qualcomm.com ([103.229.16.227])
+	id 1i34hc-0004ay-S5; Wed, 28 Aug 2019 20:38:01 +0000
+Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i2xbe-0002hx-RF
- for ath10k@lists.infradead.org; Wed, 28 Aug 2019 13:03:24 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
- d=qti.qualcomm.com; i=@qti.qualcomm.com; q=dns/txt;
- s=qcdkim; t=1566997402; x=1598533402;
- h=from:to:cc:date:message-id:references:in-reply-to:
- content-transfer-encoding:mime-version:subject;
- bh=J2JIvCo/gDWUqveBoiH0BGVSG/QSfuMxe9cIL73DU34=;
- b=idW8LNGY8J1KaMX4qyUzRY78DWsyRiKUgKYizSp/tkIAuITp6P2LQUig
- XZJPi/2B70jMOnLDDne+WP/mdiuqP9ONLCB0ngdwXqg1ksGOL2NDWhhIw
- ocxpRWbYICv8DDAolmqEe16itbaHIbspLxEGxNGha0iOI1Z2hPM1Yq+Db w=;
-Subject: RE: [PATCH v2 5/7] ath10k: add htt TX bundle for sdio
-Thread-Topic: [PATCH v2 5/7] ath10k: add htt TX bundle for sdio
-Received: from ironmsg03-tai.qualcomm.com ([10.249.140.8])
- by alexa-out-tai-02.qualcomm.com with ESMTP; 28 Aug 2019 21:03:21 +0800
-Received: from aptaiexm02b.ap.qualcomm.com ([10.249.150.12])
- by ironmsg03-tai.qualcomm.com with ESMTP/TLS/AES256-SHA;
- 28 Aug 2019 21:03:21 +0800
-Received: from aptaiexm02f.ap.qualcomm.com (10.249.150.16) by
- aptaiexm02b.ap.qualcomm.com (10.249.150.12) with Microsoft SMTP Server (TLS)
- id 15.0.1473.3; Wed, 28 Aug 2019 21:03:19 +0800
-Received: from aptaiexm02f.ap.qualcomm.com ([fe80::4152:1436:e436:faa1]) by
- aptaiexm02f.ap.qualcomm.com ([fe80::4152:1436:e436:faa1%19]) with mapi id
- 15.00.1473.005; Wed, 28 Aug 2019 21:03:19 +0800
-From: Wen Gong <wgong@qti.qualcomm.com>
-To: Nicolas Boichat <drinkcat@chromium.org>, Wen Gong <wgong@codeaurora.org>
-Thread-Index: AQHVXWKa4RLo4LlR4Eu0hbim+24wL6cQhk8A
-Date: Wed, 28 Aug 2019 13:03:19 +0000
-Message-ID: <2ebd81574092476a952ddeb671d1bfcf@aptaiexm02f.ap.qualcomm.com>
-References: <1566903707-27536-1-git-send-email-wgong@codeaurora.org>
- <1566903707-27536-6-git-send-email-wgong@codeaurora.org>
- <CANMq1KAQncoZ3yX5Sfsc5tR8z9tJyA=jFF4_F1K=hLRe51OD4g@mail.gmail.com>
-In-Reply-To: <CANMq1KAQncoZ3yX5Sfsc5tR8z9tJyA=jFF4_F1K=hLRe51OD4g@mail.gmail.com>
-Accept-Language: en-US
-Content-Language: en-US
-X-MS-Has-Attach: 
-X-MS-TNEF-Correlator: 
-x-ms-exchange-transport-fromentityheader: Hosted
-x-originating-ip: [10.249.136.10]
-MIME-Version: 1.0
+ id 1i34hX-0004aT-0D
+ for ath10k@lists.infradead.org; Wed, 28 Aug 2019 20:37:57 +0000
+Received: by smtp.codeaurora.org (Postfix, from userid 1000)
+ id EB67589CB5; Wed, 28 Aug 2019 14:47:35 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1567003656;
+ bh=4BMArdRsNIXIpVGIZ4RrXtTSxVoPxpuyw77852jgK9U=;
+ h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
+ b=UQgylWoRcWGanUWpLj/WHNYXg8NAIFesIwNxIoOmJNhBPpZr11Q1zk7g+pza1U+aY
+ t2Qv6V4ANc62wXWI+C0mHIJMatkzkN9nBdtUKBaCoPDXjzT80jM0wt+m8hA/4m94UH
+ p5oIOolR48pdb8Cuqr2A6nSprR8vMhMaiydGDWoI=
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ pdx-caf-mail.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
+ DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
+ version=3.4.0
+Received: from wgong-HP-Z240-SFF-Workstation.qca.qualcomm.com (unknown
+ [180.166.53.21])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
+ (No client certificate requested)
+ (Authenticated sender: wgong@smtp.codeaurora.org)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 8FE2F88A14;
+ Wed, 28 Aug 2019 13:16:30 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1566998192;
+ bh=4BMArdRsNIXIpVGIZ4RrXtTSxVoPxpuyw77852jgK9U=;
+ h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
+ b=MOzo8XAMqUbHGWxyASPDEj79C0fko4m/YsG0vVHPxYkK+08ctb6p7N5dTCaeVh9mo
+ 5nTM3f51sq0m8YVY3FanwePdO05Nujme4QSbul4Ku4ccrDHn+V5LALrtAYNV6kXd+B
+ GAvLKop4waGu3MoKTsOF93lbzOyAx1hfgCJdBP7o=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 8FE2F88A14
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ spf=none smtp.mailfrom=wgong@codeaurora.org
+From: Wen Gong <wgong@codeaurora.org>
+To: ath10k@lists.infradead.org
+Subject: [PATCH v3 1/8] ath10k: adjust skb length in ath10k_sdio_mbox_rx_packet
+Date: Wed, 28 Aug 2019 21:16:10 +0800
+Message-Id: <1566998177-2658-2-git-send-email-wgong@codeaurora.org>
+X-Mailer: git-send-email 1.9.1
+In-Reply-To: <1566998177-2658-1-git-send-email-wgong@codeaurora.org>
+References: <1566998177-2658-1-git-send-email-wgong@codeaurora.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190828_060323_142046_EAB8C744 
-X-CRM114-Status: UNSURE (   6.99  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -2.4 (--)
+X-CRM114-CacheID: sfid-20190828_133755_103198_EC57D1CB 
+X-CRM114-Status: GOOD (  14.97  )
+X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.4 points)
+ Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [103.229.16.227 listed in list.dnswl.org]
+ medium trust [198.145.29.96 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
@@ -79,6 +83,8 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  author's domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -90,39 +96,102 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: "open list:NETWORKING DRIVERS \(WIRELESS\)"
- <linux-wireless@vger.kernel.org>,
- "ath10k@lists.infradead.org" <ath10k@lists.infradead.org>
+Cc: linux-wireless@vger.kernel.org
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-> -----Original Message-----
-> From: ath10k <ath10k-bounces@lists.infradead.org> On Behalf Of Nicolas
-> Boichat
-> Sent: Wednesday, August 28, 2019 1:36 PM
-> To: Wen Gong <wgong@codeaurora.org>
-> Cc: open list:NETWORKING DRIVERS (WIRELESS) <linux-
-> wireless@vger.kernel.org>; ath10k@lists.infradead.org
-> Subject: [EXT] Re: [PATCH v2 5/7] ath10k: add htt TX bundle for sdio
-> 
-> 
-> > +       int cn = 0;
-> > +       unsigned int skb_len;
-> > +
-> > +       ath10k_dbg(ar, ATH10K_DBG_HTC, "bundle skb: len:%d\n",
-> bundle_skb->len);
-> > +       skb_len = bundle_skb->len;
-> > +       ret = ath10k_htc_consume_credit(ep, skb_len, true);
-> 
-> ret makes me think of some error status, can we find a better name?
-> Like credit_available or something?
-If consume fail, it mean a error status(-EAGAIN), then it mean fail for this tx.
-> _______________________________________________
-> ath10k mailing list
-> ath10k@lists.infradead.org
-> http://lists.infradead.org/mailman/listinfo/ath10k
+When the FW bundles multiple packets, pkt->act_len may be incorrect
+as it refers to the first packet only (however, the FW will only
+bundle packets that fit into the same pkt->alloc_len).
+
+Before this patch, the skb length would be set (incorrectly) to
+pkt->act_len in ath10k_sdio_mbox_rx_packet, and then later manually
+adjusted in ath10k_sdio_mbox_rx_process_packet.
+
+The first problem is that ath10k_sdio_mbox_rx_process_packet does not
+use proper skb_put commands to adjust the length (it directly changes
+skb->len), so we end up with a mismatch between skb->head + skb->tail
+and skb->data + skb->len. This is quite serious, and causes corruptions
+in the TCP stack, as the stack tries to coalesce packets, and relies
+on skb->tail being correct (that is, skb_tail_pointer must point to
+the first byte_after_ the data).
+
+Instead of re-adjusting the size in ath10k_sdio_mbox_rx_process_packet,
+this moves the code to ath10k_sdio_mbox_rx_packet, and also add a
+bounds check, as skb_put would crash the kernel if not enough space is
+available.
+
+Tested with QCA6174 SDIO with firmware
+WLAN.RMH.4.4.1-00007-QCARMSWP-1.
+
+Signed-off-by: Nicolas Boichat <drinkcat@chromium.org>
+Signed-off-by: Wen Gong <wgong@codeaurora.org>
+---
+v2:no this patch
+v2:new added
+ drivers/net/wireless/ath/ath10k/sdio.c | 27 +++++++++++++++++++--------
+ 1 file changed, 19 insertions(+), 8 deletions(-)
+
+diff --git a/drivers/net/wireless/ath/ath10k/sdio.c b/drivers/net/wireless/ath/ath10k/sdio.c
+index 8ed4fbd..1127e44 100644
+--- a/drivers/net/wireless/ath/ath10k/sdio.c
++++ b/drivers/net/wireless/ath/ath10k/sdio.c
+@@ -381,16 +381,11 @@ static int ath10k_sdio_mbox_rx_process_packet(struct ath10k *ar,
+ 	struct ath10k_htc_hdr *htc_hdr = (struct ath10k_htc_hdr *)skb->data;
+ 	bool trailer_present = htc_hdr->flags & ATH10K_HTC_FLAG_TRAILER_PRESENT;
+ 	enum ath10k_htc_ep_id eid;
+-	u16 payload_len;
+ 	u8 *trailer;
+ 	int ret;
+ 
+-	payload_len = le16_to_cpu(htc_hdr->len);
+-	skb->len = payload_len + sizeof(struct ath10k_htc_hdr);
+-
+ 	if (trailer_present) {
+-		trailer = skb->data + sizeof(*htc_hdr) +
+-			  payload_len - htc_hdr->trailer_len;
++		trailer = skb->data + skb->len - htc_hdr->trailer_len;
+ 
+ 		eid = pipe_id_to_eid(htc_hdr->eid);
+ 
+@@ -632,13 +627,29 @@ static int ath10k_sdio_mbox_rx_packet(struct ath10k *ar,
+ {
+ 	struct ath10k_sdio *ar_sdio = ath10k_sdio_priv(ar);
+ 	struct sk_buff *skb = pkt->skb;
++	struct ath10k_htc_hdr *htc_hdr;
+ 	int ret;
+ 
+ 	ret = ath10k_sdio_readsb(ar, ar_sdio->mbox_info.htc_addr,
+ 				 skb->data, pkt->alloc_len);
++
++	if (!ret) {
++		/* Update actual length. The original length may be incorrect,
++		 * as the FW will bundle multiple packets as long as their sizes
++		 * fit within the same aligned length (pkt->alloc_len).
++		 */
++		htc_hdr = (struct ath10k_htc_hdr *)skb->data;
++		pkt->act_len = le16_to_cpu(htc_hdr->len) + sizeof(*htc_hdr);
++		if (pkt->act_len <= pkt->alloc_len) {
++			skb_put(skb, pkt->act_len);
++		} else {
++			ath10k_warn(ar, "rx packet too large (%zu > %zu)\n",
++				    pkt->act_len, pkt->alloc_len);
++			ret = -EMSGSIZE;
++		}
++	}
++
+ 	pkt->status = ret;
+-	if (!ret)
+-		skb_put(skb, pkt->act_len);
+ 
+ 	return ret;
+ }
+-- 
+1.9.1
+
 
 _______________________________________________
 ath10k mailing list
