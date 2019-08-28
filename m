@@ -2,8 +2,8 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 797C1A22A0
-	for <lists+ath10k@lfdr.de>; Thu, 29 Aug 2019 19:43:59 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 871E4A22C7
+	for <lists+ath10k@lfdr.de>; Thu, 29 Aug 2019 19:51:12 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,28 +11,28 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=nayHOO8OPdYUmKp9R6XUWa5OzOkt7hkYWe7IEEArLGE=; b=khQMPxGJOxkATPcGWqubq7Ztlj
-	rLoj9fKtIEJGS35ntc4KclYkqGuhmq16xCAPxfJpPL9S48g8bWy7YVGsN4MyMieQX3dXfj7jEmFLk
-	N49/wMlKAosjWQ9f/v0PO5fMsrh290FED5WMli0DGMr7TJCeIqx0m425YPfp9keN6kR3nupDENzF/
-	Xkqr+LpuJjFwBd7haFErOgPupIl1MlhM0NJOa/RkAVW1zkOnSotD+/avJ3D1pqnbyfk6VuDvNj0Tq
-	P1Yr/R6b42nY5cqFMDr+4Z62rnRREV0INfk6dNlUe3uUK0G7nGUqtKfsfXH1ZlkGxb0jH1Z1BvPKP
-	+rZ3dtVw==;
+	bh=WhDLxrAhY4LfiRQiOoTipt7I0MwxMOw6jHwHjVSwg0o=; b=BNREIrDEMY7JiWfWkTaE89q+2V
+	+vWzFJAmczxhjtobK//IeuswYGwv3SmgzMs1w41M2y6n01kHKlpNKHH7uRAIYjoIVvvFjo3Dy8BAn
+	vrgicclYRRk/0uzuJIz2Ku/krQj+XqZl23B4x8tbMKB/ODlZLrh8tFF7ltXY2jYR11dUAnj8SXGHH
+	7+4bCPNBkiaa+w/p4BhWdZQF10y19dzzvYJayL10jLDUmCz8IewG2dTvV+bzz1Q1T+jvRPXrW/DBV
+	uOJdBKarLQ+PD3ZaulGEqXLXVROxyrkn2L3jarWGG/9wHKxhvoL6cKcjzpMDINLzkRco69YzjoXLP
+	9ofGQ/sg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i3OSg-0003CI-Tv; Thu, 29 Aug 2019 17:43:55 +0000
+	id 1i3OZi-0006wo-AE; Thu, 29 Aug 2019 17:51:10 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i3OSc-0003Bw-Ch
- for ath10k@lists.infradead.org; Thu, 29 Aug 2019 17:43:51 +0000
+ id 1i3OZa-0006pO-Nr
+ for ath10k@lists.infradead.org; Thu, 29 Aug 2019 17:51:06 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 6915D7D2DC; Thu, 29 Aug 2019 12:34:09 +0000 (UTC)
+ id 3584265CC7; Thu, 29 Aug 2019 11:33:50 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1567082050;
- bh=IQh+1Blz9wUhzZHO89vK8iZ9hrzgRVa01+tKcFeLg7U=;
+ s=default; t=1567078430;
+ bh=byN0+oRJ97XKqT9ACdxABqAh2yXx1PCB8rvsaIeSLoE=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=GGNOVSsZ/cE3RXbasYv09yif7k8ZUzX0WL9cS6MuMpLt8nxlKKlyYz7GxnftumcGz
- hBqERctA+Wy+g1cszaLvPTjjplTCerca0/KwPCKZ8m+EUwAvFuw07qpzDEjfruVc76
- Vg4bCgLrZvR85p1bi8yijK7B/uono48/iXIYm68Y=
+ b=UzR3Ek4glgzurQ1+Tvb7ENxoeXz/NzgeEHOd4OSOqiCZ3wcX+uVQCHvw6hcFCTb5r
+ OrK9gjGtbsUzREooBoedwIIhNvn5K2/VpxfrRgEcA6sIY5y477IzZEMFg9CvUfA7G8
+ ufbEbgxoZ39VtRlHT1zxVnXU2ypDiu2QZh2Aawi0=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
@@ -44,31 +44,31 @@ Received: from wgong-HP-Z240-SFF-Workstation.qca.qualcomm.com (unknown
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
  (No client certificate requested)
  (Authenticated sender: wgong@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id BDB8F88A29;
- Wed, 28 Aug 2019 13:16:42 +0000 (UTC)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id F2CAE88A19;
+ Wed, 28 Aug 2019 13:16:32 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1566998203;
- bh=IQh+1Blz9wUhzZHO89vK8iZ9hrzgRVa01+tKcFeLg7U=;
+ s=default; t=1566998194;
+ bh=byN0+oRJ97XKqT9ACdxABqAh2yXx1PCB8rvsaIeSLoE=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=juG+sVLBFl733A3TNE2rdgpI27+EhdQcEjhz0u8EzBMNyt5EizKeAHBbWoGfZYnfC
- QEadNU61onrkJg2YwZV8dQHPP0W2T25vnuqjJ0r6kNXpkO2njK2oq4LxtMtLou1Bwh
- 56tcemw1mrzmm10A+0kkyWn3dmG7pat6kWokNcLg=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org BDB8F88A29
+ b=fZBJxs+MId26vBvWg/JGYNa2Skw9hXxWo9ja8Hz/QJihbMcsDfBI7zYLe5xTtPgOi
+ fZIZDpMOUgwVYoRGbT3thQlb6/HE//Kf4Gvl4nP3GgmAH8yPAezQxP8UkRV19kdz4Z
+ Ri53XhOQOfO7NX5rBFFuxynNT5Y78E2KeE1QkCoE=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org F2CAE88A19
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  spf=none smtp.mailfrom=wgong@codeaurora.org
 From: Wen Gong <wgong@codeaurora.org>
 To: ath10k@lists.infradead.org
-Subject: [PATCH v3 7/8] ath10k: enable alt data of TX path for sdio
-Date: Wed, 28 Aug 2019 21:16:16 +0800
-Message-Id: <1566998177-2658-8-git-send-email-wgong@codeaurora.org>
+Subject: [PATCH v3 2/8] ath10k: enable RX bundle receive for sdio
+Date: Wed, 28 Aug 2019 21:16:11 +0800
+Message-Id: <1566998177-2658-3-git-send-email-wgong@codeaurora.org>
 X-Mailer: git-send-email 1.9.1
 In-Reply-To: <1566998177-2658-1-git-send-email-wgong@codeaurora.org>
 References: <1566998177-2658-1-git-send-email-wgong@codeaurora.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190829_104350_500616_02747DE2 
-X-CRM114-Status: GOOD (  15.37  )
+X-CRM114-CacheID: sfid-20190829_105103_410256_1D1F125D 
+X-CRM114-Status: GOOD (  16.69  )
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-2.5 points)
@@ -103,137 +103,285 @@ Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-The default credit size is 1792 bytes, but the IP mtu is 1500 bytes,
-then it has about 290 bytes's waste for each data packet on sdio
-transfer path for TX bundle, it will reduce the transmission utilization
-ratio for data packet.
+From: Alagu Sankar <alagusankar@silex-india.com>
 
-This patch enable the small credit size in firmware, firmware will use
-the new credit size 1556 bytes, it will increase the transmission
-utilization ratio for data packet on TX patch. It results in significant
-performance improvement on TX path.
+The existing implementation of initiating multiple sdio transfers for
+receive bundling is slowing down the receive speed. Combining the
+transfers using a bundle method would be ideal.
 
-This patch only effect sdio chip, it will not effect PCI, SNOC etc.
+The transmission utilization ratio for sdio bus for small packet is
+slow, because the space and time cost for sdio bus is same for large
+length packet and small length packet. So the speed of data for large
+length packet is higher than small length.
+
+Test result of different length of data:
+data packet(byte)   cost time(us)   calculated rate(Mbps)
+      256               28                73
+      512               33               124
+     1024               35               234
+     1792               45               318
+    14336              168               682
+    28672              333               688
+    57344              660               695
 
 Tested with QCA6174 SDIO with firmware
-WLAN.RMH.4.4.1-00017-QCARMSWP-1.
+WLAN.RMH.4.4.1-00007-QCARMSWP-1.
 
+Signed-off-by: Alagu Sankar <alagusankar@silex-india.com>
 Signed-off-by: Wen Gong <wgong@codeaurora.org>
 ---
-v2:no change
-v3:change some code style
- drivers/net/wireless/ath/ath10k/core.c | 19 +++++++++++++++++--
- drivers/net/wireless/ath/ath10k/htc.c  | 11 +++++++++--
- drivers/net/wireless/ath/ath10k/htc.h  | 11 +++++++++--
- 3 files changed, 35 insertions(+), 6 deletions(-)
+v2: fix incorrect skb tail of rx bundle in ath10k_sdio_mbox_rx_process_packet
+v3: change some code style
+split fix incorrect skb tail of rx bundle to patch "adjust skb length in ath10k_sdio_mbox_rx_packet"
 
-diff --git a/drivers/net/wireless/ath/ath10k/core.c b/drivers/net/wireless/ath/ath10k/core.c
-index 9841533..9fd07c7 100644
---- a/drivers/net/wireless/ath/ath10k/core.c
-+++ b/drivers/net/wireless/ath/ath10k/core.c
-@@ -31,6 +31,7 @@
- static unsigned int ath10k_cryptmode_param;
- static bool uart_print;
- static bool disable_tx_comp = true;
-+static bool alt_data = true;
- static bool skip_otp;
- static bool rawmode;
- static bool fw_diag_log;
-@@ -45,6 +46,15 @@
+ drivers/net/wireless/ath/ath10k/sdio.c | 106 +++++++++++++++++++++------------
+ drivers/net/wireless/ath/ath10k/sdio.h |   7 ++-
+ 2 files changed, 74 insertions(+), 39 deletions(-)
+
+diff --git a/drivers/net/wireless/ath/ath10k/sdio.c b/drivers/net/wireless/ath/ath10k/sdio.c
+index 1127e44..23c998d 100644
+--- a/drivers/net/wireless/ath/ath10k/sdio.c
++++ b/drivers/net/wireless/ath/ath10k/sdio.c
+@@ -24,6 +24,9 @@
+ #include "trace.h"
+ #include "sdio.h"
  
- /* If upper layer need the TX complete status, it can enable tx complete */
- module_param(disable_tx_comp, bool, 0644);
++#define ATH10K_SDIO_DMA_BUF_SIZE	(32 * 1024)
++#define ATH10K_SDIO_VSG_BUF_SIZE	(32 * 1024)
 +
-+/* alt_data is only used for sdio chip, for previous version of firmware, its
-+ * alt data size is 1544 which is not enough for native wifi, so it need to
-+ * alt_data for the firmware.
-+ * If the firmware has changed alt data size to 1556, then it can enable
-+ * alt_data for the firmware.
-+ * alt_data will not effect PCI, SNOC etc.
-+ */
-+module_param(alt_data, bool, 0644);
- module_param(skip_otp, bool, 0644);
- module_param(rawmode, bool, 0644);
- module_param(fw_diag_log, bool, 0644);
-@@ -698,9 +708,14 @@ static void ath10k_init_sdio(struct ath10k *ar, enum ath10k_firmware_mode mode)
- 		param &= ~HI_ACS_FLAGS_SDIO_REDUCE_TX_COMPL_SET;
+ /* inlined helper functions */
  
- 	/* Alternate credit size of 1544 as used by SDIO firmware is
--	 * not big enough for mac80211 / native wifi frames. disable it
-+	 * not big enough for mac80211 / native wifi frames. disable it.
-+	 * If alternate credit size of 1556 as used by SDIO firmware is
-+	 * big enough for mac80211 / native wifi frames. enable it
- 	 */
--	param &= ~HI_ACS_FLAGS_ALT_DATA_CREDIT_SIZE;
-+	if (alt_data && mode == ATH10K_FIRMWARE_MODE_NORMAL)
-+		param |= HI_ACS_FLAGS_ALT_DATA_CREDIT_SIZE;
-+	else
-+		param &= ~HI_ACS_FLAGS_ALT_DATA_CREDIT_SIZE;
+ static inline int ath10k_sdio_calc_txrx_padded_len(struct ath10k_sdio *ar_sdio,
+@@ -484,11 +487,11 @@ static int ath10k_sdio_mbox_rx_process_packets(struct ath10k *ar,
+ 	return ret;
+ }
  
- 	if (mode == ATH10K_FIRMWARE_MODE_UTF)
- 		param &= ~HI_ACS_FLAGS_SDIO_SWAP_MAILBOX_SET;
-diff --git a/drivers/net/wireless/ath/ath10k/htc.c b/drivers/net/wireless/ath/ath10k/htc.c
-index 5269168..04298e1 100644
---- a/drivers/net/wireless/ath/ath10k/htc.c
-+++ b/drivers/net/wireless/ath/ath10k/htc.c
-@@ -940,12 +940,15 @@ int ath10k_htc_wait_target(struct ath10k_htc *htc)
- 	 */
- 	if (htc->control_resp_len >=
- 	    sizeof(msg->hdr) + sizeof(msg->ready_ext)) {
-+		htc->alt_data_credit_size =
-+			__le16_to_cpu(msg->ready_ext.reserved) & 0x0fff;
- 		htc->max_msgs_per_htc_bundle =
- 			min_t(u8, msg->ready_ext.max_msgs_per_htc_bundle,
- 			      HTC_HOST_MAX_MSG_PER_RX_BUNDLE);
- 		ath10k_dbg(ar, ATH10K_DBG_HTC,
--			   "Extended ready message. RX bundle size: %d\n",
--			   htc->max_msgs_per_htc_bundle);
-+			   "Extended ready message. RX bundle size: %d, alt size:%d\n",
-+			   htc->max_msgs_per_htc_bundle,
-+			   htc->alt_data_credit_size);
+-static int ath10k_sdio_mbox_alloc_pkt_bundle(struct ath10k *ar,
+-					     struct ath10k_sdio_rx_data *rx_pkts,
+-					     struct ath10k_htc_hdr *htc_hdr,
+-					     size_t full_len, size_t act_len,
+-					     size_t *bndl_cnt)
++static int ath10k_sdio_mbox_alloc_bundle(struct ath10k *ar,
++					 struct ath10k_sdio_rx_data *rx_pkts,
++					 struct ath10k_htc_hdr *htc_hdr,
++					 size_t full_len, size_t act_len,
++					 size_t *bndl_cnt)
+ {
+ 	int ret, i;
+ 
+@@ -529,6 +532,7 @@ static int ath10k_sdio_mbox_rx_alloc(struct ath10k *ar,
+ 	size_t full_len, act_len;
+ 	bool last_in_bundle;
+ 	int ret, i;
++	int pkt_cnt = 0;
+ 
+ 	if (n_lookaheads > ATH10K_SDIO_MAX_RX_MSGS) {
+ 		ath10k_warn(ar,
+@@ -572,20 +576,22 @@ static int ath10k_sdio_mbox_rx_alloc(struct ath10k *ar,
+ 			 */
+ 			size_t bndl_cnt;
+ 
+-			ret = ath10k_sdio_mbox_alloc_pkt_bundle(ar,
+-								&ar_sdio->rx_pkts[i],
+-								htc_hdr,
+-								full_len,
+-								act_len,
+-								&bndl_cnt);
++			struct ath10k_sdio_rx_data *rx_pkts =
++				&ar_sdio->rx_pkts[pkt_cnt];
++
++			ret = ath10k_sdio_mbox_alloc_bundle(ar,
++							    rx_pkts,
++							    htc_hdr,
++							    full_len,
++							    act_len,
++							    &bndl_cnt);
+ 
+ 			if (ret) {
+ 				ath10k_warn(ar, "alloc_bundle error %d\n", ret);
+ 				goto err;
+ 			}
+ 
+-			n_lookaheads += bndl_cnt;
+-			i += bndl_cnt;
++			pkt_cnt += bndl_cnt;
+ 			/*Next buffer will be the last in the bundle */
+ 			last_in_bundle = true;
+ 		}
+@@ -597,7 +603,7 @@ static int ath10k_sdio_mbox_rx_alloc(struct ath10k *ar,
+ 		if (htc_hdr->flags & ATH10K_HTC_FLAGS_RECV_1MORE_BLOCK)
+ 			full_len += ATH10K_HIF_MBOX_BLOCK_SIZE;
+ 
+-		ret = ath10k_sdio_mbox_alloc_rx_pkt(&ar_sdio->rx_pkts[i],
++		ret = ath10k_sdio_mbox_alloc_rx_pkt(&ar_sdio->rx_pkts[pkt_cnt],
+ 						    act_len,
+ 						    full_len,
+ 						    last_in_bundle,
+@@ -606,9 +612,10 @@ static int ath10k_sdio_mbox_rx_alloc(struct ath10k *ar,
+ 			ath10k_warn(ar, "alloc_rx_pkt error %d\n", ret);
+ 			goto err;
+ 		}
++		pkt_cnt++;
  	}
  
- 	INIT_WORK(&ar->bundle_tx_work, ath10k_htc_bundle_tx_work);
-@@ -1097,6 +1100,10 @@ int ath10k_htc_connect_service(struct ath10k_htc *htc,
- 	ep->tx_credits = tx_alloc;
- 	ep->tx_credit_size = htc->target_credit_size;
+-	ar_sdio->n_rx_pkts = i;
++	ar_sdio->n_rx_pkts = pkt_cnt;
  
-+	if (conn_req->service_id == ATH10K_HTC_SVC_ID_HTT_DATA_MSG &&
-+	    htc->alt_data_credit_size != 0)
-+		ep->tx_credit_size = htc->alt_data_credit_size;
+ 	return 0;
+ 
+@@ -622,10 +629,10 @@ static int ath10k_sdio_mbox_rx_alloc(struct ath10k *ar,
+ 	return ret;
+ }
+ 
+-static int ath10k_sdio_mbox_rx_packet(struct ath10k *ar,
+-				      struct ath10k_sdio_rx_data *pkt)
++static int ath10k_sdio_mbox_rx_fetch(struct ath10k *ar)
+ {
+ 	struct ath10k_sdio *ar_sdio = ath10k_sdio_priv(ar);
++	struct ath10k_sdio_rx_data *pkt = &ar_sdio->rx_pkts[0];
+ 	struct sk_buff *skb = pkt->skb;
+ 	struct ath10k_htc_hdr *htc_hdr;
+ 	int ret;
+@@ -633,46 +640,62 @@ static int ath10k_sdio_mbox_rx_packet(struct ath10k *ar,
+ 	ret = ath10k_sdio_readsb(ar, ar_sdio->mbox_info.htc_addr,
+ 				 skb->data, pkt->alloc_len);
+ 
+-	if (!ret) {
+-		/* Update actual length. The original length may be incorrect,
+-		 * as the FW will bundle multiple packets as long as their sizes
+-		 * fit within the same aligned length (pkt->alloc_len).
+-		 */
+-		htc_hdr = (struct ath10k_htc_hdr *)skb->data;
+-		pkt->act_len = le16_to_cpu(htc_hdr->len) + sizeof(*htc_hdr);
+-		if (pkt->act_len <= pkt->alloc_len) {
+-			skb_put(skb, pkt->act_len);
+-		} else {
+-			ath10k_warn(ar, "rx packet too large (%zu > %zu)\n",
+-				    pkt->act_len, pkt->alloc_len);
+-			ret = -EMSGSIZE;
+-		}
++	if (ret) {
++		ar_sdio->n_rx_pkts = 0;
++		ath10k_sdio_mbox_free_rx_pkt(pkt);
++		return ret;
+ 	}
+ 
++	htc_hdr = (struct ath10k_htc_hdr *)skb->data;
++	pkt->act_len = le16_to_cpu(htc_hdr->len) + sizeof(*htc_hdr);
+ 	pkt->status = ret;
++	skb_put(skb, pkt->act_len);
+ 
+ 	return ret;
+ }
+ 
+-static int ath10k_sdio_mbox_rx_fetch(struct ath10k *ar)
++static int ath10k_sdio_mbox_rx_fetch_bundle(struct ath10k *ar)
+ {
+ 	struct ath10k_sdio *ar_sdio = ath10k_sdio_priv(ar);
++	struct ath10k_sdio_rx_data *pkt;
++	struct ath10k_htc_hdr *htc_hdr;
+ 	int ret, i;
++	u32 pkt_offset, virt_pkt_len;
+ 
++	virt_pkt_len = 0;
+ 	for (i = 0; i < ar_sdio->n_rx_pkts; i++) {
+-		ret = ath10k_sdio_mbox_rx_packet(ar,
+-						 &ar_sdio->rx_pkts[i]);
++		virt_pkt_len += ar_sdio->rx_pkts[i].alloc_len;
++	}
 +
- 	/* copy all the callbacks */
- 	ep->ep_ops = conn_req->ep_ops;
- 
-diff --git a/drivers/net/wireless/ath/ath10k/htc.h b/drivers/net/wireless/ath/ath10k/htc.h
-index 7b8e0d0..f3a6ebb 100644
---- a/drivers/net/wireless/ath/ath10k/htc.h
-+++ b/drivers/net/wireless/ath/ath10k/htc.h
-@@ -141,8 +141,14 @@ struct ath10k_htc_ready_extended {
- 	struct ath10k_htc_ready base;
- 	u8 htc_version; /* @enum ath10k_htc_version */
- 	u8 max_msgs_per_htc_bundle;
--	u8 pad0;
--	u8 pad1;
-+	union {
-+		__le16 reserved;
-+		struct {
-+			u8 pad0;
-+			u8 pad1;
-+		} __packed;
-+	} __packed;
++	if (virt_pkt_len < ATH10K_SDIO_DMA_BUF_SIZE) {
++		ret = ath10k_sdio_readsb(ar, ar_sdio->mbox_info.htc_addr,
++					 ar_sdio->vsg_buffer, virt_pkt_len);
+ 		if (ret)
+ 			goto err;
++	} else {
++		ath10k_err(ar, "size exceeding limit %d\n", virt_pkt_len);
++	}
 +
- } __packed;
++	pkt_offset = 0;
++	for (i = 0; i < ar_sdio->n_rx_pkts; i++) {
++		pkt = &ar_sdio->rx_pkts[i];
++		htc_hdr = (struct ath10k_htc_hdr *)(ar_sdio->vsg_buffer + pkt_offset);
++		pkt->act_len = le16_to_cpu(htc_hdr->len) + sizeof(*htc_hdr);
++
++		skb_put_data(pkt->skb, htc_hdr, pkt->act_len);
++		pkt->status = 0;
++		pkt_offset += pkt->alloc_len;
+ 	}
  
- struct ath10k_htc_conn_svc {
-@@ -379,6 +385,7 @@ struct ath10k_htc {
- 	int total_transmit_credits;
- 	int target_credit_size;
- 	u8 max_msgs_per_htc_bundle;
-+	int alt_data_credit_size;
+ 	return 0;
+ 
+ err:
+ 	/* Free all packets that was not successfully fetched. */
+-	for (; i < ar_sdio->n_rx_pkts; i++)
++	for (i = 0; i < ar_sdio->n_rx_pkts; i++)
+ 		ath10k_sdio_mbox_free_rx_pkt(&ar_sdio->rx_pkts[i]);
+ 
++	ar_sdio->n_rx_pkts = 0;
++
+ 	return ret;
+ }
+ 
+@@ -715,7 +738,10 @@ static int ath10k_sdio_mbox_rxmsg_pending_handler(struct ath10k *ar,
+ 			 */
+ 			*done = false;
+ 
+-		ret = ath10k_sdio_mbox_rx_fetch(ar);
++		if (ar_sdio->n_rx_pkts > 1)
++			ret = ath10k_sdio_mbox_rx_fetch_bundle(ar);
++		else
++			ret = ath10k_sdio_mbox_rx_fetch(ar);
+ 
+ 		/* Process fetched packets. This will potentially update
+ 		 * n_lookaheads depending on if the packets contain lookahead
+@@ -1123,7 +1149,7 @@ static int ath10k_sdio_bmi_get_rx_lookahead(struct ath10k *ar)
+ 					 MBOX_HOST_INT_STATUS_ADDRESS,
+ 					 &rx_word);
+ 		if (ret) {
+-			ath10k_warn(ar, "unable to read RX_LOOKAHEAD_VALID: %d\n", ret);
++			ath10k_warn(ar, "unable to read rx_lookahd: %d\n", ret);
+ 			return ret;
+ 		}
+ 
+@@ -2018,6 +2044,12 @@ static int ath10k_sdio_probe(struct sdio_func *func,
+ 		goto err_core_destroy;
+ 	}
+ 
++	ar_sdio->vsg_buffer = devm_kmalloc(ar->dev, ATH10K_SDIO_VSG_BUF_SIZE, GFP_KERNEL);
++	if (!ar_sdio->vsg_buffer) {
++		ret = -ENOMEM;
++		goto err_core_destroy;
++	}
++
+ 	ar_sdio->irq_data.irq_en_reg =
+ 		devm_kzalloc(ar->dev, sizeof(struct ath10k_sdio_irq_enable_regs),
+ 			     GFP_KERNEL);
+diff --git a/drivers/net/wireless/ath/ath10k/sdio.h b/drivers/net/wireless/ath/ath10k/sdio.h
+index b8c7ac0..4896eca 100644
+--- a/drivers/net/wireless/ath/ath10k/sdio.h
++++ b/drivers/net/wireless/ath/ath10k/sdio.h
+@@ -138,8 +138,8 @@ struct ath10k_sdio_irq_proc_regs {
+ 	u8 rx_lookahead_valid;
+ 	u8 host_int_status2;
+ 	u8 gmbox_rx_avail;
+-	__le32 rx_lookahead[2];
+-	__le32 rx_gmbox_lookahead_alias[2];
++	__le32 rx_lookahead[2 * ATH10K_HIF_MBOX_NUM_MAX];
++	__le32 int_status_enable;
  };
  
- int ath10k_htc_init(struct ath10k *ar);
+ struct ath10k_sdio_irq_enable_regs {
+@@ -196,6 +196,9 @@ struct ath10k_sdio {
+ 	struct ath10k *ar;
+ 	struct ath10k_sdio_irq_data irq_data;
+ 
++	/* temporary buffer for sdio read */
++	u8 *vsg_buffer;
++
+ 	/* temporary buffer for BMI requests */
+ 	u8 *bmi_buf;
+ 
 -- 
 1.9.1
 
