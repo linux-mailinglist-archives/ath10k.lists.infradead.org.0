@@ -2,59 +2,60 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 506369F92C
-	for <lists+ath10k@lfdr.de>; Wed, 28 Aug 2019 06:24:47 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A39799F95E
+	for <lists+ath10k@lfdr.de>; Wed, 28 Aug 2019 06:25:55 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:
 	Message-ID:Date:To:From:Subject:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=wixOZkNqGHUE4Bj91KjHLqygHQzuEJtEDmsIoMM72i4=; b=XZri8pCA8XpWz5
-	M9tYlL6sbfrxzSKGF6s+XObQiyJetmJLlSbZr/ZW6BoMQBP12vLHud4G25ar8jFfy5IXlWfw3iObq
-	qGHQ8S67/0VfXEt+H16NRQ+jTt5WoeEWgTuR5QaHwlrYWLJHqNsGJCxkjo14cQk9jKNR05lvH89eS
-	/upMOXD94IQZ4vmwG0znLQ4/VFvOmAQlZ7P08VwZjPfPJTC6tbEE1avQxiehTiIz5d9TWdiuyxPZb
-	oib7nv9CIU/qMBdbWOazAaU9Cto8scmed2+R2B3LXkVtLsqiuSOswJYHbdiTUTWPzdAOVIovgaLc3
-	qeBzqd5bCZTEm2n+AtpA==;
+	List-Owner; bh=JNIwlpbSqq+RutrN4ht335ZOAz3F6dteQ3ou4VADN+I=; b=BNA3rWDSc1YroD
+	UKGk51sKlM/W3UOEFF+bfA4bq9/wyoC1Pt6XZ6HBtgj9ey3WLCYRiEorgffBnkXSbKiJ2FvEUGiCZ
+	Ra8Eq2El/lT2MTvsebUeLPHFx4mTMMkRuIuHzKRw+20TRWvtbeUIWRkloaQdnG6c4dxQeOv1aNuvA
+	Q+FW6y2ib7csPcGLGEn/028gMku1zNBQ8QJJa+a0XBPSgSbWS61e6jCF+fMf2rA1lQeAiuDdLuS0u
+	uqoRtDGZNVquIxAInXIfamKUSIr93FKOp+ttTjIAlnlvPomOj7+fiU7Pue4hMx5xbany9Q5Hvs333
+	OAmVcy1Nb84nk6xTnnzQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i2pVd-0004aE-7t; Wed, 28 Aug 2019 04:24:37 +0000
+	id 1i2pWr-0005uD-Rc; Wed, 28 Aug 2019 04:25:53 +0000
 Received: from alexa-out-tai-02.qualcomm.com ([103.229.16.227])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i2pVW-0004Zt-6g
- for ath10k@lists.infradead.org; Wed, 28 Aug 2019 04:24:32 +0000
+ id 1i2pWm-0005tt-MI
+ for ath10k@lists.infradead.org; Wed, 28 Aug 2019 04:25:50 +0000
 DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
  d=qti.qualcomm.com; i=@qti.qualcomm.com; q=dns/txt;
- s=qcdkim; t=1566966270; x=1598502270;
+ s=qcdkim; t=1566966348; x=1598502348;
  h=from:to:cc:date:message-id:references:in-reply-to:
  content-transfer-encoding:mime-version:subject;
- bh=CXzB/bzc1cdVdYR4chC1TCl+JVX8vhGdoxM0hTLjYhA=;
- b=lkEUXx+K1LfTW6vRLNxhi21BqQPKDTqcrVnDEn5PCLyzivKf7VMUyz6W
- 5CfxtPbKlDqGNZsE7cUn6FMkGfOZiQVo8vrsSzb1RDrI4jPF3INBv9GPn
- lualYcqjsZ/WHNYYh0fi8XrknIlAtwRV+uVoIOmSbX1axmNCP03TdsdVx s=;
-Subject: RE: [PATCH 4/7] ath10k: disable TX complete indication of htt for sdio
-Thread-Topic: [PATCH 4/7] ath10k: disable TX complete indication of htt for
- sdio
-Received: from ironmsg02-tai.qualcomm.com ([10.249.140.7])
- by alexa-out-tai-02.qualcomm.com with ESMTP; 28 Aug 2019 12:24:26 +0800
-Received: from aptaiexm02e.ap.qualcomm.com ([10.249.150.15])
- by ironmsg02-tai.qualcomm.com with ESMTP/TLS/AES256-SHA;
- 28 Aug 2019 12:24:21 +0800
+ bh=1w7wzvKuS9YEZhjT4ceycD2S/64vc4595oy7ZgVgPbk=;
+ b=FuhxNRCZoI+gUk+9DAnKZaTes1u+vW1Zfc1TKwgOkup4Cd3mYJsAfkeN
+ 9I4ovKbx/u7LB5pfRQ1AGARkeQAk5RMXuQkvCA0IFWV30cP+ymPIOUC7u
+ 3bnTKVicMXaMjmAIXnPjtm7fTwSqpcmKcZhmXCEVZ8NglGl6bdfoAsiL7 c=;
+Subject: RE: [PATCH 1/7] ath10k: enable RX bundle receive for sdio
+Thread-Topic: [PATCH 1/7] ath10k: enable RX bundle receive for sdio
+Received: from ironmsg01-tai.qualcomm.com ([10.249.140.6])
+ by alexa-out-tai-02.qualcomm.com with ESMTP; 28 Aug 2019 12:25:47 +0800
+Received: from aptaiexm02a.ap.qualcomm.com ([10.249.150.11])
+ by ironmsg01-tai.qualcomm.com with ESMTP/TLS/AES256-SHA;
+ 28 Aug 2019 12:25:43 +0800
 Received: from aptaiexm02f.ap.qualcomm.com (10.249.150.16) by
- aptaiexm02e.ap.qualcomm.com (10.249.150.15) with Microsoft SMTP Server (TLS)
- id 15.0.1473.3; Wed, 28 Aug 2019 12:24:19 +0800
+ aptaiexm02a.ap.qualcomm.com (10.249.150.11) with Microsoft SMTP Server (TLS)
+ id 15.0.1473.3; Wed, 28 Aug 2019 12:25:40 +0800
 Received: from aptaiexm02f.ap.qualcomm.com ([fe80::4152:1436:e436:faa1]) by
  aptaiexm02f.ap.qualcomm.com ([fe80::4152:1436:e436:faa1%19]) with mapi id
- 15.00.1473.005; Wed, 28 Aug 2019 12:24:19 +0800
+ 15.00.1473.005; Wed, 28 Aug 2019 12:25:40 +0800
 From: Wen Gong <wgong@qti.qualcomm.com>
-To: Nicolas Boichat <drinkcat@chromium.org>, Wen Gong <wgong@codeaurora.org>
-Thread-Index: AQHVXKzzjxZCt6O9SkuF3pWkouQdf6cP9z3g
-Date: Wed, 28 Aug 2019 04:24:19 +0000
-Message-ID: <7975595590134eb298cf3c0ea17aa4b1@aptaiexm02f.ap.qualcomm.com>
+To: Nicolas Boichat <drinkcat@chromium.org>
+Thread-Index: AQHVXKrOUvYo32uqIkuIjmEPEapo6qcOngKQ//9/pgCAAdoPoA==
+Date: Wed, 28 Aug 2019 04:25:40 +0000
+Message-ID: <032d964e076f4d34ac516863b031bf17@aptaiexm02f.ap.qualcomm.com>
 References: <1566302108-18219-1-git-send-email-wgong@codeaurora.org>
- <1566302108-18219-5-git-send-email-wgong@codeaurora.org>
- <CANMq1KDo1xur9M7+XgNWkdarJOQfu9_Ofk=G5ajypWpq00e9=A@mail.gmail.com>
-In-Reply-To: <CANMq1KDo1xur9M7+XgNWkdarJOQfu9_Ofk=G5ajypWpq00e9=A@mail.gmail.com>
+ <1566302108-18219-2-git-send-email-wgong@codeaurora.org>
+ <CANMq1KBR0nd+XOJWpgWyoJdsFgZByQyjD-0dpttygiN0OfiD5Q@mail.gmail.com>
+ <2ec213d88ebb4b89812826866b39886d@aptaiexm02f.ap.qualcomm.com>
+ <CANMq1KCiH8-16esCfwi+60=ArZKC0G83Qs-W2Hq5GARar=6D9g@mail.gmail.com>
+In-Reply-To: <CANMq1KCiH8-16esCfwi+60=ArZKC0G83Qs-W2Hq5GARar=6D9g@mail.gmail.com>
 Accept-Language: en-US
 Content-Language: en-US
 X-MS-Has-Attach: 
@@ -63,8 +64,8 @@ x-ms-exchange-transport-fromentityheader: Hosted
 x-originating-ip: [10.249.136.10]
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190827_212430_514158_8C7451C9 
-X-CRM114-Status: GOOD (  10.22  )
+X-CRM114-CacheID: sfid-20190827_212548_999001_43ADAE7A 
+X-CRM114-Status: GOOD (  13.80  )
 X-Spam-Score: -2.4 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-2.4 points)
@@ -92,35 +93,65 @@ List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
 Cc: "open list:NETWORKING DRIVERS \(WIRELESS\)"
  <linux-wireless@vger.kernel.org>,
- "ath10k@lists.infradead.org" <ath10k@lists.infradead.org>
+ "ath10k@lists.infradead.org" <ath10k@lists.infradead.org>,
+ Wen Gong <wgong@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-
 > -----Original Message-----
 > From: ath10k <ath10k-bounces@lists.infradead.org> On Behalf Of Nicolas
 > Boichat
-> Sent: Tuesday, August 27, 2019 3:56 PM
-> To: Wen Gong <wgong@codeaurora.org>
+> Sent: Tuesday, August 27, 2019 4:08 PM
+> To: Wen Gong <wgong@qti.qualcomm.com>
 > Cc: open list:NETWORKING DRIVERS (WIRELESS) <linux-
-> wireless@vger.kernel.org>; ath10k@lists.infradead.org
-> Subject: [EXT] Re: [PATCH 4/7] ath10k: disable TX complete indication of htt
-> for sdio
+> wireless@vger.kernel.org>; ath10k@lists.infradead.org; Wen Gong
+> <wgong@codeaurora.org>
+> Subject: [EXT] Re: [PATCH 1/7] ath10k: enable RX bundle receive for sdio
 > 
-> On Tue, Aug 20, 2019 at 7:55 PM Wen Gong <wgong@codeaurora.org> wrote:
+> On Tue, Aug 27, 2019 at 4:03 PM Wen Gong <wgong@qti.qualcomm.com>
+> wrote:
 > >
-> > Tx complete message from firmware cost bus bandwidth of sdio, and bus
-> > bandwidth is the bollteneck of throughput, it will effect the bandwidth
-> > occupancy of data packet of TX and RX.
-> >
-> > This patch disable TX complete indication from firmware for htt data
-> > packet, it results in significant performance improvement on TX path.
-> >
-Patch v2 sent with the changes, https://patchwork.kernel.org/patch/11116685/
-
-> >
+> > > -----Original Message-----
+> > > From: ath10k <ath10k-bounces@lists.infradead.org> On Behalf Of Nicolas
+> > > Boichat
+> > > Sent: Tuesday, August 27, 2019 3:41 PM
+> > > To: Wen Gong <wgong@codeaurora.org>
+> > > Cc: open list:NETWORKING DRIVERS (WIRELESS) <linux-
+> > > wireless@vger.kernel.org>; ath10k@lists.infradead.org
+> > > Subject: [EXT] Re: [PATCH 1/7] ath10k: enable RX bundle receive for sdio
+> > The bundled buffer len is 256 * 3 = 768, it has 256 bytes for each packet,
+> the left size is padding which
+> > Is not needed, but the left padding is not same for each packet, before read
+> all the buffer from sdio bus,
+> > It does not know each packet's act len, it only know the 1st packet's act len.
+> > So it need to copy all the alloc_len's buffer to ensure it will not lose data.
+> 
+> Gotcha, thanks.
+Patch v2 sent with the changes, https://patchwork.kernel.org/patch/11116681/
+> 
+> > > Actually, just use skb_put_data.
+> > >
+> > > Also, do you have the same issue as
+> > > https://patchwork.kernel.org/patch/11116215/ w.r.t. act_len being
+> > > incorrect?
+> > >
+> > > > +               pkt->status = 0;
+> > > > +               skb_put(skb, pkt->act_len);
+> 
+> So I guess this is incorrect, see patchwork linked above.
+> 
+> > > > +               pkt_offset += pkt->alloc_len;
+> > > >         }
+> > > >
+> > > >         return 0;
+> > > >
+> > >
+> > > _______________________________________________
+> > > ath10k mailing list
+> > > ath10k@lists.infradead.org
+> > > http://lists.infradead.org/mailman/listinfo/ath10k
 > 
 > _______________________________________________
 > ath10k mailing list
