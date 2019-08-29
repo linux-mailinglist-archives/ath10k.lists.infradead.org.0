@@ -2,73 +2,71 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 75351A22CE
-	for <lists+ath10k@lfdr.de>; Thu, 29 Aug 2019 19:53:06 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B6326A22D1
+	for <lists+ath10k@lfdr.de>; Thu, 29 Aug 2019 19:53:49 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:References:
-	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
-	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
-	:Resent-Message-ID:List-Owner;
-	bh=H5LY2MFuXJYrYqYm8cocJ1M7ZQsVKVGRXjyw5ozmors=; b=S2QtgLTm+nthhxss7JSZxzRv6E
-	LvGkzW88ZaSGtO4fKfufKiCENlvPw41ohhvkGVi6UMifY5IZY3VNZLIXdzcZTBsmj7dVYhw8rsY4M
-	UqS8kBY0vG5kWCfvyXTEco2VOJ2I9VGoB4Vj+d2t0hqvL1Nagdz1QaFZ/eNF4tZmSM7nzcx9BhZzI
-	EhJBO20jHVpkKe5+fQWu0JJShtFVyRE5LHiEh1lJWGZjThZioOVHyJBTCT5WECYkn2AlEbNszm5UG
-	xNukXEZGWQUnzIARS8pNZ5Yy81yjC92aMkCn0bdag9Qnt+Wg4pBMOWE0FnavXFKSADLoyHLkEX5WC
-	Evk68BUQ==;
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
+	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=3BbPGRd9jiuzsKIxNOUWQu+JkvaTlxH9VVNZ5B2+QqA=; b=ZBa
+	Xwzu4fjBTO4BF9q5tPx121P2kdta9yjAK+uzrjtfZBmAfQ2P8yolHiwhsg2S/96CGHcqg2bV252Mu
+	R7I3I1jbQxFByBKBxlMAuqDg8NB/QMr1QzGoupU7G7a9wpv77TRK3bVkStxY9N0piPvlB9D5stOk6
+	5X9irv+LekXS64KlsUjl0Vxm9tFZzNCPvodouYV192RcFQeLw1Spx5U/qdTJSEywihkMdEgEzJtp6
+	kCsX1WDu2t6YVNG/LEkYb7OEXEmz9Bd0qktL5W51opLbretahOoZ2/V+nyD1Xd89bzVv1xbLLSgBS
+	aKwE0okzaMwg6yeN6mUfxtlHZgkWB3w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i3ObY-00075X-Sn; Thu, 29 Aug 2019 17:53:04 +0000
+	id 1i3OcG-0007E1-DR; Thu, 29 Aug 2019 17:53:48 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i3ObT-00075C-4Z
- for ath10k@lists.infradead.org; Thu, 29 Aug 2019 17:53:00 +0000
+ id 1i3OcA-0007Dg-Fg
+ for ath10k@lists.infradead.org; Thu, 29 Aug 2019 17:53:43 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id B9C0C621F9; Thu, 29 Aug 2019 17:36:16 +0000 (UTC)
+ id E8BF0687EB; Thu, 29 Aug 2019 17:50:35 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1567100314;
- bh=mjqi6ia2k3/S9ChbSRXSChEhQXEcvudF1ncvY00WPVc=;
- h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=FBvzMXZfbY9cMSDXScP4bLzJGbZLbSgpNMxQeOv3iptC7P5nkds5ZKsWb9p0RgBkc
- HozN6HRtkBV2IQOvBM+TmaUsxLd//IDR8vxE+wKPTgqA+OzEbfDBrJYqiZr9IcqR5z
- 0yfMLJnF20yU6FEf3uxPD//6ysQl5pwuBwpktRAA=
+ s=default; t=1567101101;
+ bh=bleuRIGGQXtxy2m1UO/Sr1VcKu3Nw/apzjxW1618aAo=;
+ h=From:To:Cc:Subject:Date:From;
+ b=NhVkTKlzd1aXV3xOUwl9kOcFiqVLLaF/JEeTM7VyHyJrnS7cORgQZe7Sg6rO6tlJH
+ CFzzbHWQIM/Iw+PutS2LsHeMhWedbvpaHMe1p92Sza4JxkNGnmwm5xzX0ctwPPJcg4
+ bt055Q6OvCfYwkCfyprmqAZXBzEbRuRvuutWL9lM=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
 X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
  DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
  version=3.4.0
-Received: from wgong-HP-Z240-SFF-Workstation.qca.qualcomm.com (unknown
- [180.166.53.21])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
+Received: from smtp.codeaurora.org (unknown [180.166.53.21])
+ (using TLSv1 with cipher AES128-SHA (128/128 bits))
  (No client certificate requested)
- (Authenticated sender: wgong@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 7646588A2D;
- Wed, 28 Aug 2019 13:16:44 +0000 (UTC)
+ (Authenticated sender: miaoqing@smtp.codeaurora.org)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id CD65B89988;
+ Thu, 29 Aug 2019 02:46:13 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1566998206;
- bh=mjqi6ia2k3/S9ChbSRXSChEhQXEcvudF1ncvY00WPVc=;
- h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=KcEHXpGubmJlyujQosZzzy+wNq5m+7rGx8g2gdM7wvMX+OrKEfYMDL1z8fgLzbVEN
- 3Sry8af+bH/VJlYBEmywEnwoLc74oI2O44pp5WH/wdMYtYzFwqGy8KM2kEHONmeuWk
- b5+VzeOU8IXBkNffK6JaQ3KswmBgumLQQ5CMNa1A=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 7646588A2D
+ s=default; t=1567046776;
+ bh=bleuRIGGQXtxy2m1UO/Sr1VcKu3Nw/apzjxW1618aAo=;
+ h=From:To:Cc:Subject:Date:From;
+ b=K9BXqJolkVr+10nYEjo7UV8uqgeZyr2oaDE4MEgOOsBXwFi0+Vg3OY40HL0rIDbbI
+ mNiufXPr0dIXAgaYTLGOSGhjpUmfHZ73fADOqbAiCvU/pyJucyqoZlPJRnhFtKZhbD
+ 0huRk1ohqrkSourfcyJyl6xVY66JUueONpUgvW0A=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org CD65B89988
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
- spf=none smtp.mailfrom=wgong@codeaurora.org
-From: Wen Gong <wgong@codeaurora.org>
+ spf=none smtp.mailfrom=miaoqing@codeaurora.org
+Received: by smtp.codeaurora.org (sSMTP sendmail emulation);
+ Thu, 29 Aug 2019 10:46:09 +0800
+From: Miaoqing Pan <miaoqing@codeaurora.org>
 To: ath10k@lists.infradead.org
-Subject: [PATCH v3 8/8] ath10k: enable napi on RX path for sdio
-Date: Wed, 28 Aug 2019 21:16:17 +0800
-Message-Id: <1566998177-2658-9-git-send-email-wgong@codeaurora.org>
+Subject: [PATCH] ath10k: fix latency issue for QCA988x
+Date: Thu, 29 Aug 2019 10:45:12 +0800
+Message-Id: <1567046712-23057-1-git-send-email-miaoqing@codeaurora.org>
 X-Mailer: git-send-email 1.9.1
-In-Reply-To: <1566998177-2658-1-git-send-email-wgong@codeaurora.org>
-References: <1566998177-2658-1-git-send-email-wgong@codeaurora.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190829_105259_224162_B0DAA8A8 
-X-CRM114-Status: GOOD (  16.55  )
+X-CRM114-CacheID: sfid-20190829_105342_543609_1C838252 
+X-CRM114-Status: GOOD (  11.26  )
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-2.5 points)
@@ -96,268 +94,53 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless@vger.kernel.org
+Cc: linux-wireless@vger.kernel.org, Miaoqing Pan <miaoqing@codeaurora.org>
 MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-For tcp RX, the quantity of tcp acks to remote is 1/2 of the quantity
-of tcp data from remote, then it will have many small length packets
-on TX path of sdio bus, then it reduce the RX packets's bandwidth of
-tcp.
+Bad latency is found on QCA988x, the issue was introduced by
+commit 4504f0e5b571 ("ath10k: sdio: workaround firmware UART
+pin configuration bug"). If uart_pin_workaround is false, this
+change will set uart pin even if uart_print is false.
 
-This patch enable napi on RX path, then the RX packet of tcp will not
-feed to tcp stack immeditely from mac80211 since GRO is enabled by
-default, it will feed to tcp stack after napi complete, if rx bundle
-is enabled, then it will feed to tcp stack one time for each bundle
-of RX. For example, RX bundle size is 32, then tcp stack will receive
-one large length packet, its length is neary 1500*32, then tcp stack
-will send a tcp ack for this large packet, this will reduce the tcp
-acks ratio from 1/2 to 1/32. This results in significant performance
-improvement for tcp RX.
+Tested HW: QCA9880
+Tested FW: 10.2.4-1.0-00037
 
-Tcp rx throughout is 240Mbps without this patch, and it arrive 390Mbps
-with this patch. The cpu usage has no obvious difference with and
-without NAPI.
-
-call stack for each RX packet on GRO path:
-(skb length is about 1500 bytes)
-  skb_gro_receive ([kernel.kallsyms])
-  tcp4_gro_receive ([kernel.kallsyms])
-  inet_gro_receive ([kernel.kallsyms])
-  dev_gro_receive ([kernel.kallsyms])
-  napi_gro_receive ([kernel.kallsyms])
-  ieee80211_deliver_skb ([mac80211])
-  ieee80211_rx_handlers ([mac80211])
-  ieee80211_prepare_and_rx_handle ([mac80211])
-  ieee80211_rx_napi ([mac80211])
-  ath10k_htt_rx_proc_rx_ind_hl ([ath10k_core])
-  ath10k_htt_rx_pktlog_completion_handler ([ath10k_core])
-  ath10k_sdio_napi_poll ([ath10k_sdio])
-  net_rx_action ([kernel.kallsyms])
-  softirqentry_text_start ([kernel.kallsyms])
-  do_softirq ([kernel.kallsyms])
-
-call stack for napi complete and send tcp ack from tcp stack:
-(skb length is about 1500*32 bytes)
- _tcp_ack_snd_check ([kernel.kallsyms])
- tcp_v4_do_rcv ([kernel.kallsyms])
- tcp_v4_rcv ([kernel.kallsyms])
- local_deliver_finish ([kernel.kallsyms])
- ip_local_deliver ([kernel.kallsyms])
- ip_rcv_finish ([kernel.kallsyms])
- ip_rcv ([kernel.kallsyms])
- netif_receive_skb_core ([kernel.kallsyms])
- netif_receive_skb_one_core([kernel.kallsyms])
- netif_receive_skb ([kernel.kallsyms])
- netif_receive_skb_internal ([kernel.kallsyms])
- napi_gro_complete ([kernel.kallsyms])
- napi_gro_flush ([kernel.kallsyms])
- napi_complete_done ([kernel.kallsyms])
- ath10k_sdio_napi_poll ([ath10k_sdio])
- net_rx_action ([kernel.kallsyms])
- __softirqentry_text_start ([kernel.kallsyms])
- do_softirq ([kernel.kallsyms])
-
-Tested with QCA6174 SDIO with firmware
-WLAN.RMH.4.4.1-00007-QCARMSWP-1.
-
-Signed-off-by: Wen Gong <wgong@codeaurora.org>
+Fixes: 4504f0e5b571 ("ath10k: sdio: workaround firmware UART pin configuration bug")
+Signed-off-by: Miaoqing Pan <miaoqing@codeaurora.org>
 ---
-v2:no change
-v3:change some code style
- drivers/net/wireless/ath/ath10k/htt.c    |  2 ++
- drivers/net/wireless/ath/ath10k/htt.h    |  3 +++
- drivers/net/wireless/ath/ath10k/htt_rx.c | 45 ++++++++++++++++++++++++++------
- drivers/net/wireless/ath/ath10k/sdio.c   | 33 +++++++++++++++++++++++
- 4 files changed, 75 insertions(+), 8 deletions(-)
+ drivers/net/wireless/ath/ath10k/core.c | 15 +++++++++------
+ 1 file changed, 9 insertions(+), 6 deletions(-)
 
-diff --git a/drivers/net/wireless/ath/ath10k/htt.c b/drivers/net/wireless/ath/ath10k/htt.c
-index 127b4e4..f69346f 100644
---- a/drivers/net/wireless/ath/ath10k/htt.c
-+++ b/drivers/net/wireless/ath/ath10k/htt.c
-@@ -157,6 +157,8 @@ int ath10k_htt_connect(struct ath10k_htt *htt)
- 
- 	htt->eid = conn_resp.eid;
- 
-+	skb_queue_head_init(&htt->rx_indication_head);
-+
- 	if (ar->bus_param.dev_type == ATH10K_DEV_TYPE_HL) {
- 		ep = &ar->htc.endpoint[htt->eid];
- 		ath10k_htc_setup_tx_req(ep);
-diff --git a/drivers/net/wireless/ath/ath10k/htt.h b/drivers/net/wireless/ath/ath10k/htt.h
-index 4851a2e..462a25b 100644
---- a/drivers/net/wireless/ath/ath10k/htt.h
-+++ b/drivers/net/wireless/ath/ath10k/htt.h
-@@ -1879,6 +1879,8 @@ struct ath10k_htt {
- 	struct ath10k *ar;
- 	enum ath10k_htc_ep_id eid;
- 
-+	struct sk_buff_head rx_indication_head;
-+
- 	u8 target_version_major;
- 	u8 target_version_minor;
- 	struct completion target_version_received;
-@@ -2298,6 +2300,7 @@ int ath10k_htt_tx_mgmt_inc_pending(struct ath10k_htt *htt, bool is_mgmt,
- void ath10k_htt_rx_pktlog_completion_handler(struct ath10k *ar,
- 					     struct sk_buff *skb);
- int ath10k_htt_txrx_compl_task(struct ath10k *ar, int budget);
-+int ath10k_htt_rx_hl_indication(struct ath10k *ar, int budget);
- void ath10k_htt_set_tx_ops(struct ath10k_htt *htt);
- void ath10k_htt_set_rx_ops(struct ath10k_htt *htt);
- #endif
-diff --git a/drivers/net/wireless/ath/ath10k/htt_rx.c b/drivers/net/wireless/ath/ath10k/htt_rx.c
-index 09825b1..71b4afe 100644
---- a/drivers/net/wireless/ath/ath10k/htt_rx.c
-+++ b/drivers/net/wireless/ath/ath10k/htt_rx.c
-@@ -2263,7 +2263,7 @@ static bool ath10k_htt_rx_proc_rx_ind_hl(struct ath10k_htt *htt,
- 	if (mpdu_ranges->mpdu_range_status == HTT_RX_IND_MPDU_STATUS_TKIP_MIC_ERR)
- 		rx_status->flag |= RX_FLAG_MMIC_ERROR;
- 
--	ieee80211_rx_ni(ar->hw, skb);
-+	ieee80211_rx_napi(ar->hw, NULL, skb, &ar->napi);
- 
- 	/* We have delivered the skb to the upper layers (mac80211) so we
- 	 * must not free it.
-@@ -3664,14 +3664,12 @@ bool ath10k_htt_t2h_msg_handler(struct ath10k *ar, struct sk_buff *skb)
- 		break;
- 	}
- 	case HTT_T2H_MSG_TYPE_RX_IND:
--		if (ar->bus_param.dev_type == ATH10K_DEV_TYPE_HL)
--			return ath10k_htt_rx_proc_rx_ind_hl(htt,
--							    &resp->rx_ind_hl,
--							    skb,
--							    HTT_RX_PN_CHECK,
--							    HTT_RX_NON_TKIP_MIC);
--		else
-+		if (ar->bus_param.dev_type != ATH10K_DEV_TYPE_HL) {
- 			ath10k_htt_rx_proc_rx_ind_ll(htt, &resp->rx_ind);
-+		} else {
-+			skb_queue_tail(&htt->rx_indication_head, skb);
-+			return false;
-+		}
- 		break;
- 	case HTT_T2H_MSG_TYPE_PEER_MAP: {
- 		struct htt_peer_map_event ev = {
-@@ -3894,6 +3892,37 @@ static int ath10k_htt_rx_deliver_msdu(struct ath10k *ar, int quota, int budget)
- 	return quota;
- }
- 
-+int ath10k_htt_rx_hl_indication(struct ath10k *ar, int budget)
-+{
-+	struct htt_resp *resp;
-+	struct ath10k_htt *htt = &ar->htt;
-+	struct sk_buff *skb;
-+	bool release;
-+	int quota = 0;
-+
-+	for (quota = 0; quota < budget; quota++) {
-+		skb = skb_dequeue(&htt->rx_indication_head);
-+		if (!skb)
-+			break;
-+
-+		resp = (struct htt_resp *)skb->data;
-+
-+		release = ath10k_htt_rx_proc_rx_ind_hl(htt,
-+						       &resp->rx_ind_hl,
-+						       skb,
-+						       HTT_RX_PN_CHECK,
-+						       HTT_RX_NON_TKIP_MIC);
-+
-+		if (release)
-+			dev_kfree_skb_any(skb);
-+
-+		ath10k_dbg(ar, ATH10K_DBG_HTT, "rx indication poll pending count:%d\n",
-+			   skb_queue_len(&htt->rx_indication_head));
-+	}
-+	return quota;
-+}
-+EXPORT_SYMBOL(ath10k_htt_rx_hl_indication);
-+
- int ath10k_htt_txrx_compl_task(struct ath10k *ar, int budget)
- {
- 	struct ath10k_htt *htt = &ar->htt;
-diff --git a/drivers/net/wireless/ath/ath10k/sdio.c b/drivers/net/wireless/ath/ath10k/sdio.c
-index c641f1b..23e92ea 100644
---- a/drivers/net/wireless/ath/ath10k/sdio.c
-+++ b/drivers/net/wireless/ath/ath10k/sdio.c
-@@ -1400,6 +1400,9 @@ static void ath10k_rx_indication_async_work(struct work_struct *work)
- 		spin_lock_bh(&ar_sdio->wr_async_lock_rx);
+diff --git a/drivers/net/wireless/ath/ath10k/core.c b/drivers/net/wireless/ath/ath10k/core.c
+index dc45d16..383d4fa 100644
+--- a/drivers/net/wireless/ath/ath10k/core.c
++++ b/drivers/net/wireless/ath/ath10k/core.c
+@@ -2118,12 +2118,15 @@ static int ath10k_init_uart(struct ath10k *ar)
+ 		return ret;
  	}
  
-+	if (test_bit(ATH10K_FLAG_CORE_REGISTERED, &ar->dev_flags))
-+		napi_schedule(&ar->napi);
-+
- 	spin_unlock_bh(&ar_sdio->wr_async_lock_rx);
- }
+-	if (!uart_print && ar->hw_params.uart_pin_workaround) {
+-		ret = ath10k_bmi_write32(ar, hi_dbg_uart_txpin,
+-					 ar->hw_params.uart_pin);
+-		if (ret) {
+-			ath10k_warn(ar, "failed to set UART TX pin: %d", ret);
+-			return ret;
++	if (!uart_print) {
++		if (ar->hw_params.uart_pin_workaround) {
++			ret = ath10k_bmi_write32(ar, hi_dbg_uart_txpin,
++						 ar->hw_params.uart_pin);
++			if (ret) {
++				ath10k_warn(ar, "failed to set UART TX pin: %d",
++					    ret);
++				return ret;
++			}
+ 		}
  
-@@ -1813,6 +1816,8 @@ static int ath10k_sdio_hif_start(struct ath10k *ar)
- 	struct ath10k_sdio *ar_sdio = ath10k_sdio_priv(ar);
- 	int ret;
- 
-+	napi_enable(&ar->napi);
-+
- 	/* Sleep 20 ms before HIF interrupts are disabled.
- 	 * This will give target plenty of time to process the BMI done
- 	 * request before interrupts are disabled.
-@@ -1951,6 +1956,9 @@ static void ath10k_sdio_hif_stop(struct ath10k *ar)
- 	}
- 
- 	spin_unlock_bh(&ar_sdio->wr_async_lock);
-+
-+	napi_synchronize(&ar->napi);
-+	napi_disable(&ar->napi);
- }
- 
- #ifdef CONFIG_PM
-@@ -2127,6 +2135,26 @@ static SIMPLE_DEV_PM_OPS(ath10k_sdio_pm_ops, ath10k_sdio_pm_suspend,
- 
- #endif /* CONFIG_PM_SLEEP */
- 
-+static int ath10k_sdio_napi_poll(struct napi_struct *ctx, int budget)
-+{
-+	struct ath10k *ar = container_of(ctx, struct ath10k, napi);
-+	int done;
-+
-+	done = ath10k_htt_rx_hl_indication(ar, budget);
-+	ath10k_dbg(ar, ATH10K_DBG_SDIO, "napi poll: done: %d,budget:%d\n", done, budget);
-+
-+	if (done < budget)
-+		napi_complete_done(ctx, done);
-+
-+	return done;
-+}
-+
-+void ath10k_sdio_init_napi(struct ath10k *ar)
-+{
-+	netif_napi_add(&ar->napi_dev, &ar->napi, ath10k_sdio_napi_poll,
-+		       ATH10K_NAPI_BUDGET);
-+}
-+
- static int ath10k_sdio_probe(struct sdio_func *func,
- 			     const struct sdio_device_id *id)
- {
-@@ -2152,6 +2180,8 @@ static int ath10k_sdio_probe(struct sdio_func *func,
- 		return -ENOMEM;
- 	}
- 
-+	ath10k_sdio_init_napi(ar);
-+
- 	ath10k_dbg(ar, ATH10K_DBG_BOOT,
- 		   "sdio new func %d vendor 0x%x device 0x%x block 0x%x/0x%x\n",
- 		   func->num, func->vendor, func->device,
-@@ -2272,6 +2302,9 @@ static void ath10k_sdio_remove(struct sdio_func *func)
- 		   func->num, func->vendor, func->device);
- 
- 	ath10k_core_unregister(ar);
-+
-+	netif_napi_del(&ar->napi);
-+
- 	ath10k_core_destroy(ar);
- 
- 	flush_workqueue(ar_sdio->workqueue);
+ 		return 0;
 -- 
 1.9.1
 
