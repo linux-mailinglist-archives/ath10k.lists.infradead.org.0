@@ -2,82 +2,84 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 79B7FA2D04
-	for <lists+ath10k@lfdr.de>; Fri, 30 Aug 2019 04:54:17 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 49103A2D06
+	for <lists+ath10k@lfdr.de>; Fri, 30 Aug 2019 04:54:34 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:
+	Message-ID:Date:To:From:Subject:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=hhUDlenbmWeSjQzapfR47t/K+UKpTCrq46uNfOsdysE=; b=m2TQ1qSyv2aKgr
-	KKBF+BUIky3PQ1MAhVK5gHFqksZe18xDHiMGMTgc+61EL0QtVCgKfXJydKJvCKVmLSP19xsDiw2nM
-	K8lzWPkoK5/+yXfB5WVrUUDBHOytXknZkconMlTRPhfEf1CsGTdnCS79cZSLcGjPTDokH6mQeSUrf
-	cUh0Zlx5vxghaXz3UKZ21A4q7VkoRvC29uPOI1IiVod0fsBbPBP3u3OdgP0GivDHg4ZArhSwGT4Kv
-	FCbUU5mQnoJJWKKjxTGkBMxrnobdmL5M1n4P2EQ28oUz2Lzi8j4FU09FfsR3Ocfa25DKUQnezMW4Q
-	qX1r1K/i8qKX9MGwNBZQ==;
+	List-Owner; bh=jkbYAjWgVx0utfjV0+Ou36pHx4A4rHxWksCIn4GdBLM=; b=HoiGKViVc0Ho39
+	1LkJPF3Zc1RQCo3sYoGhZLprm4lM3kubansL6LHrFqdVc+y5QmoEA8MWW2vqWNax75JS/OT4PIrYm
+	nieAzc5mAZILDlJrEQDEZqLRoDpAsr4nSpkVcB9GUVHFS2D06n7NXySv3zdPBjCJg/Vvj3Wtw1VTo
+	eivuGBxyzt8W5potnUkXGMAqKavHp+F3dwC0bXGRHGD+9qo0IXnDOz+Pp7TwnFbmVLFO64Z2JbFlp
+	VmY3JlLWvX3443mS3Cp5R7EQhdFd6Td4f9JxlAjE7yAVpJ6fzRQFYQMhs8sncLUeLbNBfoRXqvnJi
+	rwV15Fa0bee5w/J9lf6A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i3X3D-0000hf-Rv; Fri, 30 Aug 2019 02:54:11 +0000
-Received: from mail-qt1-x844.google.com ([2607:f8b0:4864:20::844])
+	id 1i3X3Y-0000q5-Qk; Fri, 30 Aug 2019 02:54:32 +0000
+Received: from alexa-out-tai-01.qualcomm.com ([103.229.16.226])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i3X38-0000hJ-VW
- for ath10k@lists.infradead.org; Fri, 30 Aug 2019 02:54:08 +0000
-Received: by mail-qt1-x844.google.com with SMTP id i4so6097786qtj.8
- for <ath10k@lists.infradead.org>; Thu, 29 Aug 2019 19:54:06 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=fwcmdgU7q00kFuht+qsrxDsozfaixeSAbbkeY/T3Nl0=;
- b=FcsPpaEA1GnSH1As34kCS/P0soJKps2U5TaBHw3zamZaXqd2YR2g34a/nwD0sUyO4x
- TEtEUZM0QfdeB5EqY89retOOsPljOsrVcyVjxmgHGWAaq/2cxberiPPxZKFNnkGLhCKl
- KjV/0t7H1bDAdpIs3X3Sz9Q76KPZxjZqZMprI=
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=fwcmdgU7q00kFuht+qsrxDsozfaixeSAbbkeY/T3Nl0=;
- b=NY5HvMIct7gn7pI6Kl/2PHh+OhGn8fHkgpc6N4Es3/16RWpR0HWlZz8PvOCDNDTJ6h
- 9XRCQorHTEGXvID+25xBtWnmpfDsmPSIQnj7VWar4wdQFRQBWZNfJ0jv5va+XR4nPlaR
- zhoUQjNg1zU+8uTeFocA4pmCOGAvp8sQAgx1WYHJAdk6u6sl7p2FU2eIO9SMqNsu6feL
- GDOz3ppDJTQ7wZQStPoLKaBy7PPnLtzD06vB/F+OFu9BD/WTAyCjs0SmpalqbWwZ2k55
- jnXBnm25fZSe2FadGCq1ilcX+S3RAgQjbJvmtry6Pg4FCeDcuVx28lHddhZirIHgVVzf
- 9HSg==
-X-Gm-Message-State: APjAAAVoCealmg0jSxo62NQTtaCRmEttLH3RGOag4UqgSBB5zGI4EgUy
- vOQr6Lpv8MUkVqEbzNxUNOSut0TigJ6FH5IekjolbA==
-X-Google-Smtp-Source: APXvYqwDkY3eDuCbDjmrNBPDlO7/EgGQG++Wc94vJHGaD71iojqHJywI9ufS+3YGEmdHdRdcmnGQqE26YJ0df7uJhpY=
-X-Received: by 2002:a0c:d981:: with SMTP id y1mr9059658qvj.104.1567133645165; 
- Thu, 29 Aug 2019 19:54:05 -0700 (PDT)
+ id 1i3X3T-0000pX-I2
+ for ath10k@lists.infradead.org; Fri, 30 Aug 2019 02:54:29 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
+ d=qti.qualcomm.com; i=@qti.qualcomm.com; q=dns/txt;
+ s=qcdkim; t=1567133667; x=1598669667;
+ h=from:to:cc:date:message-id:references:in-reply-to:
+ content-transfer-encoding:mime-version:subject;
+ bh=ombiV9o10Jt3Chz64WGOIxId9Rw7x93r/0lS2evzSrs=;
+ b=AS4ZQrDa+dmYtyDKDoCx4eb64OGtF3h1MN7nCTTMglKtlSAkr3uM+9Sf
+ 2yRUNwIgiAGQYsaWMt1xfVxp34dXVapY1s9s27N1vUyCq7aRKEa4THS6t
+ vPR/ipreUk0VxgsK2WfWaLljQgG4dWy29RgKSGHePWia9kgC/na0ddxm8 g=;
+Subject: RE: [PATCH] ath10k: add fw coredump for sdio when firmware assert
+Thread-Topic: [PATCH] ath10k: add fw coredump for sdio when firmware assert
+Received: from ironmsg01-tai.qualcomm.com ([10.249.140.6])
+ by alexa-out-tai-01.qualcomm.com with ESMTP; 30 Aug 2019 10:54:26 +0800
+Received: from aptaiexm02f.ap.qualcomm.com ([10.249.150.16])
+ by ironmsg01-tai.qualcomm.com with ESMTP/TLS/AES256-SHA;
+ 30 Aug 2019 10:54:25 +0800
+Received: from aptaiexm02f.ap.qualcomm.com (10.249.150.16) by
+ aptaiexm02f.ap.qualcomm.com (10.249.150.16) with Microsoft SMTP Server (TLS)
+ id 15.0.1473.3; Fri, 30 Aug 2019 10:54:23 +0800
+Received: from aptaiexm02f.ap.qualcomm.com ([fe80::4152:1436:e436:faa1]) by
+ aptaiexm02f.ap.qualcomm.com ([fe80::4152:1436:e436:faa1%19]) with mapi id
+ 15.00.1473.005; Fri, 30 Aug 2019 10:54:23 +0800
+From: Wen Gong <wgong@qti.qualcomm.com>
+To: Wen Gong <wgong@qti.qualcomm.com>, Nicolas Boichat
+ <drinkcat@chromium.org>, Wen Gong <wgong@codeaurora.org>
+Thread-Index: AQHVXNAbtURsVnEXnU268W2eITmuOKcP+xkwgAMHkbA=
+Date: Fri, 30 Aug 2019 02:54:23 +0000
+Message-ID: <7c93ebf1372c48ee9b72ce10d0533846@aptaiexm02f.ap.qualcomm.com>
+References: <1566371979-22730-1-git-send-email-wgong@codeaurora.org>
+ <CANMq1KDGWh6Cc8akX_1g-n_fYe_2FHrpgnWf=sLxFnME7t5vBQ@mail.gmail.com>
+ <8f0f2930e12a4dcabb69c13affe89a31@aptaiexm02f.ap.qualcomm.com>
+In-Reply-To: <8f0f2930e12a4dcabb69c13affe89a31@aptaiexm02f.ap.qualcomm.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+x-ms-exchange-transport-fromentityheader: Hosted
+x-originating-ip: [10.249.136.10]
 MIME-Version: 1.0
-References: <1566998177-2658-1-git-send-email-wgong@codeaurora.org>
- <1566998177-2658-2-git-send-email-wgong@codeaurora.org>
-In-Reply-To: <1566998177-2658-2-git-send-email-wgong@codeaurora.org>
-From: Nicolas Boichat <drinkcat@chromium.org>
-Date: Fri, 30 Aug 2019 10:53:53 +0800
-Message-ID: <CANMq1KA2oxpObkP1oj2uK=90sZc9DEXbvdgu9P+87+cwJ__wQQ@mail.gmail.com>
-Subject: Re: [PATCH v3 1/8] ath10k: adjust skb length in
- ath10k_sdio_mbox_rx_packet
-To: Wen Gong <wgong@codeaurora.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190829_195407_038441_AD92AB3E 
-X-CRM114-Status: GOOD (  22.63  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190829_195427_858165_6E7BA653 
+X-CRM114-Status: UNSURE (   5.62  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -2.4 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-2.4 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:844 listed in]
- [list.dnswl.org]
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [103.229.16.226 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -89,114 +91,32 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: "open list:NETWORKING DRIVERS \(WIRELESS\)"
- <linux-wireless@vger.kernel.org>, ath10k@lists.infradead.org
+Cc: Brian Norris <briannorris@chromium.org>, "open list:NETWORKING DRIVERS
+ \(WIRELESS\)" <linux-wireless@vger.kernel.org>,
+ "ath10k@lists.infradead.org" <ath10k@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On Thu, Aug 29, 2019 at 12:18 AM Wen Gong <wgong@codeaurora.org> wrote:
->
-> When the FW bundles multiple packets, pkt->act_len may be incorrect
-> as it refers to the first packet only (however, the FW will only
-> bundle packets that fit into the same pkt->alloc_len).
->
-> Before this patch, the skb length would be set (incorrectly) to
-> pkt->act_len in ath10k_sdio_mbox_rx_packet, and then later manually
-> adjusted in ath10k_sdio_mbox_rx_process_packet.
->
-> The first problem is that ath10k_sdio_mbox_rx_process_packet does not
-> use proper skb_put commands to adjust the length (it directly changes
-> skb->len), so we end up with a mismatch between skb->head + skb->tail
-> and skb->data + skb->len. This is quite serious, and causes corruptions
-> in the TCP stack, as the stack tries to coalesce packets, and relies
-> on skb->tail being correct (that is, skb_tail_pointer must point to
-> the first byte_after_ the data).
->
-> Instead of re-adjusting the size in ath10k_sdio_mbox_rx_process_packet,
-> this moves the code to ath10k_sdio_mbox_rx_packet, and also add a
-> bounds check, as skb_put would crash the kernel if not enough space is
-> available.
->
-> Tested with QCA6174 SDIO with firmware
-> WLAN.RMH.4.4.1-00007-QCARMSWP-1.
->
-> Signed-off-by: Nicolas Boichat <drinkcat@chromium.org>
-> Signed-off-by: Wen Gong <wgong@codeaurora.org>
+> -----Original Message-----
+> From: ath10k <ath10k-bounces@lists.infradead.org> On Behalf Of Wen Gong
+> Sent: Wednesday, August 28, 2019 1:00 PM
+> To: Nicolas Boichat <drinkcat@chromium.org>; Wen Gong
+> <wgong@codeaurora.org>
+> Cc: Brian Norris <briannorris@chromium.org>; open list:NETWORKING
+> DRIVERS (WIRELESS) <linux-wireless@vger.kernel.org>;
+> ath10k@lists.infradead.org
+> Subject: [EXT] RE: [PATCH] ath10k: add fw coredump for sdio when firmware
+> assert
 
-You are not the author of this patch, please reset the author in your
-git tree and resend.
-
-Once you do that, the first line should say:
-From: Nicolas Boichat <drinkcat@chromium.org>
-
-Without this fix:
-NACKed-by: Nicolas Boichat <drinkcat@chromium.org>
-
-> ---
-> v2:no this patch
-> v2:new added
->  drivers/net/wireless/ath/ath10k/sdio.c | 27 +++++++++++++++++++--------
->  1 file changed, 19 insertions(+), 8 deletions(-)
->
-> diff --git a/drivers/net/wireless/ath/ath10k/sdio.c b/drivers/net/wireless/ath/ath10k/sdio.c
-> index 8ed4fbd..1127e44 100644
-> --- a/drivers/net/wireless/ath/ath10k/sdio.c
-> +++ b/drivers/net/wireless/ath/ath10k/sdio.c
-> @@ -381,16 +381,11 @@ static int ath10k_sdio_mbox_rx_process_packet(struct ath10k *ar,
->         struct ath10k_htc_hdr *htc_hdr = (struct ath10k_htc_hdr *)skb->data;
->         bool trailer_present = htc_hdr->flags & ATH10K_HTC_FLAG_TRAILER_PRESENT;
->         enum ath10k_htc_ep_id eid;
-> -       u16 payload_len;
->         u8 *trailer;
->         int ret;
->
-> -       payload_len = le16_to_cpu(htc_hdr->len);
-> -       skb->len = payload_len + sizeof(struct ath10k_htc_hdr);
-> -
->         if (trailer_present) {
-> -               trailer = skb->data + sizeof(*htc_hdr) +
-> -                         payload_len - htc_hdr->trailer_len;
-> +               trailer = skb->data + skb->len - htc_hdr->trailer_len;
->
->                 eid = pipe_id_to_eid(htc_hdr->eid);
->
-> @@ -632,13 +627,29 @@ static int ath10k_sdio_mbox_rx_packet(struct ath10k *ar,
->  {
->         struct ath10k_sdio *ar_sdio = ath10k_sdio_priv(ar);
->         struct sk_buff *skb = pkt->skb;
-> +       struct ath10k_htc_hdr *htc_hdr;
->         int ret;
->
->         ret = ath10k_sdio_readsb(ar, ar_sdio->mbox_info.htc_addr,
->                                  skb->data, pkt->alloc_len);
-> +
-> +       if (!ret) {
-> +               /* Update actual length. The original length may be incorrect,
-> +                * as the FW will bundle multiple packets as long as their sizes
-> +                * fit within the same aligned length (pkt->alloc_len).
-> +                */
-> +               htc_hdr = (struct ath10k_htc_hdr *)skb->data;
-> +               pkt->act_len = le16_to_cpu(htc_hdr->len) + sizeof(*htc_hdr);
-> +               if (pkt->act_len <= pkt->alloc_len) {
-> +                       skb_put(skb, pkt->act_len);
-> +               } else {
-> +                       ath10k_warn(ar, "rx packet too large (%zu > %zu)\n",
-> +                                   pkt->act_len, pkt->alloc_len);
-> +                       ret = -EMSGSIZE;
-> +               }
-> +       }
-> +
->         pkt->status = ret;
-> -       if (!ret)
-> -               skb_put(skb, pkt->act_len);
->
->         return ret;
->  }
-> --
-> 1.9.1
->
+Changed and v2 sent, https://patchwork.kernel.org/patch/11122827/
+> 
+> 
+> _______________________________________________
+> ath10k mailing list
+> ath10k@lists.infradead.org
+> http://lists.infradead.org/mailman/listinfo/ath10k
 
 _______________________________________________
 ath10k mailing list
