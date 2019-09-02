@@ -2,94 +2,68 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A353DA4B73
-	for <lists+ath10k@lfdr.de>; Sun,  1 Sep 2019 21:46:15 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 53CBFA4F66
+	for <lists+ath10k@lfdr.de>; Mon,  2 Sep 2019 08:59:03 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:References:Subject:To:From:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ACVozuhlgWoEa2S1Xd67T/gJy0ti5598XmjlYp6oYe8=; b=EehfWy1UMyKlvo
-	dv8LfG2jx8hFFqVLZETRoofU2OXlNNjEbt25cybtXvQKbRckZNGVz4IbZjwajnGqVEYXe6cFywiKx
-	WH+UjygDPSEDxp8oz/SwhaIoeOOYlRSmj9+aS7pmOWxk6Kkj08P64o87tYsmpN8k3pD2eNxaC4uAw
-	g+cMsD9njIjbS8YZ62Raq6H5qVZQgB0FNi41H3RoWJ8f9UDr4yGV9r1IEz/nTAokTeLM0UfyLgcJZ
-	ayqE4QwwpffiohwlTvk1pUkJySJiHdoQjLlR5XqmH+81G7BKNf+YFLFUSTQKpvSK2LRKCOqIxnhuC
-	KdP3z9vaHxxMn8uySMbA==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
+	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=zkrV2VliFspetQQrIf5PMUDoNOGWzhqm38ZYv6JwQfo=; b=BuhOfj8vXEUw9KGu5TgQBPSpp
+	3jdZxuGMOpsWfqKm982FI3VxoUCktv0803+X+ss49dir9iDjEJOMliXFJP4ZsgYhzc4jH9M4aKOQp
+	uUJKwAf+9O5NADHgtoe66CpyItED8/VxVaA7VzJLtS+oWQl3GuNsNsL4QQ/gbiJFZScWghWtNHuVn
+	i1Z9iOqKO/7feKCtNnFwN/Ud6p8ocNAMwn+mjYLi0jaYL0yLMlySkYbv15v+xD+JqpeG6I3k/Sjtw
+	71R1lNULmSve+hCf8+emt0zA/6799RNe0iT3rbftnDJo8zxo/YbkKjyFvqsEwDTEBXHdwtrZyN8sD
+	HSEw4Ly6w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i4Vnd-0002cV-Hw; Sun, 01 Sep 2019 19:46:09 +0000
-Received: from mail-io1-xd43.google.com ([2607:f8b0:4864:20::d43])
- by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i4VnW-0002c8-GV
- for ath10k@lists.infradead.org; Sun, 01 Sep 2019 19:46:03 +0000
-Received: by mail-io1-xd43.google.com with SMTP id u185so21337054iod.10
- for <ath10k@lists.infradead.org>; Sun, 01 Sep 2019 12:46:01 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=from:to:cc:subject:references:message-id:date:user-agent
- :mime-version:in-reply-to:content-transfer-encoding;
- bh=exATxEDmVr8tY6PaCJvDBgnaUkdR9wAvkh7ugWPQO1Q=;
- b=n7yyqs0ZR2xE5OTPJqC89jRK0yhI+I0BvGnhxY0Ky14lTnNmu4jhvTgsRNd+H7qPGY
- BUUxu56UaShPGyBxZCApNsbsVT8DzGDIzLMNOMlrbMDtXka40+8w5RztQ2T/bDqppqfu
- cIe/chZKnRBDLJD4khJtGaa5tLQUf0bRg31sKka3LPH3H3vxZ8dmu8D/LA1y/x4ezTPH
- M1Qz+ReQYjER9Ap4bJGNiDaB1qAI7aD6j9DYLgMHGFdA75NDBsTHZD2Hog4T2Jspm9hh
- 7H9M3wOinAE2XM4v8Zl4tq4P4SVOpRjfVqRosJCGQ1jDsKFs3vq/edvGvxTdTcotmkr+
- N6UA==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:references:message-id:date
- :user-agent:mime-version:in-reply-to:content-transfer-encoding;
- bh=exATxEDmVr8tY6PaCJvDBgnaUkdR9wAvkh7ugWPQO1Q=;
- b=nnV7RDAURi4IdK4rUtoyPh2tNIx/HUbWx79TUhZmN6c8d9w0NAy0+wd84H7LNiM3bk
- 1hgaWzhQsVQbKnk+duhyZMiv3w6UXH/ACJPRd9v40ZyWs/zuYJAR3IMb44bvMvpYkUv0
- ykiyj9JkwwE0yjcsEmPRvVPDb2/o48xfx3BULopHlslqb8vGBjwPZFbItgPg9WQGvbVS
- aJqh/+V7+HJAHTp3W8nwLp1cdd65VU4hO/FaCs3jmpzBlp0Lfmg87spKk15ATVXCiiL1
- FG4o/Wyd3IFIlMS2CX0TuLMZSMSc/fQrRDdGejKabD4HPta4IwLJFACNnbRAuIrAXlC2
- p50A==
-X-Gm-Message-State: APjAAAW1jeigmXaRWUIDYMoCA3wFe3OnJaSB3f8rgqLmun1q5m55/QDW
- PXDmu6zDZx5O9XEIwlvLw+o=
-X-Google-Smtp-Source: APXvYqx/IFGQPxOLc9+Miz1/cdCffAShZlB11L3b4JxW75EkyltoizXA0mq064XzbIjbHfL1fIpqXg==
-X-Received: by 2002:a02:a909:: with SMTP id n9mr12910812jam.57.1567367160836; 
- Sun, 01 Sep 2019 12:46:00 -0700 (PDT)
-Received: from [10.164.9.36] (cos-128-210-107-27.science.purdue.edu.
- [128.210.107.27])
- by smtp.gmail.com with ESMTPSA id d9sm9018277ioo.15.2019.09.01.12.45.59
- (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Sun, 01 Sep 2019 12:46:00 -0700 (PDT)
-From: Hui Peng <benquike@gmail.com>
-To: Guenter Roeck <linux@roeck-us.net>
-Subject: Re: [PATCH 2/2] Fix a NULL-ptr-deref bug in
- ath10k_usb_alloc_urb_from_pipe
-References: <20190804003101.11541-1-benquike@gmail.com>
- <20190831213139.GA32507@roeck-us.net>
-Message-ID: <8bc83a3f-2c14-1abe-9add-eb9cfca6917f@gmail.com>
-Date: Sun, 1 Sep 2019 15:45:59 -0400
+	id 1i4gIh-0001hL-RP; Mon, 02 Sep 2019 06:58:55 +0000
+Received: from icp-osb-irony-out9.external.iinet.net.au ([203.59.1.226])
+ by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
+ id 1i4gIc-0001h1-4D
+ for ath10k@lists.infradead.org; Mon, 02 Sep 2019 06:58:52 +0000
+X-IronPort-Anti-Spam-Filtered: true
+X-IronPort-Anti-Spam-Result: =?us-ascii?q?A2AlAADPvGxd/zXSMGcNWBkBAQEBAQE?=
+ =?us-ascii?q?BAQEBAQEHAQEBAQEBgWeDBYEvhCGPWQEBAQEBAQaBNn6CbYFdhCeRJgkBAQE?=
+ =?us-ascii?q?BAQEBAQEtCgEBhD8CgwY4EwILAQEBBAEBAQEBBgMBhVhDhVYBAQEBAgEjFUE?=
+ =?us-ascii?q?FCwsNCwICJgICVwYNCAEBgx4BgXYFHqo9GzVzgTIahB8DEA9vgzaBQwaBDCi?=
+ =?us-ascii?q?BY4oteIEHgREngjY1PoJIGQKBQQEBgymCWASMQjkDiEqBL4ZejkSCKYZzjWI?=
+ =?us-ascii?q?GG41zA4pwlWuSY4F5MxoIKAiDJ4JLGoNPimVhAY1YgkUBAQ?=
+X-IPAS-Result: =?us-ascii?q?A2AlAADPvGxd/zXSMGcNWBkBAQEBAQEBAQEBAQEHAQEBA?=
+ =?us-ascii?q?QEBgWeDBYEvhCGPWQEBAQEBAQaBNn6CbYFdhCeRJgkBAQEBAQEBAQEtCgEBh?=
+ =?us-ascii?q?D8CgwY4EwILAQEBBAEBAQEBBgMBhVhDhVYBAQEBAgEjFUEFCwsNCwICJgICV?=
+ =?us-ascii?q?wYNCAEBgx4BgXYFHqo9GzVzgTIahB8DEA9vgzaBQwaBDCiBY4oteIEHgREng?=
+ =?us-ascii?q?jY1PoJIGQKBQQEBgymCWASMQjkDiEqBL4ZejkSCKYZzjWIGG41zA4pwlWuSY?=
+ =?us-ascii?q?4F5MxoIKAiDJ4JLGoNPimVhAY1YgkUBAQ?=
+X-IronPort-AV: E=Sophos;i="5.64,457,1559491200"; d="scan'208";a="191610554"
+Received: from unknown (HELO [10.44.0.22]) ([103.48.210.53])
+ by icp-osb-irony-out9.iinet.net.au with ESMTP; 02 Sep 2019 14:58:41 +0800
+Subject: Re: problems with a 9377 based SDIO module
+To: Erik Stromdahl <erik.stromdahl@gmail.com>
+References: <176a3a2d-ff81-3b72-86af-73c70df729f4@kernel.org>
+ <a97cd0d2-e53e-ef3c-63e3-0d4d352c7994@kernel.org>
+ <8748427f-c4cd-a223-d635-2b628ee2cfb3@gmail.com>
+From: Greg Ungerer <gerg@kernel.org>
+Message-ID: <bafbc391-201a-7c60-e331-1f1cdeb0a1d7@kernel.org>
+Date: Mon, 2 Sep 2019 16:58:39 +1000
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.8.0
 MIME-Version: 1.0
-In-Reply-To: <20190831213139.GA32507@roeck-us.net>
+In-Reply-To: <8748427f-c4cd-a223-d635-2b628ee2cfb3@gmail.com>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190901_124602_579514_52EC6223 
-X-CRM114-Status: GOOD (  20.22  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20190901_235850_409759_0FE4F02B 
+X-CRM114-Status: GOOD (  20.20  )
+X-Spam-Score: 0.3 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:d43 listed in]
- [list.dnswl.org]
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (benquike[at]gmail.com)
+ -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
+ low trust [203.59.1.226 listed in list.dnswl.org]
+ 1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -101,94 +75,109 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Mathias Payer <mathias.payer@nebelwelt.net>, netdev@vger.kernel.org,
- linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
- ath10k@lists.infradead.org, davem@davemloft.net, kvalo@codeaurora.org
-Content-Type: text/plain; charset="us-ascii"
+Cc: ath10k@lists.infradead.org
 Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On 8/31/19 5:31 PM, Guenter Roeck wrote:
-> Hi,
->
-> On Sat, Aug 03, 2019 at 08:31:01PM -0400, Hui Peng wrote:
->> The `ar_usb` field of `ath10k_usb_pipe_usb_pipe` objects
->> are initialized to point to the containing `ath10k_usb` object
->> according to endpoint descriptors read from the device side, as shown
->> below in `ath10k_usb_setup_pipe_resources`:
+Hi Erik,
+
+Thanks for the response.
+
+On 1/9/19 12:49 am, Erik Stromdahl wrote:
+> On 8/30/19 4:52 PM, Greg Ungerer wrote:
+>> On 29/8/19 4:33 pm, Greg Ungerer wrote:
+>>> I have a Compex WSD377 WiFi module with SDIO interface on a new
+>>> iMX6 based platform. I am trying to get the module going but am
+>>> having problems with it at probe/init time.
+>>>
+>>> Ultimately what I see at ath10k_sdio module load time is:
+>>>
+>>> <4>ath10k_sdio mmc0:0001:1: WARNING: ath10k SDIO support is incomplete, don't expect anything to work!
+>>> <6>ath10k_sdio mmc0:0001:1: qca9377 hw1.1 sdio target 0x05020001 chip_id 0x00000000 sub 0000:0000
+>>> <6>ath10k_sdio mmc0:0001:1: kconfig debug 1 debugfs 0 tracing 0 dfs 0 testmode 0
+>>> <6>ath10k_sdio mmc0:0001:1: firmware ver WLAN.TF.1.1.1-00061-QCATFSWPZ-1 api 5 features ignore-otp crc32 7746e551
+>>> <3>ath10k_sdio mmc0:0001:1: failed to fetch board data for bus=sdio,vendor=0271,device=0701,subsystem-vendor=0000,subsystem-device=0000 from ath10k/QCA9377/hw1.0/board-2.bin
+>>> <6>ath10k_sdio mmc0:0001:1: board_file api 1 bmi_id N/A crc32 78c48ff6
+>>> <4>ath10k_sdio mmc0:0001:1: failed to write to address 0x828: -84
+>>> <4>ath10k_sdio mmc0:0001:1: unable to disable sdio interrupts: -84
+>>> <3>ath10k_sdio mmc0:0001:1: could not start HIF: -84
+>>> <3>ath10k_sdio mmc0:0001:1: could not init core (-84)
+>>> <4>mmc0: queuing unknown CIS tuple 0x01 (3 bytes)
+>>> <4>mmc0: queuing unknown CIS tuple 0x1a (5 bytes)
+>>> <4>mmc0: queuing unknown CIS tuple 0x1b (8 bytes)
+>>> <4>mmc0: queuing unknown CIS tuple 0x14 (0 bytes)
+>>> <3>ath10k_sdio mmc0:0001:1: could not probe fw (-84)
+>>>
+>>> Tracing I can see that a fair bit of IO has gone on when it finally
+>>> gets to the "failed to write to address 0x828: -84". I assume the
+>>> bulk writes up to that point are the firmware download.
+>>>
+>>> I am using a linux-5.2 kernel with your patches at
+>>> https://github.com/erstrom/linux-ath.git, v5.2-ath10k-sdio branch.
 >>
->> for (i = 0; i < iface_desc->desc.bNumEndpoints; ++i) {
->>         endpoint = &iface_desc->endpoint[i].desc;
+>> Problem mostly solved by also patching with the changes at
+>> https://kernel.googlesource.com/pub/scm/linux/kernel/git/kvalo/ath.
+>> Applying the v5.2-ath10k-sdio changes on top of them.
 >>
->>         // get the address from endpoint descriptor
->>         pipe_num = ath10k_usb_get_logical_pipe_num(ar_usb,
->>                                                 endpoint->bEndpointAddress,
->>                                                 &urbcount);
->>         ......
->>         // select the pipe object
->>         pipe = &ar_usb->pipes[pipe_num];
+>> Now it successfully probes the device. But after configuring wlan0
+>> and sending/receiving a few packets I started to see:
 >>
->>         // initialize the ar_usb field
->>         pipe->ar_usb = ar_usb;
->> }
+>> ath10k_sdio mmc0:0001:1: msdu_id allocation failed -28^M
+>> ath10k_sdio mmc0:0001:1: failed to transmit packet, dropping: -28^M
+>> ath10k_sdio mmc0:0001:1: failed to submit frame: -28^M
+>> ath10k_sdio mmc0:0001:1: failed to push frame: -28^M
 >>
->> The driver assumes that the addresses reported in endpoint
->> descriptors from device side  to be complete. If a device is
->> malicious and does not report complete addresses, it may trigger
->> NULL-ptr-deref `ath10k_usb_alloc_urb_from_pipe` and
->> `ath10k_usb_free_urb_to_pipe`.
+> I was actually trying my v5.2 branch with my QCA9377 SDIO device today,
+> and everything was running without any problems.
+
+So do you mean you can use your v5.2 branch with no other kernel
+changes and get a QCA9377 module to work?
+
+I could not do that (as per my original mail that started this thread).
+I took just your changes and applied to my v5.2 tree, they all applied
+cleanly and compile cleanly. But do not work.
+
+I had to apply a lot of patches from the kvalo/ath tree first. And that
+was a real can of worms - I mostly applied patches that appeared to be
+part of changes submitted for v5.3.
+
+Regards
+Greg
+
+
+
+> I don't recognize your errors.
+> The error message you get is because the driver is not able to allocate an
+> MSDU ID for the TX MSDU.
+> 
+> It looks as if your hardware does not notify the driver that it has consumed
+> the MSDUs (with a TX_COMPL_IND). Then the MSDU ID never gets freed and the
+> driver will run out of IDs.
+> 
 >>
->> This patch fixes the bug by preventing potential NULL-ptr-deref.
 >>
->> Signed-off-by: Hui Peng <benquike@gmail.com>
->> Reported-by: Hui Peng <benquike@gmail.com>
->> Reported-by: Mathias Payer <mathias.payer@nebelwelt.net>
-> This patch fixes CVE-2019-15099, which has CVSS scores of 7.5 (CVSS 3.0)
-> and 7.8 (CVSS 2.0). Yet, I don't find it in the upstream kernel or in Linux
-> next.
->
-> Is the patch going to be applied to the upstream kernel anytime soon ? If
-> not, is there reason to believe that its severity may not be as high as the
-> CVSS score indicates ?
-The score was assigned by MITRE.
-Same as previous ones, it is under review, once passed, it will be applied.
-> Thanks,
-> Guenter
->
->> ---
->>  drivers/net/wireless/ath/ath10k/usb.c | 8 ++++++++
->>  1 file changed, 8 insertions(+)
->>
->> diff --git a/drivers/net/wireless/ath/ath10k/usb.c b/drivers/net/wireless/ath/ath10k/usb.c
->> index e1420f67f776..14d86627b47f 100644
->> --- a/drivers/net/wireless/ath/ath10k/usb.c
->> +++ b/drivers/net/wireless/ath/ath10k/usb.c
->> @@ -38,6 +38,10 @@ ath10k_usb_alloc_urb_from_pipe(struct ath10k_usb_pipe *pipe)
->>  	struct ath10k_urb_context *urb_context = NULL;
->>  	unsigned long flags;
->>  
->> +	/* bail if this pipe is not initialized */
->> +	if (!pipe->ar_usb)
->> +		return NULL;
->> +
->>  	spin_lock_irqsave(&pipe->ar_usb->cs_lock, flags);
->>  	if (!list_empty(&pipe->urb_list_head)) {
->>  		urb_context = list_first_entry(&pipe->urb_list_head,
->> @@ -55,6 +59,10 @@ static void ath10k_usb_free_urb_to_pipe(struct ath10k_usb_pipe *pipe,
->>  {
->>  	unsigned long flags;
->>  
->> +	/* bail if this pipe is not initialized */
->> +	if (!pipe->ar_usb)
->> +		return NULL;
->> +
->>  	spin_lock_irqsave(&pipe->ar_usb->cs_lock, flags);
->>  
->>  	pipe->urb_cnt++;
->> -- 
->> 2.22.0
->>
+>>> My primary concern is if I am using the write firmware.
+>>>
+>>> I have a firmware-sdio-5.bin which is the QCA9377/hw1.0/untested/firmware-sdio-5.bin_WLAN.TF.1.1.1-00061-QCATFSWPZ-1
+>>> file from the ath10k-firmware tree at https://github.com/kvalo/ath10k-firmware.git.
+>>> And the board-sdio.bin which is the bdwlan30.bin from https://github.com/boundarydevices/qca-firmware.git.
+> This firmware should work. I am using it as well.
+> 
+>>>
+>>> I ended up with those from comments made in
+>>> https://ath10k.infradead.narkive.com/lgpFutCZ/patch-00-11-sdio-support-for-ath10k
+>>> But maybe I am off-track here?
+>>>
+>>> Does the kernel trace give any clues as what the problem may be?
+>>> Any other ideas?
+> The only thing I can think of is that something is wrong with your SDIO/MMC setup
+> (device tree?) or your actual hardware.
+> 
+> -- 
+> Erik
+> 
 
 _______________________________________________
 ath10k mailing list
