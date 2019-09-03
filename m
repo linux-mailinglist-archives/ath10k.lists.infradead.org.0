@@ -2,69 +2,90 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 10D4AA678C
-	for <lists+ath10k@lfdr.de>; Tue,  3 Sep 2019 13:38:46 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9BE58A6AF5
+	for <lists+ath10k@lfdr.de>; Tue,  3 Sep 2019 16:14:29 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:References:
-	To:From:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=5XHjCgUd/MKYo7IM+xeSNHyjrvuDtO1qlfc4FDQiYxo=; b=GAK5mXS7PaYLql/allHTxz8l6
-	G6bBv/SxVQaZz6MCrKwf8u7ONForW3GQA/ptBvGV2/+AcMWZ/drv0vVsQXqSyB9TI8l1PJhElKXoT
-	NzVRiZQnfK3HXZkgA5c5WNlczdel9npKctmMSzMD+ZEv2VC07qUClY52KVZWkNcKQh32UalQSlrxa
-	KLSr8yR0brYVRBPKpvhDtzgSbBac/q4CzkXasnoGQlh7SErlThb5fhpswJBhG9WkJ3ecuhujV7b/g
-	DUF1eupVblTe0d59BSJCa7tDSyjiMShPqCrJ+T1Ny+ZvcnfP2YP1DhC8Jqh5kI1yAA9kgL+zcY24H
-	ofMxZ4p/Q==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
+	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=EeaPwDko3FVb6gZxWAh19xZC1FjhGmTwTdBW4Xl2klY=; b=jyGtWqYzuj/q0Q
+	XOJN8l3wEGGhrxxgeneBsm1hbMQTe0Ztxgo3HACrbavTGqjwbpWx+rwrWyGoQBGjuDi8IX9d2S+2q
+	gMganfWIdiecgRHI6dm9XL9vVSCAZvpJThhkHZnc/JESrfe7cTjvQEmJHJDHDKAIdAwlmhSOrDpf1
+	5K/19cIGN7gIsBFZuY9e/+HUU4tlho2c8quOU/RtD+RT3JbkxCP+quGBirOuYgPi3Q3a+ZXU4HbO0
+	eTVPhqmdGUyC90Hc4FFToFhO0DvC6qkT+gG4v/T+ngV/kN2vZkafAENRmKt7nMsZ6RCOorzD7IFQY
+	GoN8gYcEz6XWsFzIot7w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i578v-0005yc-WF; Tue, 03 Sep 2019 11:38:38 +0000
-Received: from icp-osb-irony-out4.external.iinet.net.au ([203.59.1.220])
- by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
- id 1i578o-0005y4-OT
- for ath10k@lists.infradead.org; Tue, 03 Sep 2019 11:38:33 +0000
-X-IronPort-Anti-Spam-Filtered: true
-X-IronPort-Anti-Spam-Result: =?us-ascii?q?A2AaAAC2T25d/zXSMGcNWBkBAQEBAQE?=
- =?us-ascii?q?BAQEBAQEHAQEBAQEBgWeDBYEvhCGPWwEBAQEBAQaBNn6CbYFdhCeRJgkBAQE?=
- =?us-ascii?q?BAQEBAQEtCgEBhD8CgxY4EwILAQEBBAEBAQEBBgMBhVhDhVYBAQEBAgEjFUE?=
- =?us-ascii?q?QCw0LAgImAgJXBg0IAQGDHgGBdgUeqEMbNXOBMhqEHwMQD4QmgUMGgQwogWO?=
- =?us-ascii?q?KLXiBB4ERJ4I2NT6CSBkCgUEBAYMpglgEjEI5A4hKgS+VIoIphnONYgYbjXM?=
- =?us-ascii?q?DinCVa5JjgXkzGggoCIMngksag0+KZWEBjUKCRQEB?=
-X-IPAS-Result: =?us-ascii?q?A2AaAAC2T25d/zXSMGcNWBkBAQEBAQEBAQEBAQEHAQEBA?=
- =?us-ascii?q?QEBgWeDBYEvhCGPWwEBAQEBAQaBNn6CbYFdhCeRJgkBAQEBAQEBAQEtCgEBh?=
- =?us-ascii?q?D8CgxY4EwILAQEBBAEBAQEBBgMBhVhDhVYBAQEBAgEjFUEQCw0LAgImAgJXB?=
- =?us-ascii?q?g0IAQGDHgGBdgUeqEMbNXOBMhqEHwMQD4QmgUMGgQwogWOKLXiBB4ERJ4I2N?=
- =?us-ascii?q?T6CSBkCgUEBAYMpglgEjEI5A4hKgS+VIoIphnONYgYbjXMDinCVa5JjgXkzG?=
- =?us-ascii?q?ggoCIMngksag0+KZWEBjUKCRQEB?=
-X-IronPort-AV: E=Sophos;i="5.64,462,1559491200"; d="scan'208";a="191287651"
-Received: from unknown (HELO [10.44.0.192]) ([103.48.210.53])
- by icp-osb-irony-out4.iinet.net.au with ESMTP; 03 Sep 2019 19:38:02 +0800
-Subject: Re: problems with a 9377 based SDIO module
-From: Greg Ungerer <gerg@kernel.org>
-To: Erik Stromdahl <erik.stromdahl@gmail.com>
-References: <176a3a2d-ff81-3b72-86af-73c70df729f4@kernel.org>
- <a97cd0d2-e53e-ef3c-63e3-0d4d352c7994@kernel.org>
- <8748427f-c4cd-a223-d635-2b628ee2cfb3@gmail.com>
- <bafbc391-201a-7c60-e331-1f1cdeb0a1d7@kernel.org>
-Message-ID: <44b22101-734d-182f-2ed1-d2b270d71726@kernel.org>
-Date: Tue, 3 Sep 2019 21:37:49 +1000
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
- Thunderbird/60.8.0
+	id 1i59Zg-0006bb-JK; Tue, 03 Sep 2019 14:14:24 +0000
+Received: from smtp.codeaurora.org ([198.145.29.96])
+ by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
+ id 1i59Zb-0006ad-P7
+ for ath10k@lists.infradead.org; Tue, 03 Sep 2019 14:14:22 +0000
+Received: by smtp.codeaurora.org (Postfix, from userid 1000)
+ id 225AE60592; Tue,  3 Sep 2019 14:14:17 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1567520058;
+ bh=zXyYEMXgxwMe5kM6w/V7cIEreB+fNKc7naZiALNTuV0=;
+ h=Subject:From:In-Reply-To:References:To:Cc:Date:From;
+ b=KR7O4omXDdJVgVOktNwz2l07lzRkNlhUfAesBHmgWGrW+1kBMN5ePWKcLfbqlH0co
+ KTODznEXOXvvhRRG9SN84/9k4cnI2ihOhBhdo/nF5s3e64dVguQsw/WgVdc+5f2pZh
+ BMNwzSIVL/tg5UlLZGTkuQnY9y3WBlwfdVxz1yJE=
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ pdx-caf-mail.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-0.8 required=2.0 tests=ALL_TRUSTED,BAYES_00,
+ DKIM_INVALID,DKIM_SIGNED,MISSING_DATE,MISSING_MID,SPF_NONE autolearn=no
+ autolearn_force=no version=3.4.0
+Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
+ [88.114.240.156])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ (Authenticated sender: kvalo@smtp.codeaurora.org)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 4C3D56013C;
+ Tue,  3 Sep 2019 14:14:13 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1567520056;
+ bh=zXyYEMXgxwMe5kM6w/V7cIEreB+fNKc7naZiALNTuV0=;
+ h=Subject:From:In-Reply-To:References:To:Cc:From;
+ b=Y/go4IHw5C2+Czr7z7sw1YY2om5Qpc43pr14YwOkFu3rW4sx63XNo/9WjnRnjEz+h
+ iOaeD/GBzmWPmUWxK3+bY5oueaSiTPPfbPWaG4cxjaHKbHJiOIIm3MULYdr94wPRpL
+ HK760yQDod/5l0ijZ3wIKP/xYHSIgKWNfWytub+g=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 4C3D56013C
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ spf=none smtp.mailfrom=kvalo@codeaurora.org
 MIME-Version: 1.0
-In-Reply-To: <bafbc391-201a-7c60-e331-1f1cdeb0a1d7@kernel.org>
-Content-Language: en-US
+Subject: Re: [PATCH 2/2] Fix a NULL-ptr-deref bug in
+ ath10k_usb_alloc_urb_from_pipe
+From: Kalle Valo <kvalo@codeaurora.org>
+In-Reply-To: <20190804003101.11541-1-benquike@gmail.com>
+References: <20190804003101.11541-1-benquike@gmail.com>
+To: Hui Peng <benquike@gmail.com>
+User-Agent: pwcli/0.0.0-git (https://github.com/kvalo/pwcli/) Python/2.7.12
+Message-Id: <20190903141418.225AE60592@smtp.codeaurora.org>
+Date: Tue,  3 Sep 2019 14:14:17 +0000 (UTC)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190903_043831_523060_14505D12 
-X-CRM114-Status: GOOD (  19.44  )
-X-Spam-Score: 0.3 (/)
+X-CRM114-CacheID: sfid-20190903_071419_879835_CC847C3C 
+X-CRM114-Status: GOOD (  13.62  )
+X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.3 points)
+ Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [203.59.1.220 listed in list.dnswl.org]
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [198.145.29.96 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -76,117 +97,75 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: ath10k@lists.infradead.org
+Cc: Mathias Payer <mathias.payer@nebelwelt.net>, netdev@vger.kernel.org,
+ linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
+ ath10k@lists.infradead.org, Hui Peng <benquike@gmail.com>, davem@davemloft.net
+Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Hi Erik,
+Hui Peng <benquike@gmail.com> wrote:
 
-On 2/9/19 4:58 pm, Greg Ungerer wrote:
-> On 1/9/19 12:49 am, Erik Stromdahl wrote:
->> On 8/30/19 4:52 PM, Greg Ungerer wrote:
->>> On 29/8/19 4:33 pm, Greg Ungerer wrote:
->>>> I have a Compex WSD377 WiFi module with SDIO interface on a new
->>>> iMX6 based platform. I am trying to get the module going but am
->>>> having problems with it at probe/init time.
->>>>
->>>> Ultimately what I see at ath10k_sdio module load time is:
->>>>
->>>> <4>ath10k_sdio mmc0:0001:1: WARNING: ath10k SDIO support is incomplete, don't expect anything to work!
->>>> <6>ath10k_sdio mmc0:0001:1: qca9377 hw1.1 sdio target 0x05020001 chip_id 0x00000000 sub 0000:0000
->>>> <6>ath10k_sdio mmc0:0001:1: kconfig debug 1 debugfs 0 tracing 0 dfs 0 testmode 0
->>>> <6>ath10k_sdio mmc0:0001:1: firmware ver WLAN.TF.1.1.1-00061-QCATFSWPZ-1 api 5 features ignore-otp crc32 7746e551
->>>> <3>ath10k_sdio mmc0:0001:1: failed to fetch board data for bus=sdio,vendor=0271,device=0701,subsystem-vendor=0000,subsystem-device=0000 from ath10k/QCA9377/hw1.0/board-2.bin
->>>> <6>ath10k_sdio mmc0:0001:1: board_file api 1 bmi_id N/A crc32 78c48ff6
->>>> <4>ath10k_sdio mmc0:0001:1: failed to write to address 0x828: -84
->>>> <4>ath10k_sdio mmc0:0001:1: unable to disable sdio interrupts: -84
->>>> <3>ath10k_sdio mmc0:0001:1: could not start HIF: -84
->>>> <3>ath10k_sdio mmc0:0001:1: could not init core (-84)
->>>> <4>mmc0: queuing unknown CIS tuple 0x01 (3 bytes)
->>>> <4>mmc0: queuing unknown CIS tuple 0x1a (5 bytes)
->>>> <4>mmc0: queuing unknown CIS tuple 0x1b (8 bytes)
->>>> <4>mmc0: queuing unknown CIS tuple 0x14 (0 bytes)
->>>> <3>ath10k_sdio mmc0:0001:1: could not probe fw (-84)
->>>>
->>>> Tracing I can see that a fair bit of IO has gone on when it finally
->>>> gets to the "failed to write to address 0x828: -84". I assume the
->>>> bulk writes up to that point are the firmware download.
->>>>
->>>> I am using a linux-5.2 kernel with your patches at
->>>> https://github.com/erstrom/linux-ath.git, v5.2-ath10k-sdio branch.
->>>
->>> Problem mostly solved by also patching with the changes at
->>> https://kernel.googlesource.com/pub/scm/linux/kernel/git/kvalo/ath.
->>> Applying the v5.2-ath10k-sdio changes on top of them.
->>>
->>> Now it successfully probes the device. But after configuring wlan0
->>> and sending/receiving a few packets I started to see:
->>>
->>> ath10k_sdio mmc0:0001:1: msdu_id allocation failed -28^M
->>> ath10k_sdio mmc0:0001:1: failed to transmit packet, dropping: -28^M
->>> ath10k_sdio mmc0:0001:1: failed to submit frame: -28^M
->>> ath10k_sdio mmc0:0001:1: failed to push frame: -28^M
->>>
->> I was actually trying my v5.2 branch with my QCA9377 SDIO device today,
->> and everything was running without any problems.
+> The `ar_usb` field of `ath10k_usb_pipe_usb_pipe` objects
+> are initialized to point to the containing `ath10k_usb` object
+> according to endpoint descriptors read from the device side, as shown
+> below in `ath10k_usb_setup_pipe_resources`:
 > 
-> So do you mean you can use your v5.2 branch with no other kernel
-> changes and get a QCA9377 module to work?
+> for (i = 0; i < iface_desc->desc.bNumEndpoints; ++i) {
+>         endpoint = &iface_desc->endpoint[i].desc;
 > 
-> I could not do that (as per my original mail that started this thread).
-> I took just your changes and applied to my v5.2 tree, they all applied
-> cleanly and compile cleanly. But do not work.
+>         // get the address from endpoint descriptor
+>         pipe_num = ath10k_usb_get_logical_pipe_num(ar_usb,
+>                                                 endpoint->bEndpointAddress,
+>                                                 &urbcount);
+>         ......
+>         // select the pipe object
+>         pipe = &ar_usb->pipes[pipe_num];
 > 
-> I had to apply a lot of patches from the kvalo/ath tree first. And that
-> was a real can of worms - I mostly applied patches that appeared to be
-> part of changes submitted for v5.3.
+>         // initialize the ar_usb field
+>         pipe->ar_usb = ar_usb;
+> }
+> 
+> The driver assumes that the addresses reported in endpoint
+> descriptors from device side  to be complete. If a device is
+> malicious and does not report complete addresses, it may trigger
+> NULL-ptr-deref `ath10k_usb_alloc_urb_from_pipe` and
+> `ath10k_usb_free_urb_to_pipe`.
+> 
+> This patch fixes the bug by preventing potential NULL-ptr-deref.
+> 
+> Signed-off-by: Hui Peng <benquike@gmail.com>
+> Reported-by: Hui Peng <benquike@gmail.com>
+> Reported-by: Mathias Payer <mathias.payer@nebelwelt.net>
+> Reviewed-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
 
-I tried a lightly different approach and had more success.
+This causes a new warning, please build test your patches.
 
-I started with my linux-5.2 kernel. Copied the entire ath10k driver
-sources from linux-5.3-rc7 (drivers/net/wireless/ath/ath10k/*)
-and then applied the patches from your master branch at
-https://github.com/erstrom/linux-ath.git.
+In file included from ./include/uapi/linux/posix_types.h:5,
+                 from ./include/uapi/linux/types.h:14,
+                 from ./include/linux/types.h:6,
+                 from ./include/linux/list.h:5,
+                 from ./include/linux/module.h:9,
+                 from drivers/net/wireless/ath/ath10k/usb.c:8:
+drivers/net/wireless/ath/ath10k/usb.c: In function 'ath10k_usb_free_urb_to_pipe':
+./include/linux/stddef.h:8:14: warning: 'return' with a value, in function returning void
+ #define NULL ((void *)0)
+              ^
+drivers/net/wireless/ath/ath10k/usb.c:64:10: note: in expansion of macro 'NULL'
+   return NULL;
+          ^~~~
+drivers/net/wireless/ath/ath10k/usb.c:57:13: note: declared here
+ static void ath10k_usb_free_urb_to_pipe(struct ath10k_usb_pipe *pipe,
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-That produced a working client wlan interface.
+Patch set to Changes Requested.
 
-Regards
-Greg
+-- 
+https://patchwork.kernel.org/patch/11074657/
 
+https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
 
-
->> I don't recognize your errors.
->> The error message you get is because the driver is not able to allocate an
->> MSDU ID for the TX MSDU.
->>
->> It looks as if your hardware does not notify the driver that it has consumed
->> the MSDUs (with a TX_COMPL_IND). Then the MSDU ID never gets freed and the
->> driver will run out of IDs.
->>
->>>
->>>
->>>> My primary concern is if I am using the write firmware.
->>>>
->>>> I have a firmware-sdio-5.bin which is the QCA9377/hw1.0/untested/firmware-sdio-5.bin_WLAN.TF.1.1.1-00061-QCATFSWPZ-1
->>>> file from the ath10k-firmware tree at https://github.com/kvalo/ath10k-firmware.git.
->>>> And the board-sdio.bin which is the bdwlan30.bin from https://github.com/boundarydevices/qca-firmware.git.
->> This firmware should work. I am using it as well.
->>
->>>>
->>>> I ended up with those from comments made in
->>>> https://ath10k.infradead.narkive.com/lgpFutCZ/patch-00-11-sdio-support-for-ath10k
->>>> But maybe I am off-track here?
->>>>
->>>> Does the kernel trace give any clues as what the problem may be?
->>>> Any other ideas?
->> The only thing I can think of is that something is wrong with your SDIO/MMC setup
->> (device tree?) or your actual hardware.
->>
->> -- 
->> Erik
->>
 
 _______________________________________________
 ath10k mailing list
