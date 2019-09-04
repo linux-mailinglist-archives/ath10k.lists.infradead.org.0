@@ -2,85 +2,86 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C5DE8A7A26
-	for <lists+ath10k@lfdr.de>; Wed,  4 Sep 2019 06:43:39 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 75178A7B67
+	for <lists+ath10k@lfdr.de>; Wed,  4 Sep 2019 08:16:11 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:
-	Message-ID:Date:To:From:Subject:Reply-To:Cc:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=2d8q+emPIrP0gtHN4bRHjxG713zHFo4Bn3DS3c8nzqo=; b=B1vaNlqOihYvk1
-	zrnJnScUuv/u0cnhAczrgQ5P5a+h3cMJCNqzN2+ZkXovcTvOuFcT875i7c2ym0VXOoid5No7XxkUD
-	416SujjPfIsa4TsmP/Zm8PNw2pilD7GbX5N/4nYqD77e8Nl+AHyERjgTASdJlSA39zAR7pwWmQ4nd
-	bnSV5gjemMFdPld/8ZA+eG0NmNU14Scp4jT/18ihzBtNtId7fgZKA9DtYtD+pjZZJCYyW3RgH9zz4
-	pTllEO4Ave0SY+lWTbzHWkWHmQEPRCN2torV0Af1s+PhEKnVJ4nQMpYHhqS1Bh2LTwQL9j08Q4EcZ
-	/3+iDNG/+fiTOE3/s1OQ==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
+	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=EooZ+g0ckFDP+gYk/X76R4RkjU45peZT//ypAdwwZ70=; b=Iiu
+	9iWC+leHnt/QzmaNq0LTA+RL14z+Rs8YR6H0BNxd3O9l0BjykLd75QCqJ8mmPc6pokrhNcVrmAm/I
+	7O4Aya9mIm2fAsoGFKXIPzoRV8VMrLgNanbLaiy5XyhHCnrQi788c3dcy+eSiN1V8kM+LdP3MCX1r
+	0Q3gfvz17k5B5s7ghVfI00BZ6dcJ5XQdHS1+hSiE588yZT/BRGvGEPn6hQxXZ33gbjMsRhAwHlggK
+	JhgcUVnqa0qpbVnXI91K6POjtlytWT5sXjJDbPJyB07+bJA8LkA5dq5nvVEVirxcRyoy7Tb9Yh9E9
+	amTEeThdqnh3nUlWtY+LqwjxaSK7qqA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i5N8q-00031V-BD; Wed, 04 Sep 2019 04:43:36 +0000
-Received: from alexa-out-tai-02.qualcomm.com ([103.229.16.227])
+	id 1i5OaN-00013T-Tc; Wed, 04 Sep 2019 06:16:08 +0000
+Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i5N8l-00030L-IB
- for ath10k@lists.infradead.org; Wed, 04 Sep 2019 04:43:33 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
- d=qti.qualcomm.com; i=@qti.qualcomm.com; q=dns/txt;
- s=qcdkim; t=1567572211; x=1599108211;
- h=from:to:date:message-id:references:in-reply-to:
- content-transfer-encoding:mime-version:subject;
- bh=DMDQwa1wMgq3WtQtLRk0tX1gDVhgMz6LcVx5a87hHFo=;
- b=QRs/peYPbuNJ+8+Gpb8vNFY6VjjdizX0CERKIXj5+17m/+u3wrZHrIuQ
- QVPlReebPgIeiauxPAbso6jFHp+vvc8a0gKWISr1eT5ImdLkaCGM1c9/U
- Lo2/wLZ4hZ2IHFPckol9EypJHMPdO+7O7ROju8qOil54ggaSWtYB6mN00 0=;
-Subject: RE: [PATCH 2/7] ath10k: change max RX bundle size from 8 to 32 for
- sdio
-Thread-Topic: [PATCH 2/7] ath10k: change max RX bundle size from 8 to 32 for
- sdio
-Received: from ironmsg03-tai.qualcomm.com ([10.249.140.8])
- by alexa-out-tai-02.qualcomm.com with ESMTP; 04 Sep 2019 12:43:27 +0800
-Received: from aptaiexm02a.ap.qualcomm.com ([10.249.150.11])
- by ironmsg03-tai.qualcomm.com with ESMTP/TLS/AES256-SHA;
- 04 Sep 2019 12:43:23 +0800
-Received: from aptaiexm02f.ap.qualcomm.com (10.249.150.16) by
- aptaiexm02a.ap.qualcomm.com (10.249.150.11) with Microsoft SMTP Server (TLS)
- id 15.0.1473.3; Wed, 4 Sep 2019 12:43:21 +0800
-Received: from aptaiexm02f.ap.qualcomm.com ([fe80::4152:1436:e436:faa1]) by
- aptaiexm02f.ap.qualcomm.com ([fe80::4152:1436:e436:faa1%19]) with mapi id
- 15.00.1473.005; Wed, 4 Sep 2019 12:43:21 +0800
-From: Wen Gong <wgong@qti.qualcomm.com>
-To: Dave Taht <dave@taht.net>, "ath10k@lists.infradead.org"
- <ath10k@lists.infradead.org>, "linux-wireless@vger.kernel.org"
- <linux-wireless@vger.kernel.org>
-Thread-Index: AQHVYnII1QGsPhG3K0ybAPHFlPgABKca8VbA
-Date: Wed, 4 Sep 2019 04:43:21 +0000
-Message-ID: <259d8d7f8c2a4c428ae14ff211c83c1a@aptaiexm02f.ap.qualcomm.com>
-References: <1566302108-18219-1-git-send-email-wgong@codeaurora.org>
- <1566302108-18219-3-git-send-email-wgong@codeaurora.org>
- <87k1apnyyo.fsf@taht.net>
-In-Reply-To: <87k1apnyyo.fsf@taht.net>
-Accept-Language: en-US
-Content-Language: en-US
-X-MS-Has-Attach: 
-X-MS-TNEF-Correlator: 
-x-ms-exchange-transport-fromentityheader: Hosted
-x-originating-ip: [10.249.136.10]
-MIME-Version: 1.0
+ id 1i5OaJ-000131-Ut
+ for ath10k@lists.infradead.org; Wed, 04 Sep 2019 06:16:05 +0000
+Received: by smtp.codeaurora.org (Postfix, from userid 1000)
+ id DF48461195; Wed,  4 Sep 2019 06:16:01 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1567577762;
+ bh=5Xij+zFs54t+TMTsDwybgL6kdYeyg2X6LTssTBMQyz4=;
+ h=From:To:Cc:Subject:Date:From;
+ b=G6wHQlrSCWDTVqGv6DzRBGTctxGBAiSmhjxR2vhynb3vx/eRfAITjuylcOvm/ujiU
+ B/RrLprx8aUwQMJuU0frr5XXsUokIwxBfm5u/HpgvjKvgm8+/3sNCT/pD4+YjRExYD
+ FqWk8HQTPrWSbfDoT0BJaocBWbd2ouU34ilYkzkY=
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ pdx-caf-mail.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
+ DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
+ version=3.4.0
+Received: from wgong-HP-Z240-SFF-Workstation.qca.qualcomm.com (unknown
+ [180.166.53.21])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
+ (No client certificate requested)
+ (Authenticated sender: wgong@smtp.codeaurora.org)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 75C9A60E75;
+ Wed,  4 Sep 2019 06:16:00 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1567577761;
+ bh=5Xij+zFs54t+TMTsDwybgL6kdYeyg2X6LTssTBMQyz4=;
+ h=From:To:Cc:Subject:Date:From;
+ b=ouTQD6gikvu4yUgWWDjjI5SfHl2LQAmO83PbQuVOn3RwBMsi13vOCyJAnfpnkeuAD
+ vqwZ+5zdKmkjE/m/hzAjNJZkCROPSsZHyTm6UQr+UwGO1iRE3bEO+fpfk+yoDJOSsH
+ FGwgWyRUtTvYWP/6iWYutJ99lMqhB7TykJ0rsxu8=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 75C9A60E75
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ spf=none smtp.mailfrom=wgong@codeaurora.org
+From: Wen Gong <wgong@codeaurora.org>
+To: ath10k@lists.infradead.org,
+	johannes@sipsolutions.net
+Subject: [PATCH] mac80211: Store max_mtu in ieee80211_hw
+Date: Wed,  4 Sep 2019 14:15:43 +0800
+Message-Id: <1567577743-27684-1-git-send-email-wgong@codeaurora.org>
+X-Mailer: git-send-email 1.9.1
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190903_214331_892164_0D33C7A3 
-X-CRM114-Status: UNSURE (   9.72  )
+X-CRM114-CacheID: sfid-20190903_231604_020126_F1DA2D35 
+X-CRM114-Status: UNSURE (   9.93  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -2.4 (--)
+X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.4 points)
+ Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [103.229.16.227 listed in list.dnswl.org]
+ medium trust [198.145.29.96 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
 X-BeenThere: ath10k@lists.infradead.org
@@ -94,47 +95,62 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
+Cc: linux-wireless@vger.kernel.org
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-> -----Original Message-----
-> From: Dave Taht <dave@taht.net>
-> Sent: Wednesday, September 4, 2019 12:10 AM
-> To: Wen Gong <wgong@qti.qualcomm.com>; ath10k@lists.infradead.org;
-> linux-wireless@vger.kernel.org
-> Subject: [EXT] Re: [PATCH 2/7] ath10k: change max RX bundle size from 8 to
-> 32 for sdio
-> 
-> 
-> In terms of deeply grokking what increasing buffering to achieve high
-> bandwidth on a testbench, vs what it can do to clobber latency in the
-> real world at low bandwidths, I tend to point folk at:
-> 
-> https://www.youtube.com/watch?v=Rb-UnHDw02o&t=25m40s
-> 
-> where I got a whole bunch of hackers to stand up and act like packets
-> in an aggregating FIFO wifi queue.
-> 
-> This key section is only 8 minutes long, and I promise, y'all laugh
-> at least 3 times at the demonstration.
-> 
-> At the time, also, the ath10k was so overbuffered that on one test
-> I could try to start 100 flows, and only get five.
-> 
-> https://lwn.net/Articles/705884/
-> 
-> and on my slides:
-> 
-> https://blog.linuxplumbersconf.org/2016/ocw//system/presentations/3963/
-> original/linuxplumbers_wifi_latency-3Nov.pdf
-> 
-Hi Dave,
-So your mean is change 8  to 32 will impact latency? It will increase latency of rx?
+Make it possibly for drivers to adjust the default mat_mtu
+by storing it in the hardware struct.
 
-> 
-> 0xFFFEFFFF
+Signed-off-by: Wen Gong <wgong@codeaurora.org>
+---
+ include/net/mac80211.h | 3 +++
+ net/mac80211/iface.c   | 5 ++++-
+ 2 files changed, 7 insertions(+), 1 deletion(-)
+
+diff --git a/include/net/mac80211.h b/include/net/mac80211.h
+index d26da01..8545b03 100644
+--- a/include/net/mac80211.h
++++ b/include/net/mac80211.h
+@@ -2454,6 +2454,8 @@ enum ieee80211_hw_flags {
+  *
+  * @weight_multiplier: Driver specific airtime weight multiplier used while
+  *	refilling deficit of each TXQ.
++ *
++ * @max_mtu: the max mtu could be set.
+  */
+ struct ieee80211_hw {
+ 	struct ieee80211_conf conf;
+@@ -2491,6 +2493,7 @@ struct ieee80211_hw {
+ 	u8 max_nan_de_entries;
+ 	u8 tx_sk_pacing_shift;
+ 	u8 weight_multiplier;
++	u32 max_mtu;
+ };
+ 
+ static inline bool _ieee80211_hw_check(struct ieee80211_hw *hw,
+diff --git a/net/mac80211/iface.c b/net/mac80211/iface.c
+index 06aac0a..00c33e6 100644
+--- a/net/mac80211/iface.c
++++ b/net/mac80211/iface.c
+@@ -1877,7 +1877,10 @@ int ieee80211_if_add(struct ieee80211_local *local, const char *name,
+ 
+ 		/* MTU range: 256 - 2304 */
+ 		ndev->min_mtu = 256;
+-		ndev->max_mtu = IEEE80211_MAX_DATA_LEN;
++		if (local->hw.max_mtu)
++			ndev->max_mtu = local->hw.max_mtu;
++		else
++			ndev->max_mtu = IEEE80211_MAX_DATA_LEN;
+ 
+ 		ret = register_netdevice(ndev);
+ 		if (ret) {
+-- 
+1.9.1
+
 
 _______________________________________________
 ath10k mailing list
