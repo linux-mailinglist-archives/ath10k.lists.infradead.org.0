@@ -2,58 +2,58 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3F330AA06E
-	for <lists+ath10k@lfdr.de>; Thu,  5 Sep 2019 12:50:08 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7F4A3AA073
+	for <lists+ath10k@lfdr.de>; Thu,  5 Sep 2019 12:50:37 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:
 	Message-ID:Date:To:From:Subject:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=PrDywCgyc08LU7XikEdiMgP+rBgraOo6dyZ/N5UFne8=; b=GHtehOyIqYWAXJ
-	aqHwDqnqTD+aCJMR46PZK9IfyYzVVellidJ6gXi5sDOqCdGMF6BHANnIBN4LGpqkkr22dZ+Di704t
-	Si5Z+krq0k8ju42Eq+RPMbKQaSAC6Yc35eC8/22qqc0NsRDffPmWmaKCDLdekmgi7LLBAvLlpbqDI
-	I4PyaB3z6vRC58q/p73MsMho2/3mKhhviQp4fNzKO9LVyxmqGO1/oDhBKpbcqj8/HuRBqVm/wYWxy
-	OPVFY+ztlF6Wn/Q5VsdoIsaNvF0GpeKI0ct6u3IY30aE1EvQ8NLATTd5w5MsRkDgd2kJDmXjATDNZ
-	t76QqZrZ0I1fOT1ZHMRQ==;
+	List-Owner; bh=kGsXndW6GQo49PW3Y36/Hgqi/Wg4RRpXDaAIGpmHELM=; b=jz0SWwBhsZ44dh
+	nYksmXvMg+eh53M6h205dVSDjdCCp3ZI11Mrjk0zQ33/KwYjaOwSL/UOXvnNSBII5MXqVLSfItip/
+	sLtcBS05OEPjaT7cez4xJzJtATV9zr08q1bWP/r97eut0TX9cYjj/bpOWABvjp34xlmBB2TEl4mXE
+	jdSWFifPxeNEdtpvO0NzQfDIh2abL9F3i20WuNGx7hiKr+jAzPlj083igHTt35rDODfTzAAUkUBFi
+	7SJpTchTeAI3gE1iJ2kz5qXi5B8OM5opdzVBofqDdJbJtke54Boma3fzNLFNmdwOTWUV96Nqg/tW/
+	Feif+shNtoChgZg6viyA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i5pL5-0005aX-0f; Thu, 05 Sep 2019 10:50:07 +0000
+	id 1i5pLY-0006Yr-8S; Thu, 05 Sep 2019 10:50:36 +0000
 Received: from alexa-out-tai-02.qualcomm.com ([103.229.16.227])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i5pKy-0005FK-6L
- for ath10k@lists.infradead.org; Thu, 05 Sep 2019 10:50:01 +0000
+ id 1i5pLU-0006YI-TV
+ for ath10k@lists.infradead.org; Thu, 05 Sep 2019 10:50:34 +0000
 DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
  d=qti.qualcomm.com; i=@qti.qualcomm.com; q=dns/txt;
- s=qcdkim; t=1567680600; x=1599216600;
+ s=qcdkim; t=1567680632; x=1599216632;
  h=from:to:cc:date:message-id:references:in-reply-to:
  content-transfer-encoding:mime-version:subject;
- bh=JVidJm3TrWOlQ/eLo1/uKpNub96LqscnhwB8iBWIx3c=;
- b=SK4XjPetuNR5s18CUElDbqQbcZUFL2FLWrxGxgnZ/PTuHhuhU0/BaN6i
- COdQKiseuwRWxpXWKLCEmHS/8IifoGQOeUlAzZdzU2xJp0waacir81FmM
- 9gGDJ8nXMQ5a7SOia7y03O1vLcslGGbrzRxmbWLlwHYxfdeOx/WtU0RBJ U=;
-Subject: RE: [PATCH v4 7/8] ath10k: enable alt data of TX path for sdio
-Thread-Topic: [PATCH v4 7/8] ath10k: enable alt data of TX path for sdio
-Received: from ironmsg01-tai.qualcomm.com ([10.249.140.6])
- by alexa-out-tai-02.qualcomm.com with ESMTP; 05 Sep 2019 18:49:58 +0800
+ bh=rVn3Xny9R8JPc+zFOJCISKNCSjmBTjjXhYya3D/aurc=;
+ b=o3wAOwoDXJ+GMbSyiNjzE6d/Obz/Bet7Fj6drAPyaAZJ4Hj0ucA9VYKv
+ oHcZfDmLMgHZdVcn/zRZcIxcEa/wmwMtQoQiq8KgqAjT6H06K0FuuQ53S
+ bdKyKjxs0FUIQHBKRcE1tPJSU9Am3lxxCfjTyZrItwYzjQ6R9u3qhN25C Y=;
+Subject: RE: [PATCH v4 8/8] ath10k: enable napi on RX path for sdio
+Thread-Topic: [PATCH v4 8/8] ath10k: enable napi on RX path for sdio
+Received: from ironmsg02-tai.qualcomm.com ([10.249.140.7])
+ by alexa-out-tai-02.qualcomm.com with ESMTP; 05 Sep 2019 18:50:31 +0800
 Received: from aptaiexm02b.ap.qualcomm.com ([10.249.150.12])
- by ironmsg01-tai.qualcomm.com with ESMTP/TLS/AES256-SHA;
- 05 Sep 2019 18:49:58 +0800
+ by ironmsg02-tai.qualcomm.com with ESMTP/TLS/AES256-SHA;
+ 05 Sep 2019 18:50:31 +0800
 Received: from aptaiexm02f.ap.qualcomm.com (10.249.150.16) by
  aptaiexm02b.ap.qualcomm.com (10.249.150.12) with Microsoft SMTP Server (TLS)
- id 15.0.1473.3; Thu, 5 Sep 2019 18:49:56 +0800
+ id 15.0.1473.3; Thu, 5 Sep 2019 18:50:29 +0800
 Received: from aptaiexm02f.ap.qualcomm.com ([fe80::4152:1436:e436:faa1]) by
  aptaiexm02f.ap.qualcomm.com ([fe80::4152:1436:e436:faa1%19]) with mapi id
- 15.00.1473.005; Thu, 5 Sep 2019 18:49:56 +0800
+ 15.00.1473.005; Thu, 5 Sep 2019 18:50:29 +0800
 From: Wen Gong <wgong@qti.qualcomm.com>
 To: Wen Gong <wgong@codeaurora.org>, "ath10k@lists.infradead.org"
  <ath10k@lists.infradead.org>
-Thread-Index: AQHVYXAjN4t1PLlbyEOgOjlaMEXcUKcc7FMg
-Date: Thu, 5 Sep 2019 10:49:56 +0000
-Message-ID: <56dbd74506ba453da9a51c810fc467d7@aptaiexm02f.ap.qualcomm.com>
+Thread-Index: AQHVYXAmp8mxVCKAGUqXejG7xPiQLacc7HIg
+Date: Thu, 5 Sep 2019 10:50:29 +0000
+Message-ID: <c816734498c349119c12c23bc8a4827f@aptaiexm02f.ap.qualcomm.com>
 References: <1567416146-14403-1-git-send-email-wgong@codeaurora.org>
- <1567416146-14403-8-git-send-email-wgong@codeaurora.org>
-In-Reply-To: <1567416146-14403-8-git-send-email-wgong@codeaurora.org>
+ <1567416146-14403-9-git-send-email-wgong@codeaurora.org>
+In-Reply-To: <1567416146-14403-9-git-send-email-wgong@codeaurora.org>
 Accept-Language: en-US
 Content-Language: en-US
 X-MS-Has-Attach: 
@@ -62,8 +62,8 @@ x-ms-exchange-transport-fromentityheader: Hosted
 x-originating-ip: [10.249.136.10]
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190905_035000_488768_52541DDD 
-X-CRM114-Status: UNSURE (   4.16  )
+X-CRM114-CacheID: sfid-20190905_035033_218612_6EA6E5FF 
+X-CRM114-Status: UNSURE (   3.80  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.4 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -101,11 +101,9 @@ Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 > Sent: Monday, September 2, 2019 5:22 PM
 > To: ath10k@lists.infradead.org
 > Cc: linux-wireless@vger.kernel.org
-> Subject: [EXT] [PATCH v4 7/8] ath10k: enable alt data of TX path for sdio
+> Subject: [EXT] [PATCH v4 8/8] ath10k: enable napi on RX path for sdio
 > 
-Patch v5 sent without change, https://patchwork.kernel.org/patch/11132673/
-> 
-> _______________________________________________
+Patch v5 sent with change, https://patchwork.kernel.org/patch/11132677/
 > ath10k mailing list
 > ath10k@lists.infradead.org
 > http://lists.infradead.org/mailman/listinfo/ath10k
