@@ -2,58 +2,60 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 085A3AA061
-	for <lists+ath10k@lfdr.de>; Thu,  5 Sep 2019 12:48:39 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D5177AA066
+	for <lists+ath10k@lfdr.de>; Thu,  5 Sep 2019 12:49:04 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:
 	Message-ID:Date:To:From:Subject:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=inUwtNzZa5D8BVoL2jqmGhXFcAukMA1FbP8qXV5heX8=; b=XpJWMrGtt/ftwl
-	ph9mAKbHILRlpRR/bZfyWC6gpBg6lk9waO2vtHXDFElIfoEVDeM+Yuuxu3tOeVJmnEnqJPeCLC10x
-	sfjjX6MRS5+23oNapcS4Lj6u0fm8Ton6GdvV4y2CofgDC9Gbj8By2BmKhCsvqNLo1o8vir33DdRzM
-	+rwjg/UiPGSQXlmrgezeGHpKTZNiKos9dsd9z2V/Ee4vjBO0dpegcZ3qKgdpLE2Hw45KTpSPdtmQt
-	csIhQAXHV4L5RG4WDpJXQ2+HN+iMQgFzh6s21N9cdNd15/IWJdBQHOij8ZrkxXaDp534ywA2RhCuI
-	/BT9LR/WavwQlRb7Wb5g==;
+	List-Owner; bh=mbXc/1GkyoZaOGL1tk7tYNZ6GGCJrJ6g4r2QZkwy/pw=; b=KnWDEN2VZRP39X
+	8ctIvgKqeuv/hdCN/T++StBIMkhF1MfOmuFMSzM6xd+2J7w0W7qSFdwId05UAb3ockWVBW9QSFZod
+	nCuaN2GzepsttzyeJnHXd+QooudbaTY/vdV32y7C136xKNSq6PR6wxmvcqCJ9Y1z0d9tAfnmWa751
+	yGF6yxNTC7rarjYFIJN+lZwAb8/14hnEcjBJDUud+Gm9o3opB01ZnpjM8WvgxGD23G8AyaFT3W4EX
+	jMbSVxrrOqwBE5FRdy8FioafrNCpMhYgO5f1CwD0WUiiiFIFjmGzha5aH9mdIqQbn4D3r7bMd17TT
+	QAYJEjfzqOrw5eBzFC6g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i5pJd-0004cz-HU; Thu, 05 Sep 2019 10:48:37 +0000
+	id 1i5pK3-000526-Bp; Thu, 05 Sep 2019 10:49:03 +0000
 Received: from alexa-out-tai-01.qualcomm.com ([103.229.16.226])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i5pJY-0004cR-SF
- for ath10k@lists.infradead.org; Thu, 05 Sep 2019 10:48:34 +0000
+ id 1i5pJz-00051T-17
+ for ath10k@lists.infradead.org; Thu, 05 Sep 2019 10:49:00 +0000
 DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
  d=qti.qualcomm.com; i=@qti.qualcomm.com; q=dns/txt;
- s=qcdkim; t=1567680512; x=1599216512;
+ s=qcdkim; t=1567680539; x=1599216539;
  h=from:to:cc:date:message-id:references:in-reply-to:
  content-transfer-encoding:mime-version:subject;
- bh=Mgmw6/oFpcFOidf62zpijDCtM02lHJrTQaOl/wbTiko=;
- b=uVipDWejyZlLZS20tn4mB/U88Kus2unKnug/N1HRxTumv7xyrDOoHSHC
- B5+iq/G8Ov8wsROhZLP3q3kDLJEfvuMdD4PMIbOpQfDPGS+nBD746Eg+a
- xPUcKDb3CSkU4g47/0CaczxBI98sZcFS4xSi/eZ+3ACgFw4ARnFTJ7uTu g=;
-Subject: RE: [PATCH v4 4/8] ath10k: add workqueue for RX path of sdio
-Thread-Topic: [PATCH v4 4/8] ath10k: add workqueue for RX path of sdio
-Received: from ironmsg01-tai.qualcomm.com ([10.249.140.6])
- by alexa-out-tai-01.qualcomm.com with ESMTP; 05 Sep 2019 18:48:31 +0800
-Received: from aptaiexm02e.ap.qualcomm.com ([10.249.150.15])
- by ironmsg01-tai.qualcomm.com with ESMTP/TLS/AES256-SHA;
- 05 Sep 2019 18:48:31 +0800
+ bh=j7gs4cYHhDOzx9A51SfNCn9mgKHNFoAMilOZKGmFfyY=;
+ b=UxTgdy36FM2CQSMirs+8Ihxe29Mby6UeTzh12QxQbjrAqbzp4vYzz3rH
+ LUl2qEY7Sp6n1UMLUSpA/sm4/NwcbMSq9QacEzjdVmEvrhmZAxz/ARxiG
+ r9zYGkAUcuXGL/iGqDCsDmBTjGrv3B/7CUrZXSfQYtr6CCRexw/Mf/t73 o=;
+Subject: RE: [PATCH v4 5/8] ath10k: disable TX complete indication of htt for
+ sdio
+Thread-Topic: [PATCH v4 5/8] ath10k: disable TX complete indication of htt for
+ sdio
+Received: from ironmsg03-tai.qualcomm.com ([10.249.140.8])
+ by alexa-out-tai-01.qualcomm.com with ESMTP; 05 Sep 2019 18:48:57 +0800
+Received: from aptaiexm02f.ap.qualcomm.com ([10.249.150.16])
+ by ironmsg03-tai.qualcomm.com with ESMTP/TLS/AES256-SHA;
+ 05 Sep 2019 18:48:57 +0800
 Received: from aptaiexm02f.ap.qualcomm.com (10.249.150.16) by
- aptaiexm02e.ap.qualcomm.com (10.249.150.15) with Microsoft SMTP Server (TLS)
- id 15.0.1473.3; Thu, 5 Sep 2019 18:48:29 +0800
+ aptaiexm02f.ap.qualcomm.com (10.249.150.16) with Microsoft SMTP Server (TLS)
+ id 15.0.1473.3; Thu, 5 Sep 2019 18:48:55 +0800
 Received: from aptaiexm02f.ap.qualcomm.com ([fe80::4152:1436:e436:faa1]) by
  aptaiexm02f.ap.qualcomm.com ([fe80::4152:1436:e436:faa1%19]) with mapi id
- 15.00.1473.005; Thu, 5 Sep 2019 18:48:29 +0800
+ 15.00.1473.005; Thu, 5 Sep 2019 18:48:55 +0800
 From: Wen Gong <wgong@qti.qualcomm.com>
 To: Wen Gong <wgong@codeaurora.org>, "ath10k@lists.infradead.org"
  <ath10k@lists.infradead.org>
-Thread-Index: AQHVYXAZ3QlmMCc8UE+1jfVWx8rHNqcc6+WQ
-Date: Thu, 5 Sep 2019 10:48:29 +0000
-Message-ID: <929a821ce641448a9bb32bea92ee6353@aptaiexm02f.ap.qualcomm.com>
+Thread-Index: AQHVYXAaabfQbHWpMEKn4eggVrthuKcc7ArQ
+Date: Thu, 5 Sep 2019 10:48:55 +0000
+Message-ID: <9ef39d37e78847eab5a90d7647d55f6c@aptaiexm02f.ap.qualcomm.com>
 References: <1567416146-14403-1-git-send-email-wgong@codeaurora.org>
- <1567416146-14403-5-git-send-email-wgong@codeaurora.org>
-In-Reply-To: <1567416146-14403-5-git-send-email-wgong@codeaurora.org>
+ <1567416146-14403-6-git-send-email-wgong@codeaurora.org>
+In-Reply-To: <1567416146-14403-6-git-send-email-wgong@codeaurora.org>
 Accept-Language: en-US
 Content-Language: en-US
 X-MS-Has-Attach: 
@@ -62,8 +64,8 @@ x-ms-exchange-transport-fromentityheader: Hosted
 x-originating-ip: [10.249.136.10]
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190905_034833_176287_5F7AE99E 
-X-CRM114-Status: UNSURE (   4.13  )
+X-CRM114-CacheID: sfid-20190905_034859_327118_6ECAB03C 
+X-CRM114-Status: UNSURE (   4.44  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.4 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -101,11 +103,11 @@ Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 > Sent: Monday, September 2, 2019 5:22 PM
 > To: ath10k@lists.infradead.org
 > Cc: linux-wireless@vger.kernel.org
-> Subject: [EXT] [PATCH v4 4/8] ath10k: add workqueue for RX path of sdio
+> Subject: [EXT] [PATCH v4 5/8] ath10k: disable TX complete indication of htt
+> for sdio
 > 
-Patch v5 sent without change, https://patchwork.kernel.org/patch/11132667/
+Patch v5 sent without change, https://patchwork.kernel.org/patch/11132669/
 
-> 
 > _______________________________________________
 > ath10k mailing list
 > ath10k@lists.infradead.org
