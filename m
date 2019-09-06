@@ -2,76 +2,84 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2247DAB678
-	for <lists+ath10k@lfdr.de>; Fri,  6 Sep 2019 12:55:53 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id F296FAC23F
+	for <lists+ath10k@lfdr.de>; Fri,  6 Sep 2019 23:54:39 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
-	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
-	References:List-Owner; bh=UXCc6azXZ9O5J9WiitY6xMge7QSzUVd2KFiuHbiLtng=; b=QNW
-	PP/aXk9OTPYzDTxox5xeNY/uEuaBtal9GT6Wv1mJpedst8iTGFbxmexsOaF7TIWQhIHxF4iBqWdSU
-	HjIbfbxA6jdamIXsTWErS9d/Qetukg25g9VPY1FkEBllnb1HS8iUb+czWB7nOjUjKP75UUlhk80uM
-	tNJesaprR4lw+D3978L9G2cjB/vBjqTaoWTGqmahkVgdhXTkHcJAyX+cTD/QPouiF/C03pAh13kh3
-	Bvzcwq9R/BNWofhkQhmy6stbzpo5lkiZBaPd/HOssIAUFMhQxwLISYSuwR8/wg3ztxPQt9c/7XYo4
-	/c2zpT4nQ1sv4KlbWbq7zYU9KAOHVZw==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=OTb2vOTH6OBk0J1o5TupQRNPQI52YDHvb9Q5xZ5fSvo=; b=LXWLksCja0fK9c
+	lqCJK6wqOx7pxlOGKEET7WHYFXO6LrjVXHpSgecPmC4/6lQ8JJ1ivI5sefK5jpEfPiB7e/6Hu+epR
+	qtae3byKJ1lKSkbcTsFUpZ7W3pRet9hPWl9Dt45YP/7OIqP5IzbT258pwx8xdBoVqPep8GuYD/DrS
+	LGp9VopE77Gtukp1hdgOUaJ82rmrokSgK4jDEnGJBuvhIPRVMBSS4NuPSmNQ1attCAkam7J2Nid0h
+	5XqWRgjEow/0K5MIvdMgTXxje1o50mL5uqatV+ecHl1rY/sLMF+YK03xYvw0zXZaCqfF/K5JBJ+CB
+	MBRYwOL5qPDh0Thqrs6A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92 #3 (Red Hat Linux))
-	id 1i6BuA-0007Ju-Mz; Fri, 06 Sep 2019 10:55:50 +0000
-Received: from smtp.codeaurora.org ([198.145.29.96])
+	id 1i6MBd-0007m7-VW; Fri, 06 Sep 2019 21:54:34 +0000
+Received: from mail-wr1-x441.google.com ([2a00:1450:4864:20::441])
  by bombadil.infradead.org with esmtps (Exim 4.92 #3 (Red Hat Linux))
- id 1i6Bu6-00078t-9y
- for ath10k@lists.infradead.org; Fri, 06 Sep 2019 10:55:47 +0000
-Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id E36986030B; Fri,  6 Sep 2019 10:55:41 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1567767341;
- bh=cCX/dbHZsdqP02XD6v5aEiK2L+Ll9aWqxJ4VRhY2PUA=;
- h=From:To:Cc:Subject:Date:From;
- b=IFjZPPQbI1+h7wyIAnjX0YT9AjJJy0ukOXgqrWMTKvFnlaMZXmUBc8S4RLRqrVOVc
- ZMLy32gKMTHhCH9DhkVAhcDT+lzymRctaQ19vvZ8QWJtsoRImx7Bl9MsvABW8Nv2Qw
- ssIGBvTDxzzSbnQsDA2FKDiEVOhpv1bH3B6YKp0Y=
-X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
- pdx-caf-mail.web.codeaurora.org
-X-Spam-Level: 
-X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
- DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
- version=3.4.0
-Received: from wgong-HP-Z240-SFF-Workstation.qca.qualcomm.com (unknown
- [180.166.53.21])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
- (No client certificate requested)
- (Authenticated sender: wgong@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id BB3E760770;
- Fri,  6 Sep 2019 10:55:40 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1567767341;
- bh=cCX/dbHZsdqP02XD6v5aEiK2L+Ll9aWqxJ4VRhY2PUA=;
- h=From:To:Cc:Subject:Date:From;
- b=IFjZPPQbI1+h7wyIAnjX0YT9AjJJy0ukOXgqrWMTKvFnlaMZXmUBc8S4RLRqrVOVc
- ZMLy32gKMTHhCH9DhkVAhcDT+lzymRctaQ19vvZ8QWJtsoRImx7Bl9MsvABW8Nv2Qw
- ssIGBvTDxzzSbnQsDA2FKDiEVOhpv1bH3B6YKp0Y=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org BB3E760770
-Authentication-Results: pdx-caf-mail.web.codeaurora.org;
- dmarc=none (p=none dis=none) header.from=codeaurora.org
-Authentication-Results: pdx-caf-mail.web.codeaurora.org;
- spf=none smtp.mailfrom=wgong@codeaurora.org
-From: Wen Gong <wgong@codeaurora.org>
-To: ath10k@lists.infradead.org
-Subject: [PATCH] ath10k: remove the warning of sdio not full support
-Date: Fri,  6 Sep 2019 18:55:01 +0800
-Message-Id: <1567767301-22940-1-git-send-email-wgong@codeaurora.org>
-X-Mailer: git-send-email 1.9.1
+ id 1i6MBX-0007lm-Ki
+ for ath10k@lists.infradead.org; Fri, 06 Sep 2019 21:54:29 +0000
+Received: by mail-wr1-x441.google.com with SMTP id y19so8016993wrd.3
+ for <ath10k@lists.infradead.org>; Fri, 06 Sep 2019 14:54:26 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=leeQnibrGjVek5bG1abJ4jTx9dAaPgO2nMR8X0LXbwQ=;
+ b=trE7xY9GPQv2iuCLVqox8AQq0Lsf5NU9QJTAcp2BC6+wmFEmDTXcTLyfGbivZ3e7+6
+ d0BaDWT5Sqzicra5tIq0l2BkBpN32JKRwWbenNGwSK7wtXpafDd3vu/qHD80rgglhW3B
+ obcgHje2W9Sqa0wzhjRvlEW9I7ycFc670oSoMhKb/FjSzNOC8/gCJbl/vItZl+KoE7wZ
+ pra5UZJMvNQj+hE2EL8eLh4EysMCWds3zebIwIrWi4/4Ohz7SM6RUBKMS6H187ETnNtF
+ 6GNkIY0t61sSw+fUGl9Pwl2I3dUSrJn2H15VR1R2pmAPypjrB+4N4SLMevHTisyaBBP9
+ +HFQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=leeQnibrGjVek5bG1abJ4jTx9dAaPgO2nMR8X0LXbwQ=;
+ b=sZJ3BXixqiC840esSu9Xs24EkUNd4moW7DVqvhuxc55SjfsgY6yKzbMUSHaSKeaBTi
+ p70tr1nsBvCdjqViGGcZB070JY8NyxjUB0+7OJyxWvM4i6E3px8Bsw7+9JK1f6X5Je8X
+ SEAHIYZuaZASM0fRizXt6MCxwFC6/2jqq4Vc/oPjY3ho35xgz99gpOgOeuJA8FjpVjgI
+ y9eCJrFDz0rTRIJFwf/HCAOtDxOz6gDJ056UQxpqd1U9OYro7Igv2fFehGvEqT++HOYy
+ vRx8wNaVYZY55XCmYrulZ226SDPUDUnqpSXyrIKhZ89OyQGnMeMlQOMaqNCoCKN+91uj
+ yAFw==
+X-Gm-Message-State: APjAAAXiEJ5LAaZtr74edP7UPze1sbFm+n6Bl+QH28NvLhT4D51va86j
+ pLd1oUwQAZAN5GewqD53/To=
+X-Google-Smtp-Source: APXvYqwjNxT0UzdDs3WrSxxQ0dcEXEjQWUW6TZQ0dwyL2czZEE5cLl/61EiChq7S+Pz/h3UJxmpidQ==
+X-Received: by 2002:a05:6000:12d1:: with SMTP id
+ l17mr8799749wrx.91.1567806865330; 
+ Fri, 06 Sep 2019 14:54:25 -0700 (PDT)
+Received: from debian64.daheim (p5B0D72DC.dip0.t-ipconnect.de. [91.13.114.220])
+ by smtp.gmail.com with ESMTPSA id a15sm1923314wmj.25.2019.09.06.14.54.24
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Fri, 06 Sep 2019 14:54:24 -0700 (PDT)
+Received: from chuck by debian64.daheim with local (Exim 4.92.1)
+ (envelope-from <chunkeey@gmail.com>)
+ id 1i6MBT-00069E-Uy; Fri, 06 Sep 2019 23:54:23 +0200
+From: Christian Lamparter <chunkeey@gmail.com>
+To: linux-wireless@vger.kernel.org,
+	ath10k@lists.infradead.org
+Subject: [PATCH] ath10k: restore QCA9880-AR1A (v1) detection
+Date: Fri,  6 Sep 2019 23:54:23 +0200
+Message-Id: <20190906215423.23589-1-chunkeey@gmail.com>
+X-Mailer: git-send-email 2.23.0
+MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190906_035546_373661_4A1939E6 
-X-CRM114-Status: UNSURE (   8.04  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -2.5 (--)
+X-CRM114-CacheID: sfid-20190906_145427_729722_ECDA6EE9 
+X-CRM114-Status: GOOD (  13.99  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.5 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:441 listed in]
+ [list.dnswl.org]
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (chunkeey[at]gmail.com)
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -81,8 +89,6 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  author's domain
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [198.145.29.96 listed in list.dnswl.org]
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -94,40 +100,105 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless@vger.kernel.org
-MIME-Version: 1.0
+Cc: Kalle Valo <kvalo@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Recently, it has the basic feature of sdio tested success, so remove
-it.
+This patch restores the old behavior that read
+the chip_id on the QCA988x before resetting the
+chip. This needs to be done in this order since
+the unsupported QCA988x AR1A chips fall off the
+bus when resetted. Otherwise the next MMIO Op
+after the reset causes a BUS ERROR and panic.
 
-Tested with QCA6174 SDIO with firmware
-WLAN.RMH.4.4.1-00017-QCARMSWP-1.
-
-Signed-off-by: Wen Gong <wgong@codeaurora.org>
+Cc: stable@vger.kernel.org
+Fixes: 1a7fecb766c8 ("ath10k: reset chip before reading chip_id in probe")
+Signed-off-by: Christian Lamparter <chunkeey@gmail.com>
 ---
- drivers/net/wireless/ath/ath10k/sdio.c | 3 ---
- 1 file changed, 3 deletions(-)
+ drivers/net/wireless/ath/ath10k/pci.c | 36 +++++++++++++++++++--------
+ 1 file changed, 25 insertions(+), 11 deletions(-)
 
-diff --git a/drivers/net/wireless/ath/ath10k/sdio.c b/drivers/net/wireless/ath/ath10k/sdio.c
-index 8ed4fbd..0801215 100644
---- a/drivers/net/wireless/ath/ath10k/sdio.c
-+++ b/drivers/net/wireless/ath/ath10k/sdio.c
-@@ -2073,9 +2073,6 @@ static int ath10k_sdio_probe(struct sdio_func *func,
- 		goto err_free_wq;
+diff --git a/drivers/net/wireless/ath/ath10k/pci.c b/drivers/net/wireless/ath/ath10k/pci.c
+index a0b4d265c6eb..347bb92e4130 100644
+--- a/drivers/net/wireless/ath/ath10k/pci.c
++++ b/drivers/net/wireless/ath/ath10k/pci.c
+@@ -3490,7 +3490,7 @@ static int ath10k_pci_probe(struct pci_dev *pdev,
+ 	struct ath10k_pci *ar_pci;
+ 	enum ath10k_hw_rev hw_rev;
+ 	struct ath10k_bus_params bus_params = {};
+-	bool pci_ps;
++	bool pci_ps, is_qca988x = false;
+ 	int (*pci_soft_reset)(struct ath10k *ar);
+ 	int (*pci_hard_reset)(struct ath10k *ar);
+ 	u32 (*targ_cpu_to_ce_addr)(struct ath10k *ar, u32 addr);
+@@ -3500,6 +3500,7 @@ static int ath10k_pci_probe(struct pci_dev *pdev,
+ 	case QCA988X_2_0_DEVICE_ID:
+ 		hw_rev = ATH10K_HW_QCA988X;
+ 		pci_ps = false;
++		is_qca988x = true;
+ 		pci_soft_reset = ath10k_pci_warm_reset;
+ 		pci_hard_reset = ath10k_pci_qca988x_chip_reset;
+ 		targ_cpu_to_ce_addr = ath10k_pci_qca988x_targ_cpu_to_ce_addr;
+@@ -3619,25 +3620,34 @@ static int ath10k_pci_probe(struct pci_dev *pdev,
+ 		goto err_deinit_irq;
  	}
  
--	/* TODO: remove this once SDIO support is fully implemented */
--	ath10k_warn(ar, "WARNING: ath10k SDIO support is work-in-progress, problems may arise!\n");
--
++	bus_params.dev_type = ATH10K_DEV_TYPE_LL;
++	bus_params.link_can_suspend = true;
++	/* Read CHIP_ID before reset to catch QCA9880-AR1A v1 devices that
++	 * fall off the bus during chip_reset. These chips have the same pci
++	 * device id as the QCA9880 BR4A or 2R4E. So that's why the check.
++	 */
++	if (is_qca988x) {
++		bus_params.chip_id =
++			ath10k_pci_soc_read32(ar, SOC_CHIP_ID_ADDRESS);
++		if (bus_params.chip_id != 0xffffffff) {
++			if (!ath10k_pci_chip_is_supported(pdev->device,
++							  bus_params.chip_id))
++				goto err_unsupported;
++		}
++	}
++
+ 	ret = ath10k_pci_chip_reset(ar);
+ 	if (ret) {
+ 		ath10k_err(ar, "failed to reset chip: %d\n", ret);
+ 		goto err_free_irq;
+ 	}
+ 
+-	bus_params.dev_type = ATH10K_DEV_TYPE_LL;
+-	bus_params.link_can_suspend = true;
+ 	bus_params.chip_id = ath10k_pci_soc_read32(ar, SOC_CHIP_ID_ADDRESS);
+-	if (bus_params.chip_id == 0xffffffff) {
+-		ath10k_err(ar, "failed to get chip id\n");
+-		goto err_free_irq;
+-	}
++	if (bus_params.chip_id == 0xffffffff)
++		goto err_unsupported;
+ 
+-	if (!ath10k_pci_chip_is_supported(pdev->device, bus_params.chip_id)) {
+-		ath10k_err(ar, "device %04x with chip_id %08x isn't supported\n",
+-			   pdev->device, bus_params.chip_id);
++	if (!ath10k_pci_chip_is_supported(pdev->device, bus_params.chip_id))
+ 		goto err_free_irq;
+-	}
+ 
+ 	ret = ath10k_core_register(ar, &bus_params);
+ 	if (ret) {
+@@ -3647,6 +3657,10 @@ static int ath10k_pci_probe(struct pci_dev *pdev,
+ 
  	return 0;
  
- err_free_wq:
++err_unsupported:
++	ath10k_err(ar, "device %04x with chip_id %08x isn't supported\n",
++		   pdev->device, bus_params.chip_id);
++
+ err_free_irq:
+ 	ath10k_pci_free_irq(ar);
+ 	ath10k_pci_rx_retry_sync(ar);
 -- 
-1.9.1
+2.23.0
 
 
 _______________________________________________
