@@ -2,91 +2,55 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 749A7B0377
-	for <lists+ath10k@lfdr.de>; Wed, 11 Sep 2019 20:19:30 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1EB3CB038A
+	for <lists+ath10k@lfdr.de>; Wed, 11 Sep 2019 20:23:52 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
-	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=5ZRpsUfCrmRK7x8i9K9LexrqKMNvKiAIxyx+cnVL2/M=; b=Pwf2MiWHufozdJ
-	ZOBhtjDfH5fW8pTdY84BUFxIRqSCydlNUbczg2N3OnroBl9SKxB8TilraWuD5WuETkmWzGQDaXv8E
-	0XbPweNmqw0+0yc74aut5iAwe6fPSgAxcHZlBlT1L2vg5oRTaNAfto6Nuva1AhOVig1lFJ90wN+c4
-	qTy8Jtwypz0/V4O0EF1FjoDH2CA1gPNW+WJa+o5QsIGwntyBWKa7XkU2OoH6uH2VB89HfWgFw1nlZ
-	fZJjN+oMC/mS88Qk681UsYTT+ojbQZwysqy0kCX92BqiWFBxglPO1x/vGt2Ut6kt9GYMUxk7LWJfV
-	QMH0JIxZH+GMZT65VTAg==;
+	List-Owner; bh=6oopp7EA/tydfo4FmwLs0fOog/V8AtL9Jn/AyqvaTNA=; b=WYHp6C1w8CfQy/
+	EfDHxs85yC/047ahWbz5Fgp799pk6a6xmQzoPPJjeYnZGadrly7+CkAFsVfDACTvAEWYcwwJdBdFo
+	WGnuL8/6DXWAtO4Kcqaj7S4VXGIl9tUXvasWepNC/i/jgKX3tvbbjyWvQu2nebOAHPs7bJYe1DgcE
+	LQ7uuCF4Xs75xCWV9Ax5grz3VeU7NnQA21dVEF1bpNUDPw30Ozu6XKR9ApXLj3Ms5Pf2YzUbJK1kt
+	pejciQOUMDI3VGejSrJ69DBexdBABxkoiIMXOffxuY5Tr1dmpe++yJO1sWWSE/qR+EKPDJeixmaEg
+	Zp3UaKgmeIdAFHugJh/A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1i87DE-0001bD-Na; Wed, 11 Sep 2019 18:19:28 +0000
-Received: from smtp.codeaurora.org ([198.145.29.96])
+	id 1i87HS-0003Fx-DB; Wed, 11 Sep 2019 18:23:50 +0000
+Received: from s3.sipsolutions.net ([2a01:4f8:191:4433::2]
+ helo=sipsolutions.net)
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1i87DA-0001at-Ee
- for ath10k@lists.infradead.org; Wed, 11 Sep 2019 18:19:25 +0000
-Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 1132360791; Wed, 11 Sep 2019 18:19:24 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1568225964;
- bh=Cq8dA5RuJNCfEAowmhvZuC5y4iuFy5mhIPmTToluUMs=;
- h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=D4aSuyuLCh3pJmHnnFpuTZCHcgVPaPoy16SYi1IkAD2LGzeyMkb1mf4M04VdRUEsl
- deUcjNc05bsek504fYmwIDZbrG6EDW1lu3lpUtBPeCdZqQkJ68cukQl+Hzlsp1p82J
- wny+cIg6vd2kG6sSC7EPTgNfqTVcbu96E3ggKVSY=
-X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
- pdx-caf-mail.web.codeaurora.org
-X-Spam-Level: 
-X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
- DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
- version=3.4.0
-Received: from tynnyri.adurom.net (tynnyri.adurom.net [51.15.11.48])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested)
- (Authenticated sender: kvalo@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 933CF602BC;
- Wed, 11 Sep 2019 18:19:21 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1568225963;
- bh=Cq8dA5RuJNCfEAowmhvZuC5y4iuFy5mhIPmTToluUMs=;
- h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=oPoyWpwWaYG6gmpB5EbPPo9zZG4bz8pA8hQ3l4p8ZV5bp+GMzxvD0tduXjlV+A/vn
- 4PvOsNNH3umELX67JiyoIbxDx+wsjMi3kYHic0fJIv+3qNnM2tnVsy/YnztgZjQHat
- egYPG4zlizRYUB9g1n3e9+jHAuwVloSa1avaEzGg=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 933CF602BC
-Authentication-Results: pdx-caf-mail.web.codeaurora.org;
- dmarc=none (p=none dis=none) header.from=codeaurora.org
-Authentication-Results: pdx-caf-mail.web.codeaurora.org;
- spf=none smtp.mailfrom=kvalo@codeaurora.org
-From: Kalle Valo <kvalo@codeaurora.org>
-To: Johannes Berg <johannes@sipsolutions.net>
+ id 1i87HN-0003Ew-F1
+ for ath10k@lists.infradead.org; Wed, 11 Sep 2019 18:23:46 +0000
+Received: by sipsolutions.net with esmtpsa
+ (TLS1.3:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
+ (envelope-from <johannes@sipsolutions.net>)
+ id 1i87HD-000795-UV; Wed, 11 Sep 2019 20:23:36 +0200
+Message-ID: <383b145b608e0fe3a35ffb0ceb99fdf938d4e2bb.camel@sipsolutions.net>
 Subject: Re: WARNING at net/mac80211/sta_info.c:1057
  (__sta_info_destroy_part2())
+From: Johannes Berg <johannes@sipsolutions.net>
+To: Kalle Valo <kvalo@codeaurora.org>
+Date: Wed, 11 Sep 2019 20:23:33 +0200
+In-Reply-To: <87ef0mlmqg.fsf@tynnyri.adurom.net>
 References: <CAHk-=wgBuu8PiYpD7uWgxTSY8aUOJj6NJ=ivNQPYjAKO=cRinA@mail.gmail.com>
  <feecebfcceba521703f13c8ee7f5bb9016924cb6.camel@sipsolutions.net>
-Date: Wed, 11 Sep 2019 21:19:19 +0300
-In-Reply-To: <feecebfcceba521703f13c8ee7f5bb9016924cb6.camel@sipsolutions.net>
- (Johannes Berg's message of "Wed, 11 Sep 2019 12:26:32 +0200")
-Message-ID: <87ef0mlmqg.fsf@tynnyri.adurom.net>
-User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/26.1 (gnu/linux)
+ <87ef0mlmqg.fsf@tynnyri.adurom.net>
+User-Agent: Evolution 3.30.5 (3.30.5-1.fc29) 
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190911_111924_544598_D9C0CE32 
-X-CRM114-Status: GOOD (  13.68  )
-X-Spam-Score: -2.5 (--)
+X-CRM114-CacheID: sfid-20190911_112345_505169_D1B23D29 
+X-CRM114-Status: GOOD (  14.77  )
+X-Spam-Score: 0.4 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.5 points)
+ Content analysis details:   (0.4 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [198.145.29.96 listed in list.dnswl.org]
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
+ 0.4 KHOP_HELO_FCRDNS       Relay HELO differs from its IP's reverse DNS
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -101,62 +65,60 @@ List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
 Cc: Netdev <netdev@vger.kernel.org>, linux-wireless@vger.kernel.org,
  Linux List Kernel Mailing <linux-kernel@vger.kernel.org>,
  ath10k@lists.infradead.org, Linus Torvalds <torvalds@linux-foundation.org>,
- "David S. Miller" <davem@davemloft.net>, Kalle Valo <kvalo@codeaurora.org>
+ "David S. Miller" <davem@davemloft.net>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Johannes Berg <johannes@sipsolutions.net> writes:
+On Wed, 2019-09-11 at 21:19 +0300, Kalle Valo wrote:
+> > Looks like indeed the driver gives the device at least *3 seconds* for
+> > every command, see ath10k_wmi_cmd_send(), so most likely this would
+> > eventually have finished, but who knows how many firmware commands it
+> > would still have attempted to send...
+> 
+> 3 seconds is a bit short but in normal cases it should be enough. Of
+> course we could increase the delay but I'm skeptic it would help here.
 
->>    ath10k_pci 0000:02:00.0: wmi command 16387 timeout, restarting hardware
->>    ath10k_pci 0000:02:00.0: failed to set 5g txpower 23: -11
->>    ath10k_pci 0000:02:00.0: failed to setup tx power 23: -11
->>    ath10k_pci 0000:02:00.0: failed to recalc tx power: -11
->>    ath10k_pci 0000:02:00.0: failed to set inactivity time for vdev 0: -108
->>    ath10k_pci 0000:02:00.0: failed to setup powersave: -108
->> 
->> That certainly looks like something did try to set a power limit, but
->> eventually failed.
->
-> Yeah, that does seem a bit fishy. Kalle would have to comment for
-> ath10k.
->
->> Immediately after that:
->> 
->>    wlp2s0: deauthenticating from 54:ec:2f:05:70:2c by local choice
->> (Reason: 3=DEAUTH_LEAVING)
->
-> I don't _think_ any of the above would be a reason to disconnect, but it
-> clearly looks like the device got stuck at this point, since everything
-> just fails afterwards.
+I was thinking 3 seconds is way too long :-)
 
-Yeah, to me it looks anything ath10k tries to do with the devie fails,
-even resetting the device.
+> > Perhaps the driver should mark the device as dead and fail quickly once
+> > it timed out once, or so, but I'll let Kalle comment on that.
+> 
+> Actually we do try to restart the device when a timeout happens in
+> ath10k_wmi_cmd_send():
+> 
+>         if (ret == -EAGAIN) {
+>                 ath10k_warn(ar, "wmi command %d timeout, restarting hardware\n",
+>                             cmd_id);
+>                 queue_work(ar->workqueue, &ar->restart_work);
+>         }
 
-> Looks like indeed the driver gives the device at least *3 seconds* for
-> every command, see ath10k_wmi_cmd_send(), so most likely this would
-> eventually have finished, but who knows how many firmware commands it
-> would still have attempted to send...
+Yeah, and this is the problem, in a sense, I'd think. It seems to me
+that at this point the code needs to tag the device as "dead" and
+immediately return from any further commands submitted to it with an
+error (e.g. -EIO). You can can actually see in the initial report that
+while the restart was triggered, it too is waiting to acquire the RTNL:
 
-3 seconds is a bit short but in normal cases it should be enough. Of
-course we could increase the delay but I'm skeptic it would help here.
+>    Workqueue: events_freezable ieee80211_restart_work [mac80211]
+>    Call Trace:
+>     schedule+0x39/0xa0
+>     schedule_preempt_disabled+0xa/0x10
+>     __mutex_lock.isra.0+0x263/0x4b0
+>     ieee80211_restart_work+0x54/0xe0 [mac80211]
+>     process_one_work+0x1cf/0x370
+>     worker_thread+0x4a/0x3c0
+>     kthread+0xfb/0x130
+>     ret_from_fork+0x35/0x40
 
-> Perhaps the driver should mark the device as dead and fail quickly once
-> it timed out once, or so, but I'll let Kalle comment on that.
 
-Actually we do try to restart the device when a timeout happens in
-ath10k_wmi_cmd_send():
+So basically all this delay is mac80211 and the driver doing stuff with
+the device, but every single thing has to time out and probably some
+stuff loops etc., and then it just takes long enough with the RTNL held
+that everything goes south.
 
-        if (ret == -EAGAIN) {
-                ath10k_warn(ar, "wmi command %d timeout, restarting hardware\n",
-                            cmd_id);
-                queue_work(ar->workqueue, &ar->restart_work);
-        }
-                        
+johannes
 
--- 
-https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
 
 _______________________________________________
 ath10k mailing list
