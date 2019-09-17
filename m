@@ -2,90 +2,57 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9AE0AB47A4
-	for <lists+ath10k@lfdr.de>; Tue, 17 Sep 2019 08:44:26 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id DAF85B47C0
+	for <lists+ath10k@lfdr.de>; Tue, 17 Sep 2019 08:55:41 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
-	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=MOgq76O829JJwh5ovxPNcQmsoKVt3MMcW/j4kKy/hTs=; b=Ou0GEktuQX1PyB
-	8Tm2MTFSNUPHE4Kf5CtKO+rpSNRXqARE+JXglNWO1zb6FLO2z3e50u6Ei2BX47e+gNM+SUGQ4Hc2l
-	qlM1Xmrqf0xTC6kvBQveT9kBxwXmwfVShaM1vtwoNcq1xCvChtAz8TDEliwV533u+D6uCln17+Rmx
-	+fIxDEjh8b+VVp0DlTM+KZOLwOyQHHJiQtpIKAQQEXag/wJ5Um32c4zsWV9zLFfyd3QvpVfK8mw+6
-	pAQyTsj5QuS4dNC2K2Mk5MgusOrgtT5QdeiVtrkcskr4wGA8j9FglFncSEiPqks40tKwhAcpCtXUK
-	YNnFsQiyzdB6CmgnVkXw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=hFilecC5Q8qB/VmvQsBgc28wignSqJ9LEj3kWc847HQ=; b=PuLK9ho91R51WU
+	MWGAWSEXe7DGVJZzWK/3qSKtWpS4MRJtjQ/AZD6TFc7kBML9RZyruyRxPZFBcls31QmZIE39ctTrt
+	uzl/3kkja3QTXEamdkqRcy6bo+qztjLISjZ26sfYUDYfZs2IfvafERaBaU5y0rH+LFYxVwj+eMWZW
+	rkDVRUf7dHnyzT2oQhNskMWwKNciDNzekr4TBclZQH2FmRFkD5chu7Xixzw4sUDGhhA7m5kYEQcgb
+	83YV2IxgMeAKkMQb1T8tNoqmEuBBRAkGHViefYVfbMfaTeQyShOLrhaocFrTDcFLHssmEGWb/EIWo
+	Ar/jO6GCeGaN7oXDl5hg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iA7Dt-0006w1-9X; Tue, 17 Sep 2019 06:44:25 +0000
-Received: from smtp.codeaurora.org ([198.145.29.96])
+	id 1iA7Om-0003vN-7G; Tue, 17 Sep 2019 06:55:40 +0000
+Received: from s3.sipsolutions.net ([2a01:4f8:191:4433::2]
+ helo=sipsolutions.net)
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iA7Dh-0006ru-K4
- for ath10k@lists.infradead.org; Tue, 17 Sep 2019 06:44:16 +0000
-Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id B376E61576; Tue, 17 Sep 2019 06:44:12 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1568702652;
- bh=XOGjgZr+LKfe7TJSeX81ayFXlkoRYJg8kD9pa3v0y0o=;
- h=Subject:From:In-Reply-To:References:To:Cc:Date:From;
- b=hHjwk3DykCmXNhPPM/jZWBftN5aNOMZ6SRxV7iUI1/zojpoJEk20owyBxMfZCFSle
- U58s7w/U/aPUHcE7DEtrWa5SYyUCCBOVJWlcMFZ1TfdNf2/YSMtI9oKwjrYWJvqA6V
- kiFBKfP3Y4w05Svq6MWTrBhQyqS92KhlfUgaJrf8=
-X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
- pdx-caf-mail.web.codeaurora.org
-X-Spam-Level: 
-X-Spam-Status: No, score=-0.8 required=2.0 tests=ALL_TRUSTED,BAYES_00,
- DKIM_INVALID,DKIM_SIGNED,MISSING_DATE,MISSING_MID,SPF_NONE autolearn=no
- autolearn_force=no version=3.4.0
-Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
- [88.114.240.156])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested)
- (Authenticated sender: kvalo@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id A0609611DC;
- Tue, 17 Sep 2019 06:44:11 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1568702652;
- bh=XOGjgZr+LKfe7TJSeX81ayFXlkoRYJg8kD9pa3v0y0o=;
- h=Subject:From:In-Reply-To:References:To:Cc:From;
- b=FfMsWvpo4s9+BpSAs2QkflnUgXyJmp+LDKNBSEkUV+EtqwU5q11C9BHQyL7ITNrQh
- fmYJ4MURt6sxG21zgR6JF0GprOAXMh3WZqw+g+bsds2jYpdlEZ3UQMpV21NSF208ni
- 2ly+oDmMJxNea5yF5iy8IoHNIahF0GBPbZeFa4UQ=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org A0609611DC
-Authentication-Results: pdx-caf-mail.web.codeaurora.org;
- dmarc=none (p=none dis=none) header.from=codeaurora.org
-Authentication-Results: pdx-caf-mail.web.codeaurora.org;
- spf=none smtp.mailfrom=kvalo@codeaurora.org
+ id 1iA7Of-0003ur-I2
+ for ath10k@lists.infradead.org; Tue, 17 Sep 2019 06:55:34 +0000
+Received: by sipsolutions.net with esmtpsa
+ (TLS1.3:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
+ (envelope-from <johannes@sipsolutions.net>)
+ id 1iA7OA-0004kY-3e; Tue, 17 Sep 2019 08:55:02 +0200
+Message-ID: <dd8ee4a2e5cffa1bb6ab4176a57c2b66d495d3ac.camel@sipsolutions.net>
+Subject: Re: [PATCH 3/4] mac80211: fix low throughput in push pull mode
+From: Johannes Berg <johannes@sipsolutions.net>
+To: Yibo Zhao <yiboz@codeaurora.org>
+Date: Tue, 17 Sep 2019 08:55:01 +0200
+In-Reply-To: <8e4cd872d082c6bce598c87411a2125f@codeaurora.org>
+References: <1568639388-27291-1-git-send-email-yiboz@codeaurora.org>
+ <1568639388-27291-3-git-send-email-yiboz@codeaurora.org>
+ (sfid-20190916_151039_049848_BE125514)
+ <6684ceecde399edeb31c594f889a403440c78142.camel@sipsolutions.net>
+ <8e4cd872d082c6bce598c87411a2125f@codeaurora.org>
+User-Agent: Evolution 3.30.5 (3.30.5-1.fc29) 
 MIME-Version: 1.0
-Subject: Re: [PATCH] ath10k: restore QCA9880-AR1A (v1) detection
-From: Kalle Valo <kvalo@codeaurora.org>
-In-Reply-To: <20190906215423.23589-1-chunkeey@gmail.com>
-References: <20190906215423.23589-1-chunkeey@gmail.com>
-To: Christian Lamparter <chunkeey@gmail.com>
-User-Agent: pwcli/0.0.0-git (https://github.com/kvalo/pwcli/) Python/2.7.12
-Message-Id: <20190917064412.B376E61576@smtp.codeaurora.org>
-Date: Tue, 17 Sep 2019 06:44:12 +0000 (UTC)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190916_234413_827883_ABE15FCD 
-X-CRM114-Status: UNSURE (   9.00  )
+X-CRM114-CacheID: sfid-20190916_235533_598141_ED312139 
+X-CRM114-Status: UNSURE (   7.43  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -2.5 (--)
+X-Spam-Score: 0.4 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.5 points)
+ Content analysis details:   (0.4 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [198.145.29.96 listed in list.dnswl.org]
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
+ 0.4 KHOP_HELO_FCRDNS       Relay HELO differs from its IP's reverse DNS
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -97,34 +64,30 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: linux-wireless-owner@vger.kernel.org,
+ Toke =?ISO-8859-1?Q?H=F8iland-J=F8rgensen?= <toke@toke.dk>,
+ linux-wireless@vger.kernel.org, ath10k@lists.infradead.org
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Christian Lamparter <chunkeey@gmail.com> wrote:
-
-> This patch restores the old behavior that read
-> the chip_id on the QCA988x before resetting the
-> chip. This needs to be done in this order since
-> the unsupported QCA988x AR1A chips fall off the
-> bus when resetted. Otherwise the next MMIO Op
-> after the reset causes a BUS ERROR and panic.
-> 
-> Cc: stable@vger.kernel.org
-> Fixes: 1a7fecb766c8 ("ath10k: reset chip before reading chip_id in probe")
-> Signed-off-by: Christian Lamparter <chunkeey@gmail.com>
-
-I'll drop this as there's no plan to support QCA988X hw1.0.
-
--- 
-https://patchwork.kernel.org/patch/11136089/
-
-https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
-
-
-_______________________________________________
-ath10k mailing list
-ath10k@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/ath10k
+T24gVHVlLCAyMDE5LTA5LTE3IGF0IDE0OjM2ICswODAwLCBZaWJvIFpoYW8gd3JvdGU6Cj4gCj4g
+RG8geW91IG1lYW4gaXQgc2hvdWxkIGJlIHNvbWV0aGluZyBsaWtlOgo+IAo+IENvLWRldmVsb3Bl
+ZC1ieTogVG9rZSBIw7hpbGFuZC1Kw7hyZ2Vuc2VuIDx0b2tlQHRva2UuZGs+Cj4gU2lnbmVkLW9m
+Zi1ieTogWWlibyBaaGFvIDx5aWJvekBjb2RlYXVyb3JhLm9yZz4KPiBTaWduZWQtb2ZmLWJ5OiBU
+b2tlIEjDuGlsYW5kLUrDuHJnZW5zZW4gPHRva2VAdG9rZS5kaz4KClllcywgSSB0aGluayB5b3Ug
+bWVhbiB0aGUgcmlnaHQgdGhpbmcuIEZvciB0aGUgcmVjb3JkLCBpdCBzZWVtcyB0byBtZSBpdApz
+aG91bGQgYmUKCkZyb206IEEgPC4uLj4KClsuLi5dCgpDby1kZXZlbG9wZWQtYnk6IEIgPC4uLj4K
+U2lnbmVkLW9mZi1ieTogQiA8Li4uPgpTaWduZWQtb2ZmLWJ5OiBBIDwuLi4+CgpvciBzby4KCklP
+VywgSSB0aGluayBoYXZpbmcgdGhlIHNhbWUgIkZyb206IiAod2hpY2ggZ2V0cyBwcmVzZXJ2ZWQg
+aW4gZ2l0IGFzCiJBdXRob3IiKSBhbmQgIkNvLWRldmVsb3BlZC1ieSIgbWFrZXMgbm8gc2Vuc2U/
+CgpZb3VyICJGcm9tIiBsaW5lIHdhcyBpbXBsaWVkLCBidXQgSSBzdXBwb3NlIHlvdSBkaWQgbWVh
+biB0aGF0IEZyb20gd291bGQKYmUgeW91cnNlbGYgKGFzIGl0IHdhcyBpbiB0aGUgcGF0Y2gpIGFu
+ZCB0aGVuIHRoZSBhYm92ZSBzZWVtcyByaWdodC4KCk9yIHlvdSBjYW4gYWRkIGEgIkZyb206IFRv
+a2UgLi4uIiB0byB5b3VyIHBhdGNoIG1lc3NhZ2UgYW5kIGxlYXZlIHRoZQoiQ28tZGV2ZWxvcGVk
+LWJ5OiB5b3Vyc2VsZiIgSSBzdXBwb3NlLCB0aGUgZGlmZmVyZW5jZSBpcyBpbiBob3cgZ2l0IHdp
+bGwKcmVjb3JkIGl0LgoKam9oYW5uZXMKCgpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
+X19fX19fX19fX19fX19fXwphdGgxMGsgbWFpbGluZyBsaXN0CmF0aDEwa0BsaXN0cy5pbmZyYWRl
+YWQub3JnCmh0dHA6Ly9saXN0cy5pbmZyYWRlYWQub3JnL21haWxtYW4vbGlzdGluZm8vYXRoMTBr
+Cg==
