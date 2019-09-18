@@ -2,78 +2,83 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E0B6CB6423
-	for <lists+ath10k@lfdr.de>; Wed, 18 Sep 2019 15:14:02 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id DD41FB64E3
+	for <lists+ath10k@lfdr.de>; Wed, 18 Sep 2019 15:42:07 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:Cc:
-	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
-	MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:To:From:Reply-To:
-	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=iP52/EJMcVuYR7IRYqb6XMOs/jttEZbFmP/jQL4gM0M=; b=os5AOn/9wrqJF4Run4GHeoiO6
-	k39qZMG0RNeWBru6Ob9Oqx7GZkCnb3NHV0krsNP/WHNzkRL+3BN1KoyRKEwze1VZJBZe/nzb+VH86
-	BxPKIpeUy/YVBRnsR42yuq2gOD8TIudHOJGkj0NumulWTSh63u1KFVvD078oZnUFLGCW4sPOt0TV/
-	sIkxmx1YG1iMxSBQvHn8Nr5J8esWy8lZQtj2bDWjBaWaQCdYUGDN1PcmAvBpYYtq1M5REGOFIriIi
-	ztVKIEUMP3TqthYGK4jnELQfZkM89vCSPs50cK+g4IfewGD4EJoc+5p2pxEz2ITNfDatEXqt2In4G
-	xImiudKtw==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
+	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=XuYJj1lLz51e8jbNeBV5mF10t7cTN8w1M0CmVvLuY2k=; b=K6BkWhkgGh3dFt
+	eQiBligKxulolU/7DS+iiEkyckLjvIQBYvcKhiLEIkdGxkYLZnVM0s9ZBmJmZOtc9rgCZHyOMsutN
+	qJg3FnADbNlJWlJ03cMoGtId7fc0SY5zchQpjb8YoLf1zzSkdh+w5I85glU54sYkIg6yvQyzr7Lbe
+	14WpfYIWwPtrpRe82LQ0TeWq9UIR9h10iTfOLRxSAFkki9JgLRrl3sGgZ0M0nw5h+Wsd97wzPGxhZ
+	8dwmyfCkc79VRHsOlc6vykWddftwHo3DFMefsQ33aNT7InEeiiZy/ELIWkq/9Jo3Myf4/x4Bq8r93
+	Ozd8m7KQOWk6JUe+GHyw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iAZmT-0002We-7R; Wed, 18 Sep 2019 13:14:01 +0000
-Received: from dvalin.narfation.org ([2a00:17d8:100::8b1])
+	id 1iAaDc-0007Q1-Ny; Wed, 18 Sep 2019 13:42:04 +0000
+Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iAZmN-0002WC-0W
- for ath10k@lists.infradead.org; Wed, 18 Sep 2019 13:13:57 +0000
-Received: from bentobox.localnet
- (p200300C5971113F0000000000000063E.dip0.t-ipconnect.de
- [IPv6:2003:c5:9711:13f0::63e])
- by dvalin.narfation.org (Postfix) with ESMTPSA id A307E1FF55;
- Wed, 18 Sep 2019 12:44:28 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=narfation.org;
- s=20121; t=1568810668;
- h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
- to:to:cc:cc:mime-version:mime-version:content-type:content-type:
- in-reply-to:in-reply-to:references:references;
- bh=4fN6X+sIH7Jw3xYYUZxPZfWLfnNnQDNdbUhuy7Jx1Bc=;
- b=ACsJgPuxmWq/N1gTDKSc5B4xmgS5zYLBcWiOTpoDJcZ//8wTfrThBz4GphxqBJ6y7S4BJv
- tXlcnzS+ByMybU/kOq58scgbhDJe+JLN1Da8vAzJTehXYrTq7B9t/XX8XsRK3hobdsMoOQ
- 2OogKPzJ77RZAWLyrBL1Gm02Lsiuov4=
-From: Sven Eckelmann <sven@narfation.org>
-To: Ben Greear <greearb@candelatech.com>
-Subject: Re: [PATCH] cfg80211: Add cumulative channel survey dump support.
-Date: Wed, 18 Sep 2019 15:13:50 +0200
-Message-ID: <1915721.epgQvm9qp9@bentobox>
-In-Reply-To: <9396620.6V9WzEIOqW@bentobox>
-References: <1526980556-26707-1-git-send-email-vnaralas@codeaurora.org>
- <b24ec622-8510-d8e4-bbc4-86a34c1dd32b@candelatech.com>
- <9396620.6V9WzEIOqW@bentobox>
+ id 1iAaDY-0007Pc-CM
+ for ath10k@lists.infradead.org; Wed, 18 Sep 2019 13:42:01 +0000
+Received: by smtp.codeaurora.org (Postfix, from userid 1000)
+ id 2292D614DC; Wed, 18 Sep 2019 13:41:59 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1568814119;
+ bh=EBe0S3RdVZqmtXYYAvgIsB4ZA32+LQjM+vdV4XS17ms=;
+ h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
+ b=FJIvB/dUW90/btwI+whKfuvw6tjAoQpohT+XewD+STTnnJ7GI6bY8RveAnzsCL0L0
+ LABMOjc9IM7WedA9SppG5gY9oaN2k65YdVmROoEaaEvPzaAHCFdEWdXHyGTkgHsx78
+ Ky1A/QXRaw1G2KATFKBQz07o8f7ppGcaUWcJ3L4o=
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ pdx-caf-mail.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
+ DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
+ version=3.4.0
+Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
+ [88.114.240.156])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested)
+ (Authenticated sender: kvalo@smtp.codeaurora.org)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 8AFB26133A;
+ Wed, 18 Sep 2019 13:41:56 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1568814118;
+ bh=EBe0S3RdVZqmtXYYAvgIsB4ZA32+LQjM+vdV4XS17ms=;
+ h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
+ b=YgEMAMVKxVtajKykYJHc+9RNhbmc0kVzqFF3QkdCq4pOc34RQpjWC+ohu48/eHdyT
+ 5IxVxLbXjhHfUmKiSkHKK6pG7vcHBlxoXQzI023WhhB4mBNtheDqdrR7+mpLO9OJJf
+ MVa/PY+XdGm380QcVlC10d5II0DRvodes4RGgi9Q=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 8AFB26133A
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ spf=none smtp.mailfrom=kvalo@codeaurora.org
+From: Kalle Valo <kvalo@codeaurora.org>
+To: Bob Copeland <me@bobcopeland.com>
+Subject: Re: [PATCH v4 3/3] ath10k: add support for controlling tx power to a
+ station
+References: <1553856587-21611-1-git-send-email-bpothuno@codeaurora.org>
+ <20190402223709.GB8910@localhost>
+Date: Wed, 18 Sep 2019 16:41:54 +0300
+In-Reply-To: <20190402223709.GB8910@localhost> (Bob Copeland's message of
+ "Tue, 2 Apr 2019 18:37:09 -0400")
+Message-ID: <871rwdbu1p.fsf@kamboji.qca.qualcomm.com>
+User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/24.5 (gnu/linux)
 MIME-Version: 1.0
-ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=narfation.org; 
- s=20121; t=1568810668;
- h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
- to:to:cc:cc:mime-version:mime-version:content-type:content-type:
- in-reply-to:in-reply-to:references:references;
- bh=4fN6X+sIH7Jw3xYYUZxPZfWLfnNnQDNdbUhuy7Jx1Bc=;
- b=eE3WRZdAV2lP7ga+7twwQjXqfJCWE42A9DsVQd0tnCB2isXbbdD8qiCI5JVqLvKOsFKmwb
- 9tnMDow1I0kor2fSHJafjRLze1f0pPTBO/Zt+rd5p047HeSUuMCgvH13uQ2Q8RAHtz9aYI
- 4NQ9I7E0JwZ6HfO32KnO6zg2iKBOHnQ=
-ARC-Seal: i=1; s=20121; d=narfation.org; t=1568810668; a=rsa-sha256; cv=none;
- b=cO4AI1Pt6iMNkh3u29JVUClIjnGCErFXHNX2zO1ZRHPfsOsAWlJBcvluQnTwdJKuYSbSLa
- 4O7NW/0dmUGz3WjF3cEj1w/e5M34tbwt7QQOGLr9V/Uoil8jC/wVbhm0TJvkxXzvoqL3NI
- GUFvly9wgNkYEL4glCJirs00a8AyjBo=
-ARC-Authentication-Results: i=1; dvalin.narfation.org;
- auth=pass smtp.auth=sven smtp.mailfrom=sven@narfation.org
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190918_061355_206188_B80B9E30 
-X-CRM114-Status: UNSURE (   4.68  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190918_064200_461769_30E1B67B 
+X-CRM114-Status: GOOD (  17.35  )
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [2a00:17d8:100:0:0:0:0:8b1 listed in]
- [list.dnswl.org]
+ medium trust [198.145.29.96 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
@@ -94,71 +99,62 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: sw@simonwunderlich.de, vnaralas@codeaurora.org,
- linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
- slakkavalli@datto.com, Johannes Berg <johannes@sipsolutions.net>
-Content-Type: multipart/mixed; boundary="===============7519398677582963616=="
+Cc: Balaji Pothunoori <bpothuno@codeaurora.org>, johannes@sipsolutions.net,
+ Ashok Raj Nagarajan <arnagara@codeaurora.org>, linux-wireless@vger.kernel.org,
+ ath10k@lists.infradead.org
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
---===============7519398677582963616==
-Content-Type: multipart/signed; boundary="nextPart3096840.zzhJXNy4Gy"; micalg="pgp-sha512"; protocol="application/pgp-signature"
+Bob Copeland <me@bobcopeland.com> writes:
 
---nextPart3096840.zzhJXNy4Gy
-Content-Transfer-Encoding: 7Bit
-Content-Type: text/plain; charset="us-ascii"
+> On Fri, Mar 29, 2019 at 04:19:47PM +0530, Balaji Pothunoori wrote:
+>> From: Ashok Raj Nagarajan <arnagara@codeaurora.org>
+>> 
+>> This patch will add the support to control the transmit power for traffic
+>> to a station associated with the AP.
+>> 
+>> Underlying firmware will enforce that the maximum tx power will be based
+>> on the regulatory requirements. If the user given transmit power is greater
+>> than the allowed tx power in the given channel, then the firmware will use
+>> the maximum tx power in the same channel.
+>> 
+>> When 0 is sent to the firmware as tx power, it will revert to the default
+>> tx power for the station.
+>> 
+>> Tested Hardware : QCA9984
+>> Tested Firmware : 10.4-3.9.0.1-00013
+>
+> I tried this on qca9984 with 10.4-3.9.0.2-00040, which claims to support
+> this feature, and it didn't seem to work:
+>
+> - with global tx power limit set to 30 dBm, I started an iperf from station
+>   A -> B
+>
+> - while iperf underway, I did tcpdump on a monitor on B and looked at signal
+>   level in radiotap, in this case around -75 dBm
+>
+> - on A, changed the per-sta txpwr limit for B to something (tried as low as
+>   1 dBm).  verified via printk that it went through to the driver / firmware
+>   command and reported no error
+>   -> result: signal level unchanged
+>
+> - on A, changed the global tx power limit to 1 dBm
+>   -> result: signal level dropped to ~ -95 dBm
+>
+> Reading the description above, now I'm wondering if the txpower is
+> max(sta-power,global-power)?  If so, that seems a bit unintuitive to me,
+> or at least isn't what I hoped for.  I'd prefer to have per-sta power
+> setting override the global power.
 
-On Wednesday, 18 September 2019 15:07:11 CEST Sven Eckelmann wrote:
-[...]
-> I have now prepared a test patch [1] to get the data every 10 seconds. This 
-> was a compromise between having useful information over time and the 
-> overflowing problem. 
+Balaji, please reply to Bob's questions. I missed this thread while
+applying v5, sorry Bob.
 
-...over time without too many "bss channel survey timed out" errors and...
-
-Kind regards,
-	Sven
---nextPart3096840.zzhJXNy4Gy
-Content-Type: application/pgp-signature; name="signature.asc"
-Content-Description: This is a digitally signed message part.
-Content-Transfer-Encoding: 7Bit
-
------BEGIN PGP SIGNATURE-----
-
-iQIzBAABCgAdFiEEF10rh2Elc9zjMuACXYcKB8Eme0YFAl2CLY8ACgkQXYcKB8Em
-e0b1SxAAtEDe5QoD4u5/aCttIe1q0DlYYCSY1cIBm7fIp8VuQsZYr5zL7lI/NEEv
-ISZmqrQ5Ml4fjKPZ8P0lV1mHGvKrdAS82gk+f/QmAE5IpMeOZ2UsYN8h4BY3aH5+
-tXAG+6/Dwy3hnFP4TluS4zdIhN30tSXxbafV0LL7im25GDHTwYWczQ38Y38xko62
-974A6iwfavwuUSuN9L8wwee1EHPsueh7dclPoGkeLfBtMxD/vr7EE3GAffGvnYSk
-FpiGZotSulIEWg7oLkZoF2QUFxZ9GaN5uVY+t2WWF+cC2xpTtjS6CfDXHRKVq9B4
-Slw2+EyFe0X5u6P7cimmwR9FRSGmJYi7pFdU6wt698Oc+1/+tHGXMVnuViIMrVgT
-LHt+POqDyrB8+dilI2UQKKXaK/0NdfboB2PlIZxta6CVTf93N0E9xVxmIW2IbVIi
-UkBHmGjmz5C70Z1Z3MuYs+0iyMmBov0Lhr23+3t85SK8M7Hdk6DNrs9W43r7VcwE
-ZSgwAF5OfNeTsWvbJWFRTOr7bVaFju8EhY/zQOgXWCWmrS3BTYvGhfL2tl9PtyWy
-ELrflQVZWNbYy1ECF4ZDFAh1UBaBo4l9vhft7OeB36cFVMPAypX+ZR3wNI8uHxay
-LAfGb5aSMfNj4U+1g3zuZ+7WZhC6C/tOJttV7ljFCH9fAqN4YHo=
-=vMka
------END PGP SIGNATURE-----
-
---nextPart3096840.zzhJXNy4Gy--
-
-
-
-
-
---===============7519398677582963616==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
+-- 
+https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
 
 _______________________________________________
 ath10k mailing list
 ath10k@lists.infradead.org
 http://lists.infradead.org/mailman/listinfo/ath10k
-
---===============7519398677582963616==--
-
-
-
-
