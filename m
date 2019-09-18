@@ -2,76 +2,75 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id DD41FB64E3
-	for <lists+ath10k@lfdr.de>; Wed, 18 Sep 2019 15:42:07 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 73257B64F6
+	for <lists+ath10k@lfdr.de>; Wed, 18 Sep 2019 15:45:11 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
-	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=XuYJj1lLz51e8jbNeBV5mF10t7cTN8w1M0CmVvLuY2k=; b=K6BkWhkgGh3dFt
-	eQiBligKxulolU/7DS+iiEkyckLjvIQBYvcKhiLEIkdGxkYLZnVM0s9ZBmJmZOtc9rgCZHyOMsutN
-	qJg3FnADbNlJWlJ03cMoGtId7fc0SY5zchQpjb8YoLf1zzSkdh+w5I85glU54sYkIg6yvQyzr7Lbe
-	14WpfYIWwPtrpRe82LQ0TeWq9UIR9h10iTfOLRxSAFkki9JgLRrl3sGgZ0M0nw5h+Wsd97wzPGxhZ
-	8dwmyfCkc79VRHsOlc6vykWddftwHo3DFMefsQ33aNT7InEeiiZy/ELIWkq/9Jo3Myf4/x4Bq8r93
-	Ozd8m7KQOWk6JUe+GHyw==;
+	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
+	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=evnk1A2/aIrDt+s/fSISjXXyIwaf8e4grFxWkniuBLc=; b=tMCEfYO/BcQflW
+	HAGq8N2oV9Z+2aMnLjikkea97YGKBcySP26quQEjAqk48pDBSqQ+754aeRUfAIwMt+AcP32yOtlL0
+	TBEzfUvpcamFod1db6CLqxjthEat5OmziQsdVtxoPZfnEjsEVUyhFrg8V2rf4COUVkImO/C1gcZ/y
+	pjqOfHQyh5dSpXYb67CbEwUKpRlazLVWBx3L+8yfRnEbMrdUNO9VcuiTEC44rcd9l1hwRDWjQOSDH
+	f8zoYs/fU2iacWChDKOOWyvG9hm6hucnaY41bfFPNLyaEh/Z11cL+0z0bs9QnHUZ29bzudE1KyieL
+	L1sIO6Gq6ZDCiZMm4O5Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iAaDc-0007Q1-Ny; Wed, 18 Sep 2019 13:42:04 +0000
+	id 1iAaGb-0008Jz-0n; Wed, 18 Sep 2019 13:45:09 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iAaDY-0007Pc-CM
- for ath10k@lists.infradead.org; Wed, 18 Sep 2019 13:42:01 +0000
+ id 1iAaGU-0007oD-Vb
+ for ath10k@lists.infradead.org; Wed, 18 Sep 2019 13:45:04 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 2292D614DC; Wed, 18 Sep 2019 13:41:59 +0000 (UTC)
+ id 91240614C3; Wed, 18 Sep 2019 13:45:02 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1568814119;
- bh=EBe0S3RdVZqmtXYYAvgIsB4ZA32+LQjM+vdV4XS17ms=;
- h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=FJIvB/dUW90/btwI+whKfuvw6tjAoQpohT+XewD+STTnnJ7GI6bY8RveAnzsCL0L0
- LABMOjc9IM7WedA9SppG5gY9oaN2k65YdVmROoEaaEvPzaAHCFdEWdXHyGTkgHsx78
- Ky1A/QXRaw1G2KATFKBQz07o8f7ppGcaUWcJ3L4o=
+ s=default; t=1568814302;
+ bh=eGY3eld6Fw7wIMSHDmpahPNMKGlKeflNpx89TJV5ceQ=;
+ h=Subject:From:In-Reply-To:References:To:Cc:Date:From;
+ b=ZDOoxBstxJ37Hxm21UqIlWr/RuflPElsROpaJxmVz9sOmJVAq9DJ3N5Y8bWJnhp8+
+ x7iTT+ewqAocFoYfea2sjOAV4tjPS2y63k0+fvJ9EhQCoACo7C5wqpKBM0oKz2zzWh
+ tX+eSVtsHSPPGpetBS5Or85CzbMCT3YJ+tsN5It0=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
-X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
- DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
- version=3.4.0
+X-Spam-Status: No, score=-0.8 required=2.0 tests=ALL_TRUSTED,BAYES_00,
+ DKIM_INVALID,DKIM_SIGNED,MISSING_DATE,MISSING_MID,SPF_NONE autolearn=no
+ autolearn_force=no version=3.4.0
 Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
  [88.114.240.156])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
  (Authenticated sender: kvalo@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 8AFB26133A;
- Wed, 18 Sep 2019 13:41:56 +0000 (UTC)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 3DE126133A;
+ Wed, 18 Sep 2019 13:45:01 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1568814118;
- bh=EBe0S3RdVZqmtXYYAvgIsB4ZA32+LQjM+vdV4XS17ms=;
- h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=YgEMAMVKxVtajKykYJHc+9RNhbmc0kVzqFF3QkdCq4pOc34RQpjWC+ohu48/eHdyT
- 5IxVxLbXjhHfUmKiSkHKK6pG7vcHBlxoXQzI023WhhB4mBNtheDqdrR7+mpLO9OJJf
- MVa/PY+XdGm380QcVlC10d5II0DRvodes4RGgi9Q=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 8AFB26133A
+ s=default; t=1568814302;
+ bh=eGY3eld6Fw7wIMSHDmpahPNMKGlKeflNpx89TJV5ceQ=;
+ h=Subject:From:In-Reply-To:References:To:Cc:From;
+ b=CNhjcR2uPZ/2TglrDOcGV39aZjs7u4Evh5Cx8p4J60NCrgMGFxfiPeYGvkoE6pi0q
+ 6i3N1uuPI8g52rHNnIvVMypT76ht4MOxae0zFfdvXeCOZfNOmiO4LdYcMSWkSTyih4
+ Z9Jop5zpDgBPmAL8JS9XOeTcYgedt13/ON6rhF6A=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 3DE126133A
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  spf=none smtp.mailfrom=kvalo@codeaurora.org
-From: Kalle Valo <kvalo@codeaurora.org>
-To: Bob Copeland <me@bobcopeland.com>
-Subject: Re: [PATCH v4 3/3] ath10k: add support for controlling tx power to a
- station
-References: <1553856587-21611-1-git-send-email-bpothuno@codeaurora.org>
- <20190402223709.GB8910@localhost>
-Date: Wed, 18 Sep 2019 16:41:54 +0300
-In-Reply-To: <20190402223709.GB8910@localhost> (Bob Copeland's message of
- "Tue, 2 Apr 2019 18:37:09 -0400")
-Message-ID: <871rwdbu1p.fsf@kamboji.qca.qualcomm.com>
-User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/24.5 (gnu/linux)
 MIME-Version: 1.0
+Subject: Re: [PATCH 2/2] ath10k: correct wmi_tlv command params to enable
+ pktlog for WCN3990
+From: Kalle Valo <kvalo@codeaurora.org>
+In-Reply-To: <1558087516-666-3-git-send-email-aambure@codeaurora.org>
+References: <1558087516-666-3-git-send-email-aambure@codeaurora.org>
+To: Abhishek Ambure <aambure@codeaurora.org>
+User-Agent: pwcli/0.0.0-git (https://github.com/kvalo/pwcli/) Python/2.7.12
+Message-Id: <20190918134502.91240614C3@smtp.codeaurora.org>
+Date: Wed, 18 Sep 2019 13:45:02 +0000 (UTC)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190918_064200_461769_30E1B67B 
-X-CRM114-Status: GOOD (  17.35  )
+X-CRM114-CacheID: sfid-20190918_064503_054197_5807B88D 
+X-CRM114-Status: UNSURE (   6.41  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-2.5 points)
@@ -99,60 +98,33 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Balaji Pothunoori <bpothuno@codeaurora.org>, johannes@sipsolutions.net,
- Ashok Raj Nagarajan <arnagara@codeaurora.org>, linux-wireless@vger.kernel.org,
+Cc: Abhishek Ambure <aambure@codeaurora.org>, linux-wireless@vger.kernel.org,
  ath10k@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Bob Copeland <me@bobcopeland.com> writes:
+Abhishek Ambure <aambure@codeaurora.org> wrote:
 
-> On Fri, Mar 29, 2019 at 04:19:47PM +0530, Balaji Pothunoori wrote:
->> From: Ashok Raj Nagarajan <arnagara@codeaurora.org>
->> 
->> This patch will add the support to control the transmit power for traffic
->> to a station associated with the AP.
->> 
->> Underlying firmware will enforce that the maximum tx power will be based
->> on the regulatory requirements. If the user given transmit power is greater
->> than the allowed tx power in the given channel, then the firmware will use
->> the maximum tx power in the same channel.
->> 
->> When 0 is sent to the firmware as tx power, it will revert to the default
->> tx power for the station.
->> 
->> Tested Hardware : QCA9984
->> Tested Firmware : 10.4-3.9.0.1-00013
->
-> I tried this on qca9984 with 10.4-3.9.0.2-00040, which claims to support
-> this feature, and it didn't seem to work:
->
-> - with global tx power limit set to 30 dBm, I started an iperf from station
->   A -> B
->
-> - while iperf underway, I did tcpdump on a monitor on B and looked at signal
->   level in radiotap, in this case around -75 dBm
->
-> - on A, changed the per-sta txpwr limit for B to something (tried as low as
->   1 dBm).  verified via printk that it went through to the driver / firmware
->   command and reported no error
->   -> result: signal level unchanged
->
-> - on A, changed the global tx power limit to 1 dBm
->   -> result: signal level dropped to ~ -95 dBm
->
-> Reading the description above, now I'm wondering if the txpower is
-> max(sta-power,global-power)?  If so, that seems a bit unintuitive to me,
-> or at least isn't what I hoped for.  I'd prefer to have per-sta power
-> setting override the global power.
+> PKT log enable command expects pdev id in enable params which is missing
+> in current configuration. Fill pdev id in pkt log enable wmi command for
+> correct configuration.
+> 
+> Fixes: ca996ec56608 ("ath10k: implement wmi-tlv backend")
+> Tested HW: WCN3990
+> Tested FW: WLAN.HL.3.1-00963-QCAHLSWMTPL-1
+> 
+> Signed-off-by: Abhishek Ambure <aambure@codeaurora.org>
+> Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 
-Balaji, please reply to Bob's questions. I missed this thread while
-applying v5, sorry Bob.
+How do I know this doesn't break QCA6174/QCA9377?
 
 -- 
+https://patchwork.kernel.org/patch/10947635/
+
 https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
+
 
 _______________________________________________
 ath10k mailing list
