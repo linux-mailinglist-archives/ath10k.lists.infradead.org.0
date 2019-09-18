@@ -2,85 +2,80 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7F4E8B6564
-	for <lists+ath10k@lfdr.de>; Wed, 18 Sep 2019 16:03:23 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 32AC7B6EDD
+	for <lists+ath10k@lfdr.de>; Wed, 18 Sep 2019 23:30:56 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
-	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	References:In-Reply-To:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Eclvoz1nPeES9r+FiiDGcvQ2boyKYlh0p+hsKgkB58E=; b=bEPNXjy05uSgwR
-	roo4HJXsrfB3tGGnLnF5oEafAjMJzhlIM3qaKXTvHoxc5jQPdxzODVSP/sLqZDLyD0FlLNQtz6RPb
-	ZHVxH2dfZqj3ZxhhnO92MkElxMvY2ewhZsuwC2kiPm0E0tMp3DyehkEE4xkwH95DHY3BJ8WFi0Ldy
-	WZc4LESTth+5hV4vmvth/XRAWJP+/o3ChwbVHfOMxoDGNZhPXKzqQL+U9nw7BK08CJhXkXSrxaswe
-	m77ars/3OV2rxng44jmAIW+L6wM40hoI9JnpRtntOMlnLags4A9lGubKuHkGMppWBgLB8nQ+ivpAT
-	R637Vh4Hl8UYTfXd0yDw==;
+	List-Owner; bh=w4hbJENJUDWMeVjdR0iJW3a1EWZjP5VqTlAk8r8UyX4=; b=b6BfbG0B9ywwe3
+	2B4/4XOugMJYq271Xnd0T7NX/2t/uqDxw/OT/Pfc8mK3jOE1XUk4pJ4savUmiHOHGpnkWi0TyFzRd
+	A+bPPFvPMUDrwpxTWt5xRWdU7PQULq1Gike25NDNQ+xa2/9MTIv7qqiMqShRuHYaLIKZTc53Znpzh
+	jYE1SlfcOJzXJY2/86PBscrZuqtgsqqaM1J0KEM4ITIJNnKtJhMfc/2tI4QsQmt0zXbsFBt+vr2Pu
+	DuRWmDrsUU4uMbB8RU/O6IbXJ/UlYNg8aUluD6oDnBr0fZbxWqykC8c9/DiXh3F2yy0/jj24+WMga
+	BiahPpq11Zq81F3gsJQQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iAaYD-0006xx-Rs; Wed, 18 Sep 2019 14:03:21 +0000
-Received: from smtp.codeaurora.org ([198.145.29.96])
+	id 1iAhXH-00078X-Rm; Wed, 18 Sep 2019 21:30:52 +0000
+Received: from mail-oi1-x244.google.com ([2607:f8b0:4864:20::244])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iAaY9-0006xH-FU
- for ath10k@lists.infradead.org; Wed, 18 Sep 2019 14:03:19 +0000
-Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 0FC8A61424; Wed, 18 Sep 2019 14:03:16 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1568815397;
- bh=GI8g7BdcEpF2wvGvgxsUXnHFIMMx79kllp6rnPF+YEE=;
- h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=DAMnkgK9yktfhC6LpBzpzRf3ErTSGwtdXaHtu9iwR99fuYwhVzPu4vbGmRe3H2j2Y
- jV8TnVxzGPlTs1UwYl1KY4iNX5rov8FdENNkC/hj829cVAP4LVPGzp88nRSoLcGY4P
- 9mZzoR0E2zT1WDIj7kDevJD5aQQTmMiPmQbBXPaE=
-X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
- pdx-caf-mail.web.codeaurora.org
-X-Spam-Level: 
-X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
- DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
- version=3.4.0
-Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
- [88.114.240.156])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
- (No client certificate requested)
- (Authenticated sender: kvalo@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 8EDF0613A8;
- Wed, 18 Sep 2019 14:03:14 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1568815396;
- bh=GI8g7BdcEpF2wvGvgxsUXnHFIMMx79kllp6rnPF+YEE=;
- h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=cPaFNWjv4igEjoXIw8leq53V6QydcyLRBRrA+UdRXV4uehhDiki/4NgnJLb6nW+57
- 4/gFaz9oNUtiXFXn3XbHjM6pxcIZBm40fSnTqCBa4mkVn4iB1HLbYBkI8ZzxkJixYR
- 3fs5g85v1J+uU3VCw3RBcPtfLLWXFfl7DSEYU01o=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 8EDF0613A8
-Authentication-Results: pdx-caf-mail.web.codeaurora.org;
- dmarc=none (p=none dis=none) header.from=codeaurora.org
-Authentication-Results: pdx-caf-mail.web.codeaurora.org;
- spf=none smtp.mailfrom=kvalo@codeaurora.org
-From: Kalle Valo <kvalo@codeaurora.org>
-To: Brian Norris <briannorris@chromium.org>
-Subject: Re: [PATCH v3] ath10k: support NET_DETECT WoWLAN feature
-References: <1534402113-14337-1-git-send-email-wgong@codeaurora.org>
- <20181114225910.GA220599@google.com>
- <CA+ASDXMh7vdfkA5jtJqWEU-g-4Ta5Xvy046zujyASZcESCGhAQ@mail.gmail.com>
-Date: Wed, 18 Sep 2019 17:03:12 +0300
-In-Reply-To: <CA+ASDXMh7vdfkA5jtJqWEU-g-4Ta5Xvy046zujyASZcESCGhAQ@mail.gmail.com>
- (Brian Norris's message of "Tue, 17 Sep 2019 09:32:52 -0700")
-Message-ID: <87woe5aehr.fsf@kamboji.qca.qualcomm.com>
-User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/24.5 (gnu/linux)
+ id 1iAhXA-000788-2F
+ for ath10k@lists.infradead.org; Wed, 18 Sep 2019 21:30:45 +0000
+Received: by mail-oi1-x244.google.com with SMTP id i185so877643oif.9
+ for <ath10k@lists.infradead.org>; Wed, 18 Sep 2019 14:30:43 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+ :cc; bh=yM5Syc3VnAc9IR5XhYvLeJT9r7yth9/BSoIvBzcggVU=;
+ b=AUI17j1pRCtj8Ooa2DEm59w1qpc+NRc9fjIHApG0XLkU1/YdGkO1EF6rHS4CGifq8j
+ 06vuZILbaG029vRbhT8ZUeO/tmMr6b0o/vJ0WCeI4R9RzZJj1Ha8i22QgVffSfa/9A9e
+ HL5ffrprLmkeEgaG1zSvKbt2r9Izi7O81uo194a3eM7zNGDBIeNHrp74gDcUkS1BR7C3
+ Eb7Z9jKQfeRotQMYh0z8oh9PPmrza9pjS7jKTuB5vtatfj6wTQrxTk1c3c2oUnvSKgWp
+ 3dhHnP7HlwOYwq+o9PyM1Yx8f5OAcoXvw7G2ujBEQPYnzikpU1+F9ZPx1KiYAb7EB4O+
+ rm4g==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+ :message-id:subject:to:cc;
+ bh=yM5Syc3VnAc9IR5XhYvLeJT9r7yth9/BSoIvBzcggVU=;
+ b=D3nZpI5UWeNB8RecVSxBh2XFxxMCclMNlqlRdD2GK47rgGgBkS15RIK1QHUIIAL2Ik
+ WXov3Q6KfPkTH93BDITSRUXJLcEHTW4k3XLV+k+VFo9cqWz2221pXYPhJex8FuEi5A94
+ sUe7KN8MGcRdl+N7qry0KnAQoiYBqyiJkNGxLHVq0DISiidWPQxBzLljwYlj8Nr9k6V/
+ +TGXkGAeytNV9Oey2l6Txyol2fEbwGu6uoO49IgL48fN4pxTBZedPuxT3xTkJqqqwEz8
+ HQYpeORVVR3L96TVZlEKY4Izp0Z+9yDfibs1PJyhgNa+eM8849RKffKRhcqLQZBRbIzQ
+ 55gw==
+X-Gm-Message-State: APjAAAWepfuytRnz+eZtZTOMTXBWI3BnTFLhT2u2ZDGQDInJ/m7+j7bn
+ VUEhx/omK84ov7WhPr6t7Em3Xka+BhdEwXjGCIA=
+X-Google-Smtp-Source: APXvYqwkk/N7ggoZ0ODVVJWifcmyxSkjLHCFK0jOwg0LUZzoshNVCDO8KY3FCHMz6mxJgNBROjC2LFduVgVwzigOeW0=
+X-Received: by 2002:aca:d841:: with SMTP id p62mr14431oig.128.1568842242887;
+ Wed, 18 Sep 2019 14:30:42 -0700 (PDT)
 MIME-Version: 1.0
+Received: by 2002:a9d:2286:0:0:0:0:0 with HTTP; Wed, 18 Sep 2019 14:30:42
+ -0700 (PDT)
+In-Reply-To: <20190917064412.E237C61577@smtp.codeaurora.org>
+References: <20190906215423.23589-1-chunkeey@gmail.com>
+ <20190917064412.E237C61577@smtp.codeaurora.org>
+From: Tom Psyborg <pozega.tomislav@gmail.com>
+Date: Wed, 18 Sep 2019 23:30:42 +0200
+Message-ID: <CAKR_QVJ09gsbvvutDjDU4tR3VdkQRyYveCnAZ-gU9qByERb-=g@mail.gmail.com>
+Subject: Re: [PATCH] ath10k: restore QCA9880-AR1A (v1) detection
+To: Kalle Valo <kvalo@codeaurora.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190918_070317_691053_82B302CF 
-X-CRM114-Status: GOOD (  12.36  )
-X-Spam-Score: -2.5 (--)
+X-CRM114-CacheID: sfid-20190918_143044_112572_B5C99E7A 
+X-CRM114-Status: GOOD (  11.02  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.5 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [198.145.29.96 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:244 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (pozega.tomislav[at]gmail.com)
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
@@ -99,52 +94,45 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless <linux-wireless@vger.kernel.org>,
- Linux Kernel <linux-kernel@vger.kernel.org>, ath10k@lists.infradead.org,
- Wen Gong <wgong@codeaurora.org>
+Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
+ Christian Lamparter <chunkeey@gmail.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Brian Norris <briannorris@chromium.org> writes:
-
-> Since Wen has once again suggested I use this patch in other forums,
-> I'll ping here to note:
+On 17/09/2019, Kalle Valo <kvalo@codeaurora.org> wrote:
+> Christian Lamparter <chunkeey@gmail.com> wrote:
 >
-> On Wed, Nov 14, 2018 at 2:59 PM Brian Norris <briannorris@chromium.org> wrote:
->> You've introduced a regression in 4.20-rc1:
+>> This patch restores the old behavior that read
+>> the chip_id on the QCA988x before resetting the
+>> chip. This needs to be done in this order since
+>> the unsupported QCA988x AR1A chips fall off the
+>> bus when resetted. Otherwise the next MMIO Op
+>> after the reset causes a BUS ERROR and panic.
+>>
+>> Cc: stable@vger.kernel.org
+>> Fixes: 1a7fecb766c8 ("ath10k: reset chip before reading chip_id in
+>> probe")
+>> Signed-off-by: Christian Lamparter <chunkeey@gmail.com>
 >
-> This regression still survives in the latest tree. Is it fair to just
-> submit a revert?
+> I'll drop this as there's no plan to support QCA988X hw1.0.
+>
+> --
+> https://patchwork.kernel.org/patch/11136089/
+>
+> https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
+>
+>
 
-Your description about the problem from an earlier email:
-
-  "It seems like youre enabling SCHED_SCAN support? But you're not
-   adding the NL80211_FEATURE_SCHED_SCAN_RANDOM_MAC_ADDR feature flag.
-   So it puts us in a tough place on using randomization -- we either
-   can't trust the FEATURE flags, or else we can't use both SCHED_SCAN
-   and scan randomization."
-
-So essentially the problem is that with firmwares supporting both
-WMI_SERVICE_NLO and WMI_SERVICE_SPOOF_MAC_SUPPORT ath10k enables
-NL80211_FEATURE_SCAN_RANDOM_MAC_ADDR, but
-NL80211_FEATURE_SCHED_SCAN_RANDOM_MAC_ADDR is not enabled which is
-inconsistent from user space point of view. Is my understanding correct?
-
-Wen, can you enable NL80211_FEATURE_SCAN_RANDOM_MAC_ADDR? Does firmware
-support that?
-
-If that's not possible, one workaround might to be to not enable
-NL80211_FEATURE_SCAN_RANDOM_MAC_ADDR if firmware supports
-WMI_SERVICE_NLO, but of course that would suck big time.
-
-Here's the full context in case someone is interested:
-
-https://patchwork.kernel.org/patch/10567005/
-
--- 
-https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
+Maybe the whole subject on QCA988X cards should be re-evaluated? Since
+at this point it's not for certain whether the card is difficult to
+support or whether it is damaged.
+There was at least one report of QCA988X hw2.0 failing in an identical
+way as QCA988X hw1.0. In case it turns out to be hw damage, a fallback
+driver mechanism could provide extended lifetime for these cards. A
+link to the hw2.0 failure:
+https://forum.openwrt.org/t/is-it-possible-to-brick-the-wireless-card-qca988x-irreversibly/32615
 
 _______________________________________________
 ath10k mailing list
