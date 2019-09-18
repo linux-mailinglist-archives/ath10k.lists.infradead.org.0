@@ -2,75 +2,76 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 73257B64F6
-	for <lists+ath10k@lfdr.de>; Wed, 18 Sep 2019 15:45:11 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7F4E8B6564
+	for <lists+ath10k@lfdr.de>; Wed, 18 Sep 2019 16:03:23 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
-	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=evnk1A2/aIrDt+s/fSISjXXyIwaf8e4grFxWkniuBLc=; b=tMCEfYO/BcQflW
-	HAGq8N2oV9Z+2aMnLjikkea97YGKBcySP26quQEjAqk48pDBSqQ+754aeRUfAIwMt+AcP32yOtlL0
-	TBEzfUvpcamFod1db6CLqxjthEat5OmziQsdVtxoPZfnEjsEVUyhFrg8V2rf4COUVkImO/C1gcZ/y
-	pjqOfHQyh5dSpXYb67CbEwUKpRlazLVWBx3L+8yfRnEbMrdUNO9VcuiTEC44rcd9l1hwRDWjQOSDH
-	f8zoYs/fU2iacWChDKOOWyvG9hm6hucnaY41bfFPNLyaEh/Z11cL+0z0bs9QnHUZ29bzudE1KyieL
-	L1sIO6Gq6ZDCiZMm4O5Q==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
+	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=Eclvoz1nPeES9r+FiiDGcvQ2boyKYlh0p+hsKgkB58E=; b=bEPNXjy05uSgwR
+	roo4HJXsrfB3tGGnLnF5oEafAjMJzhlIM3qaKXTvHoxc5jQPdxzODVSP/sLqZDLyD0FlLNQtz6RPb
+	ZHVxH2dfZqj3ZxhhnO92MkElxMvY2ewhZsuwC2kiPm0E0tMp3DyehkEE4xkwH95DHY3BJ8WFi0Ldy
+	WZc4LESTth+5hV4vmvth/XRAWJP+/o3ChwbVHfOMxoDGNZhPXKzqQL+U9nw7BK08CJhXkXSrxaswe
+	m77ars/3OV2rxng44jmAIW+L6wM40hoI9JnpRtntOMlnLags4A9lGubKuHkGMppWBgLB8nQ+ivpAT
+	R637Vh4Hl8UYTfXd0yDw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iAaGb-0008Jz-0n; Wed, 18 Sep 2019 13:45:09 +0000
+	id 1iAaYD-0006xx-Rs; Wed, 18 Sep 2019 14:03:21 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iAaGU-0007oD-Vb
- for ath10k@lists.infradead.org; Wed, 18 Sep 2019 13:45:04 +0000
+ id 1iAaY9-0006xH-FU
+ for ath10k@lists.infradead.org; Wed, 18 Sep 2019 14:03:19 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 91240614C3; Wed, 18 Sep 2019 13:45:02 +0000 (UTC)
+ id 0FC8A61424; Wed, 18 Sep 2019 14:03:16 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1568814302;
- bh=eGY3eld6Fw7wIMSHDmpahPNMKGlKeflNpx89TJV5ceQ=;
- h=Subject:From:In-Reply-To:References:To:Cc:Date:From;
- b=ZDOoxBstxJ37Hxm21UqIlWr/RuflPElsROpaJxmVz9sOmJVAq9DJ3N5Y8bWJnhp8+
- x7iTT+ewqAocFoYfea2sjOAV4tjPS2y63k0+fvJ9EhQCoACo7C5wqpKBM0oKz2zzWh
- tX+eSVtsHSPPGpetBS5Or85CzbMCT3YJ+tsN5It0=
+ s=default; t=1568815397;
+ bh=GI8g7BdcEpF2wvGvgxsUXnHFIMMx79kllp6rnPF+YEE=;
+ h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
+ b=DAMnkgK9yktfhC6LpBzpzRf3ErTSGwtdXaHtu9iwR99fuYwhVzPu4vbGmRe3H2j2Y
+ jV8TnVxzGPlTs1UwYl1KY4iNX5rov8FdENNkC/hj829cVAP4LVPGzp88nRSoLcGY4P
+ 9mZzoR0E2zT1WDIj7kDevJD5aQQTmMiPmQbBXPaE=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
-X-Spam-Status: No, score=-0.8 required=2.0 tests=ALL_TRUSTED,BAYES_00,
- DKIM_INVALID,DKIM_SIGNED,MISSING_DATE,MISSING_MID,SPF_NONE autolearn=no
- autolearn_force=no version=3.4.0
+X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
+ DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
+ version=3.4.0
 Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
  [88.114.240.156])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
  (Authenticated sender: kvalo@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 3DE126133A;
- Wed, 18 Sep 2019 13:45:01 +0000 (UTC)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 8EDF0613A8;
+ Wed, 18 Sep 2019 14:03:14 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1568814302;
- bh=eGY3eld6Fw7wIMSHDmpahPNMKGlKeflNpx89TJV5ceQ=;
- h=Subject:From:In-Reply-To:References:To:Cc:From;
- b=CNhjcR2uPZ/2TglrDOcGV39aZjs7u4Evh5Cx8p4J60NCrgMGFxfiPeYGvkoE6pi0q
- 6i3N1uuPI8g52rHNnIvVMypT76ht4MOxae0zFfdvXeCOZfNOmiO4LdYcMSWkSTyih4
- Z9Jop5zpDgBPmAL8JS9XOeTcYgedt13/ON6rhF6A=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 3DE126133A
+ s=default; t=1568815396;
+ bh=GI8g7BdcEpF2wvGvgxsUXnHFIMMx79kllp6rnPF+YEE=;
+ h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
+ b=cPaFNWjv4igEjoXIw8leq53V6QydcyLRBRrA+UdRXV4uehhDiki/4NgnJLb6nW+57
+ 4/gFaz9oNUtiXFXn3XbHjM6pxcIZBm40fSnTqCBa4mkVn4iB1HLbYBkI8ZzxkJixYR
+ 3fs5g85v1J+uU3VCw3RBcPtfLLWXFfl7DSEYU01o=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 8EDF0613A8
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  spf=none smtp.mailfrom=kvalo@codeaurora.org
-MIME-Version: 1.0
-Subject: Re: [PATCH 2/2] ath10k: correct wmi_tlv command params to enable
- pktlog for WCN3990
 From: Kalle Valo <kvalo@codeaurora.org>
-In-Reply-To: <1558087516-666-3-git-send-email-aambure@codeaurora.org>
-References: <1558087516-666-3-git-send-email-aambure@codeaurora.org>
-To: Abhishek Ambure <aambure@codeaurora.org>
-User-Agent: pwcli/0.0.0-git (https://github.com/kvalo/pwcli/) Python/2.7.12
-Message-Id: <20190918134502.91240614C3@smtp.codeaurora.org>
-Date: Wed, 18 Sep 2019 13:45:02 +0000 (UTC)
+To: Brian Norris <briannorris@chromium.org>
+Subject: Re: [PATCH v3] ath10k: support NET_DETECT WoWLAN feature
+References: <1534402113-14337-1-git-send-email-wgong@codeaurora.org>
+ <20181114225910.GA220599@google.com>
+ <CA+ASDXMh7vdfkA5jtJqWEU-g-4Ta5Xvy046zujyASZcESCGhAQ@mail.gmail.com>
+Date: Wed, 18 Sep 2019 17:03:12 +0300
+In-Reply-To: <CA+ASDXMh7vdfkA5jtJqWEU-g-4Ta5Xvy046zujyASZcESCGhAQ@mail.gmail.com>
+ (Brian Norris's message of "Tue, 17 Sep 2019 09:32:52 -0700")
+Message-ID: <87woe5aehr.fsf@kamboji.qca.qualcomm.com>
+User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/24.5 (gnu/linux)
+MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190918_064503_054197_5807B88D 
-X-CRM114-Status: UNSURE (   6.41  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190918_070317_691053_82B302CF 
+X-CRM114-Status: GOOD (  12.36  )
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-2.5 points)
@@ -98,33 +99,52 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Abhishek Ambure <aambure@codeaurora.org>, linux-wireless@vger.kernel.org,
- ath10k@lists.infradead.org
+Cc: linux-wireless <linux-wireless@vger.kernel.org>,
+ Linux Kernel <linux-kernel@vger.kernel.org>, ath10k@lists.infradead.org,
+ Wen Gong <wgong@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Abhishek Ambure <aambure@codeaurora.org> wrote:
+Brian Norris <briannorris@chromium.org> writes:
 
-> PKT log enable command expects pdev id in enable params which is missing
-> in current configuration. Fill pdev id in pkt log enable wmi command for
-> correct configuration.
-> 
-> Fixes: ca996ec56608 ("ath10k: implement wmi-tlv backend")
-> Tested HW: WCN3990
-> Tested FW: WLAN.HL.3.1-00963-QCAHLSWMTPL-1
-> 
-> Signed-off-by: Abhishek Ambure <aambure@codeaurora.org>
-> Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
+> Since Wen has once again suggested I use this patch in other forums,
+> I'll ping here to note:
+>
+> On Wed, Nov 14, 2018 at 2:59 PM Brian Norris <briannorris@chromium.org> wrote:
+>> You've introduced a regression in 4.20-rc1:
+>
+> This regression still survives in the latest tree. Is it fair to just
+> submit a revert?
 
-How do I know this doesn't break QCA6174/QCA9377?
+Your description about the problem from an earlier email:
+
+  "It seems like youre enabling SCHED_SCAN support? But you're not
+   adding the NL80211_FEATURE_SCHED_SCAN_RANDOM_MAC_ADDR feature flag.
+   So it puts us in a tough place on using randomization -- we either
+   can't trust the FEATURE flags, or else we can't use both SCHED_SCAN
+   and scan randomization."
+
+So essentially the problem is that with firmwares supporting both
+WMI_SERVICE_NLO and WMI_SERVICE_SPOOF_MAC_SUPPORT ath10k enables
+NL80211_FEATURE_SCAN_RANDOM_MAC_ADDR, but
+NL80211_FEATURE_SCHED_SCAN_RANDOM_MAC_ADDR is not enabled which is
+inconsistent from user space point of view. Is my understanding correct?
+
+Wen, can you enable NL80211_FEATURE_SCAN_RANDOM_MAC_ADDR? Does firmware
+support that?
+
+If that's not possible, one workaround might to be to not enable
+NL80211_FEATURE_SCAN_RANDOM_MAC_ADDR if firmware supports
+WMI_SERVICE_NLO, but of course that would suck big time.
+
+Here's the full context in case someone is interested:
+
+https://patchwork.kernel.org/patch/10567005/
 
 -- 
-https://patchwork.kernel.org/patch/10947635/
-
 https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
-
 
 _______________________________________________
 ath10k mailing list
