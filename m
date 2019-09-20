@@ -2,81 +2,88 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C52CEB8DDF
-	for <lists+ath10k@lfdr.de>; Fri, 20 Sep 2019 11:37:27 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 84A24B8FED
+	for <lists+ath10k@lfdr.de>; Fri, 20 Sep 2019 14:45:15 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:
-	Message-ID:Date:To:From:Subject:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
+	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=TMjUcqLkIwNMP/lFvhCgyef0wfcdFrs4VpI1jwvAdXA=; b=DimfGOkMgO1z0K
-	bM/Cxqai1Ci57iok09VpcULC6WitmbTb14uKpiJBc054JUDAGQOx3tLNFnvi4laqxxAVrgz26y3js
-	swoml5mRVGE8ZdLm5mpIezGeCi1B592N9u678qlejZRqciwe3nJe1el8ItNwy/fwzAsONzggo/McT
-	dnEvRLtLFD4/xQSzbwcXqL7lGn3oDG0r+HPOHLlFOcmZR3Sn6dis0I+JuUUNci47s6Xon7hNulTXm
-	F6zbjhW0bU7m+jgLAJVFC+35dAbguslqukUZkui9TJLil3olC/raRPT7uWP4GNk0ueBPQwNHgpMzf
-	2cTH2virgz/+Fc/fVWRA==;
+	List-Owner; bh=kyYi81kP7rzmjKx410bQ+t3gKpEFbxWDlie7Y2k2s6U=; b=qrGBbHUwe2idmi
+	vU1zJIQTH5A2dhrlqRQeR3yKQ34WTtvB3pZsNtRE4jBQK4Kj6BMBo+2lSgGP09nSxSACL0kwCuS6n
+	HLvcJlT3xiTGDDRDwmFaZWPLlsJ/ijTYnAhj2U0NDpOBMld3voiONwGvpcyPc0DwgGLvwezGosYXl
+	XPwtapCpxXhRfRiqEdtb5AIRNKHA2L46ubSLlKY7w9MSMuvB4UuYSdZar3uMPt8To7N0ZSc1bY/oP
+	ywlrznpvCnTklU69SwMTxuRU7266w5v6o4DbeYhkI2QtqwfRAHC7xdoYu7yr86vHq00ST1MsxPagb
+	ntmvM79qfSZ54pu9ADQQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iBFLx-0004ow-5t; Fri, 20 Sep 2019 09:37:25 +0000
-Received: from alexa-out-tai-02.qualcomm.com ([103.229.16.227])
+	id 1iBIHe-00048a-Kt; Fri, 20 Sep 2019 12:45:10 +0000
+Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iBFLs-0004oP-TZ
- for ath10k@lists.infradead.org; Fri, 20 Sep 2019 09:37:22 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
- d=qti.qualcomm.com; i=@qti.qualcomm.com; q=dns/txt;
- s=qcdkim; t=1568972240; x=1600508240;
- h=from:to:cc:date:message-id:references:in-reply-to:
- content-transfer-encoding:mime-version:subject;
- bh=EjR88SkcwJWQCwJkrAGU5QpwuwVsApv848ZvrfCzvDU=;
- b=YbqxuMB+ImRrRENFxzS/5TAh8pZiQSff+O7kEoWi2AqHAHZ5SWQ4MChm
- z5uL0gRYM+N6KKW8TIZu1WbmcpPRrkgtx3DeYlqoCvd89agZ00ZVF5JUJ
- B1tcaz7oIkbiMZtbVPsDQI/gdlyZh9WH6rB4YoKcTrDd5nk+Eh1SUFHF2 8=;
-Subject: RE: [PATCH v3] ath10k: support NET_DETECT WoWLAN feature
-Thread-Topic: [PATCH v3] ath10k: support NET_DETECT WoWLAN feature
-Received: from ironmsg02-tai.qualcomm.com ([10.249.140.7])
- by alexa-out-tai-02.qualcomm.com with ESMTP; 20 Sep 2019 17:37:18 +0800
-Received: from aptaiexm02b.ap.qualcomm.com ([10.249.150.12])
- by ironmsg02-tai.qualcomm.com with ESMTP/TLS/AES256-SHA;
- 20 Sep 2019 17:37:11 +0800
-Received: from aptaiexm02f.ap.qualcomm.com (10.249.150.16) by
- aptaiexm02b.ap.qualcomm.com (10.249.150.12) with Microsoft SMTP Server (TLS)
- id 15.0.1473.3; Fri, 20 Sep 2019 17:37:10 +0800
-Received: from aptaiexm02f.ap.qualcomm.com ([fe80::4152:1436:e436:faa1]) by
- aptaiexm02f.ap.qualcomm.com ([fe80::4152:1436:e436:faa1%19]) with mapi id
- 15.00.1473.005; Fri, 20 Sep 2019 17:37:09 +0800
-From: Wen Gong <wgong@qti.qualcomm.com>
-To: "kvalo@codeaurora.org" <kvalo@codeaurora.org>
-Thread-Index: AQHVb4WHGd4199NYPUebVxHu5lPNrac0M15w
-Date: Fri, 20 Sep 2019 09:37:09 +0000
-Message-ID: <29044fb6c3ba43af9a433aeb63f55e41@aptaiexm02f.ap.qualcomm.com>
-References: <1534402113-14337-1-git-send-email-wgong@codeaurora.org>
- <20181114225910.GA220599@google.com>
- <CA+ASDXMh7vdfkA5jtJqWEU-g-4Ta5Xvy046zujyASZcESCGhAQ@mail.gmail.com>
- <87woe5aehr.fsf@kamboji.qca.qualcomm.com>
- <40854e84bd4b4a9699b60530b1c373ad@aptaiexm02f.ap.qualcomm.com>
- <87pnjvctjh.fsf@codeaurora.org>
-In-Reply-To: <87pnjvctjh.fsf@codeaurora.org>
-Accept-Language: en-US
-Content-Language: en-US
-X-MS-Has-Attach: 
-X-MS-TNEF-Correlator: 
-x-ms-exchange-transport-fromentityheader: Hosted
-x-originating-ip: [10.249.136.10]
+ id 1iBIHZ-0003V4-IN
+ for ath10k@lists.infradead.org; Fri, 20 Sep 2019 12:45:07 +0000
+Received: by smtp.codeaurora.org (Postfix, from userid 1000)
+ id B5754614DC; Fri, 20 Sep 2019 12:45:04 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1568983504;
+ bh=vGllR88P9hEZE+i0twWfEPOok8AM3MexNj8GcIjzAwQ=;
+ h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
+ b=FuC3zhZgA2QjEAFiqt/D0exGT9WWA7mGL2uoFj1D5Tdf+9Q7RdZ9l0sA5uGA0pLMK
+ TUL1GE6z6xcfP9M0UfE0+RNsZRlGxzEx9ndMl3l0gdKVCXI2uMKIQsnMxXP6Jk3/Xb
+ grtMuM7LoNLFw262qq8soPMl/3XHXb7RLq2e10ek=
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ pdx-caf-mail.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
+ DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
+ version=3.4.0
+Received: from x230.qca.qualcomm.com (37-136-106-186.rev.dnainternet.fi
+ [37.136.106.186])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested)
+ (Authenticated sender: kvalo@smtp.codeaurora.org)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 40B5060A60;
+ Fri, 20 Sep 2019 12:45:02 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1568983503;
+ bh=vGllR88P9hEZE+i0twWfEPOok8AM3MexNj8GcIjzAwQ=;
+ h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
+ b=P0LswFBtKy4swZy+f/Wrw2EiCFXrPZoNu4pDPpFDSWs3AC9zv4ewGfpSNzXEkbucx
+ yF+0YQIqLPTKAceL67pBakc/y8jC0C9dZrWyW1Rwuhk2J5N1JjJ4SSYEYtTc9vvtP9
+ nusCYOBBBOG2jWXInjahLKYEpnEJ2KV06isaiU0w=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 40B5060A60
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ spf=none smtp.mailfrom=kvalo@codeaurora.org
+From: Kalle Valo <kvalo@codeaurora.org>
+To: Wen Gong <wgong@qti.qualcomm.com>
+Subject: Re: [PATCH v5 0/8] ath10k: improve throughout of tcp/udp TX/RX of sdio
+References: <1567679893-14029-1-git-send-email-wgong@codeaurora.org>
+ <87tv9hikwe.fsf@kamboji.qca.qualcomm.com>
+ <87d0g5h07v.fsf@kamboji.qca.qualcomm.com>
+ <1568346854209.29270@qti.qualcomm.com>
+Date: Fri, 20 Sep 2019 15:44:59 +0300
+In-Reply-To: <1568346854209.29270@qti.qualcomm.com> (Wen Gong's message of
+ "Fri, 13 Sep 2019 03:54:14 +0000")
+Message-ID: <87tv97b0hg.fsf@codeaurora.org>
+User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/24.5 (gnu/linux)
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190920_023721_227287_6298F990 
-X-CRM114-Status: UNSURE (   9.26  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -2.4 (--)
+X-CRM114-CacheID: sfid-20190920_054505_645465_564F6040 
+X-CRM114-Status: GOOD (  13.59  )
+X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.4 points)
+ Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [103.229.16.227 listed in list.dnswl.org]
+ medium trust [198.145.29.96 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
@@ -93,9 +100,7 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Brian Norris <briannorris@chromium.org>,
- linux-wireless <linux-wireless@vger.kernel.org>,
- Linux Kernel <linux-kernel@vger.kernel.org>,
+Cc: "linux-wireless@vger.kernel.org" <linux-wireless@vger.kernel.org>,
  "ath10k@lists.infradead.org" <ath10k@lists.infradead.org>,
  Wen Gong <wgong@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
@@ -103,56 +108,47 @@ Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-> -----Original Message-----
-> From: Kalle Valo <kvalo@codeaurora.org>
-> Sent: Friday, September 20, 2019 3:32 PM
-> To: Wen Gong <wgong@qti.qualcomm.com>
-> Cc: Brian Norris <briannorris@chromium.org>; linux-wireless <linux-
-> wireless@vger.kernel.org>; Linux Kernel <linux-kernel@vger.kernel.org>;
-> ath10k@lists.infradead.org; Wen Gong <wgong@codeaurora.org>
-> Subject: [EXT] Re: [PATCH v3] ath10k: support NET_DETECT WoWLAN feature
-> 
-> >> Wen, can you enable NL80211_FEATURE_SCAN_RANDOM_MAC_ADDR?
-> >> Does firmware
-> >> support that?
-> >
-> > Yes, I test again, it is enabled
-> NL80211_FEATURE_SCAN_RANDOM_MAC_ADDR now.
-> 
-> Sorry, I'm not quite understanding your reply.
-> 
-> But I mixed up the flags. I meant that can we enable
-> NL80211_FEATURE_SCAN_RANDOM_MAC_ADDR in ath10k? Does the
-> firmware
-> releases which have WMI_SERVICE_NLO support
-> NL80211_FEATURE_SCAN_RANDOM_MAC_ADDR as well?
-Kalle,
-I tested with this firmware: https://github.com/kvalo/ath10k-firmware/blob/master/QCA6174/hw3.0/sdio-4.4.1/firmware-sdio-6.bin_WLAN.RMH.4.4.1-00017-QCARMSWPZ-2
+Wen Gong <wgong@qti.qualcomm.com> writes:
 
-In ath10k_mac_register, it has flag WMI_SERVICE_SPOOF_MAC_SUPPORT enabled.
-	if (test_bit(WMI_SERVICE_SPOOF_MAC_SUPPORT, ar->wmi.svc_map)) {
-		ar->hw->wiphy->features |=
-			NL80211_FEATURE_SCAN_RANDOM_MAC_ADDR;
-	}
+>>>> The bottleneck of throughout on sdio chip is the bus bandwidth, to the
+>>>>patches are all to increase the use ratio of sdio bus.
+>
+>>> I tried to apply patches 2-8, patch 2 had a conflict due to my changes
+>>> and patch 8 didn't apply at all. Also I saw few warnings with the
+>>> patches I was able to test:
+>
+> Hi kalle,
+>
+> i see some warning is from patch "ath10k: add fw coredump for sdio when firmware assert"
+> and this patch also have change in sdio.c, so maybe it will have
+> conflict with the 8 patches.
+>
+> patch 8 didn't apply at all, is it means each change of the patch is
+> conflict?
 
-In ath10k_wow_init, it has flag ATH10K_FW_FEATURE_WOWLAN_SUPPORT, WMI_SERVICE_WOW, WMI_SERVICE_NLO enabled.
-int ath10k_wow_init(struct ath10k *ar)
-{
-	if (!test_bit(ATH10K_FW_FEATURE_WOWLAN_SUPPORT,
-		      ar->running_fw->fw_file.fw_features))
-		return 0;
+Patches 1-7 applied fine, but patch 8 didn't apply. I didn't investigate
+what was the conflict.
 
-	if (WARN_ON(!test_bit(WMI_SERVICE_WOW, ar->wmi.svc_map)))
-		return -EINVAL;
+> I used command to check each patch.
+> perl ~/opensource/checkpatch.pl --strict --no-tree
+> --max-line-length=90 --show-types --ignore CONST_STRUCT ./*
+>
+> I found it not check Wunused-but-set-variable.
 
-	if (test_bit(WMI_SERVICE_NLO, ar->wmi.svc_map)) {
-		ar->wow.wowlan_support.flags |= WIPHY_WOWLAN_NET_DETECT;
-		ar->wow.wowlan_support.max_nd_match_sets = WMI_PNO_MAX_SUPP_NETWORKS;
-	}
-}
-> 
-> --
-> Kalle Valo
+checkpatch only checks style issues, unused-but-set-variable is a
+warning from GCC.
+
+I use ath10k-check script to check all ath10k patches:
+
+https://wireless.wiki.kernel.org/en/users/drivers/ath10k/codingstyle#checking_code
+
+And I use latest GCC and sparse with that. crosstool is a simple way to
+install a relatively new version of GCC for kernel compilation:
+
+https://mirrors.edge.kernel.org/pub/tools/crosstool/
+
+-- 
+Kalle Valo
 
 _______________________________________________
 ath10k mailing list
