@@ -2,36 +2,36 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0D0FDB9DA7
-	for <lists+ath10k@lfdr.de>; Sat, 21 Sep 2019 13:39:05 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 81639B9DAF
+	for <lists+ath10k@lfdr.de>; Sat, 21 Sep 2019 13:49:40 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
 	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=VwJ0V/HOQIvQ19nSoZ1DZ+GpOgTiDispcrRX0i/sCMw=; b=sZ1eB46F5T4zdr
-	8WPNfPFRSjWPdXcaRt58nQtu2nxZ853lS2oXhs20/nP7edtbn4xd5mScnT4mulcb9EDPYVc2HBtD2
-	QqlHP8d1sW5t3Gc28grtvBF3qJByIR6qLGGNBWLBCNSL/A1mSsM1AqNkpGVwlGmUMb00XyF0IZ17B
-	P5bZpWOsWDdC4/hZXPOWTUSldzallrNVVn6/MSa1PxTVsRjc3dfodH5MNDBShiH2IAeRjJK90JOht
-	F4fH3JA9tRmE1BvjDE1usEAgKAf2yud+mVTfaft6F7L7TiM6Er6wg9wjM/K8x0WybqtWXJaSPGrTp
-	dsTNDgGMjeJsow+Qxp7g==;
+	List-Owner; bh=6MELqzojGsd+0dGBpPYMcPdluWcMorrsOL5kT7yoEoI=; b=hkgpxCnHg1wYTA
+	APynegzD5lpZpo26quOCYliF0qk+Wkkh54EXEB7gIsoUIgeqdieKQFdzH/R4fyvktk3qazAkorvx4
+	cTC/yNaf177qWcZO6hkaFJH9qJ64xIIrdc7y07c4Qvd5xE0otghBZRYVGkmFDHPtYddsytp3vhtwc
+	/KWFM13s9gptkLpRFmPhR5e8szsA8cq8u7te11Alns5YqKfUUS2MSgsOUystWI+P2ne/k5lpJeamE
+	JIXxkCLN0nGPTkGaoLxqFnZWKrXwVYZirpLp3f8oJNto4T1goNicZ4APaBaqBSa7bNAyz/alq7aYZ
+	SIlTJyfHyoYvqnzH1DDg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iBdjB-00017P-QH; Sat, 21 Sep 2019 11:39:01 +0000
+	id 1iBdtM-0008L9-7g; Sat, 21 Sep 2019 11:49:32 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iBdj6-000171-MA
- for ath10k@lists.infradead.org; Sat, 21 Sep 2019 11:38:57 +0000
+ id 1iBdtH-0008Kk-OS
+ for ath10k@lists.infradead.org; Sat, 21 Sep 2019 11:49:29 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 42DD9613A8; Sat, 21 Sep 2019 11:38:56 +0000 (UTC)
+ id BD511613A8; Sat, 21 Sep 2019 11:49:21 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1569065936;
- bh=gtYhQeg/21GWcRbAWVIoleIi/D4OfJWAySgPFth563E=;
+ s=default; t=1569066561;
+ bh=ktJ6zeHiaiXJq+CeabslabaI0JgFMHZNOK+gpbAFFA4=;
  h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=Gasq7a7D11UJZZv4Tpu3aNJv233VM4j3FKDMmmX+xa5004yBqMRQQ/hhjALYtXaaz
- zY4YPGxmBIyEJzXPiZHCcdGMsjaWyZgrVveN7A1x6ze/NiCK/Dr3lasbKZborSWoXU
- tO+DybnPD7IsK7Euon4YPAayxZ+QbNMk542ApXd0=
+ b=cfnf1/OfXeKkBfGDUzC/pyJKI5JiosdeIBdM4BzWT68wnNVU0hyBtHkVwclLohfec
+ ChPKsBtiBICalODk28PSc6Mj9Vexs/cyF+0pewJpPhxAisPG9utlx5XvDvPIU/LiLy
+ N3t2KKiGlfW6zs2B/llLop8rUrIqvDxrFuDkhW8Y=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
@@ -43,16 +43,16 @@ Received: from x230.qca.qualcomm.com (37-136-106-186.rev.dnainternet.fi
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
  (Authenticated sender: kvalo@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id E672060364;
- Sat, 21 Sep 2019 11:38:54 +0000 (UTC)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 4243F61196;
+ Sat, 21 Sep 2019 11:49:20 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1569065935;
- bh=gtYhQeg/21GWcRbAWVIoleIi/D4OfJWAySgPFth563E=;
+ s=default; t=1569066561;
+ bh=ktJ6zeHiaiXJq+CeabslabaI0JgFMHZNOK+gpbAFFA4=;
  h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=IG5Be7gG/Ruoj9ixMfugFz4onA02AMlRiPTPwbWEcsYWvgsaugs7SdXIaLgxjKJFq
- tG6tqULvXGqZSXfhiLD6q6EiLttbWB84wA0iMzhK0xDJMc6OnYxWpYr76oH1sBOaca
- 5DTJrCi5jyDjWuAlUvTBqedxVOm0YIqjx8fbiaEo=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org E672060364
+ b=cfnf1/OfXeKkBfGDUzC/pyJKI5JiosdeIBdM4BzWT68wnNVU0hyBtHkVwclLohfec
+ ChPKsBtiBICalODk28PSc6Mj9Vexs/cyF+0pewJpPhxAisPG9utlx5XvDvPIU/LiLy
+ N3t2KKiGlfW6zs2B/llLop8rUrIqvDxrFuDkhW8Y=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 4243F61196
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
@@ -61,15 +61,15 @@ From: Kalle Valo <kvalo@codeaurora.org>
 To: Wen Gong <wgong@codeaurora.org>
 Subject: Re: [PATCH v2] ath10k: add fw coredump for sdio when firmware assert
 References: <1567132338-7407-1-git-send-email-wgong@codeaurora.org>
-Date: Sat, 21 Sep 2019 14:38:52 +0300
+Date: Sat, 21 Sep 2019 14:49:18 +0300
 In-Reply-To: <1567132338-7407-1-git-send-email-wgong@codeaurora.org> (Wen
  Gong's message of "Fri, 30 Aug 2019 10:32:18 +0800")
-Message-ID: <874l15c20j.fsf@codeaurora.org>
+Message-ID: <87zhixamyp.fsf@codeaurora.org>
 User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/24.5 (gnu/linux)
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190921_043856_745762_5F54BA33 
-X-CRM114-Status: GOOD (  13.11  )
+X-CRM114-CacheID: sfid-20190921_044927_841222_5301BF2B 
+X-CRM114-Status: GOOD (  13.44  )
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-2.5 points)
@@ -119,26 +119,24 @@ Wen Gong <wgong@codeaurora.org> writes:
 
 [...]
 
-> +static int ath10k_sdio_read_mem(struct ath10k *ar, u32 address, void *buf,
-> +				u32 buf_len)
+> +void ath10k_sdio_fw_crashed_dump(struct ath10k *ar)
 > +{
-> +	u32 val;
-> +	int i, ret;
+> +	struct ath10k_fw_crash_data *crash_data;
+> +	char guid[UUID_STRING_LEN + 1];
+> +	u32 fast_dump = 0;
 > +
-> +	for (i = 0; i < buf_len; i += 4) {
-> +		ret = ath10k_sdio_hif_diag_read32(ar, address + i, &val);
-> +		if (ret) {
-> +			ath10k_warn(ar, "unable to read mem %d value\n", address + i);
-> +			break;
-> +		}
-> +		memcpy(buf + i, &val, 4);
-> +	}
+> +	ath10k_err(ar, "begin fw dump\n", guid);
 > +
-> +	return ret;
-> +}
+> +	ath10k_sdio_check_fw_reg(ar, &fast_dump);
+> +
+> +	if (fast_dump)
+> +		ar->bmi.done_sent = false;
 
-What's wrong with ath10k_sdio_hif_diag_read()? AFAICS this whole
-function duplicates just what it does.
+After looking more closely, the ar->bmi.done_set checks in bmi.c does
+not look necessary to me, I have never seen that warning. I would remove
+those and the done_sent field altogether from ath10k to make the code
+cleaner and I avoid hacks like above. This should be done in a separate
+patch, of course.
 
 -- 
 Kalle Valo
