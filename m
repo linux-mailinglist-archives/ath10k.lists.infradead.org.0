@@ -2,36 +2,36 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9DD9FB9DBF
-	for <lists+ath10k@lfdr.de>; Sat, 21 Sep 2019 14:02:38 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9895FB9DC6
+	for <lists+ath10k@lfdr.de>; Sat, 21 Sep 2019 14:16:11 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
 	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=DaOwV4kqmmSXIO1fhdqUwuMauLgXXyelwk/1+WWyNRw=; b=p5gvsO33uXYKNk
-	t4KHudyTD+svpL/X4Y6dHRh761j0/iqScshfklTOyE57DS8AsJUGFjkQ1KwyLRs+2nBv2Ni7dXBKR
-	f0/mMM0uD4u2DYthl7lcGGkCihAJv9atjDY920QE000uveWyN7VVtHBcKf1ty8q0dCaCLBUl7GP+E
-	sMMIPpbdWvkMMlBVww61XiN2mX9i4IqV8mfOQGBphNA+UbP7YL6Cw+RD5n3Q//XN3uw8fBc3fM/xV
-	kqIV/Lcg3JcJK+z1usPn7n69z0pPC4ck22I3GTIwMydA/zyvBpmSRXnl7LZDG9u2jEVtgs8Axb+rh
-	dgCCl3LdqjCg68dOOWdg==;
+	List-Owner; bh=nqAHwa4V6UB/JtPP5NXne3YB3uOFjYFsnmqRfPWc/wI=; b=J1EAn//4X9Nqdb
+	K2ZmJyfiJxE7pDEa5xIEFI7M7nie0nN5goKv1aqboZSdHF6sHQ/OPGa728OuosAUn/J2HWgQo2UKz
+	LRC4f2g4kWWVj9lW1fs/CufISCmGtgv3l8iZtOKYbcivVnBsHK1Ff9o3z0KIwh/IF5DaNqc5EKCjl
+	Z7K9oWAxY4cAzvJG87j2yfQntd7eLyMIuqBOS7QhhkdhggcJIISQfuyXyNoIExCpiC8mfqqxYW/ut
+	MXTyt7H4TtNjA14InXyO8hKGPVEVs0uzPFz4ZMwTgRtWJXlywAUnpqaRqxsP+1p+kDbT7FqDG5hsg
+	H5+V9Zs+hmPnM+4iZeOA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iBe60-0004Uj-74; Sat, 21 Sep 2019 12:02:36 +0000
+	id 1iBeJ5-0000Xy-V5; Sat, 21 Sep 2019 12:16:07 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iBe5w-0004U2-Gh
- for ath10k@lists.infradead.org; Sat, 21 Sep 2019 12:02:33 +0000
+ id 1iBeJ1-0000Xf-BT
+ for ath10k@lists.infradead.org; Sat, 21 Sep 2019 12:16:04 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 2715C613A3; Sat, 21 Sep 2019 12:02:32 +0000 (UTC)
+ id E84C5613A8; Sat, 21 Sep 2019 12:16:02 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1569067352;
- bh=y3WyIXKp78T7Z0+PNgpl1qyjz/opNgPzXwSHd3PHFrs=;
+ s=default; t=1569068163;
+ bh=wexDgknUrxzPZemPf9++eVSoD7b53DMLKuNNq26HWPA=;
  h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=BxBJq7pwqdfuHexW3CH4LaV/0WvCjZqCAqCkUC/GBsFWYPL+wavu9aqbq/KgEldMx
- rej1RISx5gw5EJn/qapylYyebeXkFbGtvltbMqgEnlNvtH6e1yrqEn3ZJT+dQ62Zl7
- kjMEMd0Df2RsZEbt1iMgopNnf2ooN6Y9mP4ubhL0=
+ b=BgDM/cnHTlD3sgocEHUR1AgZaF75mxpQF2RVexvqIr9u5UMtMjfydmumL6nR/Wq6Q
+ EeENOWqn+ELlAVj0d1Ub9mBjmrb4m+BQFe/Uf3Cfa56NFwEi8Y7gQR2OCl24U1MNNU
+ JTIyNtKsMTxbEYsZBnjSeiXnRbK+fJfqS7Zpt18M=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
@@ -43,35 +43,34 @@ Received: from x230.qca.qualcomm.com (37-136-106-186.rev.dnainternet.fi
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
  (Authenticated sender: kvalo@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 9EF6660C72;
- Sat, 21 Sep 2019 12:02:30 +0000 (UTC)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 2FF4460364;
+ Sat, 21 Sep 2019 12:16:00 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1569067351;
- bh=y3WyIXKp78T7Z0+PNgpl1qyjz/opNgPzXwSHd3PHFrs=;
+ s=default; t=1569068162;
+ bh=wexDgknUrxzPZemPf9++eVSoD7b53DMLKuNNq26HWPA=;
  h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=QsmJu8cBnhE7DY+qQns6aJm2JTD6cJqyM4p+bc/65Zexaf5hH8Yd/M1f2le8yAgFx
- 2KMgq2c6D7QrnDytxuCkvSlsbItAClbvg6dusMsJ9Laj9db2fkq6NnFmejsYqy/Ne1
- qkixwF3cxlQjKsXokSHVYn5xtvUot3tw3AVpasSU=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 9EF6660C72
+ b=Ulss5o2Mj2PEdoVC9gnHcNeXi00NWtoEwkQ6hPRl8RWuqR6puQNoT/FuuNohINDya
+ kc91Q8Wfb4ewTYEkQmP346mxfBgs15fqmOE+rDlVZ21rdGJAPr2HEneefil2Kx0ppP
+ gNij0nWLvxsrMmVGnEDSxhoo2PEvjpVUQWuOe8J4=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 2FF4460364
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  spf=none smtp.mailfrom=kvalo@codeaurora.org
 From: Kalle Valo <kvalo@codeaurora.org>
 To: Wen Gong <wgong@codeaurora.org>
-Subject: Re: [PATCH v5 5/8] ath10k: disable TX complete indication of htt for
- sdio
+Subject: Re: [PATCH v5 2/8] ath10k: enable RX bundle receive for sdio
 References: <1567679893-14029-1-git-send-email-wgong@codeaurora.org>
- <1567679893-14029-6-git-send-email-wgong@codeaurora.org>
-Date: Sat, 21 Sep 2019 15:02:28 +0300
-In-Reply-To: <1567679893-14029-6-git-send-email-wgong@codeaurora.org> (Wen
- Gong's message of "Thu, 5 Sep 2019 18:38:10 +0800")
-Message-ID: <87v9tlamcr.fsf@codeaurora.org>
+ <1567679893-14029-3-git-send-email-wgong@codeaurora.org>
+Date: Sat, 21 Sep 2019 15:15:58 +0300
+In-Reply-To: <1567679893-14029-3-git-send-email-wgong@codeaurora.org> (Wen
+ Gong's message of "Thu, 5 Sep 2019 18:38:07 +0800")
+Message-ID: <87r249alq9.fsf@codeaurora.org>
 User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/24.5 (gnu/linux)
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190921_050232_581317_0A681F28 
-X-CRM114-Status: GOOD (  13.79  )
+X-CRM114-CacheID: sfid-20190921_051603_436924_0947E913 
+X-CRM114-Status: GOOD (  17.37  )
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-2.5 points)
@@ -107,29 +106,138 @@ Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
 Wen Gong <wgong@codeaurora.org> writes:
 
-> Tx complete message from firmware cost bus bandwidth of sdio, and bus
-> bandwidth is the bollteneck of throughput, it will effect the bandwidth
-> occupancy of data packet of TX and RX.
+> From: Alagu Sankar <alagusankar@silex-india.com>
+>
+> The existing implementation of initiating multiple sdio transfers for
+> receive bundling is slowing down the receive speed. Combining the
+> transfers using a bundle method would be ideal.
+>
+> The transmission utilization ratio for sdio bus for small packet is
+> slow, because the space and time cost for sdio bus is same for large
+> length packet and small length packet. So the speed of data for large
+> length packet is higher than small length.
+>
+> Test result of different length of data:
+> data packet(byte)   cost time(us)   calculated rate(Mbps)
+>       256               28                73
+>       512               33               124
+>      1024               35               234
+>      1792               45               318
+>     14336              168               682
+>     28672              333               688
+>     57344              660               695
+>
+> Tested with QCA6174 SDIO with firmware
+> WLAN.RMH.4.4.1-00007-QCARMSWP-1.
+>
+> Signed-off-by: Alagu Sankar <alagusankar@silex-india.com>
+> Signed-off-by: Wen Gong <wgong@codeaurora.org>
 
-TBH I'm not enthuastic about this, this feels an ugly hack. And it adds
-yet another module parameter which I detest.
+[...]
 
-> This patch disable TX complete indication from firmware for htt data
-> packet, it results in significant performance improvement on TX path.
+> --- a/drivers/net/wireless/ath/ath10k/sdio.c
+> +++ b/drivers/net/wireless/ath/ath10k/sdio.c
+> @@ -24,6 +24,9 @@
+>  #include "trace.h"
+>  #include "sdio.h"
+>  
+> +#define ATH10K_SDIO_DMA_BUF_SIZE	(32 * 1024)
+> +#define ATH10K_SDIO_VSG_BUF_SIZE	(32 * 1024)
 
-So how much does this feature improve through exactly? Do you have any
-numbers?
+Why two defines? Seems error prone to me and using the latter should be
+enough.
 
-> The downside of this patch is ath10k will not know the TX status of
-> the data packet for poor signal situation. Although upper network stack
-> or application layer have retry mechanism, the retry will be later than
-> ath10k get the TX fail status if not disable TX complete.
+> @@ -529,6 +532,7 @@ static int ath10k_sdio_mbox_rx_alloc(struct ath10k *ar,
+>  	size_t full_len, act_len;
+>  	bool last_in_bundle;
+>  	int ret, i;
+> +	int pkt_cnt = 0;
+>  
+>  	if (n_lookaheads > ATH10K_SDIO_MAX_RX_MSGS) {
+>  		ath10k_warn(ar,
+> @@ -572,20 +576,22 @@ static int ath10k_sdio_mbox_rx_alloc(struct ath10k *ar,
+>  			 */
+>  			size_t bndl_cnt;
+>  
+> -			ret = ath10k_sdio_mbox_alloc_pkt_bundle(ar,
+> -								&ar_sdio->rx_pkts[i],
+> -								htc_hdr,
+> -								full_len,
+> -								act_len,
+> -								&bndl_cnt);
+> +			struct ath10k_sdio_rx_data *rx_pkts =
+> +				&ar_sdio->rx_pkts[pkt_cnt];
 
-I don't understand this description. What's the difference in practise
-from user's point of view?
+You need to declare rx_pkts in the beginning of the block, not mixed
+within the code.
 
-But I think this patch should dropped from the patchset and revisited
-after rest of the patches are applied.
+> @@ -606,9 +612,10 @@ static int ath10k_sdio_mbox_rx_alloc(struct ath10k *ar,
+>  			ath10k_warn(ar, "alloc_rx_pkt error %d\n", ret);
+>  			goto err;
+>  		}
+> +		pkt_cnt++;
+
+Empty line before 'pkt_cnt++'.
+
+> -static int ath10k_sdio_mbox_rx_fetch(struct ath10k *ar)
+> +static int ath10k_sdio_mbox_rx_fetch_bundle(struct ath10k *ar)
+>  {
+>  	struct ath10k_sdio *ar_sdio = ath10k_sdio_priv(ar);
+> +	struct ath10k_sdio_rx_data *pkt;
+> +	struct ath10k_htc_hdr *htc_hdr;
+>  	int ret, i;
+> +	u32 pkt_offset, virt_pkt_len;
+>  
+> +	virt_pkt_len = 0;
+>  	for (i = 0; i < ar_sdio->n_rx_pkts; i++) {
+> -		ret = ath10k_sdio_mbox_rx_packet(ar,
+> -						 &ar_sdio->rx_pkts[i]);
+> +		virt_pkt_len += ar_sdio->rx_pkts[i].alloc_len;
+> +	}
+> +
+> +	if (virt_pkt_len < ATH10K_SDIO_DMA_BUF_SIZE) {
+> +		ret = ath10k_sdio_readsb(ar, ar_sdio->mbox_info.htc_addr,
+> +					 ar_sdio->vsg_buffer, virt_pkt_len);
+>  		if (ret)
+>  			goto err;
+> +	} else {
+> +		ath10k_err(ar, "size exceeding limit %d\n", virt_pkt_len);
+> +		ret = -ENOMEM;
+> +		goto err;
+> +	}
+
+Use common error handling style, ath10k_warn() and -E2BIG:
+
+if (virt_pkt_len >= ATH10K_SDIO_DMA_BUF_SIZE) {
+	ath10k_err(ar, "size exceeding limit %d\n", virt_pkt_len);
+	ret = -E2BIG;
+	goto err;
+}
+
+ret = ath10k_sdio_readsb(ar, ar_sdio->mbox_info.htc_addr,
+			 ar_sdio->vsg_buffer, virt_pkt_len);
+if (ret) {
+        ath10k_warn("failed to do foo: %d", ret)
+	goto err;
+}
+
+> @@ -1123,7 +1151,7 @@ static int ath10k_sdio_bmi_get_rx_lookahead(struct ath10k *ar)
+>  					 MBOX_HOST_INT_STATUS_ADDRESS,
+>  					 &rx_word);
+>  		if (ret) {
+> -			ath10k_warn(ar, "unable to read RX_LOOKAHEAD_VALID: %d\n", ret);
+> +			ath10k_warn(ar, "unable to read rx_lookahd: %d\n", ret);
+
+Looks like an unnecessary change?
+
+> @@ -196,6 +196,9 @@ struct ath10k_sdio {
+>  	struct ath10k *ar;
+>  	struct ath10k_sdio_irq_data irq_data;
+>  
+> +	/* temporary buffer for sdio read */
+> +	u8 *vsg_buffer;
+
+So how is vsg_buffer protected? You should document that here.
 
 -- 
 Kalle Valo
