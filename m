@@ -2,76 +2,74 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5C621BAEB7
-	for <lists+ath10k@lfdr.de>; Mon, 23 Sep 2019 09:53:16 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 45DECBAEC0
+	for <lists+ath10k@lfdr.de>; Mon, 23 Sep 2019 09:55:15 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
-	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=gcyQ0VZsZ8o8LrNt3m1wRaIffgvitt1AxEy6ZlKBOq4=; b=NMUep8gahhVefq
-	yMFXpTnng45tTY8wTJ1NzXTmw02IrntgzJ+wFitZlTVQbCRai1dmaN5O8m1RVT3aExuQ9IGY+s9xD
-	voCkJHASZlSfZvjvEfbRmOnvbf4uaZ46lndF7v429vr1bX+YlzpJ7482q+fwrKPTt+VDTGqWST6Xv
-	KOXzbMe7empFGi74RowkbvAHcTllKJeIdHsmq2WpbBo1qIYkxhPTZI9Odo+VXA7l/9do4+G2eKq3a
-	E39BScxdODMmVsxbt7BIYGSakmLhEioe6mykSU+vj00OZhltewezf7fQFBAfHnBGuoI7fdbjMNoes
-	gUOd6rfZ3KalXEFDODqw==;
+	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
+	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=ajQSiUwPdQ5UjbwpeZMWLxbruldeXm9go1+1jxedBww=; b=CGRnkoiqchmBMY
+	p8ldcmZaKupnhWwrkpoJ69u8Im0BEYgP8yr2HO6s5hP8WhLC6mU4omuHEYL/Qu4sXc1UUAnCSf/il
+	J3QzzwSFazh9BVtiJUkrT3qJyXwGEUo23O5tvlq2cAsfkdmfT7Se/11PotOnKwdcONRXqJAEA3Veb
+	6nEmPGMrK21+dbMR3dvFTRxNYfuhw9douBB9hcQ5FT2pCjJ/C3fAge2wGYPoCPildKJPOwRmbrVXf
+	2kt1cyTH1ZdN0N2yOlwPVL65Q6Z3Zy9gZmaxzx2GF5T+jsghCKgo1SDsQqy31sLqgzQnL17ZqANmd
+	dvSIZAwmrps38Y+2Z+Lw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iCJ9k-0006x6-Ou; Mon, 23 Sep 2019 07:53:13 +0000
+	id 1iCJBh-0008A2-E6; Mon, 23 Sep 2019 07:55:13 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iCJ9d-0006wn-CC
- for ath10k@lists.infradead.org; Mon, 23 Sep 2019 07:53:06 +0000
+ id 1iCJBW-0007cs-S6
+ for ath10k@lists.infradead.org; Mon, 23 Sep 2019 07:55:09 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id EE5D26047C; Mon, 23 Sep 2019 07:53:04 +0000 (UTC)
+ id 8F36C6047C; Mon, 23 Sep 2019 07:55:02 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1569225184;
- bh=I79m02xDyW5CliHu2Z1WS1pNrLeERSGoF4CKm+RP2Ng=;
- h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=GjaQOR5nMLJ64hNs6vi9NsWchbg3TP0MtT9ytE4ZwgSL6yuq94tG8MYCDcmr8pv3r
- jWQPx7aeT+AdD1cZAUQ9eSrGEb4ouq/BO1ISqNNvAfw/7IdgRQ+172u5tqZeMDI2sc
- 1lQwIT5/1PKuByIAcGiun3wupAyUgS1phbGlCa7o=
+ s=default; t=1569225302;
+ bh=MRSOLs+IL9K3Xj2N/eEkLuoH7I546KXrmOYcpE3Oohs=;
+ h=Subject:From:In-Reply-To:References:To:Cc:Date:From;
+ b=mQBVbCFXnPuibARCZEgivLrwRD9Iij8gFXYeTRaF80TJcSiFMoYzUbSBMqJQLoRtz
+ xSdgHimpGFpb+OIwygqcj/6aLRk8OHNhvafg8unN7iy2bNLYmIoZiNU97Q4y34giQf
+ C0zFoBAcr97Q8DKcdup7jdCAuz3pW9py9+LjBTc4=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
-X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
- DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
- version=3.4.0
-Received: from x230.qca.qualcomm.com (37-136-106-186.rev.dnainternet.fi
- [37.136.106.186])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+X-Spam-Status: No, score=-0.8 required=2.0 tests=ALL_TRUSTED,BAYES_00,
+ DKIM_INVALID,DKIM_SIGNED,MISSING_DATE,MISSING_MID,SPF_NONE autolearn=no
+ autolearn_force=no version=3.4.0
+Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
+ [88.114.240.156])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
  (Authenticated sender: kvalo@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 820AC60740;
- Mon, 23 Sep 2019 07:53:03 +0000 (UTC)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 24EBA606DB;
+ Mon, 23 Sep 2019 07:55:00 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1569225184;
- bh=I79m02xDyW5CliHu2Z1WS1pNrLeERSGoF4CKm+RP2Ng=;
- h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=GjaQOR5nMLJ64hNs6vi9NsWchbg3TP0MtT9ytE4ZwgSL6yuq94tG8MYCDcmr8pv3r
- jWQPx7aeT+AdD1cZAUQ9eSrGEb4ouq/BO1ISqNNvAfw/7IdgRQ+172u5tqZeMDI2sc
- 1lQwIT5/1PKuByIAcGiun3wupAyUgS1phbGlCa7o=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 820AC60740
+ s=default; t=1569225302;
+ bh=MRSOLs+IL9K3Xj2N/eEkLuoH7I546KXrmOYcpE3Oohs=;
+ h=Subject:From:In-Reply-To:References:To:Cc:From;
+ b=WyFwRVegsLJj9N/grUPMqaBHpVzKrVT8SKCzXFx10E8Advf133pwkyLIhASw/yXb2
+ 5yczE2k1TlLDKkXFYdDJMblOggp7W+ZwxtirtteStxPKv/WiR7Ja7G1jetibBk+85D
+ NX+SvBcBlxmGtQ+9C/xReCLola3xu+C09CtSIDWQ=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 24EBA606DB
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  spf=none smtp.mailfrom=kvalo@codeaurora.org
-From: Kalle Valo <kvalo@codeaurora.org>
-To: Abhishek Ambure <aambure@codeaurora.org>
-Subject: Re: [PATCH 2/2] ath10k: correct wmi_tlv command params to enable
- pktlog for WCN3990
-References: <1558087516-666-3-git-send-email-aambure@codeaurora.org>
- <20190918134502.91240614C3@smtp.codeaurora.org>
-Date: Mon, 23 Sep 2019 10:53:00 +0300
-In-Reply-To: <20190918134502.91240614C3@smtp.codeaurora.org> (Kalle Valo's
- message of "Wed, 18 Sep 2019 13:45:02 +0000 (UTC)")
-Message-ID: <87impja1pf.fsf@codeaurora.org>
-User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/24.5 (gnu/linux)
 MIME-Version: 1.0
+Subject: Re: [PATCH v3] ath10k: Add support to provide higher range mem chunks
+ in wmi init command
+From: Kalle Valo <kvalo@codeaurora.org>
+In-Reply-To: <1551098926-24644-1-git-send-email-svishnoi@codeaurora.org>
+References: <1551098926-24644-1-git-send-email-svishnoi@codeaurora.org>
+To: Surabhi Vishnoi <svishnoi@codeaurora.org>
+User-Agent: pwcli/0.0.0-git (https://github.com/kvalo/pwcli/) Python/2.7.12
+Message-Id: <20190923075502.8F36C6047C@smtp.codeaurora.org>
+Date: Mon, 23 Sep 2019 07:55:02 +0000 (UTC)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190923_005305_440956_F8904A5B 
-X-CRM114-Status: UNSURE (   8.86  )
+X-CRM114-CacheID: sfid-20190923_005507_919156_817B9782 
+X-CRM114-Status: UNSURE (   9.06  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -100,33 +98,41 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org
+Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
+ Surabhi Vishnoi <svishnoi@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Kalle Valo <kvalo@codeaurora.org> writes:
+Surabhi Vishnoi <svishnoi@codeaurora.org> wrote:
 
-> Abhishek Ambure <aambure@codeaurora.org> wrote:
->
->> PKT log enable command expects pdev id in enable params which is missing
->> in current configuration. Fill pdev id in pkt log enable wmi command for
->> correct configuration.
->> 
->> Fixes: ca996ec56608 ("ath10k: implement wmi-tlv backend")
->> Tested HW: WCN3990
->> Tested FW: WLAN.HL.3.1-00963-QCAHLSWMTPL-1
->> 
->> Signed-off-by: Abhishek Ambure <aambure@codeaurora.org>
->> Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
->
-> How do I know this doesn't break QCA6174/QCA9377?
+> With the current implementation of wmi init command,
+> there is no provision for the host driver to provide mem
+> chunks addresses with more than 32-bit, to the firmware.
+> WCN3990 is a 35-bit target and can accept mem chunks addresses
+> which are above 32-bit.
+> 
+> If firmware supports address range more than 32 bit, it
+> advertises the support by setting the WMI_SERVICE_EXTEND_ADDRESS
+> service. Based on this service fill the upper bits of paddr while
+> providing the mem chunks in the wmi init command.
+> 
+> Tested HW: WCN3990
+> Tested FW: WLAN.HL.3.1-00784-QCAHLSWMTPLZ-1
+> 
+> Signed-off-by: Surabhi Vishnoi <svishnoi@codeaurora.org>
+> Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 
-Abhishek mentioned me privately that he is checking this.
+Patch applied to ath-next branch of ath.git, thanks.
+
+40f4ef5e9232 ath10k: Add support to provide higher range mem chunks in wmi init command
 
 -- 
-Kalle Valo
+https://patchwork.kernel.org/patch/10828535/
+
+https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
+
 
 _______________________________________________
 ath10k mailing list
