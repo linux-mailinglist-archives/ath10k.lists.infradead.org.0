@@ -2,80 +2,103 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C22ABBB385
-	for <lists+ath10k@lfdr.de>; Mon, 23 Sep 2019 14:17:59 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 076BFBB9C9
+	for <lists+ath10k@lfdr.de>; Mon, 23 Sep 2019 18:40:03 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:References:
-	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
-	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
-	:Resent-Message-ID:List-Owner;
-	bh=XYfJ7mag+3xGqlKViI2XB5iKBlD3KFGSxbZ3JhcpB6o=; b=fqeHDr6mpz5qRyjDSghUW5qALe
-	FdZwZLlWOVFhw85uiCUSITYsLzaydDnSAyJAB+zAe0YClyxdfox4fQBYu+3VMl19et1MaHS3Srn24
-	MgLbgPHuXGTaiZ/Z8lVhxcjS3h1+wu/CJI7QC2k2uVOVEJRX5Mb/QHBIYlv7d0nlb8/7PhLVsbkOr
-	t8ta7itIZmukbwjx3XaMOfg17NdHHwKDAq+lP3zwf7VAahZKo6Bb8COQsLY5LtnnYY3oDRNnSZyTL
-	aocXJEi/U8eYQdAJ+tqiEu/rQXsdB+I/IEKOoFZGW3Z4GiXLy3S1jUfclu6NbEKa+fFNrOrjUpJ5L
-	qyu/iDHw==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:References
+	:In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=7NYBc/aXyF3f+DUjx0V95BpdJypbcVGoewv/QDkyHgQ=; b=hWDk7pA3tuWBR7
+	Qdf3flnyjBB7LICOgdDXU++evN1uJZVMoFhivarXBbZgy1nbSvVdQP/Ik2emxLSWr3Gk89iGq1hdE
+	64iQH8LLxkIHB3TVRtexGCiJEazfolPXsiZzM7yVkunIUdUwuOdFNmS12zlcv2YVMVwHcMgFsDh0O
+	eA3t+RI9tOZbWnrTuJpTvPJfK9G7IquI6Rts8C67JcOvSyXrP2PH2gMN7CVMft13O1OC5mScxRYR0
+	2NYq16VnMfnxtrI/x8Nqng3/PjtftOHV1XTDgjQOeREsqUGFRJKq0q3yzuXAtXMBn3GE95zzzoBR7
+	SmmDdTGJg5mpAP9HFbag==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iCNHy-0004Tg-7j; Mon, 23 Sep 2019 12:17:58 +0000
-Received: from smtp.codeaurora.org ([198.145.29.96])
+	id 1iCRNT-0005xq-QK; Mon, 23 Sep 2019 16:39:56 +0000
+Received: from us-smtp-2.mimecast.com ([205.139.110.61]
+ helo=us-smtp-delivery-1.mimecast.com)
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iCNHn-0004NP-Jc
- for ath10k@lists.infradead.org; Mon, 23 Sep 2019 12:17:50 +0000
-Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 5959B607C3; Mon, 23 Sep 2019 12:17:47 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1569241067;
- bh=kvWM68pVmD9/rP8S4/bkR2u13ASJcR00HqbcpultTl0=;
- h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=DxRQdupSzP440KW67yQZE+rh4Miu/k/qdhaAuJlDUKL4AOq2evAc/TFrLPdYE2nPs
- rl3dgjQ1HmJdgdJUnk+j8M0Y5AYlYJQBR9WNwo5/VHEQwjM6jvNylSKZsv4eBL6LN2
- lmG4MApjBxyuC0JfoGt6p1+PmH/z0yvTqCMj7Eto=
-X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
- pdx-caf-mail.web.codeaurora.org
-X-Spam-Level: 
-X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
- DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
- version=3.4.0
-Received: from wgong-HP-Z240-SFF-Workstation.qca.qualcomm.com (unknown
- [180.166.53.21])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
- (No client certificate requested)
- (Authenticated sender: wgong@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 09E566034D;
- Mon, 23 Sep 2019 12:17:44 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1569241065;
- bh=kvWM68pVmD9/rP8S4/bkR2u13ASJcR00HqbcpultTl0=;
- h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=KE+6fcynhHoiOv5gJduA6mZsAjQBy44Ki5jMUflahHDbiAYREkvdVDhT4Otjq2N29
- klzW5L79Fb5IlxZgJr1QbJWtz9HOiOIFLhJpFwZlO87/nyUZTCcF5ji4fxFrgNCut5
- BuDGdnsM5rWNAj06ahwgtobf3L2OUONx5fahyat4=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 09E566034D
-Authentication-Results: pdx-caf-mail.web.codeaurora.org;
- dmarc=none (p=none dis=none) header.from=codeaurora.org
-Authentication-Results: pdx-caf-mail.web.codeaurora.org;
- spf=none smtp.mailfrom=wgong@codeaurora.org
-From: Wen Gong <wgong@codeaurora.org>
-To: ath10k@lists.infradead.org
-Subject: [PATCH v3 2/2] ath10k: add fw coredump for sdio when firmware assert
-Date: Mon, 23 Sep 2019 20:17:35 +0800
-Message-Id: <1569241055-30816-3-git-send-email-wgong@codeaurora.org>
-X-Mailer: git-send-email 1.9.1
-In-Reply-To: <1569241055-30816-1-git-send-email-wgong@codeaurora.org>
-References: <1569241055-30816-1-git-send-email-wgong@codeaurora.org>
+ id 1iCRNF-0005wR-Dr
+ for ath10k@lists.infradead.org; Mon, 23 Sep 2019 16:39:43 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
+ s=mimecast20190719; t=1569256779;
+ h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+ to:to:cc:cc:mime-version:mime-version:content-type:content-type:
+ content-transfer-encoding:content-transfer-encoding:
+ in-reply-to:in-reply-to:references:references;
+ bh=cG6g8FWFhJNU2pFuuSQ3wDeFo55uwqFpwiewpVNDDMk=;
+ b=TaeRm61JNa7jJXAkRLUGQFFl7R4T4mJUPAr++og7npbEpqt9OQNE7BLYewCK0rN/G6XtlZ
+ uzpkCSxPgeYG79bggKKSS1rnb0OkS1TxqthefpPZb89Fu0+cnSdF8yqY31Y2ureSTZKsol
+ /U/NChhdvVG0v68FyAA4c0RJ0N1Pvm8=
+Received: from mail-ed1-f71.google.com (mail-ed1-f71.google.com
+ [209.85.208.71]) (Using TLS) by relay.mimecast.com with ESMTP id
+ us-mta-312-Jo87-SaXNEi--J6TjAazHw-1; Mon, 23 Sep 2019 12:39:37 -0400
+Received: by mail-ed1-f71.google.com with SMTP id h12so9797795eda.19
+ for <ath10k@lists.infradead.org>; Mon, 23 Sep 2019 09:39:37 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:to:cc:subject:in-reply-to:references:date
+ :message-id:mime-version:content-transfer-encoding;
+ bh=HyuhdIWnvw+MB2y5Xe1fi//iQfAWHI+rX11knAQoHQo=;
+ b=LtKa0z6LNoNoiSlwiHgw+HytGz6uGFXQCJ+ZetZj0SaNILxWJb6z5smgBn+/TtrzWQ
+ LK4ND2UqQYW+1DQwR0sQhb1W7IoRF/ghVZj7t9EJQ1yT68KBRHwGxYylS7dygPDxNlgX
+ 2HvtpaGipHiAlNwZ+YBduCp/FND540bNvzBC3354vxXWc4rxMAagqmouXBubVXWsSAXY
+ hLXncOmUv9xT5xXKAKYFK0SEp+IncnYBRQQvHNxdkbg7NklBHkPJnZtJxjLeFOl2KwXt
+ kcBGto5OPP3r5IfFsP3lIyso85d1WRd56MN72Sx1Q3PJlAMTWfZaSh7Z0aJnBqkhxRAS
+ B7Xw==
+X-Gm-Message-State: APjAAAW6R1F6dbrOF8dl/KtNkcEpGYn0DOSiLJOx4SARYW0u8EECn0+/
+ +EsVYwZISolMr7sm7SgWdBwtqU9/7JsRYJ7VwsfPPWtDhDkYevrCbaqeIvtptFO1M40WDWXotYe
+ QkCwFaMkzbZRU6USnHq9bZA==
+X-Received: by 2002:a17:906:b84c:: with SMTP id
+ ga12mr758540ejb.0.1569256776598; 
+ Mon, 23 Sep 2019 09:39:36 -0700 (PDT)
+X-Google-Smtp-Source: APXvYqwIK4BocAnGRpl4BZk23ytDqoFV+OFHOviTCmWt7eKGp8IoKRipaFYqBPbK+ZPr5H8Lyg3wGg==
+X-Received: by 2002:a17:906:b84c:: with SMTP id
+ ga12mr758524ejb.0.1569256776382; 
+ Mon, 23 Sep 2019 09:39:36 -0700 (PDT)
+Received: from alrua-x1.borgediget.toke.dk ([2a00:7660:6da:443::2])
+ by smtp.gmail.com with ESMTPSA id h3sm1193119ejp.77.2019.09.23.09.39.35
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Mon, 23 Sep 2019 09:39:35 -0700 (PDT)
+Received: by alrua-x1.borgediget.toke.dk (Postfix, from userid 1000)
+ id E52251804C8; Mon, 23 Sep 2019 18:39:34 +0200 (CEST)
+From: Toke =?utf-8?Q?H=C3=B8iland-J=C3=B8rgensen?= <toke@redhat.com>
+To: Kalle Valo <kvalo@codeaurora.org>
+Subject: Re: [PATCH 2/4] mac80211: defer txqs removal from rbtree
+In-Reply-To: <87r2476xy5.fsf@codeaurora.org>
+References: <1568639388-27291-1-git-send-email-yiboz@codeaurora.org>
+ <1568639388-27291-2-git-send-email-yiboz@codeaurora.org>
+ <87pnjyiq7o.fsf@toke.dk> <c3ee7ece0986f1c50513cd5fdd2ee03f@codeaurora.org>
+ <87sgothmpy.fsf@toke.dk> <8cdece5c030fd95817fb099021c38613@codeaurora.org>
+ <87tv98fu6l.fsf@toke.dk> <1b4ab006d9b5c88035845aaac193ef48@codeaurora.org>
+ <8736gre3bm.fsf@toke.dk> <198124204167325252fcfcd65e3f2733@codeaurora.org>
+ <87ftkp7uuz.fsf@toke.dk> <4574cce4079f8dab2b2bf223431a6eae@codeaurora.org>
+ <877e617qg2.fsf@toke.dk> <910d9bb5f9016b29fb2aaeb0b89bac38@codeaurora.org>
+ <874l157nrt.fsf@toke.dk> <2935b00bf3e29ad8b2738fe98dc24a76@codeaurora.org>
+ <87lfuf5ly2.fsf@toke.dk> <87r2476xy5.fsf@codeaurora.org>
+X-Clacks-Overhead: GNU Terry Pratchett
+Date: Mon, 23 Sep 2019 18:39:34 +0200
+Message-ID: <875zlj55mh.fsf@toke.dk>
+MIME-Version: 1.0
+X-MC-Unique: Jo87-SaXNEi--J6TjAazHw-1
+X-Mimecast-Spam-Score: 0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190923_051747_833823_D58056D7 
-X-CRM114-Status: GOOD (  17.19  )
+X-CRM114-CacheID: sfid-20190923_093942_165113_DFFB73E9 
+X-CRM114-Status: UNSURE (   4.57  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [198.145.29.96 listed in list.dnswl.org]
+ medium trust [205.139.110.61 listed in list.dnswl.org]
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [205.139.110.61 listed in wl.mailspike.net]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
@@ -96,821 +119,38 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless@vger.kernel.org
-MIME-Version: 1.0
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: Yibo Zhao <yiboz@codeaurora.org>, linux-wireless@vger.kernel.org,
+ ath10k@lists.infradead.org
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-When firmware assert, it need coredump to analyze, this patch will
-collect the register and memory info for sdio chip.
-
-The coredump configuration is different between PCIE and SDIO for
-the same reversion, so this patch add bus type to distinguish PCIE
-and SDIO chip for coredump.
-
-It has 2 type to dump firmware: fastdump and slowdump. Fastdump is
-not support in old version firmware, if this, ath10k will select
-slowdump for it. If firmware support fastdump, ath10k will select
-fastdump for it. Version WLAN.RMH.4.4.1-00017-QCARMSWPZ-2 of
-firmware begin to support fastdump.
-
-For slow dump, ath10k_sdio_hif_diag_read can not be used, the diag
-window has a limit value, it is 4 bytes and the dump's buffer length
-is larger than it, it will trigger error. So this patch add
-ath10k_sdio_read_mem to read 4 bytes for each time.
-
-Tested with QCA6174 SDIO with firmware
-WLAN.RMH.4.4.1-00018-QCARMSWP-1.
-
-Signed-off-by: Wen Gong <wgong@codeaurora.org>
----
-v2: change code style
-v3: add commit log for fastdump, 
-add commit log for ath10k_sdio_hif_diag_read,
-change ath10k_err to dbg log
- drivers/net/wireless/ath/ath10k/bmi.c       |   1 +
- drivers/net/wireless/ath/ath10k/core.c      |   4 +
- drivers/net/wireless/ath/ath10k/coredump.c  | 333 +++++++++++++++++++++++++++
- drivers/net/wireless/ath/ath10k/sdio.c      | 338 +++++++++++++++++++++++++++-
- drivers/net/wireless/ath/ath10k/targaddrs.h |  10 +
- 5 files changed, 682 insertions(+), 4 deletions(-)
-
-diff --git a/drivers/net/wireless/ath/ath10k/bmi.c b/drivers/net/wireless/ath/ath10k/bmi.c
-index 95dc4be..990fa4d 100644
---- a/drivers/net/wireless/ath/ath10k/bmi.c
-+++ b/drivers/net/wireless/ath/ath10k/bmi.c
-@@ -197,6 +197,7 @@ int ath10k_bmi_read_memory(struct ath10k *ar,
- 
- 	return 0;
- }
-+EXPORT_SYMBOL(ath10k_bmi_read_memory);
- 
- int ath10k_bmi_write_soc_reg(struct ath10k *ar, u32 address, u32 reg_val)
- {
-diff --git a/drivers/net/wireless/ath/ath10k/core.c b/drivers/net/wireless/ath/ath10k/core.c
-index dc45d16..c4595f8 100644
---- a/drivers/net/wireless/ath/ath10k/core.c
-+++ b/drivers/net/wireless/ath/ath10k/core.c
-@@ -708,6 +708,10 @@ static void ath10k_init_sdio(struct ath10k *ar, enum ath10k_firmware_mode mode)
- 	ath10k_bmi_read32(ar, hi_option_flag, &param);
- 	param |= HI_OPTION_DISABLE_DBGLOG;
- 	ath10k_bmi_write32(ar, hi_option_flag, param);
-+
-+	ath10k_bmi_read32(ar, hi_option_flag2, &param);
-+	param |= HI_OPTION_SDIO_CRASH_DUMP_ENHANCEMENT_HOST;
-+	ath10k_bmi_write32(ar, hi_option_flag2, param);
- }
- 
- static int ath10k_init_configure_target(struct ath10k *ar)
-diff --git a/drivers/net/wireless/ath/ath10k/coredump.c b/drivers/net/wireless/ath/ath10k/coredump.c
-index abc133d..24c5c63 100644
---- a/drivers/net/wireless/ath/ath10k/coredump.c
-+++ b/drivers/net/wireless/ath/ath10k/coredump.c
-@@ -270,6 +270,277 @@
- 	{0x80010, 0x80020},
- };
- 
-+static const struct ath10k_mem_section qca6174_hw30_sdio_register_sections[] = {
-+	{0x800, 0x810},
-+	{0x820, 0x82C},
-+	{0x830, 0x8F4},
-+	{0x90C, 0x91C},
-+	{0xA14, 0xA18},
-+	{0xA84, 0xA94},
-+	{0xAA8, 0xAD4},
-+	{0xADC, 0xB40},
-+	{0x1000, 0x10A4},
-+	{0x10BC, 0x111C},
-+	{0x1134, 0x1138},
-+	{0x1144, 0x114C},
-+	{0x1150, 0x115C},
-+	{0x1160, 0x1178},
-+	{0x1240, 0x1260},
-+	{0x2000, 0x207C},
-+	{0x3000, 0x3014},
-+	{0x4000, 0x4014},
-+	{0x5000, 0x5124},
-+	{0x6000, 0x6040},
-+	{0x6080, 0x60CC},
-+	{0x6100, 0x611C},
-+	{0x6140, 0x61D8},
-+	{0x6200, 0x6238},
-+	{0x6240, 0x628C},
-+	{0x62C0, 0x62EC},
-+	{0x6380, 0x63E8},
-+	{0x6400, 0x6440},
-+	{0x6480, 0x64CC},
-+	{0x6500, 0x651C},
-+	{0x6540, 0x6580},
-+	{0x6600, 0x6638},
-+	{0x6640, 0x668C},
-+	{0x66C0, 0x66EC},
-+	{0x6780, 0x67E8},
-+	{0x7080, 0x708C},
-+	{0x70C0, 0x70C8},
-+	{0x7400, 0x741C},
-+	{0x7440, 0x7454},
-+	{0x7800, 0x7818},
-+	{0x8010, 0x8060},
-+	{0x8080, 0x8084},
-+	{0x80A0, 0x80A4},
-+	{0x80C0, 0x80C4},
-+	{0x80E0, 0x80ec},
-+	{0x8110, 0x8128},
-+	{0x9000, 0x9004},
-+	{0xF000, 0xF0E0},
-+	{0xF140, 0xF190},
-+	{0xF250, 0xF25C},
-+	{0xF260, 0xF268},
-+	{0xF26C, 0xF2A8},
-+	{0x10008, 0x1000C},
-+	{0x10014, 0x10018},
-+	{0x1001C, 0x10020},
-+	{0x10024, 0x10028},
-+	{0x10030, 0x10034},
-+	{0x10040, 0x10054},
-+	{0x10058, 0x1007C},
-+	{0x10080, 0x100C4},
-+	{0x100C8, 0x10114},
-+	{0x1012C, 0x10130},
-+	{0x10138, 0x10144},
-+	{0x10200, 0x10220},
-+	{0x10230, 0x10250},
-+	{0x10260, 0x10280},
-+	{0x10290, 0x102B0},
-+	{0x102C0, 0x102DC},
-+	{0x102E0, 0x102F4},
-+	{0x102FC, 0x1037C},
-+	{0x10380, 0x10390},
-+	{0x10800, 0x10828},
-+	{0x10840, 0x10844},
-+	{0x10880, 0x10884},
-+	{0x108C0, 0x108E8},
-+	{0x10900, 0x10928},
-+	{0x10940, 0x10944},
-+	{0x10980, 0x10984},
-+	{0x109C0, 0x109E8},
-+	{0x10A00, 0x10A28},
-+	{0x10A40, 0x10A50},
-+	{0x11000, 0x11028},
-+	{0x11030, 0x11034},
-+	{0x11038, 0x11068},
-+	{0x11070, 0x11074},
-+	{0x11078, 0x110A8},
-+	{0x110B0, 0x110B4},
-+	{0x110B8, 0x110E8},
-+	{0x110F0, 0x110F4},
-+	{0x110F8, 0x11128},
-+	{0x11138, 0x11144},
-+	{0x11178, 0x11180},
-+	{0x111B8, 0x111C0},
-+	{0x111F8, 0x11200},
-+	{0x11238, 0x1123C},
-+	{0x11270, 0x11274},
-+	{0x11278, 0x1127C},
-+	{0x112B0, 0x112B4},
-+	{0x112B8, 0x112BC},
-+	{0x112F0, 0x112F4},
-+	{0x112F8, 0x112FC},
-+	{0x11338, 0x1133C},
-+	{0x11378, 0x1137C},
-+	{0x113B8, 0x113BC},
-+	{0x113F8, 0x113FC},
-+	{0x11438, 0x11440},
-+	{0x11478, 0x11480},
-+	{0x114B8, 0x114BC},
-+	{0x114F8, 0x114FC},
-+	{0x11538, 0x1153C},
-+	{0x11578, 0x1157C},
-+	{0x115B8, 0x115BC},
-+	{0x115F8, 0x115FC},
-+	{0x11638, 0x1163C},
-+	{0x11678, 0x1167C},
-+	{0x116B8, 0x116BC},
-+	{0x116F8, 0x116FC},
-+	{0x11738, 0x1173C},
-+	{0x11778, 0x1177C},
-+	{0x117B8, 0x117BC},
-+	{0x117F8, 0x117FC},
-+	{0x17000, 0x1701C},
-+	{0x17020, 0x170AC},
-+	{0x18000, 0x18050},
-+	{0x18054, 0x18074},
-+	{0x18080, 0x180D4},
-+	{0x180DC, 0x18104},
-+	{0x18108, 0x1813C},
-+	{0x18144, 0x18148},
-+	{0x18168, 0x18174},
-+	{0x18178, 0x18180},
-+	{0x181C8, 0x181E0},
-+	{0x181E4, 0x181E8},
-+	{0x181EC, 0x1820C},
-+	{0x1825C, 0x18280},
-+	{0x18284, 0x18290},
-+	{0x18294, 0x182A0},
-+	{0x18300, 0x18304},
-+	{0x18314, 0x18320},
-+	{0x18328, 0x18350},
-+	{0x1835C, 0x1836C},
-+	{0x18370, 0x18390},
-+	{0x18398, 0x183AC},
-+	{0x183BC, 0x183D8},
-+	{0x183DC, 0x183F4},
-+	{0x18400, 0x186F4},
-+	{0x186F8, 0x1871C},
-+	{0x18720, 0x18790},
-+	{0x19800, 0x19830},
-+	{0x19834, 0x19840},
-+	{0x19880, 0x1989C},
-+	{0x198A4, 0x198B0},
-+	{0x198BC, 0x19900},
-+	{0x19C00, 0x19C88},
-+	{0x19D00, 0x19D20},
-+	{0x19E00, 0x19E7C},
-+	{0x19E80, 0x19E94},
-+	{0x19E98, 0x19EAC},
-+	{0x19EB0, 0x19EBC},
-+	{0x19F70, 0x19F74},
-+	{0x19F80, 0x19F8C},
-+	{0x19FA0, 0x19FB4},
-+	{0x19FC0, 0x19FD8},
-+	{0x1A000, 0x1A200},
-+	{0x1A204, 0x1A210},
-+	{0x1A228, 0x1A22C},
-+	{0x1A230, 0x1A248},
-+	{0x1A250, 0x1A270},
-+	{0x1A280, 0x1A290},
-+	{0x1A2A0, 0x1A2A4},
-+	{0x1A2C0, 0x1A2EC},
-+	{0x1A300, 0x1A3BC},
-+	{0x1A3F0, 0x1A3F4},
-+	{0x1A3F8, 0x1A434},
-+	{0x1A438, 0x1A444},
-+	{0x1A448, 0x1A468},
-+	{0x1A580, 0x1A58C},
-+	{0x1A644, 0x1A654},
-+	{0x1A670, 0x1A698},
-+	{0x1A6AC, 0x1A6B0},
-+	{0x1A6D0, 0x1A6D4},
-+	{0x1A6EC, 0x1A70C},
-+	{0x1A710, 0x1A738},
-+	{0x1A7C0, 0x1A7D0},
-+	{0x1A7D4, 0x1A7D8},
-+	{0x1A7DC, 0x1A7E4},
-+	{0x1A7F0, 0x1A7F8},
-+	{0x1A888, 0x1A89C},
-+	{0x1A8A8, 0x1A8AC},
-+	{0x1A8C0, 0x1A8DC},
-+	{0x1A8F0, 0x1A8FC},
-+	{0x1AE04, 0x1AE08},
-+	{0x1AE18, 0x1AE24},
-+	{0x1AF80, 0x1AF8C},
-+	{0x1AFA0, 0x1AFB4},
-+	{0x1B000, 0x1B200},
-+	{0x1B284, 0x1B288},
-+	{0x1B2D0, 0x1B2D8},
-+	{0x1B2DC, 0x1B2EC},
-+	{0x1B300, 0x1B340},
-+	{0x1B374, 0x1B378},
-+	{0x1B380, 0x1B384},
-+	{0x1B388, 0x1B38C},
-+	{0x1B404, 0x1B408},
-+	{0x1B420, 0x1B428},
-+	{0x1B440, 0x1B444},
-+	{0x1B448, 0x1B44C},
-+	{0x1B450, 0x1B458},
-+	{0x1B45C, 0x1B468},
-+	{0x1B584, 0x1B58C},
-+	{0x1B68C, 0x1B690},
-+	{0x1B6AC, 0x1B6B0},
-+	{0x1B7F0, 0x1B7F8},
-+	{0x1C800, 0x1CC00},
-+	{0x1CE00, 0x1CE04},
-+	{0x1CF80, 0x1CF84},
-+	{0x1D200, 0x1D800},
-+	{0x1E000, 0x20014},
-+	{0x20100, 0x20124},
-+	{0x21400, 0x217A8},
-+	{0x21800, 0x21BA8},
-+	{0x21C00, 0x21FA8},
-+	{0x22000, 0x223A8},
-+	{0x22400, 0x227A8},
-+	{0x22800, 0x22BA8},
-+	{0x22C00, 0x22FA8},
-+	{0x23000, 0x233A8},
-+	{0x24000, 0x24034},
-+
-+	/* EFUSE0,1,2 is disabled here
-+	 * because its state may be reset
-+	 *
-+	 * {0x24800, 0x24804},
-+	 * {0x25000, 0x25004},
-+	 * {0x25800, 0x25804},
-+	 */
-+
-+	{0x26000, 0x26064},
-+	{0x27000, 0x27024},
-+	{0x34000, 0x3400C},
-+	{0x34400, 0x3445C},
-+	{0x34800, 0x3485C},
-+	{0x34C00, 0x34C5C},
-+	{0x35000, 0x3505C},
-+	{0x35400, 0x3545C},
-+	{0x35800, 0x3585C},
-+	{0x35C00, 0x35C5C},
-+	{0x36000, 0x3605C},
-+	{0x38000, 0x38064},
-+	{0x38070, 0x380E0},
-+	{0x3A000, 0x3A074},
-+
-+	/* DBI windows is skipped here, it can be only accessed when pcie
-+	 * is active (not in reset) and CORE_CTRL_PCIE_LTSSM_EN = 0 &&
-+	 * PCIE_CTRL_APP_LTSSM_ENALBE=0.
-+	 * {0x3C000 , 0x3C004},
-+	 */
-+
-+	{0x40000, 0x400A4},
-+
-+	/* SI register is skiped here.
-+	 * Because it will cause bus hang
-+	 *
-+	 * {0x50000, 0x50018},
-+	 */
-+
-+	{0x80000, 0x8000C},
-+	{0x80010, 0x80020},
-+};
-+
- static const struct ath10k_mem_section qca6174_hw30_register_sections[] = {
- 	{0x800, 0x810},
- 	{0x820, 0x82C},
-@@ -602,6 +873,59 @@
- 	},
- };
- 
-+static const struct ath10k_mem_region qca6174_hw30_sdio_mem_regions[] = {
-+	{
-+		.type = ATH10K_MEM_REGION_TYPE_DRAM,
-+		.start = 0x400000,
-+		.len = 0xa8000,
-+		.name = "DRAM",
-+		.section_table = {
-+			.sections = NULL,
-+			.size = 0,
-+		},
-+	},
-+	{
-+		.type = ATH10K_MEM_REGION_TYPE_AXI,
-+		.start = 0xa0000,
-+		.len = 0x18000,
-+		.name = "AXI",
-+		.section_table = {
-+			.sections = NULL,
-+			.size = 0,
-+		},
-+	},
-+	{
-+		.type = ATH10K_MEM_REGION_TYPE_IRAM1,
-+		.start = 0x00980000,
-+		.len = 0x00080000,
-+		.name = "IRAM1",
-+		.section_table = {
-+			.sections = NULL,
-+			.size = 0,
-+		},
-+	},
-+	{
-+		.type = ATH10K_MEM_REGION_TYPE_IRAM2,
-+		.start = 0x00a00000,
-+		.len = 0x00040000,
-+		.name = "IRAM2",
-+		.section_table = {
-+			.sections = NULL,
-+			.size = 0,
-+		},
-+	},
-+	{
-+		.type = ATH10K_MEM_REGION_TYPE_REG,
-+		.start = 0x800,
-+		.len = 0x80020 - 0x800,
-+		.name = "REG_TOTAL",
-+		.section_table = {
-+			.sections = qca6174_hw30_sdio_register_sections,
-+			.size = ARRAY_SIZE(qca6174_hw30_sdio_register_sections),
-+		},
-+	},
-+};
-+
- static const struct ath10k_mem_region qca6174_hw30_mem_regions[] = {
- 	{
- 		.type = ATH10K_MEM_REGION_TYPE_DRAM,
-@@ -1007,6 +1331,15 @@
- 		},
- 	},
- 	{
-+		.hw_id = QCA6174_HW_3_2_VERSION,
-+		.hw_rev = ATH10K_HW_QCA6174,
-+		.bus = ATH10K_BUS_SDIO,
-+		.region_table = {
-+			.regions = qca6174_hw30_sdio_mem_regions,
-+			.size = ARRAY_SIZE(qca6174_hw30_sdio_mem_regions),
-+		},
-+	},
-+	{
- 		.hw_id = QCA9377_HW_1_1_DEV_VERSION,
- 		.hw_rev = ATH10K_HW_QCA9377,
- 		.bus = ATH10K_BUS_PCI,
-diff --git a/drivers/net/wireless/ath/ath10k/sdio.c b/drivers/net/wireless/ath/ath10k/sdio.c
-index 8ed4fbd..0c10df6 100644
---- a/drivers/net/wireless/ath/ath10k/sdio.c
-+++ b/drivers/net/wireless/ath/ath10k/sdio.c
-@@ -23,6 +23,9 @@
- #include "targaddrs.h"
- #include "trace.h"
- #include "sdio.h"
-+#include "coredump.h"
-+
-+void ath10k_sdio_fw_crashed_dump(struct ath10k *ar);
- 
- /* inlined helper functions */
- 
-@@ -859,10 +862,9 @@ static int ath10k_sdio_mbox_proc_cpu_intr(struct ath10k *ar)
- 
- out:
- 	mutex_unlock(&irq_data->mtx);
--	if (cpu_int_status & MBOX_CPU_STATUS_ENABLE_ASSERT_MASK) {
--		ath10k_err(ar, "firmware crashed!\n");
--		queue_work(ar->workqueue, &ar->restart_work);
--	}
-+	if (cpu_int_status & MBOX_CPU_STATUS_ENABLE_ASSERT_MASK)
-+		ath10k_sdio_fw_crashed_dump(ar);
-+
- 	return ret;
- }
- 
-@@ -1967,6 +1969,334 @@ static SIMPLE_DEV_PM_OPS(ath10k_sdio_pm_ops, ath10k_sdio_pm_suspend,
- 
- #endif /* CONFIG_PM_SLEEP */
- 
-+static int ath10k_sdio_read_host_interest_value(struct ath10k *ar,
-+						u32 item_offset,
-+						u32 *val)
-+{
-+	u32 addr;
-+	int ret;
-+
-+	addr = host_interest_item_address(item_offset);
-+
-+	ret = ath10k_sdio_hif_diag_read32(ar, addr, val);
-+
-+	if (ret)
-+		ath10k_warn(ar, "unable to read host interest offset %d value\n",
-+			    item_offset);
-+
-+	return ret;
-+}
-+
-+static int ath10k_sdio_read_mem(struct ath10k *ar, u32 address, void *buf,
-+				u32 buf_len)
-+{
-+	u32 val;
-+	int i, ret;
-+
-+	for (i = 0; i < buf_len; i += 4) {
-+		ret = ath10k_sdio_hif_diag_read32(ar, address + i, &val);
-+		if (ret) {
-+			ath10k_warn(ar, "unable to read mem %d value\n", address + i);
-+			break;
-+		}
-+		memcpy(buf + i, &val, 4);
-+	}
-+
-+	return ret;
-+}
-+
-+static void ath10k_sdio_check_fw_reg(struct ath10k *ar, u32 *fast_dump)
-+{
-+	u32 param;
-+
-+	ath10k_sdio_read_host_interest_value(ar, HI_ITEM(hi_option_flag2), &param);
-+
-+	*fast_dump = ((param & HI_OPTION_SDIO_CRASH_DUMP_ENHANCEMENT_FW)
-+			     == HI_OPTION_SDIO_CRASH_DUMP_ENHANCEMENT_FW);
-+
-+	ath10k_dbg(ar, ATH10K_DBG_SDIO, "sdio hi_option_flag2 %x\n", param);
-+}
-+
-+static void ath10k_sdio_dump_registers(struct ath10k *ar,
-+				       struct ath10k_fw_crash_data *crash_data,
-+				       u32 fast_dump)
-+{
-+	u32 reg_dump_values[REG_DUMP_COUNT_QCA988X] = {};
-+	int i, ret;
-+	u32 reg_dump_area;
-+
-+	ret = ath10k_sdio_read_host_interest_value(ar, HI_ITEM(hi_failure_state),
-+						   &reg_dump_area);
-+	if (ret) {
-+		ath10k_err(ar, "failed to read firmware dump area: %d\n", ret);
-+		return;
-+	}
-+
-+	if (fast_dump)
-+		ret = ath10k_bmi_read_memory(ar, reg_dump_area, reg_dump_values,
-+					     sizeof(reg_dump_values));
-+	else
-+		ret = ath10k_sdio_read_mem(ar, reg_dump_area, reg_dump_values,
-+					   sizeof(reg_dump_values));
-+
-+	if (ret) {
-+		ath10k_err(ar, "failed to read firmware dump value: %d\n", ret);
-+		return;
-+	}
-+
-+	ath10k_err(ar, "firmware register dump:\n");
-+	for (i = 0; i < ARRAY_SIZE(reg_dump_values); i += 4)
-+		ath10k_err(ar, "[%02d]: 0x%08X 0x%08X 0x%08X 0x%08X\n",
-+			   i,
-+			   reg_dump_values[i],
-+			   reg_dump_values[i + 1],
-+			   reg_dump_values[i + 2],
-+			   reg_dump_values[i + 3]);
-+
-+	if (!crash_data)
-+		return;
-+
-+	for (i = 0; i < ARRAY_SIZE(reg_dump_values); i++)
-+		crash_data->registers[i] = __cpu_to_le32(reg_dump_values[i]);
-+}
-+
-+static int ath10k_sdio_dump_memory_section(struct ath10k *ar,
-+					   const struct ath10k_mem_region *mem_region,
-+					   u8 *buf, size_t buf_len)
-+{
-+	const struct ath10k_mem_section *cur_section, *next_section;
-+	unsigned int count, section_size, skip_size;
-+	int ret, i, j;
-+
-+	if (!mem_region || !buf)
-+		return 0;
-+
-+	cur_section = &mem_region->section_table.sections[0];
-+
-+	if (mem_region->start > cur_section->start) {
-+		ath10k_warn(ar, "incorrect memdump region 0x%x with section start address 0x%x.\n",
-+			    mem_region->start, cur_section->start);
-+		return 0;
-+	}
-+
-+	skip_size = cur_section->start - mem_region->start;
-+
-+	/* fill the gap between the first register section and register
-+	 * start address
-+	 */
-+	for (i = 0; i < skip_size; i++) {
-+		*buf = ATH10K_MAGIC_NOT_COPIED;
-+		buf++;
-+	}
-+
-+	count = 0;
-+
-+	for (i = 0; cur_section; i++) {
-+		section_size = cur_section->end - cur_section->start;
-+
-+		if (section_size <= 0) {
-+			ath10k_warn(ar, "incorrect ramdump format with start address 0x%x and stop address 0x%x\n",
-+				    cur_section->start,
-+				    cur_section->end);
-+			break;
-+		}
-+
-+		if ((i + 1) == mem_region->section_table.size) {
-+			/* last section */
-+			next_section = NULL;
-+			skip_size = 0;
-+		} else {
-+			next_section = cur_section + 1;
-+
-+			if (cur_section->end > next_section->start) {
-+				ath10k_warn(ar, "next ramdump section 0x%x is smaller than current end address 0x%x\n",
-+					    next_section->start,
-+					    cur_section->end);
-+				break;
-+			}
-+
-+			skip_size = next_section->start - cur_section->end;
-+		}
-+
-+		if (buf_len < (skip_size + section_size)) {
-+			ath10k_warn(ar, "ramdump buffer is too small: %zu\n", buf_len);
-+			break;
-+		}
-+
-+		buf_len -= skip_size + section_size;
-+
-+		/* read section to dest memory */
-+		ret = ath10k_sdio_read_mem(ar, cur_section->start,
-+					   buf, section_size);
-+		if (ret) {
-+			ath10k_warn(ar, "failed to read ramdump from section 0x%x: %d\n",
-+				    cur_section->start, ret);
-+			break;
-+		}
-+
-+		buf += section_size;
-+		count += section_size;
-+
-+		/* fill in the gap between this section and the next */
-+		for (j = 0; j < skip_size; j++) {
-+			*buf = ATH10K_MAGIC_NOT_COPIED;
-+			buf++;
-+		}
-+
-+		count += skip_size;
-+
-+		if (!next_section)
-+			/* this was the last section */
-+			break;
-+
-+		cur_section = next_section;
-+	}
-+
-+	return count;
-+}
-+
-+/* if an error happened returns < 0, otherwise the length */
-+static int ath10k_sdio_dump_memory_generic(struct ath10k *ar,
-+					   const struct ath10k_mem_region *current_region,
-+					   u8 *buf,
-+					   u32 fast_dump)
-+{
-+	int ret;
-+
-+	if (current_region->section_table.size > 0)
-+		/* Copy each section individually. */
-+		return ath10k_sdio_dump_memory_section(ar,
-+						      current_region,
-+						      buf,
-+						      current_region->len);
-+
-+	/* No individiual memory sections defined so we can
-+	 * copy the entire memory region.
-+	 */
-+	if (fast_dump)
-+		ret = ath10k_bmi_read_memory(ar,
-+					     current_region->start,
-+					     buf,
-+					     current_region->len);
-+	else
-+		ret = ath10k_sdio_read_mem(ar,
-+					   current_region->start,
-+					   buf,
-+					   current_region->len);
-+
-+	if (ret) {
-+		ath10k_warn(ar, "failed to copy ramdump region %s: %d\n",
-+			    current_region->name, ret);
-+		return ret;
-+	}
-+
-+	return current_region->len;
-+}
-+
-+static void ath10k_sdio_dump_memory(struct ath10k *ar,
-+				    struct ath10k_fw_crash_data *crash_data,
-+				    u32 fast_dump)
-+{
-+	const struct ath10k_hw_mem_layout *mem_layout;
-+	const struct ath10k_mem_region *current_region;
-+	struct ath10k_dump_ram_data_hdr *hdr;
-+	u32 count;
-+	size_t buf_len;
-+	int ret, i;
-+	u8 *buf;
-+
-+	if (!crash_data)
-+		return;
-+
-+	mem_layout = ath10k_coredump_get_mem_layout(ar);
-+	if (!mem_layout)
-+		return;
-+
-+	current_region = &mem_layout->region_table.regions[0];
-+
-+	buf = crash_data->ramdump_buf;
-+	buf_len = crash_data->ramdump_buf_len;
-+
-+	memset(buf, 0, buf_len);
-+
-+	for (i = 0; i < mem_layout->region_table.size; i++) {
-+		count = 0;
-+
-+		if (current_region->len > buf_len) {
-+			ath10k_warn(ar, "memory region %s size %d is larger that remaining ramdump buffer size %zu\n",
-+				    current_region->name,
-+				    current_region->len,
-+				    buf_len);
-+			break;
-+		}
-+
-+		/* Reserve space for the header. */
-+		hdr = (void *)buf;
-+		buf += sizeof(*hdr);
-+		buf_len -= sizeof(*hdr);
-+
-+		ret = ath10k_sdio_dump_memory_generic(ar, current_region, buf, fast_dump);
-+
-+		ath10k_err(ar, "dump mem, name:%s, type:%d, start:0x%x, len:0x%x, size:%d, ret:0x%x\n",
-+			   current_region->name,
-+			   current_region->type,
-+			   current_region->start,
-+			   current_region->len,
-+			   current_region->section_table.size,
-+			   ret);
-+
-+		if (ret >= 0)
-+			count = ret;
-+
-+		hdr->region_type = cpu_to_le32(current_region->type);
-+		hdr->start = cpu_to_le32(current_region->start);
-+		hdr->length = cpu_to_le32(count);
-+
-+		if (count == 0)
-+			/* Note: the header remains, just with zero length. */
-+			break;
-+
-+		buf += count;
-+		buf_len -= count;
-+
-+		current_region++;
-+	}
-+}
-+
-+void ath10k_sdio_fw_crashed_dump(struct ath10k *ar)
-+{
-+	struct ath10k_fw_crash_data *crash_data;
-+	char guid[UUID_STRING_LEN + 1];
-+	u32 fast_dump = 0;
-+
-+	ath10k_err(ar, "begin fw dump\n");
-+
-+	ath10k_sdio_check_fw_reg(ar, &fast_dump);
-+
-+	if (fast_dump)
-+		ar->bmi.done_sent = false;
-+
-+	ar->stats.fw_crash_counter++;
-+
-+	ath10k_sdio_hif_disable_intrs(ar);
-+
-+	crash_data = ath10k_coredump_new(ar);
-+
-+	if (crash_data)
-+		scnprintf(guid, sizeof(guid), "%pUl", &crash_data->guid);
-+	else
-+		scnprintf(guid, sizeof(guid), "n/a");
-+
-+	ath10k_err(ar, "firmware crashed! (guid %s)\n", guid);
-+	ath10k_print_driver_info(ar);
-+	ath10k_sdio_dump_registers(ar, crash_data, fast_dump);
-+	ath10k_sdio_dump_memory(ar, crash_data, fast_dump);
-+
-+	ath10k_sdio_hif_enable_intrs(ar);
-+
-+	queue_work(ar->workqueue, &ar->restart_work);
-+}
-+
- static int ath10k_sdio_probe(struct sdio_func *func,
- 			     const struct sdio_device_id *id)
- {
-diff --git a/drivers/net/wireless/ath/ath10k/targaddrs.h b/drivers/net/wireless/ath/ath10k/targaddrs.h
-index dff6c8a..c65045a 100644
---- a/drivers/net/wireless/ath/ath10k/targaddrs.h
-+++ b/drivers/net/wireless/ath/ath10k/targaddrs.h
-@@ -334,6 +334,16 @@ struct host_interest {
- #define HI_ACS_FLAGS_SDIO_REDUCE_TX_COMPL_FW_ACK (1 << 17)
- 
- /*
-+ * If both SDIO_CRASH_DUMP_ENHANCEMENT_HOST and SDIO_CRASH_DUMP_ENHANCEMENT_FW
-+ * flags are set, then crashdump upload will be done using the BMI host/target
-+ * communication channel.
-+ */
-+/* HOST to support using BMI dump FW memory when hit assert */
-+#define HI_OPTION_SDIO_CRASH_DUMP_ENHANCEMENT_HOST 0x400
-+/* FW to support using BMI dump FW memory when hit assert */
-+#define HI_OPTION_SDIO_CRASH_DUMP_ENHANCEMENT_FW   0x800
-+
-+/*
-  * CONSOLE FLAGS
-  *
-  * Bit Range  Meaning
--- 
-1.9.1
-
-
-_______________________________________________
-ath10k mailing list
-ath10k@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/ath10k
+S2FsbGUgVmFsbyA8a3ZhbG9AY29kZWF1cm9yYS5vcmc+IHdyaXRlczoKCj4gVG9rZSBIw7hpbGFu
+ZC1Kw7hyZ2Vuc2VuIDx0b2tlQHJlZGhhdC5jb20+IHdyaXRlczoKPgo+PiBZaWJvIFpoYW8gPHlp
+Ym96QGNvZGVhdXJvcmEub3JnPiB3cml0ZXM6Cj4+Cj4+PiBPbiAyMDE5LTA5LTIxIDIyOjAwLCBU
+b2tlIEjDuGlsYW5kLUrDuHJnZW5zZW4gd3JvdGU6Cj4+Pj4gWWlibyBaaGFvIDx5aWJvekBjb2Rl
+YXVyb3JhLm9yZz4gd3JpdGVzOgo+Pj4+IAo+Pj4+PiBPbiAyMDE5LTA5LTIxIDIxOjAyLCBUb2tl
+IEjDuGlsYW5kLUrDuHJnZW5zZW4gd3JvdGU6Cj4+Pj4+PiBZaWJvIFpoYW8gPHlpYm96QGNvZGVh
+dXJvcmEub3JnPiB3cml0ZXM6Cj4+Pj4+PiAKPj4+Pj4+PiBPbiAyMDE5LTA5LTIxIDE5OjI3LCBU
+b2tlIEjDuGlsYW5kLUrDuHJnZW5zZW4gd3JvdGU6Cj4+Pj4+Pj4+IFlpYm8gWmhhbyA8eWlib3pA
+Y29kZWF1cm9yYS5vcmc+IHdyaXRlczoKPj4+Pj4+Pj4gCj4+Pj4+Pj4+PiBPbiAyMDE5LTA5LTIw
+IDE3OjE1LCBUb2tlIEjDuGlsYW5kLUrDuHJnZW5zZW4gd3JvdGU6Cj4+Pj4+Pj4+Pj4gWWlibyBa
+aGFvIDx5aWJvekBjb2RlYXVyb3JhLm9yZz4gd3JpdGVzOgo+Pj4+Pj4+Pj4+IAo+Pj4+Pj4+Pj4+
+PiBPbiAyMDE5LTA5LTE5IDE4OjM3LCBUb2tlIEjDuGlsYW5kLUrDuHJnZW5zZW4gd3JvdGU6Cj4+
+Pj4+Pj4+Pj4+PiBZaWJvIFpoYW8gPHlpYm96QGNvZGVhdXJvcmEub3JnPiB3cml0ZXM6Cj4+Pj4+
+Pj4+Pj4+PiAKPj4+Pj4+Pj4+Pj4+PiBPbiAyMDE5LTA5LTE4IDE5OjIzLCBUb2tlIEjDuGlsYW5k
+LUrDuHJnZW5zZW4gd3JvdGU6Cj4+Pj4+Pj4+Pj4+Pj4+IFlpYm8gWmhhbyA8eWlib3pAY29kZWF1
+cm9yYS5vcmc+IHdyaXRlczoKPj4+Pj4+Pj4+Pj4+Pj4gCj4+Pj4+Pj4+Pj4+Pj4+PiBPbiAyMDE5
+LTA5LTE4IDA1OjEwLCBUb2tlIEjDuGlsYW5kLUrDuHJnZW5zZW4gd3JvdGU6Cj4+Pj4+Pj4+Pj4+
+Pj4+Pj4gWWlibyBaaGFvIDx5aWJvekBjb2RlYXVyb3JhLm9yZz4gd3JpdGVzOgo+Cj4gR3V5cywg
+UExFQVNFIHBsZWFzZSBjb25zaWRlciB1cyBwb29yIG1haW50YWluZXJzIGRyb3duaW5nIGluIGVt
+YWlsIGFuZAo+IGVkaXQgeW91ciBxdW90ZXMgOikgVGhpcyBzdHlsZSBvZiBkaXNjdXNzaW9uIG1h
+a2VzIHBhdGNod29yayB1bnVzYWJsZToKPgo+IGh0dHBzOi8vcGF0Y2h3b3JrLmtlcm5lbC5vcmcv
+cGF0Y2gvMTExNDcwMTkvCgpIZWgsIG9vcHMsIGRpZG4ndCByZWFsaXNlIHlvdSB3ZXJlIGZvbGxv
+d2luZyB0aGUgZGlzY3Vzc2lvbiBmcm9tCnBhdGNod29yazsgc29ycnksIHdpbGwgYmUgc3VyZSB0
+byBjdXQgdGhpbmdzIGluIHRoZSBmdXR1cmUuCgpUaGUgcXVvdGUgbWFya3MgZG8gbWFrZSBhIHZl
+cnkgbmljZSAocmV2ZXJzZSkgY2hyaXN0bWFzIHRyZWUsIHRob3VnaCA7KQoKLVRva2UKCgpfX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXwphdGgxMGsgbWFpbGlu
+ZyBsaXN0CmF0aDEwa0BsaXN0cy5pbmZyYWRlYWQub3JnCmh0dHA6Ly9saXN0cy5pbmZyYWRlYWQu
+b3JnL21haWxtYW4vbGlzdGluZm8vYXRoMTBrCg==
