@@ -2,92 +2,67 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C1F73BB2F1
-	for <lists+ath10k@lfdr.de>; Mon, 23 Sep 2019 13:42:35 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 554D9BB367
+	for <lists+ath10k@lfdr.de>; Mon, 23 Sep 2019 14:12:28 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
-	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=tJUDP8q02tdW8tWXCg69kEDLYusrfklV3XFhIBNE4ek=; b=TSh0ayv/qILBFf
-	vCRRKa1Xk9X5Nog/mp4XL+2LJjNeE0WyhIgAsjuOSNxyRlarPcZTUmikNr4n0staLw3VO64aztKsa
-	IWG/YMap0PlZDIcNopsEw6ttR9GpdPeHnayiH72JRx16FxOZ9xr9mkz09gCTkshgi1nThXlkZQWUZ
-	5vKayoEKw4hhWeO6sZexNGNTaxU0XenVdnDGUlQhI2RVQfwZmNuyBPZSzxU1ODISskTorBIWalgaM
-	/37ceyGtbYQXfBf+qg8m0QFJNUtqWuBHoyHocz4jiHuMkE1MJTwLzhQ4QzXlFSjcm5JKKteuH+qtW
-	db5eMAo+xxlB00DYCUUA==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:Message-ID:References:In-Reply-To:Subject:To:From:
+	Date:MIME-Version:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=5R1/X7PN8lYZIP8XiA0nLW9fnSwPvfPNOXbPRIrOEes=; b=EdLzNu31HE0d0hrZ4nS3NnmfQ
+	GYnwgHTMKbcgv1jTstkYRNtuDkfn3VJsi+L6EoyQnskLQ98dNV+G8kBSpRhQ62nq4+cJezIcM0Twt
+	t4nnc7FcevpbHeZQpQ6f+WGCtcVqcnX/1OUmsZHF44oVKJkF4fo/a7edYwk3k0/5GV2pXxGjpzOoU
+	7gUDjzdnVhj/crXYNdJTnFfW7CmOkgyaiSWNscqmmD09aIwxVSt1UBOrtRh4A3jQGNzKzfFQMwgsG
+	o3nJKh9785Da3/1si3M271Mlrlap4w6TgfbNza8vnqXQfWKtmiM7nCFxl+1P205PNODS/KUpDnudc
+	i5LgvDbXA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iCMjh-0001Nh-Sr; Mon, 23 Sep 2019 11:42:33 +0000
+	id 1iCNCW-0002OS-3w; Mon, 23 Sep 2019 12:12:20 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iCMje-0001NL-KP
- for ath10k@lists.infradead.org; Mon, 23 Sep 2019 11:42:32 +0000
+ id 1iCNCO-0002Nx-D2
+ for ath10k@lists.infradead.org; Mon, 23 Sep 2019 12:12:13 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 474B1602F0; Mon, 23 Sep 2019 11:42:30 +0000 (UTC)
+ id 0A82C60740; Mon, 23 Sep 2019 12:12:12 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1569238950;
- bh=lUtYUiOh943WW+54GHZhamd2qjJPMz0XuUx4GDR/87k=;
- h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=ioK5vtxuDUaNLRCy8cjzfGJSNqbAq4gb1MelzZVSF5bzHSmaT305wz2d8v+SFyjyB
- LdklPqawsCXURg161R5pTOIz5PjpSs6Bqm4VUEl8ftK3V6JRh36E943vI/QJVePSAP
- MgND72TFG+eLuw7V3xeSG1pnJEr5jBPj5LadCPx4=
+ s=default; t=1569240732;
+ bh=HPVEQ3qiV4dE5Y7MN8XXgTbjV11uMPNbSBokopg4sog=;
+ h=Date:From:To:Cc:Subject:In-Reply-To:References:From;
+ b=bgL7iO9pVYoTDKid7fDzpfxcFV5+K/BNGFT12AHb7pVDMoe879f0qKzbZnQjErLfx
+ 8WnRuTK3CXYac9+SnRD2YMBEAddhXvoSdRjs4eWsGF97wVZ+sEIZZPhMsljFo4HQqE
+ ulwqVR3D5aMEKRj9Y0MIagwWRUTcNYrW6/a5bO9Y=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
 X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
- DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
- version=3.4.0
-Received: from x230.qca.qualcomm.com (37-136-106-186.rev.dnainternet.fi
- [37.136.106.186])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
- (No client certificate requested)
- (Authenticated sender: kvalo@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id A6CCA60265;
- Mon, 23 Sep 2019 11:42:28 +0000 (UTC)
+ DKIM_INVALID,DKIM_SIGNED autolearn=no autolearn_force=no version=3.4.0
+Received: from mail.codeaurora.org (localhost.localdomain [127.0.0.1])
+ by smtp.codeaurora.org (Postfix) with ESMTP id 787AB6013C;
+ Mon, 23 Sep 2019 12:12:11 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1569238950;
- bh=lUtYUiOh943WW+54GHZhamd2qjJPMz0XuUx4GDR/87k=;
- h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=ioK5vtxuDUaNLRCy8cjzfGJSNqbAq4gb1MelzZVSF5bzHSmaT305wz2d8v+SFyjyB
- LdklPqawsCXURg161R5pTOIz5PjpSs6Bqm4VUEl8ftK3V6JRh36E943vI/QJVePSAP
- MgND72TFG+eLuw7V3xeSG1pnJEr5jBPj5LadCPx4=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org A6CCA60265
-Authentication-Results: pdx-caf-mail.web.codeaurora.org;
- dmarc=none (p=none dis=none) header.from=codeaurora.org
-Authentication-Results: pdx-caf-mail.web.codeaurora.org;
- spf=none smtp.mailfrom=kvalo@codeaurora.org
-From: Kalle Valo <kvalo@codeaurora.org>
-To: Toke =?utf-8?Q?H=C3=B8iland-J=C3=B8rgensen?= <toke@redhat.com>
-Subject: Re: [PATCH 2/4] mac80211: defer txqs removal from rbtree
-References: <1568639388-27291-1-git-send-email-yiboz@codeaurora.org>
- <1568639388-27291-2-git-send-email-yiboz@codeaurora.org>
- <87pnjyiq7o.fsf@toke.dk>
- <c3ee7ece0986f1c50513cd5fdd2ee03f@codeaurora.org>
- <87sgothmpy.fsf@toke.dk>
- <8cdece5c030fd95817fb099021c38613@codeaurora.org>
- <87tv98fu6l.fsf@toke.dk>
- <1b4ab006d9b5c88035845aaac193ef48@codeaurora.org>
- <8736gre3bm.fsf@toke.dk>
- <198124204167325252fcfcd65e3f2733@codeaurora.org>
- <87ftkp7uuz.fsf@toke.dk>
- <4574cce4079f8dab2b2bf223431a6eae@codeaurora.org>
- <877e617qg2.fsf@toke.dk>
- <910d9bb5f9016b29fb2aaeb0b89bac38@codeaurora.org>
- <874l157nrt.fsf@toke.dk>
- <2935b00bf3e29ad8b2738fe98dc24a76@codeaurora.org>
- <87lfuf5ly2.fsf@toke.dk>
-Date: Mon, 23 Sep 2019 14:42:26 +0300
-In-Reply-To: <87lfuf5ly2.fsf@toke.dk> ("Toke \=\?utf-8\?Q\?H\=C3\=B8iland-J\?\=
- \=\?utf-8\?Q\?\=C3\=B8rgensen\=22's\?\= message of
- "Mon, 23 Sep 2019 12:47:01 +0200")
-Message-ID: <87r2476xy5.fsf@codeaurora.org>
-User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/24.5 (gnu/linux)
+ s=default; t=1569240731;
+ bh=HPVEQ3qiV4dE5Y7MN8XXgTbjV11uMPNbSBokopg4sog=;
+ h=Date:From:To:Cc:Subject:In-Reply-To:References:From;
+ b=iQhJqro0695diy/Mv9ZHAGi0vqvzg8md86xhrwDqkj2lUjm5NIeUNoHfqt/lho4fD
+ L7EbyL3T/1Kpq+/Yju1TN4rYMWwULDAfOiPEodWi4/nxzcp1IrIN3ZEuh7aNu71gGj
+ QFWl+dAR60sLY35CXhAgsQJowlWkZjQVmJOnIzYo=
 MIME-Version: 1.0
+Date: Mon, 23 Sep 2019 20:12:11 +0800
+From: Wen Gong <wgong@codeaurora.org>
+To: Kalle Valo <kvalo@codeaurora.org>
+Subject: Re: [PATCH v2] ath10k: add fw coredump for sdio when firmware assert
+In-Reply-To: <87v9tj6y5p.fsf@codeaurora.org>
+References: <1567132338-7407-1-git-send-email-wgong@codeaurora.org>
+ <874l15c20j.fsf@codeaurora.org>
+ <6b7927f633cb7cbe2ba0d958d7d06f9a@codeaurora.org>
+ <87v9tj6y5p.fsf@codeaurora.org>
+Message-ID: <e61e7cbe3fd9dfad4679bd1d686bc44d@codeaurora.org>
+X-Sender: wgong@codeaurora.org
+User-Agent: Roundcube Webmail/1.2.5
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190923_044230_714521_1875BBD5 
-X-CRM114-Status: UNSURE (   6.39  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20190923_051212_461676_726CF081 
+X-CRM114-Status: GOOD (  11.79  )
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-2.5 points)
@@ -115,33 +90,37 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Yibo Zhao <yiboz@codeaurora.org>, linux-wireless@vger.kernel.org,
- ath10k@lists.infradead.org
-Content-Type: text/plain; charset="utf-8"
+Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org
 Content-Transfer-Encoding: base64
+Content-Type: text/plain; charset="utf-8"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-VG9rZSBIw7hpbGFuZC1Kw7hyZ2Vuc2VuIDx0b2tlQHJlZGhhdC5jb20+IHdyaXRlczoKCj4gWWli
-byBaaGFvIDx5aWJvekBjb2RlYXVyb3JhLm9yZz4gd3JpdGVzOgo+Cj4+IE9uIDIwMTktMDktMjEg
-MjI6MDAsIFRva2UgSMO4aWxhbmQtSsO4cmdlbnNlbiB3cm90ZToKPj4+IFlpYm8gWmhhbyA8eWli
-b3pAY29kZWF1cm9yYS5vcmc+IHdyaXRlczoKPj4+IAo+Pj4+IE9uIDIwMTktMDktMjEgMjE6MDIs
-IFRva2UgSMO4aWxhbmQtSsO4cmdlbnNlbiB3cm90ZToKPj4+Pj4gWWlibyBaaGFvIDx5aWJvekBj
-b2RlYXVyb3JhLm9yZz4gd3JpdGVzOgo+Pj4+PiAKPj4+Pj4+IE9uIDIwMTktMDktMjEgMTk6Mjcs
-IFRva2UgSMO4aWxhbmQtSsO4cmdlbnNlbiB3cm90ZToKPj4+Pj4+PiBZaWJvIFpoYW8gPHlpYm96
-QGNvZGVhdXJvcmEub3JnPiB3cml0ZXM6Cj4+Pj4+Pj4gCj4+Pj4+Pj4+IE9uIDIwMTktMDktMjAg
-MTc6MTUsIFRva2UgSMO4aWxhbmQtSsO4cmdlbnNlbiB3cm90ZToKPj4+Pj4+Pj4+IFlpYm8gWmhh
-byA8eWlib3pAY29kZWF1cm9yYS5vcmc+IHdyaXRlczoKPj4+Pj4+Pj4+IAo+Pj4+Pj4+Pj4+IE9u
-IDIwMTktMDktMTkgMTg6MzcsIFRva2UgSMO4aWxhbmQtSsO4cmdlbnNlbiB3cm90ZToKPj4+Pj4+
-Pj4+Pj4gWWlibyBaaGFvIDx5aWJvekBjb2RlYXVyb3JhLm9yZz4gd3JpdGVzOgo+Pj4+Pj4+Pj4+
-PiAKPj4+Pj4+Pj4+Pj4+IE9uIDIwMTktMDktMTggMTk6MjMsIFRva2UgSMO4aWxhbmQtSsO4cmdl
-bnNlbiB3cm90ZToKPj4+Pj4+Pj4+Pj4+PiBZaWJvIFpoYW8gPHlpYm96QGNvZGVhdXJvcmEub3Jn
-PiB3cml0ZXM6Cj4+Pj4+Pj4+Pj4+Pj4gCj4+Pj4+Pj4+Pj4+Pj4+IE9uIDIwMTktMDktMTggMDU6
-MTAsIFRva2UgSMO4aWxhbmQtSsO4cmdlbnNlbiB3cm90ZToKPj4+Pj4+Pj4+Pj4+Pj4+IFlpYm8g
-WmhhbyA8eWlib3pAY29kZWF1cm9yYS5vcmc+IHdyaXRlczoKCkd1eXMsIFBMRUFTRSBwbGVhc2Ug
-Y29uc2lkZXIgdXMgcG9vciBtYWludGFpbmVycyBkcm93bmluZyBpbiBlbWFpbCBhbmQKZWRpdCB5
-b3VyIHF1b3RlcyA6KSBUaGlzIHN0eWxlIG9mIGRpc2N1c3Npb24gbWFrZXMgcGF0Y2h3b3JrIHVu
-dXNhYmxlOgoKaHR0cHM6Ly9wYXRjaHdvcmsua2VybmVsLm9yZy9wYXRjaC8xMTE0NzAxOS8KCi0t
-IApLYWxsZSBWYWxvCgpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
-X19fXwphdGgxMGsgbWFpbGluZyBsaXN0CmF0aDEwa0BsaXN0cy5pbmZyYWRlYWQub3JnCmh0dHA6
-Ly9saXN0cy5pbmZyYWRlYWQub3JnL21haWxtYW4vbGlzdGluZm8vYXRoMTBrCg==
+T24gMjAxOS0wOS0yMyAxOTozNywgS2FsbGUgVmFsbyB3cm90ZToKPiBXZW4gR29uZyA8d2dvbmdA
+Y29kZWF1cm9yYS5vcmc+IHdyaXRlczoKPiAKPj4gT24gMjAxOS0wOS0yMSAxOTozOCwgS2FsbGUg
+VmFsbyB3cm90ZToKPj4+IAo+Pj4gV2hhdCdzIHdyb25nIHdpdGggYXRoMTBrX3NkaW9faGlmX2Rp
+YWdfcmVhZCgpPyBBRkFJQ1MgdGhpcyB3aG9sZQo+Pj4gZnVuY3Rpb24gZHVwbGljYXRlcyBqdXN0
+IHdoYXQgaXQgZG9lcy4KPj4gCj4+IGF0aDEwa19zZGlvX2hpZl9kaWFnX3JlYWQncyBidWZmZXIg
+c2l6ZSBpcyBsaW1pdCwKPj4gYW5kIHRoZSBkdW1wIG1lbW9yeS9yZWdpc3RlcidzIGJ1ZmZlciBz
+aXplIGlzIGxhcmdlciB0aGFuIHRoZSBkaWFnCj4+IHdpbmRvdydzIGxpbWl0LAo+PiBpZiB1c2Ug
+aXQgZGlyZWN0bHkgd2lsbCB0cmlnZ2VyIGNyYXNoIGxpa2UgdGhpcyBmb3IgZXZlcnkgdGltZS4K
+PiAKPiBZb3Ugc2hvdWxkbid0IGJsaW5kbHkgYWRkIGV4dHJhIGNvZGUgdG8gYXRoMTBrIHdvcmth
+cm91bmQgaXNzdWVzLiBBbmQgCj4gaWYKPiB5b3UgcmVhbGx5IG5lZWQgdG8gdXNlIGEgd29ya2Fy
+b3VuZCwgdGhlbiBpdCBuZWVkcyB0byBwcm9wZXJseSAKPiBleHBsYWluZWQKPiBpbiB0aGUgY29t
+bWl0IGFuZCBhcyB3ZWxsIGFzIGNvbW1lbnRlZCBpbiB0aGUgY29kZS4gQnV0IGJlZm9yZSB0aGF0
+IHRoZQo+IGlzc3VlIG5lZWRzIHRvIGJlIHRob3JvdWdobHkgaW52ZXN0aWdhdGVkIGFuZCB1bmRl
+cnN0b29kIHdoZXJlIHRoZQo+IHByb2JsZW0gaXMgY29taW5nIGZyb20uIEJlY2F1c2UgaXQgbWln
+aHQgYmUgZXZlbiBjb21wbGV0ZWx5IHVucmVsYXRlZCAKPiB0bwo+IGF0aDEway4KCj4gCj4+IFsg
+IDE0OS45NDc2MjRdIGF0aDEwa19zZGlvIG1tYzE6MDAwMToxOiBhdGgxMGtfc2Rpb19oaWZfZGlh
+Z19yZWFkCj4+IGJ1Zl9sZW4gOjQKPj4gWyAgMTQ5Ljk1NDc0MV0gYXRoMTBrX3NkaW8gbW1jMTow
+MDAxOjE6IGF0aDEwa19zZGlvX2hpZl9kaWFnX3JlYWQKPj4gYnVmX2xlbiA6MjQwCj4+IFsgIDE1
+MS4wMDUxNDNdIFVuYWJsZSB0byBoYW5kbGUga2VybmVsIHBhZ2luZyByZXF1ZXN0IGF0IHZpcnR1
+YWwKCj4+IFsgIDE1MS4xMTQ1MzddIFByb2Nlc3Mgc3dhcHBlci8wIChwaWQ6IDAsIHN0YWNrIGxp
+bWl0ID0KPj4gMHgwMDAwMDAwMGUzMGRjNjY1KQrjgIEKPiAKPiBEaWQgeW91IGludmVzdGlnYXRl
+IHRoaXM/IElzIHRoZSBidWZmZXIgeW91IHJlYWRpbmcgdG8gRE1BIGFjY2Vzc2libGU/Cj4gV2hh
+dCBhYm91dCB0aGUgYWxpZ25tZW50PyBJcyB0aGVyZSBhIGNlcnRhaW4gbGVuZ3RoIHdoaWNoIGlz
+IHRoZSBsaW1pdAo+IGZvciBjcmFzaGVzPyBBbmQgc28gb24uLi4KdGhlIGxpbWl0IGlzIDQgYnl0
+ZS4KZm9yIDUgYnl0ZXMsIGl0IHdpbGwgY3Jhc2guCgpfX19fX19fX19fX19fX19fX19fX19fX19f
+X19fX19fX19fX19fX19fX19fX19fXwphdGgxMGsgbWFpbGluZyBsaXN0CmF0aDEwa0BsaXN0cy5p
+bmZyYWRlYWQub3JnCmh0dHA6Ly9saXN0cy5pbmZyYWRlYWQub3JnL21haWxtYW4vbGlzdGluZm8v
+YXRoMTBrCg==
