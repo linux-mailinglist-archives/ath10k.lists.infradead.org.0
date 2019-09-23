@@ -2,67 +2,71 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 554D9BB367
-	for <lists+ath10k@lfdr.de>; Mon, 23 Sep 2019 14:12:28 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 92853BB37F
+	for <lists+ath10k@lfdr.de>; Mon, 23 Sep 2019 14:17:50 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:Message-ID:References:In-Reply-To:Subject:To:From:
-	Date:MIME-Version:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=5R1/X7PN8lYZIP8XiA0nLW9fnSwPvfPNOXbPRIrOEes=; b=EdLzNu31HE0d0hrZ4nS3NnmfQ
-	GYnwgHTMKbcgv1jTstkYRNtuDkfn3VJsi+L6EoyQnskLQ98dNV+G8kBSpRhQ62nq4+cJezIcM0Twt
-	t4nnc7FcevpbHeZQpQ6f+WGCtcVqcnX/1OUmsZHF44oVKJkF4fo/a7edYwk3k0/5GV2pXxGjpzOoU
-	7gUDjzdnVhj/crXYNdJTnFfW7CmOkgyaiSWNscqmmD09aIwxVSt1UBOrtRh4A3jQGNzKzfFQMwgsG
-	o3nJKh9785Da3/1si3M271Mlrlap4w6TgfbNza8vnqXQfWKtmiM7nCFxl+1P205PNODS/KUpDnudc
-	i5LgvDbXA==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
+	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=R7dvrBM6UYSSvE3J4bjKSYMWVwP4eqOaYFoKPpGEFqY=; b=bhs
+	G7tljlQ9A+hUfb2v7GDBKLLOV7qwyUqbgIUXm3ZzfydK8SobOUO04bzlg/+RRZWdCWZ43O/8OtT5t
+	F+76WKsLLHsJRiL7Wx/TVKDMnIzmRIrTOaNM5hvhlODu/BMiYdNtVQPoYnGGIScYQIJOEGVPWUYgX
+	LSaPkYTq2ywfDAIL0mKRBQrWCIvWvJDMzFi0jnh2u46o4p7tkr5vJh6xbwk6a94B3AcQMElw3oCeL
+	aqKIw5Y1bqVd+pcdAjtfUUNuHrhLet4PibZP/HpZrcRullxucW58DuMq4sO5R7ciU06OOCRPnm8QB
+	Np167bp59YaHdwscutoYIM5R/2zPw7A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iCNCW-0002OS-3w; Mon, 23 Sep 2019 12:12:20 +0000
+	id 1iCNHo-0004Lh-M5; Mon, 23 Sep 2019 12:17:48 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iCNCO-0002Nx-D2
- for ath10k@lists.infradead.org; Mon, 23 Sep 2019 12:12:13 +0000
+ id 1iCNHj-0004L7-Qw
+ for ath10k@lists.infradead.org; Mon, 23 Sep 2019 12:17:45 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 0A82C60740; Mon, 23 Sep 2019 12:12:12 +0000 (UTC)
+ id 77AE060736; Mon, 23 Sep 2019 12:17:43 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1569240732;
- bh=HPVEQ3qiV4dE5Y7MN8XXgTbjV11uMPNbSBokopg4sog=;
- h=Date:From:To:Cc:Subject:In-Reply-To:References:From;
- b=bgL7iO9pVYoTDKid7fDzpfxcFV5+K/BNGFT12AHb7pVDMoe879f0qKzbZnQjErLfx
- 8WnRuTK3CXYac9+SnRD2YMBEAddhXvoSdRjs4eWsGF97wVZ+sEIZZPhMsljFo4HQqE
- ulwqVR3D5aMEKRj9Y0MIagwWRUTcNYrW6/a5bO9Y=
+ s=default; t=1569241063;
+ bh=bvbaad8pbX1e6EV6dGELNLsVx/3SP4Fhi2KTXgX8jL0=;
+ h=From:To:Cc:Subject:Date:From;
+ b=o/keuJbbpnua3sjhPNxlmpKJ5d9WTo2qPXAW6xjiIv5LnbtdyQtoYmkC135fgEC7M
+ eRbtTe2Mn1SJurkZoNXoQ13yAHDrAGMmAqUfrSzE1oUC3YS7rrQqqGLhx/AnaMwPie
+ gHpNXj1n1miYUQ1FTUqaL2rzVtDv4pJj4JAUmEuc=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
 X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
- DKIM_INVALID,DKIM_SIGNED autolearn=no autolearn_force=no version=3.4.0
-Received: from mail.codeaurora.org (localhost.localdomain [127.0.0.1])
- by smtp.codeaurora.org (Postfix) with ESMTP id 787AB6013C;
- Mon, 23 Sep 2019 12:12:11 +0000 (UTC)
+ DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
+ version=3.4.0
+Received: from wgong-HP-Z240-SFF-Workstation.qca.qualcomm.com (unknown
+ [180.166.53.21])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
+ (No client certificate requested)
+ (Authenticated sender: wgong@smtp.codeaurora.org)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 5E1966013C;
+ Mon, 23 Sep 2019 12:17:42 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1569240731;
- bh=HPVEQ3qiV4dE5Y7MN8XXgTbjV11uMPNbSBokopg4sog=;
- h=Date:From:To:Cc:Subject:In-Reply-To:References:From;
- b=iQhJqro0695diy/Mv9ZHAGi0vqvzg8md86xhrwDqkj2lUjm5NIeUNoHfqt/lho4fD
- L7EbyL3T/1Kpq+/Yju1TN4rYMWwULDAfOiPEodWi4/nxzcp1IrIN3ZEuh7aNu71gGj
- QFWl+dAR60sLY35CXhAgsQJowlWkZjQVmJOnIzYo=
-MIME-Version: 1.0
-Date: Mon, 23 Sep 2019 20:12:11 +0800
+ s=default; t=1569241063;
+ bh=bvbaad8pbX1e6EV6dGELNLsVx/3SP4Fhi2KTXgX8jL0=;
+ h=From:To:Cc:Subject:Date:From;
+ b=o/keuJbbpnua3sjhPNxlmpKJ5d9WTo2qPXAW6xjiIv5LnbtdyQtoYmkC135fgEC7M
+ eRbtTe2Mn1SJurkZoNXoQ13yAHDrAGMmAqUfrSzE1oUC3YS7rrQqqGLhx/AnaMwPie
+ gHpNXj1n1miYUQ1FTUqaL2rzVtDv4pJj4JAUmEuc=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 5E1966013C
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ spf=none smtp.mailfrom=wgong@codeaurora.org
 From: Wen Gong <wgong@codeaurora.org>
-To: Kalle Valo <kvalo@codeaurora.org>
-Subject: Re: [PATCH v2] ath10k: add fw coredump for sdio when firmware assert
-In-Reply-To: <87v9tj6y5p.fsf@codeaurora.org>
-References: <1567132338-7407-1-git-send-email-wgong@codeaurora.org>
- <874l15c20j.fsf@codeaurora.org>
- <6b7927f633cb7cbe2ba0d958d7d06f9a@codeaurora.org>
- <87v9tj6y5p.fsf@codeaurora.org>
-Message-ID: <e61e7cbe3fd9dfad4679bd1d686bc44d@codeaurora.org>
-X-Sender: wgong@codeaurora.org
-User-Agent: Roundcube Webmail/1.2.5
+To: ath10k@lists.infradead.org
+Subject: [PATCH v3 0/2] add fw coredump for sdio when firmware assert
+Date: Mon, 23 Sep 2019 20:17:33 +0800
+Message-Id: <1569241055-30816-1-git-send-email-wgong@codeaurora.org>
+X-Mailer: git-send-email 1.9.1
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190923_051212_461676_726CF081 
-X-CRM114-Status: GOOD (  11.79  )
+X-CRM114-CacheID: sfid-20190923_051743_895124_83BF1B85 
+X-CRM114-Status: UNSURE (   6.99  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-2.5 points)
@@ -90,37 +94,40 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org
-Content-Transfer-Encoding: base64
-Content-Type: text/plain; charset="utf-8"; Format="flowed"
+Cc: linux-wireless@vger.kernel.org
+MIME-Version: 1.0
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-T24gMjAxOS0wOS0yMyAxOTozNywgS2FsbGUgVmFsbyB3cm90ZToKPiBXZW4gR29uZyA8d2dvbmdA
-Y29kZWF1cm9yYS5vcmc+IHdyaXRlczoKPiAKPj4gT24gMjAxOS0wOS0yMSAxOTozOCwgS2FsbGUg
-VmFsbyB3cm90ZToKPj4+IAo+Pj4gV2hhdCdzIHdyb25nIHdpdGggYXRoMTBrX3NkaW9faGlmX2Rp
-YWdfcmVhZCgpPyBBRkFJQ1MgdGhpcyB3aG9sZQo+Pj4gZnVuY3Rpb24gZHVwbGljYXRlcyBqdXN0
-IHdoYXQgaXQgZG9lcy4KPj4gCj4+IGF0aDEwa19zZGlvX2hpZl9kaWFnX3JlYWQncyBidWZmZXIg
-c2l6ZSBpcyBsaW1pdCwKPj4gYW5kIHRoZSBkdW1wIG1lbW9yeS9yZWdpc3RlcidzIGJ1ZmZlciBz
-aXplIGlzIGxhcmdlciB0aGFuIHRoZSBkaWFnCj4+IHdpbmRvdydzIGxpbWl0LAo+PiBpZiB1c2Ug
-aXQgZGlyZWN0bHkgd2lsbCB0cmlnZ2VyIGNyYXNoIGxpa2UgdGhpcyBmb3IgZXZlcnkgdGltZS4K
-PiAKPiBZb3Ugc2hvdWxkbid0IGJsaW5kbHkgYWRkIGV4dHJhIGNvZGUgdG8gYXRoMTBrIHdvcmth
-cm91bmQgaXNzdWVzLiBBbmQgCj4gaWYKPiB5b3UgcmVhbGx5IG5lZWQgdG8gdXNlIGEgd29ya2Fy
-b3VuZCwgdGhlbiBpdCBuZWVkcyB0byBwcm9wZXJseSAKPiBleHBsYWluZWQKPiBpbiB0aGUgY29t
-bWl0IGFuZCBhcyB3ZWxsIGFzIGNvbW1lbnRlZCBpbiB0aGUgY29kZS4gQnV0IGJlZm9yZSB0aGF0
-IHRoZQo+IGlzc3VlIG5lZWRzIHRvIGJlIHRob3JvdWdobHkgaW52ZXN0aWdhdGVkIGFuZCB1bmRl
-cnN0b29kIHdoZXJlIHRoZQo+IHByb2JsZW0gaXMgY29taW5nIGZyb20uIEJlY2F1c2UgaXQgbWln
-aHQgYmUgZXZlbiBjb21wbGV0ZWx5IHVucmVsYXRlZCAKPiB0bwo+IGF0aDEway4KCj4gCj4+IFsg
-IDE0OS45NDc2MjRdIGF0aDEwa19zZGlvIG1tYzE6MDAwMToxOiBhdGgxMGtfc2Rpb19oaWZfZGlh
-Z19yZWFkCj4+IGJ1Zl9sZW4gOjQKPj4gWyAgMTQ5Ljk1NDc0MV0gYXRoMTBrX3NkaW8gbW1jMTow
-MDAxOjE6IGF0aDEwa19zZGlvX2hpZl9kaWFnX3JlYWQKPj4gYnVmX2xlbiA6MjQwCj4+IFsgIDE1
-MS4wMDUxNDNdIFVuYWJsZSB0byBoYW5kbGUga2VybmVsIHBhZ2luZyByZXF1ZXN0IGF0IHZpcnR1
-YWwKCj4+IFsgIDE1MS4xMTQ1MzddIFByb2Nlc3Mgc3dhcHBlci8wIChwaWQ6IDAsIHN0YWNrIGxp
-bWl0ID0KPj4gMHgwMDAwMDAwMGUzMGRjNjY1KQrjgIEKPiAKPiBEaWQgeW91IGludmVzdGlnYXRl
-IHRoaXM/IElzIHRoZSBidWZmZXIgeW91IHJlYWRpbmcgdG8gRE1BIGFjY2Vzc2libGU/Cj4gV2hh
-dCBhYm91dCB0aGUgYWxpZ25tZW50PyBJcyB0aGVyZSBhIGNlcnRhaW4gbGVuZ3RoIHdoaWNoIGlz
-IHRoZSBsaW1pdAo+IGZvciBjcmFzaGVzPyBBbmQgc28gb24uLi4KdGhlIGxpbWl0IGlzIDQgYnl0
-ZS4KZm9yIDUgYnl0ZXMsIGl0IHdpbGwgY3Jhc2guCgpfX19fX19fX19fX19fX19fX19fX19fX19f
-X19fX19fX19fX19fX19fX19fX19fXwphdGgxMGsgbWFpbGluZyBsaXN0CmF0aDEwa0BsaXN0cy5p
-bmZyYWRlYWQub3JnCmh0dHA6Ly9saXN0cy5pbmZyYWRlYWQub3JnL21haWxtYW4vbGlzdGluZm8v
-YXRoMTBrCg==
+add fw coredump for sdio when firmware assert
+
+Wen Gong (2):
+  ath10k: add bus type for each layout of coredump
+v2: change code style
+v3: split bus type to another patch, 
+remove ATH10K_BUS_ANY, 
+add bus type for each layout
+  ath10k: add fw coredump for sdio when firmware assert
+v2: change code style
+v3: add commit log for fastdump, 
+add commit log for ath10k_sdio_hif_diag_read,
+change ath10k_err to dbg log
+
+ drivers/net/wireless/ath/ath10k/bmi.c       |   1 +
+ drivers/net/wireless/ath/ath10k/core.c      |   4 +
+ drivers/net/wireless/ath/ath10k/coredump.c  | 348 +++++++++++++++++++++++++++-
+ drivers/net/wireless/ath/ath10k/coredump.h  |   1 +
+ drivers/net/wireless/ath/ath10k/sdio.c      | 338 ++++++++++++++++++++++++++-
+ drivers/net/wireless/ath/ath10k/targaddrs.h |  10 +
+ 6 files changed, 697 insertions(+), 5 deletions(-)
+
+-- 
+1.9.1
+
+
+_______________________________________________
+ath10k mailing list
+ath10k@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/ath10k
