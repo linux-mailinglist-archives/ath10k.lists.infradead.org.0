@@ -2,68 +2,68 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 217ECBC458
-	for <lists+ath10k@lfdr.de>; Tue, 24 Sep 2019 10:58:30 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9AED3BC4E4
+	for <lists+ath10k@lfdr.de>; Tue, 24 Sep 2019 11:32:41 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
 	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
 	List-Unsubscribe:List-Id:Message-ID:References:In-Reply-To:Subject:To:From:
 	Date:MIME-Version:Reply-To:Content-ID:Content-Description:Resent-Date:
 	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=KbXaez0fXzIsfFYZSROaIN4d9GUcZk6DgxI+SMVAT2c=; b=QxGqxmYbelyw2OgTVxWdxg/Gl
-	3zajah/NIMuu+7hzbjQskqScyw0TxB6ICR/h6xScoLXMscvraYlgldsAMp1bvF3uKtuEQBlZtav/A
-	rf7bCTz2UjbsSr/Wbn/56wGNn9arqF+vIbfth++Xkd4sgWphQwjQvmk+zw8yrNXGy7KKhhWUvQaCm
-	CM2t8O9u2OrDxh9pclfbFJylRT3lAMD8h9J+xPoQIu1t2Kd5eFyq0OWtypUa9reT4ux2BioeRdxVx
-	hq0mje3KvMp7gztft4obn9/lcACykChxc/9rnJlQYU4nLhz4R62n9iKolgWCIKsVpe8gR33a0T7Oz
-	5pQDufoSA==;
+	 bh=Iim1dQSOl4RjcnlHk/YjolckDD6yb0GwQDihp1dWq5Q=; b=MJuQkNdgDlw3oqPV/LRNR8jKE
+	LXEWaK7qJRbKQB/fMydXajPOWiod5G5Eirj+rEbDB01cws5Pmx3XPNAc+qauukXnAq+P10a81SJti
+	1C9Uy/3k1I0drF07/iEHJNlVuqMuClnr/FAMx2Xomr9hjCVSE26FGAskPR0FlTWgOBeukIBIqcfpw
+	LyZjT6af59Xz6KSNDD6QtpswAYdpbaL9YojMSxeWsnB8jigegdxpls+ng2sdhPqM3tqCELYiG9+td
+	650GysYJmQQP0vhWJUOFDFojjyg/8QShouvTI9y3OfShoD2Wtg1XB18EUNVs+pkBNogV7X2BmzUK3
+	15b0oTNnA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iCgeR-0000dQ-Qc; Tue, 24 Sep 2019 08:58:27 +0000
+	id 1iChBT-0004km-JV; Tue, 24 Sep 2019 09:32:35 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iCgeM-0000d4-2n
- for ath10k@lists.infradead.org; Tue, 24 Sep 2019 08:58:23 +0000
+ id 1iChBK-0004kI-Pv
+ for ath10k@lists.infradead.org; Tue, 24 Sep 2019 09:32:28 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id AC9486083C; Tue, 24 Sep 2019 08:58:21 +0000 (UTC)
+ id 2AE66602F2; Tue, 24 Sep 2019 09:32:26 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1569315501;
- bh=+OjAu5LkmUVoBsrucFH48IscYXvzLUSlgsNMMFX+PpU=;
+ s=default; t=1569317546;
+ bh=dX/ugPSN7GpC2cgkwy21GdHlwo09xtkP3Ul+IY1tFL0=;
  h=Date:From:To:Cc:Subject:In-Reply-To:References:From;
- b=SWj6swxanwA0PwluKXwYcXYKrfdATjgDZGEuC6i3QDdjFfk3a0BRb5xnQeDQezLvL
- ZIix9512E1iC5bfCu3nKiyQK5onB7Zlb4bnmd3rqvoDAhoWkAEzMGfQRVV4t6H9QCv
- 3aUTt8nxvcGl6aOum4Atmc6OAuqd4igI1sgrh8/s=
+ b=ZgCy1WNYrBnOd+22Y8zh93gvyD3YGWlPbkk9h57Xod5TKwiAFDaAmSC8xvdpk/hXL
+ OQLCrGOOmB5NgT6cdq7Aqa82oPvvTe+t7h//jWyJCDly8VO86vvf5ZN86uH/cKAmBj
+ ooEOlSC7mobDla4HCgkK5xTr6lVMf2AaiV9yJHck=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
 X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
  DKIM_INVALID,DKIM_SIGNED autolearn=no autolearn_force=no version=3.4.0
 Received: from mail.codeaurora.org (localhost.localdomain [127.0.0.1])
- by smtp.codeaurora.org (Postfix) with ESMTP id 5629660256;
- Tue, 24 Sep 2019 08:58:21 +0000 (UTC)
+ by smtp.codeaurora.org (Postfix) with ESMTP id AF4BE602F2;
+ Tue, 24 Sep 2019 09:32:25 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1569315501;
- bh=+OjAu5LkmUVoBsrucFH48IscYXvzLUSlgsNMMFX+PpU=;
+ s=default; t=1569317545;
+ bh=dX/ugPSN7GpC2cgkwy21GdHlwo09xtkP3Ul+IY1tFL0=;
  h=Date:From:To:Cc:Subject:In-Reply-To:References:From;
- b=SWj6swxanwA0PwluKXwYcXYKrfdATjgDZGEuC6i3QDdjFfk3a0BRb5xnQeDQezLvL
- ZIix9512E1iC5bfCu3nKiyQK5onB7Zlb4bnmd3rqvoDAhoWkAEzMGfQRVV4t6H9QCv
- 3aUTt8nxvcGl6aOum4Atmc6OAuqd4igI1sgrh8/s=
+ b=eEDeUK/v+XeG7Rtf3FmL97hu5qtJPfnbf6u/M++KT4QSEQearGQLXkRNe7Q7fFcWF
+ /G3odYOii0ze8i03zpG3pOCcgDJ8d0lcDRtoPqH2KEI/L7bSRr8e2zwX+zxsEkKGdV
+ uWOFWnPf+0pDF/jiTnhTvFAzn7P2IUL6z81lJKu8=
 MIME-Version: 1.0
-Date: Tue, 24 Sep 2019 16:58:21 +0800
-From: Yibo Zhao <yiboz@codeaurora.org>
-To: =?UTF-8?Q?Toke_H=C3=B8iland-J=C3=B8rgensen?= <toke@redhat.com>
-Subject: Re: [PATCH V3 3/4] mac80211: fix low throughput in multi-clients
- situation
-In-Reply-To: <87d0fq3wqy.fsf@toke.dk>
-References: <1569223201-1490-1-git-send-email-yiboz@codeaurora.org>
- <1569223201-1490-4-git-send-email-yiboz@codeaurora.org>
- <87impj5lkm.fsf@toke.dk> <2aab0bd944ee34751304a5f92b885113@codeaurora.org>
- <87d0fq3wqy.fsf@toke.dk>
-Message-ID: <0c58a6be437e5a21c63ad44cc86c317b@codeaurora.org>
-X-Sender: yiboz@codeaurora.org
+Date: Tue, 24 Sep 2019 17:32:25 +0800
+From: Wen Gong <wgong@codeaurora.org>
+To: Kalle Valo <kvalo@codeaurora.org>
+Subject: Re: [PATCH v5 3/8] ath10k: change max RX bundle size from 8 to 32 for
+ sdio
+In-Reply-To: <871rw79ycy.fsf@codeaurora.org>
+References: <1567679893-14029-1-git-send-email-wgong@codeaurora.org>
+ <1567679893-14029-4-git-send-email-wgong@codeaurora.org>
+ <871rw79ycy.fsf@codeaurora.org>
+Message-ID: <5f2387dc4c97a5edff78fa6ce7dcd401@codeaurora.org>
+X-Sender: wgong@codeaurora.org
 User-Agent: Roundcube Webmail/1.2.5
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20190924_015822_145979_2AFA711F 
-X-CRM114-Status: GOOD (  10.88  )
+X-CRM114-CacheID: sfid-20190924_023226_867520_D6E0D042 
+X-CRM114-Status: UNSURE (   6.76  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-2.5 points)
@@ -91,37 +91,34 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless-owner@vger.kernel.org, linux-wireless@vger.kernel.org,
- ath10k@lists.infradead.org
-Content-Transfer-Encoding: base64
-Content-Type: text/plain; charset="utf-8"; Format="flowed"
+Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org
+Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-T24gMjAxOS0wOS0yNCAxNjo0OCwgVG9rZSBIw7hpbGFuZC1Kw7hyZ2Vuc2VuIHdyb3RlOgo+IFlp
-Ym8gWmhhbyA8eWlib3pAY29kZWF1cm9yYS5vcmc+IHdyaXRlczoKPiAKPj4+IEkgY2FuIHNlZSB3
-aHkgd2UgbmVlZCB0aGUgc2Vjb25kIHBhcnQgKGJhc2ljYWxseSwgdGhpcyBoYXBwZW5zIAo+Pj4g
-YmVjYXVzZQo+Pj4gSQo+Pj4gZm9yZ290IHRvIGFkZCBhIGNoZWNrIGZvciAibm8gZWxpZ2libGUg
-c3RhdGlvbnMiIGluIG1heV90cmFuc21pdCgpLAo+Pj4gbGlrZQo+Pj4gdGhlIG9uZSBpbiBuZXh0
-X3R4cSgpKS4gQW5kIHJvdW5kaW5nIHVwIHRoZSBkaXZpc2lvbiByZXN1bHQgZG9lc24ndAo+Pj4g
-aHVydCwgSSBndWVzcy4gQnV0IHdoeSBkb2VzIGl0IGhlbHAgdG8gY2hhbmdlIHRoZSBncmFjZSBw
-ZXJpb2QgaWYgCj4+PiB3ZSdyZQo+Pj4gZG9pbmcgYWxsIHRoZSBvdGhlciBzdHVmZj8KPj4gSW4g
-bXVsdGktY2xpZW50cyBjYXNlLCBpdCBpcyBwb3NzaWJsZSBhIFRYUSBzb21ldGltZXMgZ2V0cyBk
-cmFpbmVkIGR1ZQo+PiB0byBGVyBoYXMgZGVlcCBxdWV1ZSBhbmQgZmV3IHBhY2tldHMgaW4gVFhR
-IGF0IHRoYXQgdGltZS4gU28gdGhlIFRYUSAKPj4gaXMKPj4gcmVtb3ZlZCBmcm9tIHRoZSByYnRy
-ZWUgYWZ0ZXIgZGVxdWV1aW5nLiBXaGVuIGl0IGlzIGFib3V0IHRvIGFkZGVkIAo+PiBiYWNrCj4+
-IHZlcnkgc29vbiBhZnRlciB0aGUgcmVtb3ZhbCwgdGhlIGdfdnQgbWlnaHQgaGF2ZSBnb25lIGEg
-bGl0dGxlIGZhciAKPj4gYXdheQo+PiBmcm9tIHN0YSB2dCB3aGVyZSBzeW5jIGlzIG5lZWRlZC4g
-V2l0aCB0aGlzIHN5bmMsIHRoZSBzdGF0aW9uIGlzIAo+PiBmb3JjZWQKPj4gdG8gY2F0Y2ggdXAg
-d2l0aCB0aGUgZ192dCwgaG93ZXZlciwgaXRzIGNoYW5jZSBmb3IgdHJhbnNtaXNzaW9uIGhhcyAK
-Pj4gYmVlbgo+PiByZWR1Y2VkLiBJIHRoaW5rIDUwMHVzIGlzIHF1aXRlIGEgc2hvcnQgcGVyaW9k
-IGluIG11bHRpLWNsaWVudHMgY2FzZS4KPiAKPiBUaGF0J3MgYSBnb29kIHBvaW50LCBhY3R1YWxs
-eTogSGF2aW5nIHRoZSBncmFjZSBwZXJpb2QgYmUgdG9vIHNtYWxsIAo+IHdpbGwKPiBhbGxvdyBz
-dGF0aW9ucyB0aGF0IGxlYXZlIGFuZCByZS1lbnRlciB0aGUgcXVldWUgdG8gInNraXAgYWhlYWQi
-IGFuZCAKPiB1c2UKPiBtb3JlIHRoYW4gaXRzIHNoYXJlLiBIb3dldmVyLCBJIHRoaW5rIGl0J3Mg
-YSBzZXBhcmF0ZSBpc3N1ZSBmcm9tIHdoYXQKPiB0aGlzIHBhdGNoIGlzIGFib3V0OyBzbyBob3cg
-YWJvdXQgSSBqdXN0IGluY3JlYXNlIHRoZSBncmFjZSBwZXJpb2QgaW4KPiB0aGUgbmV4dCB2ZXJz
-aW9uIG9mIHRoZSBiYXNlIHBhdGNoPwoKU3VyZSwgbm8gcHJvYmxlbS4gOikKPiAKPiAtVG9rZQoK
-LS0gCllpYm8KCl9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
-CmF0aDEwayBtYWlsaW5nIGxpc3QKYXRoMTBrQGxpc3RzLmluZnJhZGVhZC5vcmcKaHR0cDovL2xp
-c3RzLmluZnJhZGVhZC5vcmcvbWFpbG1hbi9saXN0aW5mby9hdGgxMGsK
+On 2019-09-23 17:05, Kalle Valo wrote:
+
+>> 
+>> +#define ATH10K_HTC_FLAG_BUNDLE_MASK 0xF0
+>> +#define ATH10K_HTC_BUNDLE_EXTRA_MASK GENMASK(3, 2)
+>> +
+>> +#define ATH10K_HTC_GET_BUNDLE_COUNT(flags) \
+>> +	    (FIELD_GET(ATH10K_HTC_FLAG_BUNDLE_MASK, (flags)) +  \
+>> +	    (FIELD_GET(ATH10K_HTC_BUNDLE_EXTRA_MASK, (flags)) << 4))
+> 
+> When using FIELD_GET() there should be no need to use '<<', the main id
+> of FIELD_GET() and BITMASK() is that there's no need do any manual
+> shifting. So I suspect something is wrong here, but didn't have time to
+> investigate.
+the value is like this:
+the u8 flags:
+b7 b6 b5 b4 b3 b2 b1 b0
+the count= 0Bb7b6b5b4 + 0Bb3b2 << 4
+FIELD_GET is to >>, not <<
+so it need to manual shift for the "0Bb3b2 << 4"
+
+_______________________________________________
+ath10k mailing list
+ath10k@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/ath10k
