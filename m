@@ -2,85 +2,74 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 24827C31F9
-	for <lists+ath10k@lfdr.de>; Tue,  1 Oct 2019 13:05:45 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9EB9CC322B
+	for <lists+ath10k@lfdr.de>; Tue,  1 Oct 2019 13:15:48 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:References
-	:In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=AhtaUl1TmS6wynbY6bdWYnlGIkaNSNv8DfC9TwwoevQ=; b=TgTQ30fVmyWkG0
-	S4NlZNCWH0znoD+6c0p/LlZ1xupDBQpGh0fQ0TvMqIKRU84d/Xr4HSY3WljzAWAmTdlXCjsAZeXEf
-	KJgpRYs5rI/waI82rLmthaTEQe/NFGm+UIo3SgaJB4TQvVSlmoX3gluAcAPTBeS6sx1BVkQJeDIfC
-	iBhJOJOG2Na1d2z2cXUbfeqcZrcq8yUd2hnqAYgJh++7NkYfjUsBjltKvVLmDSJBLbZ1JtGdM3R1U
-	bdwhHLLv1HpF5RYdapB6Lz+FbdLpjEvq/tMXJZ6RAoP4XgngmYAI8kIhdwZVztgA4iVd7tzEvPZkn
-	0O9dEpeZ3+JstT1w2fZw==;
+	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
+	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=PyrYgC/lCoW6/n5ZjVdPibF6J25+iniHJpmd27u/LJU=; b=QA/y/O3vN+F0Gt
+	fCA39x0b2NDpR+roDVJqP//3GwK9aA2K6G9H90lXLGCx1GhKoOuaBHe6qW4JQ5AwAGwPnCJLz+x1J
+	GnM8p0F9L6kn1r6Ap3HYSrW+I3c9xLqclFZCN/aG2/jF16BcLwhNSOSR0h+a+MGxHNyNQLmDsq9cZ
+	5+09u58c4fOvLgW+jlSop7TrhZaTYic+8bhMI1fmUswsWeCzaCIf9i+XIpD53hK8Sgmia6PK9iuEC
+	4Ahm/EkBIf8j9sssMcdeOyVSZbj4+QrfGWy11icgC4U8ZXAvPNFfq+S6MuI5XJbBposh+bIR6/L+O
+	AF7hVmn/ofiaiFP4vDLw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iFFyQ-0002Ga-1d; Tue, 01 Oct 2019 11:05:42 +0000
-Received: from us-smtp-2.mimecast.com ([207.211.31.81]
- helo=us-smtp-delivery-1.mimecast.com)
+	id 1iFG8A-0006Ly-R6; Tue, 01 Oct 2019 11:15:46 +0000
+Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iFFyL-0002FI-H3
- for ath10k@lists.infradead.org; Tue, 01 Oct 2019 11:05:39 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
- s=mimecast20190719; t=1569927932;
- h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
- to:to:cc:cc:mime-version:mime-version:content-type:content-type:
- content-transfer-encoding:content-transfer-encoding:
- in-reply-to:in-reply-to:references:references;
- bh=AVsvHTUiJXZiUPgFBdi2gYHsvhhqAGRgG/FQ9DspGVA=;
- b=gLCi5EFg36bgnoCOrshXsZ1L5XCUhUW87kUOIxbgsyJcTYi93VUUbLZCWyYoPED962RMtt
- LUjRYFmBPjVURclDsJrke0V9tDfPQAEZfycqbFrolYZLBdeZfBfcJyZCGjy3A9B4dO7UrF
- Ax7lKamsfClH6dSdNC1SWOJdQ3Q63Vk=
-Received: from mail-lf1-f72.google.com (mail-lf1-f72.google.com
- [209.85.167.72]) (Using TLS) by relay.mimecast.com with ESMTP id
- us-mta-341-ePrC-dlwMGiqUfhNZGd67w-1; Tue, 01 Oct 2019 07:05:29 -0400
-Received: by mail-lf1-f72.google.com with SMTP id c83so2680360lfg.8
- for <ath10k@lists.infradead.org>; Tue, 01 Oct 2019 04:05:29 -0700 (PDT)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:in-reply-to:references:date
- :message-id:mime-version;
- bh=wZ8bNOH9jek4T+XHr/OU+DDOP2RzN2cpsfXiL6JbaUI=;
- b=ogKFGZmMM+WRVJNwszm+92Uru3atwelGneBrPE2z5vq6L1G0gc3RrkfuZWwnKjdP+e
- 3kdJWCEVz6Vi9skJp0jv6T3t7CLhsLK4uTAbknc+9QEdJ5qGETi2G0lYe6+0+AIEPvUx
- 32IjytclVNvAnfPn44+QEFm8ZdorXxJZl1zgm6eHdzRv1pT6mW1TUhAv4T55uOOcbdtL
- /DVV5qc9gkTnmYLlAL7FSDmeAX6dCHNfVxZxQac/U/LNWdugBBj1ZblGa8xLTn1Ru6ZS
- YUTV8aQa04+TX6e4CriJS5MnPI+bJLuun8fBmPlSarOTn4awDmRY2F65QhcxrPe7Q/zF
- XgMw==
-X-Gm-Message-State: APjAAAUDciHR/GayPJVyjKHKz+PouzwQ5R1cl8XGFiJROnvlosn8/DXP
- FOgpU1qR9NafTCH9BdHjQopYWMYxQqvp/RIZpvwpRlSyJcTe7jIkp6JsJ4/Tkt1IAKRDN7GH3nv
- hvWYuF4yGm69g9mmSTIaJKA==
-X-Received: by 2002:a19:c709:: with SMTP id x9mr14963896lff.20.1569927928264; 
- Tue, 01 Oct 2019 04:05:28 -0700 (PDT)
-X-Google-Smtp-Source: APXvYqzBVgLKZr5yvTXsALkox4es6JwSriEe1mdilE3hADu18nrdz6KA4qon5+J0W04TXCIDLoMOMw==
-X-Received: by 2002:a19:c709:: with SMTP id x9mr14963892lff.20.1569927928115; 
- Tue, 01 Oct 2019 04:05:28 -0700 (PDT)
-Received: from alrua-x1.borgediget.toke.dk ([2a00:7660:6da:443::2])
- by smtp.gmail.com with ESMTPSA id s1sm3842557lfd.14.2019.10.01.04.05.27
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Tue, 01 Oct 2019 04:05:27 -0700 (PDT)
-Received: by alrua-x1.borgediget.toke.dk (Postfix, from userid 1000)
- id 99A4018063D; Tue,  1 Oct 2019 13:05:26 +0200 (CEST)
-From: Toke =?utf-8?Q?H=C3=B8iland-J=C3=B8rgensen?= <toke@redhat.com>
-To: Yibo Zhao <yiboz@codeaurora.org>, Johannes Berg <johannes@sipsolutions.net>
-Subject: Re: [PATCH V3 0/4] Enable virtual time-based airtime scheduler
- support on ath10k
-In-Reply-To: <e710a18d65ecaf2168a27556c85dada8@codeaurora.org>
-References: <1569223201-1490-1-git-send-email-yiboz@codeaurora.org>
- <20985660fd0872db1511948bd42cd925cef13cee.camel@sipsolutions.net>
- <e710a18d65ecaf2168a27556c85dada8@codeaurora.org>
-X-Clacks-Overhead: GNU Terry Pratchett
-Date: Tue, 01 Oct 2019 13:05:26 +0200
-Message-ID: <8736gcvi89.fsf@toke.dk>
+ id 1iFG86-0006LM-O5
+ for ath10k@lists.infradead.org; Tue, 01 Oct 2019 11:15:44 +0000
+Received: by smtp.codeaurora.org (Postfix, from userid 1000)
+ id 894C460A05; Tue,  1 Oct 2019 11:15:41 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1569928541;
+ bh=1iaNgMpqvf1SlTf13O5y/DXKAT+h8Zcuc4V/7Zi8Qnk=;
+ h=Subject:From:In-Reply-To:References:To:Cc:Date:From;
+ b=W2gTtpuI/EmV/TGNvNTJIH1QQ5sa9qE1HmbYTwkmbDN0EmcMR/yXMD+Y+DYl+rFxK
+ Qn8w7RGDayTGXhqLJD+upmHcwarqHVMsDhtzxS7Vve+8ZDZ+OTnXcYVNG0tYPR5Rsd
+ pCGlMxUk+K1wGYmGAjz2Zchp4iCGIBaMRojahP+k=
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ pdx-caf-mail.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-0.8 required=2.0 tests=ALL_TRUSTED,BAYES_00,
+ DKIM_INVALID,DKIM_SIGNED,MISSING_DATE,MISSING_MID,SPF_NONE autolearn=no
+ autolearn_force=no version=3.4.0
+Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
+ [88.114.240.156])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ (Authenticated sender: kvalo@smtp.codeaurora.org)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 04EDB6014B;
+ Tue,  1 Oct 2019 11:15:39 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1569928540;
+ bh=1iaNgMpqvf1SlTf13O5y/DXKAT+h8Zcuc4V/7Zi8Qnk=;
+ h=Subject:From:In-Reply-To:References:To:Cc:From;
+ b=R7Qr3Iyk3i8/C0xvBZKoF/wMxZxYX/DtHeGwBEyZ22xqlLRaB5990OxQPbEmwtM/c
+ MdjOOu8T9f1Z4axYbNde9rkNNKs+5EjwzCGM9ZRkCE+/VYsl5qf2uZnhomsaMjPUVN
+ Qp6iXzhMGKI1f233CUEcGNi4ArJGJVVaTxM6b89E=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 04EDB6014B
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ spf=none smtp.mailfrom=kvalo@codeaurora.org
 MIME-Version: 1.0
-X-MC-Unique: ePrC-dlwMGiqUfhNZGd67w-1
-X-Mimecast-Spam-Score: 0
+Subject: Re: [PATCH 1/5] ath10k: add 2ghz channel arguments to service ready
+ structure
+From: Kalle Valo <kvalo@codeaurora.org>
+In-Reply-To: <1569268165-1639-1-git-send-email-pozega.tomislav@gmail.com>
+References: <1569268165-1639-1-git-send-email-pozega.tomislav@gmail.com>
+To: =?utf-8?q?Tomislav_Po=C5=BEega?= <pozega.tomislav@gmail.com>
+User-Agent: pwcli/0.0.0-git (https://github.com/kvalo/pwcli/) Python/2.7.12
+Message-Id: <20191001111541.894C460A05@smtp.codeaurora.org>
+Date: Tue,  1 Oct 2019 11:15:41 +0000 (UTC)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191001_040537_808491_A16F2065 
-X-CRM114-Status: UNSURE (   6.82  )
+X-CRM114-CacheID: sfid-20191001_041542_807889_234BE22B 
+X-CRM114-Status: UNSURE (   5.74  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -88,9 +77,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [207.211.31.81 listed in list.dnswl.org]
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [207.211.31.81 listed in wl.mailspike.net]
+ medium trust [198.145.29.96 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
@@ -111,32 +98,24 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless-owner@vger.kernel.org, linux-wireless@vger.kernel.org,
- ath10k@lists.infradead.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Yibo Zhao <yiboz@codeaurora.org> writes:
-
-> On 2019-10-01 18:19, Johannes Berg wrote:
->> On Mon, 2019-09-23 at 15:19 +0800, Yibo Zhao wrote:
->>> This series fix some issues when enabling virtual time-based airtime 
->>> scheduler on ath10k.
->>> 
->> Given the lengthy discussion here and also over in the related thread
->> about AQL, I'm assuming you're going to repost this eventually.
->
-> Yes, will repost once Toke have updated "mac80211: Switch to a virtual 
-> time-based airtime scheduler" with his new ideas.
-
-Which in turn is waiting for the AQL stuff... :)
-
--Toke
-
-
-_______________________________________________
-ath10k mailing list
-ath10k@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/ath10k
+VG9taXNsYXYgUG/FvmVnYSB3cm90ZToKCj4gQWRkIGxvd2VzdC9oaWdoZXN0IDJnaHogY2hhbm5l
+bCBhcmd1bWVudHMgZm9yIHVzZSB3aXRoaW4gV01JIHNlcnZpY2UKPiByZWFkeSBzdHJ1Y3R1cmUu
+Cj4gCj4gU2lnbmVkLW9mZi1ieTogVG9taXNsYXYgUG/FvmVnYSA8cG96ZWdhLnRvbWlzbGF2QGdt
+YWlsLmNvbT4KPiBTaWduZWQtb2ZmLWJ5OiBLYWxsZSBWYWxvIDxrdmFsb0Bjb2RlYXVyb3JhLm9y
+Zz4KCjQgcGF0Y2hlcyBhcHBsaWVkIHRvIGF0aC1uZXh0IGJyYW5jaCBvZiBhdGguZ2l0LCB0aGFu
+a3MuCgpmYTg3OTQ5MGU0MTIgYXRoMTBrOiBhZGQgMmdoeiBjaGFubmVsIGFyZ3VtZW50cyB0byBz
+ZXJ2aWNlIHJlYWR5IHN0cnVjdHVyZQoyNzVlYTFiMjZmMzggYXRoMTBrOiBwcmludCBzZXJ2aWNl
+IHJlYWR5IHJldHVybmVkIGNoYW5uZWwgcmFuZ2UKNzM2OTBjNDg0M2ZiIGF0aDEwazogcHJpbnQg
+c3VwcG9ydGVkIE1DUyByYXRlcyB3aXRoaW4gc2VydmljZSByZWFkeSBldmVudAo3YjMwODczMjNm
+YWEgYXRoMTBrOiBjaGFuZ2Ugc3cgdmVyc2lvbiBwcmludCBmb3JtYXQgdG8gaGV4CgotLSAKaHR0
+cHM6Ly9wYXRjaHdvcmsua2VybmVsLm9yZy9wYXRjaC8xMTE1NzUxOS8KCmh0dHBzOi8vd2lyZWxl
+c3Mud2lraS5rZXJuZWwub3JnL2VuL2RldmVsb3BlcnMvZG9jdW1lbnRhdGlvbi9zdWJtaXR0aW5n
+cGF0Y2hlcwoKCl9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
+CmF0aDEwayBtYWlsaW5nIGxpc3QKYXRoMTBrQGxpc3RzLmluZnJhZGVhZC5vcmcKaHR0cDovL2xp
+c3RzLmluZnJhZGVhZC5vcmcvbWFpbG1hbi9saXN0aW5mby9hdGgxMGsK
