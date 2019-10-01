@@ -2,36 +2,36 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 86226C3421
-	for <lists+ath10k@lfdr.de>; Tue,  1 Oct 2019 14:21:42 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5D643C3427
+	for <lists+ath10k@lfdr.de>; Tue,  1 Oct 2019 14:23:01 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
 	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=4YN/2b1J7LQUOavXGZTLWbykh0JAI0CpWbirceXwgpk=; b=tgGwuVcYJSg13H
-	1ZUA7YCaJlMVYJSDl8rfd79XYsNz/1hADL23ao4kptjx2u2cT66fgCpO97lpm/Y+CWB+/WUiE3kZg
-	EHNcqtuga76rMLV5V3idkT5fLQu3aMKr+SI5+0tKz76TuWMFnY5BCawORunFm6t2QiOuhH1dT8zES
-	xUS30fPFEktPqQmAm2xZPoj2KGsnzupwKHheGFkpH2mNgcQ9eqgnY+S+jVVnJT4GEjqShkyXdZ+4j
-	Wm/n+BALlK5529xO5A6Lvs9XSV4EKqCdcMxNcpYLzk4lyVGaSjJBQbMxEwGdLF/SFCxvuT95fhZvx
-	EFdBcOFSKg0fgMKvP6LQ==;
+	List-Owner; bh=CGQiGrnf74794UOvQ1RkxwNJtQGJuB0e9e0kaYKqpl4=; b=kZwbS3J1jYvadn
+	XRVOKgjg2SMeMmURTbhAmmCHMzLvWvOv7LGf5ft+7XuIQp4uYfrBjKWTyWecrnmupYZZT7M6cVmEG
+	4M88V1atdsBDMDVPYtkKbwgIqhKwiJ21qUN2JnjwuRq6s7uUlbeFTOoFtXAyzMTpgqDsXoRzyOdU3
+	R9ksrHta2cWplfw30JsuXlpyX1QeV5sdyCTAMv+sNZrLIWU3PjMhU0pwlr9gKPzLzOoV61mBNhmZD
+	FgZt8Qzp9BcpmIY2R71PHTtRo5jV80aYYx9hfzIh9tP8TwX58rRrm8WrAyyMVeBiqmx1bSNvmOcpr
+	y7P0MbQWDDcpEz4O6FBQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iFH9v-0008Qf-RW; Tue, 01 Oct 2019 12:21:39 +0000
+	id 1iFHBD-0000Es-BT; Tue, 01 Oct 2019 12:22:59 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iFH9o-0008LN-4f
- for ath10k@lists.infradead.org; Tue, 01 Oct 2019 12:21:33 +0000
+ id 1iFHBA-0000EV-DB
+ for ath10k@lists.infradead.org; Tue, 01 Oct 2019 12:22:57 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id B6C2261212; Tue,  1 Oct 2019 12:21:31 +0000 (UTC)
+ id 1F23A60A60; Tue,  1 Oct 2019 12:22:56 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1569932491;
- bh=O+H0n1S6gFicgpHrI2JlZritofpDZiCn4tJ8rOv4qu4=;
+ s=default; t=1569932576;
+ bh=+GW/X3g8lJp7cIRJtrReo6a69n6wrENFhuWCZ3R57II=;
  h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=VB6LkcDi4ClLAi4eWlFVJGM+n8sRwZFcYAfGfdMSZsMLeCTWZ+A5zRCg76aF0JKzS
- 65bxW+8r3E5uITMczrS/+gD52zN2dNUwLt6TgeHNRIZj8PxzetF5j6vjd2eAhimvlQ
- v7RsxUttY2zILo+yPqcn7HuIr4eZu2v4bt5j0+OU=
+ b=ChlGfm7uveBPlBGyQrDupViQzXRS4UdzcI4PKzNxExAzJ05CmPyhk8a6SXp6ZjTFl
+ uwaIvFxf/0/O2W2A/j2STPRG8pY5gV6oVQTHrxnZ8zd6mzBLaPwPxpd76r0B2FVpDW
+ r8TO5fqB4yvQqtyDZNXPWOGAxxto3CdLY6EHpCGU=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
@@ -43,37 +43,34 @@ Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
  (Authenticated sender: kvalo@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id CA3376034D;
- Tue,  1 Oct 2019 12:21:29 +0000 (UTC)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id AF59F608CE;
+ Tue,  1 Oct 2019 12:22:54 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1569932491;
- bh=O+H0n1S6gFicgpHrI2JlZritofpDZiCn4tJ8rOv4qu4=;
+ s=default; t=1569932575;
+ bh=+GW/X3g8lJp7cIRJtrReo6a69n6wrENFhuWCZ3R57II=;
  h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=VB6LkcDi4ClLAi4eWlFVJGM+n8sRwZFcYAfGfdMSZsMLeCTWZ+A5zRCg76aF0JKzS
- 65bxW+8r3E5uITMczrS/+gD52zN2dNUwLt6TgeHNRIZj8PxzetF5j6vjd2eAhimvlQ
- v7RsxUttY2zILo+yPqcn7HuIr4eZu2v4bt5j0+OU=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org CA3376034D
+ b=ZMjJ22rk0vo4oQ3NcyIGt8V3T6BMP2sv5G/nA9h76dOVk3GaV3LnfSyD44BOTmeAU
+ lQgGZLckH7yW3oLTMG6WSUiJwFfmwtiQaLT66KwiqWHu4q7cvjsny31e/0UxJgbEEr
+ +TUwijpe5soTvi2w0lixFlZirG18dVZyNYY6vEnM=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org AF59F608CE
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  spf=none smtp.mailfrom=kvalo@codeaurora.org
 From: Kalle Valo <kvalo@codeaurora.org>
 To: Erik Stromdahl <erik.stromdahl@gmail.com>
-Subject: Re: [PATCH 6/6] ath10k: sdio: replace skb_trim with explicit set of
- skb->len
-References: <20190409190851.4557-1-erik.stromdahl@gmail.com>
- <20190409190851.4557-7-erik.stromdahl@gmail.com>
- <87zhovcqhl.fsf@kamboji.qca.qualcomm.com>
- <deca77d1-f171-e0cd-b571-89c2f8bafc87@gmail.com>
-Date: Tue, 01 Oct 2019 15:21:26 +0300
-In-Reply-To: <deca77d1-f171-e0cd-b571-89c2f8bafc87@gmail.com> (Erik
- Stromdahl's message of "Mon, 15 Apr 2019 17:11:27 +0200")
-Message-ID: <875zl864hl.fsf@kamboji.qca.qualcomm.com>
+Subject: Re: [PATCH v2 5/5] ath10k: sdio: remove skb_trim in TX path
+References: <20190417191503.18814-1-erik.stromdahl@gmail.com>
+ <20190417191503.18814-6-erik.stromdahl@gmail.com>
+Date: Tue, 01 Oct 2019 15:22:52 +0300
+In-Reply-To: <20190417191503.18814-6-erik.stromdahl@gmail.com> (Erik
+ Stromdahl's message of "Wed, 17 Apr 2019 21:15:03 +0200")
+Message-ID: <871rvw64f7.fsf@kamboji.qca.qualcomm.com>
 User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/24.5 (gnu/linux)
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191001_052132_251873_B3DC43E3 
-X-CRM114-Status: GOOD (  22.33  )
+X-CRM114-CacheID: sfid-20191001_052256_464302_46346881 
+X-CRM114-Status: GOOD (  12.00  )
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-2.5 points)
@@ -101,83 +98,46 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Johannes Berg <johannes@sipsolutions.net>, linux-wireless@vger.kernel.org,
- ath10k@lists.infradead.org
+Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-+ johannes
-
 Erik Stromdahl <erik.stromdahl@gmail.com> writes:
 
-> On 4/12/19 3:17 PM, Kalle Valo wrote:
->> Erik Stromdahl <erik.stromdahl@gmail.com> writes:
->>
->>> This patch fixes a bug with padding of the skb data buffer.
->>> Since skb_trim can only be used to reduce the skb len, it is useless when
->>> we pad (increase the length of) the skb. Instead we must set skb->len
->>> directly.
->>>
->>> Signed-off-by: Erik Stromdahl <erik.stromdahl@gmail.com>
->>> ---
->>>   drivers/net/wireless/ath/ath10k/sdio.c | 7 ++++++-
->>>   1 file changed, 6 insertions(+), 1 deletion(-)
->>>
->>> diff --git a/drivers/net/wireless/ath/ath10k/sdio.c b/drivers/net/wireless/ath/ath10k/sdio.c
->>> index 3eb241cb8a25..989e3f563f3d 100644
->>> --- a/drivers/net/wireless/ath/ath10k/sdio.c
->>> +++ b/drivers/net/wireless/ath/ath10k/sdio.c
->>> @@ -1496,7 +1496,12 @@ static int ath10k_sdio_hif_tx_sg(struct ath10k *ar, u8 pipe_id,
->>>   		skb = items[i].transfer_context;
->>>   		padded_len = ath10k_sdio_calc_txrx_padded_len(ar_sdio,
->>>   							      skb->len);
->>> -		skb_trim(skb, padded_len);
->>> +		/* FIXME: unsure if just extending the skb len is the right
->>> +		 * thing to do since we might read outside the skb->data
->>> +		 * buffer. But we really don't want to realloc the skb just to
->>> +		 * pad the length.
->>> +		 */
->>> +		skb->len = padded_len;
->>
->> Good catch! But I don't think you can modify skb->len directly like
->> that. There is skb_pad() but that doesn't change skb->len, so that most
->> likely needs more changes. So maybe skb_put() is the safest here?
->>
-> I have tried a few different solutions for this, but none seems to be
-> bullet proof.
+> This patch fixes a bug with padding of the skb data buffer.
+> Since skb_trim can only be used to reduce the skb len, it is useless when
+> we pad (increase the length of) the skb. Instead we allocate a new
+> buffer with enough space to contain both the TX data and padding.
 >
-> skb_pad() raises a BUG() if there is not enough space in skb->data.
+> Since some skb's have multiple references, we can't use skb_put_padto()
+> to extend and pad skb->data (since it causes a panic if there is more
+> than one reference).
 >
-> The best candidate so far has been skb_put_padto(). It pads and reallocates
-> the skb if needed.
+> Also, in order to avoid the following possible deadlock issue (reported by
+> lockdep):
 >
-> The problem is that it also cause a panic if there is more than one reference
-> to the skb (skb_shared() returns true).
+> [   26.508508]  Possible interrupt unsafe locking scenario:
+> [   26.508508]
+> [   26.515314]        CPU0                    CPU1
+> [   26.519862]        ----                    ----
+> [   26.524408]   lock(fs_reclaim);
+> [   26.527573]                                local_irq_disable();
+> [   26.533508]                                lock(_xmit_ETHER#2);
+> [   26.539453]                                lock(fs_reclaim);
+> [   26.545135]   <Interrupt>
+> [   26.547769]     lock(_xmit_ETHER#2);
+> [   26.551370]
+> [   26.551370]  *** DEADLOCK ***
 >
-> Some of the management frames via nl80211 have a refcount of 2.
-> In this case it is not possible to free and allocate the skb since there are
-> other users/references.
+> ... we use the GFP_NOFS flag with kzalloc()
 >
-> I think I will have to make some kind of solution where I copy the content of
-> the skb to an internal buffer instead.
+> Signed-off-by: Erik Stromdahl <erik.stromdahl@gmail.com>
 
-Sorry for the late reply, I see that you also tried a different (and
-more complex) approach here:
+I replied to v1 about using skb_pad(), let's discuss more there:
 
-https://patchwork.kernel.org/patch/10906011/
-
-In my opinion the cleanest approach would be to add extra_tx_tailroom to
-struct ieee80211_hw, similarly like we have extra_tx_headroom, and that
-way ath10k could easily add the padding with skb_pad(). Or what do you
-think?
-
-Of course I don't know what Johannes thinks as it would need several
-changes in mac80211, but at least struct net_device has needed_tailroom
-as well. And I would imagine that there is some other hardware which
-needs to do padding like this, or are ath10k SDIO devices really the
-first mac80211 drivers needing tailroom?
+https://patchwork.kernel.org/patch/10891949/
 
 -- 
 https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
