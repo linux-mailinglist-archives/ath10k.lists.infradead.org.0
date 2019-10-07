@@ -2,121 +2,101 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id CDC96CC912
-	for <lists+ath10k@lfdr.de>; Sat,  5 Oct 2019 11:21:01 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id CE232CDDB4
+	for <lists+ath10k@lfdr.de>; Mon,  7 Oct 2019 10:50:30 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Content-ID:Message-ID:Date
-	:Subject:To:From:Reply-To:Cc:Content-Description:Resent-Date:Resent-From:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Subject:To:From
+	:Date:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=ESybIKpsG5Yfh6xAgKWv16UIELXVbtv5dIIToHexoHc=; b=Yobpca5mFrsXV+
-	YYNT7vpcOirZfwPQg6KYt6NaNGMdHlYJRZ4pQ23wPEXUQMPflBW1pUQhp890vjazmrh2Vbx4j086Y
-	n5vFHihVgKLf3MLFmP5Cp889TbVbqh/iBN6K5igi5JDHXqHbanbSkSFj3nolxKD2XPyv2DWtDxlWX
-	jWT5Me6xrVoZ52XvEX4A2EPt2mQOaNjRlKOlOW0tsksGPpZcz2pgsDa1efCAMIA7cbV6oIRvdC1do
-	zKhL4+NSbhXH775Ryw4FWUwBKASNlFA8JPxIZba8VSVTbqIvjDRkZQqJ1dB9VxywsuW9NR82EhmtZ
-	EJ80p3WnLflR5S4Cem9A==;
+	List-Owner; bh=OiiuAUHr0tQ2Qb1N8YcyBBNrvi35lWQHEnVOYb2X8vU=; b=UkCE61ANTDBnlx
+	ogFn9HY7asXLWL4qzR1j9LHDiLJric3WXgaz/mdEdd7JvhRs5gshh+DA/szTEUZjLMg1XZ05FzpoQ
+	OleFZwjBGyHRPVVCGntn9Wn1XjK8LRC9AsmBgsDhgiUEOZ6lswRUWR8+QkmkqNjFri6fOcnApJlvn
+	GkN5tRdTgZHqSpnCw/mYD5CTY9S7nBl+n1nDfBYwGu0/J8sqlwyI/Ky1yKK0d3vccztRGJIIW4saE
+	Z3vD5e407LGX8QgFKNHXK8TCS89F+38o8IG920j77SR2tWk18z3hERtIpQWGwx78FWthMwEFB7TrK
+	FiPbxHzADtTmHKdKcF1g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iGgFG-0007V7-2q; Sat, 05 Oct 2019 09:20:58 +0000
-Received: from mail-oln040092012082.outbound.protection.outlook.com
- ([40.92.12.82] helo=NAM05-BY2-obe.outbound.protection.outlook.com)
+	id 1iHOim-0002w2-L5; Mon, 07 Oct 2019 08:50:24 +0000
+Received: from aserp2120.oracle.com ([141.146.126.78])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iGgFB-0007R6-TS
- for ath10k@lists.infradead.org; Sat, 05 Oct 2019 09:20:55 +0000
-ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
- b=PrYhp2duOJk2TWnODfNeBcJj13XuD4DYrA5byBjNPGq9zo+EgPrQCPww06L5PXcKsBfWhSxSyvqATA/ZIazoC6x/n7IGVG0ov/Vi0nP3xl3x8F/x5grfygxYpE6PQsS26XgNaT9WSeGcHbE3tA4WyO6XrVS76M64AL4S4BHDBMjVc/q0EKm7CBEDygd2Xz8+P1JqeALE3AcJl/t8tA5QxciDAyaQBnZDtIMUNQS+0rb9IWRmhatB8f8qiIRVxA4cKXvMKC3kanaL4Da7R2nENFPtPNlpybdsYLIE5PVaG3VComD0/HG6wSUrnM3alBfPH7+pOc/xWUYzo27CRItMqA==
-ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; 
- s=arcselector9901;
- h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
- bh=Rduj5jumBqh9H3un+sRs+yJ66GREsJdg9Cz6AM4ot9c=;
- b=io/tViS2AnMMgen0/+njB+Cuc/B3T0n1fbuyEE5MeN1HAlC8+JBlTeN8VSWy/2dW7U/bT7ywvkejK1QMJGO86GbBgmT/aMUrHO0gZ7HDcI/hBnooZCpD3+VgpkZhoY9KprNk/DewB1mOX1FHsP3Dw3konO9+ferDAELvyjfYgCzfAdWWm+MsDc59+UG2AC/frrKB6luXQrxPITCa+GUMAo/yJUQlDAaUNx5j6HXIZjrgOfWqXjomnwdWo4TDKR9Kheuk+iAsF7lXotqOLTM5klDkzzKa5CG2REH3+Wez5Z3e3NSnBDL2g6RAFMRlMmYFTjRCmsWKfkzRWLFZnCjOqg==
-ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none;
- dkim=none; arc=none
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
- s=selector1;
- h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
- bh=Rduj5jumBqh9H3un+sRs+yJ66GREsJdg9Cz6AM4ot9c=;
- b=i9pdK7Tjyoe/xHY34e/TnnN8IdR6BzDTB9bLw3OFcjtrC/4RcHqblC4U75WeCfrjEWKrvtpII2uCKIjq7h1fCW1AteLJN/EeguyDx8KSxo/E2hfQr55CNv+mTGUK5fdxaZekVTL7DzLirkFE2d6Bxr1bZfp0J8Xwbmim6WwHqRJhRrUUCZ+w/OgCEo8lNXsskwim3hLYbwM4chXpjuZMegUA9hHTxP/NR8LEVf+ZiuvcYnUxCwfEqZ+n1qdMiKVt4F0neMLJVjMYnij4Vq0wzFzGF5R2faI26uRGL61g4MSruQFjPYKacBIls62ZxNYVRzrEEV0dE93pqIfDuGGxqQ==
-Received: from DM3NAM05FT036.eop-nam05.prod.protection.outlook.com
- (10.152.98.58) by DM3NAM05HT165.eop-nam05.prod.protection.outlook.com
- (10.152.99.96) with Microsoft SMTP Server (version=TLS1_2,
- cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2327.7; Sat, 5 Oct
- 2019 09:20:50 +0000
-Received: from MWHPR0701MB3724.namprd07.prod.outlook.com (10.152.98.56) by
- DM3NAM05FT036.mail.protection.outlook.com (10.152.98.149) with Microsoft SMTP
- Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
- 15.20.2347.8 via Frontend Transport; Sat, 5 Oct 2019 09:20:50 +0000
-Received: from MWHPR0701MB3724.namprd07.prod.outlook.com
- ([fe80::84c5:d116:bb89:9aad]) by MWHPR0701MB3724.namprd07.prod.outlook.com
- ([fe80::84c5:d116:bb89:9aad%6]) with mapi id 15.20.2305.023; Sat, 5 Oct 2019
- 09:20:50 +0000
-From: Craig Stadler <cstadler18@hotmail.com>
-To: "ath10k@lists.infradead.org" <ath10k@lists.infradead.org>
-Subject: Podcast topic suggestion/tip
-Thread-Topic: Podcast topic suggestion/tip
-Thread-Index: AQHVe14tOJF3o7TXnEi7oOPO2MKqwg==
-Date: Sat, 5 Oct 2019 09:20:50 +0000
-Message-ID: <MWHPR0701MB37246C2224C764115E655974DC990@MWHPR0701MB3724.namprd07.prod.outlook.com>
-Accept-Language: en-US
-Content-Language: en-US
-X-MS-Has-Attach: 
-X-MS-TNEF-Correlator: 
-x-clientproxiedby: CH2PR17CA0001.namprd17.prod.outlook.com
- (2603:10b6:610:53::11) To MWHPR0701MB3724.namprd07.prod.outlook.com
- (2603:10b6:301:7e::29)
-x-incomingtopheadermarker: OriginalChecksum:4804131FF5CF11555DB10A5DC2CFA5A29BCFD84111A221F6344716BA359F1C78;
- UpperCasedChecksum:3760ED5EEA611C080FDA90AD6E8F8E3FF4B2551CE048A088F163F138087DAA8B;
- SizeAsReceived:7340; Count:48
-x-ms-exchange-messagesentrepresentingtype: 1
-x-tmn: [IRZ7bQ0GCd0g4XEz2q66yqa0Ap+QdhFG]
-x-microsoft-original-message-id: <7e9d886846f1e2f98668cbfae37c8988@DESKTOP-C39SCAG>
-x-ms-publictraffictype: Email
-x-incomingheadercount: 48
-x-eopattributedmessage: 0
-x-ms-traffictypediagnostic: DM3NAM05HT165:
-x-ms-exchange-purlcount: 3
-x-microsoft-antispam: BCL:0;
-x-microsoft-antispam-message-info: dGE3LdWrgTqDMsa+yATG6FvrtHMYtamz8+s6Her2vrikNIir1dLgQ8eIlDGCuEdsCZQm7lqoqjaDKKEfNGMx2slk1cVht9FNBjkD+Ku+u1HMMSwAaJqFtWPtPGJ5V2YB5FQ0nXZ910GimSkz0Q392XyNjhjtMGha8iwdhmQKMeyGCIcSGmoHL8SUVu1MWsK+ZHppBADDe2rxcMdXac8D/7MNq5BYa8iomjl0xDain7k=
-x-ms-exchange-transport-forked: True
-Content-ID: <8FF8CA55C1BF29489AA6712997A39111@namprd07.prod.outlook.com>
+ id 1iHOii-0002vR-KP
+ for ath10k@lists.infradead.org; Mon, 07 Oct 2019 08:50:22 +0000
+Received: from pps.filterd (aserp2120.oracle.com [127.0.0.1])
+ by aserp2120.oracle.com (8.16.0.27/8.16.0.27) with SMTP id x978nXvk179074;
+ Mon, 7 Oct 2019 08:50:12 GMT
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=oracle.com;
+ h=date : from : to : cc
+ : subject : message-id : mime-version : content-type; s=corp-2019-08-05;
+ bh=VQkZryK2aezDQNpWThieE0WO7967+E1fkMMie3Eegdo=;
+ b=obakWYpvHBG2ARRqe+EpaNnzB0bN+LSzntonSM93zUGKxr82Nh3dcWEM9xKI8tJRRNsF
+ C+SqkOSSCExnL6bZp4I3vD0HMHakvRtzirQ9ZlMl20aAsALC0XFH3p/99JZ6tCT5kVNC
+ S2Fa9Tj56tVALVZyJgFHo47M+G9oBnX+I2FPx0uSNMw9aMW3KIiIjNMeecyuW0MrZIZ2
+ z3gtQUgzvCcu9QvzukpOC+GsTlSqhR+Kykz5Mp0nli2Ggvdt9JaIoiSnp4586IjWqqLT
+ TvhySNDS9XlYfThxkq35nl7ldMyhTWa6h7GSUpH45XcsKDsiQPiitaOaJMHai/NRMoZe Og== 
+Received: from aserp3020.oracle.com (aserp3020.oracle.com [141.146.126.70])
+ by aserp2120.oracle.com with ESMTP id 2vek4q5dg0-1
+ (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
+ Mon, 07 Oct 2019 08:50:12 +0000
+Received: from pps.filterd (aserp3020.oracle.com [127.0.0.1])
+ by aserp3020.oracle.com (8.16.0.27/8.16.0.27) with SMTP id x978nQSI168538;
+ Mon, 7 Oct 2019 08:50:11 GMT
+Received: from userv0121.oracle.com (userv0121.oracle.com [156.151.31.72])
+ by aserp3020.oracle.com with ESMTP id 2vf4ph4xjm-1
+ (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
+ Mon, 07 Oct 2019 08:50:11 +0000
+Received: from abhmp0001.oracle.com (abhmp0001.oracle.com [141.146.116.7])
+ by userv0121.oracle.com (8.14.4/8.13.8) with ESMTP id x978oAdj003856;
+ Mon, 7 Oct 2019 08:50:10 GMT
+Received: from mwanda (/41.57.98.10) by default (Oracle Beehive Gateway v4.0)
+ with ESMTP ; Mon, 07 Oct 2019 08:50:09 +0000
+Date: Mon, 7 Oct 2019 11:50:03 +0300
+From: Dan Carpenter <dan.carpenter@oracle.com>
+To: Kalle Valo <kvalo@codeaurora.org>, Govind Singh <govinds@codeaurora.org>
+Subject: [PATCH] ath10k: Fix an && vs || typo
+Message-ID: <20191007085003.GB3865@mwanda>
 MIME-Version: 1.0
-X-OriginatorOrg: hotmail.com
-X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg: 00000000-0000-0000-0000-000000000000
-X-MS-Exchange-CrossTenant-Network-Message-Id: 3fdaa41e-036b-4dbf-2239-08d74975501f
-X-MS-Exchange-CrossTenant-rms-persistedconsumerorg: 00000000-0000-0000-0000-000000000000
-X-MS-Exchange-CrossTenant-originalarrivaltime: 05 Oct 2019 09:20:50.6290 (UTC)
-X-MS-Exchange-CrossTenant-fromentityheader: Internet
-X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
-X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM3NAM05HT165
+Content-Disposition: inline
+X-Mailer: git-send-email haha only kidding
+User-Agent: Mutt/1.10.1 (2018-07-13)
+X-Proofpoint-Virus-Version: vendor=nai engine=6000 definitions=9402
+ signatures=668684
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 suspectscore=0
+ malwarescore=0
+ phishscore=0 bulkscore=0 spamscore=0 mlxscore=0 mlxlogscore=999
+ adultscore=0 classifier=spam adjust=0 reason=mlx scancount=1
+ engine=8.0.1-1908290000 definitions=main-1910070092
+X-Proofpoint-Virus-Version: vendor=nai engine=6000 definitions=9402
+ signatures=668684
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0
+ priorityscore=1501 malwarescore=0
+ suspectscore=0 phishscore=0 bulkscore=0 spamscore=0 clxscore=1011
+ lowpriorityscore=0 mlxscore=0 impostorscore=0 mlxlogscore=999 adultscore=0
+ classifier=spam adjust=0 reason=mlx scancount=1 engine=8.0.1-1908290000
+ definitions=main-1910070092
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191005_022054_038491_A8330135 
-X-CRM114-Status: UNSURE (   3.48  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 1.2 (+)
+X-CRM114-CacheID: sfid-20191007_015020_756113_1D73F4B3 
+X-CRM114-Status: GOOD (  14.38  )
+X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (1.2 points)
+ Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [40.92.12.82 listed in list.dnswl.org]
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [40.92.12.82 listed in wl.mailspike.net]
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit (cstadler18[at]hotmail.com)
- 1.2 FORGED_HOTMAIL_RCVD2   hotmail.com 'From' address, but no
- 'Received:'
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [141.146.126.78 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (cstadler18[at]hotmail.com)
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -128,20 +108,37 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
+Cc: kernel-janitors@vger.kernel.org, linux-wireless@vger.kernel.org,
+ ath10k@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Greetings, please consider these resources for discussion as they relate to online privacy concerns.
+The kernel will Oops later in the function if either of these pointers
+is NULL so clearly || was intended instead of &&.
 
-Suggested Resources :
-https://axcessnews.com/business/tech/online-video-search-and-other-tools-that-maintain-your-privacy_9142/
-http://collegian.csufresno.edu/2019/05/01/how-do-you-find-videos-outside-of-youtube/
-https://alltopstartups.com/2019/04/29/meet-petey-vid-a-coder-and-his-cat-take-on-video-search/
+Fixes: 3f14b73c3843 ("ath10k: Enable MSA region dump support for WCN3990")
+Signed-off-by: Dan Carpenter <dan.carpenter@oracle.com>
+---
+ drivers/net/wireless/ath/ath10k/snoc.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-Thank you,
-Craig
+diff --git a/drivers/net/wireless/ath/ath10k/snoc.c b/drivers/net/wireless/ath/ath10k/snoc.c
+index cd22c8654aa9..16177497bba7 100644
+--- a/drivers/net/wireless/ath/ath10k/snoc.c
++++ b/drivers/net/wireless/ath/ath10k/snoc.c
+@@ -1400,7 +1400,7 @@ static void ath10k_msa_dump_memory(struct ath10k *ar,
+ 	size_t buf_len;
+ 	u8 *buf;
+ 
+-	if (!crash_data && !crash_data->ramdump_buf)
++	if (!crash_data || !crash_data->ramdump_buf)
+ 		return;
+ 
+ 	mem_layout = ath10k_coredump_get_mem_layout(ar);
+-- 
+2.20.1
 
 
 _______________________________________________
