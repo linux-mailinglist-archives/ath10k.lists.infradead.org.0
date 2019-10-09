@@ -2,74 +2,71 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 539BACFE00
-	for <lists+ath10k@lfdr.de>; Tue,  8 Oct 2019 17:45:23 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id BA1EFD0972
+	for <lists+ath10k@lfdr.de>; Wed,  9 Oct 2019 10:18:35 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
-	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=tZUkol4bWEe/+4TW0NLSE3JnGpQjhD9FAklOUcE5u34=; b=hAYwou1h21X2Re
-	h+zDmDiyUwIBtBqaBn+f/ZOlcYYnyN8xslzk2LNEmbIUoKeDuxvxXjiWiEPsEq3z8iQmWRP6PPeaT
-	rWUsA5DbCXWhghlsuCwojH7AWtaOeVULf0eYkTfnvr2Dbs2g5Jt/iTdbcaHk9KQKoMEy/1+a95Da8
-	E8c7S4/GzExbbgghKUJNLV6p7Re+U8tDNGwnQ8qzoqzNBjivdE20Q8pRBuprT4v+Xk+he1CQFUSJ9
-	RT/+DgOv4nsRfzVVNCpxs4YZ/nctXKsdIP7W+JwJrg9RcFw7sOVUvct31ylusKX0cbl7tetI7YiXo
-	2EXpS+a+05rDdTe6ZP0Q==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
+	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=mtiVGChKQqrVy1f01QCIAP5ul0LlB0FQOl5GuLbH1mc=; b=BW5
+	JnuwAPHqzQf3/RfjTyIq72pTUl+cuRXVsR6RNVzVEFSCh3JijJv/y9YBsf0srlxakwwRcZMl1yWdW
+	CjclV4EwLDp1qv6R3cuXYbkXFgxAbQsU2t8E96RSqnLVjzd44Iu6RzEgBSRMJtySUPiaVSKW0XUj8
+	k7ucfy5pfKSZabWp8uyofki59wTwC03h8RwWgR+w3y1FATVbWLYZ187KwsRnctSoIZSrzeORK6DxH
+	71hYZ4iUWm2beCWrWQvGPvejwE5zew5B8iV36oIHrKmuSJzNRv3G60lAQnba2TzjyLnXI6TngufL5
+	v2zaD3qVmOsgW6cndy864KbO8B7jL9Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iHrfp-0003xL-SH; Tue, 08 Oct 2019 15:45:17 +0000
+	id 1iI7B1-0006gO-6H; Wed, 09 Oct 2019 08:18:31 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iHrda-0000qW-QZ
- for ath10k@lists.infradead.org; Tue, 08 Oct 2019 15:43:02 +0000
+ id 1iI7Aw-0006fr-CW
+ for ath10k@lists.infradead.org; Wed, 09 Oct 2019 08:18:27 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 1E36B60ACF; Tue,  8 Oct 2019 15:42:55 +0000 (UTC)
+ id 8933461AF3; Wed,  9 Oct 2019 08:18:25 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1570549376;
- bh=PtXv/2PG6+HWdTsnqs6llorLWiI9qSK6Mjw3frrEvdU=;
- h=Subject:From:In-Reply-To:References:To:Cc:Date:From;
- b=pMtdY3BmpOdH1vXJJop/zCSHtunVJJQDZCK8GaxO2TsoaNoqyhao6E0bAAvG0I8uq
- j53ycZ1t+020hcZeZ1yZLVscaIzZQ6EDAJiqZeWp7Ho3p0yahAHg/iLvdyRoXArOMS
- 9n2iDNM9U4o8TwvHQNq9Ks2tTbGoMIvytEZcEdlI=
+ s=default; t=1570609105;
+ bh=fRlz7tw4YQKX5yIPcojrc6u4Ge2rc8wPk0N36qvbVIM=;
+ h=From:To:Cc:Subject:Date:From;
+ b=CySRCJjlxGc4zn4Vv6VmXxuPkj4q45h4GwIgVkyi8uWOWjeQd6ZX04MKVGl5l27ij
+ pTC0Axp8g/Z5EDkGJAc77yOj27TUALD06T9eD53QrATLI8KVc0ZwqV8qnq3HrJUJaH
+ bkSb8CPi0lLCYLXIaQb6NNMiHnbeT/z05mkfUG4g=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
-X-Spam-Status: No, score=-0.8 required=2.0 tests=ALL_TRUSTED,BAYES_00,
- DKIM_INVALID,DKIM_SIGNED,MISSING_DATE,MISSING_MID,SPF_NONE autolearn=no
- autolearn_force=no version=3.4.0
-Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
- [88.114.240.156])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
+ DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
+ version=3.4.0
+Received: from smtp.codeaurora.org (unknown [180.166.53.21])
+ (using TLSv1 with cipher AES128-SHA (128/128 bits))
  (No client certificate requested)
- (Authenticated sender: kvalo@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id B58D061ADB;
- Tue,  8 Oct 2019 15:42:53 +0000 (UTC)
+ (Authenticated sender: miaoqing@smtp.codeaurora.org)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 12DC361A1B;
+ Wed,  9 Oct 2019 08:18:22 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1570549375;
- bh=PtXv/2PG6+HWdTsnqs6llorLWiI9qSK6Mjw3frrEvdU=;
- h=Subject:From:In-Reply-To:References:To:Cc:From;
- b=WF+BvjbczkSra7F7qLXxhbe0xA1TwPJ4MSUSWXDR5ytPA9DnHK8nO547bgjuDhjBp
- O5vbv9uTnpFMeYjYbJ7lCB1QWA/JDp4JU4Eyp4fau3b6IXyZFy9xwsj2LYNsZJ+lY/
- WJ7AXekaFOJixje2MwyjlQX5r3BsJZ9mdGC2jryc=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org B58D061ADB
+ s=default; t=1570609104;
+ bh=fRlz7tw4YQKX5yIPcojrc6u4Ge2rc8wPk0N36qvbVIM=;
+ h=From:To:Cc:Subject:Date:From;
+ b=jZyx0nBW3UFDv/+FquMqXvMlJC2B56+k5tD9YYAPrRt6uaVtZHDPaEFPtx3Hfyt7J
+ Y6tvt8gihNnyg88VwAOvhbjZsjR412ux9gthPYTj1UQ/V0LE8gLx84ouuhE74p3JJc
+ zmu0Z94HsHygEqw90bRYS33rFOexMdeMeKUQMsJQ=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 12DC361A1B
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
- spf=none smtp.mailfrom=kvalo@codeaurora.org
-MIME-Version: 1.0
-Subject: Re: [PATCH] ath10k: Fix an && vs || typo
-From: Kalle Valo <kvalo@codeaurora.org>
-In-Reply-To: <20191007085003.GB3865@mwanda>
-References: <20191007085003.GB3865@mwanda>
-To: Dan Carpenter <dan.carpenter@oracle.com>
-User-Agent: pwcli/0.0.0-git (https://github.com/kvalo/pwcli/) Python/2.7.12
-Message-Id: <20191008154256.1E36B60ACF@smtp.codeaurora.org>
-Date: Tue,  8 Oct 2019 15:42:55 +0000 (UTC)
+ spf=none smtp.mailfrom=miaoqing@codeaurora.org
+Received: by smtp.codeaurora.org (sSMTP sendmail emulation);
+ Wed, 09 Oct 2019 16:18:17 +0800
+From: Miaoqing Pan <miaoqing@codeaurora.org>
+To: ath10k@lists.infradead.org
+Subject: [PATCH 1/2] ath10k: fix array out-of-bounds access
+Date: Wed,  9 Oct 2019 16:18:08 +0800
+Message-Id: <1570609089-22071-1-git-send-email-miaoqing@codeaurora.org>
+X-Mailer: git-send-email 1.9.1
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191008_084258_924955_BA86EBD5 
-X-CRM114-Status: UNSURE (   7.27  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20191009_011826_463987_9DB96893 
+X-CRM114-Status: GOOD (  12.31  )
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-2.5 points)
@@ -97,31 +94,164 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: kernel-janitors@vger.kernel.org, Govind Singh <govinds@codeaurora.org>,
- linux-wireless@vger.kernel.org, ath10k@lists.infradead.org
+Cc: linux-wireless@vger.kernel.org, Miaoqing Pan <miaoqing@codeaurora.org>
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Dan Carpenter <dan.carpenter@oracle.com> wrote:
+If firmware reports rate_max > WMI_TPC_RATE_MAX(WMI_TPC_FINAL_RATE_MAX)
+or num_tx_chain > WMI_TPC_TX_N_CHAIN, it will cause array out-of-bounds
+access, so print a warning and reset to avoid memory corruption.
 
-> The kernel will Oops later in the function if either of these pointers
-> is NULL so clearly || was intended instead of &&.
-> 
-> Fixes: 3f14b73c3843 ("ath10k: Enable MSA region dump support for WCN3990")
-> Signed-off-by: Dan Carpenter <dan.carpenter@oracle.com>
+Tested HW: QCA9984
+Tested FW: 10.4-3.9.0.2-00035
 
-Sorry, Colin was faster :)
+Signed-off-by: Miaoqing Pan <miaoqing@codeaurora.org>
+---
+ drivers/net/wireless/ath/ath10k/debug.c |  2 +-
+ drivers/net/wireless/ath/ath10k/wmi.c   | 49 +++++++++++++++++++++------------
+ 2 files changed, 32 insertions(+), 19 deletions(-)
 
-https://patchwork.kernel.org/patch/11174955/
-
-Patch set to Rejected.
-
+diff --git a/drivers/net/wireless/ath/ath10k/debug.c b/drivers/net/wireless/ath/ath10k/debug.c
+index bd2b562..40baf25 100644
+--- a/drivers/net/wireless/ath/ath10k/debug.c
++++ b/drivers/net/wireless/ath/ath10k/debug.c
+@@ -1516,7 +1516,7 @@ static void ath10k_tpc_stats_print(struct ath10k_tpc_stats *tpc_stats,
+ 	*len += scnprintf(buf + *len, buf_len - *len,
+ 			  "No.  Preamble Rate_code ");
+ 
+-	for (i = 0; i < WMI_TPC_TX_N_CHAIN; i++)
++	for (i = 0; i < tpc_stats->num_tx_chain; i++)
+ 		*len += scnprintf(buf + *len, buf_len - *len,
+ 				  "tpc_value%d ", i);
+ 
+diff --git a/drivers/net/wireless/ath/ath10k/wmi.c b/drivers/net/wireless/ath/ath10k/wmi.c
+index f0ab115..4473b13 100644
+--- a/drivers/net/wireless/ath/ath10k/wmi.c
++++ b/drivers/net/wireless/ath/ath10k/wmi.c
+@@ -4681,16 +4681,13 @@ static void ath10k_tpc_config_disp_tables(struct ath10k *ar,
+ 	}
+ 
+ 	pream_idx = 0;
+-	for (i = 0; i < __le32_to_cpu(ev->rate_max); i++) {
++	for (i = 0; i < tpc_stats->rate_max; i++) {
+ 		memset(tpc_value, 0, sizeof(tpc_value));
+ 		memset(buff, 0, sizeof(buff));
+ 		if (i == pream_table[pream_idx])
+ 			pream_idx++;
+ 
+-		for (j = 0; j < WMI_TPC_TX_N_CHAIN; j++) {
+-			if (j >= __le32_to_cpu(ev->num_tx_chain))
+-				break;
+-
++		for (j = 0; j < tpc_stats->num_tx_chain; j++) {
+ 			tpc[j] = ath10k_tpc_config_get_rate(ar, ev, i, j + 1,
+ 							    rate_code[i],
+ 							    type);
+@@ -4803,7 +4800,7 @@ void ath10k_wmi_tpc_config_get_rate_code(u8 *rate_code, u16 *pream_table,
+ 
+ void ath10k_wmi_event_pdev_tpc_config(struct ath10k *ar, struct sk_buff *skb)
+ {
+-	u32 num_tx_chain;
++	u32 num_tx_chain, rate_max;
+ 	u8 rate_code[WMI_TPC_RATE_MAX];
+ 	u16 pream_table[WMI_TPC_PREAM_TABLE_MAX];
+ 	struct wmi_pdev_tpc_config_event *ev;
+@@ -4819,6 +4816,13 @@ void ath10k_wmi_event_pdev_tpc_config(struct ath10k *ar, struct sk_buff *skb)
+ 		return;
+ 	}
+ 
++	rate_max = __le32_to_cpu(ev->rate_max);
++	if (rate_max > WMI_TPC_RATE_MAX) {
++		ath10k_warn(ar, "number of rate is %d greater than TPC configured rate %d\n",
++			    rate_max, WMI_TPC_RATE_MAX);
++		rate_max = WMI_TPC_RATE_MAX;
++	}
++
+ 	tpc_stats = kzalloc(sizeof(*tpc_stats), GFP_ATOMIC);
+ 	if (!tpc_stats)
+ 		return;
+@@ -4835,8 +4839,8 @@ void ath10k_wmi_event_pdev_tpc_config(struct ath10k *ar, struct sk_buff *skb)
+ 		__le32_to_cpu(ev->twice_antenna_reduction);
+ 	tpc_stats->power_limit = __le32_to_cpu(ev->power_limit);
+ 	tpc_stats->twice_max_rd_power = __le32_to_cpu(ev->twice_max_rd_power);
+-	tpc_stats->num_tx_chain = __le32_to_cpu(ev->num_tx_chain);
+-	tpc_stats->rate_max = __le32_to_cpu(ev->rate_max);
++	tpc_stats->num_tx_chain = num_tx_chain;
++	tpc_stats->rate_max = rate_max;
+ 
+ 	ath10k_tpc_config_disp_tables(ar, ev, tpc_stats,
+ 				      rate_code, pream_table,
+@@ -5031,16 +5035,13 @@ void ath10k_wmi_event_pdev_tpc_config(struct ath10k *ar, struct sk_buff *skb)
+ 	}
+ 
+ 	pream_idx = 0;
+-	for (i = 0; i < __le32_to_cpu(ev->rate_max); i++) {
++	for (i = 0; i < tpc_stats->rate_max; i++) {
+ 		memset(tpc_value, 0, sizeof(tpc_value));
+ 		memset(buff, 0, sizeof(buff));
+ 		if (i == pream_table[pream_idx])
+ 			pream_idx++;
+ 
+-		for (j = 0; j < WMI_TPC_TX_N_CHAIN; j++) {
+-			if (j >= __le32_to_cpu(ev->num_tx_chain))
+-				break;
+-
++		for (j = 0; j < tpc_stats->num_tx_chain; j++) {
+ 			tpc[j] = ath10k_wmi_tpc_final_get_rate(ar, ev, i, j + 1,
+ 							       rate_code[i],
+ 							       type, pream_idx);
+@@ -5056,7 +5057,7 @@ void ath10k_wmi_event_pdev_tpc_config(struct ath10k *ar, struct sk_buff *skb)
+ 
+ void ath10k_wmi_event_tpc_final_table(struct ath10k *ar, struct sk_buff *skb)
+ {
+-	u32 num_tx_chain;
++	u32 num_tx_chain, rate_max;
+ 	u8 rate_code[WMI_TPC_FINAL_RATE_MAX];
+ 	u16 pream_table[WMI_TPC_PREAM_TABLE_MAX];
+ 	struct wmi_pdev_tpc_final_table_event *ev;
+@@ -5064,12 +5065,24 @@ void ath10k_wmi_event_tpc_final_table(struct ath10k *ar, struct sk_buff *skb)
+ 
+ 	ev = (struct wmi_pdev_tpc_final_table_event *)skb->data;
+ 
++	num_tx_chain = __le32_to_cpu(ev->num_tx_chain);
++	if (num_tx_chain > WMI_TPC_TX_N_CHAIN) {
++		ath10k_warn(ar, "number of tx chain is %d greater than TPC final configured tx chain %d\n",
++			    num_tx_chain, WMI_TPC_TX_N_CHAIN);
++		return;
++	}
++
++	rate_max = __le32_to_cpu(ev->rate_max);
++	if (rate_max > WMI_TPC_FINAL_RATE_MAX) {
++		ath10k_warn(ar, "number of rate is %d greater than TPC final configured rate %d\n",
++			    rate_max, WMI_TPC_FINAL_RATE_MAX);
++		rate_max = WMI_TPC_FINAL_RATE_MAX;
++	}
++
+ 	tpc_stats = kzalloc(sizeof(*tpc_stats), GFP_ATOMIC);
+ 	if (!tpc_stats)
+ 		return;
+ 
+-	num_tx_chain = __le32_to_cpu(ev->num_tx_chain);
+-
+ 	ath10k_wmi_tpc_config_get_rate_code(rate_code, pream_table,
+ 					    num_tx_chain);
+ 
+@@ -5082,8 +5095,8 @@ void ath10k_wmi_event_tpc_final_table(struct ath10k *ar, struct sk_buff *skb)
+ 		__le32_to_cpu(ev->twice_antenna_reduction);
+ 	tpc_stats->power_limit = __le32_to_cpu(ev->power_limit);
+ 	tpc_stats->twice_max_rd_power = __le32_to_cpu(ev->twice_max_rd_power);
+-	tpc_stats->num_tx_chain = __le32_to_cpu(ev->num_tx_chain);
+-	tpc_stats->rate_max = __le32_to_cpu(ev->rate_max);
++	tpc_stats->num_tx_chain = num_tx_chain;
++	tpc_stats->rate_max = rate_max;
+ 
+ 	ath10k_wmi_tpc_stats_final_disp_tables(ar, ev, tpc_stats,
+ 					       rate_code, pream_table,
 -- 
-https://patchwork.kernel.org/patch/11176991/
-
-https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
+1.9.1
 
 
 _______________________________________________
