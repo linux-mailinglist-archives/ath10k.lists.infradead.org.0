@@ -2,78 +2,79 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 31D9ED18B1
-	for <lists+ath10k@lfdr.de>; Wed,  9 Oct 2019 21:23:47 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 587C1D192F
+	for <lists+ath10k@lfdr.de>; Wed,  9 Oct 2019 21:45:26 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
 	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
-	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
+	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:References:
+	To:From:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
 	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=+va+Lg1xm00Ul9ZYaznlVzORec7W0pHOCfZaBkvFWgY=; b=oHjep1Mnngwn7PdrBDiEkMhcW
-	1H77C6A3sj2whBovyc/l9WrshmGBVWOnO6xsQ66Ez91kKVXJ0bZDiVeMYLkG1yr35vkQno1I+FOx2
-	0NBAPtOFxGBo8Ga8hdldmk5xtCBZdledHaGWqe8XUJkPRbpgMEnD0VRHJG05njvP66Advhz77z79F
-	Cxt0xHCb5dboaPENDqyWdWSsT9OCKu6Oq5fJRXWVYzKqS38Umex6kRn3E25TKvazsdRXy8SsxXmzq
-	CgLlzEpHo+k7PSkalumzaWr/nYDhsoszwO0ZJc5OjGB/wWREmZsnxoYwx2muRyPb1tzzm0dwai/+I
-	5FuZfWbGQ==;
+	 bh=/YUHfHeqrCU0OfzhcAvrJoSORsZw0DVVGyd4CFqwW2s=; b=DBH2ckHIZNtTjbEZHLsNmSS+K
+	aLB/w3NLkYO3hLVBqe592Cjdh5oAc+FKSxcWh5qy+6Umv9qmmi+fOuu6B+e6THfpvQPKbK+ywvLwx
+	yrUj4r05b5T2oHvNGcwmInbc0n7awPxm6fgiVGHWkHeV0wga8WRq00Qafh3VImVdRFjTaH88i2OwB
+	7Mm07runnmmqU6esbJ7EOKOZdrmsW475R/JpfsZehiUCQw43Yq1bhn6xZxFP8bsmPia9SmMbxbeft
+	67RflOxbfUi80/6GbtYn+nb5v+tsBRzNyBMlU09A2JdL7KF2zdCQ9sG978kswj9Jkz7LN5Z8nzhmv
+	XhQzABj8A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iIHYh-0006Yn-Ak; Wed, 09 Oct 2019 19:23:39 +0000
+	id 1iIHtj-0003zk-U0; Wed, 09 Oct 2019 19:45:23 +0000
 Received: from mail-lj1-x243.google.com ([2a00:1450:4864:20::243])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iIHYd-0006XG-Ca
- for ath10k@lists.infradead.org; Wed, 09 Oct 2019 19:23:36 +0000
-Received: by mail-lj1-x243.google.com with SMTP id a22so3705999ljd.0
- for <ath10k@lists.infradead.org>; Wed, 09 Oct 2019 12:23:33 -0700 (PDT)
+ id 1iIHte-0003vr-Ma
+ for ath10k@lists.infradead.org; Wed, 09 Oct 2019 19:45:20 +0000
+Received: by mail-lj1-x243.google.com with SMTP id y3so3724684ljj.6
+ for <ath10k@lists.infradead.org>; Wed, 09 Oct 2019 12:45:18 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=subject:to:cc:references:from:message-id:date:user-agent
+ h=subject:from:to:cc:references:message-id:date:user-agent
  :mime-version:in-reply-to:content-language:content-transfer-encoding;
- bh=RjL6aeL+yB6TH6pYK3+ft/SKEqM4F474X+76FvzFX/g=;
- b=Ik6w0eB4orUeDmq8LzqH6DyV81I9I0LFBNRL/z8AXi1llhQHVMkjypPACqPElc8x2w
- c1XL6l/C0CqtG3jX05+8AxX8rnssUQd1VoUCj24+Ct3GjN5TsrCzWucUlQh6DRpSj5lH
- FB40Tz7KDlJbFV9STZQFwyIvooqAMLNbzVZ3EIGcY679sKOpzgclbMI0njxkHLbOlYJ0
- ZiewZi34+U4d4ul8HZXU8X9ULOuNKrDBtdsWPQSAmRCGe7JXPSF7ZuCjjbrlPmCOvOid
- ztgamoWlb6Hg0euNJ4cPFxtCk4ZAh83hbkcBJxDXE6OrLnynPhHtHzIA/Zs/6O9vnUu7
- 8acA==
+ bh=HmPVQEnpjipxWeyFZpCS/dPubFPvdXRXnBDLynnz6Hw=;
+ b=hF4SZalCdpKxqdOPG4AOuy4m9gPQll8fjepU3K8fV1XVE42jwxnfXMS7Au/BAg2kTG
+ BQ0xlx19FiR+BcABFFkGz2qxSKSIhOLmbHEBOtQvF/RlUu5kflIsaKiEbv2NBXaD9MaL
+ C2MauWv9b9skhcNYTJEye4lLj/UOhjFjws75h1OUnySOb197RChzNR/usLUqxV95Ibzt
+ Szksa6N/SRHQEewCaUdc/AimyDTynBvOtRT8VOjuqSwwqAYMNZztK2uOReBLpkxGy9Jv
+ LwyBBYd/4x0A5OHPTpaQkEX7Jt9K0MxYns8rM1q16G6Xu8A4m/ZnVkPhirXqUWlqhBs6
+ giLw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:subject:to:cc:references:from:message-id:date
+ h=x-gm-message-state:subject:from:to:cc:references:message-id:date
  :user-agent:mime-version:in-reply-to:content-language
  :content-transfer-encoding;
- bh=RjL6aeL+yB6TH6pYK3+ft/SKEqM4F474X+76FvzFX/g=;
- b=CdldStmsr1SsXK+scuWDr6lW39V+6HwgF95I0iKwkS8Jp1/z6dcUiNnlFMhBhIQmcv
- NqFkjPV+V8VyxWELNGMR/QmuZaRKtVtDISc/8bsuxieMnTOJVuyd7cyBzeB4o68sLfSJ
- uxom/GbpmUI/qAj6ULFhn+NtC/n+Qmf/FmPkhuVpu9LVA9NZpAHLcTklEYmyoAa524LG
- /v4yzFAUvTzee5/RSYDu2/TY9xeT30R/bYzyz+m6ota7RV/u6TT4/PwliPgUhdKsKYzG
- si/4AqoDCx5iruqkL8gEi4cjtySdGoTjYR2Uo3hr6nfQZigdh3snHIQKsyFFgiAJyu0V
- 5+Ig==
-X-Gm-Message-State: APjAAAWTP+dZVhr0VarDuG+KrBunHoaQWDgGwZeZrr9GYU4QbPdQKtR9
- wwQJnWMbVS6v7sHkg66RKvhUnZvVpz0=
-X-Google-Smtp-Source: APXvYqwAzAWlJ8momOLfd+IzLb8ETNR8DVUq0T2CQK01RB20qrbuF6Dp9LG7GLIhlUwcidi59JcwIA==
-X-Received: by 2002:a2e:6101:: with SMTP id v1mr3434522ljb.132.1570649012345; 
- Wed, 09 Oct 2019 12:23:32 -0700 (PDT)
+ bh=HmPVQEnpjipxWeyFZpCS/dPubFPvdXRXnBDLynnz6Hw=;
+ b=FSx8RGWIYRH+I0sTtbjNPAWd6ANTKCYAbM6gK7lj+fhsphv0SJoqW6eBdLixpqKWej
+ HLZ4OYYSgughv14fDnTLHK16IIqr5bcQhb9+pcBwdGRsaTeTQ5Z+O0mmhJeafnMaNDfY
+ ECZ6/5Uu3kie7YuOwuOj6PjZWRNjgBeToZIW6VrH0R5ZcjNIUK0hofnC9zz3l2rnRiDW
+ des9c3KEqzC7qzO/sOFFTk4qd1E6uEHFME63kKQvio5EY+Lm7p4Al3cxaagGTdz9wBhV
+ hNPwo2q8FdBtTcnrtDDvuTPPWPM39dGjvIUYDxZ07aB88qlrX2R5h1o3Yy78DEBE8ZPh
+ u+LQ==
+X-Gm-Message-State: APjAAAWYa8NZ0lDgGaa5L9nMPUdByp0yd8iEQhf8xIzH46ARlfEmhxjL
+ LgGafBF1BwMWJtkzgEC+XdZY1OOgFwU=
+X-Google-Smtp-Source: APXvYqwPT9zZIpgQBWMqHiuRGXolOAJXuNI8NyQAcf67PQinS2bjqXqZ4RY87fkqNwY8xGHvgoqj3g==
+X-Received: by 2002:a2e:8852:: with SMTP id z18mr3525471ljj.230.1570650316995; 
+ Wed, 09 Oct 2019 12:45:16 -0700 (PDT)
 Received: from [192.168.1.244] (81-233-89-221-no75.tbcn.telia.com.
  [81.233.89.221])
- by smtp.gmail.com with ESMTPSA id 77sm648652ljj.84.2019.10.09.12.23.31
+ by smtp.gmail.com with ESMTPSA id g27sm660014lja.33.2019.10.09.12.45.16
  (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Wed, 09 Oct 2019 12:23:31 -0700 (PDT)
+ Wed, 09 Oct 2019 12:45:16 -0700 (PDT)
 Subject: Re: [PATCH 2/2] ath10k: switch to ieee80211_tx_dequeue_ni
+From: Erik Stromdahl <erik.stromdahl@gmail.com>
 To: Peter Oh <peter.oh@eero.com>, Kalle Valo <kvalo@codeaurora.org>
 References: <20190617200140.6189-1-erik.stromdahl@gmail.com>
  <20190617200140.6189-2-erik.stromdahl@gmail.com>
  <87eezw660r.fsf@kamboji.qca.qualcomm.com>
  <19f8023a-1943-9bf5-9a59-a7643f7692bf@eero.com>
-From: Erik Stromdahl <erik.stromdahl@gmail.com>
-Message-ID: <fd43b218-7dc7-22dd-664b-46c55c3dd94e@gmail.com>
-Date: Wed, 9 Oct 2019 21:23:31 +0200
+ <fd43b218-7dc7-22dd-664b-46c55c3dd94e@gmail.com>
+Message-ID: <f1669b69-6762-1341-8822-de08d9ddd55b@gmail.com>
+Date: Wed, 9 Oct 2019 21:45:15 +0200
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
  Thunderbird/60.7.0
 MIME-Version: 1.0
-In-Reply-To: <19f8023a-1943-9bf5-9a59-a7643f7692bf@eero.com>
+In-Reply-To: <fd43b218-7dc7-22dd-664b-46c55c3dd94e@gmail.com>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191009_122335_453172_7CAAF593 
-X-CRM114-Status: GOOD (  14.03  )
+X-CRM114-CacheID: sfid-20191009_124518_741775_58201929 
+X-CRM114-Status: GOOD (  15.37  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -113,43 +114,104 @@ Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
 
 
-On 10/1/19 7:13 PM, Peter Oh wrote:
+On 10/9/19 9:23 PM, Erik Stromdahl wrote:
 > 
-> On 10/1/19 4:48 AM, Kalle Valo wrote:
->> Erik Stromdahl <erik.stromdahl@gmail.com> writes:
+> 
+> On 10/1/19 7:13 PM, Peter Oh wrote:
 >>
->>> Since ath10k_mac_tx_push_txq() can be called from process context, we
->>> must explicitly disable softirqs before the call into mac80211.
+>> On 10/1/19 4:48 AM, Kalle Valo wrote:
+>>> Erik Stromdahl <erik.stromdahl@gmail.com> writes:
 >>>
->>> By calling ieee80211_tx_dequeue_ni() instead of ieee80211_tx_dequeue()
->>> we make sure softirqs are always disabled even in the case when
->>> ath10k_mac_tx_push_txq() is called from process context.
+>>>> Since ath10k_mac_tx_push_txq() can be called from process context, we
+>>>> must explicitly disable softirqs before the call into mac80211.
+>>>>
+>>>> By calling ieee80211_tx_dequeue_ni() instead of ieee80211_tx_dequeue()
+>>>> we make sure softirqs are always disabled even in the case when
+>>>> ath10k_mac_tx_push_txq() is called from process context.
+>>>>
+>>>> Calling ieee80211_tx_dequeue_ni() with softirq's already disabled
+>>>> (e.g., from softirq context) should be safe as the local_bh_disable()
+>>>> and local_bh_enable() functions (called from ieee80211_tx_dequeue_ni)
+>>>> are fully reentrant.
+>>>>
+>>>> Signed-off-by: Erik Stromdahl <erik.stromdahl@gmail.com>
+>>> I already applied this, but I still want to check _why_ you are changing
+>>> this? Is it that you want to call ath10k_mac_tx_push_pending() from a
+>>> workqueue in sdio.c in a future patch, or what? Because at the moment me
+>>> and Johannes were not able to find where this is called in process
+>>> context.
 >>>
->>> Calling ieee80211_tx_dequeue_ni() with softirq's already disabled
->>> (e.g., from softirq context) should be safe as the local_bh_disable()
->>> and local_bh_enable() functions (called from ieee80211_tx_dequeue_ni)
->>> are fully reentrant.
->>>
->>> Signed-off-by: Erik Stromdahl <erik.stromdahl@gmail.com>
->> I already applied this, but I still want to check _why_ you are changing
->> this? Is it that you want to call ath10k_mac_tx_push_pending() from a
->> workqueue in sdio.c in a future patch, or what? Because at the moment me
->> and Johannes were not able to find where this is called in process
->> context.
+> SDIO irqs are threaded irqs (at least on my iMX6 board) and hence process context.
+> I will see if I can find a trace that shows the call chain more exactly.
+> 
+
+I found this backtrace in a log file:
+(it does not show the call to ieee80211_tx_dequeue_ni(), but it shows that
+ath10k_sdio_irq_handler() is called from process context)
+
+          irq/62-mmc1-65    [000] ....   785.261081: ath10k_mac_op_wake_tx_queue <-ieee80211_queue_skb
+          irq/62-mmc1-65    [000] ....   785.261090: <stack trace>
+      => ieee80211_queue_skb
+      => __ieee80211_subif_start_xmit
+      => ieee80211_subif_start_xmit
+      => dev_hard_start_xmit
+      => __dev_queue_xmit
+      => dev_queue_xmit
+      => ip_finish_output2
+      => ip_finish_output
+      => ip_output
+      => ip_local_out
+      => ip_queue_xmit
+      => tcp_transmit_skb
+      => tcp_write_xmit
+      => __tcp_push_pending_frames
+      => tcp_rcv_established
+      => tcp_v4_do_rcv
+      => tcp_v4_rcv
+      => ip_local_deliver_finish
+      => ip_local_deliver
+      => ip_rcv_finish
+      => ip_rcv
+      => __netif_receive_skb_core
+      => __netif_receive_skb
+      => netif_receive_skb_internal
+      => netif_receive_skb
+      => ieee80211_deliver_skb
+      => ieee80211_rx_handlers
+      => ieee80211_prepare_and_rx_handle
+      => ieee80211_rx_napi
+      => ath10k_htt_t2h_msg_handler
+      => ath10k_htt_htc_t2h_msg_handler
+      => ath10k_sdio_mbox_rxmsg_pending_handler
+      => ath10k_sdio_irq_handler                        <- ath10k_mac_tx_push_pending() is called from here
+      => process_sdio_pending_irqs
+      => sdio_run_irqs
+      => sdhci_thread_irq
+      => irq_thread_fn
+      => irq_thread
+      => kthread
+      => ret_from_fork
+      => 0
+
+ From ath10k_sdio_irq_handler(), the call chain down to ieee80211_tx_dequeue_ni()
+looks like this:
+
+ath10k_sdio_irq_handler() =>
+   ath10k_mac_tx_push_pending() =>
+     ath10k_mac_schedule_txq() =>
+       ath10k_mac_tx_push_txq() =>
+         ieee80211_tx_dequeue_ni()
+
+> 
+>> It seems Johannes wants to fix it in mac80211.
 >>
-SDIO irqs are threaded irqs (at least on my iMX6 board) and hence process context.
-I will see if I can find a trace that shows the call chain more exactly.
-
-
-> It seems Johannes wants to fix it in mac80211.
-> 
-> [PATCH v2] mac80211: keep BHs disabled while calling drv_tx_wake_queue()
-> 
-> Drivers typically expect this, as it's the case for almost all cases
-> where this is called (i.e. from the TX path). Also, the code in mac80211
-> itself (if the driver calls ieee80211_tx_dequeue()) expects this as it
-> uses this_cpu_ptr() without additional protection.
-> 
+>> [PATCH v2] mac80211: keep BHs disabled while calling drv_tx_wake_queue()
+>>
+>> Drivers typically expect this, as it's the case for almost all cases
+>> where this is called (i.e. from the TX path). Also, the code in mac80211
+>> itself (if the driver calls ieee80211_tx_dequeue()) expects this as it
+>> uses this_cpu_ptr() without additional protection.
+>>
 
 _______________________________________________
 ath10k mailing list
