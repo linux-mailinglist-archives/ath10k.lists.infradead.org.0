@@ -2,80 +2,93 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id DF702D2E94
-	for <lists+ath10k@lfdr.de>; Thu, 10 Oct 2019 18:27:03 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 40C63D31D3
+	for <lists+ath10k@lfdr.de>; Thu, 10 Oct 2019 22:12:24 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=i2B5QiJrZZcMRoxXsBjUhgSfToDplKR2W5Eh/Zbv23s=; b=PdZEFSW8FV7U44
-	CAhdC7rTZcUerEAXMumYeR7bQq+5BEFsrdhFIDE1cI3lT/91910iMyScIhWeZp76ZLRicdX5PAnI7
-	VVjxyqJkJHCQG+ko6NryXQ1cNeHaeDaRhBcpoIeP9BkYpxXZzdR9/BEcAj3EmgUJXWA5e1yTn5LYN
-	r4udjt6JAc2/Zxrz84g6EmQ6pe0xVKkoPbadJyNl01DcJQzlyHjHmopuV3bfhU5Ujj46hnOrxKOhg
-	MF1ppNG/H7+E5cN3z+rkILu8k6b674P0XKd5Sk6kEY38ZHpg3JOYonyBVIJzKif4fO3THlo8I7L/S
-	G9gbL067GrLle34Ut8PA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:References
+	:In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=FpN2l96BmDyHwa4yixDQwUZyI8nfCmPZmm/Uj2uAwj0=; b=S7gBExX1dckqso
+	g8zMzksodEW+CN+hYr9vgm2YZQ51Mh7cl8qfn/NUth5MVEWNYgmSsUv0LiuiIuPV8aRw3rYcCKLqq
+	0g7WgIeg7dln8KeM7vDRoPu7gGRtPFFCA/YlkZ89BjY8gCNLB31YGSDeU9I9Qz/MKrEcZl+ov4ypb
+	/J+dAlRsjR1B4G6YyAqNKShSGpm+S91Z7h0jrcAzJtD/x+ReP2kcbfDiVRvtEKvU+rxwl1Zn09JF9
+	0mGLR9AqicAMNj3eBZkTTjinhRZY0jcbbg0vUeAStJFFkSugbarayrq+VSjDyzR6IEGTGfShsyRMd
+	feIYrNiVhjVNZ+/+et9A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iIbHK-0003K3-7E; Thu, 10 Oct 2019 16:27:02 +0000
-Received: from mail-pl1-x641.google.com ([2607:f8b0:4864:20::641])
+	id 1iIenJ-0001xZ-HQ; Thu, 10 Oct 2019 20:12:17 +0000
+Received: from us-smtp-delivery-1.mimecast.com ([207.211.31.120]
+ helo=us-smtp-1.mimecast.com)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iIbHF-0003J7-Uw
- for ath10k@lists.infradead.org; Thu, 10 Oct 2019 16:26:59 +0000
-Received: by mail-pl1-x641.google.com with SMTP id e5so3030487pls.9
- for <ath10k@lists.infradead.org>; Thu, 10 Oct 2019 09:26:57 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
- h=from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=/3L9d8Hq5e07DU4XHZuzPz1Kd0iVbIQrEZ53Rw3PFwc=;
- b=oMNG8OFlEGU3PWXGkW4uWbQiN1c4TgfEUV4U5ZaRnieGiVh9zJFF289MPunGMy0uQa
- seUQM8U2tTTWjYTuqnWM1hjDfz4EQSu6HMMR+BLW3eWSh4BlEZczW9TkQZKEJ/hk3f8b
- 1JFjuInD9NbbsOx1TTAGItzyuIrtHBAw+AvyLljpiKbRSLyrTzWMOLnm4O599EaVohmY
- qyXHpkXA478RmdObxZO9bhYjjODG2+x1geIWOUjM1C4N9VKcwAJdm2FwBoPqZPyewoBt
- HCAcvkfg29toUTW1/GIlRSFNFLn9cq68xGT5V8C627JjNT5+CYI49sBWZkhztGviM0xZ
- RQqA==
+ id 1iIenF-0001x5-0F
+ for ath10k@lists.infradead.org; Thu, 10 Oct 2019 20:12:14 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
+ s=mimecast20190719; t=1570738331;
+ h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+ to:to:cc:cc:mime-version:mime-version:content-type:content-type:
+ content-transfer-encoding:content-transfer-encoding:
+ in-reply-to:in-reply-to:references:references;
+ bh=Hhyg87nnGfeTsVzFBM5AQicPju/uAVCwWvYhzmC0GBw=;
+ b=YWqaimhRlR1xZf9mYoNdXyfeQSqIVRbCrdrkcI8yLwO5ioFq+oMmR5A8wMWEBk0vuasCOV
+ TaSZVM5A0iAbCzDMV43J/G3EyD/olMR0mPgqpidV4rggnfC7MA6/WeWDaVTRfnbkGrfszP
+ owMJKqcrnTC5i/gtCBKpPNC0wslW+RA=
+Received: from mail-lj1-f197.google.com (mail-lj1-f197.google.com
+ [209.85.208.197]) (Using TLS) by relay.mimecast.com with ESMTP id
+ us-mta-353-nAOqnjqYNoaLqzpJCS4JPg-1; Thu, 10 Oct 2019 16:12:07 -0400
+Received: by mail-lj1-f197.google.com with SMTP id y12so1247441ljc.8
+ for <ath10k@lists.infradead.org>; Thu, 10 Oct 2019 13:12:06 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=/3L9d8Hq5e07DU4XHZuzPz1Kd0iVbIQrEZ53Rw3PFwc=;
- b=ZN2otPxuqdgJjjzGK01qFMFr03SlZtL6nnk/P/6bxEnCCMW1zyNfuxemblg8qYb97V
- GDqfVmiN280k6QwReUy7N1gITCx4soYoRl8DrNnYgaNU3QhhQ8C6qgtbArGeAhjM+yz8
- DOG9hs/LWfog+Ib/EfPQD9oykMDq32stbD1HaRz/14i1A0mrnCsOW7824v/tfAOwNNON
- Szh8iTU29m0oOfGb52hcnPOIEhUs+WD5vrzUz7pkeizuByeb4Q9iRxukRh7BGHcpRVAb
- HrW4up33qx5QDG655Z2IolaKUD3TRo8ByaLfavpLkVQo9EYj3+mPXrwEAFHHofT0P3tk
- JNsQ==
-X-Gm-Message-State: APjAAAUYhip+uOVOAPusM1WaWTi6s40SAL60+ff55xwVzrGU8xnEOqcO
- Fbl1TA/Jc7IR62/Hhzw/6Kp4xQ==
-X-Google-Smtp-Source: APXvYqzUtSx9TXYj7cPELtcJoIFrQb9QmW162prSdvzhCjMi66kmK7ihqlK1y9torULncYYjxLcW0w==
-X-Received: by 2002:a17:902:904b:: with SMTP id
- w11mr8623273plz.182.1570724816801; 
- Thu, 10 Oct 2019 09:26:56 -0700 (PDT)
-Received: from localhost.localdomain
- (104-188-17-28.lightspeed.sndgca.sbcglobal.net. [104.188.17.28])
- by smtp.gmail.com with ESMTPSA id o15sm6148342pjs.14.2019.10.10.09.26.55
+ h=x-gm-message-state:from:to:cc:subject:in-reply-to:references:date
+ :message-id:mime-version;
+ bh=Hhyg87nnGfeTsVzFBM5AQicPju/uAVCwWvYhzmC0GBw=;
+ b=B63jnNrm1P8Tl5kXUCB2ScISEjaD7qI2QxdeKAZKIDkqYEh+kTgx83dNkMbl13K8f2
+ PkiLlyykFZpeK7gB6xVWB9qOIIoPru2fMeztOeGW1DjDKtjPtUviSGapib1ULCyInRX4
+ 6nf3le3NLZRf3dgyMPnnupTJGee8rkmH0tEmKkhKsyloUS5YjFhbRF2hut0Z2LNo/XWg
+ cDu0lgh03zACJsXqY4dq3lu18BsdwbtOgtsU0SVl1nUa5tRzWBgNbD8Bs7FjYPjJ47qH
+ 938obhfwX3oATt4dIlZfB5MFmSO/evFCUVphC4Ciuo+jDx1zrqqjy5n9oolNgEnH5Mb7
+ pPiA==
+X-Gm-Message-State: APjAAAUetluMQdQZ6pQPRr72SKO/3vA9JpEQkOWb07ZofUnwuU8srr+1
+ H7RZG75AfoUH8ik5QtWFzYeRwg538Bgr2wy56OSxx1cb/rsig1h+MimXT1wyTFzweN4sAg4fhA+
+ 5pMlapC2YxNsvpU+QvrvWeg==
+X-Received: by 2002:ac2:43d9:: with SMTP id u25mr7258263lfl.142.1570738325646; 
+ Thu, 10 Oct 2019 13:12:05 -0700 (PDT)
+X-Google-Smtp-Source: APXvYqxttgSBDbiQ/AtjJb2ynuVWRmt+n7NwNsTfIRQfQEa39kbak+pVlQfDx4wA8MD0fn3vPX2tJw==
+X-Received: by 2002:ac2:43d9:: with SMTP id u25mr7258254lfl.142.1570738325476; 
+ Thu, 10 Oct 2019 13:12:05 -0700 (PDT)
+Received: from alrua-x1.borgediget.toke.dk (borgediget.toke.dk.
+ [85.204.121.218])
+ by smtp.gmail.com with ESMTPSA id y22sm1590921lfb.75.2019.10.10.13.12.04
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Thu, 10 Oct 2019 09:26:56 -0700 (PDT)
-From: Bjorn Andersson <bjorn.andersson@linaro.org>
-To: Kalle Valo <kvalo@codeaurora.org>, "David S. Miller" <davem@davemloft.net>
-Subject: [PATCH] ath10k: Correct error check of dma_map_single()
-Date: Thu, 10 Oct 2019 09:26:53 -0700
-Message-Id: <20191010162653.141303-1-bjorn.andersson@linaro.org>
-X-Mailer: git-send-email 2.23.0
+ Thu, 10 Oct 2019 13:12:04 -0700 (PDT)
+Received: by alrua-x1.borgediget.toke.dk (Postfix, from userid 1000)
+ id B6EEF18063D; Thu, 10 Oct 2019 22:12:03 +0200 (CEST)
+From: Toke =?utf-8?Q?H=C3=B8iland-J=C3=B8rgensen?= <toke@redhat.com>
+To: Johannes Berg <johannes@sipsolutions.net>, Kan Yan <kyan@google.com>
+Subject: Re: [PATCH v3 1/2] mac80211: Implement Airtime-based Queue Limit (AQL)
+In-Reply-To: <a2cc0ebecfb055c8b667db57d0469fe69054a69c.camel@sipsolutions.net>
+References: <20191010022502.141862-1-kyan@google.com>
+ <20191010022502.141862-2-kyan@google.com>
+ <a2cc0ebecfb055c8b667db57d0469fe69054a69c.camel@sipsolutions.net>
+X-Clacks-Overhead: GNU Terry Pratchett
+Date: Thu, 10 Oct 2019 22:12:03 +0200
+Message-ID: <87ftk0jr70.fsf@toke.dk>
 MIME-Version: 1.0
+X-MC-Unique: nAOqnjqYNoaLqzpJCS4JPg-1
+X-Mimecast-Spam-Score: 0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191010_092658_005109_5EDA4E75 
-X-CRM114-Status: UNSURE (   9.21  )
+X-CRM114-CacheID: sfid-20191010_131213_128915_476E0011 
+X-CRM114-Status: UNSURE (   6.99  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:641 listed in]
- [list.dnswl.org]
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [207.211.31.120 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -96,40 +109,27 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: netdev@vger.kernel.org, linux-wireless@vger.kernel.org,
- linux-kernel@vger.kernel.org, stable@vger.kernel.org,
- ath10k@lists.infradead.org, Niklas Cassel <niklas.cassel@linaro.org>
+Cc: make-wifi-fast@lists.bufferbloat.net, yiboz@codeaurora.org,
+ linux-wireless@vger.kernel.org, ath10k@lists.infradead.org, nbd@nbd.name
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-The return value of dma_map_single() should be checked for errors using
-dma_mapping_error(), rather than testing for NULL. Correct this.
+Johannes Berg <johannes@sipsolutions.net> writes:
 
-Fixes: 1807da49733e ("ath10k: wmi: add management tx by reference support over wmi")
-Cc: stable@vger.kernel.org
-Reported-by: Niklas Cassel <niklas.cassel@linaro.org>
-Signed-off-by: Bjorn Andersson <bjorn.andersson@linaro.org>
----
- drivers/net/wireless/ath/ath10k/mac.c | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+> Hi,
+>
+> A couple of points...
+>
+> First, I'd like Toke to review & ack this if possible :-)
 
-diff --git a/drivers/net/wireless/ath/ath10k/mac.c b/drivers/net/wireless/ath/ath10k/mac.c
-index 3d2c8fcba952..a01868938692 100644
---- a/drivers/net/wireless/ath/ath10k/mac.c
-+++ b/drivers/net/wireless/ath/ath10k/mac.c
-@@ -3904,7 +3904,7 @@ void ath10k_mgmt_over_wmi_tx_work(struct work_struct *work)
- 			     ar->running_fw->fw_file.fw_features)) {
- 			paddr = dma_map_single(ar->dev, skb->data,
- 					       skb->len, DMA_TO_DEVICE);
--			if (!paddr)
-+			if (dma_mapping_error(ar->dev, paddr))
- 				continue;
- 			ret = ath10k_wmi_mgmt_tx_send(ar, skb, paddr);
- 			if (ret) {
--- 
-2.23.0
+Sure, I'll look at it. I'm away the rest of this week, but should
+hopefully get some more time next week. It may be that it will take the
+form of another submission that integrates this with the previous patch
+I sent that put more of the calculation into mac80211 itself...
+
+-Toke
 
 
 _______________________________________________
