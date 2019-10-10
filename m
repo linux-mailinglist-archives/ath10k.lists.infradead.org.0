@@ -2,55 +2,89 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E49B3D2DEF
-	for <lists+ath10k@lfdr.de>; Thu, 10 Oct 2019 17:40:35 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id DF702D2E94
+	for <lists+ath10k@lfdr.de>; Thu, 10 Oct 2019 18:27:03 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=dn1zGUAhCzNkye9ZhOgWhlb5i5Hr58izax/F31S+Krc=; b=b5nFaVMPOuMD1f
-	E4ANy7lTZVqGymSSCfWBssG4PTkWNQ81b4B2MQFpgnJznNiqKIwz7BS7fxB6zEfN9D5nTK2ZoMz/W
-	AXoDjSZM/vyB3WObnkjegeAKIsF0Qn9SM1HFxkHhzgSJQF/QWns13tJWKTABwjpE66Fpp7Kcu1pGU
-	V9dmBp4YA0JalCMCa52LETFiVvMGdsfM0MBgiDw0oVp61tGLNTpXKSISeGco/6ozW7ceG7jjido6s
-	tymG6J2FKRGtiUEInBZZ+Nkv3E1LdIyZ5VPjd+02WXAIggCasK73Duqf4EbME5WywAw43oDthqWrJ
-	L96cgu6+Ka7ao601reZA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=i2B5QiJrZZcMRoxXsBjUhgSfToDplKR2W5Eh/Zbv23s=; b=PdZEFSW8FV7U44
+	CAhdC7rTZcUerEAXMumYeR7bQq+5BEFsrdhFIDE1cI3lT/91910iMyScIhWeZp76ZLRicdX5PAnI7
+	VVjxyqJkJHCQG+ko6NryXQ1cNeHaeDaRhBcpoIeP9BkYpxXZzdR9/BEcAj3EmgUJXWA5e1yTn5LYN
+	r4udjt6JAc2/Zxrz84g6EmQ6pe0xVKkoPbadJyNl01DcJQzlyHjHmopuV3bfhU5Ujj46hnOrxKOhg
+	MF1ppNG/H7+E5cN3z+rkILu8k6b674P0XKd5Sk6kEY38ZHpg3JOYonyBVIJzKif4fO3THlo8I7L/S
+	G9gbL067GrLle34Ut8PA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iIaYJ-0001gr-2I; Thu, 10 Oct 2019 15:40:31 +0000
-Received: from s3.sipsolutions.net ([2a01:4f8:191:4433::2]
- helo=sipsolutions.net)
+	id 1iIbHK-0003K3-7E; Thu, 10 Oct 2019 16:27:02 +0000
+Received: from mail-pl1-x641.google.com ([2607:f8b0:4864:20::641])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iIaYF-0001gJ-VR
- for ath10k@lists.infradead.org; Thu, 10 Oct 2019 15:40:29 +0000
-Received: by sipsolutions.net with esmtpsa
- (TLS1.3:ECDHE_SECP256R1__RSA_PSS_RSAE_SHA256__AES_256_GCM:256)
- (Exim 4.92.2) (envelope-from <johannes@sipsolutions.net>)
- id 1iIaY1-0007Xs-HI; Thu, 10 Oct 2019 17:40:13 +0200
-Message-ID: <a2cc0ebecfb055c8b667db57d0469fe69054a69c.camel@sipsolutions.net>
-Subject: Re: [PATCH v3 1/2] mac80211: Implement Airtime-based Queue Limit (AQL)
-From: Johannes Berg <johannes@sipsolutions.net>
-To: Kan Yan <kyan@google.com>
-Date: Thu, 10 Oct 2019 17:40:12 +0200
-In-Reply-To: <20191010022502.141862-2-kyan@google.com>
- (sfid-20191010_042522_960956_7035429C)
-References: <20191010022502.141862-1-kyan@google.com>
- <20191010022502.141862-2-kyan@google.com>
- (sfid-20191010_042522_960956_7035429C)
-User-Agent: Evolution 3.30.5 (3.30.5-1.fc29) 
+ id 1iIbHF-0003J7-Uw
+ for ath10k@lists.infradead.org; Thu, 10 Oct 2019 16:26:59 +0000
+Received: by mail-pl1-x641.google.com with SMTP id e5so3030487pls.9
+ for <ath10k@lists.infradead.org>; Thu, 10 Oct 2019 09:26:57 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=/3L9d8Hq5e07DU4XHZuzPz1Kd0iVbIQrEZ53Rw3PFwc=;
+ b=oMNG8OFlEGU3PWXGkW4uWbQiN1c4TgfEUV4U5ZaRnieGiVh9zJFF289MPunGMy0uQa
+ seUQM8U2tTTWjYTuqnWM1hjDfz4EQSu6HMMR+BLW3eWSh4BlEZczW9TkQZKEJ/hk3f8b
+ 1JFjuInD9NbbsOx1TTAGItzyuIrtHBAw+AvyLljpiKbRSLyrTzWMOLnm4O599EaVohmY
+ qyXHpkXA478RmdObxZO9bhYjjODG2+x1geIWOUjM1C4N9VKcwAJdm2FwBoPqZPyewoBt
+ HCAcvkfg29toUTW1/GIlRSFNFLn9cq68xGT5V8C627JjNT5+CYI49sBWZkhztGviM0xZ
+ RQqA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=/3L9d8Hq5e07DU4XHZuzPz1Kd0iVbIQrEZ53Rw3PFwc=;
+ b=ZN2otPxuqdgJjjzGK01qFMFr03SlZtL6nnk/P/6bxEnCCMW1zyNfuxemblg8qYb97V
+ GDqfVmiN280k6QwReUy7N1gITCx4soYoRl8DrNnYgaNU3QhhQ8C6qgtbArGeAhjM+yz8
+ DOG9hs/LWfog+Ib/EfPQD9oykMDq32stbD1HaRz/14i1A0mrnCsOW7824v/tfAOwNNON
+ Szh8iTU29m0oOfGb52hcnPOIEhUs+WD5vrzUz7pkeizuByeb4Q9iRxukRh7BGHcpRVAb
+ HrW4up33qx5QDG655Z2IolaKUD3TRo8ByaLfavpLkVQo9EYj3+mPXrwEAFHHofT0P3tk
+ JNsQ==
+X-Gm-Message-State: APjAAAUYhip+uOVOAPusM1WaWTi6s40SAL60+ff55xwVzrGU8xnEOqcO
+ Fbl1TA/Jc7IR62/Hhzw/6Kp4xQ==
+X-Google-Smtp-Source: APXvYqzUtSx9TXYj7cPELtcJoIFrQb9QmW162prSdvzhCjMi66kmK7ihqlK1y9torULncYYjxLcW0w==
+X-Received: by 2002:a17:902:904b:: with SMTP id
+ w11mr8623273plz.182.1570724816801; 
+ Thu, 10 Oct 2019 09:26:56 -0700 (PDT)
+Received: from localhost.localdomain
+ (104-188-17-28.lightspeed.sndgca.sbcglobal.net. [104.188.17.28])
+ by smtp.gmail.com with ESMTPSA id o15sm6148342pjs.14.2019.10.10.09.26.55
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Thu, 10 Oct 2019 09:26:56 -0700 (PDT)
+From: Bjorn Andersson <bjorn.andersson@linaro.org>
+To: Kalle Valo <kvalo@codeaurora.org>, "David S. Miller" <davem@davemloft.net>
+Subject: [PATCH] ath10k: Correct error check of dma_map_single()
+Date: Thu, 10 Oct 2019 09:26:53 -0700
+Message-Id: <20191010162653.141303-1-bjorn.andersson@linaro.org>
+X-Mailer: git-send-email 2.23.0
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191010_084028_013064_15F629DA 
-X-CRM114-Status: GOOD (  13.84  )
-X-Spam-Score: 0.4 (/)
+X-CRM114-CacheID: sfid-20191010_092658_005109_5EDA4E75 
+X-CRM114-Status: UNSURE (   9.21  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.4 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:641 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
- 0.4 KHOP_HELO_FCRDNS       Relay HELO differs from its IP's reverse DNS
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -62,133 +96,40 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: make-wifi-fast@lists.bufferbloat.net, toke@redhat.com,
- linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
- yiboz@codeaurora.org, nbd@nbd.name
+Cc: netdev@vger.kernel.org, linux-wireless@vger.kernel.org,
+ linux-kernel@vger.kernel.org, stable@vger.kernel.org,
+ ath10k@lists.infradead.org, Niklas Cassel <niklas.cassel@linaro.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Hi,
+The return value of dma_map_single() should be checked for errors using
+dma_mapping_error(), rather than testing for NULL. Correct this.
 
-A couple of points...
+Fixes: 1807da49733e ("ath10k: wmi: add management tx by reference support over wmi")
+Cc: stable@vger.kernel.org
+Reported-by: Niklas Cassel <niklas.cassel@linaro.org>
+Signed-off-by: Bjorn Andersson <bjorn.andersson@linaro.org>
+---
+ drivers/net/wireless/ath/ath10k/mac.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-First, I'd like Toke to review & ack this if possible :-)
-
-Second, I probably won't apply this until I return from vacation (will
-be out next week & the week after).
-
-Third, a couple of more comments on the code:
-
-> +/* The per TXQ firmware queue limit in airtime */
-
-I was pretty sure I mentioned it *somewhere*, but I think just calling
-this "device" or something would be more general. If you don't mind, I
-can edit that also (unless you have other reasons to resubmit?)
-
-> +/**
-> + * ieee80211_sta_update_pending_airtime - update txq's estimated airtime
-> + *
-> + * Update the estimated total airtime of frames queued in a lower layer queue.
-> + *
-> + * The estimated airtime is calculated for each frame using the last reported
-> + * data rate and stored in the SKB's CB. Once the frame is completed, the same
-> + * airtime stored in the CB should be subtracted from a txq's pending airtime
-
-"stored in the CB" should probably be just given as an example "(e.g.
-stored in the CB)"
-
-> + * count.
-
-"count" is a bit odd for a time value, just remove "count"?
-
-(again, I can fix these)
-
-> +/**
-> + * ieee80211_txq_aql_check - check if a txq can send frame to device
-
-I wonder if this really should even be have "aql" in the name? It's also
-going to return NULL if there's nothing on the TXQ, for example, right?
-
-> +	len = scnprintf(buf, sizeof(buf),
-> +			"AC	AQL limit low	AQL limit high\n"
-> +			"0	%u		%u\n"
-> +			"1	%u		%u\n"
-> +			"2	%u		%u\n"
-> +			"3	%u		%u\n",
-
-BK/BE/VI/VO instead of 0/1/23?
-
-> +			local->aql_txq_limit_low[0],
-> +			local->aql_txq_limit_high[0],
-> +			local->aql_txq_limit_low[1],
-> +			local->aql_txq_limit_high[1],
-> +			local->aql_txq_limit_low[2],
-> +			local->aql_txq_limit_high[2],
-> +			local->aql_txq_limit_low[3],
-> +			local->aql_txq_limit_high[3]);
-
-but then I guess we have to use the macros to index here too
-
-> +	local->airtime_flags =
-> +		AIRTIME_USE_TX | AIRTIME_USE_RX | AIRTIME_USE_AQL;
-
-
-might be nicer as 
-
- airtime_flags = TX |
-                 RX |
-                 AQL;
-
-but doesn't matter, just in case you have to resend anyway...
-
-> +	spin_lock_bh(&local->active_txq_lock[ac]);
-> +	if (unlikely(sta->airtime[ac].aql_tx_pending + tx_airtime > S32_MAX)) {
-> +		WARN_ONCE(1, "TXQ pending airtime underflow: %d, %d",
-> +			  sta->airtime[ac].aql_tx_pending, tx_airtime);
-
-if (WARN_ONCE(..., "...", ...))
-
-saves you the braces and the extra condition
-
-Also, hmm, doesn't this rely on 2s complement underflow or something?
-
-Maybe that should be
-
-	__signed_add_overflow(aql_tx_pending, tx_airtime,
-                              &aql_tx_pending) ||
-        aql_tx_pending < 0
-
-or so?
-
-But then again, we don't really care *that* much about overflow or
-underflow in this code path - it's not going to be security critical.
-
-But it seems that your code there actually can cause UB? That would be
-nice to avoid.
-
-Actually, that condition can never be true, right? Wait, ok, this one
-can because integer promotion?
-
-> +		sta->airtime[ac].aql_tx_pending = 0;
-> +	} else {
-> +		sta->airtime[ac].aql_tx_pending += tx_airtime;
-> +	}
-> +
-> +	if (unlikely(local->aql_total_pending_airtime + tx_airtime > S32_MAX)) {
-> +		WARN_ONCE(1, "pending airtime underflow: %d, %d",
-> +			  local->aql_total_pending_airtime, tx_airtime);
-
-same here
-
-Except aql_total_pending_airtime is still defined as s32 and that causes
-different behaviour?
-
-All this confuses me ... is it possible to write this more clearly?
-
-Thanks,
-johannes
+diff --git a/drivers/net/wireless/ath/ath10k/mac.c b/drivers/net/wireless/ath/ath10k/mac.c
+index 3d2c8fcba952..a01868938692 100644
+--- a/drivers/net/wireless/ath/ath10k/mac.c
++++ b/drivers/net/wireless/ath/ath10k/mac.c
+@@ -3904,7 +3904,7 @@ void ath10k_mgmt_over_wmi_tx_work(struct work_struct *work)
+ 			     ar->running_fw->fw_file.fw_features)) {
+ 			paddr = dma_map_single(ar->dev, skb->data,
+ 					       skb->len, DMA_TO_DEVICE);
+-			if (!paddr)
++			if (dma_mapping_error(ar->dev, paddr))
+ 				continue;
+ 			ret = ath10k_wmi_mgmt_tx_send(ar, skb, paddr);
+ 			if (ret) {
+-- 
+2.23.0
 
 
 _______________________________________________
