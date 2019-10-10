@@ -2,90 +2,74 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 587C1D192F
-	for <lists+ath10k@lfdr.de>; Wed,  9 Oct 2019 21:45:26 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 30A06D1E67
+	for <lists+ath10k@lfdr.de>; Thu, 10 Oct 2019 04:25:28 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:References:
-	To:From:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=/YUHfHeqrCU0OfzhcAvrJoSORsZw0DVVGyd4CFqwW2s=; b=DBH2ckHIZNtTjbEZHLsNmSS+K
-	aLB/w3NLkYO3hLVBqe592Cjdh5oAc+FKSxcWh5qy+6Umv9qmmi+fOuu6B+e6THfpvQPKbK+ywvLwx
-	yrUj4r05b5T2oHvNGcwmInbc0n7awPxm6fgiVGHWkHeV0wga8WRq00Qafh3VImVdRFjTaH88i2OwB
-	7Mm07runnmmqU6esbJ7EOKOZdrmsW475R/JpfsZehiUCQw43Yq1bhn6xZxFP8bsmPia9SmMbxbeft
-	67RflOxbfUi80/6GbtYn+nb5v+tsBRzNyBMlU09A2JdL7KF2zdCQ9sG978kswj9Jkz7LN5Z8nzhmv
-	XhQzABj8A==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:To:From:Subject:Mime-Version:Message-Id
+	:Date:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=mIeRqncTnacFZjmSvGCeCcwG9t4ZNWw07dBJjhYhpW0=; b=Uz4v1E05RAM5dK
+	lfvJuAHH23e1DuK+2IAGhrg7JbQVlPRUxvR1eZ9UThA91d5qk6lPb4nizgYhdn75izxv7PhMl97tJ
+	yOVIRHjGCwAKL8lyF54B3s5C+4y7ejJ4fQ6RX1u6MneDNx4ELBz8w5emnqwuD+hmDRl/QqDQD0CvT
+	FNuFkIJwmx3on1JviF831HMyD5SVEbuYiQ709nm7WIaonbOMuBA8sF0swz620iI58CJ5QSIXh5aIR
+	8w5AUyxIRn5oscGmnX2cJlfbGYuP9aO6OYchcUX7GY8tlhsZ6+SAdE/F7fZNUrPwvJux2wIsawcVe
+	mTuaOKjcDFkRE1EQ+3sw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.2 #3 (Red Hat Linux))
-	id 1iIHtj-0003zk-U0; Wed, 09 Oct 2019 19:45:23 +0000
-Received: from mail-lj1-x243.google.com ([2a00:1450:4864:20::243])
+	id 1iIO8n-0005fo-TM; Thu, 10 Oct 2019 02:25:21 +0000
+Received: from mail-pf1-x449.google.com ([2607:f8b0:4864:20::449])
  by bombadil.infradead.org with esmtps (Exim 4.92.2 #3 (Red Hat Linux))
- id 1iIHte-0003vr-Ma
- for ath10k@lists.infradead.org; Wed, 09 Oct 2019 19:45:20 +0000
-Received: by mail-lj1-x243.google.com with SMTP id y3so3724684ljj.6
- for <ath10k@lists.infradead.org>; Wed, 09 Oct 2019 12:45:18 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=subject:from:to:cc:references:message-id:date:user-agent
- :mime-version:in-reply-to:content-language:content-transfer-encoding;
- bh=HmPVQEnpjipxWeyFZpCS/dPubFPvdXRXnBDLynnz6Hw=;
- b=hF4SZalCdpKxqdOPG4AOuy4m9gPQll8fjepU3K8fV1XVE42jwxnfXMS7Au/BAg2kTG
- BQ0xlx19FiR+BcABFFkGz2qxSKSIhOLmbHEBOtQvF/RlUu5kflIsaKiEbv2NBXaD9MaL
- C2MauWv9b9skhcNYTJEye4lLj/UOhjFjws75h1OUnySOb197RChzNR/usLUqxV95Ibzt
- Szksa6N/SRHQEewCaUdc/AimyDTynBvOtRT8VOjuqSwwqAYMNZztK2uOReBLpkxGy9Jv
- LwyBBYd/4x0A5OHPTpaQkEX7Jt9K0MxYns8rM1q16G6Xu8A4m/ZnVkPhirXqUWlqhBs6
- giLw==
+ id 1iIO8j-00057O-J6
+ for ath10k@lists.infradead.org; Thu, 10 Oct 2019 02:25:19 +0000
+Received: by mail-pf1-x449.google.com with SMTP id r7so3569155pfg.2
+ for <ath10k@lists.infradead.org>; Wed, 09 Oct 2019 19:25:16 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=20161025;
+ h=date:message-id:mime-version:subject:from:to:cc;
+ bh=8pgq/CJPBzYHme4OP1iERhbwcRrWZJInlW+BNY7gFGQ=;
+ b=LjVT4DuRP3siHRjeM97PhfGmplfGen12OwmQ/PglT1ts58sTq0z7wHlH4XZaxJjS9Q
+ ps5L/a0WZkQIhMa0yDjEmHNLmSloFtMavUbQ987AoeZsgT4ZzebHeScsczTJ/Ke6C4zE
+ iMBSnQj+F816TbJp5d6J0q6Hzfuw01ui3/OgwtxlFGnCFRsJDQqosXIKWrVyzEFsMntr
+ DMr34pV93QqU56dtV+RyedGcSG6n1I2tOjzyBGr2B+78849IQV/E30bhm1DcRAvUgtLh
+ PBI3mTdmTvTJthmO4dFIX6gFb9Nu675VXuSnZOxtwg62gbWisX1wohkn4auq7+PhbeU4
+ YX6g==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:subject:from:to:cc:references:message-id:date
- :user-agent:mime-version:in-reply-to:content-language
- :content-transfer-encoding;
- bh=HmPVQEnpjipxWeyFZpCS/dPubFPvdXRXnBDLynnz6Hw=;
- b=FSx8RGWIYRH+I0sTtbjNPAWd6ANTKCYAbM6gK7lj+fhsphv0SJoqW6eBdLixpqKWej
- HLZ4OYYSgughv14fDnTLHK16IIqr5bcQhb9+pcBwdGRsaTeTQ5Z+O0mmhJeafnMaNDfY
- ECZ6/5Uu3kie7YuOwuOj6PjZWRNjgBeToZIW6VrH0R5ZcjNIUK0hofnC9zz3l2rnRiDW
- des9c3KEqzC7qzO/sOFFTk4qd1E6uEHFME63kKQvio5EY+Lm7p4Al3cxaagGTdz9wBhV
- hNPwo2q8FdBtTcnrtDDvuTPPWPM39dGjvIUYDxZ07aB88qlrX2R5h1o3Yy78DEBE8ZPh
- u+LQ==
-X-Gm-Message-State: APjAAAWYa8NZ0lDgGaa5L9nMPUdByp0yd8iEQhf8xIzH46ARlfEmhxjL
- LgGafBF1BwMWJtkzgEC+XdZY1OOgFwU=
-X-Google-Smtp-Source: APXvYqwPT9zZIpgQBWMqHiuRGXolOAJXuNI8NyQAcf67PQinS2bjqXqZ4RY87fkqNwY8xGHvgoqj3g==
-X-Received: by 2002:a2e:8852:: with SMTP id z18mr3525471ljj.230.1570650316995; 
- Wed, 09 Oct 2019 12:45:16 -0700 (PDT)
-Received: from [192.168.1.244] (81-233-89-221-no75.tbcn.telia.com.
- [81.233.89.221])
- by smtp.gmail.com with ESMTPSA id g27sm660014lja.33.2019.10.09.12.45.16
- (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Wed, 09 Oct 2019 12:45:16 -0700 (PDT)
-Subject: Re: [PATCH 2/2] ath10k: switch to ieee80211_tx_dequeue_ni
-From: Erik Stromdahl <erik.stromdahl@gmail.com>
-To: Peter Oh <peter.oh@eero.com>, Kalle Valo <kvalo@codeaurora.org>
-References: <20190617200140.6189-1-erik.stromdahl@gmail.com>
- <20190617200140.6189-2-erik.stromdahl@gmail.com>
- <87eezw660r.fsf@kamboji.qca.qualcomm.com>
- <19f8023a-1943-9bf5-9a59-a7643f7692bf@eero.com>
- <fd43b218-7dc7-22dd-664b-46c55c3dd94e@gmail.com>
-Message-ID: <f1669b69-6762-1341-8822-de08d9ddd55b@gmail.com>
-Date: Wed, 9 Oct 2019 21:45:15 +0200
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
- Thunderbird/60.7.0
-MIME-Version: 1.0
-In-Reply-To: <fd43b218-7dc7-22dd-664b-46c55c3dd94e@gmail.com>
-Content-Language: en-US
+ h=x-gm-message-state:date:message-id:mime-version:subject:from:to:cc;
+ bh=8pgq/CJPBzYHme4OP1iERhbwcRrWZJInlW+BNY7gFGQ=;
+ b=MJyD2CMvwqsepIJWv4T+98Sihw7OAt0RXkDhQ6mrVhDT7/OOGNy2UnangXuyYDGaAn
+ Q3LMuEQ5NNiuvGk7Wqe3Md2qiQTLHyEmfIR9l4Hi0yc2zVanrfuRlG9AvEqNjI/ccoko
+ kquh4/6ftkLJwJT5/NlZjL8kKMw9wPE7Xtd5hjbNsZK5Tu+jjLXI7Yfp+/sWTWnA3uYa
+ cipddAE8oQkaVsQLx7z9OFEArmhxOzzbJdNZcPeicpRxSbj+5r6MyrPLjYDsICnINwuD
+ f340AsnQTgaPxO8hR2AzmWLsQ2ljwn7g8Q/CGxm8xcS8Eg2klGEqP4iONU7jodTnrL28
+ t/6Q==
+X-Gm-Message-State: APjAAAUZqeYGhk42incWwTr9BVLPQJgv0SQ+GLXch4R8dcbiicjt4pIP
+ 24Cjeh2ziBI0J+jsmQp6ao5uz7h8
+X-Google-Smtp-Source: APXvYqy2xg8KKbFIWzroLfW1okl9kYDSxQOdVYCJHqgcIuAc4XhwwuPotnFKnIzAsaNDtLnuBbcfORnP
+X-Received: by 2002:a63:4046:: with SMTP id n67mr7304981pga.200.1570674315898; 
+ Wed, 09 Oct 2019 19:25:15 -0700 (PDT)
+Date: Wed,  9 Oct 2019 19:25:00 -0700
+Message-Id: <20191010022502.141862-1-kyan@google.com>
+Mime-Version: 1.0
+X-Mailer: git-send-email 2.23.0.581.g78d2f28ef7-goog
+Subject: [PATCH v3 0/2] Implement Airtime-based Queue Limit (AQL)
+From: Kan Yan <kyan@google.com>
+To: johannes@sipsolutions.net
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191009_124518_741775_58201929 
-X-CRM114-Status: GOOD (  15.37  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20191009_192517_674426_2FE3DE32 
+X-CRM114-Status: GOOD (  10.26  )
+X-Spam-Score: -7.7 (-------)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-7.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:243 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:449 listed in]
  [list.dnswl.org]
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (erik.stromdahl[at]gmail.com)
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ -7.5 USER_IN_DEF_DKIM_WL    From: address is in the default DKIM
+ white-list
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
@@ -94,6 +78,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.0 DKIMWL_WL_MED          DKIMwl.org - Medium sender
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -105,113 +90,48 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: johannes@sipsolutions.net, linux-wireless@vger.kernel.org,
- davem@davemloft.net, ath10k@lists.infradead.org, linux-kernel@vger.kernel.org
+Cc: Kan Yan <kyan@google.com>, make-wifi-fast@lists.bufferbloat.net,
+ toke@redhat.com, linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
+ yiboz@codeaurora.org, nbd@nbd.name
+Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
+This patch series implements Airtime-based Queue Limit (AQL) in the mac80211 and Ath10k driver. It is based on an earlier version from the ChromiumOS tree[0].
 
+This version has been tested with QCA9884 platform with 4.14 kernel. Tests show AQL is able to reduce latency by an order of magnitude in a congested environment without negative impact on the throughput.
 
-On 10/9/19 9:23 PM, Erik Stromdahl wrote:
-> 
-> 
-> On 10/1/19 7:13 PM, Peter Oh wrote:
->>
->> On 10/1/19 4:48 AM, Kalle Valo wrote:
->>> Erik Stromdahl <erik.stromdahl@gmail.com> writes:
->>>
->>>> Since ath10k_mac_tx_push_txq() can be called from process context, we
->>>> must explicitly disable softirqs before the call into mac80211.
->>>>
->>>> By calling ieee80211_tx_dequeue_ni() instead of ieee80211_tx_dequeue()
->>>> we make sure softirqs are always disabled even in the case when
->>>> ath10k_mac_tx_push_txq() is called from process context.
->>>>
->>>> Calling ieee80211_tx_dequeue_ni() with softirq's already disabled
->>>> (e.g., from softirq context) should be safe as the local_bh_disable()
->>>> and local_bh_enable() functions (called from ieee80211_tx_dequeue_ni)
->>>> are fully reentrant.
->>>>
->>>> Signed-off-by: Erik Stromdahl <erik.stromdahl@gmail.com>
->>> I already applied this, but I still want to check _why_ you are changing
->>> this? Is it that you want to call ath10k_mac_tx_push_pending() from a
->>> workqueue in sdio.c in a future patch, or what? Because at the moment me
->>> and Johannes were not able to find where this is called in process
->>> context.
->>>
-> SDIO irqs are threaded irqs (at least on my iMX6 board) and hence process context.
-> I will see if I can find a trace that shows the call chain more exactly.
-> 
+[0] https://chromium-review.googlesource.com/c/chromiumos/third_party/kernel/+/1703105/7
 
-I found this backtrace in a log file:
-(it does not show the call to ieee80211_tx_dequeue_ni(), but it shows that
-ath10k_sdio_irq_handler() is called from process context)
+Kan Yan (2):
+  mac80211: Implement Airtime-based Queue Limit (AQL)
+  ath10k: Enable Airtime-based Queue Limit (AQL)
 
-          irq/62-mmc1-65    [000] ....   785.261081: ath10k_mac_op_wake_tx_queue <-ieee80211_queue_skb
-          irq/62-mmc1-65    [000] ....   785.261090: <stack trace>
-      => ieee80211_queue_skb
-      => __ieee80211_subif_start_xmit
-      => ieee80211_subif_start_xmit
-      => dev_hard_start_xmit
-      => __dev_queue_xmit
-      => dev_queue_xmit
-      => ip_finish_output2
-      => ip_finish_output
-      => ip_output
-      => ip_local_out
-      => ip_queue_xmit
-      => tcp_transmit_skb
-      => tcp_write_xmit
-      => __tcp_push_pending_frames
-      => tcp_rcv_established
-      => tcp_v4_do_rcv
-      => tcp_v4_rcv
-      => ip_local_deliver_finish
-      => ip_local_deliver
-      => ip_rcv_finish
-      => ip_rcv
-      => __netif_receive_skb_core
-      => __netif_receive_skb
-      => netif_receive_skb_internal
-      => netif_receive_skb
-      => ieee80211_deliver_skb
-      => ieee80211_rx_handlers
-      => ieee80211_prepare_and_rx_handle
-      => ieee80211_rx_napi
-      => ath10k_htt_t2h_msg_handler
-      => ath10k_htt_htc_t2h_msg_handler
-      => ath10k_sdio_mbox_rxmsg_pending_handler
-      => ath10k_sdio_irq_handler                        <- ath10k_mac_tx_push_pending() is called from here
-      => process_sdio_pending_irqs
-      => sdio_run_irqs
-      => sdhci_thread_irq
-      => irq_thread_fn
-      => irq_thread
-      => kthread
-      => ret_from_fork
-      => 0
+ drivers/net/wireless/ath/ath10k/htt_rx.c |  1 +
+ drivers/net/wireless/ath/ath10k/mac.c    |  8 ++-
+ drivers/net/wireless/ath/ath10k/txrx.c   | 11 +++-
+ include/net/cfg80211.h                   |  7 +++
+ include/net/mac80211.h                   | 43 +++++++++++++
+ net/mac80211/debugfs.c                   | 78 ++++++++++++++++++++++++
+ net/mac80211/debugfs_sta.c               | 43 ++++++++++---
+ net/mac80211/ieee80211_i.h               |  4 ++
+ net/mac80211/main.c                      |  8 ++-
+ net/mac80211/sta_info.c                  | 30 +++++++++
+ net/mac80211/sta_info.h                  |  4 ++
+ net/mac80211/tx.c                        | 46 +++++++++++++-
+ 12 files changed, 263 insertions(+), 20 deletions(-)
 
- From ath10k_sdio_irq_handler(), the call chain down to ieee80211_tx_dequeue_ni()
-looks like this:
+-- 
+Changes from v1:
+ - Fix checkpatch error.
+ - Keep iterate the list of active_txq until an eligible txq's deficit become non-negative in ieee80211_next_txq(), instead of break the loop after one iteration.
+ - Enforce the AQL limit in ath10k's pull mode in ath10k_htt_rx_tx_fetch_ind()
 
-ath10k_sdio_irq_handler() =>
-   ath10k_mac_tx_push_pending() =>
-     ath10k_mac_schedule_txq() =>
-       ath10k_mac_tx_push_txq() =>
-         ieee80211_tx_dequeue_ni()
-
-> 
->> It seems Johannes wants to fix it in mac80211.
->>
->> [PATCH v2] mac80211: keep BHs disabled while calling drv_tx_wake_queue()
->>
->> Drivers typically expect this, as it's the case for almost all cases
->> where this is called (i.e. from the TX path). Also, the code in mac80211
->> itself (if the driver calls ieee80211_tx_dequeue()) expects this as it
->> uses this_cpu_ptr() without additional protection.
->>
+Changes from v2:
+ - More coding style fixes.
+ - Fixed a bug that txq is not removed from the active_txqs list when txq.sta is null.
+ - Removed AQL queue limit check from ieee80211_txq_may_transmit(), so at least one frame will be sent to the firmware when called from ath10k_htt_rx_tx_fetch_ind() in ath10k's poll mode.
 
 _______________________________________________
 ath10k mailing list
