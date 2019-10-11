@@ -2,59 +2,91 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A2A25D3A9B
-	for <lists+ath10k@lfdr.de>; Fri, 11 Oct 2019 10:16:48 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 19720D3B3B
+	for <lists+ath10k@lfdr.de>; Fri, 11 Oct 2019 10:34:02 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=NxM46i+ww8TXmPcmWlqiDxl6pN9HKdTqHqxAP021/zU=; b=Dz0MmBs9G9fVCz
-	ZJTx/hbzRyblL8Ml0TD80gV0EccIs9o2poTVe9yDXmDHNDL8PhTL3QZ5QHL4gB6KSkK8AgYgnzpM8
-	VRMI0Z4+CCe8koC3ohcDMifL2gB4Vjbvch/FogfU642CV5nDLEDHoOZVsl1umMYqx2NPoIEhH2EZZ
-	o7sIvcpFy0FqAmovRSuWf5QGKHeaSx935gqJprMxI27Fhdh5V3/a7igZZkrpzpT2pA1WO7OdhXGWH
-	mxpoZd3Qyfu871dVK23zxy6CPRLlJzz3SL5xdqsMSZ/tuBey8bMkcXtnADDNerIZcW/CabmovCUzk
-	5RUT4kRdfUidcWWOpvMA==;
+	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
+	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=KW4T52Rx3tlijk6HpNKtZyvR+oHZVnwRD40lm0SfXLo=; b=JctHxCulec+/ME
+	4QKt7LmL0xHII4DZstRCqz7cDXdC1hzTznjQXQyJcvWCAf/TGJn8gO4kQ9mK5ewfCeMTMpQLScdmp
+	1+BNAWaYJ6Ll+O2iVUrJQEdRXwmHPdMbWot8LGiVsIplQIhJ8Q2nZGdXF/8pVdpiAG8IfqMZNQGoF
+	tTelX/F8pC58JDn61KdxsDEgnFfq+1cgyN/HqZJMMl7PO45L2Z/j43gE7VJmbM89LcAszb7UccnZJ
+	B4ebdMdhrnDkgSGvLg/70NmLUsYO2acjMhvDx5Cc301ziyVKUCugO+OWRwWDbf1BVwkDgvixbdej3
+	WZMkGQGnk8VnLYu/OW/g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iIq6N-0001eC-9N; Fri, 11 Oct 2019 08:16:43 +0000
-Received: from s3.sipsolutions.net ([2a01:4f8:191:4433::2]
- helo=sipsolutions.net)
+	id 1iIqN4-0007WX-QR; Fri, 11 Oct 2019 08:33:58 +0000
+Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iIq6I-0001dI-Fv
- for ath10k@lists.infradead.org; Fri, 11 Oct 2019 08:16:40 +0000
-Received: by sipsolutions.net with esmtpsa
- (TLS1.3:ECDHE_SECP256R1__RSA_PSS_RSAE_SHA256__AES_256_GCM:256)
- (Exim 4.92.2) (envelope-from <johannes@sipsolutions.net>)
- id 1iIq68-000582-Kg; Fri, 11 Oct 2019 10:16:29 +0200
-Message-ID: <3cbedfe48e796b9d2c28d97c301a08a03b42869c.camel@sipsolutions.net>
-Subject: Re: [PATCH v3 1/2] mac80211: Implement Airtime-based Queue Limit (AQL)
-From: Johannes Berg <johannes@sipsolutions.net>
-To: Kan Yan <kyan@google.com>, Toke =?ISO-8859-1?Q?H=F8iland-J=F8rgensen?=
- <toke@redhat.com>
-Date: Fri, 11 Oct 2019 10:16:27 +0200
-In-Reply-To: <CA+iem5u8p7pDZw-QvqU285p7F5AunN3Z4YyS=TjAd9xbKqegnQ@mail.gmail.com>
- (sfid-20191011_042420_744343_355715ED)
-References: <20191010022502.141862-1-kyan@google.com>
- <20191010022502.141862-2-kyan@google.com>
- <a2cc0ebecfb055c8b667db57d0469fe69054a69c.camel@sipsolutions.net>
- <87ftk0jr70.fsf@toke.dk>
- <CA+iem5u8p7pDZw-QvqU285p7F5AunN3Z4YyS=TjAd9xbKqegnQ@mail.gmail.com>
- (sfid-20191011_042420_744343_355715ED)
-User-Agent: Evolution 3.30.5 (3.30.5-1.fc29) 
+ id 1iIqN1-0007WF-86
+ for ath10k@lists.infradead.org; Fri, 11 Oct 2019 08:33:56 +0000
+Received: by smtp.codeaurora.org (Postfix, from userid 1000)
+ id B000460D35; Fri, 11 Oct 2019 08:33:54 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1570782834;
+ bh=JYWPR3LzvWjcDpMpzfmkiNQeMdbcCBhWZvYVl3wjHS4=;
+ h=Subject:From:In-Reply-To:References:To:Cc:Date:From;
+ b=bwJf6uNvmr2ok0HrhaeEOfG9iR/0GAIctzLDsVW/AmsoFpk6ANOVxoGBbzbONedRt
+ XJxnkr+WYXGQqYABn8MkroGQgEALRAEhH9G3X9/J6MlWf7yjWctznrAfo/mWnqXDS/
+ fvhbnUns6xp58AVGvrJewIRnGL/IGNtAU9Z6nhv4=
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ pdx-caf-mail.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-0.8 required=2.0 tests=ALL_TRUSTED,BAYES_00,
+ DKIM_INVALID,DKIM_SIGNED,MISSING_DATE,MISSING_MID,SPF_NONE autolearn=no
+ autolearn_force=no version=3.4.0
+Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
+ [88.114.240.156])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ (Authenticated sender: kvalo@smtp.codeaurora.org)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id E09A660112;
+ Fri, 11 Oct 2019 08:33:52 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1570782834;
+ bh=JYWPR3LzvWjcDpMpzfmkiNQeMdbcCBhWZvYVl3wjHS4=;
+ h=Subject:From:In-Reply-To:References:To:Cc:From;
+ b=hHSdPsSB2P59un1Op/e79GYZ1ITp0bv9giQLqTZOnbpXEEz4T4WGXGvNEpRYB3L0t
+ IE9SWgjk0DhJRWyZK0LjsAtxKhMA+u3T5XUWzEiU6q5EguHpe6AqpPdrbRHXALrHvs
+ CFLl9QNADnWa6W2tF3kicjZp2MTVj5eFHCn8Rm1U=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org E09A660112
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ spf=none smtp.mailfrom=kvalo@codeaurora.org
 MIME-Version: 1.0
+Subject: Re: [PATCH] ath10k: check data ack rssi enabled/disabled in htt rx
+ event
+From: Kalle Valo <kvalo@codeaurora.org>
+In-Reply-To: <1561707084-10021-1-git-send-email-bpothuno@codeaurora.org>
+References: <1561707084-10021-1-git-send-email-bpothuno@codeaurora.org>
+To: Balaji Pothunoori <bpothuno@codeaurora.org>
+User-Agent: pwcli/0.0.0-git (https://github.com/kvalo/pwcli/) Python/2.7.12
+Message-Id: <20191011083354.B000460D35@smtp.codeaurora.org>
+Date: Fri, 11 Oct 2019 08:33:54 +0000 (UTC)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191011_011638_532226_2884FEB3 
-X-CRM114-Status: GOOD (  22.41  )
-X-Spam-Score: 0.4 (/)
+X-CRM114-CacheID: sfid-20191011_013355_308696_0B16FC1B 
+X-CRM114-Status: UNSURE (   6.81  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.4 points)
+ Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [198.145.29.96 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
- 0.4 KHOP_HELO_FCRDNS       Relay HELO differs from its IP's reverse DNS
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -66,91 +98,37 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: make-wifi-fast@lists.bufferbloat.net, Yibo Zhao <yiboz@codeaurora.org>,
- linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
- Felix Fietkau <nbd@nbd.name>
+Cc: Abhishek Ambure <aambure@codeaurora.org>, linux-wireless@vger.kernel.org,
+ ath10k@lists.infradead.org, Balaji Pothunoori <bpothuno@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On Thu, 2019-10-10 at 19:24 -0700, Kan Yan wrote:
+Balaji Pothunoori <bpothuno@codeaurora.org> wrote:
 
-> > > + * ieee80211_txq_aql_check - check if a txq can send frame to device
-> > I wonder if this really should even be have "aql" in the name? It's also
-> > going to return NULL if there's nothing on the TXQ, for example, right?
+> For all data packets transmitted, host gets htt tx completion event. Some QCA9984
+> firmware releases support WMI_SERVICE_TX_DATA_ACK_RSSI, which gives data
+> ack rssi values to host through htt event of data tx completion. Data ack rssi
+> values are valid if A0 bit is set in HTT rx message. So enable the feature also
+> for QCA9884.
 > 
-> Renamed to  ieee80211_txq_airtime_check()
-
-:)
-
-> This function is not for finding next eligible txq, but return a
-> boolean to indicate if a given txq can send more packets to device. It
-> is also called from ath10k:
-> static bool ath10k_mac_tx_can_push(struct ieee80211_hw *hw,
->                                    struct ieee80211_txq *txq)
-> {
->        ...
->         if (!ieee80211_txq_airtime_check(hw, txq))
->                 return false;
-
-Sure, I get that.
-
-I phrased this badly before because I neglected to look at the code of
-the function closely.
-
-You were documenting it as
-
-+ * Return true if the AQL's airtime limit has not been reached and the txq can
-+ * continue to send more packets to the device. Otherwise return false.
-
-but with the current implementation that's not really true. For example,
-if there are no packets on the TXQ at all, then the function still
-returns true, even if it's not true that "the txq can continue to send
-more packets to the device".
-
-So I guess really what I should ask is if the documentation shouldn't be
-rephrased to say something like
-
-	[...] has not been reached and the TXQ is eligible to send
-        packets to the device, regardless of whether or not it currently
-        can or cannot (e.g. if it has no packets, or is stopped, etc.)
-
-to make it more obvious that this really is *only* concerned about the
-airtime aspects.
-
-> > But then again, we don't really care *that* much about overflow or
-> > underflow in this code path - it's not going to be security critical.
-> > But it seems that your code there actually can cause UB? That would be
-> > nice to avoid.
-> > Actually, that condition can never be true, right? Wait, ok, this one
-> > can because integer promotion?
+> Tested HW: QCA9984
+> Tested FW: 10.4-3.9.0.2-00044
 > 
->  I don't think that condition could happen. The WARN_ONCE() was added
-> per your earlier comment. The older version don't have underflow check
-> and reset pending_airtime part and I didn't find any issues.
+> Signed-off-by: Abhishek Ambure <aambure@codeaurora.org>
+> Signed-off-by: Balaji Pothunoori <bpothuno@codeaurora.org>
+> [kvalo@codeaurora.org: improve commit log]
+> Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 
-Of course it will never happen with a valid driver :-)
+Patch applied to ath-next branch of ath.git, thanks.
 
-But it seems like a very easy mistake to make - add an estimate, and
-later subtract the actual airtime, which may be more ...
+cc78dc3b7906 ath10k: enable transmit data ack RSSI for QCA9884
 
-> > Except aql_total_pending_airtime is still defined as s32 and that causes
-> > different behaviour?
-> > All this confuses me ... is it possible to write this more clearly?
-> 
-> I revised it to something similar to the original version, which
-> ieee80211_sta_update_pending_airtime() takes extra parameter to
-> indicate whether it is for a tx completion event.
-> void ieee80211_sta_update_pending_airtime(struct ieee80211_sta *pubsta, u8 tid,
->                                           u32 tx_airtime, bool tx_completed)
-> This help get rid of the problem that airtime need be signed. Also
-> added the inline function of
-> ieee80211_sta_register/release_pending_airtime() as you suggested.
+-- 
+https://patchwork.kernel.org/patch/11021495/
 
-ok
-
-johannes
+https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
 
 
 _______________________________________________
