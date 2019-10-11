@@ -2,74 +2,74 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2EFCCD3B76
-	for <lists+ath10k@lfdr.de>; Fri, 11 Oct 2019 10:44:12 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5AF2DD3B86
+	for <lists+ath10k@lfdr.de>; Fri, 11 Oct 2019 10:46:33 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
-	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=T78R+lJUMohiHGAw7Rhn0rX4ax6JxkXE0PQa2Vo68+A=; b=lCfl1kgv8dSqVq
-	bQ9mg/3d6QCHhI9dPi6Ls9kgBIbiLwiGSbuthJa0+SPY7Uath7nPhkR0YeRcaFqnR+cMy5OiZqS4r
-	WTIZWtDzCMenHBUnA4sbf/wsGwMH80qKTQClhUMDUS3UzIuj6kyos3swgs9BaHn9JXbclN/cHIyra
-	lI/utdlGKz9vjebHMAtq0Qc/TbpgTNVY1Gibdr4vfwuxzMptVqzK/XaF9uUBYdMPp1AClGeSu+xCU
-	iYf094MTZ+Cyxh1dpauFxtA/E8Ncj2zQkQXecMoGTiPX8M1wPuXSWA+gmmneO8iarLsyfr1K8zlc2
-	wiMVE/ky0+2YaH+sZpxg==;
+	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
+	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=rp2OnW+ylqCYlnswyBzWPbHpF3U+9E3HLgpCv7mrxaQ=; b=SCmo3m27ekSUN0
+	YqbvCUC3JGX8CJ/5IEIvETfYKGSRJVVJNgyv9/5kwSAKtzigadcw2lJ7046PuYXkDMHOH1zKM/3WM
+	IqYYKjwV93uz0Si6QysE7DGi6QEhJ8gPCv3Is7tkvgPVQq0GpfuJAIda6eaCRTeB6V3UbgHg/HR73
+	mN5iT2Q9asZ7qcr//BJke+Ot26GviqpRs75UjfzaQVFuSK8T5JihMSFmXTDjHQxjYiNsnAOs9W+Sm
+	SSQcFZXreTtjliM7CI4C95fE4zeZnLnx6ICflSekv0RN7FbORxERlQj3fyXSEHku/R11EnlJCdyi/
+	dCi9ZylSwJUOGRPYnxOg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iIqWw-0004yU-H1; Fri, 11 Oct 2019 08:44:10 +0000
+	id 1iIqZD-0006SW-LF; Fri, 11 Oct 2019 08:46:31 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iIqWs-0004y1-KB
- for ath10k@lists.infradead.org; Fri, 11 Oct 2019 08:44:08 +0000
+ id 1iIqZ9-0006S6-CT
+ for ath10k@lists.infradead.org; Fri, 11 Oct 2019 08:46:28 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 46F7060AD9; Fri, 11 Oct 2019 08:44:06 +0000 (UTC)
+ id 105B0605FE; Fri, 11 Oct 2019 08:46:27 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1570783446;
- bh=pNSzaKUDUvO9yLZxvxkObg17lYXcrKGGHE3JOH6HQxg=;
- h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=DMFuHBAjvCW5ZsXh9UHfXXNUI23/AyLGYuaWJ3RIbsNn4N8qv1N4YXG2wdUiN8Vmt
- Fpm7IM3WTaQBy9Ahcw6Ypq/aeuWze9B3BIAhXEoMG9bmH/XNUwzaNrvyRK1/ZKdKNB
- uA57f+V4lEZRmNmQP0ykfY42bqAL6MkUoMqUYv6w=
+ s=default; t=1570783587;
+ bh=M4acdj/SpnAHRs9HrnE1kZOeO7NTUoB09Mij0APM02M=;
+ h=Subject:From:In-Reply-To:References:To:Cc:Date:From;
+ b=jQuhY2GZ8hHhUc0firQV/YKwOk6UsFRJTBoROkyPdx9ja68wSgsbULVbo9T6ugJp6
+ Z3tdA0sGY9WcFfn1Xy+hTezeYRCchIGmYIwgFQPG2WAXUcADZL+KU0OuiQJKf6QE39
+ 6jyn5nQWQybTMa7+MNmRe4B2PI4k4lVagq3zoiCo=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
-X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
- DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
- version=3.4.0
+X-Spam-Status: No, score=-0.8 required=2.0 tests=ALL_TRUSTED,BAYES_00,
+ DKIM_INVALID,DKIM_SIGNED,MISSING_DATE,MISSING_MID,SPF_NONE autolearn=no
+ autolearn_force=no version=3.4.0
 Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
  [88.114.240.156])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
  (Authenticated sender: kvalo@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 0455260159;
- Fri, 11 Oct 2019 08:44:03 +0000 (UTC)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id AB0D16070D;
+ Fri, 11 Oct 2019 08:46:24 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1570783445;
- bh=pNSzaKUDUvO9yLZxvxkObg17lYXcrKGGHE3JOH6HQxg=;
- h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=m6qjQENhNG2xkYiQNV7Goh13QUPQT1IE8EP1mwqydE3QKHBTMdwmaL7ELxoOCtbl6
- bVqi44lofChnnaug5TwX3EYndajb4VBzKy+KXHC/eSIq2i8u0zkUrkikxCI7UKwIvL
- Tl+v6M2Rpyy2irmc0eoE16kf5JVx3Xo7eTXV3Svs=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 0455260159
+ s=default; t=1570783586;
+ bh=M4acdj/SpnAHRs9HrnE1kZOeO7NTUoB09Mij0APM02M=;
+ h=Subject:From:In-Reply-To:References:To:Cc:From;
+ b=f2iW8FN8ep3aygl5L2hgGUUGidm3BThqdgSxPoVxE5F0C5xby4Klaqlxgqnv4/lAf
+ AAuioDt+T/Bv7Xhm8oMFGTBhcei8uRpJl12OETYNx0C/6O+yC6nkzXvR5P82uCn1+X
+ NWQkjw/U/0QZoQ74E2mHOoXjPpHHuGM09rPSe/es=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org AB0D16070D
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  spf=none smtp.mailfrom=kvalo@codeaurora.org
-From: Kalle Valo <kvalo@codeaurora.org>
-To: Sven Eckelmann <sven@narfation.org>
-Subject: Re: [RFC PATCH 0/2] ath10k: provide survey info as accumulated data
-References: <20190918124259.17804-1-sven@narfation.org>
-Date: Fri, 11 Oct 2019 11:44:01 +0300
-In-Reply-To: <20190918124259.17804-1-sven@narfation.org> (Sven Eckelmann's
- message of "Wed, 18 Sep 2019 14:42:57 +0200")
-Message-ID: <87imovzn72.fsf@kamboji.qca.qualcomm.com>
-User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/24.5 (gnu/linux)
 MIME-Version: 1.0
+Subject: Re: [PATCH][next] ath10k: fix null dereference on pointer crash_data
+From: Kalle Valo <kvalo@codeaurora.org>
+In-Reply-To: <20191004160227.31577-1-colin.king@canonical.com>
+References: <20191004160227.31577-1-colin.king@canonical.com>
+To: Colin King <colin.king@canonical.com>
+User-Agent: pwcli/0.0.0-git (https://github.com/kvalo/pwcli/) Python/2.7.12
+Message-Id: <20191011084627.105B0605FE@smtp.codeaurora.org>
+Date: Fri, 11 Oct 2019 08:46:27 +0000 (UTC)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191011_014406_682180_720DD533 
-X-CRM114-Status: GOOD (  13.66  )
+X-CRM114-CacheID: sfid-20191011_014627_443608_5AA5A40B 
+X-CRM114-Status: UNSURE (   6.87  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-2.5 points)
@@ -97,40 +97,34 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: vnaralas@codeaurora.org, linux-wireless@vger.kernel.org,
- Sven Eckelmann <seckelmann@datto.com>, ath10k@lists.infradead.org
+Cc: linux-wireless@vger.kernel.org, netdev@vger.kernel.org,
+ kernel-janitors@vger.kernel.org, linux-kernel@vger.kernel.org,
+ ath10k@lists.infradead.org, "David S . Miller" <davem@davemloft.net>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Sven Eckelmann <sven@narfation.org> writes:
+Colin King <colin.king@canonical.com> wrote:
 
-> it was observed that ath9k provides accumulated survey counters but ath10k
-> neither provides deltas nor accumulated counters. Instead it returns
-> some value which was returned at some point from the firmware.
->
-> But as it turns out, this data is not reliable. To make it more useful,
-> ath10k has to:
->
-> * retrieve counters rather frequently for hardware which is known to use
->   firmware versions with low number counter bits (for only 14-30s)
-> * clean up received counter values 
-> * accumulate counters from firmware
->
-> A comparison of the resulting output with these fixes can be seen under
-> https://stats.freifunk-vogtland.net/d/ffv_node/nodeinfo?orgId=1&var-node=ac86749f4d60&fullscreen&panelId=5&from=1568782046974&to=1568807068706
->
-> The left side of the graph shows the output before the patches were applied
-> and the right side the output with the patches applied. Just as reference, an
-> ath9k device in the same building is
-> https://stats.freifunk-vogtland.net/d/ffv_node/nodeinfo?orgId=1&var-node=ac86740037e0&fullscreen&panelId=5&from=1568782046974&to=1568807068706
+> Currently when pointer crash_data is null the present null check
+> will also check that crash_data->ramdump_buf is null and will cause
+> a null pointer dereference on crash_data. Fix this by using the ||
+> operator instead of &&.
+> 
+> Fixes: 3f14b73c3843 ("ath10k: Enable MSA region dump support for WCN3990")
+> Signed-off-by: Colin Ian King <colin.king@canonical.com>
+> Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 
-Thanks, this looks very good to me and I had only cosmetic comments.
-Please submit next version without RFC so that I can apply these.
+Patch applied to ath-next branch of ath.git, thanks.
+
+a69d3bdd4d40 ath10k: fix null dereference on pointer crash_data
 
 -- 
+https://patchwork.kernel.org/patch/11174955/
+
 https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
+
 
 _______________________________________________
 ath10k mailing list
