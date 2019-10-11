@@ -2,66 +2,66 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7AE89D3782
-	for <lists+ath10k@lfdr.de>; Fri, 11 Oct 2019 04:24:38 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 61A10D3781
+	for <lists+ath10k@lfdr.de>; Fri, 11 Oct 2019 04:24:35 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:From:Subject:References:Mime-Version
 	:Message-Id:In-Reply-To:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=RRgt3E79wx7DWTQCIA44QHWT1PszEJOAy6MZ9ZfjY+A=; b=b53T1hvdaR/ddi
-	0Vu+IRFNbpBswEzPqEWyeMJRN4bvKKBF2sBCtKXDVBKYWAgYk2wPJiRCkzpoT3DYr5uVnV/94hnMV
-	Jlk608flxddj35XVWObvYs4X8e+8CE/ZYEHlrHsNZPNZi7mFtRdf2dFL2aQr9++K9tNJAsptdNA1M
-	xJBtrHksYbL/SZgSLh0VRlERinSKyAvSD5Hl/ojw1/YrbiXTiSdMi42vsEtttycZ5hMZu9d48YVAq
-	sRcUHB/MAsIo+I5+1BVUC6Qt5IlrDQmyD/o89lU+1ESMBuF1RrFA4PpJAKWD4OyEwt3FBOl0BqVHE
-	D7dQI/EEzYqVSMcepaXA==;
+	List-Owner; bh=U0BXc7mK1xyRsynWTGKdF5YLAPRrA+VPGCHzfSbd3Cg=; b=mVFAEE59F3LbR2
+	OBi18WB2uOxx6AnxaIF+R6JJsmZECjKRkEX/AhYPIJQuwZwvDO+fP6DY0+tPCgWq9wpQ/3Ws6+dLh
+	DdedNC3hlzrOVTepwpFvxXVqyHz9GAVkhRnRYlWGudC/s/H6+hotNPktx/AQr7iCsXHi1e5VNqFeJ
+	ibh0j5e6/WKU35+//+k0pWy2no8BC/k4+LdfPHWQvLhO2t7TNkp3vhd/+bRoCeuQ/bU1nRref6HZQ
+	PlxNDshSpnB2GUMHZS9BB93yid8SrbUhxWDpMlPxnhnq60Frp6J4gfwB5zlArlD5NQPEo1RxPkFVv
+	bPL4cwKyJQN9GJyPzcRw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iIkbc-0004IY-E7; Fri, 11 Oct 2019 02:24:36 +0000
+	id 1iIkbY-0004FQ-5K; Fri, 11 Oct 2019 02:24:32 +0000
 Received: from mail-pf1-x44a.google.com ([2607:f8b0:4864:20::44a])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iIkbQ-0004AE-UF
- for ath10k@lists.infradead.org; Fri, 11 Oct 2019 02:24:27 +0000
-Received: by mail-pf1-x44a.google.com with SMTP id a2so6285670pfo.12
- for <ath10k@lists.infradead.org>; Thu, 10 Oct 2019 19:24:21 -0700 (PDT)
+ id 1iIkbR-0004Cs-2n
+ for ath10k@lists.infradead.org; Fri, 11 Oct 2019 02:24:26 +0000
+Received: by mail-pf1-x44a.google.com with SMTP id w16so6295600pfj.9
+ for <ath10k@lists.infradead.org>; Thu, 10 Oct 2019 19:24:23 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=20161025;
  h=date:in-reply-to:message-id:mime-version:references:subject:from:to
- :cc; bh=iy3/2CPaGQldv0uXX/s6G4YvrAYLLpvHAwubBPa9QCA=;
- b=VMr258XjekpKCGS+3nfj73PHFx1hLF/ASpq9nZOeVgkYBNoNm1vEVI5xG+OSM5OWeq
- Kf0aNGphwamukpF2YfBtxlgShVAvGxS3aBqgGUWxBjpuPI8RMWKFsBuHxnoiI9YNKAxf
- taY6NGkshcYJdrE8PtSzouANc0nVTgtnU3WzL9vF3VBY/PT05rBtuq00DUOMrDuoXiyT
- 7fmaxPvFQAEL0I9i9dFERw7VOqc2muem0DTu+nZbsF433CgyQa7HAG/ab+1AQxpjpHr7
- Dq20CY0pI6SmqrgadJjj2178Hu9R9AhcTvar0UZEXKz4htmW3cVo04zwJ7BPVsArbOB8
- 8gFA==
+ :cc; bh=HmYY0PWVAFlMRzrk7cXJ/dfio3OkuBi+GUsExcPOorQ=;
+ b=q9mkOC6KaQyawkvkfk73wglKZGlIhW5WYjPuGer7egMjUfhRbWxPIF8ijxYwRchm6P
+ mnTNEz2EnFR+enjjqOcon4rzi8QO2I7DYTDBoGD22H7zs42+luWzM6OIVyxuKc3Kll+K
+ /0f+BwxLPTk7AzrpCdLzoUjGdOdeRIKeJRWGDlt9JHL9c7xXvCkEEacoxdxlqbpMEwuh
+ EUaKbNV+NGo8QjRzLxA+i0rv1a3OdhNI4H3IOIHfgkKXMy0DxfPlu3U3G6cUxIlK67dG
+ sC3oPcNM75dtuRNQSD/WLSFXY7a9jkQYIUaxgk70q/J8cJ62Vh1k6E61CSu7Laoj/d31
+ wo6Q==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:date:in-reply-to:message-id:mime-version
  :references:subject:from:to:cc;
- bh=iy3/2CPaGQldv0uXX/s6G4YvrAYLLpvHAwubBPa9QCA=;
- b=eJyIQrWdoex+Y9SSg93nRcwciYGqOzwd6JlJiZbJvTrrefdLKI4jve7jbjM5UwUkuQ
- azHQneEz4dsJKacjbRLHn79kdFuFTQibobS7cDZmzwpCXCEYcpMHMmepmdyQiPQb47Qh
- JsWkcrFJZBfQvhfcZJJ8z4dQibSydLc5vncaFPRKxnwiLaeX3RHFoTb/A6WVryQdEQnC
- jWAiT9PN2rB/swfa5tEpnUlbS633H/fGdEIfT41bArLnP1KfHAttVfbLKybTaM+GlHED
- zs/1XzIovEwdwfY9rI5lz2+WC2kX7aGQdO/wUMjxt34QwpY+6OegPWcsEuTmOQpDHiRF
- wuRg==
-X-Gm-Message-State: APjAAAUwyP5h6uMFiDRJvVOl5F41HGZFA+VkcBpZIgo1l5cAydkao9yc
- blCW3vPWsnlkRTZZTUM9LPi/Fo/B
-X-Google-Smtp-Source: APXvYqz29DqwTTe1UnQqgxi1MlDTssmPESGpdvLxWdQDigWZNzUADHNzvKsGKpFZchY/+RPNnvEKuOP0
-X-Received: by 2002:a65:5c45:: with SMTP id v5mr13882982pgr.82.1570760660700; 
- Thu, 10 Oct 2019 19:24:20 -0700 (PDT)
-Date: Thu, 10 Oct 2019 19:24:12 -0700
+ bh=HmYY0PWVAFlMRzrk7cXJ/dfio3OkuBi+GUsExcPOorQ=;
+ b=F6EXQKrM4jG3QhXij0Ssh+tpQrBxXj3EcMi65O4MKN3KkqjNDHBWYz9xORbUfafMEx
+ nDEuWLKHFvgjr/u3u+4QFdjK4w8V+EVsMXaCo1x7SlImz02kK7uDedqmOU5Y0fmuUKcP
+ z7bqZUppGGCYpKr6Sl3YCMbAz21EOXk4sDZ/JwP/HS/zf4FKnip/kL1aSvX1B9OX8+pD
+ d7wJJ4iTzg5N0haF5gpSzhAlnCEE/vUplOo4rWvALQsoCeqBYFbOAl50XMh4yWmPulbO
+ gEzpN+AVlgrkxUfDsY+ErTTukzzYBGigW64EGq0L6KY80DAEUgPre6Hz7UcDWZRsXVB5
+ NwbQ==
+X-Gm-Message-State: APjAAAU2j5i4QCo/ea+3e8R+jTjangd/KqqJA7Gw7/dmx+wsNI4UQCKx
+ k7VlGw43PBbCqNNvwx4aXW/vDgNO
+X-Google-Smtp-Source: APXvYqxY8BiQ3Fv8BLi6xeVwbFok1Wl07Ci7EYxc/1PlruwxjuKVB35a6bOxasQ7YDCHDQMs9iGlLjXI
+X-Received: by 2002:a63:db15:: with SMTP id e21mr14361491pgg.21.1570760663156; 
+ Thu, 10 Oct 2019 19:24:23 -0700 (PDT)
+Date: Thu, 10 Oct 2019 19:24:13 -0700
 In-Reply-To: <20191011022413.176208-1-kyan@google.com>
-Message-Id: <20191011022413.176208-2-kyan@google.com>
+Message-Id: <20191011022413.176208-3-kyan@google.com>
 Mime-Version: 1.0
 References: <20191011022413.176208-1-kyan@google.com>
 X-Mailer: git-send-email 2.23.0.700.g56cf767bdb-goog
-Subject: [PATCH v4 1/2] mac80211: Implement Airtime-based Queue Limit (AQL)
+Subject: [PATCH v4 2/2] ath10k: Enable Airtime-based Queue Limit (AQL)
 From: Kan Yan <kyan@google.com>
 To: johannes@sipsolutions.net
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191010_192424_983275_70784544 
-X-CRM114-Status: GOOD (  19.36  )
+X-CRM114-CacheID: sfid-20191010_192425_152128_712BABC0 
+X-CRM114-Status: GOOD (  10.10  )
 X-Spam-Score: -7.7 (-------)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-7.7 points)
@@ -101,477 +101,81 @@ Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-In order for the Fq_CoDel integrated in mac80211 layer operates effectively
-to control excessive queueing latency, the CoDel algorithm requires an
-accurate measure of how long the packets stays in the queue, aka sojourn
-time. The sojourn time measured at mac80211 layer doesn't include queueing
-latency in lower layer (firmware/hardware) and CoDel expects lower layer to
-have a short queue. However, most 802.11ac chipsets offload tasks such TX
-aggregation to firmware or hardware, thus have a deep lower layer queue.
-Without a mechanism to control the lower layer queue size, packets only
-stays in mac80211 layer transiently before being sent to firmware queue.
-As a result, the sojourn time measured by CoDel in the mac80211 layer is
-almost always lower than the CoDel latency target, hence CoDel does little
-to control the latency, even when the lower layer queue causes excessive
-latency.
-
-Byte Queue limits (BQL) is commonly used to address the similar issue with
-wired network interface. However, this method cannot be applied directly
-to the wireless network interface. Byte is not a suitable measure of queue
-depth in the wireless network, as the data rate can vary dramatically from
-station to station in the same network, from a few Mbps to over Gbps.
-
-This patch implemented an Airtime-based Queue Limit (AQL) to make CoDel
-works effectively with wireless drivers that utilized firmware/hardware
-offloading. AQL only allows each txq to release just enough packets to the
-lower layer to form 1-2 large aggregations to keep hardware fully utilized
-and keep the rest of frames in mac80211 layer to be controlled by the CoDel
-algorithm.
+Calculate the estimated airtime pending in the txqs and apply AQL to
+prevent excessive amounts of packets being queued in the firmware queue.
 
 Signed-off-by: Kan Yan <kyan@google.com>
 ---
- include/net/cfg80211.h     |  7 ++++
- include/net/mac80211.h     | 47 +++++++++++++++++++++++
- net/mac80211/debugfs.c     | 78 ++++++++++++++++++++++++++++++++++++++
- net/mac80211/debugfs_sta.c | 43 ++++++++++++++++-----
- net/mac80211/ieee80211_i.h |  4 ++
- net/mac80211/main.c        |  9 ++++-
- net/mac80211/sta_info.c    | 33 ++++++++++++++++
- net/mac80211/sta_info.h    |  4 ++
- net/mac80211/tx.c          | 46 ++++++++++++++++++++--
- 9 files changed, 257 insertions(+), 14 deletions(-)
+ drivers/net/wireless/ath/ath10k/htt_rx.c |  1 +
+ drivers/net/wireless/ath/ath10k/mac.c    |  6 ++++--
+ drivers/net/wireless/ath/ath10k/txrx.c   | 11 ++++++++---
+ 3 files changed, 13 insertions(+), 5 deletions(-)
 
-diff --git a/include/net/cfg80211.h b/include/net/cfg80211.h
-index 26e2ad2c7027..781cf4f2daa3 100644
---- a/include/net/cfg80211.h
-+++ b/include/net/cfg80211.h
-@@ -2499,6 +2499,13 @@ enum wiphy_params_flags {
+diff --git a/drivers/net/wireless/ath/ath10k/htt_rx.c b/drivers/net/wireless/ath/ath10k/htt_rx.c
+index 83a7fb68fd24..12d63fa02e8e 100644
+--- a/drivers/net/wireless/ath/ath10k/htt_rx.c
++++ b/drivers/net/wireless/ath/ath10k/htt_rx.c
+@@ -3053,6 +3053,7 @@ static void ath10k_htt_rx_tx_fetch_ind(struct ath10k *ar, struct sk_buff *skb)
  
- #define IEEE80211_DEFAULT_AIRTIME_WEIGHT	256
+ 			num_msdus++;
+ 			num_bytes += ret;
++			may_tx = ieee80211_txq_airtime_check(hw, txq);
+ 		}
+ 		ieee80211_return_txq(hw, txq, false);
+ 		ieee80211_txq_schedule_end(hw, txq->ac);
+diff --git a/drivers/net/wireless/ath/ath10k/mac.c b/drivers/net/wireless/ath/ath10k/mac.c
+index 0606416dc971..ed19a40c2c3a 100644
+--- a/drivers/net/wireless/ath/ath10k/mac.c
++++ b/drivers/net/wireless/ath/ath10k/mac.c
+@@ -3983,6 +3983,9 @@ static bool ath10k_mac_tx_can_push(struct ieee80211_hw *hw,
+ 	struct ath10k_txq *artxq = (void *)txq->drv_priv;
  
-+/* The per TXQ device queue limit in airtime */
-+#define IEEE80211_DEFAULT_AQL_TXQ_LIMIT_L	4000
-+#define IEEE80211_DEFAULT_AQL_TXQ_LIMIT_H	8000
+ 	/* No need to get locks */
++	if (!ieee80211_txq_airtime_check(hw, txq))
++		return false;
 +
-+/* The per interface airtime threshold to switch to lower queue limit */
-+#define IEEE80211_AQL_THRESHOLD			24000
-+
- /**
-  * struct cfg80211_pmksa - PMK Security Association
-  *
-diff --git a/include/net/mac80211.h b/include/net/mac80211.h
-index d26da013f7c0..65dd99974165 100644
---- a/include/net/mac80211.h
-+++ b/include/net/mac80211.h
-@@ -5543,6 +5543,53 @@ void ieee80211_send_eosp_nullfunc(struct ieee80211_sta *pubsta, int tid);
- void ieee80211_sta_register_airtime(struct ieee80211_sta *pubsta, u8 tid,
- 				    u32 tx_airtime, u32 rx_airtime);
+ 	if (ar->htt.tx_q_state.mode == HTT_TX_MODE_SWITCH_PUSH)
+ 		return true;
  
-+/**
-+ * ieee80211_sta_update_pending_airtime - update txq's estimated airtime
-+ *
-+ * Update the estimated total airtime of frames queued in device.
-+ *
-+ * The pending airtime is used to enforce queue limit by AQL to prevent too
-+ * many packets get queued in the device. The airtime can be estimated from the
-+ * station's current data rate and stored in the frame's CB field.
-+ * ieee80211_sta_register_pending_airtime() should be called to increment the
-+ * pending airtime when a frame is sent to device. The same amount of airtime
-+ * should be subtracted by calling ieee80211_sta_release_pending_airtime() when
-+ * a frame is completed, either successfully transmitted or failed.
-+ *
-+ * @pubsta: the station
-+ * @tid: the TID to update airtime for
-+ * @tx_airtime: the estimated airtime (in usec)
-+ */
-+void ieee80211_sta_update_pending_airtime(struct ieee80211_sta *pubsta,
-+					  u8 tid, u32 tx_airtime,
-+					  bool tx_completed);
-+
-+static inline void
-+ieee80211_sta_register_pending_airtime(struct ieee80211_sta *pubsta,
-+				       u8 tid, u32 tx_airtime)
-+{
-+	ieee80211_sta_update_pending_airtime(pubsta, tid, tx_airtime, false);
-+}
-+
-+static inline void
-+ieee80211_sta_release_pending_airtime(struct ieee80211_sta *pubsta,
-+				      u8 tid, u32 tx_airtime)
-+{
-+	ieee80211_sta_update_pending_airtime(pubsta, tid, tx_airtime, true);
-+}
-+
-+/**
-+ * ieee80211_txq_airtime_check - check if a txq can send frame to device
-+ *
-+ * @hw: pointer obtained from ieee80211_alloc_hw()
-+ * @txq: pointer obtained from station or virtual interface
-+ *
-+ * Return true if the AQL's airtime limit has not been reached and the txq can
-+ * continue to send more packets to the device. Otherwise return false.
-+ */
-+bool
-+ieee80211_txq_airtime_check(struct ieee80211_hw *hw, struct ieee80211_txq *txq);
-+
- /**
-  * ieee80211_iter_keys - iterate keys programmed into the device
-  * @hw: pointer obtained from ieee80211_alloc_hw()
-diff --git a/net/mac80211/debugfs.c b/net/mac80211/debugfs.c
-index 2e7f75938c51..ad7bcda1e025 100644
---- a/net/mac80211/debugfs.c
-+++ b/net/mac80211/debugfs.c
-@@ -148,6 +148,80 @@ static const struct file_operations aqm_ops = {
- 	.llseek = default_llseek,
- };
+@@ -4014,8 +4017,6 @@ static u16 ath10k_mac_update_airtime(struct ath10k *ar,
+ 	if (!txq || !txq->sta)
+ 		return airtime;
  
-+static ssize_t aql_txq_limit_read(struct file *file,
-+				  char __user *user_buf,
-+				  size_t count,
-+				  loff_t *ppos)
-+{
-+	struct ieee80211_local *local = file->private_data;
-+	char buf[400];
-+	int len = 0;
-+
-+	len = scnprintf(buf, sizeof(buf),
-+			"AC	AQL limit low	AQL limit high\n"
-+			"VO	%u		%u\n"
-+			"VI	%u		%u\n"
-+			"BE	%u		%u\n"
-+			"BK	%u		%u\n",
-+			local->aql_txq_limit_low[IEEE80211_AC_VO],
-+			local->aql_txq_limit_high[IEEE80211_AC_VO],
-+			local->aql_txq_limit_low[IEEE80211_AC_VI],
-+			local->aql_txq_limit_high[IEEE80211_AC_VI],
-+			local->aql_txq_limit_low[IEEE80211_AC_BE],
-+			local->aql_txq_limit_high[IEEE80211_AC_BE],
-+			local->aql_txq_limit_low[IEEE80211_AC_BK],
-+			local->aql_txq_limit_high[IEEE80211_AC_BK]);
-+	return simple_read_from_buffer(user_buf, count, ppos,
-+				       buf, len);
-+}
-+
-+static ssize_t aql_txq_limit_write(struct file *file,
-+				   const char __user *user_buf,
-+				   size_t count,
-+				   loff_t *ppos)
-+{
-+	struct ieee80211_local *local = file->private_data;
-+	char buf[100];
-+	size_t len;
-+	u32 ac, q_limit_low, q_limit_high;
-+	struct sta_info *sta;
-+
-+	if (count > sizeof(buf))
-+		return -EINVAL;
-+
-+	if (copy_from_user(buf, user_buf, count))
-+		return -EFAULT;
-+
-+	buf[sizeof(buf) - 1] = 0;
-+	len = strlen(buf);
-+	if (len > 0 && buf[len - 1] == '\n')
-+		buf[len - 1] = 0;
-+
-+	if (sscanf(buf, "%u %u %u", &ac, &q_limit_low, &q_limit_high) != 3)
-+		return -EINVAL;
-+
-+	if (ac >= IEEE80211_NUM_ACS)
-+		return -EINVAL;
-+
-+	local->aql_txq_limit_low[ac] = q_limit_low;
-+	local->aql_txq_limit_high[ac] = q_limit_high;
-+
-+	mutex_lock(&local->sta_mtx);
-+	list_for_each_entry(sta, &local->sta_list, list) {
-+		sta->airtime[ac].aql_limit_low = q_limit_low;
-+		sta->airtime[ac].aql_limit_high = q_limit_high;
-+	}
-+	mutex_unlock(&local->sta_mtx);
-+	return count;
-+}
-+
-+static const struct file_operations aql_txq_limit_ops = {
-+	.write = aql_txq_limit_write,
-+	.read = aql_txq_limit_read,
-+	.open = simple_open,
-+	.llseek = default_llseek,
-+};
-+
- static ssize_t force_tx_status_read(struct file *file,
- 				    char __user *user_buf,
- 				    size_t count,
-@@ -442,6 +516,10 @@ void debugfs_hw_add(struct ieee80211_local *local)
- 	debugfs_create_u16("airtime_flags", 0600,
- 			   phyd, &local->airtime_flags);
+-	if (test_bit(WMI_SERVICE_REPORT_AIRTIME, ar->wmi.svc_map))
+-		return airtime;
  
-+	DEBUGFS_ADD(aql_txq_limit);
-+	debugfs_create_u32("aql_threshold", 0600,
-+			   phyd, &local->aql_threshold);
-+
- 	statsd = debugfs_create_dir("statistics", phyd);
- 
- 	/* if the dir failed, don't put all the other things into the root! */
-diff --git a/net/mac80211/debugfs_sta.c b/net/mac80211/debugfs_sta.c
-index c8ad20c28c43..9f9b8f5ed86a 100644
---- a/net/mac80211/debugfs_sta.c
-+++ b/net/mac80211/debugfs_sta.c
-@@ -197,10 +197,12 @@ static ssize_t sta_airtime_read(struct file *file, char __user *userbuf,
- {
- 	struct sta_info *sta = file->private_data;
- 	struct ieee80211_local *local = sta->sdata->local;
--	size_t bufsz = 200;
-+	size_t bufsz = 400;
- 	char *buf = kzalloc(bufsz, GFP_KERNEL), *p = buf;
- 	u64 rx_airtime = 0, tx_airtime = 0;
- 	s64 deficit[IEEE80211_NUM_ACS];
-+	u32 q_depth[IEEE80211_NUM_ACS];
-+	u32 q_limit_l[IEEE80211_NUM_ACS], q_limit_h[IEEE80211_NUM_ACS];
- 	ssize_t rv;
- 	int ac;
- 
-@@ -212,19 +214,22 @@ static ssize_t sta_airtime_read(struct file *file, char __user *userbuf,
- 		rx_airtime += sta->airtime[ac].rx_airtime;
- 		tx_airtime += sta->airtime[ac].tx_airtime;
- 		deficit[ac] = sta->airtime[ac].deficit;
-+		q_limit_l[ac] = sta->airtime[ac].aql_limit_low;
-+		q_limit_h[ac] = sta->airtime[ac].aql_limit_high;
-+		q_depth[ac] = sta->airtime[ac].aql_tx_pending;
- 		spin_unlock_bh(&local->active_txq_lock[ac]);
+ 	spin_lock_bh(&ar->data_lock);
+ 	arsta = (struct ath10k_sta *)txq->sta->drv_priv;
+@@ -4038,6 +4039,7 @@ static u16 ath10k_mac_update_airtime(struct ath10k *ar,
  	}
+ 	spin_unlock_bh(&ar->data_lock);
  
- 	p += scnprintf(p, bufsz + buf - p,
- 		"RX: %llu us\nTX: %llu us\nWeight: %u\n"
--		"Deficit: VO: %lld us VI: %lld us BE: %lld us BK: %lld us\n",
--		rx_airtime,
--		tx_airtime,
--		sta->airtime_weight,
--		deficit[0],
--		deficit[1],
--		deficit[2],
--		deficit[3]);
-+		"Deficit: VO: %lld us VI: %lld us BE: %lld us BK: %lld us\n"
-+		"Q depth: VO: %u us VI: %u us BE: %u us BK: %u us\n"
-+		"Q limit[low/high]: VO: %u/%u VI: %u/%u BE: %u/%u BK: %u/%u\n",
-+		rx_airtime, tx_airtime, sta->airtime_weight,
-+		deficit[0], deficit[1], deficit[2], deficit[3],
-+		q_depth[0], q_depth[1], q_depth[2], q_depth[3],
-+		q_limit_l[0], q_limit_h[0], q_limit_l[1], q_limit_h[1],
-+		q_limit_l[2], q_limit_h[2], q_limit_l[3], q_limit_h[3]),
- 
- 	rv = simple_read_from_buffer(userbuf, count, ppos, buf, p - buf);
- 	kfree(buf);
-@@ -236,7 +241,25 @@ static ssize_t sta_airtime_write(struct file *file, const char __user *userbuf,
- {
- 	struct sta_info *sta = file->private_data;
- 	struct ieee80211_local *local = sta->sdata->local;
--	int ac;
-+	u32 ac, q_limit_l, q_limit_h;
-+	char _buf[100] = {}, *buf = _buf;
-+
-+	if (count > sizeof(_buf))
-+		return -EINVAL;
-+
-+	if (copy_from_user(buf, userbuf, count))
-+		return -EFAULT;
-+
-+	buf[sizeof(_buf) - 1] = '\0';
-+	if (sscanf(buf, "queue limit %u %u %u", &ac, &q_limit_l, &q_limit_h)
-+	    != 3)
-+		return -EINVAL;
-+
-+	if (ac >= IEEE80211_NUM_ACS)
-+		return -EINVAL;
-+
-+	sta->airtime[ac].aql_limit_low = q_limit_l;
-+	sta->airtime[ac].aql_limit_high = q_limit_h;
- 
- 	for (ac = 0; ac < IEEE80211_NUM_ACS; ac++) {
- 		spin_lock_bh(&local->active_txq_lock[ac]);
-diff --git a/net/mac80211/ieee80211_i.h b/net/mac80211/ieee80211_i.h
-index 004e2e3adb88..1d2b6f6f745c 100644
---- a/net/mac80211/ieee80211_i.h
-+++ b/net/mac80211/ieee80211_i.h
-@@ -1142,6 +1142,10 @@ struct ieee80211_local {
- 	u16 schedule_round[IEEE80211_NUM_ACS];
- 
- 	u16 airtime_flags;
-+	u32 aql_txq_limit_low[IEEE80211_NUM_ACS];
-+	u32 aql_txq_limit_high[IEEE80211_NUM_ACS];
-+	u32 aql_threshold;
-+	u32 aql_total_pending_airtime;
- 
- 	const struct ieee80211_ops *ops;
- 
-diff --git a/net/mac80211/main.c b/net/mac80211/main.c
-index 4c2702f128f3..dcbcd0f85a86 100644
---- a/net/mac80211/main.c
-+++ b/net/mac80211/main.c
-@@ -666,8 +666,15 @@ struct ieee80211_hw *ieee80211_alloc_hw_nm(size_t priv_data_len,
- 	for (i = 0; i < IEEE80211_NUM_ACS; i++) {
- 		INIT_LIST_HEAD(&local->active_txqs[i]);
- 		spin_lock_init(&local->active_txq_lock[i]);
-+		local->aql_txq_limit_low[i] = IEEE80211_DEFAULT_AQL_TXQ_LIMIT_L;
-+		local->aql_txq_limit_high[i] =
-+			IEEE80211_DEFAULT_AQL_TXQ_LIMIT_H;
- 	}
--	local->airtime_flags = AIRTIME_USE_TX | AIRTIME_USE_RX;
-+
-+	local->airtime_flags = AIRTIME_USE_TX |
-+			       AIRTIME_USE_RX |
-+			       AIRTIME_USE_AQL;
-+	local->aql_threshold = IEEE80211_AQL_THRESHOLD;
- 
- 	INIT_LIST_HEAD(&local->chanctx_list);
- 	mutex_init(&local->chanctx_mtx);
-diff --git a/net/mac80211/sta_info.c b/net/mac80211/sta_info.c
-index 95eb8220e2e4..e8a7c250e7b5 100644
---- a/net/mac80211/sta_info.c
-+++ b/net/mac80211/sta_info.c
-@@ -396,6 +396,9 @@ struct sta_info *sta_info_alloc(struct ieee80211_sub_if_data *sdata,
- 		skb_queue_head_init(&sta->ps_tx_buf[i]);
- 		skb_queue_head_init(&sta->tx_filtered[i]);
- 		sta->airtime[i].deficit = sta->airtime_weight;
-+		sta->airtime[i].aql_tx_pending = 0;
-+		sta->airtime[i].aql_limit_low = local->aql_txq_limit_low[i];
-+		sta->airtime[i].aql_limit_high = local->aql_txq_limit_high[i];
- 	}
- 
- 	for (i = 0; i < IEEE80211_NUM_TIDS; i++)
-@@ -1894,6 +1897,36 @@ void ieee80211_sta_register_airtime(struct ieee80211_sta *pubsta, u8 tid,
++	ieee80211_sta_register_pending_airtime(txq->sta, txq->tid, airtime);
+ 	return airtime;
  }
- EXPORT_SYMBOL(ieee80211_sta_register_airtime);
  
-+void ieee80211_sta_update_pending_airtime(struct ieee80211_sta *pubsta, u8 tid,
-+					  u32 tx_airtime, bool tx_completed)
-+{
-+	u8 ac = ieee80211_ac_from_tid(tid);
-+	struct sta_info *sta = container_of(pubsta, struct sta_info, sta);
-+	struct ieee80211_local *local = sta->local;
+diff --git a/drivers/net/wireless/ath/ath10k/txrx.c b/drivers/net/wireless/ath/ath10k/txrx.c
+index 4102df016931..739046b34d4b 100644
+--- a/drivers/net/wireless/ath/ath10k/txrx.c
++++ b/drivers/net/wireless/ath/ath10k/txrx.c
+@@ -84,9 +84,14 @@ int ath10k_txrx_tx_unref(struct ath10k_htt *htt,
+ 		wake_up(&htt->empty_tx_wq);
+ 	spin_unlock_bh(&htt->tx_lock);
+ 
+-	if (txq && txq->sta && skb_cb->airtime_est)
+-		ieee80211_sta_register_airtime(txq->sta, txq->tid,
+-					       skb_cb->airtime_est, 0);
++	if (txq && txq->sta && skb_cb->airtime_est) {
++		if (!test_bit(WMI_SERVICE_REPORT_AIRTIME, ar->wmi.svc_map))
++			ieee80211_sta_register_airtime(txq->sta, txq->tid,
++						       skb_cb->airtime_est, 0);
 +
-+	spin_lock_bh(&local->active_txq_lock[ac]);
-+	if (tx_completed) {
-+		if (WARN_ONCE(sta->airtime[ac].aql_tx_pending < tx_airtime,
-+			      "TXQ pending airtime underflow: %u, %u",
-+			      sta->airtime[ac].aql_tx_pending, tx_airtime))
-+			sta->airtime[ac].aql_tx_pending = 0;
-+		else
-+			sta->airtime[ac].aql_tx_pending -= tx_airtime;
-+
-+		if (WARN_ONCE(local->aql_total_pending_airtime < tx_airtime,
-+			      "Device pending airtime underflow: %u, %u",
-+			      local->aql_total_pending_airtime, tx_airtime))
-+			local->aql_total_pending_airtime = 0;
-+		else
-+			local->aql_total_pending_airtime -= tx_airtime;
-+	} else {
-+		sta->airtime[ac].aql_tx_pending += tx_airtime;
-+		local->aql_total_pending_airtime += tx_airtime;
++		ieee80211_sta_release_pending_airtime(txq->sta, txq->tid,
++						      skb_cb->airtime_est);
 +	}
-+	spin_unlock_bh(&local->active_txq_lock[ac]);
-+}
-+EXPORT_SYMBOL(ieee80211_sta_update_pending_airtime);
-+
- int sta_info_move_state(struct sta_info *sta,
- 			enum ieee80211_sta_state new_state)
- {
-diff --git a/net/mac80211/sta_info.h b/net/mac80211/sta_info.h
-index 3260d4234920..6ce252407b19 100644
---- a/net/mac80211/sta_info.h
-+++ b/net/mac80211/sta_info.h
-@@ -127,11 +127,15 @@ enum ieee80211_agg_stop_reason {
- /* Debugfs flags to enable/disable use of RX/TX airtime in scheduler */
- #define AIRTIME_USE_TX		BIT(0)
- #define AIRTIME_USE_RX		BIT(1)
-+#define AIRTIME_USE_AQL		BIT(2)
  
- struct airtime_info {
- 	u64 rx_airtime;
- 	u64 tx_airtime;
- 	s64 deficit;
-+	u32 aql_tx_pending; /* Estimated airtime for frames pending in queue */
-+	u32 aql_limit_low;
-+	u32 aql_limit_high;
- };
- 
- struct sta_info;
-diff --git a/net/mac80211/tx.c b/net/mac80211/tx.c
-index f13eb2f61ccf..5f6cb4caa114 100644
---- a/net/mac80211/tx.c
-+++ b/net/mac80211/tx.c
-@@ -3669,7 +3669,8 @@ struct ieee80211_txq *ieee80211_next_txq(struct ieee80211_hw *hw, u8 ac)
- {
- 	struct ieee80211_local *local = hw_to_local(hw);
- 	struct ieee80211_txq *ret = NULL;
--	struct txq_info *txqi = NULL;
-+	struct txq_info *txqi = NULL, *head = NULL;
-+	bool found_eligible_txq = false;
- 
- 	spin_lock_bh(&local->active_txq_lock[ac]);
- 
-@@ -3680,13 +3681,26 @@ struct ieee80211_txq *ieee80211_next_txq(struct ieee80211_hw *hw, u8 ac)
- 	if (!txqi)
- 		goto out;
- 
-+	if (txqi == head && !found_eligible_txq)
-+		goto out;
-+
-+	if (!head)
-+		head = txqi;
-+
- 	if (txqi->txq.sta) {
- 		struct sta_info *sta = container_of(txqi->txq.sta,
--						struct sta_info, sta);
-+						    struct sta_info, sta);
-+		bool aql_check = ieee80211_txq_airtime_check(hw, &txqi->txq);
-+		s64 deficit = sta->airtime[txqi->txq.ac].deficit;
-+
-+		if (aql_check)
-+			found_eligible_txq = true;
- 
--		if (sta->airtime[txqi->txq.ac].deficit < 0) {
-+		if (deficit < 0)
- 			sta->airtime[txqi->txq.ac].deficit +=
- 				sta->airtime_weight;
-+
-+		if (deficit < 0 || !aql_check) {
- 			list_move_tail(&txqi->schedule_order,
- 				       &local->active_txqs[txqi->txq.ac]);
- 			goto begin;
-@@ -3740,6 +3754,32 @@ void __ieee80211_schedule_txq(struct ieee80211_hw *hw,
- }
- EXPORT_SYMBOL(__ieee80211_schedule_txq);
- 
-+bool ieee80211_txq_airtime_check(struct ieee80211_hw *hw,
-+				 struct ieee80211_txq *txq)
-+{
-+	struct sta_info *sta;
-+	struct ieee80211_local *local = hw_to_local(hw);
-+
-+	if (!(local->airtime_flags & AIRTIME_USE_AQL))
-+		return true;
-+
-+	if (!txq->sta)
-+		return true;
-+
-+	sta = container_of(txq->sta, struct sta_info, sta);
-+	if (sta->airtime[txq->ac].aql_tx_pending <
-+	    sta->airtime[txq->ac].aql_limit_low)
-+		return true;
-+
-+	if (local->aql_total_pending_airtime < local->aql_threshold &&
-+	    sta->airtime[txq->ac].aql_tx_pending <
-+	    sta->airtime[txq->ac].aql_limit_high)
-+		return true;
-+
-+	return false;
-+}
-+EXPORT_SYMBOL(ieee80211_txq_airtime_check);
-+
- bool ieee80211_txq_may_transmit(struct ieee80211_hw *hw,
- 				struct ieee80211_txq *txq)
- {
+ 	if (ar->bus_param.dev_type != ATH10K_DEV_TYPE_HL)
+ 		dma_unmap_single(dev, skb_cb->paddr, msdu->len, DMA_TO_DEVICE);
 -- 
 2.23.0.700.g56cf767bdb-goog
 
