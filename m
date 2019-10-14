@@ -2,76 +2,74 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 13B29D5D8A
-	for <lists+ath10k@lfdr.de>; Mon, 14 Oct 2019 10:32:42 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 41F45D5D9F
+	for <lists+ath10k@lfdr.de>; Mon, 14 Oct 2019 10:38:24 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
-	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=OYCcYoPovwW183y+2qNx+q/hAOzTEkMvf8RkFO38/pI=; b=Wc1JDkyOTbbhpK
-	xzNOjvIXDl++nbm7yiVukQwgNy2C3QI6aATkj3Ot9sSkWE6Wk3egDzYbZaFbqPWWx5fPqTDt1JUmM
-	Q+O5jy4ayyalefFkUexJ2fWIBAswuzOuR4aLDEcDJkHCvFpmgGO8xPHyYd908tv8E6NHoKt8vjSk2
-	B/GITE1zEFCHBN2AoyQFDBHIb2NqScoh7AiCNmlYZvAtCcjMzmTSM46CwXlPXE5igzvg1Pp1i+tCm
-	3d3Eh1kK1fKMNqcVpENL60mtoY3FQcCHLnPd7QzckQhZPp3a1MSRsLN2FTHZJl12ZhZKJTek3N3Qp
-	jkZU23QRnWFQBXh05emQ==;
+	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
+	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=lO6IIh9uCLD7hqROhDyRPZRJ1iQ4BoQ9rjxa7vSw3ZU=; b=RdLqN1J0h+RBly
+	b7gUKCMZ4PuHnMy0ncT9q9dZ8kVpp7NBN0PcY2KrQg5CW8lW9z4Of9+wJYrgkdxAhFYjSXrHbZzb1
+	7fxbGD6dHEs1aiF8HGmSw9RRvUxl9zakmk1+aTCeCxlROEHBV9k7J9NJ1Jj4nkZbQuzbrM5iUP3Y3
+	mVuy1qx4qCue8B13sPYUeX9H9BTdtEq+tV9eS4/p57+aA86hTTQn3PrOCgCU2ay87Ch29QziYBrw0
+	gjBFYYIqZA0ASzIso/SgQsVGgbmnVj3I2rLUYjwz6ddrUk6D7PNbWHj+f22OiI1n6RwNpim3IFJfB
+	ipz8qBCRqWvEc8muMBYQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iJvmR-0007sy-74; Mon, 14 Oct 2019 08:32:39 +0000
+	id 1iJvry-0001GQ-Ha; Mon, 14 Oct 2019 08:38:22 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iJvmN-0007sV-Hd
- for ath10k@lists.infradead.org; Mon, 14 Oct 2019 08:32:37 +0000
+ id 1iJvrs-0001Dd-08
+ for ath10k@lists.infradead.org; Mon, 14 Oct 2019 08:38:17 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 817B9601E7; Mon, 14 Oct 2019 08:32:34 +0000 (UTC)
+ id 9E00860953; Mon, 14 Oct 2019 08:38:15 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1571041954;
- bh=mqqICtAwQO6IrAaUIxFT7Uu3ziQTlKCLs+IOJ1bdsVE=;
- h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=XUUeeIZrI8TbhyfqZoP6OuDHJq13fKXFppsRTkNoM/uBjHEjc4Ov+tIAm21sNsxDg
- jXO/+c6lz8ULlJJ9/MLP91eJx7PwU2m63i8qduzGzF+VGjeFeoaT3BXZglKN83eS7F
- gptdYVI6qaLxMxc9nJtBbTpb20w39GPoACNz9lSo=
+ s=default; t=1571042295;
+ bh=HbjWABwB+H70HYySEKifBK1/BZaxWLgLAPLoOHWAvKI=;
+ h=Subject:From:In-Reply-To:References:To:Cc:Date:From;
+ b=iAidMy5hHB//OkdVKqRpM6zVMK0jbGEfa6pUvp01WK25IhE/yIpl2wwWp1WXhj/SG
+ dfgvLuFj6u0LGJeUoVM2jP8+W3zKF17CwhN17Hjqyo3IhBhd+VlvRe6EPXzDq2G4mM
+ 9f0HPXutlvRdPBlDgS10c1lZRNSluU8yzreHdn7o=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
-X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
- DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
- version=3.4.0
+X-Spam-Status: No, score=-0.8 required=2.0 tests=ALL_TRUSTED,BAYES_00,
+ DKIM_INVALID,DKIM_SIGNED,MISSING_DATE,MISSING_MID,SPF_NONE autolearn=no
+ autolearn_force=no version=3.4.0
 Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
  [88.114.240.156])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
  (Authenticated sender: kvalo@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 2650360256;
- Mon, 14 Oct 2019 08:32:30 +0000 (UTC)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 782F360721;
+ Mon, 14 Oct 2019 08:38:13 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1571041953;
- bh=mqqICtAwQO6IrAaUIxFT7Uu3ziQTlKCLs+IOJ1bdsVE=;
- h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=CjTLFxp2I4Aq0r4fNj7qxXzPLOND7hKWl/kODSbPW7F6SkZC3gvr+NRkQMAL57ifH
- DQliA/kyrk+g6J3Dtgj7A4nABSPkdNfjtmeEYO4+iWFXB9dxB3H8ZFJzjxQ2hPR4k2
- /sFz3BcTnfgIJYdQ5coy+pWyYIxHHlruAFf+fb2E=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 2650360256
+ s=default; t=1571042294;
+ bh=HbjWABwB+H70HYySEKifBK1/BZaxWLgLAPLoOHWAvKI=;
+ h=Subject:From:In-Reply-To:References:To:Cc:From;
+ b=WjTLtIPVUDpYZo/KSRFm6faJ+JnDsgWSwWCiZlhtFHuW5DPp9pqHlfILe8l9y6x+7
+ edLV1dt2PdP0Caf2Jdco80y8TmptLg2OtUEDcp4HuyBnE3w9W/grIlujO+wxdrUAHQ
+ DouF62tpYtlk0gbDrgOdb4n9bcUgv81+1JQCuxCw=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 782F360721
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  spf=none smtp.mailfrom=kvalo@codeaurora.org
-From: Kalle Valo <kvalo@codeaurora.org>
-To: Bjorn Andersson <bjorn.andersson@linaro.org>
-Subject: Re: [PATCH] ath10k: Correct error check of dma_map_single()
-References: <20191010162653.141303-1-bjorn.andersson@linaro.org>
- <20191011115732.044BF60BE8@smtp.codeaurora.org>
- <20191011171652.GF571@minitux>
-Date: Mon, 14 Oct 2019 11:32:28 +0300
-In-Reply-To: <20191011171652.GF571@minitux> (Bjorn Andersson's message of
- "Fri, 11 Oct 2019 10:16:52 -0700")
-Message-ID: <87a7a3zq03.fsf@kamboji.qca.qualcomm.com>
-User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/24.5 (gnu/linux)
 MIME-Version: 1.0
+Subject: Re: [PATCH 1/2] ath10k: fix array out-of-bounds access
+From: Kalle Valo <kvalo@codeaurora.org>
+In-Reply-To: <1570609089-22071-1-git-send-email-miaoqing@codeaurora.org>
+References: <1570609089-22071-1-git-send-email-miaoqing@codeaurora.org>
+To: Miaoqing Pan <miaoqing@codeaurora.org>
+User-Agent: pwcli/0.0.0-git (https://github.com/kvalo/pwcli/) Python/2.7.12
+Message-Id: <20191014083815.9E00860953@smtp.codeaurora.org>
+Date: Mon, 14 Oct 2019 08:38:15 +0000 (UTC)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191014_013235_628234_AF4B6F9D 
-X-CRM114-Status: GOOD (  11.42  )
+X-CRM114-CacheID: sfid-20191014_013816_125085_612FD98B 
+X-CRM114-Status: UNSURE (   6.95  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-2.5 points)
@@ -99,41 +97,35 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: netdev@vger.kernel.org, linux-wireless@vger.kernel.org,
- linux-kernel@vger.kernel.org, ath10k@lists.infradead.org,
- stable@vger.kernel.org, Niklas Cassel <niklas.cassel@linaro.org>,
- "David S. Miller" <davem@davemloft.net>
+Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
+ Miaoqing Pan <miaoqing@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Bjorn Andersson <bjorn.andersson@linaro.org> writes:
+Miaoqing Pan <miaoqing@codeaurora.org> wrote:
 
-> On Fri 11 Oct 04:57 PDT 2019, Kalle Valo wrote:
->
->> Bjorn Andersson <bjorn.andersson@linaro.org> wrote:
->> 
->> > The return value of dma_map_single() should be checked for errors using
->> > dma_mapping_error(), rather than testing for NULL. Correct this.
->> > 
->> > Fixes: 1807da49733e ("ath10k: wmi: add management tx by reference
->> > support over wmi")
->> > Cc: stable@vger.kernel.org
->> > Reported-by: Niklas Cassel <niklas.cassel@linaro.org>
->> > Signed-off-by: Bjorn Andersson <bjorn.andersson@linaro.org>
->> 
->> Did this fix any real bug? Or is this just something found during code review?
->> 
->
-> CONFIG_DMA_API_DEBUG screamed at us for calling dma_unmap_single()
-> without ever having called dma_mapping_error() on the return value.
+> If firmware reports rate_max > WMI_TPC_RATE_MAX(WMI_TPC_FINAL_RATE_MAX)
+> or num_tx_chain > WMI_TPC_TX_N_CHAIN, it will cause array out-of-bounds
+> access, so print a warning and reset to avoid memory corruption.
+> 
+> Tested HW: QCA9984
+> Tested FW: 10.4-3.9.0.2-00035
+> 
+> Signed-off-by: Miaoqing Pan <miaoqing@codeaurora.org>
+> Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 
-Ok, I'll add something about to the commit log in v2 so that the
-background is also documented.
+2 patches applied to ath-next branch of ath.git, thanks.
+
+c5329b2d5b8b ath10k: fix array out-of-bounds access
+486a88498434 ath10k: fix memory leak for tpc_stats_final
 
 -- 
+https://patchwork.kernel.org/patch/11180701/
+
 https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
+
 
 _______________________________________________
 ath10k mailing list
