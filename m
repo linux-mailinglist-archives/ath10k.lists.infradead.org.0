@@ -2,99 +2,88 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5249BDBBB5
-	for <lists+ath10k@lfdr.de>; Fri, 18 Oct 2019 06:05:43 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 93709DBE4A
+	for <lists+ath10k@lfdr.de>; Fri, 18 Oct 2019 09:28:33 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=WQFhNN6sp63xRDz7HGYevA60Tq/7H5gRZ+WrRdOEvxw=; b=pQAkc/0JWDAdFC
-	djk4Sr1AgJgXYuAnEEw+SS819olV2GqleskFt2xSPQxjQtAni9w5QhJvAm8WX9HLsG329TNAXn/ov
-	o0AsdohQQF8ZxMljCMyo72MpobwReguUeKVPbiDJzysUYQIoiQO585dEUT2+7Wzf3CdD3O/l+h84W
-	Q2BcyjNLnEcYdG6weioekGnDzvzBz79T4gMgoojsgI2065VkZ9L/AX16UBwXoz7FuGMwTDN4WGem5
-	9C0xrCn5oOCx2PcmDdhsdBhbafETe6MBQDkX311LKCQ0k7QjVVygdytpO3jHAva5tuhKBSXH/9U8b
-	KF4azJEqoejTdzbK791w==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=K0IXif0lTu/s0NgqytcwNEhYwSXidoSfw51ILo5bBTM=; b=iF4v8IRIlgRYyu
+	Bw+59HHr3OyslbfuKv1MDixbtADPGp8MMhf0kFglv7pgDwlLvfGDTbZRFjbVGPLMElPn4l5+RPQxQ
+	6YGS9YkSaFTj9Hf0OldEwaQcIyh4Y4am6j7pN5DO5CI8I4IdJ7zEiyl6U9YxifrtVgAkZZJJ532Zb
+	MyCZlgEB9INrO+j4veQHIYTeyM9Es9fRdZBYpOTCnHeIhJHAr3/9VzOu9E+OgLR1QOdIV3OsxnUqW
+	gg7uVzJVdKj0exthYSeHpHeSHp1XVCw8LbL0i6hgebgWC6Jb6Ma8UhDBc1dUohC4VoEImoRqgV32a
+	n8/ClQue+EJ/JO2UHxog==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iLJWE-0002Ze-Ff; Fri, 18 Oct 2019 04:05:38 +0000
-Received: from mail-pg1-x543.google.com ([2607:f8b0:4864:20::543])
+	id 1iLMgX-00012w-Ls; Fri, 18 Oct 2019 07:28:29 +0000
+Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iLJWA-0002Z9-BM
- for ath10k@lists.infradead.org; Fri, 18 Oct 2019 04:05:35 +0000
-Received: by mail-pg1-x543.google.com with SMTP id i32so2573497pgl.10
- for <ath10k@lists.infradead.org>; Thu, 17 Oct 2019 21:05:33 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=sender:date:from:to:cc:subject:message-id:references:mime-version
- :content-disposition:in-reply-to:user-agent;
- bh=Dxf8j2dEp3gTKMidNHZOyi9cs38t6awcBjwDt5BGhco=;
- b=kRzCl2sU8HhkN2FXU+AB6DHrD5pGZGK8OzQmjA2iRV6j8bod6JDJwCXwZC8OqJep3i
- QNOn6QPM8Bq+xIddUidzOPgmu00nR5ZPwUV7rrfcXd2kzv461ggEh4UgeDVYvC0n30Pq
- RaU1oHJXZyKXREXUNgwJr6IkVla6HHwlvRVaZ5SDQcJwXNjhLA+evDK9MEmFovwM5Bfc
- HLqGNtPyecQjdt66rCHEz+h+1dr028s9/pFc3Fs65iCHDm/IGdPVpX9sDB1W1FIRzrJ5
- YFC3yFRe0G0Fs+luyOzFip9poCXoUo8sJAN3HXEZu9QoPJzGJGsHl5eIUCZctGMuOeEf
- 2oYA==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:sender:date:from:to:cc:subject:message-id
- :references:mime-version:content-disposition:in-reply-to:user-agent;
- bh=Dxf8j2dEp3gTKMidNHZOyi9cs38t6awcBjwDt5BGhco=;
- b=FdmmgHc/xbWOVK9lAXVayF5PF+z/QkQHbhDnCXqEE4cKE+nmKXRlfyM6xPmZ13jeEU
- LHC2fLsxEsMD0Pgunw5sKMcFenbctbPlCJKr+fjUylNeVderwGzmXFgujHYjgUkusA28
- PzJNJiIamJTfobHy2ZYtO+mGlu07k4vZ/5D9mJIktk86brC/5dUQQyuT1N1fPaA8xIbc
- 7IKjvtI3TrdpbZifUiuF88mm6Pjj0WElEEtX4LgcRCMyiysc+yhjWvbwg5Y4VcqaqkX7
- v4yOrQoJZavHqA2/fdZPGKnxmJZF4Na8+VgpgGzfhnkbkoln3OjY/WcQWUcERmGHLkSs
- 7aLA==
-X-Gm-Message-State: APjAAAVFw5ISuneSph2IjK8bv5iJi9+KUUHDv1DmK6xOXZQ7j3RAml65
- kOBg6CqefojvCGti9CpfHhk=
-X-Google-Smtp-Source: APXvYqx7/HwYNBy93h+fmNaI9cnTLMGY7XFYbErDicOBeRlQ0eTPm/1tR+ecZKuvPeC4oiDJ4HVdmw==
-X-Received: by 2002:a17:90a:9201:: with SMTP id
- m1mr8641712pjo.74.1571371532978; 
- Thu, 17 Oct 2019 21:05:32 -0700 (PDT)
-Received: from localhost ([2600:1700:e321:62f0:329c:23ff:fee3:9d7c])
- by smtp.gmail.com with ESMTPSA id m2sm6433577pff.154.2019.10.17.21.05.31
- (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Thu, 17 Oct 2019 21:05:31 -0700 (PDT)
-Date: Thu, 17 Oct 2019 21:05:30 -0700
-From: Guenter Roeck <linux@roeck-us.net>
-To: Kalle Valo <kvalo@codeaurora.org>
-Subject: Re: [PATCH 2/2] Fix a NULL-ptr-deref bug in
- ath10k_usb_alloc_urb_from_pipe
-Message-ID: <20191018040530.GA28167@roeck-us.net>
-References: <20190804003101.11541-1-benquike@gmail.com>
- <20190831213139.GA32507@roeck-us.net>
- <87ftlgqw42.fsf@kamboji.qca.qualcomm.com>
+ id 1iLMgT-000114-Lq
+ for ath10k@lists.infradead.org; Fri, 18 Oct 2019 07:28:27 +0000
+Received: by smtp.codeaurora.org (Postfix, from userid 1000)
+ id A464A60A73; Fri, 18 Oct 2019 07:28:22 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1571383702;
+ bh=ozyRCRj8gSIWs3v8F2NQ5Y9Vjt3xopcZa1rQk6KxJL0=;
+ h=From:To:Cc:Subject:Date:From;
+ b=fYeJlwPstbH6n+QNkKn9TOBNWtaXZfBdYSZgh9/HQXwRcrW5i68DJ7Q59WGa0gUHe
+ wywcnvks9v3vjlq1K/dhOb6AdbJ8C2JWiR16xI69J9j+t8pc15r+nc+/oZ3VqsbXeE
+ J6E7u0GfQQ7fAJ7q1vhiCZyvuk1PDqcg3yG+b8uI=
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ pdx-caf-mail.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
+ DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
+ version=3.4.0
+Received: from wgong-HP-Z240-SFF-Workstation.qca.qualcomm.com (unknown
+ [180.166.53.21])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
+ (No client certificate requested)
+ (Authenticated sender: wgong@smtp.codeaurora.org)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 8880460588;
+ Fri, 18 Oct 2019 07:28:21 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
+ s=default; t=1571383702;
+ bh=ozyRCRj8gSIWs3v8F2NQ5Y9Vjt3xopcZa1rQk6KxJL0=;
+ h=From:To:Cc:Subject:Date:From;
+ b=fYeJlwPstbH6n+QNkKn9TOBNWtaXZfBdYSZgh9/HQXwRcrW5i68DJ7Q59WGa0gUHe
+ wywcnvks9v3vjlq1K/dhOb6AdbJ8C2JWiR16xI69J9j+t8pc15r+nc+/oZ3VqsbXeE
+ J6E7u0GfQQ7fAJ7q1vhiCZyvuk1PDqcg3yG+b8uI=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 8880460588
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ spf=none smtp.mailfrom=wgong@codeaurora.org
+From: Wen Gong <wgong@codeaurora.org>
+To: ath10k@lists.infradead.org
+Subject: [PATCH v7 0/3] ath10k: improve throughout of TX of sdio
+Date: Fri, 18 Oct 2019 15:27:47 +0800
+Message-Id: <20191018072750.10372-1-wgong@codeaurora.org>
+X-Mailer: git-send-email 2.23.0
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <87ftlgqw42.fsf@kamboji.qca.qualcomm.com>
-User-Agent: Mutt/1.9.4 (2018-02-28)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191017_210534_394634_9BE70F3A 
-X-CRM114-Status: GOOD (  20.16  )
-X-Spam-Score: 0.4 (/)
+X-CRM114-CacheID: sfid-20191018_002825_739422_A959208B 
+X-CRM114-Status: UNSURE (   7.76  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.4 points)
+ Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:543 listed in]
- [list.dnswl.org]
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (groeck7[at]gmail.com)
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit (groeck7[at]gmail.com)
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [198.145.29.96 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -106,69 +95,54 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Mathias Payer <mathias.payer@nebelwelt.net>, netdev@vger.kernel.org,
- linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
- ath10k@lists.infradead.org, Hui Peng <benquike@gmail.com>, davem@davemloft.net
+Cc: linux-wireless@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On Sun, Sep 01, 2019 at 11:06:05AM +0300, Kalle Valo wrote:
-> Guenter Roeck <linux@roeck-us.net> writes:
-> 
-> > Hi,
-> >
-> > On Sat, Aug 03, 2019 at 08:31:01PM -0400, Hui Peng wrote:
-> >> The `ar_usb` field of `ath10k_usb_pipe_usb_pipe` objects
-> >> are initialized to point to the containing `ath10k_usb` object
-> >> according to endpoint descriptors read from the device side, as shown
-> >> below in `ath10k_usb_setup_pipe_resources`:
-> >> 
-> >> for (i = 0; i < iface_desc->desc.bNumEndpoints; ++i) {
-> >>         endpoint = &iface_desc->endpoint[i].desc;
-> >> 
-> >>         // get the address from endpoint descriptor
-> >>         pipe_num = ath10k_usb_get_logical_pipe_num(ar_usb,
-> >>                                                 endpoint->bEndpointAddress,
-> >>                                                 &urbcount);
-> >>         ......
-> >>         // select the pipe object
-> >>         pipe = &ar_usb->pipes[pipe_num];
-> >> 
-> >>         // initialize the ar_usb field
-> >>         pipe->ar_usb = ar_usb;
-> >> }
-> >> 
-> >> The driver assumes that the addresses reported in endpoint
-> >> descriptors from device side  to be complete. If a device is
-> >> malicious and does not report complete addresses, it may trigger
-> >> NULL-ptr-deref `ath10k_usb_alloc_urb_from_pipe` and
-> >> `ath10k_usb_free_urb_to_pipe`.
-> >> 
-> >> This patch fixes the bug by preventing potential NULL-ptr-deref.
-> >> 
-> >> Signed-off-by: Hui Peng <benquike@gmail.com>
-> >> Reported-by: Hui Peng <benquike@gmail.com>
-> >> Reported-by: Mathias Payer <mathias.payer@nebelwelt.net>
-> >
-> > This patch fixes CVE-2019-15099, which has CVSS scores of 7.5 (CVSS 3.0)
-> > and 7.8 (CVSS 2.0). Yet, I don't find it in the upstream kernel or in Linux
-> > next.
-> >
-> > Is the patch going to be applied to the upstream kernel anytime soon ?
-> 
-> Same answer as in patch 1:
-> 
-> https://patchwork.kernel.org/patch/11074655/
-> 
+v7: change a few code style to meet ath10k-check script
 
-Sorry to bring this up again. The ath6k patch made it into the upstream
-kernel, but the ath10k patch didn't. Did it get lost, or was there a
-reason not to apply this patch ?
+v6: remove module parameters disable_tx_comp and alt_data
+this is 3 patches of the 7 patches from ath10k: improve throughout of tcp/udp TX/RX of sdio
 
-Thanks,
-Guenter
+v5: change ath10k_htc_setup_tx_req to add check bundle_tx
+to forbidden init 2 times
+
+v4: add macro ATH10K_HTC_MSG_READY_EXT_ALT_DATA_MASK
+
+v3: change some code style
+
+v2: change some code style
+
+The bottleneck of throughout on sdio chip is the bus bandwidth, to the
+patches are all to increase the use ratio of sdio bus.
+
+These patches only affect sdio bus chip, explanation is mentioned in each
+patch's commit log.
+
+Wen Gong (3):
+  ath10k: disable TX complete indication of htt for sdio
+  ath10k: add htt TX bundle for sdio
+  ath10k: enable alt data of TX path for sdio
+
+ drivers/net/wireless/ath/ath10k/core.c   |  27 +-
+ drivers/net/wireless/ath/ath10k/core.h   |   4 +-
+ drivers/net/wireless/ath/ath10k/hif.h    |   9 +
+ drivers/net/wireless/ath/ath10k/htc.c    | 373 +++++++++++++++++++++--
+ drivers/net/wireless/ath/ath10k/htc.h    |  38 ++-
+ drivers/net/wireless/ath/ath10k/htt.c    |  13 +
+ drivers/net/wireless/ath/ath10k/htt.h    |  17 +-
+ drivers/net/wireless/ath/ath10k/htt_rx.c |  35 ++-
+ drivers/net/wireless/ath/ath10k/htt_tx.c |  38 ++-
+ drivers/net/wireless/ath/ath10k/hw.h     |   2 +-
+ drivers/net/wireless/ath/ath10k/sdio.c   |  23 ++
+ drivers/net/wireless/ath/ath10k/sdio.h   |   2 +-
+ 12 files changed, 528 insertions(+), 53 deletions(-)
+
+-- 
+2.23.0
+
 
 _______________________________________________
 ath10k mailing list
