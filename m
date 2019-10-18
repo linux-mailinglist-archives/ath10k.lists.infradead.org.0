@@ -2,74 +2,87 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3037CDC62C
-	for <lists+ath10k@lfdr.de>; Fri, 18 Oct 2019 15:35:27 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8C016DC635
+	for <lists+ath10k@lfdr.de>; Fri, 18 Oct 2019 15:35:54 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
-	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
-	References:List-Owner; bh=SP82PHNfdAy1G6v1clUp+gh3ZqEobuRWtg2QKxegP5U=; b=HOG
-	/dKbjJHGOAtySRm5qiPOloyajHL/3bPzCPpw1K113u1u0r5AY84BQfiM2L9ygGUHoSSnYLtqEZaVj
-	IfQ1Y1y4ptGKzMN/NAJOMMot1nWVUwu/o/JvCn9uiQsqXckExnJdrEkcqDYdE1YWlVyHl09v3O+Q2
-	qd90tK+0tXEhl6nMuIUjNTqLGuWS8dQ86vXuQlNfASE3LGcJZlT9+FgA5aiPSLbxbdqLm5McfvRKB
-	e7v3kYbJP61RznCC5QaIhvLTSpqZW/dtlKv6iv/4ExODxNQLB+ay93xi5+dZYtwxmPvdaBX8mhZ7N
-	Lq0fvOcOKXBmUYWduVgQKtPDghV8gdw==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
+	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=EPxyCuyhAH1sQx9onISVFjQUT3BIYHU3FZ0KdGVadGw=; b=EkSr53fHVLF5DOXcMSHIXAb41
+	bcmGrz1l9MKLxw0pY4AT/f61W68CatB/jSkXDNnZFDrL4CZUbnrPuyeRQEiApqWabV0XjTo7GjZEd
+	VbAxmhjORTn4/Ou48ubYAQotT8aieQbH3iPripCkwXoQ0wgc1NTScXYzCCn75EL2AUMN+hNtiulFs
+	XDUvkZDTSJqw4SSjOti6fwPE45BUDLcr+6814wGyquHVVUM35kUzQb1VKqJVJHknN3HBFjDfnazFJ
+	Yt9RyxH30SF4Oyrsf83FjcFjCpVhmY3BWwpCBWg4xKWEsg/o15AMtqrh4FGPXhAbjo8WcpTmM9Ybm
+	IwrZhtq0A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iLSPd-0006BQ-JI; Fri, 18 Oct 2019 13:35:25 +0000
-Received: from mail-pl1-x641.google.com ([2607:f8b0:4864:20::641])
+	id 1iLSQ5-0006I0-7r; Fri, 18 Oct 2019 13:35:53 +0000
+Received: from mail-pf1-x441.google.com ([2607:f8b0:4864:20::441])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iLSPa-0006Az-6S
- for ath10k@lists.infradead.org; Fri, 18 Oct 2019 13:35:23 +0000
-Received: by mail-pl1-x641.google.com with SMTP id u12so2855022pls.12
- for <ath10k@lists.infradead.org>; Fri, 18 Oct 2019 06:35:21 -0700 (PDT)
+ id 1iLSQ1-0006Hg-Jm
+ for ath10k@lists.infradead.org; Fri, 18 Oct 2019 13:35:51 +0000
+Received: by mail-pf1-x441.google.com with SMTP id h195so3918539pfe.5
+ for <ath10k@lists.infradead.org>; Fri, 18 Oct 2019 06:35:49 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=sender:from:to:cc:subject:date:message-id;
- bh=SsJsXFic4Ds6Lk73dimunU2ietWwXXmu0ej5RwXC+UA=;
- b=GISxMSmdHRoQ6ishW/ilP5//aMCHUDDAFH5E/LaO4lJAnU3lQ+UjGv86+RCZt4Bud/
- XGtM8zFFSIfgylwzLsT/lTUeVau2ZDrnvdfZ99U7iRL3KEDI2J0Eiranv9SYdiD/tZ5r
- jNbVgAoBgA7NvN74bvp3RsnuOUdOlzgRAZ2jHINcxPdqpDlNfQ8pBaR9yd2yZ190P6Cv
- +KpMMHwryvuA5tWM5uQNjTjHQlhyI7nQO0NcW0cFJNLuOaW+dkt3f/LTAwzPi3VxhRXl
- jrdXlFLNy+NQkwlb1u2Sv0KwwAWBecE6T1jUYOvSfCtrp2ECfoKgrv3oecszHw1MnX5a
- bDxQ==
+ h=sender:subject:to:cc:references:from:message-id:date:user-agent
+ :mime-version:in-reply-to:content-language:content-transfer-encoding;
+ bh=c+eVa0dX1kop+2tsq8KrMiGw2+4GgT6C7+BH1dW27GI=;
+ b=aHYcGgCaJslTpUkam+cYawYj1EaRI6rZvzNRxBcoYsQsVAUeK30TqNO+a87PL2sdmc
+ k2XY2kJOCh+NkZd51OE+x0vW1s818gsI/FX7cjt7ZvnB6/TcTa4BNHL8SEW7+hpfc9zU
+ VHHR+s/zt5ZBbUTrobNAW1K+9T8y0+BGJMT9SkRnGPPZGIaWU8HKwrIuvcAepvtJy/8n
+ gFF0X7vmGycIcihrIwt1ah57qxhOwhrGit/OOwQ446fA7z6gF96pIyhnDZph58x1s7Um
+ utsmLi918pqdLq0aBxbimq8aDtAm/RKC8ojpHq6A/InesFi7iQzy7ln0UOrsGWryk95O
+ Qszg==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:sender:from:to:cc:subject:date:message-id;
- bh=SsJsXFic4Ds6Lk73dimunU2ietWwXXmu0ej5RwXC+UA=;
- b=ocAlj6X2I8f9gbGjobsLw5YNWHy2Y6Tr+QqyptogkPINzzJ15cpgwQSjKPe5bPFrf4
- rTSC9NB5f8dVa7l+K76GHxE5Hi8OUl5dd8efPRnNRw+ELsTphpQsgUAN0TjJncmzSpRv
- H5sd24OiF8f/kH0WbjGZONtsho5iBTKnTMvbsYOIzyhCq/pd/RtoGCuSbwyVb2bchGpt
- j450psoEQrGh8h+9YDKz1jNIl6Kbh08jjU4+xTmJnXIF/WkztWt2g859rsChnf1sBK2y
- HEtePPd40PEzbCT34vKFV4FhRuG8+gCy/Y8sYdVbgbwc1iSD/ovDVPYDGr/CsYDHnbJu
- ud5A==
-X-Gm-Message-State: APjAAAXyGJOmMySIduJ8rTvDyFUGi4aXbVMDwcuozCb2MviNyT7qfRuo
- kVt1HubNw24XJYIcxd2HqAo=
-X-Google-Smtp-Source: APXvYqwhWW+3kGLhJnDO7JbFfbTPaSBWfQxSxgmG2d8fwyCNuvqp0qF2VBxOO19wBJfV3FxDLDt6iA==
-X-Received: by 2002:a17:902:2e:: with SMTP id 43mr10283792pla.55.1571405721031; 
- Fri, 18 Oct 2019 06:35:21 -0700 (PDT)
-Received: from localhost ([2600:1700:e321:62f0:329c:23ff:fee3:9d7c])
- by smtp.gmail.com with ESMTPSA id k66sm6163232pjb.11.2019.10.18.06.35.18
- (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Fri, 18 Oct 2019 06:35:19 -0700 (PDT)
-From: Guenter Roeck <linux@roeck-us.net>
-To: Kalle Valo <kvalo@codeaurora.org>
-Subject: [PATCH v2] ath10k: Fix a NULL-ptr-deref bug in
+ h=x-gm-message-state:sender:subject:to:cc:references:from:message-id
+ :date:user-agent:mime-version:in-reply-to:content-language
+ :content-transfer-encoding;
+ bh=c+eVa0dX1kop+2tsq8KrMiGw2+4GgT6C7+BH1dW27GI=;
+ b=O70USkWp+VwWCjGUE8CXXee0fvpvoImGi1Jwwl+eLxLGZ1l7h/lULP0AG6JWsmk/k1
+ zwih2onMk1PmdjGQ+0eDnxWg6Ehmo8Mi8ftbKmAkWP5hcV3eRbMBOX+X2466ZFsrKXPe
+ ey5liHV9pTDo8h9U+MymOfzbCnDudy+4yDr1Y4KADBBRb3GiXKnoUONjJgVifkW8vHJI
+ lbjMImjoNWbENq21/BMVKRLAVolGP6MRNapuNvblX9JNl8NYCGFSAUtekQAu3QQRFCEP
+ lqGKsUjV072zVAcdL14aOOKgGFFeQZwuhjQyYf0UDV/X4cyPbHrK0Ej6Q4j/t6xc7+84
+ aLXw==
+X-Gm-Message-State: APjAAAV/Tp8sG+mxgPuInt6OD8Ca1gckMrf8wDqIU44V1b0zpoijBWda
+ KUFEm7WfQpLBpPDNyDyxsfaBsJaK
+X-Google-Smtp-Source: APXvYqwxSMNs5esLdkoYCG6yzU0JGtKPvY5fdNDQDDB062FoWx32+QY1xWLP+X4HM9LEsUJPEbDq3g==
+X-Received: by 2002:a63:4d09:: with SMTP id a9mr9953861pgb.229.1571405748967; 
+ Fri, 18 Oct 2019 06:35:48 -0700 (PDT)
+Received: from server.roeck-us.net ([2600:1700:e321:62f0:329c:23ff:fee3:9d7c])
+ by smtp.gmail.com with ESMTPSA id
+ r185sm6728195pfr.68.2019.10.18.06.35.47
+ (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+ Fri, 18 Oct 2019 06:35:48 -0700 (PDT)
+Subject: Re: [PATCH 2/2] Fix a NULL-ptr-deref bug in
  ath10k_usb_alloc_urb_from_pipe
-Date: Fri, 18 Oct 2019 06:35:16 -0700
-Message-Id: <20191018133516.12606-1-linux@roeck-us.net>
-X-Mailer: git-send-email 2.17.1
+To: Kalle Valo <kvalo@codeaurora.org>
+References: <20190804003101.11541-1-benquike@gmail.com>
+ <20190831213139.GA32507@roeck-us.net>
+ <87ftlgqw42.fsf@kamboji.qca.qualcomm.com>
+ <20191018040530.GA28167@roeck-us.net>
+ <875zkmxz6f.fsf@kamboji.qca.qualcomm.com>
+From: Guenter Roeck <linux@roeck-us.net>
+Message-ID: <5e0e1760-07ee-efa1-1c33-3276dc81cc67@roeck-us.net>
+Date: Fri, 18 Oct 2019 06:35:46 -0700
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.8.0
+MIME-Version: 1.0
+In-Reply-To: <875zkmxz6f.fsf@kamboji.qca.qualcomm.com>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191018_063522_264154_D9ED7335 
-X-CRM114-Status: GOOD (  12.13  )
+X-CRM114-CacheID: sfid-20191018_063549_650136_DB4433A3 
+X-CRM114-Status: GOOD (  18.89  )
 X-Spam-Score: 0.4 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.4 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:641 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:441 listed in]
  [list.dnswl.org]
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
  provider (groeck7[at]gmail.com)
@@ -97,86 +110,80 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: netdev@vger.kernel.org, linux-wireless@vger.kernel.org,
- linux-kernel@vger.kernel.org, ath10k@lists.infradead.org,
- Hui Peng <benquike@gmail.com>, Guenter Roeck <linux@roeck-us.net>
-MIME-Version: 1.0
-Content-Type: text/plain; charset="us-ascii"
+Cc: Mathias Payer <mathias.payer@nebelwelt.net>, netdev@vger.kernel.org,
+ linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
+ ath10k@lists.infradead.org, Hui Peng <benquike@gmail.com>, davem@davemloft.net
 Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-From: Hui Peng <benquike@gmail.com>
+On 10/18/19 12:58 AM, Kalle Valo wrote:
+> Guenter Roeck <linux@roeck-us.net> writes:
+> 
+>> On Sun, Sep 01, 2019 at 11:06:05AM +0300, Kalle Valo wrote:
+>>> Guenter Roeck <linux@roeck-us.net> writes:
+>>>
+>>>> Hi,
+>>>>
+>>>> On Sat, Aug 03, 2019 at 08:31:01PM -0400, Hui Peng wrote:
+>>>>> The `ar_usb` field of `ath10k_usb_pipe_usb_pipe` objects
+>>>>> are initialized to point to the containing `ath10k_usb` object
+>>>>> according to endpoint descriptors read from the device side, as shown
+>>>>> below in `ath10k_usb_setup_pipe_resources`:
+>>>>>
+>>>>> for (i = 0; i < iface_desc->desc.bNumEndpoints; ++i) {
+>>>>>          endpoint = &iface_desc->endpoint[i].desc;
+>>>>>
+>>>>>          // get the address from endpoint descriptor
+>>>>>          pipe_num = ath10k_usb_get_logical_pipe_num(ar_usb,
+>>>>>                                                  endpoint->bEndpointAddress,
+>>>>>                                                  &urbcount);
+>>>>>          ......
+>>>>>          // select the pipe object
+>>>>>          pipe = &ar_usb->pipes[pipe_num];
+>>>>>
+>>>>>          // initialize the ar_usb field
+>>>>>          pipe->ar_usb = ar_usb;
+>>>>> }
+>>>>>
+>>>>> The driver assumes that the addresses reported in endpoint
+>>>>> descriptors from device side  to be complete. If a device is
+>>>>> malicious and does not report complete addresses, it may trigger
+>>>>> NULL-ptr-deref `ath10k_usb_alloc_urb_from_pipe` and
+>>>>> `ath10k_usb_free_urb_to_pipe`.
+>>>>>
+>>>>> This patch fixes the bug by preventing potential NULL-ptr-deref.
+>>>>>
+>>>>> Signed-off-by: Hui Peng <benquike@gmail.com>
+>>>>> Reported-by: Hui Peng <benquike@gmail.com>
+>>>>> Reported-by: Mathias Payer <mathias.payer@nebelwelt.net>
+>>>>
+>>>> This patch fixes CVE-2019-15099, which has CVSS scores of 7.5 (CVSS 3.0)
+>>>> and 7.8 (CVSS 2.0). Yet, I don't find it in the upstream kernel or in Linux
+>>>> next.
+>>>>
+>>>> Is the patch going to be applied to the upstream kernel anytime soon ?
+>>>
+>>> Same answer as in patch 1:
+>>>
+>>> https://patchwork.kernel.org/patch/11074655/
+>>>
+>>
+>> Sorry to bring this up again. The ath6k patch made it into the upstream
+>> kernel, but the ath10k patch didn't. Did it get lost, or was there a
+>> reason not to apply this patch ?
+> 
+> This patch had a build warning, you can see it from patchwork:
+> 
+> https://patchwork.kernel.org/patch/11074657/
+> 
+> Can someone fix it and resend the patch, please?
+> 
 
-The `ar_usb` field of `ath10k_usb_pipe_usb_pipe` objects
-are initialized to point to the containing `ath10k_usb` object
-according to endpoint descriptors read from the device side, as shown
-below in `ath10k_usb_setup_pipe_resources`:
+Done.
 
-for (i = 0; i < iface_desc->desc.bNumEndpoints; ++i) {
-        endpoint = &iface_desc->endpoint[i].desc;
-
-        // get the address from endpoint descriptor
-        pipe_num = ath10k_usb_get_logical_pipe_num(ar_usb,
-                                                endpoint->bEndpointAddress,
-                                                &urbcount);
-        ......
-        // select the pipe object
-        pipe = &ar_usb->pipes[pipe_num];
-
-        // initialize the ar_usb field
-        pipe->ar_usb = ar_usb;
-}
-
-The driver assumes that the addresses reported in endpoint
-descriptors from device side  to be complete. If a device is
-malicious and does not report complete addresses, it may trigger
-NULL-ptr-deref `ath10k_usb_alloc_urb_from_pipe` and
-`ath10k_usb_free_urb_to_pipe`.
-
-This patch fixes the bug by preventing potential NULL-ptr-deref.
-
-Signed-off-by: Hui Peng <benquike@gmail.com>
-Reported-by: Hui Peng <benquike@gmail.com>
-Reported-by: Mathias Payer <mathias.payer@nebelwelt.net>
-Reviewed-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-[groeck: Add driver tag to subject, fix build warning]
-Signed-off-by: Guenter Roeck <linux@roeck-us.net>
----
-v2: Fix build warning, add "ath10k:" to subject
-
- drivers/net/wireless/ath/ath10k/usb.c | 8 ++++++++
- 1 file changed, 8 insertions(+)
-
-diff --git a/drivers/net/wireless/ath/ath10k/usb.c b/drivers/net/wireless/ath/ath10k/usb.c
-index e1420f67f776..9ebe74ee4aef 100644
---- a/drivers/net/wireless/ath/ath10k/usb.c
-+++ b/drivers/net/wireless/ath/ath10k/usb.c
-@@ -38,6 +38,10 @@ ath10k_usb_alloc_urb_from_pipe(struct ath10k_usb_pipe *pipe)
- 	struct ath10k_urb_context *urb_context = NULL;
- 	unsigned long flags;
- 
-+	/* bail if this pipe is not initialized */
-+	if (!pipe->ar_usb)
-+		return NULL;
-+
- 	spin_lock_irqsave(&pipe->ar_usb->cs_lock, flags);
- 	if (!list_empty(&pipe->urb_list_head)) {
- 		urb_context = list_first_entry(&pipe->urb_list_head,
-@@ -55,6 +59,10 @@ static void ath10k_usb_free_urb_to_pipe(struct ath10k_usb_pipe *pipe,
- {
- 	unsigned long flags;
- 
-+	/* bail if this pipe is not initialized */
-+	if (!pipe->ar_usb)
-+		return;
-+
- 	spin_lock_irqsave(&pipe->ar_usb->cs_lock, flags);
- 
- 	pipe->urb_cnt++;
--- 
-2.17.1
-
+Guenter
 
 _______________________________________________
 ath10k mailing list
