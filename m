@@ -2,102 +2,58 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E85A1DC2AA
-	for <lists+ath10k@lfdr.de>; Fri, 18 Oct 2019 12:20:35 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9E6A4DC499
+	for <lists+ath10k@lfdr.de>; Fri, 18 Oct 2019 14:22:07 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:References
-	:In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=/0gpWquFwf5rGwp2kPWjcwqyl3g+5D98168TlVSix/c=; b=moaKNbD5cJi77T
-	1bdmUwXoY7vz6ratqnGjHyOTOiV+E4c8oxkPmHI8j5uqPTSYfq237XssUjkF/siMC7g1+AJsO1EJR
-	IWSOppNbqSZDlxrdaU38EJ5svOO26PFiY8ct9W0qtEj5bNDnlT0J39CtJWP84dgif5MyRdzLfZ4DT
-	J4IaL4W6hHQ7xJbButb8m57OITgv5fg0Fn03itKGgMrA0iNBIE4GAAeyWGgNI3RNhNRmjH4iYWacG
-	c8cExHk4nLhcMFy+2rjDmFYhMIp/+m53Mb1HPMN1bUtWXoBHrBW96ms8T1w4QrU1m5H83xYpO5Fhs
-	kTpEyRIW/Zbg1P4Xd4MQ==;
+	List-Owner; bh=QE1419fuQS0prA1t9WGjVke5E6nEo6PIVcRX1XkJg9w=; b=FjBfgyYCmM4fJ2
+	M5zN7kkkyn7dMNjO8bxF9XcD8ZHnDUalb6a+a0+FZin6LGYl+ieLGx/wEiUBMpdu69G9ffdDhDczT
+	09HyYm0cy1pPUQz4JNa6mfLxf2mhAp8qtB5lcd8B+DU8blCQosLIVuIGOtjZW2JQRCjUSzTRUiRvN
+	HWbpHxh5L89e/ANZZDy5OjMajgox4MqSM2/uYQ9PDB5O4mACIxIpNUQNAvrFomMSIWHe4otSlY9VG
+	d3etig03VQxd0YB7yfbM6qnFnQblTg6UGZ7VN/iVN8DNL1oMDBZXNOwRPjZQ7M93mbwTlYolcO/Fq
+	rO6VVY9NAGqhHbOgu/tQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iLPN1-0000Zl-UN; Fri, 18 Oct 2019 10:20:31 +0000
-Received: from us-smtp-delivery-1.mimecast.com ([207.211.31.120]
- helo=us-smtp-1.mimecast.com)
+	id 1iLRGe-0000kL-LZ; Fri, 18 Oct 2019 12:22:04 +0000
+Received: from s3.sipsolutions.net ([2a01:4f8:191:4433::2]
+ helo=sipsolutions.net)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iLPHz-0002wY-BX
- for ath10k@lists.infradead.org; Fri, 18 Oct 2019 10:15:22 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
- s=mimecast20190719; t=1571393717;
- h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
- to:to:cc:cc:mime-version:mime-version:content-type:content-type:
- content-transfer-encoding:content-transfer-encoding:
- in-reply-to:in-reply-to:references:references;
- bh=fPfdn1wJgZGqQXuVAEaKG2OM7BuZcbx3t0qWbYXPYIY=;
- b=CqO/ZpzOTBDlRsy0P/nPM2HzbfCVXmu6Q87v96ubVGedtcDrrBGsZZKrTu6DV+wlup5BJl
- 5gv4Y1O/vC6+EP7L+ew/rmOrlqLoe+1W14B+XfvxHIETLBgHJYkPUcaFkjG4mGtLtHevzW
- 5I0HU+UU3/1ar2Sbvy6fZKtu0d3oan0=
-Received: from mail-lf1-f72.google.com (mail-lf1-f72.google.com
- [209.85.167.72]) (Using TLS) by relay.mimecast.com with ESMTP id
- us-mta-321-2oLLbLzuOv67vGYTxs_9IA-1; Fri, 18 Oct 2019 06:15:15 -0400
-Received: by mail-lf1-f72.google.com with SMTP id r3so1177255lfn.13
- for <ath10k@lists.infradead.org>; Fri, 18 Oct 2019 03:15:15 -0700 (PDT)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:in-reply-to:references:date
- :message-id:mime-version;
- bh=fPfdn1wJgZGqQXuVAEaKG2OM7BuZcbx3t0qWbYXPYIY=;
- b=jc7/+3/EEBavB1HVTTjXnuVEakhK3lu+Z7q2QgZjmDQ5OpXYFPG/zHWc04OA3YgwIv
- SK+OhiYLee9iEkX7v1emTMHk2wJEi6NWBEgEpXSRY+iVPs3bN1EqhqnNBDizXMas2YAN
- RP0FohEXb8vTzlyqM/p5IZSwEjbb5p8I1eW3/E0bnyNM5388lb+RQiLgs1rCVl+WCWtI
- 2XSG33XSiCPrmlgGiUIBnY2R0zCKwI1rrhipOrtJ3+M2icy6PiN3QdDnp7VWUBvsWk8T
- QW7b2BbUNlNT3gLPCBlVdA2mn3ZYcW0EdDYMFvcQiA5AI46TwtF/rjBp9WmCCOc320jh
- Z2IQ==
-X-Gm-Message-State: APjAAAUjqN2eIkASg/7L5q6X8no7A7+GM+6tNkMWCv2e/6EGKhPv6pnd
- fCzACVMlhoRgRftxsyXKPP9+35TuTURPJnvS5RIC93ZXNC+HYhXWU9YCJhTSpeG66mCML00A6OR
- EpNJGAXUBrSSmo/rQX25AKA==
-X-Received: by 2002:a2e:501c:: with SMTP id e28mr5633713ljb.201.1571393714343; 
- Fri, 18 Oct 2019 03:15:14 -0700 (PDT)
-X-Google-Smtp-Source: APXvYqzS9cqDMn8709PKQFYCsL6fEv1jTLkzhF66c6MpwtxFxNTvaB57PQEp+T6O/S1uC35uTMRvqw==
-X-Received: by 2002:a2e:501c:: with SMTP id e28mr5633684ljb.201.1571393713934; 
- Fri, 18 Oct 2019 03:15:13 -0700 (PDT)
-Received: from alrua-x1.borgediget.toke.dk (borgediget.toke.dk.
- [85.204.121.218])
- by smtp.gmail.com with ESMTPSA id v1sm2085763lfe.34.2019.10.18.03.15.12
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Fri, 18 Oct 2019 03:15:12 -0700 (PDT)
-Received: by alrua-x1.borgediget.toke.dk (Postfix, from userid 1000)
- id 000821804C9; Fri, 18 Oct 2019 12:15:11 +0200 (CEST)
-From: Toke =?utf-8?Q?H=C3=B8iland-J=C3=B8rgensen?= <toke@redhat.com>
-To: Kan Yan <kyan@google.com>
-Subject: Re: [PATCH v2 1/4] mac80211: Rearrange ieee80211_tx_info to make room
- for tx_time_est
-In-Reply-To: <CA+iem5t6xghBocck864nDX2snWQ5O+v6_M2Jc9aCdn_hE+mFCA@mail.gmail.com>
+ id 1iLRGZ-0000gq-Pn
+ for ath10k@lists.infradead.org; Fri, 18 Oct 2019 12:22:01 +0000
+Received: by sipsolutions.net with esmtpsa
+ (TLS1.3:ECDHE_SECP256R1__RSA_PSS_RSAE_SHA256__AES_256_GCM:256)
+ (Exim 4.92.2) (envelope-from <johannes@sipsolutions.net>)
+ id 1iLRGT-00023f-Lb; Fri, 18 Oct 2019 14:21:53 +0200
+Message-ID: <10b885b3238cede2d99c6134bebcc0c8ba6f6b10.camel@sipsolutions.net>
+Subject: Re: [PATCH v2 1/4] mac80211: Rearrange ieee80211_tx_info to make
+ room for tx_time_est
+From: Johannes Berg <johannes@sipsolutions.net>
+To: Toke =?ISO-8859-1?Q?H=F8iland-J=F8rgensen?= <toke@redhat.com>, Kan Yan
+ <kyan@google.com>
+Date: Fri, 18 Oct 2019 14:21:52 +0200
+In-Reply-To: <87sgnqe4wg.fsf@toke.dk>
 References: <157115993755.2500430.12214017471129215800.stgit@toke.dk>
  <157115993866.2500430.13989567853855880476.stgit@toke.dk>
  <CA+iem5t6xghBocck864nDX2snWQ5O+v6_M2Jc9aCdn_hE+mFCA@mail.gmail.com>
-X-Clacks-Overhead: GNU Terry Pratchett
-Date: Fri, 18 Oct 2019 12:15:11 +0200
-Message-ID: <87sgnqe4wg.fsf@toke.dk>
+ <87sgnqe4wg.fsf@toke.dk>
+User-Agent: Evolution 3.30.5 (3.30.5-1.fc29) 
 MIME-Version: 1.0
-X-MC-Unique: 2oLLbLzuOv67vGYTxs_9IA-1
-X-Mimecast-Spam-Score: 0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191018_031520_622855_6A23AFC4 
-X-CRM114-Status: GOOD (  12.95  )
-X-Spam-Score: -2.5 (--)
+X-CRM114-CacheID: sfid-20191018_052159_836950_9C8435FD 
+X-CRM114-Status: UNSURE (   6.89  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.4 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.5 points)
+ Content analysis details:   (0.4 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [207.211.31.120 listed in list.dnswl.org]
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.4 KHOP_HELO_FCRDNS       Relay HELO differs from its IP's reverse DNS
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -112,59 +68,30 @@ List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
 Cc: Rajkumar Manoharan <rmanohar@codeaurora.org>,
  Kevin Hayes <kevinhayes@google.com>, make-wifi-fast@lists.bufferbloat.net,
  linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
- John Crispin <john@phrozen.org>, Johannes Berg <johannes@sipsolutions.net>,
- Lorenzo Bianconi <lorenzo@kernel.org>, Felix Fietkau <nbd@nbd.name>
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+ John Crispin <john@phrozen.org>, Lorenzo Bianconi <lorenzo@kernel.org>,
+ Felix Fietkau <nbd@nbd.name>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Kan Yan <kyan@google.com> writes:
-
-> The "tx_time_est" field, shared by control and status, is not able to
-> survive until the skb returns to the mac80211 layer in some
-> architectures. The same space is defined as driver_data and some
-> wireless drivers use it for other purposes, as the cb in the sk_buff
-> is free to be used by any layer.
->
-> In the case of ath10k, the tx_time_est get clobbered by
-> struct ath10k_skb_cb {
->         dma_addr_t paddr;
->         u8 flags;
->         u8 eid;
->         u16 msdu_id;
->         u16 airtime_est;
->         struct ieee80211_vif *vif;
->         struct ieee80211_txq *txq;
-> } __packed;
-
-Ah, bugger, of course the driver that actually needs this is using the
-full driver_data space :P
-
-> Do you think shrink driver_data by 2 bytes and use that space for
-> tx_time_est to make it persistent across mac80211 and wireless driver
-> layer an acceptable solution?
-
-Hmm, the driver_data field is defined as an array of pointers, so we can
-only shrink it in increments of sizeof(void *). I think it may be
-feasible to shrink it (as in, I don't think any drivers are actually
-using the full 40 bytes), but doing this in a way that will gain us a
-2-byte space that is also usable in the case driver_data is *not* used
-(i.e., it needs be able to align with a field in .control and .status as
-well) would require some serious surgery of the whole ieee80211_tx_info...
-
-However, there's a nice juicy 'u16 ack_frame_id' at the start of
-ieee80211_tx_info. Could we potentially use that? We could use the top
-bit as a disambiguation flag; I think we're fine with 15 bits for the TX
-time itself (a single packet won't exceed 8ms or TX time), so if we can
-live with 15 bits of ACK frame ID space, that could be a way forward?
-
-Johannes, what do you think?
-
--Toke
-
-
-_______________________________________________
-ath10k mailing list
-ath10k@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/ath10k
+T24gRnJpLCAyMDE5LTEwLTE4IGF0IDEyOjE1ICswMjAwLCBUb2tlIEjDuGlsYW5kLUrDuHJnZW5z
+ZW4gd3JvdGU6Cgo+IEhvd2V2ZXIsIHRoZXJlJ3MgYSBuaWNlIGp1aWN5ICd1MTYgYWNrX2ZyYW1l
+X2lkJyBhdCB0aGUgc3RhcnQgb2YKPiBpZWVlODAyMTFfdHhfaW5mby4gQ291bGQgd2UgcG90ZW50
+aWFsbHkgdXNlIHRoYXQ/IFdlIGNvdWxkIHVzZSB0aGUgdG9wCj4gYml0IGFzIGEgZGlzYW1iaWd1
+YXRpb24gZmxhZzsgSSB0aGluayB3ZSdyZSBmaW5lIHdpdGggMTUgYml0cyBmb3IgdGhlIFRYCj4g
+dGltZSBpdHNlbGYgKGEgc2luZ2xlIHBhY2tldCB3b24ndCBleGNlZWQgOG1zIG9yIFRYIHRpbWUp
+LCBzbyBpZiB3ZSBjYW4KPiBsaXZlIHdpdGggMTUgYml0cyBvZiBBQ0sgZnJhbWUgSUQgc3BhY2Us
+IHRoYXQgY291bGQgYmUgYSB3YXkgZm9yd2FyZD8KCkkgd2FzIGdvaW5nIHRvIHNheSB0aGF0IHNo
+b3VsZCB3b3JrIGFzIHdlIG9ubHkgZXZlciBoYXZlIGEgaGFuZGZ1bCBvZgpBQ0sgZnJhbWUgSURz
+LCBidXQgLi4uIHlvdSBzdGlsbCBuZWVkIHRoZSBhaXJ0aW1lIGV2ZW4gZm9yIGEgZnJhbWUgdGhh
+dAp1c2Vyc3BhY2Ugd2FudHMgdG8ga25vdyB0aGUgQUNLIHN0YXR1cyBvZiwgbm8/CgpXZSBjb3Vs
+ZCBwdWxsIHRoZSBhY2tfZnJhbWVfaWQgb3V0LW9mLWxpbmUgdXNpbmcgdGhlIHNrYiBleHRlbnNp
+b25zCmZyYW1ld29yaywgYnV0IEknbSBub3Qgc3VyZSB3ZSBzaG91bGQgYWxsb2NhdGUgb25lIG9m
+IHRoZSBwb3NzaWJsZSA4CmV4dGVuc2lvbiBJRHMgZm9yIHRoYXQgZWl0aGVyIC4uLgoKV2hhdCB3
+ZSByZWFsbHkgc2hvdWxkIGRvIGlzIGNvbnZlcnQgYWxsIChyZWxldmFudCkgZHJpdmVycyB0byB1
+c2UgcmF0ZQp0YWJsZXMgaW5zdGVhZCBvZiBoYXZpbmcgYWxsIHRoZSByYXRlcyBpbiB0aGUgVFgg
+aW5mbywgdGhlbiB3ZSdkIGdldCBhCmxvdCBvZiBzcGFjZSwgYnV0IHRoYXQncyBhIGxvdCBvZiB3
+b3JrIC4uLgoKam9oYW5uZXMKCgpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
+X19fX19fX19fXwphdGgxMGsgbWFpbGluZyBsaXN0CmF0aDEwa0BsaXN0cy5pbmZyYWRlYWQub3Jn
+Cmh0dHA6Ly9saXN0cy5pbmZyYWRlYWQub3JnL21haWxtYW4vbGlzdGluZm8vYXRoMTBrCg==
