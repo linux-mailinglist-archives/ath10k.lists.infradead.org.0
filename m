@@ -2,104 +2,63 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 71555DF09F
-	for <lists+ath10k@lfdr.de>; Mon, 21 Oct 2019 16:58:03 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6FEFBDF7E3
+	for <lists+ath10k@lfdr.de>; Tue, 22 Oct 2019 00:15:13 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:References
-	:In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ivX9b89VQUfZNM7eelnObXjOUp4XpRBRgZnKVaP+XOo=; b=pdPvmxT3pqEtB6
-	TbKmikD7HLIQPvgwlqIdGR3EA61RqiE6EyKurBhwQMDZpyLx5WN8N6rqFqAQ46+ZgTV1cuzty0967
-	bSszNed8qR/xGKEF7U6BIRA7se6ONToy1Mr9IAfoJZMihe1ABkpWxFKBYDH+Ia8YtYmv5hsb5WWTK
-	jsB791xdqFhWq6SPI1GvBfGGE7clp5hBrUe1j6kP5cD86weaX601GVM5kZ2GpeQ9VKdaN83zIIEWS
-	8QhRsHMSPBnfFZ+0vScR/utjafGdK425KtYMucJV3oZQW/piTDfoX3d4wcl/jcK4XWyD6f7+OEV3i
-	ZTw4grMverPSvsIbCYNQ==;
+	List-Owner; bh=+Umz/ZZA8waFWowrf0jMo4mHpOxHg+QEbpuUW3GoKio=; b=JCbxH4mXGOnCZT
+	BF3DMVcA5M4gpuoxcXi0xiVkVVt+MVgZUfxBzLCbzZbINhTPTYcj90H4NQMv0sxbAJV8/scoOONL0
+	3yRmV1d28HEMMT1gQFGXY7C1UVUIkySh8VxNNRepGV+aAhhC5hVZK7SyBHbM8gRCQE6Nj6y5w5CbR
+	jUeEj9nB4ypxNVRSaWTjMcu2rYHXPLyqd16q0/s2dTx4BosZaUPtVWkOLMBd7OPrFfZiufOZZGAXw
+	LAYp8Sta6kz6+KrfYJwWLUNiE9zavA850t43/4n1hHGtJz1uIRC5mKPvPGnbkZ2wLlllshagclNgo
+	cdv1BnDMT8a1+c4LfWYw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iMZ8D-0007Rr-72; Mon, 21 Oct 2019 14:58:01 +0000
-Received: from us-smtp-delivery-1.mimecast.com ([207.211.31.120]
- helo=us-smtp-1.mimecast.com)
+	id 1iMfxF-00040c-TD; Mon, 21 Oct 2019 22:15:09 +0000
+Received: from mga05.intel.com ([192.55.52.43])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iMZ89-0007RN-3e
- for ath10k@lists.infradead.org; Mon, 21 Oct 2019 14:57:58 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
- s=mimecast20190719; t=1571669875;
- h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
- to:to:cc:cc:mime-version:mime-version:content-type:content-type:
- content-transfer-encoding:content-transfer-encoding:
- in-reply-to:in-reply-to:references:references;
- bh=3LCLBxaSD8g38T8u/ybfkijweWWcwiPR1YNTgQYJONY=;
- b=gGf5qFuVWsa0QSikEMSn73CvvUeATeb1VVd45A+akFPKg+CvR97JUaj50XyVRuR/LLKSth
- gMvI084knV7XmszZoCC2jxZHnX692OIQb0x6LR3SYCMU+1NJ7aiDR7CxOFTftqOT3mkUPy
- hEiC/3l5uhBOCZA/knoJz7HcmT3Mc5M=
-Received: from mail-wm1-f72.google.com (mail-wm1-f72.google.com
- [209.85.128.72]) (Using TLS) by relay.mimecast.com with ESMTP id
- us-mta-155-iLrpxYTONDSVyMfzaYzmwQ-1; Mon, 21 Oct 2019 10:57:53 -0400
-Received: by mail-wm1-f72.google.com with SMTP id a81so2491021wma.4
- for <ath10k@lists.infradead.org>; Mon, 21 Oct 2019 07:57:53 -0700 (PDT)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:in-reply-to:references:date
- :message-id:mime-version;
- bh=uq0uDmRtgXO3GMqtdwEBfqJdfQu+hMv3WbuD0weh130=;
- b=YZO+P0dP9AGn1MH1i6nO7SsLA+th7dDz8zED8PUHlkn5zZ+71UzRL5Y+znoXT32bRB
- vQ5ghSU0I8xwmPPb6YHcJiToaz9xz2qzR4hqy8+IJNJ/qUb23KovpRdvwKkHOKIY/YDX
- gy/R0JPQVNOpam0U5k6rZzQRcmIaepVuqklp7zpFO6NNtncA6ajDBwTIXwCvwvjbZmBy
- MOiD6KDenql24PtYFAVFXzzGQieWFPM3VNDPnEQwlnYFbB+9vDlFPSEaFlZ408uHCJy1
- Fkc+utuB1XEWehynEV4mwXw7x7ir2LP9I8U/dP4xnp5CqzHR3Fj2/JEWKsWPlm5TdHQS
- O9MQ==
-X-Gm-Message-State: APjAAAWM9Y3hMe4ZGf+mtN69Fnj7TOJAPaTqlk8Wz/bASlg4i/1wd6pO
- zSusipoQno42as1m6rJoI4lSBpyaJijdCmxpQetH5UqoP1SldHGhpvbjy9t9LrpoIXbsiABv+Q4
- /8dD2z1fzFS946kJq6h7QLQ==
-X-Received: by 2002:adf:dbcf:: with SMTP id e15mr20788530wrj.134.1571669872539; 
- Mon, 21 Oct 2019 07:57:52 -0700 (PDT)
-X-Google-Smtp-Source: APXvYqwjEPCqaFlqG75Sr20Nuzi+1rlCvDUYLDh1LXlWULjlqxXbBBkdJRH2br3nUhJY4SbuXETleQ==
-X-Received: by 2002:adf:dbcf:: with SMTP id e15mr20788514wrj.134.1571669872348; 
- Mon, 21 Oct 2019 07:57:52 -0700 (PDT)
-Received: from alrua-x1.borgediget.toke.dk (borgediget.toke.dk.
- [85.204.121.218])
- by smtp.gmail.com with ESMTPSA id a189sm2135474wma.2.2019.10.21.07.57.51
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Mon, 21 Oct 2019 07:57:51 -0700 (PDT)
-Received: by alrua-x1.borgediget.toke.dk (Postfix, from userid 1000)
- id BB7831800E9; Mon, 21 Oct 2019 16:57:50 +0200 (CEST)
-From: Toke =?utf-8?Q?H=C3=B8iland-J=C3=B8rgensen?= <toke@redhat.com>
-To: Kalle Valo <kvalo@codeaurora.org>, Kan Yan <kyan@google.com>
-Subject: Re: [PATCH v4 0/2] Implement Airtime-based Queue Limit (AQL)
-In-Reply-To: <87r236tbgz.fsf@kamboji.qca.qualcomm.com>
-References: <20191011022413.176208-1-kyan@google.com>
- <87wod7y9ui.fsf@kamboji.qca.qualcomm.com>
- <87sgnvy9c2.fsf@kamboji.qca.qualcomm.com>
- <CA+iem5uLYFVQjPaE1QDKc6c+eKz8Xd4LbwczYXOBKP3q+HHdBg@mail.gmail.com>
- <87r236tbgz.fsf@kamboji.qca.qualcomm.com>
-X-Clacks-Overhead: GNU Terry Pratchett
-Date: Mon, 21 Oct 2019 16:57:50 +0200
-Message-ID: <878speqh75.fsf@toke.dk>
+ id 1iMfx4-0003ld-0D
+ for ath10k@lists.infradead.org; Mon, 21 Oct 2019 22:14:59 +0000
+X-Amp-Result: UNKNOWN
+X-Amp-Original-Verdict: FILE UNKNOWN
+X-Amp-File-Uploaded: False
+Received: from fmsmga008.fm.intel.com ([10.253.24.58])
+ by fmsmga105.fm.intel.com with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384;
+ 21 Oct 2019 15:14:57 -0700
+X-ExtLoop1: 1
+X-IronPort-AV: E=Sophos;i="5.67,325,1566889200"; d="scan'208";a="196249108"
+Received: from lkp-server01.sh.intel.com (HELO lkp-server01) ([10.239.97.150])
+ by fmsmga008.fm.intel.com with ESMTP; 21 Oct 2019 15:14:55 -0700
+Received: from kbuild by lkp-server01 with local (Exim 4.89)
+ (envelope-from <lkp@intel.com>)
+ id 1iMfx0-0003vx-Q4; Tue, 22 Oct 2019 06:14:54 +0800
+Date: Tue, 22 Oct 2019 06:14:32 +0800
+From: kbuild test robot <lkp@intel.com>
+To: Toke =?iso-8859-1?Q?H=F8iland-J=F8rgensen?= <toke@redhat.com>
+Subject: Re: [PATCH v4 2/4] mac80211: Import airtime calculation code from mt76
+Message-ID: <201910220654.AzuMkFgk%lkp@intel.com>
+References: <157148503639.2989444.8337290298332344733.stgit@toke.dk>
 MIME-Version: 1.0
-X-MC-Unique: iLrpxYTONDSVyMfzaYzmwQ-1
-X-Mimecast-Spam-Score: 0
+Content-Disposition: inline
+In-Reply-To: <157148503639.2989444.8337290298332344733.stgit@toke.dk>
+X-Patchwork-Hint: ignore
+User-Agent: NeoMutt/20170113 (1.7.2)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191021_075757_326632_FE02DE12 
-X-CRM114-Status: UNSURE (   6.09  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -2.5 (--)
+X-CRM114-CacheID: sfid-20191021_151458_326081_87F68665 
+X-CRM114-Status: GOOD (  12.20  )
+X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.5 points)
+ Content analysis details:   (-2.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [207.211.31.120 listed in list.dnswl.org]
+ medium trust [192.55.52.43 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -111,35 +70,49 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: make-wifi-fast@lists.bufferbloat.net, linux-wireless@vger.kernel.org,
- ath10k@lists.infradead.org, Yibo Zhao <yiboz@codeaurora.org>,
- Johannes Berg <johannes@sipsolutions.net>, Felix Fietkau <nbd@nbd.name>
+Cc: Kan Yan <kyan@google.com>, kbuild-all@lists.01.org,
+ Rajkumar Manoharan <rmanohar@codeaurora.org>,
+ Kevin Hayes <kevinhayes@google.com>, make-wifi-fast@lists.bufferbloat.net,
+ linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
+ John Crispin <john@phrozen.org>, Johannes Berg <johannes@sipsolutions.net>,
+ Lorenzo Bianconi <lorenzo@kernel.org>, Felix Fietkau <nbd@nbd.name>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Kalle Valo <kvalo@codeaurora.org> writes:
+Hi "Toke,
 
-> (please don't top post)
->
-> Kan Yan <kyan@google.com> writes:
->
->> I believe Toke will integrate this with his version and move the
->> estimating pending airtime part to mac80211, so maybe in the next
->> version, ath10k change is no longer required.
->
-> What do you mean? Are you saying that I can drop this patch:
->
-> [v4,2/2] ath10k: Enable Airtime-based Queue Limit (AQL)
->
-> https://patchwork.kernel.org/patch/11184783/
+I love your patch! Perhaps something to improve:
 
-Yes, we're trying to do it all in mac80211. See
-https://patchwork.kernel.org/project/linux-wireless/list/?series=190333
+[auto build test WARNING on mac80211-next/master]
+[cannot apply to v5.4-rc4 next-20191021]
+[if your patch is applied to the wrong git tree, please drop us a note to help
+improve the system. BTW, we also suggest to use '--base' option to specify the
+base tree in git format-patch, please see https://stackoverflow.com/a/37406982]
 
--Toke
+url:    https://github.com/0day-ci/linux/commits/Toke-H-iland-J-rgensen/Add-Airtime-Queue-Limits-AQL-to-mac80211/20191021-234455
+base:   https://git.kernel.org/pub/scm/linux/kernel/git/jberg/mac80211-next.git master
+reproduce:
+        # apt-get install sparse
+        # sparse version: v0.6.1-dirty
+        make ARCH=x86_64 allmodconfig
+        make C=1 CF='-fdiagnostic-prefix -D__CHECK_ENDIAN__'
 
+If you fix the issue, kindly add following tag
+Reported-by: kbuild test robot <lkp@intel.com>
+
+
+sparse warnings: (new ones prefixed by >>)
+
+>> net/mac80211/airtime.c:211:5: sparse: sparse: symbol 'ieee80211_calc_rx_airtime' was not declared. Should it be static?
+>> net/mac80211/airtime.c:282:5: sparse: sparse: symbol 'ieee80211_calc_tx_airtime_rate' was not declared. Should it be static?
+
+Please review and possibly fold the followup patch.
+
+---
+0-DAY kernel test infrastructure                Open Source Technology Center
+https://lists.01.org/pipermail/kbuild-all                   Intel Corporation
 
 _______________________________________________
 ath10k mailing list
