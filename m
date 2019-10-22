@@ -2,74 +2,71 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D927DDFF8B
-	for <lists+ath10k@lfdr.de>; Tue, 22 Oct 2019 10:37:57 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B0633E001F
+	for <lists+ath10k@lfdr.de>; Tue, 22 Oct 2019 10:57:51 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
-	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=VbgewRBWywkOqQ4Jkdye3bxtSIdWXqAnLyKQAnaes7M=; b=DHCFuz3wLciU1a
-	3ci6UQMrCHTzA/fJ0EP6zUnIy+y2TCxKRBShOzpNindqRDz1SBHZfKjRBwLDWIspEuG6zsvlAC1ZW
-	9wlsE3mtWTlsR6UPiGN9NHSVrOyZwXhVxIDu9KbZJIM5oJI1Pi1RDF78oUR8BXUdP6REvHzH0UUT8
-	T2+ajmg5vOdc8Y3HIRPpzVqi+9Wor4ubzwsV+8D4WR18X7MIkRMsnTAEJv/XLg4enIlsGp0zYMNNe
-	7syVTq2EOLLziJ6TKr7bHzB1ifO+V8vxH4WepTgpuJ0sbc6tMfnNUPxxdp0QFGrgBVAT3yhuVH61s
-	JjGd5pv+LJNyhEsSXEcA==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
+	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=hJWc1c3zxrwPJlaawAl4Yy0vvePOCL0Xw3HlMC9zgxQ=; b=GAv
+	FuZqp9gpI+sUycwX9uWcvxBh1F5z0nX0Jvn5HnuqPWjkB8+n7JwJviYUX4EN+9Ozc1/wybkSKjaQP
+	9cdHrEeRV2TrJK8AbVrHU7VOYvj9QtxjneixDY1CtTpFTCgInUv+Bb2X3pxLngIOF2EkEBXAqY4dM
+	NCF3hJuS0AHpjtQmFGWCnvQAEynvdLfltep+UV4FOJCg0tJ8eQi8W8/7MpNOhDXNj+/cIbmUp6AsJ
+	CuvV7dZNzQsYFYThfRLAGxDSQ6h9Wul1Yt+BGaHLmvIkBuwW/ZZR4jUrFwyOtOa+8VRqKRtxCeSoR
+	zY1Rm7LMPLlrJtQKXJh1brSgKtcAwMQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iMpfw-0002VJ-1W; Tue, 22 Oct 2019 08:37:56 +0000
+	id 1iMpzA-00020m-G2; Tue, 22 Oct 2019 08:57:48 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iMpfs-0002Us-83
- for ath10k@lists.infradead.org; Tue, 22 Oct 2019 08:37:53 +0000
+ id 1iMpz6-0001yR-O9
+ for ath10k@lists.infradead.org; Tue, 22 Oct 2019 08:57:46 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 85496608CC; Tue, 22 Oct 2019 08:37:51 +0000 (UTC)
+ id 7AC9660159; Tue, 22 Oct 2019 08:57:43 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1571733471;
- bh=Po5RtiTU4/a1PjWYIFhSvt3ysgdj+uj3Q97l1tGoGno=;
- h=Subject:From:In-Reply-To:References:To:Cc:Date:From;
- b=XLqAh2H7bIpPBK8PMN0OZAYAE+NTl1b8O58ZvT/VoVtJ/RfR3Epis+udj2mmIbCHE
- EIDf7+lXop9FGdYe+6d8oqey97/A4uyhMBK2+JNCdpz9JFkgBX85tba2j7u7OaJiMC
- C2QKZJ5tAgjr4a684UXbBzCXuidNGOwdOaF/MdMU=
+ s=default; t=1571734663;
+ bh=P1gtfMzQ64P1I8hkPS69QXlX/oj3QD3ocmBAXcTD/gw=;
+ h=From:To:Cc:Subject:Date:From;
+ b=U4wDhOa2jowfb4Gyg7jq5c+VsZLcbdamql8N6rT/gTEFxbtQzO7ni0cnQrx1z35eP
+ yiNbAEgMJpBXhomIwGD9Xrcxs1Hn0nqyzVcbna8BVyRAPvmAVc2ROgjLO09Kq9AOoH
+ Wve195Bseh3x7GCe04zbdny3xHDVndhNUtS22PQY=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
-X-Spam-Status: No, score=-0.8 required=2.0 tests=ALL_TRUSTED,BAYES_00,
- DKIM_INVALID,DKIM_SIGNED,MISSING_DATE,MISSING_MID,SPF_NONE autolearn=no
- autolearn_force=no version=3.4.0
-Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
- [88.114.240.156])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
+ DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
+ version=3.4.0
+Received: from zhichen.ap.qualcomm.com (unknown [180.166.53.21])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
  (No client certificate requested)
- (Authenticated sender: kvalo@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 8C0B66081E;
- Tue, 22 Oct 2019 08:37:46 +0000 (UTC)
+ (Authenticated sender: zhichen@codeaurora.org)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id F0ACA60159;
+ Tue, 22 Oct 2019 08:57:41 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1571733468;
- bh=Po5RtiTU4/a1PjWYIFhSvt3ysgdj+uj3Q97l1tGoGno=;
- h=Subject:From:In-Reply-To:References:To:Cc:From;
- b=S+TEhuqHHOLxBvvFbhB4Fg/0nbgR8jLvULtLxz34XMRYJ1ZrEH2uoixCBf1BT0aGQ
- XapuA4XFkIkgBxjEYlBHtuvpoqnD7+SjujRhfeQsiwkRsMrsjjtpwpvFAV3J5KXW6/
- b9XS1mAnHnbxutmCYP5i6EHXsjV6fCyS/gOcQgFo=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 8C0B66081E
+ s=default; t=1571734662;
+ bh=P1gtfMzQ64P1I8hkPS69QXlX/oj3QD3ocmBAXcTD/gw=;
+ h=From:To:Cc:Subject:Date:From;
+ b=hvWS21AhsOHa0S0NnNO8mHlDU1gISUSMra4JdrrOJq+hWXMyTAPIgWmtLOGIEbBIO
+ TyuMqiB4k5JndsiS/O+izJ/XmdbzFW7eIUlGef4swAqPz2tAqQ+ZYAc9/wfu5jo8Y0
+ 2kQtzjOq7Sn6Y6Ou+oE/6d1oImxnLYsu3scH9LKs=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org F0ACA60159
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
- spf=none smtp.mailfrom=kvalo@codeaurora.org
-MIME-Version: 1.0
-Subject: Re: [PATCH v2] ath10k: Fix a NULL-ptr-deref bug in
- ath10k_usb_alloc_urb_from_pipe
-From: Kalle Valo <kvalo@codeaurora.org>
-In-Reply-To: <20191018133516.12606-1-linux@roeck-us.net>
-References: <20191018133516.12606-1-linux@roeck-us.net>
-To: Guenter Roeck <linux@roeck-us.net>
-User-Agent: pwcli/0.0.0-git (https://github.com/kvalo/pwcli/) Python/2.7.12
-Message-Id: <20191022083751.85496608CC@smtp.codeaurora.org>
-Date: Tue, 22 Oct 2019 08:37:51 +0000 (UTC)
+ spf=none smtp.mailfrom=zhichen@codeaurora.org
+From: Zhi Chen <zhichen@codeaurora.org>
+To: ath10k@lists.infradead.org
+Subject: [PATCH RFC] Revert "ath10k: fix DMA related firmware crashes on
+ multiple devices"
+Date: Tue, 22 Oct 2019 16:57:09 +0800
+Message-Id: <1571734629-18028-1-git-send-email-zhichen@codeaurora.org>
+X-Mailer: git-send-email 2.7.4
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191022_013752_329105_BCC41F41 
-X-CRM114-Status: GOOD (  13.40  )
+X-CRM114-CacheID: sfid-20191022_015744_808593_F940410F 
+X-CRM114-Status: UNSURE (   9.01  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-2.5 points)
@@ -97,60 +94,53 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: netdev@vger.kernel.org, linux-wireless@vger.kernel.org,
- linux-kernel@vger.kernel.org, ath10k@lists.infradead.org,
- Hui Peng <benquike@gmail.com>, Guenter Roeck <linux@roeck-us.net>
+Cc: Zhi Chen <zhichen@codeaurora.org>, linux-wireless@vger.kernel.org
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Guenter Roeck <linux@roeck-us.net> wrote:
+This reverts commit 76d164f582150fd0259ec0fcbc485470bcd8033e.
+PCIe hung issue was observed on multiple platforms. The issue was reproduced
+when DUT was configured as AP and associated with 50+ STAs.
 
-> The `ar_usb` field of `ath10k_usb_pipe_usb_pipe` objects
-> are initialized to point to the containing `ath10k_usb` object
-> according to endpoint descriptors read from the device side, as shown
-> below in `ath10k_usb_setup_pipe_resources`:
-> 
-> for (i = 0; i < iface_desc->desc.bNumEndpoints; ++i) {
->         endpoint = &iface_desc->endpoint[i].desc;
-> 
->         // get the address from endpoint descriptor
->         pipe_num = ath10k_usb_get_logical_pipe_num(ar_usb,
->                                                 endpoint->bEndpointAddress,
->                                                 &urbcount);
->         ......
->         // select the pipe object
->         pipe = &ar_usb->pipes[pipe_num];
-> 
->         // initialize the ar_usb field
->         pipe->ar_usb = ar_usb;
-> }
-> 
-> The driver assumes that the addresses reported in endpoint
-> descriptors from device side  to be complete. If a device is
-> malicious and does not report complete addresses, it may trigger
-> NULL-ptr-deref `ath10k_usb_alloc_urb_from_pipe` and
-> `ath10k_usb_free_urb_to_pipe`.
-> 
-> This patch fixes the bug by preventing potential NULL-ptr-deref.
-> 
-> Signed-off-by: Hui Peng <benquike@gmail.com>
-> Reported-by: Hui Peng <benquike@gmail.com>
-> Reported-by: Mathias Payer <mathias.payer@nebelwelt.net>
-> Reviewed-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-> [groeck: Add driver tag to subject, fix build warning]
-> Signed-off-by: Guenter Roeck <linux@roeck-us.net>
-> Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
+With PCIe protocol analyzer, we can see DMA Read crossing 4KB boundary when
+issue happened. It broke PCIe spec and caused PCIe stuck.
 
-Patch applied to ath-next branch of ath.git, thanks.
+Tested:  IPQ8064 + QCA9984 with firmware 10.4-3.10-00047
+         QCS404 + QCA9984 with firmware 10.4-3.9.0.2--00044
+         Synaptics AS370 + QCA9888  with firmware 10.4-3.9.0.2--00040
 
-bfd6e6e6c5d2 ath10k: Fix a NULL-ptr-deref bug in ath10k_usb_alloc_urb_from_pipe
+Signed-off-by: Zhi Chen <zhichen@codeaurora.org>
+---
+ drivers/net/wireless/ath/ath10k/hw.h | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
 
+diff --git a/drivers/net/wireless/ath/ath10k/hw.h b/drivers/net/wireless/ath/ath10k/hw.h
+index 35a3623..17f620b 100644
+--- a/drivers/net/wireless/ath/ath10k/hw.h
++++ b/drivers/net/wireless/ath/ath10k/hw.h
+@@ -753,7 +753,7 @@ ath10k_is_rssi_enable(struct ath10k_hw_params *hw,
+ #define TARGET_10X_MAX_FRAG_ENTRIES		0
+ 
+ /* 10.2 parameters */
+-#define TARGET_10_2_DMA_BURST_SIZE		0
++#define TARGET_10_2_DMA_BURST_SIZE		1
+ 
+ /* Target specific defines for WMI-TLV firmware */
+ #define TARGET_TLV_NUM_VDEVS			4
+@@ -813,7 +813,7 @@ ath10k_is_rssi_enable(struct ath10k_hw_params *hw,
+ 
+ #define TARGET_10_4_TX_DBG_LOG_SIZE		1024
+ #define TARGET_10_4_NUM_WDS_ENTRIES		32
+-#define TARGET_10_4_DMA_BURST_SIZE		0
++#define TARGET_10_4_DMA_BURST_SIZE		1
+ #define TARGET_10_4_MAC_AGGR_DELIM		0
+ #define TARGET_10_4_RX_SKIP_DEFRAG_TIMEOUT_DUP_DETECTION_CHECK 1
+ #define TARGET_10_4_VOW_CONFIG			0
 -- 
-https://patchwork.kernel.org/patch/11198433/
-
-https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
+2.7.4
 
 
 _______________________________________________
