@@ -2,80 +2,81 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B0633E001F
-	for <lists+ath10k@lfdr.de>; Tue, 22 Oct 2019 10:57:51 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B03DFE0199
+	for <lists+ath10k@lfdr.de>; Tue, 22 Oct 2019 12:07:53 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
-	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
-	References:List-Owner; bh=hJWc1c3zxrwPJlaawAl4Yy0vvePOCL0Xw3HlMC9zgxQ=; b=GAv
-	FuZqp9gpI+sUycwX9uWcvxBh1F5z0nX0Jvn5HnuqPWjkB8+n7JwJviYUX4EN+9Ozc1/wybkSKjaQP
-	9cdHrEeRV2TrJK8AbVrHU7VOYvj9QtxjneixDY1CtTpFTCgInUv+Bb2X3pxLngIOF2EkEBXAqY4dM
-	NCF3hJuS0AHpjtQmFGWCnvQAEynvdLfltep+UV4FOJCg0tJ8eQi8W8/7MpNOhDXNj+/cIbmUp6AsJ
-	CuvV7dZNzQsYFYThfRLAGxDSQ6h9Wul1Yt+BGaHLmvIkBuwW/ZZR4jUrFwyOtOa+8VRqKRtxCeSoR
-	zY1Rm7LMPLlrJtQKXJh1brSgKtcAwMQ==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	References:In-Reply-To:MIME-Version:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=VyPPZplFyFo5dUwfJKRhJqHS54p4TUkZptadLJ6vikQ=; b=k0tVxw+wvcquY0
+	i6b4q9etVNQWMbcZ+x4TIF4GR/R9EpTsDqm1XW54LdPJHIMfBPJIv5G706JwBhs6jaVwwF9xkKwTX
+	AlaCAZ+3+QGhWD5KIjUh3yF8QeTaJ5chx0n5/IwTbWukns3u4IfvHFc9V/Ihe5eJU25rc6C1Pk1I0
+	YKF6NVfvjx+J/k0FNvmsHG7jFS1/zYkzctuFttfv3qWCOqqVnKw15jysGrtag9zXNZVwWskuG/G1C
+	MZhNyE3XuUx5cKzC5WNN/cCWPKDdSgGITcO+8TtnnqA+oRUgATYE6FjLyLl5ytepm1vd5tLcVfQnk
+	xuDM8p206vVXAEgq/Pww==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iMpzA-00020m-G2; Tue, 22 Oct 2019 08:57:48 +0000
-Received: from smtp.codeaurora.org ([198.145.29.96])
+	id 1iMr4w-000843-Qc; Tue, 22 Oct 2019 10:07:50 +0000
+Received: from mail-oi1-x244.google.com ([2607:f8b0:4864:20::244])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iMpz6-0001yR-O9
- for ath10k@lists.infradead.org; Tue, 22 Oct 2019 08:57:46 +0000
-Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 7AC9660159; Tue, 22 Oct 2019 08:57:43 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1571734663;
- bh=P1gtfMzQ64P1I8hkPS69QXlX/oj3QD3ocmBAXcTD/gw=;
- h=From:To:Cc:Subject:Date:From;
- b=U4wDhOa2jowfb4Gyg7jq5c+VsZLcbdamql8N6rT/gTEFxbtQzO7ni0cnQrx1z35eP
- yiNbAEgMJpBXhomIwGD9Xrcxs1Hn0nqyzVcbna8BVyRAPvmAVc2ROgjLO09Kq9AOoH
- Wve195Bseh3x7GCe04zbdny3xHDVndhNUtS22PQY=
-X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
- pdx-caf-mail.web.codeaurora.org
-X-Spam-Level: 
-X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
- DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
- version=3.4.0
-Received: from zhichen.ap.qualcomm.com (unknown [180.166.53.21])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
- (No client certificate requested)
- (Authenticated sender: zhichen@codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id F0ACA60159;
- Tue, 22 Oct 2019 08:57:41 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1571734662;
- bh=P1gtfMzQ64P1I8hkPS69QXlX/oj3QD3ocmBAXcTD/gw=;
- h=From:To:Cc:Subject:Date:From;
- b=hvWS21AhsOHa0S0NnNO8mHlDU1gISUSMra4JdrrOJq+hWXMyTAPIgWmtLOGIEbBIO
- TyuMqiB4k5JndsiS/O+izJ/XmdbzFW7eIUlGef4swAqPz2tAqQ+ZYAc9/wfu5jo8Y0
- 2kQtzjOq7Sn6Y6Ou+oE/6d1oImxnLYsu3scH9LKs=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org F0ACA60159
-Authentication-Results: pdx-caf-mail.web.codeaurora.org;
- dmarc=none (p=none dis=none) header.from=codeaurora.org
-Authentication-Results: pdx-caf-mail.web.codeaurora.org;
- spf=none smtp.mailfrom=zhichen@codeaurora.org
-From: Zhi Chen <zhichen@codeaurora.org>
-To: ath10k@lists.infradead.org
-Subject: [PATCH RFC] Revert "ath10k: fix DMA related firmware crashes on
+ id 1iMr4t-000832-0h
+ for ath10k@lists.infradead.org; Tue, 22 Oct 2019 10:07:48 +0000
+Received: by mail-oi1-x244.google.com with SMTP id g81so13650748oib.8
+ for <ath10k@lists.infradead.org>; Tue, 22 Oct 2019 03:07:45 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+ :cc; bh=iFTeSU9DK9ebNJwCkq6A2UglnA/84QdLInUE+UVt72Q=;
+ b=GLvaM+emlsDUj6Xx9I/LNo1xIxNCSAf5UYV4VRs5hw48hWzheIvw3/mg7Fe4NpNjne
+ 7tUEvHhvrLgivW2XZxBrYgJMDsrDhcGhXybAMvxodIAhIiawPCSZn8Wu+ZpKlz516lQ8
+ +UrDGEamtRGL1IMzJZ5d3L2KBOuWT0oxMaXgBlWn1Oab5JzxCioQqfUqldZ6FG/Fmt1g
+ YQ/aY+dW4QiSKzHkQEvBQxue25Ec/J+1TRXE989utfeHrH2HkEfecOb5t1ARKXdsWeH6
+ c6BIMUY7+y9HqjjGuigZX772gK1SbBU9+xAljSMEz5YpdB0liu+isDe6/T96EPfsVrjx
+ X3pA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+ :message-id:subject:to:cc;
+ bh=iFTeSU9DK9ebNJwCkq6A2UglnA/84QdLInUE+UVt72Q=;
+ b=S2GIDFayKe+jU7MPkGNtixomhQUFcPhxudtKDUS/kzOGXQo7ZzbV6E0UfVbaNtDDqv
+ dTcQVX2qbvmpRCykb/g2WAQtGzZim3W6Bkj8dUnVRIkhD01K/OV0UFP9tDN3GNl1P+/g
+ IlyVSXAax+EmueBDxBc/C/GxhXOukgUHa0Mg9sJ4NYl4fopwmX3irw4SP2oXNf0wfI9T
+ af3WkphUd24pmvWeNwzGS4EpxmI2HZgK32iIE4u2qqzT4rxmqHmCMudxs6PjFuRbee5t
+ gZMAiMuWy9++7THLuDxiLReLZQ5ROh8OaytgkvHViaB6hsAFfTekTz+kgCJFpswX44l+
+ fIRw==
+X-Gm-Message-State: APjAAAVfTfKK3LTPI5idFJpPCgTwHS8b/kjmk2WIICV0joqZaasgE8eE
+ Cx/S8tWcUPeyisUAwPvUmhElWOksMtzpxg1eViw=
+X-Google-Smtp-Source: APXvYqwZwk63iNNN4Hs2V0NWyfBlNKBesMXZy+huRrLlYqynjtIPveX6tpdEvoVLg+oIOs3+icmF89FRFb8Tg+CxDe8=
+X-Received: by 2002:a05:6808:aad:: with SMTP id
+ r13mr2248651oij.30.1571738864718; 
+ Tue, 22 Oct 2019 03:07:44 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 2002:a9d:2286:0:0:0:0:0 with HTTP; Tue, 22 Oct 2019 03:07:44
+ -0700 (PDT)
+In-Reply-To: <1571734629-18028-1-git-send-email-zhichen@codeaurora.org>
+References: <1571734629-18028-1-git-send-email-zhichen@codeaurora.org>
+From: Tom Psyborg <pozega.tomislav@gmail.com>
+Date: Tue, 22 Oct 2019 12:07:44 +0200
+Message-ID: <CAKR_QVLDFBVMDDP4mPYVNdpT9TA3podNeQMpVJQwE7A5eG=0kA@mail.gmail.com>
+Subject: Re: [PATCH RFC] Revert "ath10k: fix DMA related firmware crashes on
  multiple devices"
-Date: Tue, 22 Oct 2019 16:57:09 +0800
-Message-Id: <1571734629-18028-1-git-send-email-zhichen@codeaurora.org>
-X-Mailer: git-send-email 2.7.4
+To: Zhi Chen <zhichen@codeaurora.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191022_015744_808593_F940410F 
-X-CRM114-Status: UNSURE (   9.01  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -2.5 (--)
+X-CRM114-CacheID: sfid-20191022_030747_085818_A152B77E 
+X-CRM114-Status: GOOD (  13.64  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.5 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [198.145.29.96 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:244 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (pozega.tomislav[at]gmail.com)
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
@@ -94,54 +95,64 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Zhi Chen <zhichen@codeaurora.org>, linux-wireless@vger.kernel.org
-MIME-Version: 1.0
+Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-This reverts commit 76d164f582150fd0259ec0fcbc485470bcd8033e.
-PCIe hung issue was observed on multiple platforms. The issue was reproduced
-when DUT was configured as AP and associated with 50+ STAs.
+On 22/10/2019, Zhi Chen <zhichen@codeaurora.org> wrote:
+> This reverts commit 76d164f582150fd0259ec0fcbc485470bcd8033e.
+> PCIe hung issue was observed on multiple platforms. The issue was
+> reproduced
+> when DUT was configured as AP and associated with 50+ STAs.
+>
+> With PCIe protocol analyzer, we can see DMA Read crossing 4KB boundary when
+> issue happened. It broke PCIe spec and caused PCIe stuck.
+>
+> Tested:  IPQ8064 + QCA9984 with firmware 10.4-3.10-00047
+>          QCS404 + QCA9984 with firmware 10.4-3.9.0.2--00044
+>          Synaptics AS370 + QCA9888  with firmware 10.4-3.9.0.2--00040
+>
+> Signed-off-by: Zhi Chen <zhichen@codeaurora.org>
+> ---
+>  drivers/net/wireless/ath/ath10k/hw.h | 4 ++--
+>  1 file changed, 2 insertions(+), 2 deletions(-)
+>
+> diff --git a/drivers/net/wireless/ath/ath10k/hw.h
+> b/drivers/net/wireless/ath/ath10k/hw.h
+> index 35a3623..17f620b 100644
+> --- a/drivers/net/wireless/ath/ath10k/hw.h
+> +++ b/drivers/net/wireless/ath/ath10k/hw.h
+> @@ -753,7 +753,7 @@ ath10k_is_rssi_enable(struct ath10k_hw_params *hw,
+>  #define TARGET_10X_MAX_FRAG_ENTRIES		0
+>
+>  /* 10.2 parameters */
+> -#define TARGET_10_2_DMA_BURST_SIZE		0
+> +#define TARGET_10_2_DMA_BURST_SIZE		1
+>
+>  /* Target specific defines for WMI-TLV firmware */
+>  #define TARGET_TLV_NUM_VDEVS			4
+> @@ -813,7 +813,7 @@ ath10k_is_rssi_enable(struct ath10k_hw_params *hw,
+>
+>  #define TARGET_10_4_TX_DBG_LOG_SIZE		1024
+>  #define TARGET_10_4_NUM_WDS_ENTRIES		32
+> -#define TARGET_10_4_DMA_BURST_SIZE		0
+> +#define TARGET_10_4_DMA_BURST_SIZE		1
+>  #define TARGET_10_4_MAC_AGGR_DELIM		0
+>  #define TARGET_10_4_RX_SKIP_DEFRAG_TIMEOUT_DUP_DETECTION_CHECK 1
+>  #define TARGET_10_4_VOW_CONFIG			0
+> --
+> 2.7.4
+>
+>
+> _______________________________________________
+> ath10k mailing list
+> ath10k@lists.infradead.org
+> http://lists.infradead.org/mailman/listinfo/ath10k
+>
 
-With PCIe protocol analyzer, we can see DMA Read crossing 4KB boundary when
-issue happened. It broke PCIe spec and caused PCIe stuck.
-
-Tested:  IPQ8064 + QCA9984 with firmware 10.4-3.10-00047
-         QCS404 + QCA9984 with firmware 10.4-3.9.0.2--00044
-         Synaptics AS370 + QCA9888  with firmware 10.4-3.9.0.2--00040
-
-Signed-off-by: Zhi Chen <zhichen@codeaurora.org>
----
- drivers/net/wireless/ath/ath10k/hw.h | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
-
-diff --git a/drivers/net/wireless/ath/ath10k/hw.h b/drivers/net/wireless/ath/ath10k/hw.h
-index 35a3623..17f620b 100644
---- a/drivers/net/wireless/ath/ath10k/hw.h
-+++ b/drivers/net/wireless/ath/ath10k/hw.h
-@@ -753,7 +753,7 @@ ath10k_is_rssi_enable(struct ath10k_hw_params *hw,
- #define TARGET_10X_MAX_FRAG_ENTRIES		0
- 
- /* 10.2 parameters */
--#define TARGET_10_2_DMA_BURST_SIZE		0
-+#define TARGET_10_2_DMA_BURST_SIZE		1
- 
- /* Target specific defines for WMI-TLV firmware */
- #define TARGET_TLV_NUM_VDEVS			4
-@@ -813,7 +813,7 @@ ath10k_is_rssi_enable(struct ath10k_hw_params *hw,
- 
- #define TARGET_10_4_TX_DBG_LOG_SIZE		1024
- #define TARGET_10_4_NUM_WDS_ENTRIES		32
--#define TARGET_10_4_DMA_BURST_SIZE		0
-+#define TARGET_10_4_DMA_BURST_SIZE		1
- #define TARGET_10_4_MAC_AGGR_DELIM		0
- #define TARGET_10_4_RX_SKIP_DEFRAG_TIMEOUT_DUP_DETECTION_CHECK 1
- #define TARGET_10_4_VOW_CONFIG			0
--- 
-2.7.4
-
+What about main and 10x firmware branch?
 
 _______________________________________________
 ath10k mailing list
