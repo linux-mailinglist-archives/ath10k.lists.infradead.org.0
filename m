@@ -2,81 +2,96 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B03DFE0199
-	for <lists+ath10k@lfdr.de>; Tue, 22 Oct 2019 12:07:53 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 04A93E02FE
+	for <lists+ath10k@lfdr.de>; Tue, 22 Oct 2019 13:35:31 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	References:In-Reply-To:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:References
+	:In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=VyPPZplFyFo5dUwfJKRhJqHS54p4TUkZptadLJ6vikQ=; b=k0tVxw+wvcquY0
-	i6b4q9etVNQWMbcZ+x4TIF4GR/R9EpTsDqm1XW54LdPJHIMfBPJIv5G706JwBhs6jaVwwF9xkKwTX
-	AlaCAZ+3+QGhWD5KIjUh3yF8QeTaJ5chx0n5/IwTbWukns3u4IfvHFc9V/Ihe5eJU25rc6C1Pk1I0
-	YKF6NVfvjx+J/k0FNvmsHG7jFS1/zYkzctuFttfv3qWCOqqVnKw15jysGrtag9zXNZVwWskuG/G1C
-	MZhNyE3XuUx5cKzC5WNN/cCWPKDdSgGITcO+8TtnnqA+oRUgATYE6FjLyLl5ytepm1vd5tLcVfQnk
-	xuDM8p206vVXAEgq/Pww==;
+	List-Owner; bh=o5fxOZyImMN7w7yoowzGV90zYwcMYjR0am2QjefDmTw=; b=WaU00o8hcq6SH3
+	stykH+hojL9mWnUPOKpwAwVJxIwclWBPQcBVZVMS3bR4JP+fEoUcqrNRwMYUf3SS0A4DOlaxaN0c7
+	kt9vgh+7mXyevijCtm2qKF7KSbui4m4hcJrZA5BxDP1JXmiQ6vj3e3WPBXyp1yLnFUChUQknobxs5
+	45n5Clp3YuZdm3Gr6/xApn/Aa8rbZJzkpL6Uf07momgNwqkt/n4jX/lPIPnFNwfrn9ULWCYwYm/7s
+	3AHN9rvMjNa+bMJ420YraXvLfWkgSpO549bDmXCCejypg7H8+7URM+oVu39E1FQZY20b0RJJXkK8C
+	2kQIksFvFw629/t25SEw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iMr4w-000843-Qc; Tue, 22 Oct 2019 10:07:50 +0000
-Received: from mail-oi1-x244.google.com ([2607:f8b0:4864:20::244])
+	id 1iMsRi-00008Q-GL; Tue, 22 Oct 2019 11:35:26 +0000
+Received: from us-smtp-2.mimecast.com ([207.211.31.81]
+ helo=us-smtp-delivery-1.mimecast.com)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iMr4t-000832-0h
- for ath10k@lists.infradead.org; Tue, 22 Oct 2019 10:07:48 +0000
-Received: by mail-oi1-x244.google.com with SMTP id g81so13650748oib.8
- for <ath10k@lists.infradead.org>; Tue, 22 Oct 2019 03:07:45 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=mime-version:in-reply-to:references:from:date:message-id:subject:to
- :cc; bh=iFTeSU9DK9ebNJwCkq6A2UglnA/84QdLInUE+UVt72Q=;
- b=GLvaM+emlsDUj6Xx9I/LNo1xIxNCSAf5UYV4VRs5hw48hWzheIvw3/mg7Fe4NpNjne
- 7tUEvHhvrLgivW2XZxBrYgJMDsrDhcGhXybAMvxodIAhIiawPCSZn8Wu+ZpKlz516lQ8
- +UrDGEamtRGL1IMzJZ5d3L2KBOuWT0oxMaXgBlWn1Oab5JzxCioQqfUqldZ6FG/Fmt1g
- YQ/aY+dW4QiSKzHkQEvBQxue25Ec/J+1TRXE989utfeHrH2HkEfecOb5t1ARKXdsWeH6
- c6BIMUY7+y9HqjjGuigZX772gK1SbBU9+xAljSMEz5YpdB0liu+isDe6/T96EPfsVrjx
- X3pA==
+ id 1iMsRe-00007h-Nn
+ for ath10k@lists.infradead.org; Tue, 22 Oct 2019 11:35:24 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
+ s=mimecast20190719; t=1571744121;
+ h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+ to:to:cc:cc:mime-version:mime-version:content-type:content-type:
+ content-transfer-encoding:content-transfer-encoding:
+ in-reply-to:in-reply-to:references:references;
+ bh=9lXUdIMpqZFihIoO9yzChXD19YUfn5jCLlrdTWpXVmA=;
+ b=e48az/H181QGPEk5nrq5EjCQG4d4ruwJzaJRoPj56062kAO94I6R48qmODqzkJNwKATJNX
+ XihGMdD4cmiLCR5D4ikCjwFazd8RdsGTQEiIPl4WY7ud97HNBD6H6rTeH+cgyjYxG2qdEG
+ d411Gpy0MbvTlRh0xTSqH6S7JxFgWNM=
+Received: from mail-lj1-f199.google.com (mail-lj1-f199.google.com
+ [209.85.208.199]) (Using TLS) by relay.mimecast.com with ESMTP id
+ us-mta-143-5lfhRuYwM9KmorVCo9Vq5A-1; Tue, 22 Oct 2019 07:35:19 -0400
+Received: by mail-lj1-f199.google.com with SMTP id h19so2894022ljc.5
+ for <ath10k@lists.infradead.org>; Tue, 22 Oct 2019 04:35:18 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:in-reply-to:references:from:date
- :message-id:subject:to:cc;
- bh=iFTeSU9DK9ebNJwCkq6A2UglnA/84QdLInUE+UVt72Q=;
- b=S2GIDFayKe+jU7MPkGNtixomhQUFcPhxudtKDUS/kzOGXQo7ZzbV6E0UfVbaNtDDqv
- dTcQVX2qbvmpRCykb/g2WAQtGzZim3W6Bkj8dUnVRIkhD01K/OV0UFP9tDN3GNl1P+/g
- IlyVSXAax+EmueBDxBc/C/GxhXOukgUHa0Mg9sJ4NYl4fopwmX3irw4SP2oXNf0wfI9T
- af3WkphUd24pmvWeNwzGS4EpxmI2HZgK32iIE4u2qqzT4rxmqHmCMudxs6PjFuRbee5t
- gZMAiMuWy9++7THLuDxiLReLZQ5ROh8OaytgkvHViaB6hsAFfTekTz+kgCJFpswX44l+
- fIRw==
-X-Gm-Message-State: APjAAAVfTfKK3LTPI5idFJpPCgTwHS8b/kjmk2WIICV0joqZaasgE8eE
- Cx/S8tWcUPeyisUAwPvUmhElWOksMtzpxg1eViw=
-X-Google-Smtp-Source: APXvYqwZwk63iNNN4Hs2V0NWyfBlNKBesMXZy+huRrLlYqynjtIPveX6tpdEvoVLg+oIOs3+icmF89FRFb8Tg+CxDe8=
-X-Received: by 2002:a05:6808:aad:: with SMTP id
- r13mr2248651oij.30.1571738864718; 
- Tue, 22 Oct 2019 03:07:44 -0700 (PDT)
+ h=x-gm-message-state:from:to:cc:subject:in-reply-to:references:date
+ :message-id:mime-version;
+ bh=5Z4MpTbIw+JCQPCzaEXbau+RX+9w+zSZ8KSShaRJy8k=;
+ b=nRK6Wz7kctSzxR8G10gQ9IkhkD/28HMuM9mzKve5Rt2PXJbdSeT38UxYcA1g7zAZpH
+ tndHGdwwOVDPXtsuAD2NPwzmN0dHtkEHvYwYFBoYvChZysk2ebTOaYWset/1F7g2WMIv
+ I9FN6ZhHyKUgEoi+sJdn/XaAIrbQA6jdYGFCxf3dSy/pZsh1K2Z/cmSwrlgMz21WWEdz
+ cwnnyJHfE1rhHdiciivQ8+zjD0FwNX0s3Y+vwMvNiy93uPeKmqMup6kjW2qRkC1q8U2/
+ 4wEYu2tYfC3S24KwQCk9JmCP2hoKwRpTbCBMlfO3JIEXpvxOb9z+XswT04rIw3zZsEY7
+ /xjQ==
+X-Gm-Message-State: APjAAAWWjBGZBJxfzLBs4ufhsznQpYW7R2CgMr+MgUOF12P5HRsjG5Fy
+ S+1peLNLwQsaPJ9rPyPhNpj5GyVYdlontGs6yyPpyJ/GkndHEAYiAfy5YdDUPJtz/fAFA1ExVjE
+ nhve/Hp8I6z64O5sLOr9mbA==
+X-Received: by 2002:a19:6a08:: with SMTP id u8mr19884678lfu.74.1571744117869; 
+ Tue, 22 Oct 2019 04:35:17 -0700 (PDT)
+X-Google-Smtp-Source: APXvYqwmGTFXAJkFuoNzgelmQogIQSog/uQu9muSz0RpmB3Wbx+A4SlxIO3hShCl4fhxL63M2txo1g==
+X-Received: by 2002:a19:6a08:: with SMTP id u8mr19884659lfu.74.1571744117720; 
+ Tue, 22 Oct 2019 04:35:17 -0700 (PDT)
+Received: from alrua-x1.borgediget.toke.dk (borgediget.toke.dk.
+ [85.204.121.218])
+ by smtp.gmail.com with ESMTPSA id b67sm16614489ljf.5.2019.10.22.04.35.16
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Tue, 22 Oct 2019 04:35:16 -0700 (PDT)
+Received: by alrua-x1.borgediget.toke.dk (Postfix, from userid 1000)
+ id 2DABF1804B1; Tue, 22 Oct 2019 13:35:16 +0200 (CEST)
+From: Toke =?utf-8?Q?H=C3=B8iland-J=C3=B8rgensen?= <toke@redhat.com>
+To: Kan Yan <kyan@google.com>
+Subject: Re: [PATCH v4 4/4] mac80211: Use Airtime-based Queue Limits (AQL) on
+ packet dequeue
+In-Reply-To: <CA+iem5sy16=xMZjJi1nKHrxP_xWHk-86G=ZLwtMMb04EOt5tQA@mail.gmail.com>
+References: <157148503415.2989444.7391437309981941226.stgit@toke.dk>
+ <157148503865.2989444.7118792679603045723.stgit@toke.dk>
+ <CA+iem5sy16=xMZjJi1nKHrxP_xWHk-86G=ZLwtMMb04EOt5tQA@mail.gmail.com>
+X-Clacks-Overhead: GNU Terry Pratchett
+Date: Tue, 22 Oct 2019 13:35:16 +0200
+Message-ID: <871rv5ovwr.fsf@toke.dk>
 MIME-Version: 1.0
-Received: by 2002:a9d:2286:0:0:0:0:0 with HTTP; Tue, 22 Oct 2019 03:07:44
- -0700 (PDT)
-In-Reply-To: <1571734629-18028-1-git-send-email-zhichen@codeaurora.org>
-References: <1571734629-18028-1-git-send-email-zhichen@codeaurora.org>
-From: Tom Psyborg <pozega.tomislav@gmail.com>
-Date: Tue, 22 Oct 2019 12:07:44 +0200
-Message-ID: <CAKR_QVLDFBVMDDP4mPYVNdpT9TA3podNeQMpVJQwE7A5eG=0kA@mail.gmail.com>
-Subject: Re: [PATCH RFC] Revert "ath10k: fix DMA related firmware crashes on
- multiple devices"
-To: Zhi Chen <zhichen@codeaurora.org>
+X-MC-Unique: 5lfhRuYwM9KmorVCo9Vq5A-1
+X-Mimecast-Spam-Score: 0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191022_030747_085818_A152B77E 
-X-CRM114-Status: GOOD (  13.64  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20191022_043522_852439_4ECE998F 
+X-CRM114-Status: UNSURE (   6.53  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:244 listed in]
- [list.dnswl.org]
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [207.211.31.81 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (pozega.tomislav[at]gmail.com)
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
@@ -95,64 +110,37 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org
+Cc: Rajkumar Manoharan <rmanohar@codeaurora.org>,
+ Kevin Hayes <kevinhayes@google.com>,
+ Make-Wifi-fast <make-wifi-fast@lists.bufferbloat.net>,
+ linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
+ John Crispin <john@phrozen.org>, Johannes Berg <johannes@sipsolutions.net>,
+ Lorenzo Bianconi <lorenzo@kernel.org>, Felix Fietkau <nbd@nbd.name>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On 22/10/2019, Zhi Chen <zhichen@codeaurora.org> wrote:
-> This reverts commit 76d164f582150fd0259ec0fcbc485470bcd8033e.
-> PCIe hung issue was observed on multiple platforms. The issue was
-> reproduced
-> when DUT was configured as AP and associated with 50+ STAs.
->
-> With PCIe protocol analyzer, we can see DMA Read crossing 4KB boundary when
-> issue happened. It broke PCIe spec and caused PCIe stuck.
->
-> Tested:  IPQ8064 + QCA9984 with firmware 10.4-3.10-00047
->          QCS404 + QCA9984 with firmware 10.4-3.9.0.2--00044
->          Synaptics AS370 + QCA9888  with firmware 10.4-3.9.0.2--00040
->
-> Signed-off-by: Zhi Chen <zhichen@codeaurora.org>
-> ---
->  drivers/net/wireless/ath/ath10k/hw.h | 4 ++--
->  1 file changed, 2 insertions(+), 2 deletions(-)
->
-> diff --git a/drivers/net/wireless/ath/ath10k/hw.h
-> b/drivers/net/wireless/ath/ath10k/hw.h
-> index 35a3623..17f620b 100644
-> --- a/drivers/net/wireless/ath/ath10k/hw.h
-> +++ b/drivers/net/wireless/ath/ath10k/hw.h
-> @@ -753,7 +753,7 @@ ath10k_is_rssi_enable(struct ath10k_hw_params *hw,
->  #define TARGET_10X_MAX_FRAG_ENTRIES		0
->
->  /* 10.2 parameters */
-> -#define TARGET_10_2_DMA_BURST_SIZE		0
-> +#define TARGET_10_2_DMA_BURST_SIZE		1
->
->  /* Target specific defines for WMI-TLV firmware */
->  #define TARGET_TLV_NUM_VDEVS			4
-> @@ -813,7 +813,7 @@ ath10k_is_rssi_enable(struct ath10k_hw_params *hw,
->
->  #define TARGET_10_4_TX_DBG_LOG_SIZE		1024
->  #define TARGET_10_4_NUM_WDS_ENTRIES		32
-> -#define TARGET_10_4_DMA_BURST_SIZE		0
-> +#define TARGET_10_4_DMA_BURST_SIZE		1
->  #define TARGET_10_4_MAC_AGGR_DELIM		0
->  #define TARGET_10_4_RX_SKIP_DEFRAG_TIMEOUT_DUP_DETECTION_CHECK 1
->  #define TARGET_10_4_VOW_CONFIG			0
-> --
-> 2.7.4
->
->
-> _______________________________________________
-> ath10k mailing list
-> ath10k@lists.infradead.org
-> http://lists.infradead.org/mailman/listinfo/ath10k
->
+Kan Yan <kyan@google.com> writes:
 
-What about main and 10x firmware branch?
+>> +               if (ieee80211_is_data_qos(hdr->frame_control)) {
+>> +                       qc = ieee80211_get_qos_ctl(hdr);
+>> +                       tid = qc[0] & 0xf;
+>> +                       ac = ieee80211_ac_from_tid(tid);
+>> +               } else {
+>> +                       ac = IEEE80211_AC_BE;
+>> +               }
+>
+> The tid/ac is incorrect either here or in __ieee80211_tx_status() when
+> tested with ath10k. The ac is set to AC_BE with test done using BK
+> class traffic,  hence the pending airtime get updated for the wrong
+> txq.
+
+Hmm, I guess we could just get the ac using skb_get_queue_mapping().
+I'll send an update with this fixed for you to try :)
+
+-Toke
+
 
 _______________________________________________
 ath10k mailing list
