@@ -2,87 +2,99 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 73E9BE1FA7
-	for <lists+ath10k@lfdr.de>; Wed, 23 Oct 2019 17:43:25 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 099BFE24F0
+	for <lists+ath10k@lfdr.de>; Wed, 23 Oct 2019 23:09:29 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:References
+	:In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=oKGR9+iheKFF+0IRK/l+1/m6BSegYiJAnDkZJvxlepg=; b=MQMwOrXOLZpe/t
-	Xrw8p8S1M0xAkjPezD0a71BFpQlyCbhr4hC/eu4Bmwd+Yc+RITBYmBAkW4IKKmJBb3XHCD7Npb0jW
-	gizJ9z4YcqwHxclKWQj48nie26/4Q+MZFyANUpdWrSdi3Dp/zDds56/dLdjMVbIfK8BqxgFpOvf1Y
-	5rD3awc/E47rxZ3/dgBPUmcXnV84kSz6qsF8aVF2aUncWiYp4+R/UA5tZ5yycnS0sEBeRci4eH1dh
-	gFdfdcTOf2Gst4d8p4PrTjaLPdp6bIfo45mA1mHh9SqykJ0JBKscJ/N3ZzmQcuhJAmuzcmDQbEPjh
-	494GPhVKxyAxwvbtj6Kg==;
+	List-Owner; bh=G3yihIBHSeX2Wh2W6AnyXd1o70NoMP55GGsroRr+nOQ=; b=Q8H2b3JQ+brv/P
+	UNxaGXuC1BjhPLzz7yFuiTcruN+H34B0c0kIEeMGLRQxRMu94JI3bV218NUe7BhKMIH36SdBdGnUA
+	4peuBFcezJlxlenO3aU/jDF+XnPQ+sBYrQGUSp+Uz6jP/ojPD/3NumRBY4pgVDI9akbXjsL/+fwyK
+	pPALL2CmmXUbd1kaaIG0yxITQB+NudLvPA8gubd6ZeLTjwTm+5drrwdWtaE5jGRCyemmXaogl6oGo
+	HD+wSsqy9ISEdCQA+yIEti92fTU9HaKZshndfI0cPIesRQ1ZaNFKE6OIkMXYhziN4BMCpatFd5e9t
+	HsNAYGTr1ODoGzqUKzEg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iNIn9-0002yv-Fy; Wed, 23 Oct 2019 15:43:19 +0000
-Received: from mail-lj1-x241.google.com ([2a00:1450:4864:20::241])
+	id 1iNNsi-0002NY-Pf; Wed, 23 Oct 2019 21:09:24 +0000
+Received: from us-smtp-1.mimecast.com ([205.139.110.61]
+ helo=us-smtp-delivery-1.mimecast.com)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iNIn6-0002yZ-PG
- for ath10k@lists.infradead.org; Wed, 23 Oct 2019 15:43:18 +0000
-Received: by mail-lj1-x241.google.com with SMTP id q78so6506243lje.5
- for <ath10k@lists.infradead.org>; Wed, 23 Oct 2019 08:43:16 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=20161025;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc:content-transfer-encoding;
- bh=Wf7cqgLpHpMCfHDTso2mEEg6iVGE1A3AlSMCK0EZOvI=;
- b=MeL78PzzFc4GWTGjttUER3eajJiHAfiXzG8G1Xek8riNLS0Akb3EyaIF8kCjplCBvC
- e8PdIOrGlpPr64UiYnljhSyeNwzpyq1+SmkBqsKNqfnIjx/7/WUm7V18gqSZfq6qXpjy
- HSSFn0i5dZw0hwcdKmrjoc8j36P/bg/LP5qNws123c15xYetsbls2kJVLs9fGDiHpzTp
- NTAbYCE9/adTig9wIUFJSciEu5YjcNmNc29oi5wz79zXLWWwMOEF2YCmKSle0etLBDjV
- RPybKBRkcQRNKCdFp6+vsH/DZ/Jg6//ynFzwearQSIDF3fO2sX+/o3KRHWOwcJvzxVXH
- 952A==
+ id 1iNNse-0002Kz-Ba
+ for ath10k@lists.infradead.org; Wed, 23 Oct 2019 21:09:21 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
+ s=mimecast20190719; t=1571864958;
+ h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+ to:to:cc:cc:mime-version:mime-version:content-type:content-type:
+ content-transfer-encoding:content-transfer-encoding:
+ in-reply-to:in-reply-to:references:references;
+ bh=p2Bt+TeFORfohjlF3bqI3+Mu+yeYbBVrSueSOmuZILw=;
+ b=A4y45YgjL1l2s3VIt+NUGWOtUJ2aQW4ApKomDyGT6wRctm+X/EMCrmd60CPERoSnRCcJL0
+ 5gDnX0FuJc5jfiTtooWSE1wqcLTxLr9vAvq8htW5E+zqUTq+7D30U9Q+MmfyzytUbhw5Hj
+ WmpI2sVYmlCRFNFXVDhr1KA5JMQhPNs=
+Received: from mail-lf1-f72.google.com (mail-lf1-f72.google.com
+ [209.85.167.72]) (Using TLS) by relay.mimecast.com with ESMTP id
+ us-mta-246-ca-PSHfvOJO5WVxr3jQtwQ-1; Wed, 23 Oct 2019 17:09:12 -0400
+Received: by mail-lf1-f72.google.com with SMTP id v204so2672116lfa.0
+ for <ath10k@lists.infradead.org>; Wed, 23 Oct 2019 14:09:11 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc:content-transfer-encoding;
- bh=Wf7cqgLpHpMCfHDTso2mEEg6iVGE1A3AlSMCK0EZOvI=;
- b=dMyBqSwEmJC9DzHon6Jqd8MGqk1c6HLuvHqONYDetFh9GvberCa0x38rEtO9Gaw4eY
- dDcQU6uqpbV+9zdXYaV3kl+LgHKYEZkCd2qDbVnDkAMcG5DN1KwOFz/ZwpvaiSYurXHm
- FHCdulYZEWCMOAPztNQUnqkhJcrzoByrgVivCPYaFXAIMXaArpxrCjEVQb85oFfmM/C1
- dzsEMazLn8KGjATZKJS0Yi+LsCOuy/M4dUlEq33N/oSMBDfLa8DWv5tvCMbtwA9FR81d
- SUCITbSEu8521TBRDsEA28pLrKQreSu/JZFvu+m9ED4tzYqQgVEJAZWjOMSw0fWAg+HY
- JOWw==
-X-Gm-Message-State: APjAAAXG/TLxJYuMtlfnd6ts8wuLs3Lyptzsel1ai1frS1dSl1vTkFYF
- XqysqMtLu3ZVmkw9WN9rCNA9w1BrTLf2E5CNf4vWxg==
-X-Google-Smtp-Source: APXvYqx3Qvv4PHdZrvwXrE+LY1lvoApw+SX5kuGkePq0Hg3y9W9edqODxW4WERwR4EtQWzHdvirS2CmRTMj3y2hm1yI=
-X-Received: by 2002:a05:651c:326:: with SMTP id
- b6mr7678893ljp.119.1571845394424; 
- Wed, 23 Oct 2019 08:43:14 -0700 (PDT)
-MIME-Version: 1.0
+ h=x-gm-message-state:from:to:cc:subject:in-reply-to:references:date
+ :message-id:mime-version;
+ bh=j8uth/YyCcw2cd/AKaSr6zH2GVsN12xt/bp7qE7X9Ng=;
+ b=Ia++kvCcMsk5rum5+K9hSirNWez6u2LDc+GaZSBEIv2sRSQuNwsqCepnfz1aUiqzCZ
+ 25XyQUvb78063YrZJOvuQODzDY96Xd8lSrdWvqED35tnRcK3GMv+Ha6WajryLd/ft4rl
+ N8A0wWnlJ/389hE1HPmj+3EnB+Se0yu40L6MFoqOTJnR0FyAc7YLIFxwz8EvPxuhYyO9
+ t2VBEzaD4Nc/7GDg2jTqi9JqKrDd8EkDQj+HiK7aP3likNGU+aH9Ed6zqrPOi9Y4w/u9
+ eammQ/3rovksIejl1sQ2JMAF3172PgLnOxuxpOLDX4EUj5MRGHd3tthCFGGJtYYhQFGr
+ izKQ==
+X-Gm-Message-State: APjAAAX4r0HRfqTqp9aNvLPoinSirRfPXx/DWt+tSSMHiKBwXRpT620M
+ abhuk6JD+FH0hNyvBeMfr8BkIhjX3YPvv/XqrMz1ARr4HtcGbaDxCz2ibqZeJFmW/jwhyOa87Jh
+ cPve97S4juWGGyi/xv/QkfQ==
+X-Received: by 2002:a2e:9e4c:: with SMTP id g12mr24328844ljk.103.1571864950206; 
+ Wed, 23 Oct 2019 14:09:10 -0700 (PDT)
+X-Google-Smtp-Source: APXvYqzYFFtiQHnJ5LqHgsHhFH7IcaoyXeT9h2Tuo3q9/5F1AX2go+DSXHCEgirMEaZeL4pFglNNZQ==
+X-Received: by 2002:a2e:9e4c:: with SMTP id g12mr24328834ljk.103.1571864950024; 
+ Wed, 23 Oct 2019 14:09:10 -0700 (PDT)
+Received: from alrua-x1.borgediget.toke.dk ([2a00:7660:6da:443::2])
+ by smtp.gmail.com with ESMTPSA id z1sm9491454ljh.88.2019.10.23.14.09.08
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Wed, 23 Oct 2019 14:09:09 -0700 (PDT)
+Received: by alrua-x1.borgediget.toke.dk (Postfix, from userid 1000)
+ id 1DE0C1804B1; Wed, 23 Oct 2019 23:09:08 +0200 (CEST)
+From: Toke =?utf-8?Q?H=C3=B8iland-J=C3=B8rgensen?= <toke@redhat.com>
+To: Kan Yan <kyan@google.com>
+Subject: Re: [PATCH v4 4/4] mac80211: Use Airtime-based Queue Limits (AQL) on
+ packet dequeue
+In-Reply-To: <CA+iem5vU-K-+sSSeNugy5ZZF_nH5vuaXW3J_WC=1WWhdkHOgjw@mail.gmail.com>
 References: <157148503415.2989444.7391437309981941226.stgit@toke.dk>
  <157148503865.2989444.7118792679603045723.stgit@toke.dk>
  <CA+iem5sy16=xMZjJi1nKHrxP_xWHk-86G=ZLwtMMb04EOt5tQA@mail.gmail.com>
  <871rv5ovwr.fsf@toke.dk>
  <CA+iem5tZ95Jd9htLEdAJMubuFeWeUibK9MhTnTHLWNucX6_cRg@mail.gmail.com>
  <87tv7znact.fsf@toke.dk> <87lftbn60t.fsf@toke.dk>
-In-Reply-To: <87lftbn60t.fsf@toke.dk>
-From: Kan Yan <kyan@google.com>
-Date: Wed, 23 Oct 2019 08:43:03 -0700
-Message-ID: <CA+iem5tbSFyY0pS5Ufb8Ch=y3UGR_iuX_8ao9=2iS05-MozQwA@mail.gmail.com>
-Subject: Re: [PATCH v4 4/4] mac80211: Use Airtime-based Queue Limits (AQL) on
- packet dequeue
-To: =?UTF-8?B?VG9rZSBIw7hpbGFuZC1Kw7hyZ2Vuc2Vu?= <toke@redhat.com>
+ <CA+iem5vU-K-+sSSeNugy5ZZF_nH5vuaXW3J_WC=1WWhdkHOgjw@mail.gmail.com>
+X-Clacks-Overhead: GNU Terry Pratchett
+Date: Wed, 23 Oct 2019 23:09:08 +0200
+Message-ID: <877e4vmaob.fsf@toke.dk>
+MIME-Version: 1.0
+X-MC-Unique: ca-PSHfvOJO5WVxr3jQtwQ-1
+X-Mimecast-Spam-Score: 0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191023_084316_847538_88E5B215 
-X-CRM114-Status: GOOD (  16.76  )
-X-Spam-Score: -15.7 (---------------)
+X-CRM114-CacheID: sfid-20191023_140920_469645_5E19EC7E 
+X-CRM114-Status: UNSURE (   6.41  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-15.7 points)
+ Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:241 listed in]
- [list.dnswl.org]
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [205.139.110.61 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -7.5 USER_IN_DEF_SPF_WL     From: address is in the default SPF
- white-list
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -7.5 USER_IN_DEF_DKIM_WL    From: address is in the default DKIM
- white-list
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
@@ -90,8 +102,6 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  author's domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.5 ENV_AND_HDR_SPF_MATCH  Env and Hdr From used in default SPF WL
- Match -0.0 DKIMWL_WL_MED          DKIMwl.org - Medium sender
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -109,56 +119,31 @@ Cc: Rajkumar Manoharan <rmanohar@codeaurora.org>,
  linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
  John Crispin <john@phrozen.org>, Johannes Berg <johannes@sipsolutions.net>,
  Lorenzo Bianconi <lorenzo@kernel.org>, Felix Fietkau <nbd@nbd.name>
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-PiBBaGEhIFR1cm5zIG91dCBJIHdhcyBkb2luZyB0aGUgc3RhIGxvb2t1cCBjb21wbGV0ZWx5IHdy
-b25nIGluCj4gaWVlZTgwMjExX3JlcG9ydF91c2VkX3NrYigpOyBzbyBhbnl0aGluZyBmcmFtZXMg
-dGhhdCB3ZXJlIGRyb3BwZWQgYW5kCj4gd2VudCB0aHJvdWdoIHRoZXJlIHdvdWxkIG5vdCBnZXQg
-aXRzIGFpcnRpbWUgc3VidHJhY3RlZCBjb3JyZWN0bHkuIFdpbGwKPiBzZW5kIGEgdjYgd2l0aCBh
-IGZpeCA6KQoKQXdlc29tZSwgdGhhbmtzISBUaGF0IGxvb2tzIHZlcnkgcHJvbWlzaW5nLiAgVGhl
-IHN5bXB0b20gSSBzZWUgd2l0aApwcmV2aW91cyBwYXRjaCBpcyB0aGUgaW50ZXJmYWNlJ3MgcGVu
-ZGluZyBhaXJ0aW1lIGNvdW50IGxvb2tzIGZpbmUsCmJ1dCB0aGUgc3RhdGlvbidzIGFpcnRpbWUg
-Z2V0IHdyb25nLCBlaXRoZXIgZHVlIHRvIGFpcnRpbWUgaXMgY3JlZGl0ZWQKdG8gdGhlIHdyb25n
-IHN0YXRpb24gb3Igd3JvbmcgQUMuCgpPbiBXZWQsIE9jdCAyMywgMjAxOSBhdCAyOjUyIEFNIFRv
-a2UgSMO4aWxhbmQtSsO4cmdlbnNlbiA8dG9rZUByZWRoYXQuY29tPiB3cm90ZToKPgo+IFRva2Ug
-SMO4aWxhbmQtSsO4cmdlbnNlbiA8dG9rZUByZWRoYXQuY29tPiB3cml0ZXM6Cj4KPiA+IEthbiBZ
-YW4gPGt5YW5AZ29vZ2xlLmNvbT4gd3JpdGVzOgo+ID4KPiA+Pj4gPj4gKyAgICAgICAgICAgICAg
-IGlmIChpZWVlODAyMTFfaXNfZGF0YV9xb3MoaGRyLT5mcmFtZV9jb250cm9sKSkgewo+ID4+PiA+
-PiArICAgICAgICAgICAgICAgICAgICAgICBxYyA9IGllZWU4MDIxMV9nZXRfcW9zX2N0bChoZHIp
-Owo+ID4+PiA+PiArICAgICAgICAgICAgICAgICAgICAgICB0aWQgPSBxY1swXSAmIDB4ZjsKPiA+
-Pj4gPj4gKyAgICAgICAgICAgICAgICAgICAgICAgYWMgPSBpZWVlODAyMTFfYWNfZnJvbV90aWQo
-dGlkKTsKPiA+Pj4gPj4gKyAgICAgICAgICAgICAgIH0gZWxzZSB7Cj4gPj4+ID4+ICsgICAgICAg
-ICAgICAgICAgICAgICAgIGFjID0gSUVFRTgwMjExX0FDX0JFOwo+ID4+PiA+PiArICAgICAgICAg
-ICAgICAgfQo+ID4+PiA+Cj4gPj4+ID4gVGhlIHRpZC9hYyBpcyBpbmNvcnJlY3QgZWl0aGVyIGhl
-cmUgb3IgaW4gX19pZWVlODAyMTFfdHhfc3RhdHVzKCkgd2hlbgo+ID4+PiA+IHRlc3RlZCB3aXRo
-IGF0aDEway4gVGhlIGFjIGlzIHNldCB0byBBQ19CRSB3aXRoIHRlc3QgZG9uZSB1c2luZyBCSwo+
-ID4+PiA+IGNsYXNzIHRyYWZmaWMsIGhlbmNlIHRoZSBwZW5kaW5nIGFpcnRpbWUgZ2V0IHVwZGF0
-ZWQgZm9yIHRoZSB3cm9uZwo+ID4+PiA+IHR4cS4KPiA+Pj4KPiA+Pj4gSHVoLCB3ZWxsIHRoYXQg
-d29uJ3QgZG8sIG9idmlvdXNseSA6KQo+ID4+Pgo+ID4+PiBBbnkgaWRlYSB3aHkgaXQgbWlnaHQg
-YmUgd3Jvbmc/Cj4gPj4KPiA+PiBzb21laG93ICBpZWVlODAyMTFfaXNfZGF0YV9xb3MoKSByZXR1
-cm5zIGZhbHNlLiBCZXNpZGVzLCAgcW9zX2NvbnRyb2wKPiA+PiBmaWVsZCBkb2Vzbid0IHNlZW1z
-IHRvIGJlIHNldCBpbiBpZWVlODAyMTFfYnVpbGRfaGRyKCkuCj4gPj4KPiA+Pj4gSG1tLCBJIGd1
-ZXNzIHdlIGNvdWxkIGp1c3QgZ2V0IHRoZSBhYyB1c2luZyBza2JfZ2V0X3F1ZXVlX21hcHBpbmco
-KS4KPiA+Pj4gSSdsbCBzZW5kIGFuIHVwZGF0ZSB3aXRoIHRoaXMgZml4ZWQgZm9yIHlvdSB0byB0
-cnkgOikKPiA+PiBUaGFua3MgZm9yIHRoZSBxdWljayB1cGRhdGUuIEl0IGlzIGdldHRpbmcgbXVj
-aCBiZXR0ZXIsIGJ1dAo+ID4+IHVuZm9ydHVuYXRlbHkgdGhlIHBlbmRpbmcgYWlydGltZSBhY2Nv
-dW50aW5nIHNvbWV0aW1lcyBpcyBzdGlsbCBub3QKPiA+PiBjb3JyZWN0IGFuZCBjYXVzZSB0eHEg
-c3R1Y2sgb2NjYXNpb25hbGx5Lgo+ID4KPiA+IE9LLCBzbyB0aGF0IGhhcyB0byBtZWFuIHRoYXQg
-dGhlcmUgYXJlIHBhY2tldHMgZ2V0dGluZyBkcm9wcGVkIHNvbWV3aGVyZQo+ID4gd2l0aG91dCBn
-b2luZyB0aHJvdWdoIGllZWU4MDIxMV9yZXBvcnRfdXNlZF9za2IoKS4gQXNzdW1pbmcgeW91J3Jl
-IG5vdAo+ID4gaGl0dGluZyB0aGUgdW5kZXJmbG93IHdhcm5pbmdzLCBqdXN0IHNlZWluZyB0aGUg
-Y291bnRlciBub3QgZ2V0IGJhY2sKPiA+IGRvd24gdG8gemVybz8KPiA+Cj4gPiBDb3VsZCB5b3Ug
-c2VlIGlmIHlvdSBjYW4gZmluZCBvdXQgaWYgYXRoMTBrIGRvZXMgdGhhdCBhbnl3aGVyZT8gSSds
-bCBnbwo+ID4gaHVudGluZyBpbiBtYWM4MDIxMS4KPiA+Cj4gPiBMb29raW5nIGZvciBjYWxscyB0
-byBrZnJlZV9za2IoKSBvciBrZnJlZV9za2JfbGlzdCgpIHNob3VsZCBob3BlZnVsbHkKPiA+IHR1
-cm4gdXAgc29tZXRoaW5nLi4uCj4KPiBBaGEhIFR1cm5zIG91dCBJIHdhcyBkb2luZyB0aGUgc3Rh
-IGxvb2t1cCBjb21wbGV0ZWx5IHdyb25nIGluCj4gaWVlZTgwMjExX3JlcG9ydF91c2VkX3NrYigp
-OyBzbyBhbnl0aGluZyBmcmFtZXMgdGhhdCB3ZXJlIGRyb3BwZWQgYW5kCj4gd2VudCB0aHJvdWdo
-IHRoZXJlIHdvdWxkIG5vdCBnZXQgaXRzIGFpcnRpbWUgc3VidHJhY3RlZCBjb3JyZWN0bHkuIFdp
-bGwKPiBzZW5kIGEgdjYgd2l0aCBhIGZpeCA6KQo+Cj4gLVRva2UKPgoKX19fX19fX19fX19fX19f
-X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18KYXRoMTBrIG1haWxpbmcgbGlzdAphdGgx
-MGtAbGlzdHMuaW5mcmFkZWFkLm9yZwpodHRwOi8vbGlzdHMuaW5mcmFkZWFkLm9yZy9tYWlsbWFu
-L2xpc3RpbmZvL2F0aDEwawo=
+Kan Yan <kyan@google.com> writes:
+
+>>
+>> Aha! Turns out I was doing the sta lookup completely wrong in
+>> ieee80211_report_used_skb(); so anything frames that were dropped and
+>> went through there would not get its airtime subtracted correctly. Will
+>> send a v6 with a fix :)
+>
+> Awesome, thanks! That looks very promising.  The symptom I see with
+> previous patch is the interface's pending airtime count looks fine, but the
+> station's airtime get wrong, either due to airtime is credited to the wrong
+> station or wrong AC.
+
+Right, if the interface count is fine that means it's not a missing call
+to the subtraction. So hopefully it will be fixed with v6 :)
+
+-Toke
+
+
+_______________________________________________
+ath10k mailing list
+ath10k@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/ath10k
