@@ -2,81 +2,95 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 06512E1663
-	for <lists+ath10k@lfdr.de>; Wed, 23 Oct 2019 11:40:41 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1BDEDE16A8
+	for <lists+ath10k@lfdr.de>; Wed, 23 Oct 2019 11:52:23 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:References
+	:In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=thyWklV17F/s9ZEieNCFEGxYsQhjiT0gZaBz2YLJL3I=; b=sy+Yzfhk15a2gV
-	KyGzgOOo5wSWzrrZvSEJ9i7+T8tsTRUtAwPMENWyGHAPtT35mY3hCJfkQ5FMwmzA5z2OGe8wMSbNn
-	+lhu+u+/By/mvAAqRQP/KlzsaDlmKRNcD1xzcR5XPx6r+DP9Ucfhg2sD5cGPmBqmS1JRkfejGHT8N
-	gPyAHX2i2VzG+uNspjwDXOCJmnDOk2qmAF9OlipeB+gC9+FPvwKyA8hj6jl+aMzxLGMyfDqmpXOXg
-	WAlky8xZlszvB7hzCe+4OVUEH7Y9KULmHuOaDJCjqlt72KFaxx1if4fvPKaA7mzRRYhvCPQAjCPUO
-	naNJS4SM8vSG3bwxPLNA==;
+	List-Owner; bh=mrc0fd9o5rzBs3bcFEJ+jMJT992x/thrpCQoHb98jsc=; b=h296D5UJvnYwLO
+	eE2LWMkAbAi3OQl/wVQyUKtPKrqubFzZYlo6hI4Ur/zeROjrIirxcl1RwdXgILeKBYjvaftVpFCW6
+	hp0+N7j2uOdObO9lpEeIQfy+K8oVb2ngJbBz0csuiNpkwnoA8VGwsA/20h/yOUvR1StVLh68eOUzQ
+	VtffMJHIAq3LuvWJdzV9CcOtp9V6uUK0y9eC/PDkPvLOeMZV67iOqLnCvI0nxMyXlL9mJR5se4BgJ
+	tFjq2Pe6/nNmCMVD+eJI9Pndn3dKOkNHdtpyiCtEbLCEt7VRilR+VziYSKwWDn3k6JC4vy7GkUp/K
+	OuSRpzAQQ6an365tAhLg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iND8B-0001hU-KB; Wed, 23 Oct 2019 09:40:39 +0000
-Received: from smtp.codeaurora.org ([198.145.29.96])
+	id 1iNDJT-0007v7-Ud; Wed, 23 Oct 2019 09:52:19 +0000
+Received: from us-smtp-1.mimecast.com ([205.139.110.61]
+ helo=us-smtp-delivery-1.mimecast.com)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iND7z-0001c3-3Z
- for ath10k@lists.infradead.org; Wed, 23 Oct 2019 09:40:28 +0000
-Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 5050760F39; Wed, 23 Oct 2019 09:40:26 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1571823626;
- bh=ZQsqHINW6xAB0KANIbCFsuyTLLk9RpKASFWISFomRSg=;
- h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=cGhePTccsYjUe8IagBpcwtmUw4cjDdUqxN6s6TrwlLxjcTHgi181DkGpkPyeZR1eY
- i7GGVU8NwQlxrTIqQDpve4FpDX6clDLod5aHxbisgJ6ElNEuw59uWKB5vF9nhNdqzs
- +DmDvaR0NzmBFVnFMgQZp0AQu3X67NU4obUXEOCw=
-X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
- pdx-caf-mail.web.codeaurora.org
-X-Spam-Level: 
-X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
- DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
- version=3.4.0
-Received: from govinds-linux.qualcomm.com
- (blr-c-bdr-fw-01_globalnat_allzones-outside.qualcomm.com [103.229.19.19])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
- (No client certificate requested)
- (Authenticated sender: govinds@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 898C760F5E;
- Wed, 23 Oct 2019 09:40:23 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1571823625;
- bh=ZQsqHINW6xAB0KANIbCFsuyTLLk9RpKASFWISFomRSg=;
- h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=mq7YdpaHsTwNRj3csiuNBsgJxQVhBM0kvEL8DPZZ2MVmJT8t7ix9TSb6OCxrt5H+A
- VqZPubHuCM+DLHmRBzbwsn2rAlCc8JLrBdol8n0d+k+qyLABUI8eUmDVJhl7JiBzVI
- 4YJiS1i7ZJYG7TmK7ECnf73U2vZhab6kpSxM0aRU=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 898C760F5E
-Authentication-Results: pdx-caf-mail.web.codeaurora.org;
- dmarc=none (p=none dis=none) header.from=codeaurora.org
-Authentication-Results: pdx-caf-mail.web.codeaurora.org;
- spf=none smtp.mailfrom=govinds@codeaurora.org
-From: Govind Singh <govinds@codeaurora.org>
-To: ath10k@lists.infradead.org
-Subject: [PATCH 2/2] ath10k: Don't call SCM interface for statically mapped
- msa region
-Date: Wed, 23 Oct 2019 15:10:14 +0530
-Message-Id: <20191023094014.28683-3-govinds@codeaurora.org>
-X-Mailer: git-send-email 2.22.0
-In-Reply-To: <20191023094014.28683-1-govinds@codeaurora.org>
-References: <20191023094014.28683-1-govinds@codeaurora.org>
+ id 1iNDJM-0007lC-GU
+ for ath10k@lists.infradead.org; Wed, 23 Oct 2019 09:52:18 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
+ s=mimecast20190719; t=1571824330;
+ h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+ to:to:cc:cc:mime-version:mime-version:content-type:content-type:
+ content-transfer-encoding:content-transfer-encoding:
+ in-reply-to:in-reply-to:references:references;
+ bh=/5Gd+sGRTLO/YyPTwPaFlOWjYLG6/P4AaU01cq86LiI=;
+ b=YzTzeTCmGG5pRDL4mhW0PXTyji+Ch2DgsoGSTdX5bUbdQCPxrifdpLslYcAYnfF8Jq/tOI
+ FAmBf5pcBmEOADr7F+4DTNhsVNsqmYZIxj+QjxpZ0aI+ImIwsSkstvfOUbTRaQ+1I7D8qt
+ 0ZWM+WSQMJCmCj748s4FwoFL+zxfcEU=
+Received: from mail-lf1-f71.google.com (mail-lf1-f71.google.com
+ [209.85.167.71]) (Using TLS) by relay.mimecast.com with ESMTP id
+ us-mta-214-v64ej-yuOc-IaO9IIIHilw-1; Wed, 23 Oct 2019 05:52:06 -0400
+Received: by mail-lf1-f71.google.com with SMTP id c13so4000682lfk.23
+ for <ath10k@lists.infradead.org>; Wed, 23 Oct 2019 02:52:06 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:to:cc:subject:in-reply-to:references:date
+ :message-id:mime-version:content-transfer-encoding;
+ bh=hFVDZODcV1pnEtDDIb8UrMv3iIHS2UTtEmv96KMbc7k=;
+ b=X/j2ExGmpVfIwo2RFDymPeUW4CwfDJcreFB3MoL3jibZcW3V2PhOEHk3Iqz1dqprU9
+ l4SevO5NChDarslHpak02UkltdSdSBDsi59O6BaWZFPbA3R4p38mlMJS2ui8+7LDRsQA
+ fjKOOzhEusr+TmwUvHEm1SmRGEmBp9bKh0IxAT2o6xOW8IGIdWJ608z8UPHP46+ZAT4O
+ eHg8dJUZWelCGUNeEa1kONSZl0UE8Hk0+ZbR3hsmjXc/eEEQq5zemhNqabFG9FEQUlJV
+ c6tWNicL65W6xlwdZusWfxT4w+v2nqwy4flm1RDVg1tJ6dH808e3qGC+8aMdvE3l5SL/
+ JmHQ==
+X-Gm-Message-State: APjAAAWWnBNwX8aPV0xm16X/qKkyh0BdLQ+x69GlalLAZT2cJ9x+WF1K
+ 3IDIby9DgwUZNb+9eKkCXJDVY/O05Wqh6rEmD6VcqUJVlUAVdQYzHjUn0U0QiXF7KgzrjIIwH4Z
+ plVrii4BXmLsjFYac+55kfA==
+X-Received: by 2002:a2e:9107:: with SMTP id m7mr6003961ljg.113.1571824324909; 
+ Wed, 23 Oct 2019 02:52:04 -0700 (PDT)
+X-Google-Smtp-Source: APXvYqwfTq6OyuPRjrUqdJ+q6pELeZDh85Gk4HQhTKpMvjbXzGrJtsr2TVw1Ipp+RRdcPFqc3KuU/w==
+X-Received: by 2002:a2e:9107:: with SMTP id m7mr6003952ljg.113.1571824324735; 
+ Wed, 23 Oct 2019 02:52:04 -0700 (PDT)
+Received: from alrua-x1.borgediget.toke.dk ([2a00:7660:6da:443::2])
+ by smtp.gmail.com with ESMTPSA id u24sm5939167ljl.64.2019.10.23.02.52.03
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Wed, 23 Oct 2019 02:52:03 -0700 (PDT)
+Received: by alrua-x1.borgediget.toke.dk (Postfix, from userid 1000)
+ id C05CD1804B1; Wed, 23 Oct 2019 11:52:02 +0200 (CEST)
+From: Toke =?utf-8?Q?H=C3=B8iland-J=C3=B8rgensen?= <toke@redhat.com>
+To: Kan Yan <kyan@google.com>
+Subject: Re: [PATCH v4 4/4] mac80211: Use Airtime-based Queue Limits (AQL) on
+ packet dequeue
+In-Reply-To: <87tv7znact.fsf@toke.dk>
+References: <157148503415.2989444.7391437309981941226.stgit@toke.dk>
+ <157148503865.2989444.7118792679603045723.stgit@toke.dk>
+ <CA+iem5sy16=xMZjJi1nKHrxP_xWHk-86G=ZLwtMMb04EOt5tQA@mail.gmail.com>
+ <871rv5ovwr.fsf@toke.dk>
+ <CA+iem5tZ95Jd9htLEdAJMubuFeWeUibK9MhTnTHLWNucX6_cRg@mail.gmail.com>
+ <87tv7znact.fsf@toke.dk>
+X-Clacks-Overhead: GNU Terry Pratchett
+Date: Wed, 23 Oct 2019 11:52:02 +0200
+Message-ID: <87lftbn60t.fsf@toke.dk>
 MIME-Version: 1.0
+X-MC-Unique: v64ej-yuOc-IaO9IIIHilw-1
+X-Mimecast-Spam-Score: 0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191023_024027_204502_96BA5626 
-X-CRM114-Status: GOOD (  11.27  )
+X-CRM114-CacheID: sfid-20191023_025212_645653_EC68CFD0 
+X-CRM114-Status: GOOD (  11.26  )
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [198.145.29.96 listed in list.dnswl.org]
+ medium trust [205.139.110.61 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
@@ -97,76 +111,50 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Govind Singh <govinds@codeaurora.org>, linux-wireless@vger.kernel.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: Rajkumar Manoharan <rmanohar@codeaurora.org>,
+ Kevin Hayes <kevinhayes@google.com>,
+ Make-Wifi-fast <make-wifi-fast@lists.bufferbloat.net>,
+ linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
+ John Crispin <john@phrozen.org>, Johannes Berg <johannes@sipsolutions.net>,
+ Lorenzo Bianconi <lorenzo@kernel.org>, Felix Fietkau <nbd@nbd.name>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-For some targets ex: QCS404, SCM permissions for MSA region is
-statically configured in TrustZone fw. Add SCM call disable option
-for such targets to avoid duplicate permissions.
-
-Testing: Tested on WCN3990 HW
-Tested FW: WLAN.HL.3.1-01040-QCAHLSWMTPLZ-1
-
-Signed-off-by: Govind Singh <govinds@codeaurora.org>
----
- drivers/net/wireless/ath/ath10k/qmi.c | 9 +++++++++
- drivers/net/wireless/ath/ath10k/qmi.h | 1 +
- 2 files changed, 10 insertions(+)
-
-diff --git a/drivers/net/wireless/ath/ath10k/qmi.c b/drivers/net/wireless/ath/ath10k/qmi.c
-index da16874012c5..d43ec0183287 100644
---- a/drivers/net/wireless/ath/ath10k/qmi.c
-+++ b/drivers/net/wireless/ath/ath10k/qmi.c
-@@ -95,6 +95,9 @@ static int ath10k_qmi_setup_msa_permissions(struct ath10k_qmi *qmi)
- 	int ret;
- 	int i;
- 
-+	if (qmi->msa_fixed_perm)
-+		return 0;
-+
- 	for (i = 0; i < qmi->nr_mem_region; i++) {
- 		ret = ath10k_qmi_map_msa_permission(qmi, &qmi->mem_region[i]);
- 		if (ret)
-@@ -113,6 +116,9 @@ static void ath10k_qmi_remove_msa_permission(struct ath10k_qmi *qmi)
- {
- 	int i;
- 
-+	if (qmi->msa_fixed_perm)
-+		return;
-+
- 	for (i = 0; i < qmi->nr_mem_region; i++)
- 		ath10k_qmi_unmap_msa_permission(qmi, &qmi->mem_region[i]);
- }
-@@ -1021,6 +1027,9 @@ static int ath10k_qmi_setup_msa_resources(struct ath10k_qmi *qmi, u32 msa_size)
- 		qmi->msa_mem_size = msa_size;
- 	}
- 
-+	if (of_property_read_bool(dev->of_node, "qcom,msa_fixed_perm"))
-+		qmi->msa_fixed_perm = true;
-+
- 	ath10k_dbg(ar, ATH10K_DBG_QMI, "msa pa: %pad , msa va: 0x%p\n",
- 		   &qmi->msa_pa,
- 		   qmi->msa_va);
-diff --git a/drivers/net/wireless/ath/ath10k/qmi.h b/drivers/net/wireless/ath/ath10k/qmi.h
-index 4ab21b223aaf..3a039e6e29df 100644
---- a/drivers/net/wireless/ath/ath10k/qmi.h
-+++ b/drivers/net/wireless/ath/ath10k/qmi.h
-@@ -115,6 +115,7 @@ struct ath10k_qmi {
- 	bool fw_ready;
- 	char fw_build_timestamp[MAX_TIMESTAMP_LEN + 1];
- 	struct ath10k_qmi_cal_data cal_data[MAX_NUM_CAL_V01];
-+	bool msa_fixed_perm;
- };
- 
- int ath10k_qmi_wlan_enable(struct ath10k *ar,
--- 
-2.22.0
-
-
-_______________________________________________
-ath10k mailing list
-ath10k@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/ath10k
+VG9rZSBIw7hpbGFuZC1Kw7hyZ2Vuc2VuIDx0b2tlQHJlZGhhdC5jb20+IHdyaXRlczoKCj4gS2Fu
+IFlhbiA8a3lhbkBnb29nbGUuY29tPiB3cml0ZXM6Cj4KPj4+ID4+ICsgICAgICAgICAgICAgICBp
+ZiAoaWVlZTgwMjExX2lzX2RhdGFfcW9zKGhkci0+ZnJhbWVfY29udHJvbCkpIHsKPj4+ID4+ICsg
+ICAgICAgICAgICAgICAgICAgICAgIHFjID0gaWVlZTgwMjExX2dldF9xb3NfY3RsKGhkcik7Cj4+
+PiA+PiArICAgICAgICAgICAgICAgICAgICAgICB0aWQgPSBxY1swXSAmIDB4ZjsKPj4+ID4+ICsg
+ICAgICAgICAgICAgICAgICAgICAgIGFjID0gaWVlZTgwMjExX2FjX2Zyb21fdGlkKHRpZCk7Cj4+
+PiA+PiArICAgICAgICAgICAgICAgfSBlbHNlIHsKPj4+ID4+ICsgICAgICAgICAgICAgICAgICAg
+ICAgIGFjID0gSUVFRTgwMjExX0FDX0JFOwo+Pj4gPj4gKyAgICAgICAgICAgICAgIH0KPj4+ID4K
+Pj4+ID4gVGhlIHRpZC9hYyBpcyBpbmNvcnJlY3QgZWl0aGVyIGhlcmUgb3IgaW4gX19pZWVlODAy
+MTFfdHhfc3RhdHVzKCkgd2hlbgo+Pj4gPiB0ZXN0ZWQgd2l0aCBhdGgxMGsuIFRoZSBhYyBpcyBz
+ZXQgdG8gQUNfQkUgd2l0aCB0ZXN0IGRvbmUgdXNpbmcgQksKPj4+ID4gY2xhc3MgdHJhZmZpYywg
+aGVuY2UgdGhlIHBlbmRpbmcgYWlydGltZSBnZXQgdXBkYXRlZCBmb3IgdGhlIHdyb25nCj4+PiA+
+IHR4cS4KPj4+Cj4+PiBIdWgsIHdlbGwgdGhhdCB3b24ndCBkbywgb2J2aW91c2x5IDopCj4+Pgo+
+Pj4gQW55IGlkZWEgd2h5IGl0IG1pZ2h0IGJlIHdyb25nPwo+Pgo+PiBzb21laG93ICBpZWVlODAy
+MTFfaXNfZGF0YV9xb3MoKSByZXR1cm5zIGZhbHNlLiBCZXNpZGVzLCAgcW9zX2NvbnRyb2wKPj4g
+ZmllbGQgZG9lc24ndCBzZWVtcyB0byBiZSBzZXQgaW4gaWVlZTgwMjExX2J1aWxkX2hkcigpLgo+
+Pgo+Pj4gSG1tLCBJIGd1ZXNzIHdlIGNvdWxkIGp1c3QgZ2V0IHRoZSBhYyB1c2luZyBza2JfZ2V0
+X3F1ZXVlX21hcHBpbmcoKS4KPj4+IEknbGwgc2VuZCBhbiB1cGRhdGUgd2l0aCB0aGlzIGZpeGVk
+IGZvciB5b3UgdG8gdHJ5IDopCj4+IFRoYW5rcyBmb3IgdGhlIHF1aWNrIHVwZGF0ZS4gSXQgaXMg
+Z2V0dGluZyBtdWNoIGJldHRlciwgYnV0Cj4+IHVuZm9ydHVuYXRlbHkgdGhlIHBlbmRpbmcgYWly
+dGltZSBhY2NvdW50aW5nIHNvbWV0aW1lcyBpcyBzdGlsbCBub3QKPj4gY29ycmVjdCBhbmQgY2F1
+c2UgdHhxIHN0dWNrIG9jY2FzaW9uYWxseS4KPgo+IE9LLCBzbyB0aGF0IGhhcyB0byBtZWFuIHRo
+YXQgdGhlcmUgYXJlIHBhY2tldHMgZ2V0dGluZyBkcm9wcGVkIHNvbWV3aGVyZQo+IHdpdGhvdXQg
+Z29pbmcgdGhyb3VnaCBpZWVlODAyMTFfcmVwb3J0X3VzZWRfc2tiKCkuIEFzc3VtaW5nIHlvdSdy
+ZSBub3QKPiBoaXR0aW5nIHRoZSB1bmRlcmZsb3cgd2FybmluZ3MsIGp1c3Qgc2VlaW5nIHRoZSBj
+b3VudGVyIG5vdCBnZXQgYmFjawo+IGRvd24gdG8gemVybz8KPgo+IENvdWxkIHlvdSBzZWUgaWYg
+eW91IGNhbiBmaW5kIG91dCBpZiBhdGgxMGsgZG9lcyB0aGF0IGFueXdoZXJlPyBJJ2xsIGdvCj4g
+aHVudGluZyBpbiBtYWM4MDIxMS4KPgo+IExvb2tpbmcgZm9yIGNhbGxzIHRvIGtmcmVlX3NrYigp
+IG9yIGtmcmVlX3NrYl9saXN0KCkgc2hvdWxkIGhvcGVmdWxseQo+IHR1cm4gdXAgc29tZXRoaW5n
+Li4uCgpBaGEhIFR1cm5zIG91dCBJIHdhcyBkb2luZyB0aGUgc3RhIGxvb2t1cCBjb21wbGV0ZWx5
+IHdyb25nIGluCmllZWU4MDIxMV9yZXBvcnRfdXNlZF9za2IoKTsgc28gYW55dGhpbmcgZnJhbWVz
+IHRoYXQgd2VyZSBkcm9wcGVkIGFuZAp3ZW50IHRocm91Z2ggdGhlcmUgd291bGQgbm90IGdldCBp
+dHMgYWlydGltZSBzdWJ0cmFjdGVkIGNvcnJlY3RseS4gV2lsbApzZW5kIGEgdjYgd2l0aCBhIGZp
+eCA6KQoKLVRva2UKCgpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
+X19fXwphdGgxMGsgbWFpbGluZyBsaXN0CmF0aDEwa0BsaXN0cy5pbmZyYWRlYWQub3JnCmh0dHA6
+Ly9saXN0cy5pbmZyYWRlYWQub3JnL21haWxtYW4vbGlzdGluZm8vYXRoMTBrCg==
