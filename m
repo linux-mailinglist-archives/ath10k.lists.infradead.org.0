@@ -2,36 +2,36 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2AE04E1661
-	for <lists+ath10k@lfdr.de>; Wed, 23 Oct 2019 11:40:33 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 06512E1663
+	for <lists+ath10k@lfdr.de>; Wed, 23 Oct 2019 11:40:41 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=kyrqEyggUmsLMvfD/OYW6eSJ88yMdcwuJQJU2KCNPrg=; b=tFzb2XzvzZCMU7
-	TiaJplCl4wUudFAs7UDBJwCFi0/YfXchJ7tM63Kk8D38VnHqx4OPuKppcUQRA2wG8ZN65IxlxTzUr
-	8E6xfI/nEqDB8lrJC52Fmd0gIzMoGVO9dHg30hWG186cmgUdkC9l9w2a2e+8PJ8dgSn5H8/X2iAxS
-	cCNjahtEt7GYBXED1HsTCzKF3JfnPjPLaKc07mjcBC8AYzq7NEPIsa2bfyhdQNQ3bVoF1zf0fVP7Z
-	KUdPOS4U3PrVKk5KmFk8rD2CYluc2RbToRBtOGgrtwc3CyG7MPOPFdndumTrrrd4svV+sduBWaJSJ
-	i5kdYMPqAwaJRGhZav5w==;
+	List-Owner; bh=thyWklV17F/s9ZEieNCFEGxYsQhjiT0gZaBz2YLJL3I=; b=sy+Yzfhk15a2gV
+	KyGzgOOo5wSWzrrZvSEJ9i7+T8tsTRUtAwPMENWyGHAPtT35mY3hCJfkQ5FMwmzA5z2OGe8wMSbNn
+	+lhu+u+/By/mvAAqRQP/KlzsaDlmKRNcD1xzcR5XPx6r+DP9Ucfhg2sD5cGPmBqmS1JRkfejGHT8N
+	gPyAHX2i2VzG+uNspjwDXOCJmnDOk2qmAF9OlipeB+gC9+FPvwKyA8hj6jl+aMzxLGMyfDqmpXOXg
+	WAlky8xZlszvB7hzCe+4OVUEH7Y9KULmHuOaDJCjqlt72KFaxx1if4fvPKaA7mzRRYhvCPQAjCPUO
+	naNJS4SM8vSG3bwxPLNA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iND83-0001dw-5P; Wed, 23 Oct 2019 09:40:31 +0000
+	id 1iND8B-0001hU-KB; Wed, 23 Oct 2019 09:40:39 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iND7w-0001aD-Ba
- for ath10k@lists.infradead.org; Wed, 23 Oct 2019 09:40:26 +0000
+ id 1iND7z-0001c3-3Z
+ for ath10k@lists.infradead.org; Wed, 23 Oct 2019 09:40:28 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id AAA1D60D7C; Wed, 23 Oct 2019 09:40:23 +0000 (UTC)
+ id 5050760F39; Wed, 23 Oct 2019 09:40:26 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1571823623;
- bh=1FdIWU3NXZTyquxhr5b4dFgwvB9EwK3th1VnVW4Z/OY=;
+ s=default; t=1571823626;
+ bh=ZQsqHINW6xAB0KANIbCFsuyTLLk9RpKASFWISFomRSg=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=e/YwuCJL/CpmhBsgGQ9w91bWFnh3KrJNASLMFVqXFyb5M5sht2xXYD48+RKvxrEHM
- 9ynChkeDJXjLPDQBwdSISMb/Vu7xlmFau5E5M+DuDaDZPHOLvMapkchTOwHyPsMwKZ
- oPnOw210ycTx8ENRU6dsFkrVY0b4rMDrBsOvIebs=
+ b=cGhePTccsYjUe8IagBpcwtmUw4cjDdUqxN6s6TrwlLxjcTHgi181DkGpkPyeZR1eY
+ i7GGVU8NwQlxrTIqQDpve4FpDX6clDLod5aHxbisgJ6ElNEuw59uWKB5vF9nhNdqzs
+ +DmDvaR0NzmBFVnFMgQZp0AQu3X67NU4obUXEOCw=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
@@ -43,34 +43,33 @@ Received: from govinds-linux.qualcomm.com
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
  (No client certificate requested)
  (Authenticated sender: govinds@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 615B560A1B;
- Wed, 23 Oct 2019 09:40:21 +0000 (UTC)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 898C760F5E;
+ Wed, 23 Oct 2019 09:40:23 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1571823622;
- bh=1FdIWU3NXZTyquxhr5b4dFgwvB9EwK3th1VnVW4Z/OY=;
+ s=default; t=1571823625;
+ bh=ZQsqHINW6xAB0KANIbCFsuyTLLk9RpKASFWISFomRSg=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=SA3Q3TvW1Qxz3SwD8Mqw9y0ccWBX4PUNcNo3JVX41T+MwtOhHNvlg8BHnK4CW4i41
- lOOkrzrKG9L+NTHjUsQJAK/lZ0xwGZlI136b6YcdRReQfLQwGkOpBr9keyuJFABt6a
- OjZA5G2f24mLs/6OI2Y7bwxKDPZ1Zilr8NvOQ9dI=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 615B560A1B
+ b=mq7YdpaHsTwNRj3csiuNBsgJxQVhBM0kvEL8DPZZ2MVmJT8t7ix9TSb6OCxrt5H+A
+ VqZPubHuCM+DLHmRBzbwsn2rAlCc8JLrBdol8n0d+k+qyLABUI8eUmDVJhl7JiBzVI
+ 4YJiS1i7ZJYG7TmK7ECnf73U2vZhab6kpSxM0aRU=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 898C760F5E
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  spf=none smtp.mailfrom=govinds@codeaurora.org
 From: Govind Singh <govinds@codeaurora.org>
 To: ath10k@lists.infradead.org
-Subject: [PATCH 1/2] dt: bindings: add dt entry flag to skip SCM call for msa
- region
-Date: Wed, 23 Oct 2019 15:10:13 +0530
-Message-Id: <20191023094014.28683-2-govinds@codeaurora.org>
+Subject: [PATCH 2/2] ath10k: Don't call SCM interface for statically mapped
+ msa region
+Date: Wed, 23 Oct 2019 15:10:14 +0530
+Message-Id: <20191023094014.28683-3-govinds@codeaurora.org>
 X-Mailer: git-send-email 2.22.0
 In-Reply-To: <20191023094014.28683-1-govinds@codeaurora.org>
 References: <20191023094014.28683-1-govinds@codeaurora.org>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191023_024024_426920_B7861138 
-X-CRM114-Status: UNSURE (   7.48  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20191023_024027_204502_96BA5626 
+X-CRM114-Status: GOOD (  11.27  )
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-2.5 points)
@@ -104,34 +103,65 @@ Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Add boolean context flag to disable SCM call for statically
-mapped msa region.
+For some targets ex: QCS404, SCM permissions for MSA region is
+statically configured in TrustZone fw. Add SCM call disable option
+for such targets to avoid duplicate permissions.
+
+Testing: Tested on WCN3990 HW
+Tested FW: WLAN.HL.3.1-01040-QCAHLSWMTPLZ-1
 
 Signed-off-by: Govind Singh <govinds@codeaurora.org>
 ---
- .../devicetree/bindings/net/wireless/qcom,ath10k.txt          | 4 ++++
- 1 file changed, 4 insertions(+)
+ drivers/net/wireless/ath/ath10k/qmi.c | 9 +++++++++
+ drivers/net/wireless/ath/ath10k/qmi.h | 1 +
+ 2 files changed, 10 insertions(+)
 
-diff --git a/Documentation/devicetree/bindings/net/wireless/qcom,ath10k.txt b/Documentation/devicetree/bindings/net/wireless/qcom,ath10k.txt
-index 81859507db67..0d868443375d 100644
---- a/Documentation/devicetree/bindings/net/wireless/qcom,ath10k.txt
-+++ b/Documentation/devicetree/bindings/net/wireless/qcom,ath10k.txt
-@@ -83,6 +83,9 @@ Optional properties:
- 		    and "sky85803" etc.
- - qcom,xo-cal-data: xo cal offset to be configured in xo trim register.
+diff --git a/drivers/net/wireless/ath/ath10k/qmi.c b/drivers/net/wireless/ath/ath10k/qmi.c
+index da16874012c5..d43ec0183287 100644
+--- a/drivers/net/wireless/ath/ath10k/qmi.c
++++ b/drivers/net/wireless/ath/ath10k/qmi.c
+@@ -95,6 +95,9 @@ static int ath10k_qmi_setup_msa_permissions(struct ath10k_qmi *qmi)
+ 	int ret;
+ 	int i;
  
-+- qcom,msa_fixed_perm: Boolean context flag to disable SCM call for statically
-+		       mapped msa region.
++	if (qmi->msa_fixed_perm)
++		return 0;
 +
- Example (to supply PCI based wifi block details):
+ 	for (i = 0; i < qmi->nr_mem_region; i++) {
+ 		ret = ath10k_qmi_map_msa_permission(qmi, &qmi->mem_region[i]);
+ 		if (ret)
+@@ -113,6 +116,9 @@ static void ath10k_qmi_remove_msa_permission(struct ath10k_qmi *qmi)
+ {
+ 	int i;
  
- In this example, the node is defined as child node of the PCI controller.
-@@ -180,4 +183,5 @@ wifi@18000000 {
- 		vdd-3.3-ch0-supply = <&vreg_l25a_3p3>;
- 		memory-region = <&wifi_msa_mem>;
- 		iommus = <&apps_smmu 0x0040 0x1>;
-+		qcom,msa_fixed_perm;
++	if (qmi->msa_fixed_perm)
++		return;
++
+ 	for (i = 0; i < qmi->nr_mem_region; i++)
+ 		ath10k_qmi_unmap_msa_permission(qmi, &qmi->mem_region[i]);
+ }
+@@ -1021,6 +1027,9 @@ static int ath10k_qmi_setup_msa_resources(struct ath10k_qmi *qmi, u32 msa_size)
+ 		qmi->msa_mem_size = msa_size;
+ 	}
+ 
++	if (of_property_read_bool(dev->of_node, "qcom,msa_fixed_perm"))
++		qmi->msa_fixed_perm = true;
++
+ 	ath10k_dbg(ar, ATH10K_DBG_QMI, "msa pa: %pad , msa va: 0x%p\n",
+ 		   &qmi->msa_pa,
+ 		   qmi->msa_va);
+diff --git a/drivers/net/wireless/ath/ath10k/qmi.h b/drivers/net/wireless/ath/ath10k/qmi.h
+index 4ab21b223aaf..3a039e6e29df 100644
+--- a/drivers/net/wireless/ath/ath10k/qmi.h
++++ b/drivers/net/wireless/ath/ath10k/qmi.h
+@@ -115,6 +115,7 @@ struct ath10k_qmi {
+ 	bool fw_ready;
+ 	char fw_build_timestamp[MAX_TIMESTAMP_LEN + 1];
+ 	struct ath10k_qmi_cal_data cal_data[MAX_NUM_CAL_V01];
++	bool msa_fixed_perm;
  };
+ 
+ int ath10k_qmi_wlan_enable(struct ath10k *ar,
 -- 
 2.22.0
 
