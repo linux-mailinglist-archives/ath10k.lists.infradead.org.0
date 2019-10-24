@@ -2,68 +2,69 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 354D1E2DDD
-	for <lists+ath10k@lfdr.de>; Thu, 24 Oct 2019 11:47:14 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5F5C8E2DF6
+	for <lists+ath10k@lfdr.de>; Thu, 24 Oct 2019 11:54:21 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:Message-ID:References:In-Reply-To:Subject:To:From:
-	Date:MIME-Version:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=wlGn5WbfejEOBsHdqfcYFVVarWo+pe3CrTbbuRp9r8U=; b=T4UG+aleokTLg00BRaP597OdA
-	n8TUtIrkHwv1vQTtNAPyHsIKwYjgshtIOaYEo51GOXxkix1VPtzi3fYdA8Ulq4G31UWkaIzHXRI0t
-	erQ7BUuCSq/KgooCK30QrwYKpZUba+eRVokycFOw6qxyLs/aiNUFSB4vcC36hFEncovH4GQlSJeTZ
-	2NAI/mhAWldnr8c1JI3u4K8OjnepwUS3kbPmNjsUuhZ81kf0OqhC7aEkW5fki3N2X+/YW2azZV37J
-	OjbfgmQhTaRFGCi8m+VfKWz7HhyPl44riV92SNldjOOtjl+7y9PM76TjZHoAeTJvKlzyYP6HnAcah
-	qcyaR+HFQ==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
+	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=v3dgG8VcslsVu7eQlJTmtmwEouyomzps4vWR58NB8bc=; b=cCa
+	yBhU+p6wbd9vsP9CW5lVgimVdCqwU9p/3bR2Dqkv6Od9ojtOd9mIebM5wff40jU5oiAA40dnS0+79
+	MPemnIcuVZ48ZrWDIHO41waH/jhaxgEKSKcPdx1lxr1yQzZDGZADUD5g+QFxAUyi1I17LyXDH0nz1
+	VzwlzHGLyEyUn3Foi7ecTG//1PI6FBS69Q6SydsqlROp+IJR+2Gqucdh9mf4n/GsHH5OlZTOe+zku
+	QyhRffpM7ixyvw1MoHfBd/bEYvB82i1oRg3IaAw47o50vaN+4mZ/Q7wYoYKwkOa4Qf76Fti4BVtE8
+	qzYcGwgRS03xI7CBZ1QQ80Ij4W4gZEg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iNZi3-0001xJ-9B; Thu, 24 Oct 2019 09:47:11 +0000
+	id 1iNZox-00044W-6F; Thu, 24 Oct 2019 09:54:19 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iNZhz-0001wr-Sf
- for ath10k@lists.infradead.org; Thu, 24 Oct 2019 09:47:09 +0000
+ id 1iNZos-00042o-9n
+ for ath10k@lists.infradead.org; Thu, 24 Oct 2019 09:54:16 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 0302161067; Thu, 24 Oct 2019 09:47:06 +0000 (UTC)
+ id C586F61196; Thu, 24 Oct 2019 09:54:13 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1571910427;
- bh=FgebyyM68KyCZTp8a5RynFQnhebEfIplee6uQIgAQqU=;
- h=Date:From:To:Cc:Subject:In-Reply-To:References:From;
- b=KBV53puNNObhltDnZ/11NInDZ5MHzlcguSGItDS6u5/x7v8Kb3e4l80f/ghQ6PqgZ
- PVAU1r8DmleRyrIzKCUN2MzeTMvjMcxT/Cxp0XjsNu5TQpiCPxO6Hkid99BTwDey/L
- TxBDi3eo0WUVpq/5rHLkiryFyGG1vrF70X17gI6E=
+ s=default; t=1571910853;
+ bh=9Wf6RMnyINCUk3PS0SF0QPwLRWMMNoeboD9LOGpLDdM=;
+ h=From:To:Cc:Subject:Date:From;
+ b=YbcmWlSOb3aa9nilL0ojgIj17QZr4zXBLtKz0HzjlQlCBwkE1dxUeURnv2JhojK3w
+ cK1y/qK3WdpWzLOTUAQB4AKLrUVsH1CI2wYRT1vg1xDW1GPenb0m2ng9A7wnox1/qu
+ B9mhbznlqg1NE5DNDXfHLMf4BH96H3AP+SHpWDFU=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
 X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
- DKIM_INVALID,DKIM_SIGNED autolearn=no autolearn_force=no version=3.4.0
-Received: from mail.codeaurora.org (localhost.localdomain [127.0.0.1])
- by smtp.codeaurora.org (Postfix) with ESMTP id 063A060FEF;
- Thu, 24 Oct 2019 09:47:06 +0000 (UTC)
+ DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
+ version=3.4.0
+Received: from potku.adurom.net (unknown [88.114.240.156])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
+ (No client certificate requested)
+ (Authenticated sender: kvalo@smtp.codeaurora.org)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 907EB60FBB;
+ Thu, 24 Oct 2019 09:54:11 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1571910426;
- bh=FgebyyM68KyCZTp8a5RynFQnhebEfIplee6uQIgAQqU=;
- h=Date:From:To:Cc:Subject:In-Reply-To:References:From;
- b=LafDKB1y/2/61nQFjgpvN6qi8a3ZprsPjfuzsazfWp41f70tYiWXVJp962CFe+2M8
- AyYVXTFUUfuRARtLhlBVjFUMG7kOyilWzBAV5fS7QsWFog42E5K5xctgtsodWgwVkm
- qie7thlh0PcWDcvslo/lQDWrOGH4zYdhWefCERKo=
-MIME-Version: 1.0
-Date: Thu, 24 Oct 2019 17:47:05 +0800
-From: Wen Gong <wgong@codeaurora.org>
-To: Kalle Valo <kvalo@codeaurora.org>
-Subject: Re: [PATCH v6 2/3] ath10k: change max RX bundle size from 8 to 32 for
- sdio
-In-Reply-To: <87mudqsd6d.fsf@kamboji.qca.qualcomm.com>
-References: <1569402639-31720-1-git-send-email-wgong@codeaurora.org>
- <1569402639-31720-3-git-send-email-wgong@codeaurora.org>
- <87mudqsd6d.fsf@kamboji.qca.qualcomm.com>
-Message-ID: <200eef83925da532e49565bcf4f9ffc1@codeaurora.org>
-X-Sender: wgong@codeaurora.org
-User-Agent: Roundcube Webmail/1.2.5
+ s=default; t=1571910853;
+ bh=9Wf6RMnyINCUk3PS0SF0QPwLRWMMNoeboD9LOGpLDdM=;
+ h=From:To:Cc:Subject:Date:From;
+ b=YbcmWlSOb3aa9nilL0ojgIj17QZr4zXBLtKz0HzjlQlCBwkE1dxUeURnv2JhojK3w
+ cK1y/qK3WdpWzLOTUAQB4AKLrUVsH1CI2wYRT1vg1xDW1GPenb0m2ng9A7wnox1/qu
+ B9mhbznlqg1NE5DNDXfHLMf4BH96H3AP+SHpWDFU=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 907EB60FBB
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: pdx-caf-mail.web.codeaurora.org;
+ spf=none smtp.mailfrom=kvalo@codeaurora.org
+From: Kalle Valo <kvalo@codeaurora.org>
+To: ath10k@lists.infradead.org
+Subject: [PATCH 1/2] ath10k: cosmetic cleanup to sdio files
+Date: Thu, 24 Oct 2019 12:54:08 +0300
+Message-Id: <1571910849-11489-1-git-send-email-kvalo@codeaurora.org>
+X-Mailer: git-send-email 2.7.4
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191024_024707_951138_0E466A2F 
-X-CRM114-Status: UNSURE (   6.98  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20191024_025414_378890_C78B9213 
+X-CRM114-Status: GOOD (  10.73  )
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-2.5 points)
@@ -91,41 +92,80 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org
+Cc: linux-wireless@vger.kernel.org
+MIME-Version: 1.0
+Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On 2019-10-24 17:30, Kalle Valo wrote:
-> Wen Gong <wgong@codeaurora.org> writes:
-> 
->> The max bundle size support by firmware is 32, change it from 8 to 32
->> will help performance. This results in significant performance
->> improvement on RX path.
->> 
->> Tested with QCA6174 SDIO with firmware
->> WLAN.RMH.4.4.1-00017-QCARMSWPZ-1
->> 
->> Signed-off-by: Wen Gong <wgong@codeaurora.org>
-> 
-> [...]
-> 
->> --- a/drivers/net/wireless/ath/ath10k/sdio.c
->> +++ b/drivers/net/wireless/ath/ath10k/sdio.c
->> @@ -24,7 +24,7 @@
->>  #include "trace.h"
->>  #include "sdio.h"
->> 
->> -#define ATH10K_SDIO_VSG_BUF_SIZE	(32 * 1024)
->> +#define ATH10K_SDIO_VSG_BUF_SIZE	(64 * 1024)
-> 
-> Is allocating 64 kb with kmalloc() reliable, especially on smaller
-> systems? I hope it is, but checking if someone else knows better. We
-> only do this only once in probe(), though.
-rx packet is more than 1500 bytes for performance test, so for 32 
-packets, 32*1024 is not enough.
-yes, it is allocated only one time for probe.
+Do some cosmetic cleanup while reviewing the files. No functional changes.
+
+Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
+---
+ drivers/net/wireless/ath/ath10k/sdio.c | 21 +++++++++------------
+ 1 file changed, 9 insertions(+), 12 deletions(-)
+
+diff --git a/drivers/net/wireless/ath/ath10k/sdio.c b/drivers/net/wireless/ath/ath10k/sdio.c
+index c34637881219..ef16b45c18da 100644
+--- a/drivers/net/wireless/ath/ath10k/sdio.c
++++ b/drivers/net/wireless/ath/ath10k/sdio.c
+@@ -541,10 +541,8 @@ static int ath10k_sdio_mbox_rx_alloc(struct ath10k *ar,
+ 	int pkt_cnt = 0;
+ 
+ 	if (n_lookaheads > ATH10K_SDIO_MAX_RX_MSGS) {
+-		ath10k_warn(ar,
+-			    "the total number of pkgs to be fetched (%u) exceeds maximum %u\n",
+-			    n_lookaheads,
+-			    ATH10K_SDIO_MAX_RX_MSGS);
++		ath10k_warn(ar, "the total number of pkgs to be fetched (%u) exceeds maximum %u\n",
++			    n_lookaheads, ATH10K_SDIO_MAX_RX_MSGS);
+ 		ret = -ENOMEM;
+ 		goto err;
+ 	}
+@@ -553,10 +551,8 @@ static int ath10k_sdio_mbox_rx_alloc(struct ath10k *ar,
+ 		htc_hdr = (struct ath10k_htc_hdr *)&lookaheads[i];
+ 		last_in_bundle = false;
+ 
+-		if (le16_to_cpu(htc_hdr->len) >
+-		    ATH10K_HTC_MBOX_MAX_PAYLOAD_LENGTH) {
+-			ath10k_warn(ar,
+-				    "payload length %d exceeds max htc length: %zu\n",
++		if (le16_to_cpu(htc_hdr->len) > ATH10K_HTC_MBOX_MAX_PAYLOAD_LENGTH) {
++			ath10k_warn(ar, "payload length %d exceeds max htc length: %zu\n",
+ 				    le16_to_cpu(htc_hdr->len),
+ 				    ATH10K_HTC_MBOX_MAX_PAYLOAD_LENGTH);
+ 			ret = -ENOMEM;
+@@ -567,8 +563,7 @@ static int ath10k_sdio_mbox_rx_alloc(struct ath10k *ar,
+ 		full_len = ath10k_sdio_calc_txrx_padded_len(ar_sdio, act_len);
+ 
+ 		if (full_len > ATH10K_SDIO_MAX_BUFFER_SIZE) {
+-			ath10k_warn(ar,
+-				    "rx buffer requested with invalid htc_hdr length (%d, 0x%x): %d\n",
++			ath10k_warn(ar, "rx buffer requested with invalid htc_hdr length (%d, 0x%x): %d\n",
+ 				    htc_hdr->eid, htc_hdr->flags,
+ 				    le16_to_cpu(htc_hdr->len));
+ 			ret = -EINVAL;
+@@ -590,12 +585,14 @@ static int ath10k_sdio_mbox_rx_alloc(struct ath10k *ar,
+ 							    &bndl_cnt);
+ 
+ 			if (ret) {
+-				ath10k_warn(ar, "alloc_bundle error %d\n", ret);
++				ath10k_warn(ar, "failed to allocate a bundle: %d\n",
++					    ret);
+ 				goto err;
+ 			}
+ 
+ 			pkt_cnt += bndl_cnt;
+-			/*Next buffer will be the last in the bundle */
++
++			/* next buffer will be the last in the bundle */
+ 			last_in_bundle = true;
+ 		}
+ 
+-- 
+2.7.4
+
 
 _______________________________________________
 ath10k mailing list
