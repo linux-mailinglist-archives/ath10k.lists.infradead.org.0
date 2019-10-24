@@ -2,77 +2,68 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 10424E2E89
-	for <lists+ath10k@lfdr.de>; Thu, 24 Oct 2019 12:14:39 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E0B35E2F5D
+	for <lists+ath10k@lfdr.de>; Thu, 24 Oct 2019 12:48:30 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
-	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=/GzneWNT9FbAAP5bmbnYiuvx0+KiO0/VCVRZs8qn4HE=; b=b8Wzn8UvcN4P1D
-	0ks5Yb2mDEYfEQssQ0JJDkNncMEZ1cwa43aWNqBhTv34GCQijNeGY/oWi5jxi/5sSgBoEPsKGgypq
-	HufQaLflO50riN+dj+lGsfuP2IzhHTBK5zNz3rsYk5jVGLsRb0rpj32QmQVOYC8Vk9Ylf3Dm4eXtT
-	yM3OUXij2QNrn69F9puCFIQy8l7rkzebtv7Zk1KQQsAbrDm7wHQX1NzBJcj2zaEvrr7DGVHu58ASp
-	ehEJkF5+3c5mO/I9GySy0c61x67dV4rBnQ3xDwKhFIgZMcRAp/eNWbrSlOhr6dVaYn4TCqVa5IWvY
-	UU3wubWufgA9ebJGcRnQ==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:Message-ID:References:In-Reply-To:Subject:To:From:
+	Date:MIME-Version:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=itWBzbdpzf+jxusvusGq1HBm9QKnInEhx0i1/lbiKaI=; b=D6HVXUEAIl+vYAwIiahQwxRkp
+	uytLLb4YdrUkx0INcKWRiWrefN+rjvFVyZFAyzAJBj4lZpWwXaW2pWFfQjzFOMHzuEaCsdIDDJyj8
+	a51QT/aKh9Ye+AKnh8t5zMJacU6l8qqrJFr2S3ZER/78kYg30f8hImU5O/IKff5eHkScGrfvc4AwW
+	n4HzOi9OrsQPFwWIpqBDr5LDT8KDxTeIZIQtlb22HT2sHqVY+36OpCeUrhk1Ve1mK6NGSSEHrmveT
+	7vkdxU2P8OZsjKOyy9SHxUQn+y/D4pv9oBQgSprji5IH9PLBNEAcK5k40d1J2Y1Yycol99m0VO62d
+	0g7j+LWCw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iNa8b-00057D-5V; Thu, 24 Oct 2019 10:14:37 +0000
+	id 1iNafL-00072c-Ii; Thu, 24 Oct 2019 10:48:27 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iNa8X-00056p-2s
- for ath10k@lists.infradead.org; Thu, 24 Oct 2019 10:14:34 +0000
+ id 1iNafH-000729-8V
+ for ath10k@lists.infradead.org; Thu, 24 Oct 2019 10:48:25 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 767E76117A; Thu, 24 Oct 2019 10:14:32 +0000 (UTC)
+ id AF20F609C4; Thu, 24 Oct 2019 10:48:21 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1571912072;
- bh=rcfSs8cIFoejkuawLusYRRabpv0SXzEfJdHxkao3oJQ=;
- h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=CgsQk4qsZboJDZCirUqHGLo+20n9gY84b7mVpYD6SEczq6MvrW8ccsLxy47CnVmL6
- ClV3gNCvZa+RF5sROlhB2WDj+3aIvKBBlWko9rwJuRHhzArVdVTjxRijeJ0B88WSJ0
- umZR60FkhelwC4vYiH//3kjqmCM5D7C9b2ovkEL4=
+ s=default; t=1571914101;
+ bh=HvQo5UXy1E/mep6qtl/EvO49cQsF+lfjnJQRvD0/dKI=;
+ h=Date:From:To:Cc:Subject:In-Reply-To:References:From;
+ b=OSNt4EdP8ojUPznDDXNKJS/mY6tfM+Pq8vaWYFzKHShTQSRMGz5TqzhjjiOzHP1Zk
+ WV7+u/RExyDAb+xmGlXQrNgxIrw5lWQSn1BFlj0h2tqv75I0QEmVFs5gogfLEhtLQ/
+ 7tRBvxkKu7tp8/yXtxYLisA0sTwFVvV8OpZUcBDc=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
 X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
- DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
- version=3.4.0
-Received: from potku.adurom.net (unknown [88.114.240.156])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
- (No client certificate requested)
- (Authenticated sender: kvalo@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 52C8660EE7;
- Thu, 24 Oct 2019 10:14:30 +0000 (UTC)
+ DKIM_INVALID,DKIM_SIGNED autolearn=no autolearn_force=no version=3.4.0
+Received: from mail.codeaurora.org (localhost.localdomain [127.0.0.1])
+ by smtp.codeaurora.org (Postfix) with ESMTP id 30813606CF;
+ Thu, 24 Oct 2019 10:48:21 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1571912071;
- bh=rcfSs8cIFoejkuawLusYRRabpv0SXzEfJdHxkao3oJQ=;
- h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=nv2VlTVklRB0f47dEn9xpK0n1yk5u7HJhj98WKUPFF8C8SkdRUZyarziDeQQNErfB
- ld/7vV8Y/42onlrmVhPd4K0Z/8BvXdVNotbA7rux8FS3cS721XK6jqyAeS08ERWPB+
- 1T3bLNAS0LqAWpRdaWdtPKmpyVn7h5fxaU2rGpa4=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 52C8660EE7
-Authentication-Results: pdx-caf-mail.web.codeaurora.org;
- dmarc=none (p=none dis=none) header.from=codeaurora.org
-Authentication-Results: pdx-caf-mail.web.codeaurora.org;
- spf=none smtp.mailfrom=kvalo@codeaurora.org
-From: Kalle Valo <kvalo@codeaurora.org>
-To: Wen Gong <wgong@codeaurora.org>
+ s=default; t=1571914101;
+ bh=HvQo5UXy1E/mep6qtl/EvO49cQsF+lfjnJQRvD0/dKI=;
+ h=Date:From:To:Cc:Subject:In-Reply-To:References:From;
+ b=OSNt4EdP8ojUPznDDXNKJS/mY6tfM+Pq8vaWYFzKHShTQSRMGz5TqzhjjiOzHP1Zk
+ WV7+u/RExyDAb+xmGlXQrNgxIrw5lWQSn1BFlj0h2tqv75I0QEmVFs5gogfLEhtLQ/
+ 7tRBvxkKu7tp8/yXtxYLisA0sTwFVvV8OpZUcBDc=
+MIME-Version: 1.0
+Date: Thu, 24 Oct 2019 18:48:21 +0800
+From: Wen Gong <wgong@codeaurora.org>
+To: Kalle Valo <kvalo@codeaurora.org>
 Subject: Re: [PATCH v6 2/3] ath10k: change max RX bundle size from 8 to 32 for
  sdio
+In-Reply-To: <87h83ysbjy.fsf@kamboji.qca.qualcomm.com>
 References: <1569402639-31720-1-git-send-email-wgong@codeaurora.org>
  <1569402639-31720-3-git-send-email-wgong@codeaurora.org>
- <87r232sdeh.fsf@kamboji.qca.qualcomm.com>
- <c2227ffd5901b03a2874fddb98298e0d@codeaurora.org>
-Date: Thu, 24 Oct 2019 13:14:27 +0300
-In-Reply-To: <c2227ffd5901b03a2874fddb98298e0d@codeaurora.org> (Wen Gong's
- message of "Thu, 24 Oct 2019 17:40:25 +0800")
-Message-ID: <87d0emsb5o.fsf@kamboji.qca.qualcomm.com>
-User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/24.5 (gnu/linux)
-MIME-Version: 1.0
+ <87h83ysbjy.fsf@kamboji.qca.qualcomm.com>
+Message-ID: <73e2d996575023b14c24665b2607a5b3@codeaurora.org>
+X-Sender: wgong@codeaurora.org
+User-Agent: Roundcube Webmail/1.2.5
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191024_031433_170935_CB96E111 
-X-CRM114-Status: GOOD (  14.44  )
+X-CRM114-CacheID: sfid-20191024_034823_327252_49D29E81 
+X-CRM114-Status: UNSURE (   6.18  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-2.5 points)
@@ -101,66 +92,28 @@ List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
 Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org
-Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Wen Gong <wgong@codeaurora.org> writes:
+On 2019-10-24 18:05, Kalle Valo wrote:
+> Wen Gong <wgong@codeaurora.org> writes:
 
-> On 2019-10-24 17:25, Kalle Valo wrote:
->> Wen Gong <wgong@codeaurora.org> writes:
->>
->>> The max bundle size support by firmware is 32, change it from 8 to 32
->>> will help performance. This results in significant performance
->>> improvement on RX path.
->>>
->>> Tested with QCA6174 SDIO with firmware
->>> WLAN.RMH.4.4.1-00017-QCARMSWPZ-1
->>>
->>> Signed-off-by: Wen Gong <wgong@codeaurora.org>
->>> ---
->>>  drivers/net/wireless/ath/ath10k/htc.h  | 12 +++++++++---
->>>  drivers/net/wireless/ath/ath10k/sdio.c |  4 ++--
->>>  drivers/net/wireless/ath/ath10k/sdio.h |  4 ++--
->>>  3 files changed, 13 insertions(+), 7 deletions(-)
->>>
->>> diff --git a/drivers/net/wireless/ath/ath10k/htc.h
->>> b/drivers/net/wireless/ath/ath10k/htc.h
->>> index f55d3ca..7055156 100644
->>> --- a/drivers/net/wireless/ath/ath10k/htc.h
->>> +++ b/drivers/net/wireless/ath/ath10k/htc.h
->>> @@ -39,7 +39,7 @@
->>>   * 4-byte aligned.
->>>   */
->>>
->>> -#define HTC_HOST_MAX_MSG_PER_RX_BUNDLE        8
->>> +#define HTC_HOST_MAX_MSG_PER_RX_BUNDLE        32
->>
->> So how do I know that this change doesn't break any other hardware? I
->> did a quick review and I think it's safe, but the commit log mentions
->> nothing about this.
->
-> the real max rx bundle is decided in ath10k_htc_wait_target.
-> it is the min value of HTC_HOST_MAX_MSG_PER_RX_BUNDLE and the value
-> reported from firmware.
-> htc->max_msgs_per_htc_bundle =
-> 			min_t(u8, msg->ready_ext.max_msgs_per_htc_bundle,
-> 			      HTC_HOST_MAX_MSG_PER_RX_BUNDLE);
+> As you can see I also changed the macro to a function, as I prefer C
+> over CPP :) And changed ATH10K_HTC_FLAG_BUNDLE_MASK to use GENMASK().
+> 
+yes.
+> But this only compiled tested, please do properly test the patches from
+> pending branch and let me know if I broke something:
+> 
+> https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git/commit/?h=pending&id=afd85ca1b086695cfd26bf484442eaf3bccb6bdd
+> 
+> https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git/commit/?h=pending&id=4225b4d50a4f6a1159dc3316d068398f1b5edb57
+> 
+> https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git/commit/?h=pending&id=911e0fc846cfc46fb4ccd1d223cb153681ff05bd
 
-And we assume that no other firmware than QCA6174 SDIO uses value bigger
-than 8? Because if there is a such firmware using, for example, value 9
-this might cause a regression.
-
-Anyway, I added this comment to the commit log:
-
-  The real max rx bundle is decided in ath10k_htc_wait_target(), it is
-  the min value of HTC_HOST_MAX_MSG_PER_RX_BUNDLE and the value reported
-  from firmware. So this change shouldn't cause any regressions with
-  other hardware supported by ath10k.
-
--- 
-https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
+I will test the 3 patches.
 
 _______________________________________________
 ath10k mailing list
