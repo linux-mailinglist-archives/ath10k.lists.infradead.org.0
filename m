@@ -2,84 +2,55 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3E36AE3146
-	for <lists+ath10k@lfdr.de>; Thu, 24 Oct 2019 13:47:56 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 276B8E46C5
+	for <lists+ath10k@lfdr.de>; Fri, 25 Oct 2019 11:12:19 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:Message-ID:References:In-Reply-To:Subject:To:From:
-	Date:MIME-Version:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=MlNxCw292p5nfFWCdSa1a+BJVcyb60bH+5Cg827fcow=; b=VVWaNkY6Bmfmm9UMhWIbdSVrw
-	fsey5t6aaQenrJni3XSRAQad7a0AgXJa0tr9rZffISeDB7L2JR1mGpi696p85Q0aykr7j0vgmOhwO
-	OqV42bmq5Kzdd8sQC6XLsXNYa4ul86RypkO5WdIHRqB6jCIbWfchm+pcsAL9dXfYlaszrvsUxO0+J
-	i9NWBNDUpX0NDfj6oaTavnyentrfMXRlE/n6SE702xqHacu0YBwd5pAa8yv6MrTP7E7LBNQGISJ4h
-	olI0zHxFG06F3uTgu0PAOsWbVKe98CnHtPCadQDiAYXUxwoYLT3Veetng7zcgfH3v9OFU/raGX5fr
-	4Z0isf0Xg==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=M7EspS9SOgLVLbW4z/IBcQ0/IVH6k0qDsf1Pct/6h3E=; b=C6wtWLROewb94n
+	dcnXCneD11vIn2hzm8HjzgXu2YxcQw75SwJBjgTdsxasLrWD6ytf6b9fylrwD64ad3iJLWqMVU70c
+	Kgxgkcw456GT2aYmln9Vy4NsPlBx0nigneag4tOvDjnihmjR7enY2xPvQ2gExG2aoOWh2/Hmn2mtU
+	zqTVKaf23MBhusFp/1v3BGuL1OcH6KFZhBLDsbErt7HGqoDJvXILuqdr9C0rQ1dacJcGzvGe5Y23l
+	UzTDnM8mhc5GhHJmIpPVBUUfHpTWpMmtOP7/IlqiQhoHv6hHISc7RQA/EXNGDrnA9CYHgh6GfD1Ls
+	/0fnzNGOG3hH0+0dcVJw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iNbaq-0001Vs-Cs; Thu, 24 Oct 2019 11:47:52 +0000
-Received: from smtp.codeaurora.org ([198.145.29.96])
+	id 1iNvdm-0002bX-6e; Fri, 25 Oct 2019 09:12:14 +0000
+Received: from szxga07-in.huawei.com ([45.249.212.35] helo=huawei.com)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iNbam-0001VW-J6
- for ath10k@lists.infradead.org; Thu, 24 Oct 2019 11:47:49 +0000
-Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 1873D60DA6; Thu, 24 Oct 2019 11:47:46 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1571917667;
- bh=LfGiwVxrMzUStWIoM2oBebXlGcBXWkl0A8nDI7xnslg=;
- h=Date:From:To:Cc:Subject:In-Reply-To:References:From;
- b=mkSeH+CGx8aBdO+1OZORj4Jd1CAJctEqPYRCwiRzxgFH0FBPoFCE3KGSXbgKZY7ho
- n8yAf4Bkh8LQhOXW2iI3QPF4spJX8NB+acLFvWi03XlWn0piQb9n4vGPEBaf8GjIRM
- vrx31DGt9bEhQGRHbRKcwfP09D0ABcbHfvRcx3sQ=
-X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
- pdx-caf-mail.web.codeaurora.org
-X-Spam-Level: 
-X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
- DKIM_INVALID,DKIM_SIGNED autolearn=no autolearn_force=no version=3.4.0
-Received: from mail.codeaurora.org (localhost.localdomain [127.0.0.1])
- by smtp.codeaurora.org (Postfix) with ESMTP id 32EBB60DA6;
- Thu, 24 Oct 2019 11:47:46 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1571917666;
- bh=LfGiwVxrMzUStWIoM2oBebXlGcBXWkl0A8nDI7xnslg=;
- h=Date:From:To:Cc:Subject:In-Reply-To:References:From;
- b=E13VwwwLrN5VNZ/Vnp9mQPhOOHN91m5Uq45ahgnyZJJ8mxQKhxYUFqwOhrKX6xlna
- 7Fa1d0YnsLLKz+MTJ1EmGYDoFGTO0rA5KR380LpNFC4AljT8i5tkgtVesAsJeMUUsf
- uSLW86A56zouCTQ16ArjB4Q3KCiRVpdzuB4ra6qE=
+ id 1iNvdi-0002ai-RW
+ for ath10k@lists.infradead.org; Fri, 25 Oct 2019 09:12:12 +0000
+Received: from DGGEMS404-HUB.china.huawei.com (unknown [172.30.72.60])
+ by Forcepoint Email with ESMTP id F0B85A2AF2293B7914DC;
+ Fri, 25 Oct 2019 17:12:01 +0800 (CST)
+Received: from localhost (10.133.213.239) by DGGEMS404-HUB.china.huawei.com
+ (10.3.19.204) with Microsoft SMTP Server id 14.3.439.0; Fri, 25 Oct 2019
+ 17:11:54 +0800
+From: YueHaibing <yuehaibing@huawei.com>
+To: <kvalo@codeaurora.org>, <davem@davemloft.net>
+Subject: [PATCH] ath10k: remove unneeded semicolon
+Date: Fri, 25 Oct 2019 17:10:41 +0800
+Message-ID: <20191025091041.34056-1-yuehaibing@huawei.com>
+X-Mailer: git-send-email 2.10.2.windows.1
 MIME-Version: 1.0
-Date: Thu, 24 Oct 2019 17:17:46 +0530
-From: Govind Singh <govinds@codeaurora.org>
-To: Kalle Valo <kvalo@codeaurora.org>
-Subject: Re: [PATCH 1/2] dt: bindings: add dt entry flag to skip SCM call for
- msa region
-In-Reply-To: <87a79qk431.fsf@codeaurora.org>
-References: <20191023094014.28683-1-govinds@codeaurora.org>
- <20191023094014.28683-2-govinds@codeaurora.org>
- <87a79qk431.fsf@codeaurora.org>
-Message-ID: <94b02ec85c272d9d195572c40fcc3c09@codeaurora.org>
-X-Sender: govinds@codeaurora.org
-User-Agent: Roundcube Webmail/1.2.5
+X-Originating-IP: [10.133.213.239]
+X-CFilter-Loop: Reflected
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191024_044748_658814_175A9067 
-X-CRM114-Status: UNSURE (   5.35  )
+X-CRM114-CacheID: sfid-20191025_021211_062030_E2101A1A 
+X-CRM114-Status: UNSURE (   7.92  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -2.5 (--)
+X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.5 points)
+ Content analysis details:   (-2.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [198.145.29.96 listed in list.dnswl.org]
+ medium trust [45.249.212.35 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -91,32 +62,38 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org
+Cc: netdev@vger.kernel.org, YueHaibing <yuehaibing@huawei.com>,
+ linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
+ ath10k@lists.infradead.org
+Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Hi Kalle,
+remove unneeded semicolon.
 
-On 2019-10-24 12:44, Kalle Valo wrote:
-> Govind Singh <govinds@codeaurora.org> writes:
-> 
->> Add boolean context flag to disable SCM call for statically
->> mapped msa region.
->> 
->> Signed-off-by: Govind Singh <govinds@codeaurora.org>
-> 
-> Oddly this didn't apply, but 3-way merge did work. Please double check
-> the result in the pending branch:
-> 
-> https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git/commit/?h=master-pending&id=6f308524cf602ed9a0dbb0b0b50ba625b9091879
+Signed-off-by: YueHaibing <yuehaibing@huawei.com>
+---
+ drivers/net/wireless/ath/ath10k/htt_rx.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-Change looks good to me.
+diff --git a/drivers/net/wireless/ath/ath10k/htt_rx.c b/drivers/net/wireless/ath/ath10k/htt_rx.c
+index 9f0e7b4..d95b63f 100644
+--- a/drivers/net/wireless/ath/ath10k/htt_rx.c
++++ b/drivers/net/wireless/ath/ath10k/htt_rx.c
+@@ -2073,7 +2073,7 @@ static void ath10k_htt_rx_mpdu_desc_pn_hl(struct htt_hl_rx_desc *rx_desc,
+ 	case 24:
+ 		pn->pn24 = __le32_to_cpu(rx_desc->pn_31_0);
+ 		break;
+-	};
++	}
+ }
+ 
+ static bool ath10k_htt_rx_pn_cmp48(union htt_rx_pn_t *new_pn,
+-- 
+2.7.4
 
 
-BR,
-Govind
 
 _______________________________________________
 ath10k mailing list
