@@ -2,40 +2,42 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D3E63E83EF
-	for <lists+ath10k@lfdr.de>; Tue, 29 Oct 2019 10:13:23 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id AB9F9E83F0
+	for <lists+ath10k@lfdr.de>; Tue, 29 Oct 2019 10:13:25 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=g6XdOfsUmSif6nLGRAwdkFRlFy9LpYCWidBlfswwDns=; b=bDOdlWHEOs9DlE
-	u1YU8ScUBZXBTKytQLKZAA+59SOvy1UtkpIJ+zRw3oajUPV+yGSoqc9w65iNCk0vscATWkh1ht9xu
-	S+WcgNC6avgVeGCpM+1HPOLEnfD4MrEQNRjRbmOTlPab0FkaPR6rpUB2UMbzze17Bm3CfdFdJ4dtC
-	4mDJN4TtE7lRcje35cjQdvA/ra+ko8184NgWBDpmqtAKBiRfGiNUpahH7G2qldrtnfSClJ6x0awIT
-	yyvk4DpL61rPEtNv5Wu2knewFk2DdophIK7W9cwEO3RfvOfTq37FGGDdoBE/YNFpACEYz7ra0/qCv
-	a68iK9ZmQUOhMFofEqtg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=TV1Wl+CoKm4ZD/hF9TRZrcNWbDeE9mk2z8/ybvvRVOQ=; b=LT3mrDfFmIPfu7
+	c23rrlSDoV2FXuwURHzg8KO1z6Ub9U4eDy5IbfQ3alcZf++tAR8DIXeO2h/3FadqINt+UQxIZuoT+
+	2RNzc/t2eLDFu1WkmKkrYX62/Xz3UBCK7YB3VpIjFu7m4Ze7m7BXWIJBPSs1Jus1KISNofaxpJD4w
+	p38TdT++J4D29eX1Tkb2AH0V1sxqqu0BXyoJ5m2JPbS7DoOdFqy54Hluw0nWmjo7C3za2ZJlDDR4u
+	vkqLs5obnWxVn+VZVCcATSViWwfkNcB5X+SnAl5A7Ei6iZa01hUdOFCWQ9UBzf6rKdqOhNnAcmxsB
+	gn3vuHTPzND4KhHSIubg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iPNZ1-0000aG-5O; Tue, 29 Oct 2019 09:13:19 +0000
+	id 1iPNZ5-0000bn-85; Tue, 29 Oct 2019 09:13:23 +0000
 Received: from nbd.name ([2a01:4f8:221:3d45::2])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iPNYw-0000Yl-4r
- for ath10k@lists.infradead.org; Tue, 29 Oct 2019 09:13:15 +0000
+ id 1iPNYw-0000Yr-Ti
+ for ath10k@lists.infradead.org; Tue, 29 Oct 2019 09:13:16 +0000
 Received: from p5dcfbe82.dip0.t-ipconnect.de ([93.207.190.130] helo=bertha.lan)
  by ds12 with esmtpa (Exim 4.89) (envelope-from <john@phrozen.org>)
- id 1iPNYs-0005ZW-Q4; Tue, 29 Oct 2019 10:13:10 +0100
+ id 1iPNYt-0005ZW-7E; Tue, 29 Oct 2019 10:13:11 +0100
 From: John Crispin <john@phrozen.org>
 To: Johannes Berg <johannes@sipsolutions.net>
-Subject: [PATCH V9 0/3] mac80211: add 802.11 encapsulation offloading
-Date: Tue, 29 Oct 2019 10:13:01 +0100
-Message-Id: <20191029091304.7330-1-john@phrozen.org>
+Subject: [PATCH V9 1/3] mac80211: move store skb ack code to its own function
+Date: Tue, 29 Oct 2019 10:13:02 +0100
+Message-Id: <20191029091304.7330-2-john@phrozen.org>
 X-Mailer: git-send-email 2.20.1
+In-Reply-To: <20191029091304.7330-1-john@phrozen.org>
+References: <20191029091304.7330-1-john@phrozen.org>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191029_021314_349331_5CA29431 
-X-CRM114-Status: GOOD (  10.91  )
+X-CRM114-CacheID: sfid-20191029_021315_117124_E1233088 
+X-CRM114-Status: GOOD (  12.87  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -61,61 +63,82 @@ Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-This series picks up prior work from QCA. The patch is currently shipped
-inside QSDK as part of the wlan-open package.
+This patch moves the code handling SKBTX_WIFI_STATUS inside the TX path
+into an extra function. This allows us to reuse it inside the 802.11 encap
+offloading datapath.
 
-Changes in V9
-* implement comments from Johannes
-* add tx status reporting
-* let the driver decide if tx frag will break encap mode
-* use true/false for bool values
-* move use_4addr check to driver
+Signed-off-by: John Crispin <john@phrozen.org>
+---
+ net/mac80211/tx.c | 49 ++++++++++++++++++++++++++++-------------------
+ 1 file changed, 29 insertions(+), 20 deletions(-)
 
-Changes in V8
-* fix double locking when setting frag threshold
-
-Changes in V7
-* dont mask out monitor support when encap is available. Instead turn encap
-  of if a monitor device is brought up or already present
-
-Changes in V6
-* the conditional masking out monitor support was inverse
-
-Changes in V5
-* implement comments from Johannes
-
-Changes in V4
-* disable encap when TKIP is used instead of refusing TKIP
-* use a flag inside tx_info instead of an extra element
-* move 4addr detection into ieee80211_set_hw_80211_encap()
-* ieee80211_tx_dequeue() was dropping out to early
-
-Changes in V3
-* rebase on latest kernel
-* various code style clean ups
-* give some of the variables and functions more obvious names
-* move the code that disables support for non-linear frames to the core
-* disable monitor and tkip support
-
-John Crispin (3):
-  mac80211: move store skb ack code to its own function
-  mac80211: add hw 80211 encapsulation offloading support
-  ath10k: add tx hw 802.11 encapusaltion offloading support
-
- drivers/net/wireless/ath/ath10k/core.c   |  11 ++
- drivers/net/wireless/ath/ath10k/core.h   |   3 +
- drivers/net/wireless/ath/ath10k/htt_tx.c |  24 ++-
- drivers/net/wireless/ath/ath10k/mac.c    |  76 ++++++--
- drivers/net/wireless/ath/ath10k/txrx.c   |  11 +-
- include/net/mac80211.h                   |  39 ++++
- net/mac80211/debugfs.c                   |   1 +
- net/mac80211/ieee80211_i.h               |   9 +
- net/mac80211/iface.c                     |  68 +++++++
- net/mac80211/key.c                       |   7 +
- net/mac80211/status.c                    |  74 +++++++
- net/mac80211/tx.c                        | 233 ++++++++++++++++++++---
- 12 files changed, 506 insertions(+), 50 deletions(-)
-
+diff --git a/net/mac80211/tx.c b/net/mac80211/tx.c
+index 235c6377a203..be3ce5e5a1c3 100644
+--- a/net/mac80211/tx.c
++++ b/net/mac80211/tx.c
+@@ -2423,6 +2423,33 @@ static int ieee80211_lookup_ra_sta(struct ieee80211_sub_if_data *sdata,
+ 	return 0;
+ }
+ 
++static int ieee80211_store_ack_skb(struct ieee80211_local *local,
++				   struct sk_buff *skb,
++				   u32 *info_flags)
++{
++	struct sk_buff *ack_skb = skb_clone_sk(skb);
++	u16 info_id = 0;
++
++	if (ack_skb) {
++		unsigned long flags;
++		int id;
++
++		spin_lock_irqsave(&local->ack_status_lock, flags);
++		id = idr_alloc(&local->ack_status_frames, ack_skb,
++			       1, 0x10000, GFP_ATOMIC);
++		spin_unlock_irqrestore(&local->ack_status_lock, flags);
++
++		if (id >= 0) {
++			info_id = id;
++			*info_flags |= IEEE80211_TX_CTL_REQ_TX_STATUS;
++		} else {
++			kfree_skb(ack_skb);
++		}
++	}
++
++	return info_id;
++}
++
+ /**
+  * ieee80211_build_hdr - build 802.11 header in the given frame
+  * @sdata: virtual interface to build the header for
+@@ -2716,26 +2743,8 @@ static struct sk_buff *ieee80211_build_hdr(struct ieee80211_sub_if_data *sdata,
+ 	}
+ 
+ 	if (unlikely(!multicast && skb->sk &&
+-		     skb_shinfo(skb)->tx_flags & SKBTX_WIFI_STATUS)) {
+-		struct sk_buff *ack_skb = skb_clone_sk(skb);
+-
+-		if (ack_skb) {
+-			unsigned long flags;
+-			int id;
+-
+-			spin_lock_irqsave(&local->ack_status_lock, flags);
+-			id = idr_alloc(&local->ack_status_frames, ack_skb,
+-				       1, 0x10000, GFP_ATOMIC);
+-			spin_unlock_irqrestore(&local->ack_status_lock, flags);
+-
+-			if (id >= 0) {
+-				info_id = id;
+-				info_flags |= IEEE80211_TX_CTL_REQ_TX_STATUS;
+-			} else {
+-				kfree_skb(ack_skb);
+-			}
+-		}
+-	}
++		     skb_shinfo(skb)->tx_flags & SKBTX_WIFI_STATUS))
++		info_id = ieee80211_store_ack_skb(local, skb, &info_flags);
+ 
+ 	/*
+ 	 * If the skb is shared we need to obtain our own copy.
 -- 
 2.20.1
 
