@@ -2,69 +2,73 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0BB92EA8E8
-	for <lists+ath10k@lfdr.de>; Thu, 31 Oct 2019 02:42:39 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id DE077EAB6F
+	for <lists+ath10k@lfdr.de>; Thu, 31 Oct 2019 09:15:48 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
-	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
-	References:List-Owner; bh=efEkc+7BS3Yyv8LkzSoy0aMtZ/x+WTC7minFfCdMme4=; b=sSW
-	sWM588CCuSOWGsUtCpyHOhAi4+AOqmVy7Bn//gNzVD6ACjixULcnL8Jo/eFrR+UKFsKl1g6OSI5IT
-	zrmrJa6WOFhoSEXrEFjnRq8fewHT6DAuO4vzDIxb3DVvAyYKiC9Jdd7nHKVfkIjsaDY0cyBry957b
-	g26AVLJB2D8B75A7CLS6NWkB2Y1u+KG+yiqtgsmVFQ7hoyNYEHl92SpQ6w9uUXEPdr4OLOQpWxww/
-	kxK/AjwRrTKq/9NqDsPPgQek/DgeqWlGjDfYQqiH/jvgJeXEAZObiXoqjo6EDooRUiArdbQMBMzdQ
-	V9UgdtCpu9r4AyqULWCgHVRqx3X3UQg==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
+	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=UrfX1u8/uQcjYQbRZ1tQ2YMmryCljrJJu3pWwYRGyC4=; b=mkz1A67gj2oQH/
+	ekcI3BEfRyTx/KN83ZNuSPCiocvCzutIkWn6sOU4zmJ4bkG3zA30MksqN0l9e3ymkWjdjOi7fC3eK
+	2AV1ZCBoVbLb5Fu9R81t3TZZlXVXSi9W+Q0EX/ed1SdmkNwPQVh2Srd1eTGhE322aVJAEzr8x8MSV
+	aliF5zNqrf3wICBTJmGqp5lur1gaaBETyXEoR27CwuABY2c3Cn07jhqY5fPCFVuQcyLmoqFKdtrKt
+	5gkTt0DBYkDsLEkADLzsiYDl2I6o1q/GU9yHV8WXL3KQ/L86IO9qEPG690RV/vrMHTOyR/Qz/ppb0
+	gSLaluPY3CvZGqUwNGEA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iPzTu-0006C6-3X; Thu, 31 Oct 2019 01:42:34 +0000
+	id 1iQ5cO-0000a2-05; Thu, 31 Oct 2019 08:15:44 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iPzTq-0006BZ-IA
- for ath10k@lists.infradead.org; Thu, 31 Oct 2019 01:42:31 +0000
+ id 1iQ5cK-0000Zk-GQ
+ for ath10k@lists.infradead.org; Thu, 31 Oct 2019 08:15:41 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 0D5B760A19; Thu, 31 Oct 2019 01:42:28 +0000 (UTC)
+ id DB5AA60930; Thu, 31 Oct 2019 08:15:39 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1572486148;
- bh=LLgVPWAvJ0j/e4W6FJaFc0K1XmCnlrNL8yNz7PYkoH0=;
- h=From:To:Cc:Subject:Date:From;
- b=m1r8iGB//ZbDYdDiqene8EhixiRn55a2NgFPXb7SZ8WFj2tlm8CnzY8zdCOxaT7M7
- tfQpGoARheuZJE/Re+06i5N2l67zm7Le5NmxNk05rVlQakiCG8XB108sXe9/9leelG
- xirw7CvWTMiUIA3i2E9sOsIJatpOB9zlYoJSYQwQ=
+ s=default; t=1572509739;
+ bh=sp/YuXqKxRq6BSEULbjzuuxJCs1WunIjmlNVKfVpHes=;
+ h=Subject:From:In-Reply-To:References:To:Cc:Date:From;
+ b=Ijtel4EshkgBpjFvlxbBWbrsq99aKVFA9ocGJUpdzSAELVKxJ18sE7KH4Q+7aV/1b
+ M1jK+pCdu/Mj7APEE21LMra4oiJ43nL0fqIMKb/k/1ubyb3muaMokN7m4GzQalxkwU
+ D+pp5Sp1Y4jvQQeFWQTJ2u69BQADe37ENL9utD/U=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
-X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
- DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
- version=3.4.0
-Received: from zhichen.ap.qualcomm.com (unknown [180.166.53.21])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
+X-Spam-Status: No, score=-0.8 required=2.0 tests=ALL_TRUSTED,BAYES_00,
+ DKIM_INVALID,DKIM_SIGNED,MISSING_DATE,MISSING_MID,SPF_NONE autolearn=no
+ autolearn_force=no version=3.4.0
+Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
+ [88.114.240.156])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
- (Authenticated sender: zhichen@codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id CE95F6081E;
- Thu, 31 Oct 2019 01:42:26 +0000 (UTC)
+ (Authenticated sender: kvalo@smtp.codeaurora.org)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id BEB8860540;
+ Thu, 31 Oct 2019 08:15:37 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1572486147;
- bh=LLgVPWAvJ0j/e4W6FJaFc0K1XmCnlrNL8yNz7PYkoH0=;
- h=From:To:Cc:Subject:Date:From;
- b=Dsxgcx9CB7jbKow3axzb1xYKwUUIim4cB5+AJA5/cdeQyyv0zVZ38wK1WLeKgQ+HX
- cTXI1qPkYIUWeSTQca59gBUTuF7lSkk/4txM66DBN7rammfKS5TcF7bcGMsvo/JYAm
- ZWLfaV15sB3F4hNXVxUdw6Ko871TZBbKjLzQ7ZKE=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org CE95F6081E
+ s=default; t=1572509739;
+ bh=sp/YuXqKxRq6BSEULbjzuuxJCs1WunIjmlNVKfVpHes=;
+ h=Subject:From:In-Reply-To:References:To:Cc:From;
+ b=KFKcnpd4XBYxIcUmwPGE6RZ1tg+eZBxF6Dtqgwrmo7hQePpVg+sIndWrFmx6Zdq4l
+ 2dt/+9m/mJS53yskmVY1pk84HKYXeINz9KW8cRDwflQkvx9vuepmLpWnTKukZlau7R
+ BMjCc4KC6cpdfXyCZaP7KxuVAIZcJ9MJ3PMfY+o0=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org BEB8860540
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
- spf=none smtp.mailfrom=zhichen@codeaurora.org
-From: Zhi Chen <zhichen@codeaurora.org>
-To: ath10k@lists.infradead.org
-Subject: [PATCH] ath10k: fix potential issue of peer stats allocation
-Date: Thu, 31 Oct 2019 09:42:13 +0800
-Message-Id: <1572486133-23516-1-git-send-email-zhichen@codeaurora.org>
-X-Mailer: git-send-email 2.7.4
+ spf=none smtp.mailfrom=kvalo@codeaurora.org
+MIME-Version: 1.0
+Subject: Re: [PATCH] ath10k: remove unneeded semicolon
+From: Kalle Valo <kvalo@codeaurora.org>
+In-Reply-To: <20191025091041.34056-1-yuehaibing@huawei.com>
+References: <20191025091041.34056-1-yuehaibing@huawei.com>
+To: YueHaibing <yuehaibing@huawei.com>
+User-Agent: pwcli/0.0.0-git (https://github.com/kvalo/pwcli/) Python/2.7.12
+Message-Id: <20191031081539.DB5AA60930@smtp.codeaurora.org>
+Date: Thu, 31 Oct 2019 08:15:39 +0000 (UTC)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191030_184230_620868_1DA3D66C 
-X-CRM114-Status: UNSURE (   8.42  )
+X-CRM114-CacheID: sfid-20191031_011540_570868_FF55C4A3 
+X-CRM114-Status: UNSURE (   5.11  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -93,35 +97,29 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Zhi Chen <zhichen@codeaurora.org>, linux-wireless@vger.kernel.org
-MIME-Version: 1.0
+Cc: linux-wireless@vger.kernel.org, netdev@vger.kernel.org,
+ YueHaibing <yuehaibing@huawei.com>, linux-kernel@vger.kernel.org,
+ ath10k@lists.infradead.org, davem@davemloft.net
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-STA number was not restored if OOM happened.
+YueHaibing <yuehaibing@huawei.com> wrote:
 
-Tested: QCA9984 with firmware ver 10.4-3.9.0.1-00018
-Signed-off-by: Zhi Chen <zhichen@codeaurora.org>
----
- drivers/net/wireless/ath/ath10k/mac.c | 1 +
- 1 file changed, 1 insertion(+)
+> remove unneeded semicolon.
+> 
+> Signed-off-by: YueHaibing <yuehaibing@huawei.com>
+> Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 
-diff --git a/drivers/net/wireless/ath/ath10k/mac.c b/drivers/net/wireless/ath/ath10k/mac.c
-index b73c23d..61efc00 100644
---- a/drivers/net/wireless/ath/ath10k/mac.c
-+++ b/drivers/net/wireless/ath/ath10k/mac.c
-@@ -6419,6 +6419,7 @@ static int ath10k_sta_state(struct ieee80211_hw *hw,
- 			arsta->tx_stats = kzalloc(sizeof(*arsta->tx_stats),
- 						  GFP_KERNEL);
- 			if (!arsta->tx_stats) {
-+				ath10k_mac_dec_num_stations(arvif, sta);
- 				ret = -ENOMEM;
- 				goto exit;
- 			}
+Patch applied to ath-next branch of ath.git, thanks.
+
+0dc269314a25 ath10k: remove unneeded semicolon
+
 -- 
-2.7.4
+https://patchwork.kernel.org/patch/11211787/
+
+https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
 
 
 _______________________________________________
