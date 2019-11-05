@@ -2,66 +2,75 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9C3BBF0401
-	for <lists+ath10k@lfdr.de>; Tue,  5 Nov 2019 18:19:30 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7DA1FF05E6
+	for <lists+ath10k@lfdr.de>; Tue,  5 Nov 2019 20:25:48 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
-	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=iN2IHIvO10KxN3ZrrJ0ySw8aVNImESQMVLMz7oeo+xQ=; b=UAHeemxV2XxFXtWHxVlKJWfIn
-	++rFzuerPrDQ5kS5KoqvCcY13mwKEcT+C4bVuC4ixklVfxpAA2EaAtNddgh2HS6k4BbC87LQIji8o
-	SI7yaOwLEcISwbNziE6+vLZ7C4y8oLXIkEhZuElEeQiBvIQCeP3tbWdvnpi8msL2SPRYMGrzhuTfu
-	u9djLiWNykl+zJR4Hg+nuL/N7T06ZG0aty5kWUGLtdizmH+wlMDrZbOnKkUZWC/0UAGNQ2ZvqxCOk
-	QtVjvBt985masZsA6nWXgTVmprRM5G+L17DHTHQMwScanhAkGj3ASq1ybzhlIOU0ivUQ3aSVIx2S6
-	BXALm2JOA==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	MIME-Version:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=QvvrwnfkgTtPgFRukkGcZh5NAV60YX8XYvXqBsbbF3o=; b=m7J
+	makvLWxEBL2RJAfV9WCsAu15hG9MWVEKbOOKCBbth0ogvXZ2NVAedha9Pvfi99P+hVitdX7oIYrW/
+	qLgQ2Gg4V9gHWCGT+eNi2zu3OfLUCMahQnmBVeagylRP6f/pzF7LESO7PyZpJR9kSAjUsfmgJriqp
+	Rjycr9BRW2iBSrA6IWomYzTbm01ce9JrNYw6AbPkkfiL4UaLiYYi6tmKN0kuwSH62rvTo94ffapOf
+	GGDRGIW+ezj9jrKaeZIQTW9KXRth8oX+8lq4FMDtREqWmT/9gC6rmlPJNQFs0TeYI0vcH0kOEAd7i
+	cSIF5i683n8CAox9PPPmbBZxUwbFEeQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iS2UI-0005XH-RH; Tue, 05 Nov 2019 17:19:26 +0000
-Received: from mail2.candelatech.com ([208.74.158.173]
- helo=mail3.candelatech.com)
- by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iS2UE-0005WQ-5q
- for ath10k@lists.infradead.org; Tue, 05 Nov 2019 17:19:23 +0000
-Received: from [192.168.100.195] (50-251-239-81-static.hfc.comcastbusiness.net
- [50.251.239.81])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
- (No client certificate requested)
- by mail3.candelatech.com (Postfix) with ESMTPSA id 21E6213C358;
- Tue,  5 Nov 2019 09:19:21 -0800 (PST)
-DKIM-Filter: OpenDKIM Filter v2.11.0 mail3.candelatech.com 21E6213C358
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=candelatech.com;
- s=default; t=1572974361;
- bh=V8NJR7727iNB0uRPImQP0tHz/e9UqOWH40a21R0azV8=;
- h=Subject:To:Cc:References:From:Date:In-Reply-To:From;
- b=anxDgG5kmOBLuJloing6yzi9LbtxzXQYpDKK0XrP67AxTrj8ubzPeNlR5tTNMDzCt
- IbBaU/HYUSFPP3eKE2wSsVTXmNApL4ZDVf0DIHueRsoC+4Efvw6ZkGHWOn/nlULJ9Q
- r/LKJCq93/fqCY303ZOPuUAfHSdCLRcw7RWN7+xE=
-Subject: Re: [PATCH net-next] ath10k: fix RX of frames with broken FCS in
- monitor mode
-To: =?UTF-8?Q?Linus_L=c3=bcssing?= <linus.luessing@c0d3.blue>,
- ath10k@lists.infradead.org
-References: <20191105164932.11799-1-linus.luessing@c0d3.blue>
-From: Ben Greear <greearb@candelatech.com>
-Organization: Candela Technologies
-Message-ID: <927cea69-7afc-5c35-df8d-9813392e8928@candelatech.com>
-Date: Tue, 5 Nov 2019 09:19:20 -0800
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
- Thunderbird/60.7.0
+	id 1iS4SU-00049V-RK; Tue, 05 Nov 2019 19:25:42 +0000
+Received: from mail-ot1-x341.google.com ([2607:f8b0:4864:20::341])
+ by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
+ id 1iS4SR-000491-GD
+ for ath10k@lists.infradead.org; Tue, 05 Nov 2019 19:25:41 +0000
+Received: by mail-ot1-x341.google.com with SMTP id 94so18624445oty.8
+ for <ath10k@lists.infradead.org>; Tue, 05 Nov 2019 11:25:37 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=mime-version:from:date:message-id:subject:to;
+ bh=9Xmvxla+FOMPcV59TDL9shlIkzoaLP3iO7IOe3nQYEs=;
+ b=nWufCnc5cvSrkNj9Vc0gr+pwmuvqU0zYMqwBJWNRPnjnqlvpuFvUUlYQsRONdz0zRJ
+ t2d8vibT4TYSvVAY7MQzlfcFhPiJbCyCZ+nseXvvpIG5rigyvl0r5wSC42zgLfiTg7y8
+ 5N+EqVIYb/W0pFcqEGnCQ5o5BAAug0DlV9R3M3hLCPnpqLqe2NOiOhW7kcCvYPYrr7tL
+ jDlL1S5+zjsJgzjg8Mqr4/Sw4RTwAOb3PHgcNCuIQSwckPzuTIS9PjO46sDO5h4yOv4y
+ Wyk5Fx1fcLmd8jA2mtKQq9D/AwVYVyzEUOziMmP0/ak0G+K+zT5dbFCqklGafr+HN2KI
+ 3nrg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+ bh=9Xmvxla+FOMPcV59TDL9shlIkzoaLP3iO7IOe3nQYEs=;
+ b=K+oH757PmQgQLOVAcqJHxT757Kec1LrVFJvY8v0HPZYnx4r5yBkNgSZK8+mCAn2uzf
+ TOqr4bmdRuvWN7GqTif7MdVplWE/qEL7Iy158wJntz7vv/vS4ee2ryvOA6TZ19XB+zET
+ UseRa5HA50OzFwe1d37ZYLefFDq3C2BEQtqaKPIKoXPbM9RJ1pUfRq38IFe4M+pDD740
+ N9Uw65UdyKTuzIHDlr4BnvAZ5oERB8XeQA0N9RInVK2DVYxGgbtyRcJP/Uuoj4v6XWoy
+ N7lAWEAnSp2wqXDVpiWtJjL/hLBu5UEGd6NOW6ht6Tfqq4Fg/7HqRIRL/iopKlYnEe9l
+ Onbg==
+X-Gm-Message-State: APjAAAXB73X0oDv6D4p66w7GiIOUjgR8sLQ87UYzXjotXs1HT1OA9EB3
+ hTOzxeVKynaNEXTJuFGzdxt/nh5YumoIcsBeKTzuX4NxNP8=
+X-Google-Smtp-Source: APXvYqz04nTd4A1MYuJPJCIjylXpnKEUeVDXvk7wOG3NfIIiY0zdXdc1DTTA6ADjTO0pxJh4S38ZhoijGBL4ydhiBv0=
+X-Received: by 2002:a9d:568:: with SMTP id 95mr4422101otw.99.1572981936897;
+ Tue, 05 Nov 2019 11:25:36 -0800 (PST)
 MIME-Version: 1.0
-In-Reply-To: <20191105164932.11799-1-linus.luessing@c0d3.blue>
-Content-Language: en-US
+From: Goran Sustek <gsustek@gmail.com>
+Date: Tue, 5 Nov 2019 20:25:26 +0100
+Message-ID: <CAFweJaPHmQORJARFTrONWE9-+eZ-9M8tXnw1oG9iu3-S46Pbgw@mail.gmail.com>
+Subject: Unable to set Transmit Packet Steering "xps_cpus"
+To: ath10k@lists.infradead.org
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191105_091922_266626_8359FA1D 
-X-CRM114-Status: GOOD (  14.66  )
+X-CRM114-CacheID: sfid-20191105_112539_565227_1DBADC50 
+X-CRM114-Status: UNSURE (   3.64  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:341 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (gsustek[at]gmail.com)
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
@@ -80,44 +89,53 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: =?UTF-8?Q?Linus_L=c3=bcssing?= <ll@simonwunderlich.de>,
- Simon Wunderlich <sw@simonwunderlich.de>, netdev@vger.kernel.org,
- linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
- "David S . Miller" <davem@davemloft.net>, Kalle Valo <kvalo@codeaurora.org>
-Content-Transfer-Encoding: base64
-Content-Type: text/plain; charset="utf-8"; Format="flowed"
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-T24gMTEvNS8xOSA4OjQ5IEFNLCBMaW51cyBMw7xzc2luZyB3cm90ZToKPiBGcm9tOiBMaW51cyBM
-w7xzc2luZyA8bGxAc2ltb253dW5kZXJsaWNoLmRlPgo+IAo+IFNvIGZhciwgZnJhbWVzIHdlcmUg
-Zm9yd2FyZGVkIHJlZ2FyZGxlc3Mgb2YgdGhlIEZDUyBjb3JyZWN0bmVzcyBsZWFkaW5nCj4gdG8g
-dXNlcnNwYWNlIGFwcGxpY2F0aW9ucyBsaXN0ZW5pbmcgb24gdGhlIG1vbml0b3IgbW9kZSBpbnRl
-cmZhY2UgdG8KPiByZWNlaXZlIHBvdGVudGlhbGx5IGJyb2tlbiBmcmFtZXMsIGV2ZW4gd2l0aCB0
-aGUgImZjc2ZhaWwiIGZsYWcgdW5zZXQuCj4gCj4gQnkgZGVmYXVsdCwgd2l0aCB0aGUgImZjc2Zh
-aWwiIGZsYWcgb2YgYSBtb25pdG9yIG1vZGUgaW50ZXJmYWNlCj4gdW5zZXQsIGZyYW1lcyB3aXRo
-IEZDUyBlcnJvcnMgc2hvdWxkIGJlIGRyb3BwZWQuIFdpdGggdGhpcyBwYXRjaCwgdGhlCj4gZmNz
-ZmFpbCBmbGFnIGlzIHRha2VuIGludG8gYWNjb3VudCBjb3JyZWN0bHkuCj4gCj4gQ2M6IFNpbW9u
-IFd1bmRlcmxpY2ggPHN3QHNpbW9ud3VuZGVybGljaC5kZT4KPiBTaWduZWQtb2ZmLWJ5OiBMaW51
-cyBMw7xzc2luZyA8bGxAc2ltb253dW5kZXJsaWNoLmRlPgo+IC0tLQo+IFRoaXMgd2FzIHRlc3Rl
-ZCBvbiBhbiBPcGVuIE1lc2ggQTQxIGRldmljZSwgZmVhdHVyaW5nIGEgUUNBNDAxOS4gQW5kCj4g
-d2l0aCB0aGlzIGZpcm13YXJlOgo+IAo+IGh0dHBzOi8vd3d3LmNhbmRlbGF0ZWNoLmNvbS9kb3du
-bG9hZHMvYXRoMTBrLTQwMTktMTAtNGIvZmlybXdhcmUtNS1jdC1mdWxsLWNvbW11bml0eS0xMi5i
-aW4tbGVkZS4wMTEKPiAKPiBCdXQgZnJvbSBsb29raW5nIGF0IHRoZSBjb2RlIGl0IHNlZW1zIHRo
-YXQgdGhlIHZhbmlsbGEgYXRoMTBrIGhhcyB0aGUKPiBzYW1lIGlzc3VlLCB0aGVyZWZvcmUgc3Vi
-bWl0dGluZyBpdCBoZXJlLgo+IAo+IENoYW5nZWxvZyBSRkMtPnYxOgo+IAo+ICogcmVtb3ZlZCAi
-YXItPm1vbml0b3IiIGNoZWNrCj4gKiBhZGRlZCBhIGRlYnVnIGNvdW50ZXIKClRoYW5rcyBmb3Ig
-YWRkaW5nIHRoZSBjb3VudGVyLiAgU2luY2UgaXQgdXMgdTMyLCBJIGRvdWJ0IHlvdSBuZWVkIHRo
-ZSBzcGluIGxvY2sKYmVsb3c/CgotLUJlbgoKPiArCWlmICghKGFyLT5maWx0ZXJfZmxhZ3MgJiBG
-SUZfRkNTRkFJTCkgJiYKPiArCSAgICBzdGF0dXMtPmZsYWcgJiBSWF9GTEFHX0ZBSUxFRF9GQ1Nf
-Q1JDKSB7Cj4gKwkJc3Bpbl9sb2NrX2JoKCZhci0+ZGF0YV9sb2NrKTsKPiArCQlhci0+c3RhdHMu
-cnhfY3JjX2Vycl9kcm9wKys7Cj4gKwkJc3Bpbl91bmxvY2tfYmgoJmFyLT5kYXRhX2xvY2spOwo+
-ICsKPiArCQlkZXZfa2ZyZWVfc2tiX2FueShza2IpOwo+ICsJCXJldHVybjsKPiArCX0KPiArCj4g
-ICAJYXRoMTBrX2RiZyhhciwgQVRIMTBLX0RCR19EQVRBLAo+ICAgCQkgICAicnggc2tiICVwSyBs
-ZW4gJXUgcGVlciAlcE0gJXMgJXMgc24gJXUgJXMlcyVzJXMlcyVzICVzcmF0ZV9pZHggJXUgdmh0
-X25zcyAldSBmcmVxICV1IGJhbmQgJXUgZmxhZyAweCV4IGZjcy1lcnIgJWkgbWljLWVyciAlaSBh
-bXNkdS1tb3JlICVpXG4iLAo+ICAgCQkgICBza2IsCj4gCgoKLS0gCkJlbiBHcmVlYXIgPGdyZWVh
-cmJAY2FuZGVsYXRlY2guY29tPgpDYW5kZWxhIFRlY2hub2xvZ2llcyBJbmMgIGh0dHA6Ly93d3cu
-Y2FuZGVsYXRlY2guY29tCgoKX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
-X19fX19fX18KYXRoMTBrIG1haWxpbmcgbGlzdAphdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZwpo
-dHRwOi8vbGlzdHMuaW5mcmFkZWFkLm9yZy9tYWlsbWFuL2xpc3RpbmZvL2F0aDEwawo=
+Hi, i have unusual issue setting Transmit Packet steering.
+
+
+Hardware (NIC chipset, platform, etc)
+NIC: Compex COMPEX WLE1216V5-20 5GHz
+Platform: KANSUNG Model: K515G6
+(https://bit.ly/2IOlSeQ 1)
+
+system: ubuntu eaon latest update
+driver: latest  ath10k , any firmware ,board-bin
+
+root@gs-Default-string:/home/gs# ls -lrt
+/sys/class/net/wlp6s0/queues/tx-0/xps_cpus
+-rw-r--r-- 1 root root 4096 stu 4 17:03
+/sys/class/net/wlp6s0/queues/tx-0/xps_cpus
+root@gs-Default-string:/home/gs# cat /sys/class/net/wlp6s0/queues/tx-0/xps_cpus
+cat: /sys/class/net/wlp6s0/queues/tx-0/xps_cpus: No such file or directory
+root@gs-Default-string:/home/gs#
+
+root@gs-Default-string:/home/gs# ls -lrt /sys/class/net/
+total 0
+lrwxrwxrwx 1 root root 0 stu 4 16:50 lo -> ../../devices/virtual/net/lo
+lrwxrwxrwx 1 root root 0 stu 4 16:50 enp5s0 ->
+../../devices/pci0000:00/0000:00:1c.4/0000:05:00.0/net/enp5s0
+lrwxrwxrwx 1 root root 0 stu 4 16:50 enp4s0 ->
+../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/net/enp4s0
+lrwxrwxrwx 1 root root 0 stu 4 16:50 enp3s0 ->
+../../devices/pci0000:00/0000:00:1c.2/0000:03:00.0/net/enp3s0
+lrwxrwxrwx 1 root root 0 stu 4 16:50 enp2s0 ->
+../../devices/pci0000:00/0000:00:1c.1/0000:02:00.0/net/enp2s0
+lrwxrwxrwx 1 root root 0 stu 4 16:50 enp1s0 ->
+../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/net/enp1s0
+lrwxrwxrwx 1 root root 0 stu 4 16:50 wlp6s0 ->
+../../devices/pci0000:00/0000:00:1d.0/0000:06:00.0/net/wlp6s0
+root@gs-Default-string:/home/gs#
+
+
+Regards,
+
+Goran.
+
+_______________________________________________
+ath10k mailing list
+ath10k@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/ath10k
