@@ -2,62 +2,70 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7DA1FF05E6
-	for <lists+ath10k@lfdr.de>; Tue,  5 Nov 2019 20:25:48 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 19E31F132C
+	for <lists+ath10k@lfdr.de>; Wed,  6 Nov 2019 11:01:49 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:List-Subscribe:List-Help:List-Post:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	MIME-Version:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
-	References:List-Owner; bh=QvvrwnfkgTtPgFRukkGcZh5NAV60YX8XYvXqBsbbF3o=; b=m7J
-	makvLWxEBL2RJAfV9WCsAu15hG9MWVEKbOOKCBbth0ogvXZ2NVAedha9Pvfi99P+hVitdX7oIYrW/
-	qLgQ2Gg4V9gHWCGT+eNi2zu3OfLUCMahQnmBVeagylRP6f/pzF7LESO7PyZpJR9kSAjUsfmgJriqp
-	Rjycr9BRW2iBSrA6IWomYzTbm01ce9JrNYw6AbPkkfiL4UaLiYYi6tmKN0kuwSH62rvTo94ffapOf
-	GGDRGIW+ezj9jrKaeZIQTW9KXRth8oX+8lq4FMDtREqWmT/9gC6rmlPJNQFs0TeYI0vcH0kOEAd7i
-	cSIF5i683n8CAox9PPPmbBZxUwbFEeQ==;
+	References:In-Reply-To:MIME-Version:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=7ogLppIrH2PfDqfYhgjGcNN+Y8pyrsPlmrAQRsZMreE=; b=Oy0zuDaqLswARr
+	NlOci9t8aIDS+AAF0XeDERMl2Q+UIZKnHGKNvF0NLdO9OmZUWp2vbVgcxA+sC3KiShQNVTcjoC7Wn
+	TOCVVkqZUIkRTxoll7eIge9jkaFAi3BiU+xleLIEFXGKVpa0s2h05OuT2Kth1TwUeon0mQnZOac/s
+	hojiaeJ58jYNZyM6G/Q/UHEcI3PWIsV6JUOTfqliMMj8Nx4v1p+bGju71qhvxx06ld1vo/eGd0LA9
+	Ai7SyEeEldzENhzmNNqrLxe+26l3cG2nw61ttGD87f8Mnprug5smIhGNcmtHFxJsF7wMHOi1oW5wP
+	aWYwvV9tNi2clR5bZpZg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iS4SU-00049V-RK; Tue, 05 Nov 2019 19:25:42 +0000
-Received: from mail-ot1-x341.google.com ([2607:f8b0:4864:20::341])
+	id 1iSI8H-0006Bc-9m; Wed, 06 Nov 2019 10:01:45 +0000
+Received: from mail-oi1-x242.google.com ([2607:f8b0:4864:20::242])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iS4SR-000491-GD
- for ath10k@lists.infradead.org; Tue, 05 Nov 2019 19:25:41 +0000
-Received: by mail-ot1-x341.google.com with SMTP id 94so18624445oty.8
- for <ath10k@lists.infradead.org>; Tue, 05 Nov 2019 11:25:37 -0800 (PST)
+ id 1iSI8D-0006BG-QI
+ for ath10k@lists.infradead.org; Wed, 06 Nov 2019 10:01:43 +0000
+Received: by mail-oi1-x242.google.com with SMTP id v138so20419083oif.6
+ for <ath10k@lists.infradead.org>; Wed, 06 Nov 2019 02:01:39 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=mime-version:from:date:message-id:subject:to;
- bh=9Xmvxla+FOMPcV59TDL9shlIkzoaLP3iO7IOe3nQYEs=;
- b=nWufCnc5cvSrkNj9Vc0gr+pwmuvqU0zYMqwBJWNRPnjnqlvpuFvUUlYQsRONdz0zRJ
- t2d8vibT4TYSvVAY7MQzlfcFhPiJbCyCZ+nseXvvpIG5rigyvl0r5wSC42zgLfiTg7y8
- 5N+EqVIYb/W0pFcqEGnCQ5o5BAAug0DlV9R3M3hLCPnpqLqe2NOiOhW7kcCvYPYrr7tL
- jDlL1S5+zjsJgzjg8Mqr4/Sw4RTwAOb3PHgcNCuIQSwckPzuTIS9PjO46sDO5h4yOv4y
- Wyk5Fx1fcLmd8jA2mtKQq9D/AwVYVyzEUOziMmP0/ak0G+K+zT5dbFCqklGafr+HN2KI
- 3nrg==
+ h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+ :cc; bh=6EGX28wEFZgUP2ViykHhowm1UZd+iCJ5kGWB7RqLO4I=;
+ b=cze9xOjKjae6ndO91v7yCelIYgKCcUEG1jKrdVfJN8rrivk0/ztpPnRmgRs19lBHbd
+ Xc6YUjknUdd2ur0TXgHntHW5k2tjqBUmLhzhKYLqqnNUX196/W2uqARpFio6wMKaMAE3
+ ++pKayavbRONNUo0L/ccOK7bzUrXRoUIg56BkPn0JYGWqFxX0FHoopOVWuwlXFfTGX6K
+ 594+bJ/KWPUsmKCZ3HKoTVc5R2b+PQmEpeoNxmTvwxCjhIgv62Uro/5/r70SSWgJp1GZ
+ K80ynAh0nOfz2ZOebvtY7mCh4BASNe5PX6eSjJksreCpvQc8FrF/jFgAXLEqv1e8tacV
+ QsAg==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
- bh=9Xmvxla+FOMPcV59TDL9shlIkzoaLP3iO7IOe3nQYEs=;
- b=K+oH757PmQgQLOVAcqJHxT757Kec1LrVFJvY8v0HPZYnx4r5yBkNgSZK8+mCAn2uzf
- TOqr4bmdRuvWN7GqTif7MdVplWE/qEL7Iy158wJntz7vv/vS4ee2ryvOA6TZ19XB+zET
- UseRa5HA50OzFwe1d37ZYLefFDq3C2BEQtqaKPIKoXPbM9RJ1pUfRq38IFe4M+pDD740
- N9Uw65UdyKTuzIHDlr4BnvAZ5oERB8XeQA0N9RInVK2DVYxGgbtyRcJP/Uuoj4v6XWoy
- N7lAWEAnSp2wqXDVpiWtJjL/hLBu5UEGd6NOW6ht6Tfqq4Fg/7HqRIRL/iopKlYnEe9l
- Onbg==
-X-Gm-Message-State: APjAAAXB73X0oDv6D4p66w7GiIOUjgR8sLQ87UYzXjotXs1HT1OA9EB3
- hTOzxeVKynaNEXTJuFGzdxt/nh5YumoIcsBeKTzuX4NxNP8=
-X-Google-Smtp-Source: APXvYqz04nTd4A1MYuJPJCIjylXpnKEUeVDXvk7wOG3NfIIiY0zdXdc1DTTA6ADjTO0pxJh4S38ZhoijGBL4ydhiBv0=
-X-Received: by 2002:a9d:568:: with SMTP id 95mr4422101otw.99.1572981936897;
- Tue, 05 Nov 2019 11:25:36 -0800 (PST)
+ h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+ :message-id:subject:to:cc;
+ bh=6EGX28wEFZgUP2ViykHhowm1UZd+iCJ5kGWB7RqLO4I=;
+ b=je+qOaZb9+PwXHfQ7X7bPJmUfRGo6HfIskX4+9qqD8lodMNENJHhsIYnthXP6gwci5
+ GVV7P2QJUqkz9ylsutMBwyRMydZBZK4sL1klFMDciIEBn9jxXVIQNVzuvWyiY2AxaiY/
+ bn5s9lu5prgvgGAX4ekSbAShW1653HneKIBvyEt0Kjkg4qxG7x6iRNnP96/UZq8C82lG
+ ekoezZKln9tqMcuA7VvsyeapfFW6J6SXmi/IalR+qw4ee3i/z/bI0FZUtQz8ikijHjVk
+ cswrXLjfNC1FQS4lHuj7JGn2wOStEggfXSyMAnZdd97Rgl/pD8MExjxS74g1eMmECq+Q
+ rLZA==
+X-Gm-Message-State: APjAAAXWruJpkMRc5HcNS0DKxUnE6i1cUtH18+bVOUKhjRy2qzrkjz0P
+ hBSzJAIulxZ6e59LeTY5dGvcf3QWjMjsJLBgQvg=
+X-Google-Smtp-Source: APXvYqyApwUy7IhVKtaGYyAk/3krLYde4B27R95zSTjANWbyG7AVqhn4RAL+NtjCz+xBqBUAZHjFIXvCQ+FLiF0wW5k=
+X-Received: by 2002:a54:4f83:: with SMTP id g3mr1523053oiy.24.1573034499461;
+ Wed, 06 Nov 2019 02:01:39 -0800 (PST)
 MIME-Version: 1.0
-From: Goran Sustek <gsustek@gmail.com>
-Date: Tue, 5 Nov 2019 20:25:26 +0100
-Message-ID: <CAFweJaPHmQORJARFTrONWE9-+eZ-9M8tXnw1oG9iu3-S46Pbgw@mail.gmail.com>
-Subject: Unable to set Transmit Packet Steering "xps_cpus"
-To: ath10k@lists.infradead.org
+Received: by 2002:a9d:384:0:0:0:0:0 with HTTP;
+ Wed, 6 Nov 2019 02:01:38 -0800 (PST)
+In-Reply-To: <9bb484b94c43f7c9aa08345ad89d7b2c@codeaurora.org>
+References: <1571734629-18028-1-git-send-email-zhichen@codeaurora.org>
+ <CAKR_QVLDFBVMDDP4mPYVNdpT9TA3podNeQMpVJQwE7A5eG=0kA@mail.gmail.com>
+ <9bb484b94c43f7c9aa08345ad89d7b2c@codeaurora.org>
+From: Tom Psyborg <pozega.tomislav@gmail.com>
+Date: Wed, 6 Nov 2019 11:01:38 +0100
+Message-ID: <CAKR_QVL9QLE72y0HBD_miLYAD4qx73u3FK33=oNCHp_S8H6JOw@mail.gmail.com>
+Subject: Re: [PATCH RFC] Revert "ath10k: fix DMA related firmware crashes on
+ multiple devices"
+To: zhichen@codeaurora.org
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191105_112539_565227_1DBADC50 
-X-CRM114-Status: UNSURE (   3.64  )
+X-CRM114-CacheID: sfid-20191106_020141_852031_A76E91E8 
+X-CRM114-Status: UNSURE (   7.21  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -65,12 +73,12 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:341 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:242 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (gsustek[at]gmail.com)
+ provider (pozega.tomislav[at]gmail.com)
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
@@ -89,51 +97,25 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
+Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Hi, i have unusual issue setting Transmit Packet steering.
+On 30/10/2019, zhichen@codeaurora.org <zhichen@codeaurora.org> wrote:
+> On 2019-10-22 18:07, Tom Psyborg wrote:
+>
+>> What about main and 10x firmware branch?
+>
+> There is no code changes in firmware. It's a configuration change of
+> host memory access.
+>
+> Zhi
+>
 
-
-Hardware (NIC chipset, platform, etc)
-NIC: Compex COMPEX WLE1216V5-20 5GHz
-Platform: KANSUNG Model: K515G6
-(https://bit.ly/2IOlSeQ 1)
-
-system: ubuntu eaon latest update
-driver: latest  ath10k , any firmware ,board-bin
-
-root@gs-Default-string:/home/gs# ls -lrt
-/sys/class/net/wlp6s0/queues/tx-0/xps_cpus
--rw-r--r-- 1 root root 4096 stu 4 17:03
-/sys/class/net/wlp6s0/queues/tx-0/xps_cpus
-root@gs-Default-string:/home/gs# cat /sys/class/net/wlp6s0/queues/tx-0/xps_cpus
-cat: /sys/class/net/wlp6s0/queues/tx-0/xps_cpus: No such file or directory
-root@gs-Default-string:/home/gs#
-
-root@gs-Default-string:/home/gs# ls -lrt /sys/class/net/
-total 0
-lrwxrwxrwx 1 root root 0 stu 4 16:50 lo -> ../../devices/virtual/net/lo
-lrwxrwxrwx 1 root root 0 stu 4 16:50 enp5s0 ->
-../../devices/pci0000:00/0000:00:1c.4/0000:05:00.0/net/enp5s0
-lrwxrwxrwx 1 root root 0 stu 4 16:50 enp4s0 ->
-../../devices/pci0000:00/0000:00:1c.3/0000:04:00.0/net/enp4s0
-lrwxrwxrwx 1 root root 0 stu 4 16:50 enp3s0 ->
-../../devices/pci0000:00/0000:00:1c.2/0000:03:00.0/net/enp3s0
-lrwxrwxrwx 1 root root 0 stu 4 16:50 enp2s0 ->
-../../devices/pci0000:00/0000:00:1c.1/0000:02:00.0/net/enp2s0
-lrwxrwxrwx 1 root root 0 stu 4 16:50 enp1s0 ->
-../../devices/pci0000:00/0000:00:1c.0/0000:01:00.0/net/enp1s0
-lrwxrwxrwx 1 root root 0 stu 4 16:50 wlp6s0 ->
-../../devices/pci0000:00/0000:00:1d.0/0000:06:00.0/net/wlp6s0
-root@gs-Default-string:/home/gs#
-
-
-Regards,
-
-Goran.
+Please change it for main and 10x branch too. Dumping hw1.0 regs with
+QCA driver shows DMA burst value set to 1
 
 _______________________________________________
 ath10k mailing list
