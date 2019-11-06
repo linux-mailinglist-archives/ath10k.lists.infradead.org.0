@@ -2,78 +2,75 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D754EF22A7
-	for <lists+ath10k@lfdr.de>; Thu,  7 Nov 2019 00:31:44 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 00857F22D9
+	for <lists+ath10k@lfdr.de>; Thu,  7 Nov 2019 00:47:51 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
 	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
 	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
 	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
-	References:List-Owner; bh=QRcZjLiYnWDHio6ig717fHKFY4fUbhhfr3yrNuP4lrY=; b=HDn
-	AkjkukTsxMRVehJnq9HoGHCJ/uDDuHtC0ytnvHoPRuWkMd+7QXaIgc5JQGgBR9tQR7yzOSaqiz7my
-	Ut+fWviSMdLvgMItKU6gpOiKrtGEZjPctfIhAzjWjTYMKxrv4fr/CB5HlQ2LMMFxZ1pxcOfS1UwKd
-	c2ypmL0HKDcgm9hqMM1bVmuxxNkyLrJoizt5jQneZ/hMP0Ma+hxknv8qgFjquxb5DQ70rJA/MyFf9
-	BRjGc3LUSvdFkyNMGfEjmga6JDRDsQQ8lWUSnn7ZZzSUXQO/rbFyiQNkm4YzcvLvyosbYljXy9/Cl
-	E1mwBh09IjZPIqgmD0GyqmDyiEZQh3A==;
+	References:List-Owner; bh=eBpzN2IvNBe9FdVUb1f7M0T0D4iIZIxyXgM5dgyB2Is=; b=tpB
+	a+ZdnzxDpZUcsRoGTh2Cr0hAmJiYwDgU3wS+yr2R8bQP0wBps1Lz0kqJWAW9XUo0Dc9qzLuBoY7K+
+	M2qbqBl7qzTaMdaYLgvETN2i4Wk1ino3fO4hRGJvMuJu62kXuR4sscVg16DbK3I+yrJPaio7ucxMI
+	jOq93mStv61MUkE6t26uclYffJ1TDFSG7DCTFrRxChi32o3ldNddf4Og1dQselPeY5f/AVT34ykMx
+	Hkbdz1FKti/Hzzvgn13nbOgoG6Ld3XDDIHjMwbQ8Toso+wVK8tCV2z3kiu5MU9OzeYZTk7kJ94su5
+	vxXlkRswMynDPt8cWxNwqv2dK/9yZPw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iSUm4-0004sf-VV; Wed, 06 Nov 2019 23:31:40 +0000
-Received: from mail-pl1-x641.google.com ([2607:f8b0:4864:20::641])
+	id 1iSV1g-0002ZN-QY; Wed, 06 Nov 2019 23:47:48 +0000
+Received: from mail-pf1-x444.google.com ([2607:f8b0:4864:20::444])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iSUm1-0004rV-5L
- for ath10k@lists.infradead.org; Wed, 06 Nov 2019 23:31:38 +0000
-Received: by mail-pl1-x641.google.com with SMTP id k7so5563pll.1
- for <ath10k@lists.infradead.org>; Wed, 06 Nov 2019 15:31:34 -0800 (PST)
+ id 1iSV1N-0002KS-Pv
+ for ath10k@lists.infradead.org; Wed, 06 Nov 2019 23:47:31 +0000
+Received: by mail-pf1-x444.google.com with SMTP id p26so467885pfq.8
+ for <ath10k@lists.infradead.org>; Wed, 06 Nov 2019 15:47:29 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=from:to:cc:subject:date:message-id;
- bh=XQlBjJQQjlLiOw6f2ULlsVGlJrKy32umFggc4zmnopc=;
- b=gwQTp+0U9NUDWWwM66Vo43vKr5F6kMz6YnYStCt7FNFJHX+scw5dGwfAbuEShRbc8v
- XcmX1D+eSJZYvdO0k9WgO/00JGvL5kjTxBS3D/FLPLBDgT2lLsa6Gho9KRe04ezZreU7
- ttLGuXono0x8uy6S0YxD0shypeQWo1wKv5Z08VuRXS0KnWBtOCZwzJPgnDzTEWTuq18j
- azzWsYkZWIWokwnvKfvCfdBwDww9XJV8XRquLpogRYv8WMBwwo5SUBM1XZNZVmzI/Tez
- 1OSlIqNp3kGEIeR9fRxGBHKxWT9pIGy2pEzMpOU+X5UCTFQrjf/QBMNRR9EsM0929Ccd
- z4zw==
+ bh=IITHycz/tKeCtcoGS9oSqQaaGm3H0ejbd50X22z8NiA=;
+ b=QBM+UW+9MI+uREWzRjPCDMTdRcJ1Qg9A1mV9chE5KjhqRQK8ZTlnzavCFuKjvmApo0
+ dLMC9dCKtbzlyt2F0etYRl9F6hMMAl2ZWhnqk+1qjKTziWxKwfA9tYuxgHLUtNXUaQFY
+ OAtGyQlApB2naKonvaurwkRT8u5RsF2+hJd6dXgnsZvq4NSYZPju1+8F+8zPDs9+pZ+J
+ S2gwQtppNc/DtmGJz6rSAq4SJ5J4LjD/1ZNAluTfXjvV++shwxekEoJIQcMKzFiTHlL7
+ BPRzlUZ8gf1gO6+TvpexhzXi4VNnhOwwrCMQwpY24IymcCjHxGV2MjWegPyqB5uBNd1g
+ xyIQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id;
- bh=XQlBjJQQjlLiOw6f2ULlsVGlJrKy32umFggc4zmnopc=;
- b=AE0RI9Raj3qHXJQD3fgdPOIzPAdbnv5NFks9eiibRgxjP3An6RzlFyNgpw+5E9HiVH
- N3jdE+COej6h/PwcJ1oVr47AfCotDR32l4cHYG1Mpq6xWy6xSc9vPOewz6eDoNXxAZCe
- gaHpt+qXqIigPrDBHH/eTA53vxwzIqgUukqATVcd3FZhfnfawbHAp2AHkO7scGlYC73l
- igcrk40wlXkSMSYmfztL65oG1PAEgPpT1tX7tWS/vQOhXy1puaFHHEVWc2Y4AaNuaTSH
- gIBBacSS0bXcrvoyl2knXZ4xEpwH+akqJosMT1/qUaubSSXEplwICHcZaWWPdTC6rYS+
- 609A==
-X-Gm-Message-State: APjAAAWmKWqEoG0t7Qv8OkERKKEvilGd5uAvjC64GMuQWKjSBfGu7Pff
- qwTApCKevDnM1pSSpOKKpAY=
-X-Google-Smtp-Source: APXvYqyxj6AvcxSxTZ1uXkDQ4TdMBL4b+00frqdfXS3bHWC4a2N3B+rJNl7uiZQ1SRrjJzBidWs0oQ==
-X-Received: by 2002:a17:902:b10c:: with SMTP id
- q12mr239799plr.97.1573083094431; 
- Wed, 06 Nov 2019 15:31:34 -0800 (PST)
+ bh=IITHycz/tKeCtcoGS9oSqQaaGm3H0ejbd50X22z8NiA=;
+ b=XSUrPrxfNpXrEXmVnqRHcqXlxAD6Volu1TypYyO78zS5Vk+U5etI6X/ta15OAiEelV
+ jOg1XcvxTCjGgxhifzhUBf/Pwtj14TTOv9K+PSzPY7uV27msBkloCjv0c0gPBeaC4kVw
+ 10JWKqo6ooqwfU9lnSJRo2MFfApve1qdBu22oKqgK6ywxF9buRl2QesK89I67hC28zOa
+ +wLUUDb8ENRdUeYWGjBMX8bIQUsfZ5C9Y+UaZc+hHhnzJUBHbK8S85aH2rnPYbcorDFq
+ NUI/yGLYBRaYRBgO1byB3BKy1PCs8yD66YtV0WLZV/87rdjl5PJ5Wvq4ZJFNflI76xpy
+ bUZw==
+X-Gm-Message-State: APjAAAXRoeqABL5cIuQzDG3mZG6zD+OKcGbumC9Z/jXrFBoJLBKSqPPu
+ Ri9IayEnNJC2j33KlAyfy0c=
+X-Google-Smtp-Source: APXvYqxUKtpDTnctikFB0dQsxG/rxh3cI4BqhqNcmERqcbnbqreW4bT2lTMAT4Iu/13iDxCfITTTBQ==
+X-Received: by 2002:a63:ed17:: with SMTP id d23mr620290pgi.125.1573084049060; 
+ Wed, 06 Nov 2019 15:47:29 -0800 (PST)
 Received: from aw-bldr-10.qualcomm.com (i-global254.qualcomm.com.
  [199.106.103.254])
- by smtp.gmail.com with ESMTPSA id f7sm70667pfa.150.2019.11.06.15.31.33
+ by smtp.gmail.com with ESMTPSA id y26sm104198pfo.76.2019.11.06.15.47.27
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Wed, 06 Nov 2019 15:31:34 -0800 (PST)
+ Wed, 06 Nov 2019 15:47:28 -0800 (PST)
 From: Jeffrey Hugo <jeffrey.l.hugo@gmail.com>
 To: kvalo@codeaurora.org,
 	davem@davemloft.net
-Subject: [PATCH] ath10k: Handle when FW doesn't support
- QMI_WLFW_HOST_CAP_REQ_V01
-Date: Wed,  6 Nov 2019 15:31:30 -0800
-Message-Id: <20191106233130.2169-1-jeffrey.l.hugo@gmail.com>
+Subject: [PATCH] ath10k: Handle "invalid" BDFs for msm8998 devices
+Date: Wed,  6 Nov 2019 15:47:12 -0800
+Message-Id: <20191106234712.2380-1-jeffrey.l.hugo@gmail.com>
 X-Mailer: git-send-email 2.17.1
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191106_153137_202255_9EC906FD 
-X-CRM114-Status: UNSURE (   9.71  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20191106_154729_866211_5692C1C0 
+X-CRM114-Status: GOOD (  11.05  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:641 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:444 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
@@ -106,33 +103,42 @@ Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Firmware with the build id QC_IMAGE_VERSION_STRING=WLAN.HL.1.0.2-XXXX does
-not support the QMI_WLFW_HOST_CAP_REQ_V01 message and will return the
-QMI not supported error to the ath10k driver.  Since not supporting this
-message is not fatal to the firmware nor the ath10k driver, lets catch
-this particular scenario and ignore it so that we can still bring up
-wifi services successfully.
+When the BDF download QMI message has the end field set to 1, it signals
+the end of the transfer, and triggers the firmware to do a CRC check.  The
+BDFs for msm8998 devices fail this check, yet the firmware is happy to
+still use the BDF.  It appears that this error is not caught by the
+downstream drive by concidence, therefore there are production devices
+in the field where this issue needs to be handled otherwise we cannot
+support wifi on them.  So, attempt to detect this scenario as best we can
+and treat it as non-fatal.
 
 Signed-off-by: Jeffrey Hugo <jeffrey.l.hugo@gmail.com>
 ---
- drivers/net/wireless/ath/ath10k/qmi.c | 4 +++-
- 1 file changed, 3 insertions(+), 1 deletion(-)
+ drivers/net/wireless/ath/ath10k/qmi.c | 11 +++++++----
+ 1 file changed, 7 insertions(+), 4 deletions(-)
 
 diff --git a/drivers/net/wireless/ath/ath10k/qmi.c b/drivers/net/wireless/ath/ath10k/qmi.c
-index 545ac1f06997..eb618a2652db 100644
+index eb618a2652db..5ff8cfc93778 100644
 --- a/drivers/net/wireless/ath/ath10k/qmi.c
 +++ b/drivers/net/wireless/ath/ath10k/qmi.c
-@@ -614,7 +614,9 @@ static int ath10k_qmi_host_cap_send_sync(struct ath10k_qmi *qmi)
- 	if (ret < 0)
- 		goto out;
+@@ -265,10 +265,13 @@ static int ath10k_qmi_bdf_dnld_send_sync(struct ath10k_qmi *qmi)
+ 			goto out;
  
--	if (resp.resp.result != QMI_RESULT_SUCCESS_V01) {
-+	/* older FW didn't support this request, which is not fatal */
-+	if (resp.resp.result != QMI_RESULT_SUCCESS_V01 &&
-+	    resp.resp.error != QMI_ERR_NOT_SUPPORTED_V01) {
- 		ath10k_err(ar, "host capability request rejected: %d\n", resp.resp.error);
- 		ret = -EINVAL;
- 		goto out;
+ 		if (resp.resp.result != QMI_RESULT_SUCCESS_V01) {
+-			ath10k_err(ar, "failed to download board data file: %d\n",
+-				   resp.resp.error);
+-			ret = -EINVAL;
+-			goto out;
++			if (!(req->end == 1 &&
++			      resp.resp.result == QMI_ERR_MALFORMED_MSG_V01)) {
++				ath10k_err(ar, "failed to download board data file: %d\n",
++					   resp.resp.error);
++				ret = -EINVAL;
++				goto out;
++			}
+ 		}
+ 
+ 		remaining -= req->data_len;
 -- 
 2.17.1
 
