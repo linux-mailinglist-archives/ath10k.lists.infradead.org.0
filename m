@@ -2,102 +2,89 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 01ECAF2CE1
-	for <lists+ath10k@lfdr.de>; Thu,  7 Nov 2019 11:55:17 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id D9BE0F30C7
+	for <lists+ath10k@lfdr.de>; Thu,  7 Nov 2019 15:03:51 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:References
-	:In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=WTcySkddjTcODn6fLsFHasipfahJIK39X1978pULh84=; b=udEHtMXKo1V3Gg
-	21T8Sf4qH1IX19Acev17i8HgD9Fh4pAJvf09HHVGuS/r3gAVo1ZDrDilIbBct1W/sqvAn+dvNrgMh
-	+td6jk1Qugznwv58C/4niIBbo102ohOhxqA8h+cUo4erEx80RnmC0eHpiQej1OBHPo2OcJXyOiWZV
-	2ryOERaKZ2b/8B2oHnxKJy5iC5f38aYGXaHnfYzRMpjbCdu0h/hVfKZ1b0EGHibGLhWr3ltCbLSR1
-	y2+WocSxdUBwP4iCQ0UfMVFqayDUuyNPGEdQxW/iCoeVfzHGZO5bsjXb/WyaNLlgV++HLpV2x2wob
-	kkxwPZoLz1tLHY/Jj8HA==;
+	List-Owner; bh=JW7hF/2Y/fgzD1XcpEuSS7Tk7OWyDPvhvV2s6XIeKKo=; b=m9FiUeH/pUVitT
+	+s5SvqjvYCCv/U4sqHzOLztsUxMc2K7wT8Xpgod5TvxKzcq8vfgQGLRfIdaiugRBRZ/yooMog6sgL
+	WQ5DS9/03rOJAvepDrp9WhrWOj0j8Vxg5q/5wVXf9YEwuyLqFaQkSRhvuEcarRmXJWqJdDJ79dmII
+	t9pF0UqeowerpSJpET0TiXauDqvTSFOpjBkbuOZM0SZs5PBKAxuZDAC9LfojHRsS6kNWmhv7Wygu/
+	GL0nv1B8t5Al3WDKPFx7o2KotsIQsTEqjoDTvIR4c2B+sirD8M92FMvNQxqFP6W1PVL/RxIB0gnUm
+	V9A48ausGOYdoHtMDXXA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iSfRb-0002X6-5V; Thu, 07 Nov 2019 10:55:15 +0000
-Received: from us-smtp-delivery-1.mimecast.com ([207.211.31.120]
- helo=us-smtp-1.mimecast.com)
+	id 1iSiO3-00038v-HU; Thu, 07 Nov 2019 14:03:47 +0000
+Received: from mail.aperture-lab.de ([2a01:4f8:171:314c::100:a1])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iSfRX-0002RF-AA
- for ath10k@lists.infradead.org; Thu, 07 Nov 2019 10:55:12 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
- s=mimecast20190719; t=1573124109;
+ id 1iSiNz-00037r-Hp
+ for ath10k@lists.infradead.org; Thu, 07 Nov 2019 14:03:45 +0000
+Date: Thu, 7 Nov 2019 15:03:31 +0100
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=c0d3.blue; s=2018;
+ t=1573135414;
  h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
  to:to:cc:cc:mime-version:mime-version:content-type:content-type:
- content-transfer-encoding:content-transfer-encoding:
  in-reply-to:in-reply-to:references:references;
- bh=Q4pL4jpvKYALp1ZmBjwLiX5kLjNlt9sKgPX3+ptzxho=;
- b=hBeWLmJg0N+Sf+bzGXoQaVHGqCWgT97zgYCwFcRSBCoE3SlMEdwEGsU6h6Cw29cNgQ+NM2
- Pit1L9Vbtc92+V9g0eIJ+z+80vrNCUvBPMKepBnEzXDGJgd1RZriEo2TPIAwYQiYj1j4Rq
- 7JfU6WImq3/26VM+2L6DgbQct/jvecQ=
-Received: from mail-ed1-f70.google.com (mail-ed1-f70.google.com
- [209.85.208.70]) (Using TLS) by relay.mimecast.com with ESMTP id
- us-mta-5-bNdJ10mbOf2rLadHcHbGNg-1; Thu, 07 Nov 2019 05:55:07 -0500
-Received: by mail-ed1-f70.google.com with SMTP id j21so1105690edv.20
- for <ath10k@lists.infradead.org>; Thu, 07 Nov 2019 02:55:07 -0800 (PST)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:in-reply-to:references:date
- :message-id:mime-version;
- bh=Q4pL4jpvKYALp1ZmBjwLiX5kLjNlt9sKgPX3+ptzxho=;
- b=sXluZv7NhlLWON/vi/Ci20vk2iqlVcc6Gs98jEaT/d0s0ewuhoCCZM2CRTY74KWyDv
- /fROeokOlRuoj27lAagC2QpxIUi+QUFtqLCqmCPJGgcuZIJC+sUSxR2aEGuygDYoTPhB
- yub4ZrmYQds0hxCcslTxgJliTawYEHmZI//XPUxojLsBFSetT8F530qSeUw7p9Azlc5R
- FloCEvW71gt07zlQwPwe/H6CR7/LPnJGeVcnsz9gM3Z4/YQdFdU1fgRCeDQgIaPigaEs
- H9C3fr5yY8yJe6YN/tL30vdqPwy/kznTJmnNCZtSzUOcWWCzxx4UWVC3v38T4PZYcJ9P
- TxqQ==
-X-Gm-Message-State: APjAAAUatp799YPYHxSZE6vI7awo8JcIBL2QyywbVShMDmIkOy05iaaa
- W/f1pa5ObqawU++0/ADPBIJjCLsrmUr8wnsQL80QijlGju+bo1hQF3sY6Ssk6rLFV89aysj2yOr
- oyl1ndpRiDKcEcn6TVaL4Ow==
-X-Received: by 2002:a17:907:36e:: with SMTP id
- rs14mr2343749ejb.330.1573124106644; 
- Thu, 07 Nov 2019 02:55:06 -0800 (PST)
-X-Google-Smtp-Source: APXvYqyEpX0MtxlKhDZdMCOWAf1U4DukYDNvzzciu6G2l7tjeepUbmDJuI635gQspWdEjys3zMh9Jg==
-X-Received: by 2002:a17:907:36e:: with SMTP id
- rs14mr2343731ejb.330.1573124106481; 
- Thu, 07 Nov 2019 02:55:06 -0800 (PST)
-Received: from alrua-x1.borgediget.toke.dk ([2a00:7660:6da:443::2])
- by smtp.gmail.com with ESMTPSA id x6sm54134edc.50.2019.11.07.02.55.05
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Thu, 07 Nov 2019 02:55:05 -0800 (PST)
-Received: by alrua-x1.borgediget.toke.dk (Postfix, from userid 1000)
- id 2B6091818B5; Thu,  7 Nov 2019 11:55:05 +0100 (CET)
-From: Toke =?utf-8?Q?H=C3=B8iland-J=C3=B8rgensen?= <toke@redhat.com>
-To: Kan Yan <kyan@google.com>
-Subject: Re: [PATCH v6 0/4] Add Airtime Queue Limits (AQL) to mac80211
-In-Reply-To: <CA+iem5s6jDNR+yA21UB_zJiZeVxix_QaO6RYw6sN69j2859zFw@mail.gmail.com>
-References: <157182473951.150713.7978051149956899705.stgit@toke.dk>
- <CA+iem5s6jDNR+yA21UB_zJiZeVxix_QaO6RYw6sN69j2859zFw@mail.gmail.com>
-X-Clacks-Overhead: GNU Terry Pratchett
-Date: Thu, 07 Nov 2019 11:55:05 +0100
-Message-ID: <874kzggdme.fsf@toke.dk>
+ bh=sVnu6nCQ25Lb7LRGNb26Av76cKgMfU15iK7bwIMmrkQ=;
+ b=dYwqJQkwh4WV7+jIWWMyyAf4ucAUIhVJrLGYNADu4ppqY0960M1DIF1mShrpRVQARoaF1R
+ ABE+moZw9r24XKdGiE4vj+gTAJN0ulxg3NZwzuMcXs4IU/k+7UN8jRxfVbP0Kij/JIUNtS
+ Ao2Obm4TPa/OoVid/jAjtWsiCXjaFbgsK5q+olzKybAPsmiwtoyVw0e0+6VP0mQEaD95fK
+ N97ngKZkvoJgQaWTpJ7WPvMg+v3Y1ldKNn5uP0tr1wMYFJLhgNo2SplymeWhgAz4lTRSFk
+ IwxMHX9greRFCrwGjw2MJ2yOJZsp6F1bhAsjmeElLe2RO6wZetmGNJkK3LchQg==
+From: Linus =?utf-8?Q?L=C3=BCssing?= <linus.luessing@c0d3.blue>
+To: Ben Greear <greearb@candelatech.com>
+Subject: Re: [PATCH net-next] ath10k: fix RX of frames with broken FCS in
+ monitor mode
+Message-ID: <20191107140149.GB19482@otheros>
+References: <20191105164932.11799-1-linus.luessing@c0d3.blue>
+ <927cea69-7afc-5c35-df8d-9813392e8928@candelatech.com>
 MIME-Version: 1.0
-X-MC-Unique: bNdJ10mbOf2rLadHcHbGNg-1
-X-Mimecast-Spam-Score: 0
+Content-Disposition: inline
+In-Reply-To: <927cea69-7afc-5c35-df8d-9813392e8928@candelatech.com>
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=c0d3.blue;
+ s=2018; t=1573135414;
+ h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+ to:to:cc:cc:mime-version:mime-version:content-type:content-type:
+ in-reply-to:in-reply-to:references:references;
+ bh=sVnu6nCQ25Lb7LRGNb26Av76cKgMfU15iK7bwIMmrkQ=;
+ b=pH7WY4TroqspfcVfiNfk4KF2KGn4YJqmi3dA4tuxptME+Hwrjl1w83PTsY8oUwJ/qR81i8
+ NBNIN9LoYylB2UpMzQU0lVkuEIt0mNBOshzxuyUdbcI/yNsWmmGkpJaHH4rDK+4Chr+LjD
+ 6FaRkZdEfQHwqyg9WSpOcAhhnAUuTssNhHbp3zjDvIHiLnwVKcG/ZWvXsQ10fAioL1O762
+ aeTzx5BMGWroW0N924bOV9bzUPItQCKdpDsvDC3TjKbLJPVJbXh2Cs5xVadw0CspiS/jHv
+ YlD0ujULBQa8RMsp/1Gi2tmlfshKXhFHDBBNl6YNjDTAOie6+NF138Y+kVfM5Q==
+ARC-Seal: i=1; s=2018; d=c0d3.blue; t=1573135414; a=rsa-sha256; cv=none;
+ b=ojLgZKgBfl52b4RxlLVRGRhHIpo/O3YWrsNgNoHy4/Cx3XnFKTiuCZyxp0QWBaWN91QJLI
+ M0ntFuUrIRXGKw6DnsF4CZJ4j9VB/vxa/xkA+2v0zdY72Fs73U1L+5OIZW9sEznBHUbj9Z
+ HvlAqoA7JskhU2ou7UmkV3cDYADkKMst3/9pQsVvdDHneOi1IRD7hsHAwPdLEOi5y6Oujd
+ ErDjYV6t1kEDkPRkPk0F5wkfKO9t1JjOhkiBHyAbYpypBGJe0GCSiWw+w88vcqA+U8Vzqy
+ mtJYoYCCKfYiCaZFMJ64p3wnxRcumvidJHuBAD2iZtPvUIAtCrxjhHI97/hCng==
+ARC-Authentication-Results: i=1; ORIGINATING;
+ auth=pass smtp.auth=linus.luessing@c0d3.blue
+ smtp.mailfrom=linus.luessing@c0d3.blue
+Authentication-Results: ORIGINATING;
+ auth=pass smtp.auth=linus.luessing@c0d3.blue
+ smtp.mailfrom=linus.luessing@c0d3.blue
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191107_025511_432278_B2175818 
-X-CRM114-Status: UNSURE (   8.26  )
+X-CRM114-CacheID: sfid-20191107_060343_906131_57738D11 
+X-CRM114-Status: UNSURE (   6.91  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -2.5 (--)
+X-Spam-Score: -2.1 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.5 points)
+ Content analysis details:   (-2.1 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [207.211.31.120 listed in list.dnswl.org]
+ medium trust [2a01:4f8:171:314c:0:0:100:a1 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_INVALID           DKIM or DK signature exists, but is not valid
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -109,38 +96,54 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Rajkumar Manoharan <rmanohar@codeaurora.org>,
- Kevin Hayes <kevinhayes@google.com>,
- Make-Wifi-fast <make-wifi-fast@lists.bufferbloat.net>,
- linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
- John Crispin <john@phrozen.org>, Johannes Berg <johannes@sipsolutions.net>,
- Lorenzo Bianconi <lorenzo@kernel.org>, Felix Fietkau <nbd@nbd.name>
+Cc: Linus =?utf-8?Q?L=C3=BCssing?= <ll@simonwunderlich.de>,
+ Simon Wunderlich <sw@simonwunderlich.de>, netdev@vger.kernel.org,
+ linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
+ ath10k@lists.infradead.org, "David S . Miller" <davem@davemloft.net>,
+ Kalle Valo <kvalo@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Kan Yan <kyan@google.com> writes:
+On Tue, Nov 05, 2019 at 09:19:20AM -0800, Ben Greear wrote:
+> Thanks for adding the counter.  Since it us u32, I doubt you need the spin lock
+> below?
 
-> Patchset v6 works for me with ath10k driver.  AQL does its job as
-> expected and tests show very significant reduction in latency in
-> congested environment. The txq stuck issue in patchset v4 got fixed.
+Ok, I can remove the spin-lock.
 
-Awesome! Thank you for testing!
+Just for clarification though, if I recall correctly then an increment operator
+is not guaranteed to work atomically. But you think it's unlikely
+to race with a concurrent ++ and therefore it's fine for just a debug counter?
+(and if it were racing, it'd just be a missed +1)
 
-> However, the device's total pending airtime count still underflows
-> sometimes. Even though it doesn't cause apparent side effect, there is
-> some issue with the pending airtime update and needs further
-> debugging.
+Or is there another mechanism that avoids concurrency in the
+ath10k RX path?
 
-Huh, it *under*flows? That's... interesting. Cloned SKBs? Or maybe the
-tx_time_est field is being set in some other place?
 
-Could I get you to add a dump_stack() to the underflow test so we can
-get an idea of where that happens?
-
--Toke
-
+> 
+> --Ben
+> 
+> > +	if (!(ar->filter_flags & FIF_FCSFAIL) &&
+> > +	    status->flag & RX_FLAG_FAILED_FCS_CRC) {
+> > +		spin_lock_bh(&ar->data_lock);
+> > +		ar->stats.rx_crc_err_drop++;
+> > +		spin_unlock_bh(&ar->data_lock);
+> > +
+> > +		dev_kfree_skb_any(skb);
+> > +		return;
+> > +	}
+> > +
+> >   	ath10k_dbg(ar, ATH10K_DBG_DATA,
+> >   		   "rx skb %pK len %u peer %pM %s %s sn %u %s%s%s%s%s%s %srate_idx %u vht_nss %u freq %u band %u flag 0x%x fcs-err %i mic-err %i amsdu-more %i\n",
+> >   		   skb,
+> > 
+> 
+> 
+> -- 
+> Ben Greear <greearb@candelatech.com>
+> Candela Technologies Inc  http://www.candelatech.com
+> 
 
 _______________________________________________
 ath10k mailing list
