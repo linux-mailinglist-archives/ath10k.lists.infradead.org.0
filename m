@@ -2,71 +2,85 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id BE0C7F2CCE
-	for <lists+ath10k@lfdr.de>; Thu,  7 Nov 2019 11:51:13 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 01ECAF2CE1
+	for <lists+ath10k@lfdr.de>; Thu,  7 Nov 2019 11:55:17 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=vuQ0ZygJibg6lxhLcDPr4r/NqPsSSxq7LRznnYLUdP0=; b=NYwXlKTH/aYupO
-	MRGbW9waPF9czHNw0jFKDmFGuEkVoo/L9EtQmkH7XGLpdpUpnwUXZDWxHXjDAXuy9MUk/SP6stuO/
-	KhRceOiwJbTFw32RZ1lRn0YPG6AIsFe3ntZb0zLh3YZ3uUQA7sWyOq/HygKbDGkQ4YEbHXa77aaju
-	tnYjJzIofSbGrpXrMVI2EFRhdIr8MutMnar7nD0ikBgPHqF4lzRod/W7OU7YIhk7BJy3RmfkgccjH
-	+ePNTYn1rIXA54yDLYD70PTHjC9JXwsonA9l1FP9AM/7zq0CR+SYD0tRMEnzSicUy0rRSVpElUw8v
-	CdxF2qySRn1bL/aBfPjQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:References
+	:In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=WTcySkddjTcODn6fLsFHasipfahJIK39X1978pULh84=; b=udEHtMXKo1V3Gg
+	21T8Sf4qH1IX19Acev17i8HgD9Fh4pAJvf09HHVGuS/r3gAVo1ZDrDilIbBct1W/sqvAn+dvNrgMh
+	+td6jk1Qugznwv58C/4niIBbo102ohOhxqA8h+cUo4erEx80RnmC0eHpiQej1OBHPo2OcJXyOiWZV
+	2ryOERaKZ2b/8B2oHnxKJy5iC5f38aYGXaHnfYzRMpjbCdu0h/hVfKZ1b0EGHibGLhWr3ltCbLSR1
+	y2+WocSxdUBwP4iCQ0UfMVFqayDUuyNPGEdQxW/iCoeVfzHGZO5bsjXb/WyaNLlgV++HLpV2x2wob
+	kkxwPZoLz1tLHY/Jj8HA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iSfNa-00005y-5L; Thu, 07 Nov 2019 10:51:06 +0000
-Received: from smtp.codeaurora.org ([198.145.29.96])
+	id 1iSfRb-0002X6-5V; Thu, 07 Nov 2019 10:55:15 +0000
+Received: from us-smtp-delivery-1.mimecast.com ([207.211.31.120]
+ helo=us-smtp-1.mimecast.com)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iSfNV-00005J-VG
- for ath10k@lists.infradead.org; Thu, 07 Nov 2019 10:51:04 +0000
-Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 5ED5660A44; Thu,  7 Nov 2019 10:51:01 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1573123861;
- bh=LOcMY5sQJkRQiah+/yf73QQL0fTF1BGHLYaI6N12Bgg=;
- h=From:To:Cc:Subject:Date:From;
- b=KnCq1uPsh3ILruKaxqMdjmsieSqfjCFhziitN9PfDFucqSOQjzvWtk2VD5Eoo+360
- tJFBXGkugiAtOWKpm7vKdgqBE48CxAqiBFBkWnw+2GTIeAemRaH0/qp6DU7OKBQXS3
- /tmVfpoa5wXHeuu2gXzltgr5n7PT4Wt2BU6Gpo1I=
-X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
- pdx-caf-mail.web.codeaurora.org
-X-Spam-Level: 
-X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
- DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
- version=3.4.0
-Received: from wgong-HP-Z240-SFF-Workstation.qca.qualcomm.com (unknown
- [180.166.53.21])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
- (No client certificate requested)
- (Authenticated sender: wgong@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 798AC60721;
- Thu,  7 Nov 2019 10:50:59 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1573123860;
- bh=LOcMY5sQJkRQiah+/yf73QQL0fTF1BGHLYaI6N12Bgg=;
- h=From:To:Cc:Subject:Date:From;
- b=PCoQ9Yan1bpiE8cxerM4/u+yQ4ITZzTL6T3aUx+J5uWEzywstjNMnQI/3yCWNXDc2
- TMNIqKYD/TItF3aF2T9r/5VKYkBfd3SHP5/qWnLsdVfBG1+htR1oc98Vgzl9ap2YkZ
- WLnV+3EKjuNI5PDVbQROH8bqoBsEYFOvBefrQ+VM=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 798AC60721
-Authentication-Results: pdx-caf-mail.web.codeaurora.org;
- dmarc=none (p=none dis=none) header.from=codeaurora.org
-Authentication-Results: pdx-caf-mail.web.codeaurora.org;
- spf=none smtp.mailfrom=wgong@codeaurora.org
-From: Wen Gong <wgong@codeaurora.org>
-To: ath10k@lists.infradead.org
-Subject: [PATCH] ath10k: add NL80211_FEATURE_ND_RANDOM_MAC_ADDR for NLO
-Date: Thu,  7 Nov 2019 18:50:47 +0800
-Message-Id: <20191107105047.24084-1-wgong@codeaurora.org>
-X-Mailer: git-send-email 2.23.0
+ id 1iSfRX-0002RF-AA
+ for ath10k@lists.infradead.org; Thu, 07 Nov 2019 10:55:12 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
+ s=mimecast20190719; t=1573124109;
+ h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+ to:to:cc:cc:mime-version:mime-version:content-type:content-type:
+ content-transfer-encoding:content-transfer-encoding:
+ in-reply-to:in-reply-to:references:references;
+ bh=Q4pL4jpvKYALp1ZmBjwLiX5kLjNlt9sKgPX3+ptzxho=;
+ b=hBeWLmJg0N+Sf+bzGXoQaVHGqCWgT97zgYCwFcRSBCoE3SlMEdwEGsU6h6Cw29cNgQ+NM2
+ Pit1L9Vbtc92+V9g0eIJ+z+80vrNCUvBPMKepBnEzXDGJgd1RZriEo2TPIAwYQiYj1j4Rq
+ 7JfU6WImq3/26VM+2L6DgbQct/jvecQ=
+Received: from mail-ed1-f70.google.com (mail-ed1-f70.google.com
+ [209.85.208.70]) (Using TLS) by relay.mimecast.com with ESMTP id
+ us-mta-5-bNdJ10mbOf2rLadHcHbGNg-1; Thu, 07 Nov 2019 05:55:07 -0500
+Received: by mail-ed1-f70.google.com with SMTP id j21so1105690edv.20
+ for <ath10k@lists.infradead.org>; Thu, 07 Nov 2019 02:55:07 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:to:cc:subject:in-reply-to:references:date
+ :message-id:mime-version;
+ bh=Q4pL4jpvKYALp1ZmBjwLiX5kLjNlt9sKgPX3+ptzxho=;
+ b=sXluZv7NhlLWON/vi/Ci20vk2iqlVcc6Gs98jEaT/d0s0ewuhoCCZM2CRTY74KWyDv
+ /fROeokOlRuoj27lAagC2QpxIUi+QUFtqLCqmCPJGgcuZIJC+sUSxR2aEGuygDYoTPhB
+ yub4ZrmYQds0hxCcslTxgJliTawYEHmZI//XPUxojLsBFSetT8F530qSeUw7p9Azlc5R
+ FloCEvW71gt07zlQwPwe/H6CR7/LPnJGeVcnsz9gM3Z4/YQdFdU1fgRCeDQgIaPigaEs
+ H9C3fr5yY8yJe6YN/tL30vdqPwy/kznTJmnNCZtSzUOcWWCzxx4UWVC3v38T4PZYcJ9P
+ TxqQ==
+X-Gm-Message-State: APjAAAUatp799YPYHxSZE6vI7awo8JcIBL2QyywbVShMDmIkOy05iaaa
+ W/f1pa5ObqawU++0/ADPBIJjCLsrmUr8wnsQL80QijlGju+bo1hQF3sY6Ssk6rLFV89aysj2yOr
+ oyl1ndpRiDKcEcn6TVaL4Ow==
+X-Received: by 2002:a17:907:36e:: with SMTP id
+ rs14mr2343749ejb.330.1573124106644; 
+ Thu, 07 Nov 2019 02:55:06 -0800 (PST)
+X-Google-Smtp-Source: APXvYqyEpX0MtxlKhDZdMCOWAf1U4DukYDNvzzciu6G2l7tjeepUbmDJuI635gQspWdEjys3zMh9Jg==
+X-Received: by 2002:a17:907:36e:: with SMTP id
+ rs14mr2343731ejb.330.1573124106481; 
+ Thu, 07 Nov 2019 02:55:06 -0800 (PST)
+Received: from alrua-x1.borgediget.toke.dk ([2a00:7660:6da:443::2])
+ by smtp.gmail.com with ESMTPSA id x6sm54134edc.50.2019.11.07.02.55.05
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Thu, 07 Nov 2019 02:55:05 -0800 (PST)
+Received: by alrua-x1.borgediget.toke.dk (Postfix, from userid 1000)
+ id 2B6091818B5; Thu,  7 Nov 2019 11:55:05 +0100 (CET)
+From: Toke =?utf-8?Q?H=C3=B8iland-J=C3=B8rgensen?= <toke@redhat.com>
+To: Kan Yan <kyan@google.com>
+Subject: Re: [PATCH v6 0/4] Add Airtime Queue Limits (AQL) to mac80211
+In-Reply-To: <CA+iem5s6jDNR+yA21UB_zJiZeVxix_QaO6RYw6sN69j2859zFw@mail.gmail.com>
+References: <157182473951.150713.7978051149956899705.stgit@toke.dk>
+ <CA+iem5s6jDNR+yA21UB_zJiZeVxix_QaO6RYw6sN69j2859zFw@mail.gmail.com>
+X-Clacks-Overhead: GNU Terry Pratchett
+Date: Thu, 07 Nov 2019 11:55:05 +0100
+Message-ID: <874kzggdme.fsf@toke.dk>
 MIME-Version: 1.0
+X-MC-Unique: bNdJ10mbOf2rLadHcHbGNg-1
+X-Mimecast-Spam-Score: 0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191107_025102_030333_0A00E437 
-X-CRM114-Status: UNSURE (   6.87  )
+X-CRM114-CacheID: sfid-20191107_025511_432278_B2175818 
+X-CRM114-Status: UNSURE (   8.26  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -74,7 +88,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [198.145.29.96 listed in list.dnswl.org]
+ medium trust [207.211.31.120 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
@@ -95,42 +109,37 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless@vger.kernel.org
+Cc: Rajkumar Manoharan <rmanohar@codeaurora.org>,
+ Kevin Hayes <kevinhayes@google.com>,
+ Make-Wifi-fast <make-wifi-fast@lists.bufferbloat.net>,
+ linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
+ John Crispin <john@phrozen.org>, Johannes Berg <johannes@sipsolutions.net>,
+ Lorenzo Bianconi <lorenzo@kernel.org>, Felix Fietkau <nbd@nbd.name>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Add NL80211_FEATURE_ND_RANDOM_MAC_ADDR for NLO will enable the random
-mac address for netdetect case.
-iw command:
-iw phy0 wowlan enable net-detect net-detect
-randomize=AA:7B:A1:AC:B2:41/FF:FF:FF:FF:FF:FF interval 5000 delay 30
-freqs 2412 matches ssid foo.
-After suspend, DUT will send probe request with mac AA:7B:A1:AC:B2:41.
+Kan Yan <kyan@google.com> writes:
 
-Tested with QCA6174 SDIO with firmware
-WLAN.RMH.4.4.1-00029.
+> Patchset v6 works for me with ath10k driver.  AQL does its job as
+> expected and tests show very significant reduction in latency in
+> congested environment. The txq stuck issue in patchset v4 got fixed.
 
-Signed-off-by: Wen Gong <wgong@codeaurora.org>
----
- drivers/net/wireless/ath/ath10k/mac.c | 1 +
- 1 file changed, 1 insertion(+)
+Awesome! Thank you for testing!
 
-diff --git a/drivers/net/wireless/ath/ath10k/mac.c b/drivers/net/wireless/ath/ath10k/mac.c
-index e8bdb2ba9b18..753a6a174106 100644
---- a/drivers/net/wireless/ath/ath10k/mac.c
-+++ b/drivers/net/wireless/ath/ath10k/mac.c
-@@ -8911,6 +8911,7 @@ int ath10k_mac_register(struct ath10k *ar)
- 			WMI_PNO_MAX_SCHED_SCAN_PLAN_INT;
- 		ar->hw->wiphy->max_sched_scan_plan_iterations =
- 			WMI_PNO_MAX_SCHED_SCAN_PLAN_ITRNS;
-+		ar->hw->wiphy->features |= NL80211_FEATURE_ND_RANDOM_MAC_ADDR;
- 	}
- 
- 	ar->hw->vif_data_size = sizeof(struct ath10k_vif);
--- 
-2.23.0
+> However, the device's total pending airtime count still underflows
+> sometimes. Even though it doesn't cause apparent side effect, there is
+> some issue with the pending airtime update and needs further
+> debugging.
+
+Huh, it *under*flows? That's... interesting. Cloned SKBs? Or maybe the
+tx_time_est field is being set in some other place?
+
+Could I get you to add a dump_stack() to the underflow test so we can
+get an idea of where that happens?
+
+-Toke
 
 
 _______________________________________________
