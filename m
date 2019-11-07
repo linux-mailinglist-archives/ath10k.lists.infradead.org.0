@@ -2,89 +2,71 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D9BE0F30C7
-	for <lists+ath10k@lfdr.de>; Thu,  7 Nov 2019 15:03:51 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 888ECF32E8
+	for <lists+ath10k@lfdr.de>; Thu,  7 Nov 2019 16:24:22 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=JW7hF/2Y/fgzD1XcpEuSS7Tk7OWyDPvhvV2s6XIeKKo=; b=m9FiUeH/pUVitT
-	+s5SvqjvYCCv/U4sqHzOLztsUxMc2K7wT8Xpgod5TvxKzcq8vfgQGLRfIdaiugRBRZ/yooMog6sgL
-	WQ5DS9/03rOJAvepDrp9WhrWOj0j8Vxg5q/5wVXf9YEwuyLqFaQkSRhvuEcarRmXJWqJdDJ79dmII
-	t9pF0UqeowerpSJpET0TiXauDqvTSFOpjBkbuOZM0SZs5PBKAxuZDAC9LfojHRsS6kNWmhv7Wygu/
-	GL0nv1B8t5Al3WDKPFx7o2KotsIQsTEqjoDTvIR4c2B+sirD8M92FMvNQxqFP6W1PVL/RxIB0gnUm
-	V9A48ausGOYdoHtMDXXA==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
+	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=c0wxG4JUAb3PZLQ8W7GARchzY93yOwLOmIITaB6e4WY=; b=jc/WqkovihjVnChbKOROo2GZy
+	M2MfZB47c36JRVppGVlSOXWmQNB922bbDApHuGrC4GembYah7Z0We2Y3wZ3is13QWWMVoON/sRuI9
+	CRGH8e0VyEgsV6S0rz1Da0jxP1MASsQmIJoVaM0gVcVLPfCoR+6ZkDRttyDptZY2BejtCfQECdMmC
+	JLpmjB3q/d5f88rLLNbS4oAmy1xO5SWWAauVhYe32fKz3NxMqpANC4sLhCgq3Fcbxfs+5OhijjWnD
+	3vDUeyYKxLxBR6ULem2hPO/mYZjX9TiCY+K8VABssm6EWhJc38a004LugG7jfGGQnh7FWmTOH9dXs
+	Zz91Mjnjw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iSiO3-00038v-HU; Thu, 07 Nov 2019 14:03:47 +0000
-Received: from mail.aperture-lab.de ([2a01:4f8:171:314c::100:a1])
- by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iSiNz-00037r-Hp
- for ath10k@lists.infradead.org; Thu, 07 Nov 2019 14:03:45 +0000
-Date: Thu, 7 Nov 2019 15:03:31 +0100
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=c0d3.blue; s=2018;
- t=1573135414;
- h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
- to:to:cc:cc:mime-version:mime-version:content-type:content-type:
- in-reply-to:in-reply-to:references:references;
- bh=sVnu6nCQ25Lb7LRGNb26Av76cKgMfU15iK7bwIMmrkQ=;
- b=dYwqJQkwh4WV7+jIWWMyyAf4ucAUIhVJrLGYNADu4ppqY0960M1DIF1mShrpRVQARoaF1R
- ABE+moZw9r24XKdGiE4vj+gTAJN0ulxg3NZwzuMcXs4IU/k+7UN8jRxfVbP0Kij/JIUNtS
- Ao2Obm4TPa/OoVid/jAjtWsiCXjaFbgsK5q+olzKybAPsmiwtoyVw0e0+6VP0mQEaD95fK
- N97ngKZkvoJgQaWTpJ7WPvMg+v3Y1ldKNn5uP0tr1wMYFJLhgNo2SplymeWhgAz4lTRSFk
- IwxMHX9greRFCrwGjw2MJ2yOJZsp6F1bhAsjmeElLe2RO6wZetmGNJkK3LchQg==
-From: Linus =?utf-8?Q?L=C3=BCssing?= <linus.luessing@c0d3.blue>
-To: Ben Greear <greearb@candelatech.com>
+	id 1iSjdx-0004fZ-9q; Thu, 07 Nov 2019 15:24:17 +0000
+Received: from mail2.candelatech.com ([208.74.158.173]
+ helo=mail3.candelatech.com)
+ by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
+ id 1iSjdt-0004ep-Ud
+ for ath10k@lists.infradead.org; Thu, 07 Nov 2019 15:24:15 +0000
+Received: from [192.168.1.47] (unknown [50.34.216.97])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested)
+ by mail3.candelatech.com (Postfix) with ESMTPSA id A4F4413C358;
+ Thu,  7 Nov 2019 07:24:09 -0800 (PST)
+DKIM-Filter: OpenDKIM Filter v2.11.0 mail3.candelatech.com A4F4413C358
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=candelatech.com;
+ s=default; t=1573140251;
+ bh=51W91Kw2UqEb8Wlp1490MubzBtLUcquzz36+dIa/yk8=;
+ h=Subject:To:References:Cc:From:Date:In-Reply-To:From;
+ b=MLjoN28EsJ7Hcrq5iM3T9oJvb3rV4Ko1evC6v41M1C1VxFkNS9bml8tMltAtqXLBn
+ kfvP/Q95avdsMtK5oWprw9vOTXtUs1W11hsFbL8z4sgdCNWO2r0sNR14LpKng3IeRT
+ r37iAX7JwcSVkDbw9zxUGpSVfE7XdpZEhIyUWU4U=
 Subject: Re: [PATCH net-next] ath10k: fix RX of frames with broken FCS in
  monitor mode
-Message-ID: <20191107140149.GB19482@otheros>
+To: =?UTF-8?Q?Linus_L=c3=bcssing?= <linus.luessing@c0d3.blue>
 References: <20191105164932.11799-1-linus.luessing@c0d3.blue>
  <927cea69-7afc-5c35-df8d-9813392e8928@candelatech.com>
+ <20191107140149.GB19482@otheros>
+From: Ben Greear <greearb@candelatech.com>
+Message-ID: <6ca7e338-d14d-49f6-f51c-600856b59767@candelatech.com>
+Date: Thu, 7 Nov 2019 07:24:06 -0800
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101
+ Thunderbird/45.8.0
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <927cea69-7afc-5c35-df8d-9813392e8928@candelatech.com>
-ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=c0d3.blue;
- s=2018; t=1573135414;
- h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
- to:to:cc:cc:mime-version:mime-version:content-type:content-type:
- in-reply-to:in-reply-to:references:references;
- bh=sVnu6nCQ25Lb7LRGNb26Av76cKgMfU15iK7bwIMmrkQ=;
- b=pH7WY4TroqspfcVfiNfk4KF2KGn4YJqmi3dA4tuxptME+Hwrjl1w83PTsY8oUwJ/qR81i8
- NBNIN9LoYylB2UpMzQU0lVkuEIt0mNBOshzxuyUdbcI/yNsWmmGkpJaHH4rDK+4Chr+LjD
- 6FaRkZdEfQHwqyg9WSpOcAhhnAUuTssNhHbp3zjDvIHiLnwVKcG/ZWvXsQ10fAioL1O762
- aeTzx5BMGWroW0N924bOV9bzUPItQCKdpDsvDC3TjKbLJPVJbXh2Cs5xVadw0CspiS/jHv
- YlD0ujULBQa8RMsp/1Gi2tmlfshKXhFHDBBNl6YNjDTAOie6+NF138Y+kVfM5Q==
-ARC-Seal: i=1; s=2018; d=c0d3.blue; t=1573135414; a=rsa-sha256; cv=none;
- b=ojLgZKgBfl52b4RxlLVRGRhHIpo/O3YWrsNgNoHy4/Cx3XnFKTiuCZyxp0QWBaWN91QJLI
- M0ntFuUrIRXGKw6DnsF4CZJ4j9VB/vxa/xkA+2v0zdY72Fs73U1L+5OIZW9sEznBHUbj9Z
- HvlAqoA7JskhU2ou7UmkV3cDYADkKMst3/9pQsVvdDHneOi1IRD7hsHAwPdLEOi5y6Oujd
- ErDjYV6t1kEDkPRkPk0F5wkfKO9t1JjOhkiBHyAbYpypBGJe0GCSiWw+w88vcqA+U8Vzqy
- mtJYoYCCKfYiCaZFMJ64p3wnxRcumvidJHuBAD2iZtPvUIAtCrxjhHI97/hCng==
-ARC-Authentication-Results: i=1; ORIGINATING;
- auth=pass smtp.auth=linus.luessing@c0d3.blue
- smtp.mailfrom=linus.luessing@c0d3.blue
-Authentication-Results: ORIGINATING;
- auth=pass smtp.auth=linus.luessing@c0d3.blue
- smtp.mailfrom=linus.luessing@c0d3.blue
+In-Reply-To: <20191107140149.GB19482@otheros>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191107_060343_906131_57738D11 
-X-CRM114-Status: UNSURE (   6.91  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -2.1 (--)
+X-CRM114-CacheID: sfid-20191107_072414_011331_702A251D 
+X-CRM114-Status: GOOD (  10.96  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.1 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [2a01:4f8:171:314c:0:0:100:a1 listed in]
- [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- 0.1 DKIM_INVALID           DKIM or DK signature exists, but is not valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -96,56 +78,30 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Linus =?utf-8?Q?L=C3=BCssing?= <ll@simonwunderlich.de>,
+Cc: =?UTF-8?Q?Linus_L=c3=bcssing?= <ll@simonwunderlich.de>,
  Simon Wunderlich <sw@simonwunderlich.de>, netdev@vger.kernel.org,
  linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
  ath10k@lists.infradead.org, "David S . Miller" <davem@davemloft.net>,
  Kalle Valo <kvalo@codeaurora.org>
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Content-Transfer-Encoding: base64
+Content-Type: text/plain; charset="utf-8"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On Tue, Nov 05, 2019 at 09:19:20AM -0800, Ben Greear wrote:
-> Thanks for adding the counter.  Since it us u32, I doubt you need the spin lock
-> below?
-
-Ok, I can remove the spin-lock.
-
-Just for clarification though, if I recall correctly then an increment operator
-is not guaranteed to work atomically. But you think it's unlikely
-to race with a concurrent ++ and therefore it's fine for just a debug counter?
-(and if it were racing, it'd just be a missed +1)
-
-Or is there another mechanism that avoids concurrency in the
-ath10k RX path?
-
-
-> 
-> --Ben
-> 
-> > +	if (!(ar->filter_flags & FIF_FCSFAIL) &&
-> > +	    status->flag & RX_FLAG_FAILED_FCS_CRC) {
-> > +		spin_lock_bh(&ar->data_lock);
-> > +		ar->stats.rx_crc_err_drop++;
-> > +		spin_unlock_bh(&ar->data_lock);
-> > +
-> > +		dev_kfree_skb_any(skb);
-> > +		return;
-> > +	}
-> > +
-> >   	ath10k_dbg(ar, ATH10K_DBG_DATA,
-> >   		   "rx skb %pK len %u peer %pM %s %s sn %u %s%s%s%s%s%s %srate_idx %u vht_nss %u freq %u band %u flag 0x%x fcs-err %i mic-err %i amsdu-more %i\n",
-> >   		   skb,
-> > 
-> 
-> 
-> -- 
-> Ben Greear <greearb@candelatech.com>
-> Candela Technologies Inc  http://www.candelatech.com
-> 
-
-_______________________________________________
-ath10k mailing list
-ath10k@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/ath10k
+CgpPbiAxMS8wNy8yMDE5IDA2OjAzIEFNLCBMaW51cyBMw7xzc2luZyB3cm90ZToKPiBPbiBUdWUs
+IE5vdiAwNSwgMjAxOSBhdCAwOToxOToyMEFNIC0wODAwLCBCZW4gR3JlZWFyIHdyb3RlOgo+PiBU
+aGFua3MgZm9yIGFkZGluZyB0aGUgY291bnRlci4gIFNpbmNlIGl0IHVzIHUzMiwgSSBkb3VidCB5
+b3UgbmVlZCB0aGUgc3BpbiBsb2NrCj4+IGJlbG93Pwo+Cj4gT2ssIEkgY2FuIHJlbW92ZSB0aGUg
+c3Bpbi1sb2NrLgo+Cj4gSnVzdCBmb3IgY2xhcmlmaWNhdGlvbiB0aG91Z2gsIGlmIEkgcmVjYWxs
+IGNvcnJlY3RseSB0aGVuIGFuIGluY3JlbWVudCBvcGVyYXRvcgo+IGlzIG5vdCBndWFyYW50ZWVk
+IHRvIHdvcmsgYXRvbWljYWxseS4gQnV0IHlvdSB0aGluayBpdCdzIHVubGlrZWx5Cj4gdG8gcmFj
+ZSB3aXRoIGEgY29uY3VycmVudCArKyBhbmQgdGhlcmVmb3JlIGl0J3MgZmluZSBmb3IganVzdCBh
+IGRlYnVnIGNvdW50ZXI/Cj4gKGFuZCBpZiBpdCB3ZXJlIHJhY2luZywgaXQnZCBqdXN0IGJlIGEg
+bWlzc2VkICsxKQoKSSB0aGluayBpdCBpcyBmaW5lIHRvIGJlIG9mZi1ieS1vbmUsIGFuZCB1MzIg
+aXMgYXRvbWljIHNvIHlvdSB3b3VsZCBuZXZlciByZWFkIGEgcmVhbGx5CndlaXJkIG51bWJlciwg
+bGlrZSB5b3UgY2FuIGlmIHU2NCBpcyBub24tYXRvbWljYWxseSBiZWluZyBpbmNyZW1lbnRlZC4K
+ClRoYW5rcywKQmVuCgoKLS0gCkJlbiBHcmVlYXIgPGdyZWVhcmJAY2FuZGVsYXRlY2guY29tPgpD
+YW5kZWxhIFRlY2hub2xvZ2llcyBJbmMgIGh0dHA6Ly93d3cuY2FuZGVsYXRlY2guY29tCgpfX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXwphdGgxMGsgbWFpbGlu
+ZyBsaXN0CmF0aDEwa0BsaXN0cy5pbmZyYWRlYWQub3JnCmh0dHA6Ly9saXN0cy5pbmZyYWRlYWQu
+b3JnL21haWxtYW4vbGlzdGluZm8vYXRoMTBrCg==
