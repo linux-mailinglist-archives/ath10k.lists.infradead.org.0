@@ -2,47 +2,47 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6953BF468F
-	for <lists+ath10k@lfdr.de>; Fri,  8 Nov 2019 12:43:24 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 992E7F4690
+	for <lists+ath10k@lfdr.de>; Fri,  8 Nov 2019 12:43:39 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=PKC4ffXVJ17XosfeJEDuJ+vdvvIeMAZUTHFQ10rL814=; b=K+Df/FWGMQVMV3
-	Xo0YNrCG7XADD/yHbxId99r7UUylmJnMPAq3bEr+GGLUwFsG+Uh27Fh/v5G7MrQy7nX2FaiCU2TX0
-	Ahw22+8MWbkk0L7yN4+yzxCfKQ8fisk4E2C9ea6UV9+/CL1+iS7rnshXq7JJ5bSp9OD5EL3bac5MA
-	otTZU5L3blNGVhDstlaHObE1PSnT6vBurCzg+V3wlsY2AVYHy7CLuSKMT7IS/VZraK4Mo6H6naSQh
-	XNJ/X68UgKkxQ0QkWxQaphiGpqDK/I9DCSQfxpAHgrGcG23F50p5IvQqwXDnQv9+JPC48mnd9/FMl
-	rY6ZHQfw6+ph4O4iKVrw==;
+	List-Owner; bh=sfgvJbjj8bJ6PyKC2HDg2fT/mxehub7SXdR17OFWlRc=; b=cpfpNAOl+dbcxk
+	WgwOZRTChn8UpMFvGlgx57hxLDsdgBp07Km6ADdg2ZRTLgizTJS4CDfY2K/IFhrc2JfBeQJaBFfN/
+	M8ZwAW+dEwGfA44+VgXfEhdaVW6rzXOAJll5bHSM8rYunts8iTN2c8oKWLfTmSP43cYlRXPAHX6qS
+	kAC3Ks/GE4GqiNlJ4l9urxqnn+hbCN6zsNK3gCDE7yqLYP68PHztQgoSXOnyRIWyRAelpC74eXmED
+	XSJxqknH74wm42NACCMuGeORI4o9/4A0Ak+j2o33I03ppSaz5yU+j1pThkXqI9cCzuoFyKPod8q69
+	b8gueaBG3fBzPtr3s8fg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iT2fi-0003FF-6p; Fri, 08 Nov 2019 11:43:22 +0000
+	id 1iT2fy-0003PI-1I; Fri, 08 Nov 2019 11:43:38 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iT2fb-0003Bk-1p
- for ath10k@lists.infradead.org; Fri, 08 Nov 2019 11:43:16 +0000
+ id 1iT2ft-0003OW-RK
+ for ath10k@lists.infradead.org; Fri, 08 Nov 2019 11:43:35 +0000
 Received: from sasha-vm.mshome.net (c-73-47-72-35.hsd1.nh.comcast.net
  [73.47.72.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id C9712222CB;
- Fri,  8 Nov 2019 11:43:13 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id AD6AC222C6;
+ Fri,  8 Nov 2019 11:43:32 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1573213394;
- bh=UM+uiVXGrOUFsU4KqPI+fr6gwIOMvJUHAQ2n0jspCrI=;
+ s=default; t=1573213413;
+ bh=RKRTRBPAlk+f+aw3C7A6A3UDnlrwH0Cc8yXEXBYKvkA=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=qRo+40bz06aPtoCBcA/cj6CDBJstQHEamiPzyMfogAXyr/Tsf9mmF0S8UlEYxRlyC
- cIugfY0naJOd/ySEuG0Y2DakeJ58pA7b2LdggdNUDVB8k3vmgpSyUcGadyo+35d1LF
- o5vO3QCYvIr4a+9FFyaC0t4uuocg5upJHwK7eHPw=
+ b=dY4e2MvzVDfqELynxtCPL+gzwTzL1T2uDze9r8OVm5+lp4iI5CdAjXjh9UVAp+Ntd
+ 8zSDTtco+VzaArxVWGi+D8+26QdA/islZW7aDlN6a33qi2nlfLmRaK6PER2MECrQfG
+ IHIeCBv7u7umE6FqsHjmUspXuXR9fMaHFjzgnjgM=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 4.14 003/103] ath10k: fix kernel panic by moving pci
- flush after napi_disable
-Date: Fri,  8 Nov 2019 06:41:28 -0500
-Message-Id: <20191108114310.14363-3-sashal@kernel.org>
+Subject: [PATCH AUTOSEL 4.14 016/103] ath10k: limit available channels via DT
+ ieee80211-freq-limit
+Date: Fri,  8 Nov 2019 06:41:41 -0500
+Message-Id: <20191108114310.14363-16-sashal@kernel.org>
 X-Mailer: git-send-email 2.20.1
 In-Reply-To: <20191108114310.14363-1-sashal@kernel.org>
 References: <20191108114310.14363-1-sashal@kernel.org>
@@ -50,8 +50,9 @@ MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191108_034315_164338_0EF541F7 
-X-CRM114-Status: GOOD (  11.13  )
+X-CRM114-CacheID: sfid-20191108_034333_899444_CEF71FE0 
+X-CRM114-Status: UNSURE (   9.00  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-5.2 points)
@@ -82,93 +83,53 @@ List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
 Cc: Sasha Levin <sashal@kernel.org>, netdev@vger.kernel.org,
  linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
- Tamizh chelvam <tamizhr@codeaurora.org>, Kalle Valo <kvalo@codeaurora.org>
+ Sven Eckelmann <sven.eckelmann@openmesh.com>,
+ Kalle Valo <kvalo@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-From: Tamizh chelvam <tamizhr@codeaurora.org>
+From: Sven Eckelmann <sven.eckelmann@openmesh.com>
 
-[ Upstream commit bd1d395070cca4f42a93e520b0597274789274a4 ]
+[ Upstream commit 34d5629d2ca89d847b7040762b87964c696c14da ]
 
-When continuously running wifi up/down sequence, the napi poll
-can be scheduled after the CE buffers being freed by ath10k_pci_flush
+Tri-band devices (1x 2.4GHz + 2x 5GHz) often incorporate special filters in
+the RX and TX path. These filtered channel can in theory still be used by
+the hardware but the signal strength is reduced so much that it makes no
+sense.
 
-Steps:
-  In a certain condition, during wifi down below scenario might occur.
+There is already a DT property to limit the available channels but ath10k
+has to manually call this functionality to limit the currrently set wiphy
+channels further.
 
-ath10k_stop->ath10k_hif_stop->napi_schedule->ath10k_pci_flush->napi_poll(napi_synchronize).
-
-In the above scenario, CE buffer entries will be freed up and become NULL in
-ath10k_pci_flush. And the napi_poll has been invoked after the flush process
-and it will try to get the skb from the CE buffer entry and perform some action on that.
-Since the CE buffer already cleaned by pci flush this action will create NULL
-pointer dereference and trigger below kernel panic.
-
-Unable to handle kernel NULL pointer dereference at virtual address 0000005c
-PC is at ath10k_pci_htt_rx_cb+0x64/0x3ec [ath10k_pci]
-ath10k_pci_htt_rx_cb [ath10k_pci]
-ath10k_ce_per_engine_service+0x74/0xc4 [ath10k_pci]
-ath10k_ce_per_engine_service [ath10k_pci]
-ath10k_ce_per_engine_service_any+0x74/0x80 [ath10k_pci]
-ath10k_ce_per_engine_service_any [ath10k_pci]
-ath10k_pci_napi_poll+0x48/0xec [ath10k_pci]
-ath10k_pci_napi_poll [ath10k_pci]
-net_rx_action+0xac/0x160
-net_rx_action
-__do_softirq+0xdc/0x208
-__do_softirq
-irq_exit+0x84/0xe0
-irq_exit
-__handle_domain_irq+0x80/0xa0
-__handle_domain_irq
-gic_handle_irq+0x38/0x5c
-gic_handle_irq
-__irq_usr+0x44/0x60
-
-Tested on QCA4019 and firmware version 10.4.3.2.1.1-00010
-
-Signed-off-by: Tamizh chelvam <tamizhr@codeaurora.org>
+Signed-off-by: Sven Eckelmann <sven.eckelmann@openmesh.com>
 Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 Signed-off-by: Sasha Levin <sashal@kernel.org>
 ---
- drivers/net/wireless/ath/ath10k/ahb.c | 4 ++--
- drivers/net/wireless/ath/ath10k/pci.c | 2 +-
- 2 files changed, 3 insertions(+), 3 deletions(-)
+ drivers/net/wireless/ath/ath10k/mac.c | 2 ++
+ 1 file changed, 2 insertions(+)
 
-diff --git a/drivers/net/wireless/ath/ath10k/ahb.c b/drivers/net/wireless/ath/ath10k/ahb.c
-index ff6815e956848..1404ec9f56be9 100644
---- a/drivers/net/wireless/ath/ath10k/ahb.c
-+++ b/drivers/net/wireless/ath/ath10k/ahb.c
-@@ -663,10 +663,10 @@ static void ath10k_ahb_hif_stop(struct ath10k *ar)
- 	ath10k_ahb_irq_disable(ar);
- 	synchronize_irq(ar_ahb->irq);
+diff --git a/drivers/net/wireless/ath/ath10k/mac.c b/drivers/net/wireless/ath/ath10k/mac.c
+index 58a3c42c4aedb..8c4bb56c262f6 100644
+--- a/drivers/net/wireless/ath/ath10k/mac.c
++++ b/drivers/net/wireless/ath/ath10k/mac.c
+@@ -17,6 +17,7 @@
  
--	ath10k_pci_flush(ar);
--
- 	napi_synchronize(&ar->napi);
- 	napi_disable(&ar->napi);
-+
-+	ath10k_pci_flush(ar);
- }
+ #include "mac.h"
  
- static int ath10k_ahb_hif_power_up(struct ath10k *ar)
-diff --git a/drivers/net/wireless/ath/ath10k/pci.c b/drivers/net/wireless/ath/ath10k/pci.c
-index d790ea20b95d9..27ab3eb47534f 100644
---- a/drivers/net/wireless/ath/ath10k/pci.c
-+++ b/drivers/net/wireless/ath/ath10k/pci.c
-@@ -1787,9 +1787,9 @@ static void ath10k_pci_hif_stop(struct ath10k *ar)
++#include <net/cfg80211.h>
+ #include <net/mac80211.h>
+ #include <linux/etherdevice.h>
+ #include <linux/acpi.h>
+@@ -8174,6 +8175,7 @@ int ath10k_mac_register(struct ath10k *ar)
+ 		ar->hw->wiphy->bands[NL80211_BAND_5GHZ] = band;
+ 	}
  
- 	ath10k_pci_irq_disable(ar);
- 	ath10k_pci_irq_sync(ar);
--	ath10k_pci_flush(ar);
- 	napi_synchronize(&ar->napi);
- 	napi_disable(&ar->napi);
-+	ath10k_pci_flush(ar);
++	wiphy_read_of_freq_limits(ar->hw->wiphy);
+ 	ath10k_mac_setup_ht_vht_cap(ar);
  
- 	spin_lock_irqsave(&ar_pci->ps_lock, flags);
- 	WARN_ON(ar_pci->ps_wake_refcount > 0);
+ 	ar->hw->wiphy->interface_modes =
 -- 
 2.20.1
 
