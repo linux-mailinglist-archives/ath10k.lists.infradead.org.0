@@ -2,36 +2,36 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 53848F424D
-	for <lists+ath10k@lfdr.de>; Fri,  8 Nov 2019 09:39:34 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id A18E4F4256
+	for <lists+ath10k@lfdr.de>; Fri,  8 Nov 2019 09:43:19 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
 	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=gC5lBqyE0+OCVnASFhrm1eqwQYGYvCWCMADPsZpKN48=; b=nW74537yMkUB2l
-	zm8FD/lrcjetkKuK7OGGmpFaa5hCguqSTMh3zrKz9tGBOOtGH4jD1V6L6XcT/OzMmRPnxzAs0ilc8
-	uW7fcDqzQsZmqBVoPyneSpOH163K6e3zuffO5/gJ6FR/oQUQRhiD+61KoOCdQt5P6OLDP74LAD0jy
-	axvuNVWabXbEiyxzca8zAhrmqtHTEp0z1Y3i4sgOitJ6soLpGBKyrwW0iah3errZV1fb3Hfue1KCd
-	qoFRS9MgHomtKyzK3WTeSSHhAkithHKNA0Lqjhk2hZ+lNi98X5eKnxUjnX1k6bnFAYqiizebPvVRW
-	NItML6KZgH6LhY5gXLkQ==;
+	List-Owner; bh=2Qdu6avm8rKNQMgJM+HDa3IGvWH4yhtfLZyuBlpfi98=; b=WppVqxEdbwSAor
+	cKuA4rpOcPCTlGB1qDMrorjRLDZVpiy14uo41IG/PX2S1T62Eiwd5LkKaXjTNnGJY4cDXDqAYxUo/
+	5clkolhXSue1nBYxHpS66KApZ2ZZNW7bUjpG7Hi+A+Vrk9aNfb/vgEVmTtCOHxJOui7WFdcjMAXHk
+	3glr6Pvl6/D+FKs0kl95n9FlL9emlZ6rys4CD7m6qNanZmzOz2IYX5uV5yJ04Ww/+9BVCd9gJAH1Z
+	8mNtorgYYl8MlMuMFrhy0IZyLwBYmMye96ZQyPPqowcAfqZUvKiQKxtPs4l8D5DJtxMmSEBOq97lR
+	YlP0Flqp52eeImGRsEfQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iSzno-00026w-Bs; Fri, 08 Nov 2019 08:39:32 +0000
+	id 1iSzrR-0003jr-Af; Fri, 08 Nov 2019 08:43:17 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iSznk-00026S-TV
- for ath10k@lists.infradead.org; Fri, 08 Nov 2019 08:39:30 +0000
+ id 1iSzrN-0003jF-Kn
+ for ath10k@lists.infradead.org; Fri, 08 Nov 2019 08:43:15 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 8BA2C60A1B; Fri,  8 Nov 2019 08:39:28 +0000 (UTC)
+ id 420DE6087D; Fri,  8 Nov 2019 08:43:13 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1573202368;
- bh=NuFpCXUQ7186OnycQRWUnmVhq2YX8K0bNYDVwjZtxrA=;
+ s=default; t=1573202593;
+ bh=WhxqsAeTYD0pXN4EMoNIgBxzPCQEBMKIOLxKIgOLbAA=;
  h=Subject:From:In-Reply-To:References:To:Cc:Date:From;
- b=lokxY86cjVEdqWdTcQpFTU8PaS/huVz6vuLarl2wL4EAbjFSZtNDbCsHPpJbLsezz
- EmUXKP5iR5aDQhCUl6/RqHvqKY6BMWEQzaa/5+wdYCL/RJsGKnojlCqlkI5Dvg6ZC8
- 1E6DHDPKI/xCpeuM/urB7ZDtmzdxHRJslzvMcSEY=
+ b=F8PidCTeRHs6r2a82OJ8jxiJWaPOA9Sjk1uSL6FIkOy1JRf2GiV7bVQIQH4QUr2rU
+ 7Fn8MiMHewIEqEATVyXzNHAf/Thx9kVexBMkicj3LWpuKIuV529D3zqZQ4609NkEJg
+ zfSwzDyQBjWk3wfeHDYA4VaDkrv+4WdwT67/8Pno=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
@@ -43,33 +43,32 @@ Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
  (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
  (Authenticated sender: kvalo@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 1749560B19;
- Fri,  8 Nov 2019 08:39:26 +0000 (UTC)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 9389D60591;
+ Fri,  8 Nov 2019 08:43:11 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1573202368;
- bh=NuFpCXUQ7186OnycQRWUnmVhq2YX8K0bNYDVwjZtxrA=;
+ s=default; t=1573202593;
+ bh=WhxqsAeTYD0pXN4EMoNIgBxzPCQEBMKIOLxKIgOLbAA=;
  h=Subject:From:In-Reply-To:References:To:Cc:From;
- b=Mg9ayVtM7qtSIHdpn2plrtdkentiR9QkWV/GZl5P/w5/X9f1M87xB9Yytc/vul8Im
- dUCh+qYtTxlS7iBuLb42paDUdixW4UScoyBEH30NO30E2D3HT2FryTwmtQPrOK94iL
- yS0UrnlczMVNT1p8a6et4pDYY+BmK/xe8oYWYJ7E=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 1749560B19
+ b=KVBp3Z0ClLJpDQb/mFEwiBgarsXC3yVQpBEC1XvbaBFL6ZlPb6S9gSGnm04YHEBZw
+ yH5eekiQtOHoPKc4ZmqGbrKSeHbVOI8kmBCdUVTu+MFT/WCOSMktibJaFkwF2QuvD9
+ +kz1sf+LnheShw+Q7nXqyP0YOgkkSyNjENnoQVVY=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 9389D60591
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  spf=none smtp.mailfrom=kvalo@codeaurora.org
 MIME-Version: 1.0
-Subject: Re: [PATCH 1/2] dt: bindings: add dt entry flag to skip SCM call for
- msa region
+Subject: Re: [PATCH] ath10k: fix get invalid tx rate for Mesh metric
 From: Kalle Valo <kvalo@codeaurora.org>
-In-Reply-To: <20191023094014.28683-2-govinds@codeaurora.org>
-References: <20191023094014.28683-2-govinds@codeaurora.org>
-To: Govind Singh <govinds@codeaurora.org>
+In-Reply-To: <1572329537-27728-1-git-send-email-miaoqing@codeaurora.org>
+References: <1572329537-27728-1-git-send-email-miaoqing@codeaurora.org>
+To: Miaoqing Pan <miaoqing@codeaurora.org>
 User-Agent: pwcli/0.0.0-git (https://github.com/kvalo/pwcli/) Python/2.7.12
-Message-Id: <20191108083928.8BA2C60A1B@smtp.codeaurora.org>
-Date: Fri,  8 Nov 2019 08:39:28 +0000 (UTC)
+Message-Id: <20191108084313.420DE6087D@smtp.codeaurora.org>
+Date: Fri,  8 Nov 2019 08:43:13 +0000 (UTC)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191108_003928_972095_5983C9DB 
-X-CRM114-Status: UNSURE (   7.17  )
+X-CRM114-CacheID: sfid-20191108_004313_704228_A7845466 
+X-CRM114-Status: UNSURE (   5.88  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -98,32 +97,35 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Govind Singh <govinds@codeaurora.org>, linux-wireless@vger.kernel.org,
- ath10k@lists.infradead.org
+Cc: Hou Bao Hou <houbao@codeaurora.org>,
+ Anilkumar Kolli <akolli@codeaurora.org>, linux-wireless@vger.kernel.org,
+ ath10k@lists.infradead.org, Miaoqing Pan <miaoqing@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Govind Singh <govinds@codeaurora.org> wrote:
+Miaoqing Pan <miaoqing@codeaurora.org> wrote:
 
-> Add boolean context flag to disable SCM call for statically
-> mapped msa region.
+> ath10k does not provide transmit rate info per MSDU
+> in tx completion, mark that as -1 so mac80211
+> will ignore the rates. This fixes mac80211 update Mesh
+> link metric with invalid transmit rate info.
 > 
-> Signed-off-by: Govind Singh <govinds@codeaurora.org>
+> Tested HW: QCA9984
+> Tested FW: 10.4-3.9.0.2-00035
+> 
+> Signed-off-by: Hou Bao Hou <houbao@codeaurora.org>
+> Signed-off-by: Anilkumar Kolli <akolli@codeaurora.org>
+> Signed-off-by: Miaoqing Pan <miaoqing@codeaurora.org>
 > Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 
-I was wondering why there are no review comments from DT folks and then
-noticed that you didn't CC the devicetree list. Please resend (as v2)
-and CC devicetree list.
+Patch applied to ath-next branch of ath.git, thanks.
 
-2 patches set to Changes Requested.
-
-11206177 [1/2] dt: bindings: add dt entry flag to skip SCM call for msa region
-11206179 [2/2] ath10k: Don't call SCM interface for statically mapped msa region
+05a11003a565 ath10k: fix get invalid tx rate for Mesh metric
 
 -- 
-https://patchwork.kernel.org/patch/11206177/
+https://patchwork.kernel.org/patch/11217003/
 
 https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
 
