@@ -2,56 +2,56 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D32A6F46E3
-	for <lists+ath10k@lfdr.de>; Fri,  8 Nov 2019 12:46:24 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2378AF46E6
+	for <lists+ath10k@lfdr.de>; Fri,  8 Nov 2019 12:47:50 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=7WASpGrJNGkGfK8wOLBY6wyLCLIZjresKUjIAmiNv1g=; b=ilFsKtrIn9obC4
-	HTt6g8UcHn7hYav2EvEzpfCzqvlhPBrpzbx5CJSywZvHHmlfdpFTPcniap+zazoU5sLuzizZC1L9O
-	QjPlQPR86N8deIwoQ4EeU5viUjzMCCnj5BzI/1gasoP6tNXa0mVpGIyTcDK3w8MPE/nH980xk/kFu
-	wIyPxo22tc/kPaDQZMhsmGl/pEE4J23qp5ncoAkrdl67sP+5vm853brgCXhcv0EJwpceViu9TlMk3
-	vKwj3bFFwDKOOH5yopgXcu0fyOKIJbmB9K3RJOZl2Ykguq7/KF/knS6hAB3sZN/ETo+JxpRAfiswD
-	Rj6yGHJz6eLjyQGb7vuQ==;
+	List-Owner; bh=eIpg4u94fJyLwprOofa7SX+3XpkUHSmQOJtCQnUBsfU=; b=tk9q+M5rjNbWjj
+	05xoKZ1xOkzjbchb1vttFgX5kgaGrPZrPjaGYfMNdev5mR8gxtYI26uKHM99Qz/dJFbD5P4Ohda/C
+	HFiqB0S1831HhyQSdmnJ8zk1bGKzen0T5Cks8XQIJPolEPhZL1TP5U/5GWIstRTdv1yLpPoxiXLKD
+	GGgtU9hKRR5HsYz8lGIYRPVBY0lTMDp1FEnpYnjd9ZWIbakGzcGCFeqJfefV8vdFylEpQSiFoBvT8
+	EOBidHoCKlLTB733ONHNcgSXirGETDIevoOTzxxHu8kdCr2naEuxpITexyoszaIM2Zq6L/2IhstNG
+	MAs3SJPIe9KHvsIJwThg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iT2ic-0005lm-St; Fri, 08 Nov 2019 11:46:22 +0000
+	id 1iT2k0-0006N2-75; Fri, 08 Nov 2019 11:47:48 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iT2iY-0005lO-Vn
- for ath10k@lists.infradead.org; Fri, 08 Nov 2019 11:46:20 +0000
+ id 1iT2jv-0006MY-BQ
+ for ath10k@lists.infradead.org; Fri, 08 Nov 2019 11:47:44 +0000
 Received: from sasha-vm.mshome.net (c-73-47-72-35.hsd1.nh.comcast.net
  [73.47.72.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id D68B4222CF;
- Fri,  8 Nov 2019 11:46:17 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id 3DE93206A3;
+ Fri,  8 Nov 2019 11:47:42 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1573213578;
- bh=Kx5WbgmCL5mfO8gSfx6FdAr1u5gtEdfOWa2t00s3loc=;
+ s=default; t=1573213663;
+ bh=tOHwYIJ+ZNa6Ys/BfqqTmWqfcuoUDV1G9q0KLw6kepc=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=q7pWi4Y9DSTwYtKVqX9c6ZUEsNjrDDQwQ+sdPR49XnQrOWi99g9v/+mjGCxRR0qgV
- VChFq2oHPd7XIdPAcJYAAAjhHeRPmlSzfUYjIY5LcEmRLczGlW04l1gFTKXmLTsWlZ
- LbicP1A/Rot/S2N+OPCAt3axhkWnQcFXecyjlikw=
+ b=FsnoJEo7DreMC8+xrC7yybZqp2n6c25tyUrqX5R4ZNkMx6aafscAeSy4//iBka2fc
+ BQZLSyhLfz159GRJfIzvMnGuTDT0pNKoKJnkCfcF4tDd8OqwrUyZn51emdr/SKwekg
+ kxOCLxau4EXaiWz1tf6rFGFVUhcSTLHk7lKeRr/c=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 4.9 24/64] ath10k: wmi: disable softirq's while
+Subject: [PATCH AUTOSEL 4.4 17/44] ath10k: wmi: disable softirq's while
  calling ieee80211_rx
-Date: Fri,  8 Nov 2019 06:45:05 -0500
-Message-Id: <20191108114545.15351-24-sashal@kernel.org>
+Date: Fri,  8 Nov 2019 06:46:53 -0500
+Message-Id: <20191108114721.15944-17-sashal@kernel.org>
 X-Mailer: git-send-email 2.20.1
-In-Reply-To: <20191108114545.15351-1-sashal@kernel.org>
-References: <20191108114545.15351-1-sashal@kernel.org>
+In-Reply-To: <20191108114721.15944-1-sashal@kernel.org>
+References: <20191108114721.15944-1-sashal@kernel.org>
 MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191108_034619_041642_AB3BA739 
-X-CRM114-Status: UNSURE (   8.83  )
+X-CRM114-CacheID: sfid-20191108_034743_407894_170422CB 
+X-CRM114-Status: UNSURE (   8.75  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -118,10 +118,10 @@ Signed-off-by: Sasha Levin <sashal@kernel.org>
  1 file changed, 2 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/net/wireless/ath/ath10k/wmi.c b/drivers/net/wireless/ath/ath10k/wmi.c
-index bbfe7be214e12..c208fed048554 100644
+index b867875aa6e66..f7ce99f67b5c5 100644
 --- a/drivers/net/wireless/ath/ath10k/wmi.c
 +++ b/drivers/net/wireless/ath/ath10k/wmi.c
-@@ -2384,7 +2384,8 @@ int ath10k_wmi_event_mgmt_rx(struct ath10k *ar, struct sk_buff *skb)
+@@ -2294,7 +2294,8 @@ int ath10k_wmi_event_mgmt_rx(struct ath10k *ar, struct sk_buff *skb)
  		   status->freq, status->band, status->signal,
  		   status->rate_idx);
  
