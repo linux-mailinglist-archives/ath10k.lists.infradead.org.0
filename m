@@ -2,76 +2,75 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 21DFAF422A
-	for <lists+ath10k@lfdr.de>; Fri,  8 Nov 2019 09:33:08 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 53848F424D
+	for <lists+ath10k@lfdr.de>; Fri,  8 Nov 2019 09:39:34 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
-	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=jwKQbl0iS4Ca2orijODyrMfd8avOYXhKXlLfXFULIso=; b=EDXdpS1nC2J2Em
-	kjmaRLvAQWRxUNuEWKpONKiKRfryfHxbKHwHM2CDo4C7YlqxeemuJ+tutHoheoe9DdlSrg61uxclp
-	MwAP7H/rz1vfGFvlbuea517IkP1y/XxksggVDkhZK7ju7tZgQnX5/iS8/84qAlx60cTCMjQmFQECV
-	gNFMClIglJkvr6+VbQRyLE6OFAh4qYYEGuiQX17QBMRNcsFzqfdktiYXpHgXfIcfQEAPJF14JSb6u
-	u5WYupCNCTpdU9DoAQbQ9RsVMxI8mCxyNQFSrrbRxUNfwsPCr7bAvNkLoy1AYcn9NdXdnLvqazDFe
-	DHZHQCb6XYWyLZoOOqJQ==;
+	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
+	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=gC5lBqyE0+OCVnASFhrm1eqwQYGYvCWCMADPsZpKN48=; b=nW74537yMkUB2l
+	zm8FD/lrcjetkKuK7OGGmpFaa5hCguqSTMh3zrKz9tGBOOtGH4jD1V6L6XcT/OzMmRPnxzAs0ilc8
+	uW7fcDqzQsZmqBVoPyneSpOH163K6e3zuffO5/gJ6FR/oQUQRhiD+61KoOCdQt5P6OLDP74LAD0jy
+	axvuNVWabXbEiyxzca8zAhrmqtHTEp0z1Y3i4sgOitJ6soLpGBKyrwW0iah3errZV1fb3Hfue1KCd
+	qoFRS9MgHomtKyzK3WTeSSHhAkithHKNA0Lqjhk2hZ+lNi98X5eKnxUjnX1k6bnFAYqiizebPvVRW
+	NItML6KZgH6LhY5gXLkQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iSzha-0007Sj-Cm; Fri, 08 Nov 2019 08:33:06 +0000
+	id 1iSzno-00026w-Bs; Fri, 08 Nov 2019 08:39:32 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iSzhV-0007RP-15
- for ath10k@lists.infradead.org; Fri, 08 Nov 2019 08:33:02 +0000
+ id 1iSznk-00026S-TV
+ for ath10k@lists.infradead.org; Fri, 08 Nov 2019 08:39:30 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id B43B060DF5; Fri,  8 Nov 2019 08:33:00 +0000 (UTC)
+ id 8BA2C60A1B; Fri,  8 Nov 2019 08:39:28 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1573201980;
- bh=Li42Bwy0+M/BNejEX2gv6nmzcZsTnhWewqmxkM3PU/I=;
- h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=lJhJ3pbzgpR6MVInBNLaR4+Oew/lJpScGLOfz+fYn45tamW/Bg2PApcLKKNL5Ocex
- UfEfqRpaf0/wMYRy1iSN9BqsKTNN1i2eA2l8IEMfiOeEMumAOcupjZmHkCebR0mAps
- lnnqrE/5FclHb5DYmblpch4NYYS9+y2lKLfEXbJ0=
+ s=default; t=1573202368;
+ bh=NuFpCXUQ7186OnycQRWUnmVhq2YX8K0bNYDVwjZtxrA=;
+ h=Subject:From:In-Reply-To:References:To:Cc:Date:From;
+ b=lokxY86cjVEdqWdTcQpFTU8PaS/huVz6vuLarl2wL4EAbjFSZtNDbCsHPpJbLsezz
+ EmUXKP5iR5aDQhCUl6/RqHvqKY6BMWEQzaa/5+wdYCL/RJsGKnojlCqlkI5Dvg6ZC8
+ 1E6DHDPKI/xCpeuM/urB7ZDtmzdxHRJslzvMcSEY=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
-X-Spam-Status: No, score=-2.7 required=2.0 tests=ALL_TRUSTED,BAYES_00,
- DKIM_INVALID,DKIM_SIGNED,SPF_NONE autolearn=no autolearn_force=no
- version=3.4.0
+X-Spam-Status: No, score=-0.8 required=2.0 tests=ALL_TRUSTED,BAYES_00,
+ DKIM_INVALID,DKIM_SIGNED,MISSING_DATE,MISSING_MID,SPF_NONE autolearn=no
+ autolearn_force=no version=3.4.0
 Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
  [88.114.240.156])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
  (Authenticated sender: kvalo@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 728C160D85;
- Fri,  8 Nov 2019 08:32:58 +0000 (UTC)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 1749560B19;
+ Fri,  8 Nov 2019 08:39:26 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1573201980;
- bh=Li42Bwy0+M/BNejEX2gv6nmzcZsTnhWewqmxkM3PU/I=;
- h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=lJhJ3pbzgpR6MVInBNLaR4+Oew/lJpScGLOfz+fYn45tamW/Bg2PApcLKKNL5Ocex
- UfEfqRpaf0/wMYRy1iSN9BqsKTNN1i2eA2l8IEMfiOeEMumAOcupjZmHkCebR0mAps
- lnnqrE/5FclHb5DYmblpch4NYYS9+y2lKLfEXbJ0=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 728C160D85
+ s=default; t=1573202368;
+ bh=NuFpCXUQ7186OnycQRWUnmVhq2YX8K0bNYDVwjZtxrA=;
+ h=Subject:From:In-Reply-To:References:To:Cc:From;
+ b=Mg9ayVtM7qtSIHdpn2plrtdkentiR9QkWV/GZl5P/w5/X9f1M87xB9Yytc/vul8Im
+ dUCh+qYtTxlS7iBuLb42paDUdixW4UScoyBEH30NO30E2D3HT2FryTwmtQPrOK94iL
+ yS0UrnlczMVNT1p8a6et4pDYY+BmK/xe8oYWYJ7E=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 1749560B19
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  spf=none smtp.mailfrom=kvalo@codeaurora.org
-From: Kalle Valo <kvalo@codeaurora.org>
-To: Ikjoon Jang <ikjn@chromium.org>
-Subject: Re: [PATCH] ath10k: disable cpuidle during downloading firmware.
-References: <20191101054035.42101-1-ikjn@chromium.org>
- <87y2ws3lvh.fsf@kamboji.qca.qualcomm.com>
- <CAATdQgDhYWgHkujo9m1iUrhSu1Bt9A4C8eS82TD=W22_eaF80g@mail.gmail.com>
-Date: Fri, 08 Nov 2019 10:32:56 +0200
-In-Reply-To: <CAATdQgDhYWgHkujo9m1iUrhSu1Bt9A4C8eS82TD=W22_eaF80g@mail.gmail.com>
- (Ikjoon Jang's message of "Thu, 7 Nov 2019 12:16:45 +0800")
-Message-ID: <877e4aydhj.fsf@kamboji.qca.qualcomm.com>
-User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/24.5 (gnu/linux)
 MIME-Version: 1.0
+Subject: Re: [PATCH 1/2] dt: bindings: add dt entry flag to skip SCM call for
+ msa region
+From: Kalle Valo <kvalo@codeaurora.org>
+In-Reply-To: <20191023094014.28683-2-govinds@codeaurora.org>
+References: <20191023094014.28683-2-govinds@codeaurora.org>
+To: Govind Singh <govinds@codeaurora.org>
+User-Agent: pwcli/0.0.0-git (https://github.com/kvalo/pwcli/) Python/2.7.12
+Message-Id: <20191108083928.8BA2C60A1B@smtp.codeaurora.org>
+Date: Fri,  8 Nov 2019 08:39:28 +0000 (UTC)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191108_003301_091092_5A3CE6ED 
-X-CRM114-Status: GOOD (  11.91  )
+X-CRM114-CacheID: sfid-20191108_003928_972095_5983C9DB 
+X-CRM114-Status: UNSURE (   7.17  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-2.5 points)
@@ -99,42 +98,35 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: netdev@vger.kernel.org, linux-wireless@vger.kernel.org,
- linux-kernel@vger.kernel.org, ath10k@lists.infradead.org,
- "David S . Miller" <davem@davemloft.net>
+Cc: Govind Singh <govinds@codeaurora.org>, linux-wireless@vger.kernel.org,
+ ath10k@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Ikjoon Jang <ikjn@chromium.org> writes:
+Govind Singh <govinds@codeaurora.org> wrote:
 
-> On Thu, Nov 7, 2019 at 2:23 AM Kalle Valo <kvalo@codeaurora.org> wrote:
->>
->> Ikjoon Jang <ikjn@chromium.org> writes:
->>
->> > Downloading ath10k firmware needs a large number of IOs and
->> > cpuidle's miss predictions make it worse. In the worst case,
->> > resume time can be three times longer than the average on sdio.
->> >
->> > This patch disables cpuidle during firmware downloading by
->> > applying PM_QOS_CPU_DMA_LATENCY in ath10k_download_fw().
->> >
->> > Signed-off-by: Ikjoon Jang <ikjn@chromium.org>
->>
->> On what hardware and firmware versions did you test this? I'll add that
->> to the commit log.
->>
->> https://wireless.wiki.kernel.org/en/users/drivers/ath10k/submittingpatches#guidelines
->
-> Thank you for sharing it.
-> It's QCA6174 hw3.2 SDIO WLAN.RMH.4.4.1-00029
-> on ARMv8 multi cluster platform.
+> Add boolean context flag to disable SCM call for statically
+> mapped msa region.
+> 
+> Signed-off-by: Govind Singh <govinds@codeaurora.org>
+> Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 
-Thanks, I added that to the commit log.
+I was wondering why there are no review comments from DT folks and then
+noticed that you didn't CC the devicetree list. Please resend (as v2)
+and CC devicetree list.
+
+2 patches set to Changes Requested.
+
+11206177 [1/2] dt: bindings: add dt entry flag to skip SCM call for msa region
+11206179 [2/2] ath10k: Don't call SCM interface for statically mapped msa region
 
 -- 
+https://patchwork.kernel.org/patch/11206177/
+
 https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
+
 
 _______________________________________________
 ath10k mailing list
