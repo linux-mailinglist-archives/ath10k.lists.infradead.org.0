@@ -2,47 +2,47 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A81AAF462C
-	for <lists+ath10k@lfdr.de>; Fri,  8 Nov 2019 12:40:55 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2B590F462F
+	for <lists+ath10k@lfdr.de>; Fri,  8 Nov 2019 12:41:03 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=X14+nu8lX+QxAOaefhPtdYKiebZuLgUGcDwj5zbxM58=; b=PjtL4Kgw8uCH5e
-	u4WC+yx/JowT5Zmc1mq3zsjlMsJ9HTwajhm6vw1DCSINlArLkKWp93QwZmZR/26Gl+CGpUwR8GJ5/
-	Hy55JTqHbMEZHpVkWh4KnncEERl9okMXOlV4nlKXcLPVKzz4Huc/3SnSTVahy8BgP7tXxb7wpL1CQ
-	R3d5aO+NuHCvYxoLtDqJgNs4NUh4EYRxXunrp7fBsc+TLnfovKzBueF3BLta4IS+eWwrM7PMkyuY0
-	f3z6FPhIlfP8DHnJxd68hPUih4ncyBBgXHRIAtwUIwjBbLqoq0qHtE7SFsePvxsyiIG+ij+ABAQYv
-	pEktgokdEPzkML5X4f5A==;
+	List-Owner; bh=Tvno/MiHgR/aGrNHWJb+obbFx+E10PSenIlckAaDYiY=; b=ppPyh3iwCsaGLT
+	siAdpwQP40F2QrDHzdGgRbxopXF9tD1e1RZZ8urU4yx8nbR3PcI3wWpu5YGBwwE4E0x7o8kTT/UG0
+	Pi3LUE1LKW5g5JvthiIkIZOP95BLA8LUekk3yjhAsO21oEhn5LjVxNvwLRkJQBRmGH3DPcLbnkYrA
+	BY3schSGzwJrLtO98+FBlahg19APWBcUyMAcwhE2IojFbE+Zhw7YOkCVji5KSNrqMLrOUz/ZSqoJn
+	Z9K+jwZOPzdoTDzNtgVpn90wWmmFzu899ms7f92KJUHmHWj5ehrLqv2A0BbBVGDtqtRzWjaQz7Zja
+	DACt1SNVQ/xE6m5Atx4g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iT2dJ-0001On-8J; Fri, 08 Nov 2019 11:40:53 +0000
+	id 1iT2dR-0001Us-Mu; Fri, 08 Nov 2019 11:41:01 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iT2ce-0000YY-AY
+ id 1iT2cg-0000km-9R
  for ath10k@lists.infradead.org; Fri, 08 Nov 2019 11:40:16 +0000
 Received: from sasha-vm.mshome.net (c-73-47-72-35.hsd1.nh.comcast.net
  [73.47.72.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id B91D321D7F;
- Fri,  8 Nov 2019 11:40:10 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id 1E323222C4;
+ Fri,  8 Nov 2019 11:40:13 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1573213211;
- bh=e6m2D9GsLTb/2SC3kjO+2tBWWWAaE8pBWyaHznMx5kw=;
+ s=default; t=1573213214;
+ bh=NgTsZq5LbL3QYqBe2oz5+VeHyhCREUqx2iZfVrpgkDA=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=HNVFxTDeFTQayrAGyXVaoWCYBium5U7HCQaNG9QUvvKhicK0+QWXlAKTiSFLI/P/d
- 0R571ACA0kFLRVltjBe2eoys3XCZ2CgAQiZRnHhNJeZJM97K9oNEBH52R3V775sutb
- sPfWCiy9aG+iB/sdEVEs+PWsB6+Mxwlz2eFtLU4w=
+ b=1hfXleEa+6NK8RWbGz5dQKUrDSH/xQyt5ivXCSo1bjxZ14XHllOr/K+V3YcsAXNMM
+ mmBQ1Zyfe4lL6m/M9vWC7jEgchNWPO+YW9EEIWTuP0V5EUPi4KxfRIWRjJXgp9nZy7
+ aivUhF8B2zV3CESAmb2tEP0VKUB/dXfIMsw2wkHw=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 4.19 092/205] ath10k: avoid possible memory access
- violation
-Date: Fri,  8 Nov 2019 06:35:59 -0500
-Message-Id: <20191108113752.12502-92-sashal@kernel.org>
+Subject: [PATCH AUTOSEL 4.19 094/205] ath10k: wmi: disable softirq's while
+ calling ieee80211_rx
+Date: Fri,  8 Nov 2019 06:36:01 -0500
+Message-Id: <20191108113752.12502-94-sashal@kernel.org>
 X-Mailer: git-send-email 2.20.1
 In-Reply-To: <20191108113752.12502-1-sashal@kernel.org>
 References: <20191108113752.12502-1-sashal@kernel.org>
@@ -50,8 +50,8 @@ MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191108_034012_412978_1A9B8EDF 
-X-CRM114-Status: UNSURE (   7.73  )
+X-CRM114-CacheID: sfid-20191108_034014_355597_ECDD48D0 
+X-CRM114-Status: UNSURE (   8.83  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -81,56 +81,56 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Sasha Levin <sashal@kernel.org>, "K.T.VIJAYAKUMAAR" <vijay.bvb@samsung.com>,
- linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
- netdev@vger.kernel.org, Kalle Valo <kvalo@codeaurora.org>
+Cc: Sasha Levin <sashal@kernel.org>, Erik Stromdahl <erik.stromdahl@gmail.com>,
+ netdev@vger.kernel.org, linux-wireless@vger.kernel.org,
+ ath10k@lists.infradead.org, Kalle Valo <kvalo@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-From: "K.T.VIJAYAKUMAAR" <vijay.bvb@samsung.com>
+From: Erik Stromdahl <erik.stromdahl@gmail.com>
 
-[ Upstream commit 97c69a70dc2cecb2c3b96a66529e0082dabc2d2c ]
+[ Upstream commit 37f62c0d5822f631b786b29a1b1069ab714d1a28 ]
 
-array "ctl_power_table" access index "pream" is initialized with -1 and
-is raised as a static analysis tool issue.
-[drivers\net\wireless\ath\ath10k\wmi.c:4719] ->
-[drivers\net\wireless\ath\ath10k\wmi.c:4730]: (error) Array index -1 is
-out of bounds.
+This is done in order not to trig the below warning in
+ieee80211_rx_napi:
 
-Since the "pream" index for accessing ctl_power_table array is initialized
-with -1, there is a chance of memory access violation for the cases below.
-1) wmi_pdev_tpc_final_table_event change frequency is between 2483 and 5180
-2) pream_idx is out of the enumeration ranges of wmi_tpc_pream_2ghz,
-wmi_tpc_pream_5ghz
+WARN_ON_ONCE(softirq_count() == 0);
 
-Signed-off-by: K.T.VIJAYAKUMAAR <vijay.bvb@samsung.com>
-[kvalo@codeaurora.org: clean up the warning message]
+ieee80211_rx_napi requires that softirq's are disabled during
+execution.
+
+The High latency bus drivers (SDIO and USB) sometimes call the wmi
+ep_rx_complete callback from non softirq context, resulting in a trigger
+of the above warning.
+
+Calling ieee80211_rx_ni with softirq's already disabled (e.g., from
+softirq context) should be safe as the local_bh_disable and
+local_bh_enable functions (called from ieee80211_rx_ni) are fully
+reentrant.
+
+Signed-off-by: Erik Stromdahl <erik.stromdahl@gmail.com>
 Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 Signed-off-by: Sasha Levin <sashal@kernel.org>
 ---
- drivers/net/wireless/ath/ath10k/wmi.c | 7 +++++++
- 1 file changed, 7 insertions(+)
+ drivers/net/wireless/ath/ath10k/wmi.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/net/wireless/ath/ath10k/wmi.c b/drivers/net/wireless/ath/ath10k/wmi.c
-index 9f31b9a108507..583147f00fa4e 100644
+index 583147f00fa4e..40b36e73bb48c 100644
 --- a/drivers/net/wireless/ath/ath10k/wmi.c
 +++ b/drivers/net/wireless/ath/ath10k/wmi.c
-@@ -4785,6 +4785,13 @@ ath10k_wmi_tpc_final_get_rate(struct ath10k *ar,
- 		}
- 	}
+@@ -2487,7 +2487,8 @@ int ath10k_wmi_event_mgmt_rx(struct ath10k *ar, struct sk_buff *skb)
+ 		   status->freq, status->band, status->signal,
+ 		   status->rate_idx);
  
-+	if (pream == -1) {
-+		ath10k_warn(ar, "unknown wmi tpc final index and frequency: %u, %u\n",
-+			    pream_idx, __le32_to_cpu(ev->chan_freq));
-+		tpc = 0;
-+		goto out;
-+	}
+-	ieee80211_rx(ar->hw, skb);
++	ieee80211_rx_ni(ar->hw, skb);
 +
- 	if (pream == 4)
- 		tpc = min_t(u8, ev->rates_array[rate_idx],
- 			    ev->max_reg_allow_pow[ch]);
+ 	return 0;
+ }
+ 
 -- 
 2.20.1
 
