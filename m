@@ -2,76 +2,79 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D631FFB8F9
-	for <lists+ath10k@lfdr.de>; Wed, 13 Nov 2019 20:38:04 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3C6B3FB9BD
+	for <lists+ath10k@lfdr.de>; Wed, 13 Nov 2019 21:26:57 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Ms29564+jZ1bNg6Dt/lc/c0T83XARyHEvqxagke1sJU=; b=ksp3eJ0p7U5QOL
-	uf3TdBn/6soTKBOs1sGfxDmkYsIg0+BNC8gTvSkvSrslkthlZesAQ+rx4Oo2V6RZF2qWNgjGFt1oj
-	sSt0z+dAv9geGzydTSb+ZKPdWPeDtVfJ31jNJYVGBRC5SJQDoL0itLQMb7nzcgocpiKFP+7ubgJLW
-	508L2cujEaHO55fTwuTZGOeNVFJISDKQUE3Zc/Io6fYoMM8ZNcBB6gD6yz+NOJ6COXi4y/fR/LeQg
-	DIEuAB/QYrdhf1TRvVg+Ui0jxWJZjFN0XKDy/d/wBDiJ0xOJcct9+md23W332I/EJ5CKpSiUhCw9P
-	9bemmvFWHDp5K06zf/gw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=4/vw+R7KSbAhlzyGC+Tt23ridT5jmO9yqSVqhcQXsTc=; b=UTSMy0RNXQ/2SK
+	P6HTSzczEpjbvYtX2K2+Sj+4h0xFZz2K1dN5KiWvcXRfKW1LI20L6tsXNXOuJxzEawD55G48do5PP
+	sHsLKX83YWhDRJtKnceMFZLRitQ8vzrzYYNJZqnlKMqW4t9YEujQGwVDNtBkgspw+d5kLJTRlgva9
+	yuVEf94K8aYcKtCvCw+n+h0KA0KabwGFBqS9LP1HKJz4OQudOl/HjjVljtCzWQa7tdNlGKFAtMPl1
+	+1AIJ1qfX6d+heeXXfC9p2/GgBIJSoQH3I6zLahP7ECYxnvLCLEbCMKdCBf2C1ujSY+TPttTVmA+7
+	VaJ0shoxtO/kAx358wRA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iUySp-00025M-5R; Wed, 13 Nov 2019 19:38:03 +0000
-Received: from mail-io1-xd43.google.com ([2607:f8b0:4864:20::d43])
+	id 1iUzE5-0004iz-UZ; Wed, 13 Nov 2019 20:26:53 +0000
+Received: from mail-pf1-x443.google.com ([2607:f8b0:4864:20::443])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iUySl-00024P-3U
- for ath10k@lists.infradead.org; Wed, 13 Nov 2019 19:38:00 +0000
-Received: by mail-io1-xd43.google.com with SMTP id j20so3873877ioo.11
- for <ath10k@lists.infradead.org>; Wed, 13 Nov 2019 11:37:58 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=qzwujp8rTgTl9+3sAbPrswzrZfz1gfQWPbEg9+4F518=;
- b=ozjH8/ZUfQ2cn2Shup6m3S6r23+l600p3IQKlEwI/WV41WNVyzYTOXRhSmhi9cSaU8
- 8C2MfrQNRoEBF2iuxNSsfOWM3FrWzd/0BYYi/DNbr+VvXJ1loO6FOwer0u3b+nTzmYfN
- cliWX/v+W+IB14U2s4Jd+EktLLph+ba1wDP2kT9ZB0l4q/A6EnDfmrqkp24SO8IyCkUH
- Hay6Eq4pLvDpOWl2x8BoFpXSIRSrwuVREz7SUaJy3YsUMRQAZvHjSu+1uV8lbr9vOh6U
- /y+NHQpCoGFhBM4eYxEAM/4H51tXI6O2acTKYOG4YhFF728sXGpqWkMgW5uFQ4tWv2nM
- jkzQ==
+ id 1iUzE2-0004iV-Jr
+ for ath10k@lists.infradead.org; Wed, 13 Nov 2019 20:26:51 +0000
+Received: by mail-pf1-x443.google.com with SMTP id 193so2384278pfc.13
+ for <ath10k@lists.infradead.org>; Wed, 13 Nov 2019 12:26:50 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=Z+jBZPXGfzcnRw7QYo9gRDJnZjTKzZ/V8mqM60vhhaw=;
+ b=wi3O4TLRwAqZuc7rG1hKf1wffoYiplV9EKCXwbESnVGxc8rWUypX7Jv/gCExV56QvW
+ 0QhlD9bXNDkCV+wjAjAdF8lBbRM+LYHGH8vKSb11Ufa7eRlZg1kqhtWeHEaVEjJHQH6I
+ X7KBoDDQ73vGJIXZJTiImFias1/fOinLl7ftdC9qqfTlmiPjBaf+TB68+FPaMwEAsLm7
+ uUQu6x6q2bZsomjlGMqdoKtattnlblREftbgb1Jm/TSz9Xz/GzGm3ei1ZZ2pZVK8ddVc
+ FJcmbeOPypuuvLrLTFCOEN1ZMIZHsaicd4CHTy+Zb2Jnwyzkyq6mLORbZCPBJToMWxAo
+ ppqg==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=qzwujp8rTgTl9+3sAbPrswzrZfz1gfQWPbEg9+4F518=;
- b=Kwgbe6ziz3D/hXr6hPSU3wrrVADFPyeV/kOZUxkDUk6VzOohY7TxF1IINF+6oPnw3I
- zUkdCALeNcHkswV7GVzFq22goCHLWkLDflixMsV8juPzacT2fcO8Zine1FFKccJpmh6v
- ACIxp++EeBnH2Oqa6bz0R7Yi9Sy9O+Fk6z7iTk/uqrZ8zDYoKgmHFAgPsWTBJr8eCsKD
- 0OP9bdIkh45oBmxjDLxx0c1x+KkqbtwhdFa6KPJAfpFIqm7Y7uCV7huQIQlR8glwak4Y
- 0eShx3fCLr//3HHRX/NpffWfzZnM6adfwddr7sx2kkbawwWBDbeQm6M7eoco2422Xntz
- 5RZQ==
-X-Gm-Message-State: APjAAAU/YJSFDidSTWzxXiHqYg1kjP5MfPnNR359Q0aXmIaKVVIbdOK0
- hRixrC1c7q7jZDB3pVDbfasv88l53Ke7wy/rZbrWSg==
-X-Google-Smtp-Source: APXvYqxni+hm9YE3cMiiBsq+tA2kd4YY3cEWlU1jikSd8uLb3c2eNIA4I/pha8dG2m3lQDNH4a37yhjSSHETvVXpYtI=
-X-Received: by 2002:a02:9a02:: with SMTP id b2mr2194449jal.15.1573673877724;
- Wed, 13 Nov 2019 11:37:57 -0800 (PST)
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=Z+jBZPXGfzcnRw7QYo9gRDJnZjTKzZ/V8mqM60vhhaw=;
+ b=YPiGnuBUaDStOsSRykuz9g+DKlYHWoPScAblX2CPu97PiZQ8WYvASdlbyz3m/Wx8qA
+ qsc5R663Ig3TMV6MPg6vZGcDpMtRa8pQqxqdEVbkLWAuAqRKsP61r2s2a0Zz5r7h817R
+ HjkROXG75gR4fHXlJT7SMGY3wPz7Le9b7humB3cGgjae7+l7eMowbWfTtVWuSWtUQkRP
+ g6AZbUjxYf3p8nF1icc5kzn7N2oJvfqeQByOPhyV9tJpk8crigP0T5DZfXJZhQKzwQBX
+ vgFT6MbPDnntxpNiHBpzGnNJRfFmikKCyr3br5ShNOtR95rNgumVlrqHEWhUko+3VEPO
+ XrXg==
+X-Gm-Message-State: APjAAAWmQHtanhm0NkpOPGf/f3XnGbC5vr37l6HqAB0cPadazJzFdmHa
+ Jk2hzusGbc2LXJQZMq3cQrbRng==
+X-Google-Smtp-Source: APXvYqws5sHFjkVpWCAoo2wwOeNcsN0HZ1YtKA/fi79+wXnJUg21ygBsmcG+kSht7hkEW7DWgMr0OA==
+X-Received: by 2002:a63:364d:: with SMTP id d74mr5862446pga.408.1573676809438; 
+ Wed, 13 Nov 2019 12:26:49 -0800 (PST)
+Received: from localhost.localdomain
+ (104-188-17-28.lightspeed.sndgca.sbcglobal.net. [104.188.17.28])
+ by smtp.gmail.com with ESMTPSA id a145sm3991905pfa.7.2019.11.13.12.26.48
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Wed, 13 Nov 2019 12:26:48 -0800 (PST)
+From: Bjorn Andersson <bjorn.andersson@linaro.org>
+To: Kalle Valo <kvalo@codeaurora.org>, "David S. Miller" <davem@davemloft.net>
+Subject: [PATCH] ath10k: Revert "ath10k: add cleanup in ath10k_sta_state()"
+Date: Wed, 13 Nov 2019 12:26:44 -0800
+Message-Id: <20191113202644.3673049-1-bjorn.andersson@linaro.org>
+X-Mailer: git-send-email 2.23.0
 MIME-Version: 1.0
-References: <1565903072-3948-1-git-send-email-wenwen@cs.uga.edu>
- <20191113192821.GA3441686@builder>
-In-Reply-To: <20191113192821.GA3441686@builder>
-From: Jeffrey Hugo <jeffrey.l.hugo@gmail.com>
-Date: Wed, 13 Nov 2019 12:37:46 -0700
-Message-ID: <CAOCk7NpoQ_JEQj61BvU4HLzxSOQtxUuB-nyrXRKQTxjZ7infbQ@mail.gmail.com>
-Subject: Re: [PATCH] ath10k: add cleanup in ath10k_sta_state()
-To: Bjorn Andersson <bjorn.andersson@linaro.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191113_113759_145328_37ECA81A 
-X-CRM114-Status: GOOD (  16.85  )
+X-CRM114-CacheID: sfid-20191113_122650_660541_37749596 
+X-CRM114-Status: UNSURE (   7.93  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:d43 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:443 listed in]
  [list.dnswl.org]
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (jeffrey.l.hugo[at]gmail.com)
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
@@ -92,73 +95,49 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Wenwen Wang <wenwen@cs.uga.edu>, govinds@codeaurora.org,
- "open list:NETWORKING DRIVERS" <netdev@vger.kernel.org>,
- "open list:NETWORKING DRIVERS \(WIRELESS\)" <linux-wireless@vger.kernel.org>,
- open list <linux-kernel@vger.kernel.org>,
- "open list:QUALCOMM ATHEROS ATH10K WIRELESS DRIVER"
- <ath10k@lists.infradead.org>, "David S. Miller" <davem@davemloft.net>,
- Kalle Valo <kvalo@codeaurora.org>
+Cc: wenwen@cs.uga.edu, jeffrey.l.hugo@gmail.com, netdev@vger.kernel.org,
+ linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
+ ath10k@lists.infradead.org, linux-arm-msm@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On Wed, Nov 13, 2019 at 12:28 PM Bjorn Andersson
-<bjorn.andersson@linaro.org> wrote:
->
-> On Thu 15 Aug 14:04 PDT 2019, Wenwen Wang wrote:
->
-> > If 'sta->tdls' is false, no cleanup is executed, leading to memory/resource
-> > leaks, e.g., 'arsta->tx_stats'. To fix this issue, perform cleanup before
-> > go to the 'exit' label.
-> >
->
-> Unfortunately this patch consistently crashes all my msm8998, sdm845 and
-> qcs404 devices (running ath10k_snoc).  Upon trying to join a network the
-> WiFi firmware crashes with the following:
->
-> [  124.315286] wlan0: authenticate with 70:3a:cb:4d:34:f3
-> [  124.334051] wlan0: send auth to 70:3a:cb:4d:34:f3 (try 1/3)
-> [  124.338828] wlan0: authenticated
-> [  124.342470] wlan0: associate with 70:3a:cb:4d:34:f3 (try 1/3)
-> [  124.347223] wlan0: RX AssocResp from 70:3a:cb:4d:34:f3 (capab=0x1011 status=0 aid=2)
-> [  124.402535] qcom-q6v5-mss 4080000.remoteproc: fatal error received: err_qdi.c:456:EF:wlan_process:1:cmnos_thread.c:3900:Asserted in wlan_vdev.c:_wlan_vdev_up:3219
->
-> Can we please revert it for v5.5?
+'334f5b61a6f2 ("ath10k: add cleanup in ath10k_sta_state()")' causes
+ath10k_snoc on Qualcomm MSM8998, SDM845 and QCS404 platforms to trigger
+an assert in the firmware:
 
-I observe the same, and concur with this request.
+err_qdi.c:456:EF:wlan_process:1:cmnos_thread.c:3900:Asserted in wlan_vdev.c:_wlan_vdev_up:3219
 
->
-> Regards,
-> Bjorn
->
-> > Signed-off-by: Wenwen Wang <wenwen@cs.uga.edu>
-> > ---
-> >  drivers/net/wireless/ath/ath10k/mac.c | 6 +++++-
-> >  1 file changed, 5 insertions(+), 1 deletion(-)
-> >
-> > diff --git a/drivers/net/wireless/ath/ath10k/mac.c b/drivers/net/wireless/ath/ath10k/mac.c
-> > index 0606416..f99e6d2 100644
-> > --- a/drivers/net/wireless/ath/ath10k/mac.c
-> > +++ b/drivers/net/wireless/ath/ath10k/mac.c
-> > @@ -6548,8 +6548,12 @@ static int ath10k_sta_state(struct ieee80211_hw *hw,
-> >
-> >               spin_unlock_bh(&ar->data_lock);
-> >
-> > -             if (!sta->tdls)
-> > +             if (!sta->tdls) {
-> > +                     ath10k_peer_delete(ar, arvif->vdev_id, sta->addr);
-> > +                     ath10k_mac_dec_num_stations(arvif, sta);
-> > +                     kfree(arsta->tx_stats);
-> >                       goto exit;
-> > +             }
-> >
-> >               ret = ath10k_wmi_update_fw_tdls_state(ar, arvif->vdev_id,
-> >                                                     WMI_TDLS_ENABLE_ACTIVE);
-> > --
-> > 2.7.4
-> >
+Revert the offending commit for now.
+
+This reverts commit 334f5b61a6f29834e881923b98d1e27e5ce9620d.
+Signed-off-by: Bjorn Andersson <bjorn.andersson@linaro.org>
+---
+ drivers/net/wireless/ath/ath10k/mac.c | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+
+diff --git a/drivers/net/wireless/ath/ath10k/mac.c b/drivers/net/wireless/ath/ath10k/mac.c
+index e8bdb2ba9b18..68f7d7246ef2 100644
+--- a/drivers/net/wireless/ath/ath10k/mac.c
++++ b/drivers/net/wireless/ath/ath10k/mac.c
+@@ -6638,12 +6638,8 @@ static int ath10k_sta_state(struct ieee80211_hw *hw,
+ 
+ 		spin_unlock_bh(&ar->data_lock);
+ 
+-		if (!sta->tdls) {
+-			ath10k_peer_delete(ar, arvif->vdev_id, sta->addr);
+-			ath10k_mac_dec_num_stations(arvif, sta);
+-			kfree(arsta->tx_stats);
++		if (!sta->tdls)
+ 			goto exit;
+-		}
+ 
+ 		ret = ath10k_wmi_update_fw_tdls_state(ar, arvif->vdev_id,
+ 						      WMI_TDLS_ENABLE_ACTIVE);
+-- 
+2.23.0
+
 
 _______________________________________________
 ath10k mailing list
