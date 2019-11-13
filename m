@@ -2,36 +2,36 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2526DFA93F
-	for <lists+ath10k@lfdr.de>; Wed, 13 Nov 2019 05:57:39 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1C127FA942
+	for <lists+ath10k@lfdr.de>; Wed, 13 Nov 2019 05:58:40 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
 	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=p3rh/e2BnAALxwUdW1dPiF+o94004nwjloH5C+/NeLU=; b=Uc4zAf661BJ5H6
-	9YDH8TYxzVM+NnMod3kesgvc1o/hdURmnfu7KT41b2Be3AU98sNC/63z0ib1UgYOcS2aubGua4dNj
-	UX6Jdf8zqMW5lE7ENjAclinGbjaNJpkIE+vUNhUSDrUp8M3fLY55FVA8ZhFoO2JOJSBnopcMUiyY9
-	x7YE9w55ZmwdRnhcEI1GW3voEV13GIRosMRbqGJ/cHBq/5cEZoy0LgzIvddclP3i9bydSCHHx3zoe
-	IxezREJdovlyHPRqUa+R19fqLc3A5N+t2+DvFXOGCLwzknO7s/owwvlFjm2Sbls1bJ1Pw2XDFdCMu
-	dR7IPywujT6wal6XSMKw==;
+	List-Owner; bh=TMtePrpcdobr7SLh10FU7JaxydID2/64bp+ZiR4hm/o=; b=IdZHDH2kJepwYP
+	dRWDTvhbcUTzAXlmDTJ1Lm2gPWGIwYFTNDCT5eynuO0iRhp6ft2A//BCQ3MPnBdi13MOfI8oC6vF1
+	gxWrGgcpoFrdOoeUWT3JS0gGZ0RaH+5YdzYtVgAUNcL9oElfqE5OQaoQNmlx3ALxefd10nvcz4Q/H
+	w9v2fhamwewLSxCLPdk9ifSHRluco/LLWghDKeER5nPs0575wmccI0YJz+O/N4AG73LSK+gIezdg+
+	XJ2NEt1sqMPEMkexHgepcgggy7atE5Nm1ZiiUBW4t7vbFyzgNIugz1mToJp2ONryUPo7tI6eK/v5e
+	na8npQoGX0E3SG/0fTZA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iUkim-00064c-8e; Wed, 13 Nov 2019 04:57:36 +0000
+	id 1iUkjm-0006Br-JA; Wed, 13 Nov 2019 04:58:38 +0000
 Received: from smtp.codeaurora.org ([198.145.29.96])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iUkij-00063x-BU
- for ath10k@lists.infradead.org; Wed, 13 Nov 2019 04:57:34 +0000
+ id 1iUkjj-0006BT-DB
+ for ath10k@lists.infradead.org; Wed, 13 Nov 2019 04:58:36 +0000
 Received: by smtp.codeaurora.org (Postfix, from userid 1000)
- id 6EFE66088D; Wed, 13 Nov 2019 04:57:32 +0000 (UTC)
+ id 942B860DBB; Wed, 13 Nov 2019 04:58:33 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1573621052;
- bh=oLIySlzm4waF73QkfWLZI//4DD73A8oR0Svrmit18ig=;
+ s=default; t=1573621115;
+ bh=/8Tlva5em/LSnhT8Vg5AUVKm/xL3Wg21CN8IPxwNqZ4=;
  h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=a6nT/R/TiMIYmW6+PBij8zYSQ0HZZXWL4njTHt5u7l+kmOSczGQNmt5lenhNX5N2f
- b2ClmqWGOt0veWMcfR7DjY/U3W68Ccgn48kTcwEQ0+0FTBR4+0qbsUe8ZITuTEi6sj
- WmiVXZWsG2O0lFq9+f64yB3GC5aLb8ZQunfr+w74=
+ b=BA17rCbfsf8mvrUDIM0G7CzS1Ew5A8fqUYD3XeZH5//G0EkoBpAu3iJtkRQBESwR5
+ gxNV+W/ZfNxtNB/Ts9ZdzWhr5JMLF4hQctgj0mtEleC+qcQOK8BhmFSoWz5lNo4E3l
+ M2M3o/cwp+qLaHjK9QDx8xuMO1p0Y6k6KJGx2IQQ=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  pdx-caf-mail.web.codeaurora.org
 X-Spam-Level: 
@@ -43,35 +43,35 @@ Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
  (Authenticated sender: kvalo@smtp.codeaurora.org)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id D687260A0A;
- Wed, 13 Nov 2019 04:57:27 +0000 (UTC)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id E331A60913;
+ Wed, 13 Nov 2019 04:58:27 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=codeaurora.org;
- s=default; t=1573621049;
- bh=oLIySlzm4waF73QkfWLZI//4DD73A8oR0Svrmit18ig=;
+ s=default; t=1573621110;
+ bh=/8Tlva5em/LSnhT8Vg5AUVKm/xL3Wg21CN8IPxwNqZ4=;
  h=From:To:Cc:Subject:References:Date:In-Reply-To:From;
- b=UfHIW2C9MORMYVLzwOiuDEPOLILGK1lU6oRok92Sh9zYD2uORll36UC7pBoblhQK1
- 3O2rSxgHQRU0TLihMVMYqfVsbq5ABxu+pEtAEmTBl2m9LD3kMElRWxga9/fbNczTYf
- 6wOwsJQcxzt68H5geCAQtOlPpNFVVCPlwKM5RuaY=
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org D687260A0A
+ b=W8CON7SIdSb5+Pn5U3gsmoiFnZimeIo4u+K6B+0y43aPaFb1EEXT6xP3vncZtk4LX
+ xxmdC1kFTsTdDXOB+9w9R0+8sQouo6siPQBdmur6f8FnMV9bE97Cij9ugPsK7schnQ
+ O2sIw/nZxivPeL0S0kscU1XYiCOjrQ5qz++4/n+Y=
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org E331A60913
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: pdx-caf-mail.web.codeaurora.org;
  spf=none smtp.mailfrom=kvalo@codeaurora.org
 From: Kalle Valo <kvalo@codeaurora.org>
 To: Jeffrey Hugo <jeffrey.l.hugo@gmail.com>
-Subject: Re: [PATCH] ath10k: Fix qmi init error handling
-References: <20191106231650.1580-1-jeffrey.l.hugo@gmail.com>
- <20191112084225.casuncbo7z54vu4g@netronome.com>
- <CAOCk7NpNgtTSus2KtBMe=jGLFyBumVfRVxKxtHoEDUEt2-6tqQ@mail.gmail.com>
-Date: Wed, 13 Nov 2019 06:57:25 +0200
-In-Reply-To: <CAOCk7NpNgtTSus2KtBMe=jGLFyBumVfRVxKxtHoEDUEt2-6tqQ@mail.gmail.com>
- (Jeffrey Hugo's message of "Tue, 12 Nov 2019 08:51:28 -0700")
-Message-ID: <87d0dws79m.fsf@kamboji.qca.qualcomm.com>
+Subject: Re: [PATCH] ath10k: Handle "invalid" BDFs for msm8998 devices
+References: <20191106234712.2380-1-jeffrey.l.hugo@gmail.com>
+ <20191112090444.ak2xu67eawfgpdgb@netronome.com>
+ <CAOCk7NoXv2-8GO=VYS8dNPJF6sj=S3RbkfqQGW0kvvVmR8V1kw@mail.gmail.com>
+Date: Wed, 13 Nov 2019 06:58:25 +0200
+In-Reply-To: <CAOCk7NoXv2-8GO=VYS8dNPJF6sj=S3RbkfqQGW0kvvVmR8V1kw@mail.gmail.com>
+ (Jeffrey Hugo's message of "Tue, 12 Nov 2019 08:53:51 -0700")
+Message-ID: <878soks77y.fsf@kamboji.qca.qualcomm.com>
 User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/24.5 (gnu/linux)
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191112_205733_436131_63785885 
-X-CRM114-Status: GOOD (  21.40  )
+X-CRM114-CacheID: sfid-20191112_205835_490315_A95D724E 
+X-CRM114-Status: GOOD (  24.77  )
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-2.5 points)
@@ -110,52 +110,50 @@ Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
 Jeffrey Hugo <jeffrey.l.hugo@gmail.com> writes:
 
-> On Tue, Nov 12, 2019 at 1:42 AM Simon Horman <simon.horman@netronome.com> wrote:
+> On Tue, Nov 12, 2019 at 2:04 AM Simon Horman <simon.horman@netronome.com> wrote:
 >>
->> On Wed, Nov 06, 2019 at 03:16:50PM -0800, Jeffrey Hugo wrote:
->> > When ath10k_qmi_init() fails, the error handling does not free the irq
->> > resources, which causes an issue if we EPROBE_DEFER as we'll attempt to
->> > (re-)register irqs which are already registered.
+>> On Wed, Nov 06, 2019 at 03:47:12PM -0800, Jeffrey Hugo wrote:
+>> > When the BDF download QMI message has the end field set to 1, it signals
+>> > the end of the transfer, and triggers the firmware to do a CRC check.  The
+>> > BDFs for msm8998 devices fail this check, yet the firmware is happy to
+>> > still use the BDF.  It appears that this error is not caught by the
+>> > downstream drive by concidence, therefore there are production devices
+>> > in the field where this issue needs to be handled otherwise we cannot
+>> > support wifi on them.  So, attempt to detect this scenario as best we can
+>> > and treat it as non-fatal.
 >> >
->> > Fixes: ba94c753ccb4 ("ath10k: add QMI message handshake for wcn3990 client")
 >> > Signed-off-by: Jeffrey Hugo <jeffrey.l.hugo@gmail.com>
 >> > ---
->> >  drivers/net/wireless/ath/ath10k/snoc.c | 2 +-
->> >  1 file changed, 1 insertion(+), 1 deletion(-)
+>> >  drivers/net/wireless/ath/ath10k/qmi.c | 11 +++++++----
+>> >  1 file changed, 7 insertions(+), 4 deletions(-)
 >> >
->> > diff --git a/drivers/net/wireless/ath/ath10k/snoc.c b/drivers/net/wireless/ath/ath10k/snoc.c
->> > index fc15a0037f0e..f2a0b7aaad3b 100644
->> > --- a/drivers/net/wireless/ath/ath10k/snoc.c
->> > +++ b/drivers/net/wireless/ath/ath10k/snoc.c
->> > @@ -1729,7 +1729,7 @@ static int ath10k_snoc_probe(struct platform_device *pdev)
->> >       ret = ath10k_qmi_init(ar, msa_size);
->> >       if (ret) {
->> >               ath10k_warn(ar, "failed to register wlfw qmi client: %d\n", ret);
->> > -             goto err_core_destroy;
->> > +             goto err_free_irq;
->> >       }
+>> > diff --git a/drivers/net/wireless/ath/ath10k/qmi.c b/drivers/net/wireless/ath/ath10k/qmi.c
+>> > index eb618a2652db..5ff8cfc93778 100644
+>> > --- a/drivers/net/wireless/ath/ath10k/qmi.c
+>> > +++ b/drivers/net/wireless/ath/ath10k/qmi.c
+>> > @@ -265,10 +265,13 @@ static int ath10k_qmi_bdf_dnld_send_sync(struct ath10k_qmi *qmi)
+>> >                       goto out;
+>> >
+>> >               if (resp.resp.result != QMI_RESULT_SUCCESS_V01) {
+>> > -                     ath10k_err(ar, "failed to download board data file: %d\n",
+>> > -                                resp.resp.error);
+>> > -                     ret = -EINVAL;
+>> > -                     goto out;
+>> > +                     if (!(req->end == 1 &&
+>> > +                           resp.resp.result == QMI_ERR_MALFORMED_MSG_V01)) {
 >>
->> From a casual examination of the code this seems like a step in the right
->> direction. But does this error path also need to call ath10k_hw_power_off() ?
+>> Would it make sense to combine the inner and outer condition,
+>> something like this (completely untested) ?
 >
-> It probably should.  I don't see any fatal errors from the step being
-> skipped, although it might silence some regulator warnings about being
-> left on.  Unlikely to be observed by most folks as I was initing the
-> driver pretty early to debug some things.  Looks like Kalle already
-> picked up this patch though, so I guess your suggestion would need to
-> be a follow up.
+> I guess, make sense from what perspective?  Looks like the assembly
+> ends up being the same, so it would be down to "readability" which is
+> subjective - I personally don't see a major advantage to one way or
+> the other.  It does look like Kalle already picked up this patch, so
+> I'm guessing that if folks feel your suggestion is superior, then it
+> would need to be a follow on.
 
-Actually it's only in the pending branch, which means that the patch can
-be changed or a new version can be submitted:
-
-https://wireless.wiki.kernel.org/en/users/drivers/ath10k/submittingpatches#patch_flow
-
-The easiest way to check the state of a wireless patch is from
-patchwork:
-
-https://patchwork.kernel.org/patch/11231325/
-
-https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches#checking_state_of_patches_from_patchwork
+Same here, it's only on the pending branch so changes are still
+possible.
 
 -- 
 https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
