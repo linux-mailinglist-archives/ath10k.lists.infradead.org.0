@@ -2,69 +2,68 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id EFB5EFB3E3
-	for <lists+ath10k@lfdr.de>; Wed, 13 Nov 2019 16:40:27 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 357A7FB40D
+	for <lists+ath10k@lfdr.de>; Wed, 13 Nov 2019 16:46:57 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
 	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
 	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
 	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
-	References:List-Owner; bh=AOBtLQi2dBMPNroFrk87Mh23/FTnBGMMukv9plGqdOs=; b=nGB
-	7R6s3dPV1RcFvKXBl6AyPz5jikwsLgG96duhoqxC4UovZ2PWui/N6WRy2WsL4+TEMexhPnlnnkPRM
-	AAYRx2Y6hlPJFJtXXYNbrel5t9m0u0EySsQ3U//7obGdF0CbDqCcYyDSa22N8hindcG85u1D6dzhY
-	UJ5vckBELKeACzSaK1YZi0M7tNJpDobw5SfzSk7l2nrB0NeEZQ7gx/rYkxSM68vMsyEUl+1zdCljx
-	gqhy6Nrtoy7Ia8VCdwJ4sSTdj6zj9J6PT1fBwJDt9OmFbYPy2liFX6c82QxIel4WC013X3hrK9M/Z
-	fNweYDLIqY2gJ4vzZiMahmPTne4j2GA==;
+	References:List-Owner; bh=C2xXLIWDn/SDP3FTDdjBVYpuT7tM64e0fX1RMhtIWB0=; b=IPm
+	C9opp81a5BddT4B73p24Dum7qgpzxbWcHJiVDgk3FMsJUBGIKZaKWQFDmGmNOb7F9GJYdIvHDVWjr
+	ADWRW/KyCU0MlX3cUo5tsY5/S6sV9/qeH2NB7cwXFts+aWlhVccKYnRjn4RUjmm8PfuQQU1tU2780
+	wQFwz/oaRCviwZuSlM3jBmAugoRBnHS4IEPaisj/hNNl5JrDBQ13nrSEnbv5Nti/uxFQQ1v1XK9L3
+	HB9Y4Kppj+Fg7JmcSRqUykjL6bvbo68vxCn0IekNwVZqu9Lrr2jS8J8nixQYy4nPsDj6aFK7ee3jr
+	tkvCBU1NXfdxllOgWGikcdi+gTRldWw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iUukq-0000Qp-Na; Wed, 13 Nov 2019 15:40:24 +0000
+	id 1iUur9-0002iO-Ge; Wed, 13 Nov 2019 15:46:55 +0000
 Received: from mail-pf1-x443.google.com ([2607:f8b0:4864:20::443])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iUukn-0000QS-L7
- for ath10k@lists.infradead.org; Wed, 13 Nov 2019 15:40:22 +0000
-Received: by mail-pf1-x443.google.com with SMTP id n13so1923722pff.1
- for <ath10k@lists.infradead.org>; Wed, 13 Nov 2019 07:40:21 -0800 (PST)
+ id 1iUur4-0002hb-UP
+ for ath10k@lists.infradead.org; Wed, 13 Nov 2019 15:46:52 +0000
+Received: by mail-pf1-x443.google.com with SMTP id p24so1927233pfn.4
+ for <ath10k@lists.infradead.org>; Wed, 13 Nov 2019 07:46:50 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=from:to:cc:subject:date:message-id;
- bh=Ki1SPD44lh1SNybw/5rgBcA9dSnsxmRipdKWolsiTPQ=;
- b=ldo4ffH/lXYIRRC9tzF8JwFZccS5LE1eNAXXtU1VS/5IB4wnVJb7htBqIKuKI8178C
- tO9TJGxlsknv5aUpJySM+Wem8RH82ICkpo3nAenXYrfA3W6c9rUby7YKTlE6RJAC+fef
- +Vqi2ABeS++Z6YTbuqfZ4XBVt1uRMel9RyjDYlCAOnzEFPh4ikQRyJ7ZtDPm2XzKbLCk
- 0XvxdQphfr5HEwRpCp95eJ8HHjMwXFOB83ep+96dGDqMu6lwB1BQp90HYfRnqAoTFsMu
- 70ciVkQJS00t2lYlajUIKEOc2C6gWu0mrj8z/hQMDmoUShmuHCGmicWJLKfFgkuaAiVp
- pCYw==
+ bh=TBVtymOI9WwZsWEvU07x8pNEkzVPUQwttMv3w1HkiJ8=;
+ b=mvo2vdSi3TpgqVnEPaWhYlSWv2KwG7IyopXGZJg3fMsbp3v6j1pIvTAVW8UfVQkH9K
+ XdEFqj8ztEc9jrMWhZI0oyM3fLG+vzPaurnl13NBHlkvwMQQDhKJ6tjoxWfmuVy3EnkF
+ WoqlsNflDPGF0RgSgSo+t5DT/6kTQvRdi+rzdAh/wqLE6FZw2HyT08WjnZD03GNGakdY
+ rCCVMbfDRWP3TaNAPYx8WgMgXBxyrbVUACB9X7fOfbiVcpTu4DTMkV9WBeSyi6DAx7dY
+ YzujGpVbXJ+ZM7bDbrBcRP2H5GvkH/9WTqLtPyQuonXAb2cs/0VgfHG1ZROKJeg9Ea2Y
+ imUQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id;
- bh=Ki1SPD44lh1SNybw/5rgBcA9dSnsxmRipdKWolsiTPQ=;
- b=COq3tQrPK2ub+KntOgL7j0Oe422zInx5zbsQVnTgAHShrdJtPzQVEXx6hQlPXW2FkD
- 8rHvx4H02ltfij0uy8Jrn8mLD/ohSN8DnV0ZYJ1IZjcdC/wD7pNPnG6uZJpxHky6ATm/
- 721p3LsWO5TE2OlZxKfhOSeh/MMRAqSOB/q4xoiW5PHEuF7WyYFoHIGK8sUwe3pjNu4j
- xYMoKVv0+4gFF36KP0opKa+mGl9YXvsWGzsXLcXXkVkh22Z4x2yIl3zCnLk+kX09cACR
- LQecLHOcDYQS9zBVhtPVesf+jZnPTfC3TvO8y1Ua2o+1gXMBNVcD6xMbzrQqWCr+QnyV
- kXMg==
-X-Gm-Message-State: APjAAAU721YC54vhJrfoLy2EB85Z2iwRZJY/UXAytkqbCapxITO5PAf+
- 0MSPVekR6eRDuhsTzWLVXL8=
-X-Google-Smtp-Source: APXvYqzV4a9iYr/kLopHbCKtDwEFBpFCvcaVBZZ4KkPQvS54XiRuxUSsvQNuQJEpJnmCLUzjZnLo6w==
-X-Received: by 2002:a63:db15:: with SMTP id e21mr4399962pgg.21.1573659620998; 
- Wed, 13 Nov 2019 07:40:20 -0800 (PST)
+ bh=TBVtymOI9WwZsWEvU07x8pNEkzVPUQwttMv3w1HkiJ8=;
+ b=g6j7HK7KT3he0ZVm4vfs+DFSXTtaSh8HKndCg7ZsRDRk0CACBQx0cd3LQIvvQFx5qP
+ eyphgw0mk/DnQWaIr322pdwsnFZiRY0gL1/EkMbxOuTELqZF8q97XIOtlDY0clSpJPi1
+ HLQYMG2RE1dREDuGGj5eKsAdOPJlSofvhU7yHVglRtY5T9nSkVt8gKXKDOFpMGHW7TlK
+ MFhwLfny5kvcEhgKC6szv+CRcDw2xWNK30Z1QBTxn+RLiBzqLD+cmrRfU9ufcSqlv5w+
+ hlm9NAtaKdLT4NFCJlpePwqQKOEOvltVLlDidoj1DuCSpcRRJcllZ8EbckCYiNJWdM3a
+ wjSg==
+X-Gm-Message-State: APjAAAWREfNdZ3179y0F7PD9ap9xgmYvK3cTapzNwlgIyLgqz355Ce92
+ Rle3S0bgitGI/hVrXq/ha0o=
+X-Google-Smtp-Source: APXvYqw+4YtAO4BurwCMDsiaBzTWfhVwSTwA+/T/CjKbuQnohvT7t9DtGQo9ioj0WANfV+2kt5VWFA==
+X-Received: by 2002:a63:e84d:: with SMTP id a13mr4422751pgk.226.1573660010409; 
+ Wed, 13 Nov 2019 07:46:50 -0800 (PST)
 Received: from aw-bldr-10.qualcomm.com (i-global254.qualcomm.com.
  [199.106.103.254])
- by smtp.gmail.com with ESMTPSA id q8sm2911407pgg.15.2019.11.13.07.40.19
+ by smtp.gmail.com with ESMTPSA id 16sm3953091pfc.21.2019.11.13.07.46.49
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Wed, 13 Nov 2019 07:40:20 -0800 (PST)
+ Wed, 13 Nov 2019 07:46:49 -0800 (PST)
 From: Jeffrey Hugo <jeffrey.l.hugo@gmail.com>
 To: kvalo@codeaurora.org,
 	davem@davemloft.net
-Subject: [PATCH v2] ath10k: Fix qmi init error handling
-Date: Wed, 13 Nov 2019 07:40:16 -0800
-Message-Id: <20191113154016.42836-1-jeffrey.l.hugo@gmail.com>
+Subject: [PATCH v2] ath10k: Handle "invalid" BDFs for msm8998 devices
+Date: Wed, 13 Nov 2019 07:46:46 -0800
+Message-Id: <20191113154646.43048-1-jeffrey.l.hugo@gmail.com>
 X-Mailer: git-send-email 2.17.1
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191113_074021_743784_C39D9376 
-X-CRM114-Status: UNSURE (   9.43  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20191113_074651_004753_B2A7CB92 
+X-CRM114-Status: GOOD (  13.00  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -104,45 +103,47 @@ Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-When ath10k_qmi_init() fails, the error handling does not free the irq
-resources, which causes an issue if we EPROBE_DEFER as we'll attempt to
-(re-)register irqs which are already registered.
+When the BDF download QMI message has the end field set to 1, it signals
+the end of the transfer, and triggers the firmware to do a CRC check.  The
+BDFs for msm8998 devices fail this check, yet the firmware is happy to
+still use the BDF.  It appears that this error is not caught by the
+downstream drive by concidence, therefore there are production devices
+in the field where this issue needs to be handled otherwise we cannot
+support wifi on them.  So, attempt to detect this scenario as best we can
+and treat it as non-fatal.
 
-Fix this by doing a power off since we just powered on the hardware, and
-freeing the irqs as error handling.
-
-Fixes: ba94c753ccb4 ("ath10k: add QMI message handshake for wcn3990 client")
 Signed-off-by: Jeffrey Hugo <jeffrey.l.hugo@gmail.com>
+Reviewed-by: Bjorn Andersson <bjorn.andersson@linaro.org>
 ---
 
 v2:
--Call power_off() as well
+-tweak conditional nesting
+-add comment in code to clarify
 
- drivers/net/wireless/ath/ath10k/snoc.c | 5 ++++-
- 1 file changed, 4 insertions(+), 1 deletion(-)
+ drivers/net/wireless/ath/ath10k/qmi.c | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
 
-diff --git a/drivers/net/wireless/ath/ath10k/snoc.c b/drivers/net/wireless/ath/ath10k/snoc.c
-index cd22c8654aa9..50b3d443ad37 100644
---- a/drivers/net/wireless/ath/ath10k/snoc.c
-+++ b/drivers/net/wireless/ath/ath10k/snoc.c
-@@ -1563,13 +1563,16 @@ static int ath10k_snoc_probe(struct platform_device *pdev)
- 	ret = ath10k_qmi_init(ar, msa_size);
- 	if (ret) {
- 		ath10k_warn(ar, "failed to register wlfw qmi client: %d\n", ret);
--		goto err_core_destroy;
-+		goto err_power_off;
- 	}
+diff --git a/drivers/net/wireless/ath/ath10k/qmi.c b/drivers/net/wireless/ath/ath10k/qmi.c
+index 637f83ef65f8..6df2d3ac5474 100644
+--- a/drivers/net/wireless/ath/ath10k/qmi.c
++++ b/drivers/net/wireless/ath/ath10k/qmi.c
+@@ -279,7 +279,15 @@ static int ath10k_qmi_bdf_dnld_send_sync(struct ath10k_qmi *qmi)
+ 		if (ret < 0)
+ 			goto out;
  
- 	ath10k_dbg(ar, ATH10K_DBG_SNOC, "snoc probe\n");
- 
- 	return 0;
- 
-+err_power_off:
-+	ath10k_hw_power_off(ar);
-+
- err_free_irq:
- 	ath10k_snoc_free_irq(ar);
- 
+-		if (resp.resp.result != QMI_RESULT_SUCCESS_V01) {
++		/* end = 1 triggers a CRC check on the BDF.  If this fails, we
++		 * get a QMI_ERR_MALFORMED_MSG_V01 error, but the FW is still
++		 * willing to use the BDF.  For some platforms, all the valid
++		 * released BDFs fail this CRC check, so attempt to detect this
++		 * scenario and treat it as non-fatal.
++		 */
++		if (resp.resp.result != QMI_RESULT_SUCCESS_V01 &&
++		    !(req->end == 1 &&
++		      resp.resp.result == QMI_ERR_MALFORMED_MSG_V01)) {
+ 			ath10k_err(ar, "failed to download board data file: %d\n",
+ 				   resp.resp.error);
+ 			ret = -EINVAL;
 -- 
 2.17.1
 
