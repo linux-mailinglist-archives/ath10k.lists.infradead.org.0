@@ -2,55 +2,55 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2A747FA146
-	for <lists+ath10k@lfdr.de>; Wed, 13 Nov 2019 02:56:47 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id F1AFDFA1A9
+	for <lists+ath10k@lfdr.de>; Wed, 13 Nov 2019 02:59:52 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ZmqrQRH+2s33KLkwEWdy3hIjqgI4yp2ohAEekoolrhU=; b=QoGHGKiq7mxZz3
-	gkAws51Y9lXA8LPD36vDoxhlWmhOLJiuTQIDudXm4qGEFdwu1itKEFdMfB9c+UVtYkOojYQK1BANf
-	kpGmegQ/v9ahG5nyir9YTxOnTMJ13vKgQI1lQ01MwH4O1UZ2r6Xjhu8IUWpPq1JgGjt7RiMLt68pV
-	nMLKlDAh4G9fl6sPzr6WMwhYPDSliInpJuto4SmnJ5cdT4QfFaunxKhRyy/D3v3VVTfqkyaiWUSV6
-	s5HWjuVs6Lgah1myOi7e4NP4ZZjzDmcc1T3Ll20cCXIZSM0ce6SjxhmY+cHFK8coDFFiTRZZ1DnoI
-	IRl0UIVx2ZhsPxwop6FA==;
+	List-Owner; bh=jW+n0Z1LZ5jCEf+TU0RSTly6twBCYkxieGsVc1tBUrE=; b=PaM8gjggRmfCd3
+	x+ZhxV9h7NpNok37DtpYr9RO+yP6ZSJI15/Cr2aK/jRy8XTTHVeTJMsqmvtnK7ga9lACz43eAuAv/
+	0R0/3+TMDd5ypczHH/TUoP130MLP5SXY+Guh9RYh1RetcEqpJBTdqxEHEucoYQRGx18JEAUNo8ki0
+	pfq31p64LkXQbgZXWWb0heZW/pKHj3tPCpoaEj7jWxA7MoO1i3B0AfemRe++9ymTSPLTwfbxOAWwm
+	Q2dy0sZSK0qPLt6Zy4gfO2+sdBMjYSgzLITnfb7BaAGYm35N78K6Dv9ABB9SmbQTclKbitH6VrNOU
+	P8WgLfuDm77ge/jFboXQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iUhtl-0007Gz-Qd; Wed, 13 Nov 2019 01:56:45 +0000
+	id 1iUhwk-0000Qa-OB; Wed, 13 Nov 2019 01:59:50 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iUhth-0007FW-OA
- for ath10k@lists.infradead.org; Wed, 13 Nov 2019 01:56:43 +0000
+ id 1iUhwf-0000P8-UB
+ for ath10k@lists.infradead.org; Wed, 13 Nov 2019 01:59:47 +0000
 Received: from sasha-vm.mshome.net (c-73-47-72-35.hsd1.nh.comcast.net
  [73.47.72.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 94DE6222D4;
- Wed, 13 Nov 2019 01:56:40 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id C0AE722469;
+ Wed, 13 Nov 2019 01:59:44 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1573610201;
- bh=rI7+QFdDnzZoZ4C9gZukEMW6iBJhwj9njuHC+g2axG4=;
+ s=default; t=1573610385;
+ bh=okglWxbhWTSpQ+j01Uh3yunG0KPMLBP4XpLqcKMgxMg=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=qPtxRcVcbxo5p4v7xhHMNPUIqF9CDtm42IDnxLSFGbVay0WJaFTmryU3jJJgn/rwE
- JC9A1PKrJSxvxWhWN9nXQHjtjrP4Q3QOfpr72hFtPTdxCESxo3CMhkTRq8PRZxIHxh
- ZVgS/JH75I5Ovda88C2OK2GcmofE0lIXRXbked2A=
+ b=OCviAlZ0nLKJZdE+pwfNWOviOsQl7kHlT0CFFNOu4he9gZEUK1JfJZbhl9hfD5gs7
+ Pj9BYvN0sm9lz2FtHY0oOdBAqt9vWauw8jNZjdo9NChoQ/Opy94dIPqaqlXc+jbFWv
+ aat+COw/GZlyatRSpYYBuTTPr1+dfje0UUxHcx2s=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 4.14 013/115] ath10k: fix vdev-start timeout on error
-Date: Tue, 12 Nov 2019 20:54:40 -0500
-Message-Id: <20191113015622.11592-13-sashal@kernel.org>
+Subject: [PATCH AUTOSEL 4.9 08/68] ath10k: fix vdev-start timeout on error
+Date: Tue, 12 Nov 2019 20:58:32 -0500
+Message-Id: <20191113015932.12655-8-sashal@kernel.org>
 X-Mailer: git-send-email 2.20.1
-In-Reply-To: <20191113015622.11592-1-sashal@kernel.org>
-References: <20191113015622.11592-1-sashal@kernel.org>
+In-Reply-To: <20191113015932.12655-1-sashal@kernel.org>
+References: <20191113015932.12655-1-sashal@kernel.org>
 MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191112_175641_822177_C6A8CCBC 
-X-CRM114-Status: GOOD (  16.68  )
+X-CRM114-CacheID: sfid-20191112_175946_012793_1A33888A 
+X-CRM114-Status: GOOD (  16.39  )
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-5.2 points)
@@ -110,10 +110,10 @@ Signed-off-by: Sasha Levin <sashal@kernel.org>
  4 files changed, 25 insertions(+), 5 deletions(-)
 
 diff --git a/drivers/net/wireless/ath/ath10k/core.h b/drivers/net/wireless/ath/ath10k/core.h
-index 949ebb3e967bb..be9ec265dfe55 100644
+index 90c0c4a7175db..414153cd57845 100644
 --- a/drivers/net/wireless/ath/ath10k/core.h
 +++ b/drivers/net/wireless/ath/ath10k/core.h
-@@ -881,6 +881,7 @@ struct ath10k {
+@@ -811,6 +811,7 @@ struct ath10k {
  
  	struct completion install_key_done;
  
@@ -122,10 +122,10 @@ index 949ebb3e967bb..be9ec265dfe55 100644
  
  	struct workqueue_struct *workqueue;
 diff --git a/drivers/net/wireless/ath/ath10k/mac.c b/drivers/net/wireless/ath/ath10k/mac.c
-index 58a3c42c4aedb..259ef6a0d1740 100644
+index 1588fe8110d00..2294ba311c47a 100644
 --- a/drivers/net/wireless/ath/ath10k/mac.c
 +++ b/drivers/net/wireless/ath/ath10k/mac.c
-@@ -954,7 +954,7 @@ static inline int ath10k_vdev_setup_sync(struct ath10k *ar)
+@@ -947,7 +947,7 @@ static inline int ath10k_vdev_setup_sync(struct ath10k *ar)
  	if (time_left == 0)
  		return -ETIMEDOUT;
  
@@ -135,10 +135,10 @@ index 58a3c42c4aedb..259ef6a0d1740 100644
  
  static int ath10k_monitor_vdev_start(struct ath10k *ar, int vdev_id)
 diff --git a/drivers/net/wireless/ath/ath10k/wmi.c b/drivers/net/wireless/ath/ath10k/wmi.c
-index ab8eb9cdfda0f..c29e908c97317 100644
+index bbfe7be214e12..68d324e6fcb45 100644
 --- a/drivers/net/wireless/ath/ath10k/wmi.c
 +++ b/drivers/net/wireless/ath/ath10k/wmi.c
-@@ -3132,18 +3132,31 @@ void ath10k_wmi_event_vdev_start_resp(struct ath10k *ar, struct sk_buff *skb)
+@@ -3102,18 +3102,31 @@ void ath10k_wmi_event_vdev_start_resp(struct ath10k *ar, struct sk_buff *skb)
  {
  	struct wmi_vdev_start_ev_arg arg = {};
  	int ret;
@@ -174,10 +174,10 @@ index ab8eb9cdfda0f..c29e908c97317 100644
  }
  
 diff --git a/drivers/net/wireless/ath/ath10k/wmi.h b/drivers/net/wireless/ath/ath10k/wmi.h
-index d0e05aa437e36..947b74c64fec0 100644
+index 9b8562ff66987..cce028ea9b57d 100644
 --- a/drivers/net/wireless/ath/ath10k/wmi.h
 +++ b/drivers/net/wireless/ath/ath10k/wmi.h
-@@ -6480,11 +6480,17 @@ struct wmi_ch_info_ev_arg {
+@@ -6248,11 +6248,17 @@ struct wmi_ch_info_ev_arg {
  	__le32 rx_frame_count;
  };
  
