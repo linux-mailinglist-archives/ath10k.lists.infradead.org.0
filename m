@@ -2,54 +2,54 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0C189FEDE5
-	for <lists+ath10k@lfdr.de>; Sat, 16 Nov 2019 16:47:48 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 96CC1FEE61
+	for <lists+ath10k@lfdr.de>; Sat, 16 Nov 2019 16:51:20 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=l8uQNba485xlc25s5ap0kBunIP1J6gWrZxq9SZMpvYI=; b=aMqeSyI3J55KfH
-	SLZUDS3ELuVYKZ+y6APdpbiwANVBm66ZfE9aD2o/uBsrfzdIQK+0ErugCZ2fzfg+0UbpsQZXnuknQ
-	2FkyvPRB1FcmP6m+qyjykl6gXQSFC3+eDaKk+u7sBQfbqtYLTqIurAGLQTrpWGFFBLrS9ZGWM59C0
-	LfYzQApBh4rrYdodVgQenlF7gbfu0vZNn194DONkRpK0Irkp8Tn8ZmGsPy+YmhzmniogsbsFuKUgm
-	lPSVYgSLCAqrfQAtL2VIIALhydpkJFrxi4v06AKxDM5Sg68ABw2QS2Y+SKYeWkZK+uTHNVCgIHtBY
-	ikRLR1PYY0H7LIvKs2ag==;
+	List-Owner; bh=QnV+smJlcbMIdfBce2uwvrDA6wqoskv/c3ODPShInaA=; b=khuoW25bVrgw4r
+	sRYKgFPhvVUzHKHW4DdfbVllS5CJ5gQwEObhe4/6juH0aiHvA9PKDOrpltXPYztqjsT6+WCH8ys4i
+	MXXENfIVBT3gAz8wTy310GZifUQe6jgo0Xi8AzhXE/Zm4kA4Ishzf0pqqAWrHrm5L750Rjzf19uU8
+	izq+4I4IbDVu4KqOX6wT3pRLSMLOUjsLIhjbM8UK5nNKYAsGZ/Jfei4ts/YmAcDke1uOwDdGE9uNy
+	V0OltfnNEMVVkb/QNuGlNa9KVgM8CYryxGuWHqSmbUo6uB4Sl5X05BrAM1OySGv5pIkxtarVq+Koj
+	9b4xQnokkn/PfOFcCeKg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iW0Ib-0002VP-HQ; Sat, 16 Nov 2019 15:47:45 +0000
+	id 1iW0M3-0005lR-CK; Sat, 16 Nov 2019 15:51:19 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iW0IX-0002UZ-QP
- for ath10k@lists.infradead.org; Sat, 16 Nov 2019 15:47:43 +0000
+ id 1iW0Ly-0005kY-V6
+ for ath10k@lists.infradead.org; Sat, 16 Nov 2019 15:51:16 +0000
 Received: from sasha-vm.mshome.net (unknown [50.234.116.4])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 1EDA32084F;
- Sat, 16 Nov 2019 15:47:41 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id 364E221846;
+ Sat, 16 Nov 2019 15:51:14 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1573919261;
- bh=6zq1h0zpHyWUa2iY01rCQAMD12ByPs7apA5AM2uYwds=;
+ s=default; t=1573919474;
+ bh=pGb1BqwB7ESBJvqdqPLH3dpMcxPSPCZBWyBfFsXlnac=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=OFXouQQI4z8DxADvqaAEafdPKQR8m8W2y1Gly5onpU258J5ZqaG181lHxTsM6xFEG
- MpxwoDH6/KCyyvA0whyIzExXWiSQZevqqN47GNI/Id1/Hyq0XUd7i+R53hxG+ibC6O
- TZORnBi6e3AL2niraFOPr5W4RYycSnGIowM1GCU8=
+ b=RPB2h6KhUe/VfpPlJAWfz1t11ZbIXZIG0wx6ZZzQIvN9Qg879LvQ5ApdKlD68R1/n
+ TO1fglEAPAdvDNQ57B9OEECYQb96QXnvHhPh9ZBIeqCZDinhev7fDiVaI1tDGa3NA+
+ QIEStu9T2CTePZK4el8wbP5eqZfFDNsXOaUH8FYs=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 4.14 011/150] ath10k: allocate small size dma memory
- in ath10k_pci_diag_write_mem
-Date: Sat, 16 Nov 2019 10:45:09 -0500
-Message-Id: <20191116154729.9573-11-sashal@kernel.org>
+Subject: [PATCH AUTOSEL 4.9 08/99] ath10k: allocate small size dma memory in
+ ath10k_pci_diag_write_mem
+Date: Sat, 16 Nov 2019 10:49:31 -0500
+Message-Id: <20191116155103.10971-8-sashal@kernel.org>
 X-Mailer: git-send-email 2.20.1
-In-Reply-To: <20191116154729.9573-1-sashal@kernel.org>
-References: <20191116154729.9573-1-sashal@kernel.org>
+In-Reply-To: <20191116155103.10971-1-sashal@kernel.org>
+References: <20191116155103.10971-1-sashal@kernel.org>
 MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191116_074741_892095_75C855C8 
+X-CRM114-CacheID: sfid-20191116_075115_063247_C130834C 
 X-CRM114-Status: GOOD (  12.50  )
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -115,11 +115,11 @@ Signed-off-by: Sasha Levin <sashal@kernel.org>
  1 file changed, 11 insertions(+), 12 deletions(-)
 
 diff --git a/drivers/net/wireless/ath/ath10k/pci.c b/drivers/net/wireless/ath/ath10k/pci.c
-index d790ea20b95d9..89fbd03db2987 100644
+index 25b8d501d437e..176cf4fef6296 100644
 --- a/drivers/net/wireless/ath/ath10k/pci.c
 +++ b/drivers/net/wireless/ath/ath10k/pci.c
 @@ -1039,10 +1039,9 @@ int ath10k_pci_diag_write_mem(struct ath10k *ar, u32 address,
- 	struct ath10k_ce *ce = ath10k_ce_priv(ar);
+ 	struct ath10k_pci *ar_pci = ath10k_pci_priv(ar);
  	int ret = 0;
  	u32 *buf;
 -	unsigned int completed_nbytes, orig_nbytes, remaining_bytes;
