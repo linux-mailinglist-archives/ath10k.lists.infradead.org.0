@@ -2,72 +2,93 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 96CC1FEE61
-	for <lists+ath10k@lfdr.de>; Sat, 16 Nov 2019 16:51:20 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 370EAFFB97
+	for <lists+ath10k@lfdr.de>; Sun, 17 Nov 2019 21:25:21 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=QnV+smJlcbMIdfBce2uwvrDA6wqoskv/c3ODPShInaA=; b=khuoW25bVrgw4r
-	sRYKgFPhvVUzHKHW4DdfbVllS5CJ5gQwEObhe4/6juH0aiHvA9PKDOrpltXPYztqjsT6+WCH8ys4i
-	MXXENfIVBT3gAz8wTy310GZifUQe6jgo0Xi8AzhXE/Zm4kA4Ishzf0pqqAWrHrm5L750Rjzf19uU8
-	izq+4I4IbDVu4KqOX6wT3pRLSMLOUjsLIhjbM8UK5nNKYAsGZ/Jfei4ts/YmAcDke1uOwDdGE9uNy
-	V0OltfnNEMVVkb/QNuGlNa9KVgM8CYryxGuWHqSmbUo6uB4Sl5X05BrAM1OySGv5pIkxtarVq+Koj
-	9b4xQnokkn/PfOFcCeKg==;
+	List-Owner; bh=elhCg0B5twu0X0sW3Y/OXmVfI948adACx906OvpDwzQ=; b=j7qxJNmMMjcGP8
+	27XThinz6h/Z39ei4DOR8i18wtSeC+rZKDBbjf5CYIIn47jXi8/poHijzXz1vkwZGXy3uz8Kl/7eQ
+	tW5ZoTmxMuxiMF3BrfenOtzRWoBcEs+zxXR02XOz3aeT8KnjByU4adWkbKhLu52si+ke9er5sWwKk
+	wQ6hEf4y0QGKAA7/I+a31joyQG7eDpybHsrjtbar8RWf1snceQeEOi49noLub8w3j+FJxRkBRnvis
+	iveHq60POEbZr7siJil5652lj1tsqPg0R5xnnq9YAF7CQ4WvT2nIdX3NDqalf3FBhMQ4XYL5Hj+bj
+	Pvi+XYagkIAKVFt6uJhQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iW0M3-0005lR-CK; Sat, 16 Nov 2019 15:51:19 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1iWR6i-0004lx-5G; Sun, 17 Nov 2019 20:25:16 +0000
+Received: from mail-lj1-x244.google.com ([2a00:1450:4864:20::244])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iW0Ly-0005kY-V6
- for ath10k@lists.infradead.org; Sat, 16 Nov 2019 15:51:16 +0000
-Received: from sasha-vm.mshome.net (unknown [50.234.116.4])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 364E221846;
- Sat, 16 Nov 2019 15:51:14 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1573919474;
- bh=pGb1BqwB7ESBJvqdqPLH3dpMcxPSPCZBWyBfFsXlnac=;
- h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=RPB2h6KhUe/VfpPlJAWfz1t11ZbIXZIG0wx6ZZzQIvN9Qg879LvQ5ApdKlD68R1/n
- TO1fglEAPAdvDNQ57B9OEECYQb96QXnvHhPh9ZBIeqCZDinhev7fDiVaI1tDGa3NA+
- QIEStu9T2CTePZK4el8wbP5eqZfFDNsXOaUH8FYs=
-From: Sasha Levin <sashal@kernel.org>
-To: linux-kernel@vger.kernel.org,
-	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 4.9 08/99] ath10k: allocate small size dma memory in
- ath10k_pci_diag_write_mem
-Date: Sat, 16 Nov 2019 10:49:31 -0500
-Message-Id: <20191116155103.10971-8-sashal@kernel.org>
-X-Mailer: git-send-email 2.20.1
-In-Reply-To: <20191116155103.10971-1-sashal@kernel.org>
-References: <20191116155103.10971-1-sashal@kernel.org>
+ id 1iWR6d-0004A4-Dt
+ for ath10k@lists.infradead.org; Sun, 17 Nov 2019 20:25:12 +0000
+Received: by mail-lj1-x244.google.com with SMTP id m4so11477428ljj.8
+ for <ath10k@lists.infradead.org>; Sun, 17 Nov 2019 12:25:08 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=20161025;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc:content-transfer-encoding;
+ bh=Ql6OPsK4uQYSkaAsGyBu94gd3BNPrccgvPAvpalrUQQ=;
+ b=ZPoAuICAkjxKQgHPGL+AyFKDAZTJ/RODCKSZyZQsYEh6LdpYJ/u7vQiYPUhupoMhAI
+ TlD7L+W4j7LiGb5I2eAx0CQx9DiuZU7b1QNUf/MfGqFG80Y9tEAjsYnQ/dsXRzRg94h8
+ NitnzK7p10yjnqfmVLUcJQ4eomZ7v/gDqJ2Re3wBqMj1bODmxZriGDwDv1uIgaNM2kkQ
+ Awwkc7Qfn/XIp6GZ6NDZhrqbOXidR9ye1RLt1BJ4D9XGvQif3RCskt37XF7D3QDSzhJW
+ MtqwO2us/w5OYOraunBCV9PLbSzJvChKRQ6H+6/5g/0mcWzleihT04816Yzwu8LQPqO3
+ 8Ytg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc:content-transfer-encoding;
+ bh=Ql6OPsK4uQYSkaAsGyBu94gd3BNPrccgvPAvpalrUQQ=;
+ b=EzxSYMyb95DUNO/agfW+rX+l/XPurTCqpUJuQ6b/QhYLaj/GMAOO4BWw5d4D64hfUu
+ XXQvQHkmYCInoIFtEmXk4POuJ2G7dP51Fr5z0hhv5o8qw7H6p7XzJH006noJi7GMXCE4
+ /efLAkTQxE9iwV9BHQ9NHfSSXxboKi6lmJvFbyIty8fCgu/Xje/9yGjMAAjwlZR5PabA
+ EbYz/rKeiV/qy3EnSEvUnuSprjnb5nWNDi19odD49D3khWQc18ci0iDmS/0crAk2lJfZ
+ uc/u5y80WbaoNC+6lQrPXPbpozeSnhPmks7O3zsBgz9kLHus/Mz00ZAWsd6WooJ8ZF+y
+ 6ANA==
+X-Gm-Message-State: APjAAAXLOW0xUkRWZshQK/asjrrtsq/JXipEOH3IknzEGKxstFjbESsO
+ 5jOOq/5YiFYNXl8ET3FVsI19jAGiN+udX/Cdph2viw==
+X-Google-Smtp-Source: APXvYqxzsZMoMt7ussfhZ81q9Qzzfp+hPUHwHwDwXa5B5t/Rm64rKUAT1TzDysvU7bbQyn5VqFKYBy5YQFLS8gcB4N0=
+X-Received: by 2002:a2e:9ad8:: with SMTP id p24mr7233950ljj.114.1574022302590; 
+ Sun, 17 Nov 2019 12:25:02 -0800 (PST)
 MIME-Version: 1.0
-X-stable: review
-X-Patchwork-Hint: Ignore
+References: <157382403672.580235.12525941420808058808.stgit@toke.dk>
+ <157382404118.580235.14216392299709793599.stgit@toke.dk>
+ <CA+iem5tF+TN-osfGxu=EU5Xt1Uq+PcKgBVaoAmZY3a3JzS5JzQ@mail.gmail.com>
+ <87y2wgjas4.fsf@toke.dk>
+In-Reply-To: <87y2wgjas4.fsf@toke.dk>
+From: Kan Yan <kyan@google.com>
+Date: Sun, 17 Nov 2019 12:24:51 -0800
+Message-ID: <CA+iem5vVhwTsTvAgnC_HF0utMDSfgyLCe2M=gfUOFU2VjjCB8Q@mail.gmail.com>
+Subject: Re: [PATCH v9 4/4] mac80211: Use Airtime-based Queue Limits (AQL) on
+ packet dequeue
+To: =?UTF-8?B?VG9rZSBIw7hpbGFuZC1Kw7hyZ2Vuc2Vu?= <toke@redhat.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191116_075115_063247_C130834C 
-X-CRM114-Status: GOOD (  12.50  )
-X-Spam-Score: -5.2 (-----)
+X-CRM114-CacheID: sfid-20191117_122511_493745_0415D973 
+X-CRM114-Status: GOOD (  14.76  )
+X-Spam-Score: -15.7 (---------------)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (-15.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:244 listed in]
+ [list.dnswl.org]
+ -7.5 USER_IN_DEF_DKIM_WL    From: address is in the default DKIM
+ white-list
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
+ -7.5 USER_IN_DEF_SPF_WL     From: address is in the default SPF
+ white-list
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.5 ENV_AND_HDR_SPF_MATCH  Env and Hdr From used in default SPF WL
+ Match -0.0 DKIMWL_WL_MED          DKIMwl.org - Medium sender
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -79,126 +100,68 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Sasha Levin <sashal@kernel.org>, netdev@vger.kernel.org,
- Carl Huang <cjhuang@codeaurora.org>, linux-wireless@vger.kernel.org,
- ath10k@lists.infradead.org, Brian Norris <briannorris@chomium.org>,
- Kalle Valo <kvalo@codeaurora.org>
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: Rajkumar Manoharan <rmanohar@codeaurora.org>,
+ Kevin Hayes <kevinhayes@google.com>,
+ Make-Wifi-fast <make-wifi-fast@lists.bufferbloat.net>,
+ linux-wireless <linux-wireless@vger.kernel.org>, ath10k@lists.infradead.org,
+ John Crispin <john@phrozen.org>, Johannes Berg <johannes@sipsolutions.net>,
+ Lorenzo Bianconi <lorenzo@kernel.org>, Felix Fietkau <nbd@nbd.name>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-From: Carl Huang <cjhuang@codeaurora.org>
-
-[ Upstream commit 0738b4998c6d1caf9ca2447b946709a7278c70f1 ]
-
-ath10k_pci_diag_write_mem may allocate big size of the dma memory
-based on the parameter nbytes. Take firmware diag download as
-example, the biggest size is about 500K. In some systems, the
-allocation is likely to fail because it can't acquire such a large
-contiguous dma memory.
-
-The fix is to allocate a small size dma memory. In the loop,
-driver copies the data to the allocated dma memory and writes to
-the destination until all the data is written.
-
-Tested with QCA6174 PCI with
-firmware-6.bin_WLAN.RM.4.4.1-00119-QCARMSWP-1, this also affects
-QCA9377 PCI.
-
-Signed-off-by: Carl Huang <cjhuang@codeaurora.org>
-Reviewed-by: Brian Norris <briannorris@chomium.org>
-Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
-Signed-off-by: Sasha Levin <sashal@kernel.org>
----
- drivers/net/wireless/ath/ath10k/pci.c | 23 +++++++++++------------
- 1 file changed, 11 insertions(+), 12 deletions(-)
-
-diff --git a/drivers/net/wireless/ath/ath10k/pci.c b/drivers/net/wireless/ath/ath10k/pci.c
-index 25b8d501d437e..176cf4fef6296 100644
---- a/drivers/net/wireless/ath/ath10k/pci.c
-+++ b/drivers/net/wireless/ath/ath10k/pci.c
-@@ -1039,10 +1039,9 @@ int ath10k_pci_diag_write_mem(struct ath10k *ar, u32 address,
- 	struct ath10k_pci *ar_pci = ath10k_pci_priv(ar);
- 	int ret = 0;
- 	u32 *buf;
--	unsigned int completed_nbytes, orig_nbytes, remaining_bytes;
-+	unsigned int completed_nbytes, alloc_nbytes, remaining_bytes;
- 	struct ath10k_ce_pipe *ce_diag;
- 	void *data_buf = NULL;
--	u32 ce_data;	/* Host buffer address in CE space */
- 	dma_addr_t ce_data_base = 0;
- 	int i;
- 
-@@ -1056,9 +1055,10 @@ int ath10k_pci_diag_write_mem(struct ath10k *ar, u32 address,
- 	 *   1) 4-byte alignment
- 	 *   2) Buffer in DMA-able space
- 	 */
--	orig_nbytes = nbytes;
-+	alloc_nbytes = min_t(unsigned int, nbytes, DIAG_TRANSFER_LIMIT);
-+
- 	data_buf = (unsigned char *)dma_alloc_coherent(ar->dev,
--						       orig_nbytes,
-+						       alloc_nbytes,
- 						       &ce_data_base,
- 						       GFP_ATOMIC);
- 	if (!data_buf) {
-@@ -1066,9 +1066,6 @@ int ath10k_pci_diag_write_mem(struct ath10k *ar, u32 address,
- 		goto done;
- 	}
- 
--	/* Copy caller's data to allocated DMA buf */
--	memcpy(data_buf, data, orig_nbytes);
--
- 	/*
- 	 * The address supplied by the caller is in the
- 	 * Target CPU virtual address space.
-@@ -1081,12 +1078,14 @@ int ath10k_pci_diag_write_mem(struct ath10k *ar, u32 address,
- 	 */
- 	address = ath10k_pci_targ_cpu_to_ce_addr(ar, address);
- 
--	remaining_bytes = orig_nbytes;
--	ce_data = ce_data_base;
-+	remaining_bytes = nbytes;
- 	while (remaining_bytes) {
- 		/* FIXME: check cast */
- 		nbytes = min_t(int, remaining_bytes, DIAG_TRANSFER_LIMIT);
- 
-+		/* Copy caller's data to allocated DMA buf */
-+		memcpy(data_buf, data, nbytes);
-+
- 		/* Set up to receive directly into Target(!) address */
- 		ret = __ath10k_ce_rx_post_buf(ce_diag, &address, address);
- 		if (ret != 0)
-@@ -1096,7 +1095,7 @@ int ath10k_pci_diag_write_mem(struct ath10k *ar, u32 address,
- 		 * Request CE to send caller-supplied data that
- 		 * was copied to bounce buffer to Target(!) address.
- 		 */
--		ret = ath10k_ce_send_nolock(ce_diag, NULL, (u32)ce_data,
-+		ret = ath10k_ce_send_nolock(ce_diag, NULL, ce_data_base,
- 					    nbytes, 0, 0);
- 		if (ret != 0)
- 			goto done;
-@@ -1137,12 +1136,12 @@ int ath10k_pci_diag_write_mem(struct ath10k *ar, u32 address,
- 
- 		remaining_bytes -= nbytes;
- 		address += nbytes;
--		ce_data += nbytes;
-+		data += nbytes;
- 	}
- 
- done:
- 	if (data_buf) {
--		dma_free_coherent(ar->dev, orig_nbytes, data_buf,
-+		dma_free_coherent(ar->dev, alloc_nbytes, data_buf,
- 				  ce_data_base);
- 	}
- 
--- 
-2.20.1
-
-
-_______________________________________________
-ath10k mailing list
-ath10k@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/ath10k
+PiA+IEdpdmVuIHRoZSBmYWN0IHRoYXQgQVFMIGlzIG9ubHkgdGVzdGVkIGluIHZlcnkgbGltaXRl
+ZCBwbGF0Zm9ybXMsCj4gPiBzaG91bGQgd2Ugc2V0IHRoZSBkZWZhdWx0IHRvIGRpc2FibGVkIGJ5
+IHJlbW92aW5nIHRoaXMgY2hhbmdlIGluIHRoZQo+ID4gbmV4dCB1cGRhdGU/Cj4gPgo+ID4gLSAg
+ICAgICBsb2NhbC0+YWlydGltZV9mbGFncyA9IEFJUlRJTUVfVVNFX1RYIHwgQUlSVElNRV9VU0Vf
+Ulg7Cj4gPiArCj4gPiArICAgICAgIGxvY2FsLT5haXJ0aW1lX2ZsYWdzID0gQUlSVElNRV9VU0Vf
+VFggfAo+ID4gKyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEFJUlRJTUVfVVNFX1JYIHwK
+PiA+ICsgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBBSVJUSU1FX1VTRV9BUUw7Cj4gPiAr
+ICAgICAgIGxvY2FsLT5hcWxfdGhyZXNob2xkID0gSUVFRTgwMjExX0FRTF9USFJFU0hPTEQ7Cj4g
+PiArICAgICAgIGF0b21pY19zZXQoJmxvY2FsLT5hcWxfdG90YWxfcGVuZGluZ19haXJ0aW1lLCAw
+KTsKPiBXZWxsLCB3ZSBoYXZlIHRoZSB3aG9sZSAtcmMgc2VyaWVzIHRvIGdldCBtb3JlIHRlc3Rp
+bmcgaW4gaWYgd2UgbWVyZ2UgaXQKPiBhcy1pcy4gSXQncyB1cCB0byB0aGUgbWFpbnRhaW5lcnMs
+IG9mIGNvdXJzZSwgYnV0IEkgd291bGQgYmUgaW4gZmF2b3VyCj4gb2YgbWVyZ2luZyBhcy1pcywg
+dGhlbiBvcHRpb25hbGx5IGJhY2tpbmcgb3V0IHRoZSBkZWZhdWx0IGJlZm9yZSB0aGUKPiBmaW5h
+bCByZWxlYXNlIGlmIHByb2JsZW1zIGRvIHR1cm4gdXAuIEJ1dCBJIHdvdWxkIGhvcGUgdGhhdCB0
+aGUgbGltaXRzCj4gYXJlIHN1ZmZpY2llbnRseSBjb25zZXJ2YXRpdmUgdGhhdCBpdCB3b3VsZCBu
+b3QgcmVzdWx0IGluIGFueSBwcm9ibGVtcyA6KQoKU291bmRzIGdvb2QuIFRoZSBjdXJyZW50IGRl
+ZmF1bHQgbGltaXRzIGFyZSByZWFzb25hYmx5IGNvbnNlcnZhdGl2ZQphbmQgYXJlIHR1bmFibGUg
+dmlhIGRlYnVnZnMuCgpJIHdpbGwgZ2l2ZSB0aGUgdjEwIHZlcnNpb24gb2YgdGhpcyBwYXRjaCBz
+ZXJpYWwgYSBxdWljayB0ZXN0IGFuZApob3BlZnVsbHkgd2UgY2FuIHdyYXAgaXQgdXAgc29vbi4K
+Ci1LYW4KCgpPbiBTYXQsIE5vdiAxNiwgMjAxOSBhdCAzOjU1IEFNIFRva2UgSMO4aWxhbmQtSsO4
+cmdlbnNlbiA8dG9rZUByZWRoYXQuY29tPiB3cm90ZToKPgo+IEthbiBZYW4gPGt5YW5AZ29vZ2xl
+LmNvbT4gd3JpdGVzOgo+Cj4gPj4gK3N0YXRpYyBpbmxpbmUgdTE2Cj4gPj4gK2llZWU4MDIxMV9p
+bmZvX3NldF90eF90aW1lX2VzdChzdHJ1Y3QgaWVlZTgwMjExX3R4X2luZm8gKmluZm8sIHUxNiB0
+eF90aW1lX2VzdCkKPiA+PiArewo+ID4+ICsgICAgICAgLyogV2Ugb25seSBoYXZlIDEwIGJpdHMg
+aW4gdHhfdGltZV9lc3QsIHNvIHN0b3JlIGFpcnRpbWUKPiA+PiArICAgICAgICAqIGluIGluY3Jl
+bWVudHMgb2YgNHVzIGFuZCBjbGFtcCB0aGUgbWF4aW11bSB0byAyKioxMi0xCj4gPj4gKyAgICAg
+ICAgKi8KPiA+PiArICAgICAgIGluZm8tPnR4X3RpbWVfZXN0ID0gbWluX3QodTE2LCB0eF90aW1l
+X2VzdCwgNDA5NSkgPj4gMjsKPiA+PiArICAgICAgIHJldHVybiBpbmZvLT50eF90aW1lX2VzdDsK
+PiA+PiArfQo+ID4+ICsKPiA+PiArc3RhdGljIGlubGluZSB1MTYKPiA+PiAraWVlZTgwMjExX2lu
+Zm9fZ2V0X3R4X3RpbWVfZXN0KHN0cnVjdCBpZWVlODAyMTFfdHhfaW5mbyAqaW5mbykKPiA+PiAr
+ewo+ID4+ICsgICAgICAgcmV0dXJuIGluZm8tPnR4X3RpbWVfZXN0IDw8IDI7Cj4gPj4gK30KPiA+
+PiArCj4gPgo+ID4gc2V0X3R4X3RpbWVfZXN0KCkgcmV0dXJucyBhaXJ0aW1lIGluIGRpZmZlcmVu
+dCB1bml0cyAoNHVzKSB0aGFuCj4gPiBnZXRfdHhfdGltZV9lc3QoKSwgdGhpcyB3aWxsIGNhdXNl
+IHRoZSBwZW5kaW5nX2FpcnRpbWUgb3V0IG9mIHdoYWNrLgo+Cj4gSHVoLCB5b3UncmUgcXVpdGUg
+cmlnaHQ7IG9vcHMhIEkgbWVhbnQgdG8gc2hpZnQgdGhhdCBiYWNrIGJlZm9yZQo+IHJldHVybmlu
+Zy4gV2lsbCBmaXguCj4KPiA+IEdpdmVuIHRoZSBmYWN0IHRoYXQgQVFMIGlzIG9ubHkgdGVzdGVk
+IGluIHZlcnkgbGltaXRlZCBwbGF0Zm9ybXMsCj4gPiBzaG91bGQgd2Ugc2V0IHRoZSBkZWZhdWx0
+IHRvIGRpc2FibGVkIGJ5IHJlbW92aW5nIHRoaXMgY2hhbmdlIGluIHRoZQo+ID4gbmV4dCB1cGRh
+dGU/Cj4gPgo+ID4gLSAgICAgICBsb2NhbC0+YWlydGltZV9mbGFncyA9IEFJUlRJTUVfVVNFX1RY
+IHwgQUlSVElNRV9VU0VfUlg7Cj4gPiArCj4gPiArICAgICAgIGxvY2FsLT5haXJ0aW1lX2ZsYWdz
+ID0gQUlSVElNRV9VU0VfVFggfAo+ID4gKyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEFJ
+UlRJTUVfVVNFX1JYIHwKPiA+ICsgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBBSVJUSU1F
+X1VTRV9BUUw7Cj4gPiArICAgICAgIGxvY2FsLT5hcWxfdGhyZXNob2xkID0gSUVFRTgwMjExX0FR
+TF9USFJFU0hPTEQ7Cj4gPiArICAgICAgIGF0b21pY19zZXQoJmxvY2FsLT5hcWxfdG90YWxfcGVu
+ZGluZ19haXJ0aW1lLCAwKTsKPgo+IFdlbGwsIHdlIGhhdmUgdGhlIHdob2xlIC1yYyBzZXJpZXMg
+dG8gZ2V0IG1vcmUgdGVzdGluZyBpbiBpZiB3ZSBtZXJnZSBpdAo+IGFzLWlzLiBJdCdzIHVwIHRv
+IHRoZSBtYWludGFpbmVycywgb2YgY291cnNlLCBidXQgSSB3b3VsZCBiZSBpbiBmYXZvdXIKPiBv
+ZiBtZXJnaW5nIGFzLWlzLCB0aGVuIG9wdGlvbmFsbHkgYmFja2luZyBvdXQgdGhlIGRlZmF1bHQg
+YmVmb3JlIHRoZQo+IGZpbmFsIHJlbGVhc2UgaWYgcHJvYmxlbXMgZG8gdHVybiB1cC4gQnV0IEkg
+d291bGQgaG9wZSB0aGF0IHRoZSBsaW1pdHMKPiBhcmUgc3VmZmljaWVudGx5IGNvbnNlcnZhdGl2
+ZSB0aGF0IGl0IHdvdWxkIG5vdCByZXN1bHQgaW4gYW55IHByb2JsZW1zIDopCj4KPiAtVG9rZQo+
+CgpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXwphdGgxMGsg
+bWFpbGluZyBsaXN0CmF0aDEwa0BsaXN0cy5pbmZyYWRlYWQub3JnCmh0dHA6Ly9saXN0cy5pbmZy
+YWRlYWQub3JnL21haWxtYW4vbGlzdGluZm8vYXRoMTBrCg==
