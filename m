@@ -2,87 +2,83 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 00A7C104886
-	for <lists+ath10k@lfdr.de>; Thu, 21 Nov 2019 03:30:00 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id B2232104E4A
+	for <lists+ath10k@lfdr.de>; Thu, 21 Nov 2019 09:46:39 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
 	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
 	List-Unsubscribe:List-Id:Message-ID:References:In-Reply-To:Subject:To:From:
 	Date:MIME-Version:Reply-To:Content-ID:Content-Description:Resent-Date:
 	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=oUC1fugXvWPzK8pwJ3174xReSwoiKVzf+k0yQCyS/GQ=; b=HajuHMtVpf0q1oJSHsyaud/wo
-	CiBq3zkRk4P+fFt3lrDn83wc7+p3u8B8u/rkHJMJ64aaW4f+H4fmcIMYZaJb+FwRlNK4M9hILiWxj
-	LqC0f3R4Su9p1C8kKrBcGmkcsgwLzqlayHv0EoIY3BuK9IaZRE2MYfphiwaiBuLxhXA3UY2x0rTxN
-	DcxhlZqOmzDRoFkbbtLJ8hCr/4wfbP6JcumRtpG2V9hF+EfoTyQyExPg9xzHnsTZDKQ2HQwtB7gFf
-	DC3SAnnBSKON8M1tAG8v5C7ICJoVk3OhBZa1uD6R1oR4eSXYvyel2bS2mVL7hDS2Pi+2dX3uSrQBw
-	GU8/NtgWA==;
+	 bh=sIpbUmCBbbwmbbPj+tiPcUXKz3p4kQjNkNg668U3knQ=; b=Cz8kLS0sKx2Ov4jTC8isw+uLi
+	1v22tW7EA4eIIZtiKYaBQ4NFB+ZnjgQ4v/d4ADAJWOfIFqhZOYZ/QWBnH5MIDLvu3pyYx0DKzH+Qg
+	Pnu3ICBW/nfcw+0s9x/Y2lzVtz3vG/bG1a/9I2ubNggAoNAzsAHRgBjUE6tZI5coqunj87fQfHx+p
+	bfMrpH5glSbMdqTS4AmqSSXudXIEtdyOHQoFqdMcZpuktd+rFCWh1m9l2yJohCNqDRwtuWJqO1Sbi
+	0UQf/vIqdhepKC76v5IjbCyONTBDIFW4RUomqErFL+bpLWh+bv1BDKvdezarrLLWO9eBy1lNQQTxF
+	5Thp3niGw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iXcEF-00038O-6e; Thu, 21 Nov 2019 02:29:55 +0000
-Received: from a27-21.smtp-out.us-west-2.amazonses.com ([54.240.27.21])
+	id 1iXi6j-0000JL-NB; Thu, 21 Nov 2019 08:46:33 +0000
+Received: from a27-186.smtp-out.us-west-2.amazonses.com ([54.240.27.186])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iXcEB-00037k-7p
- for ath10k@lists.infradead.org; Thu, 21 Nov 2019 02:29:52 +0000
+ id 1iXi6f-0000Ic-Rt
+ for ath10k@lists.infradead.org; Thu, 21 Nov 2019 08:46:31 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
- s=zsmsymrwgfyinv5wlfyidntwsjeeldzt; d=codeaurora.org; t=1574303386;
+ s=zsmsymrwgfyinv5wlfyidntwsjeeldzt; d=codeaurora.org; t=1574325987;
  h=MIME-Version:Content-Type:Content-Transfer-Encoding:Date:From:To:Cc:Subject:In-Reply-To:References:Message-ID;
- bh=o4LGGG49L2mFI3Z0m3DVLA0OdYWIS2drsZMLKtkysYw=;
- b=HS+UFTwi4IDEtBwua0LLdglMbIlFUeZV1Xj2WHxzhr8yzHpikUdFZKXqACIjTgWb
- A3gzShVroagVkMqnBDUagOUFXxs2jJtzwUYkzTN2iD0qWQj+ie6D6js0JmSJVqJEiiF
- gvfZyh4Mf1vaXq+UdSezx7gHJ8pHWlhmFfITjPIk=
+ bh=H2LwRHOGZFXT5Nqja6YXpjgeYSHAigz0iR5WesZP3fc=;
+ b=XZDGllOb6U/+0apd1rmnNEg0DyjFseZbpM/mODoy/Z8FL/BhN9tJ+NDAi49xNh85
+ D7A3QlBrZVNB1E8pUVfmp1qACUbGJB6vREr0K6bj5NoCPIs2IBwv0tBYAEGpKyz6szK
+ XKAgO6zZQkc4qu+M1V5SUXPlb+tjraJbEJJIpi+U=
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
- s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1574303386;
+ s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1574325987;
  h=MIME-Version:Content-Type:Content-Transfer-Encoding:Date:From:To:Cc:Subject:In-Reply-To:References:Message-ID:Feedback-ID;
- bh=o4LGGG49L2mFI3Z0m3DVLA0OdYWIS2drsZMLKtkysYw=;
- b=LWP1mzB3HNmQziis7476H49PDXY6yaspGCDNJFC12HG36GfK6aijzscjfVEkLVP5
- D/wxkYU2Uwp+4p7ZSROF2bdA5xwyIdW7YMGFgudB4XPUr9mFZY5j81wDGStKFT15+Gj
- 1zVxw7GBS3ZdhY+46HdpvWUCGf4Eika3b0zhaj6Q=
+ bh=H2LwRHOGZFXT5Nqja6YXpjgeYSHAigz0iR5WesZP3fc=;
+ b=Q44baoURx5mKh/QYndAPm4Fon6SKNpmSefH9XhrT8lwZRqY/8spyzqaHSPDXJbOz
+ C0eQ46DCfTXTW9aiuH3ZhW+lFyweEmpnOxrPUFPSYvxW4+FEM4fh1c2eYlqsOMVeW/y
+ Tcch5uU21jvx9tE6vra+CeYFV7yrCC4pkq8DZcEw=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  aws-us-west-2-caf-mail-1.web.codeaurora.org
 X-Spam-Level: 
-X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED
+X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,URIBL_BLOCKED
  autolearn=unavailable autolearn_force=no version=3.4.0
 MIME-Version: 1.0
-Date: Thu, 21 Nov 2019 02:29:46 +0000
-From: wgong@codeaurora.org
-To: Kalle Valo <kvalo@codeaurora.org>
-Subject: Re: [PATCH v2 3/3] mmc: core: Re-work HW reset for SDIO cards
-In-Reply-To: <87zhgqmref.fsf@kamboji.qca.qualcomm.com>
-References: <20191109103046.26445-1-ulf.hansson@linaro.org>
- <20191109103046.26445-4-ulf.hansson@linaro.org>
- <CAD=FV=VHReD5qnvcQLHvfgKHnHLbfDLZHwXtY-LV5uy_VCYpPA@mail.gmail.com>
- <CAPDyKFrCyJBz2=RzKPxqn0FSEq500=dEDsTUWYZeoFKWvSRAdA@mail.gmail.com>
- <87zhgr5af6.fsf@codeaurora.org>
- <6e6b53b28581a8f1a2944ca0bc65311e@codeaurora.org>
- <0101016e87aeb8b6-761ad812-5da7-4b0d-8cae-c69633d90de0-000000@us-west-2.amazonses.com>
- <CAPDyKFoWxw9r=GZhvF=TxHxo=zRfKr0hknEeQNPdfwPx4ORxuQ@mail.gmail.com>
- <87zhgqmref.fsf@kamboji.qca.qualcomm.com>
-Message-ID: <0101016e8bcb4b75-02a036fd-8635-4994-ba76-e3cacaa64a61-000000@us-west-2.amazonses.com>
-X-Sender: wgong@codeaurora.org
+Date: Thu, 21 Nov 2019 08:46:27 +0000
+From: govinds@codeaurora.org
+To: Rob Herring <robh@kernel.org>
+Subject: Re: [PATCH v2 1/2] dt: bindings: add dt entry flag to skip SCM call
+ for msa region
+In-Reply-To: <20191114191640.GA8426@bogus>
+References: <20191111042508.12628-1-govinds@codeaurora.org>
+ <20191111042508.12628-2-govinds@codeaurora.org>
+ <20191114191640.GA8426@bogus>
+Message-ID: <0101016e8d2426fc-31499903-e1a0-44b3-83eb-73ba4f4a8b4a-000000@us-west-2.amazonses.com>
+X-Sender: govinds@codeaurora.org
 User-Agent: Roundcube Webmail/1.3.9
-X-SES-Outgoing: 2019.11.21-54.240.27.21
+X-SES-Outgoing: 2019.11.21-54.240.27.186
 Feedback-ID: 1.us-west-2.CZuq2qbDmUIuT3qdvXlRHZZCpfZqZ4GtG9v3VKgRyF0=:AmazonSES
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191120_182951_308953_33C81CA3 
-X-CRM114-Status: GOOD (  14.56  )
+X-CRM114-CacheID: sfid-20191121_004629_928899_ACB1A53B 
+X-CRM114-Status: UNSURE (   8.15  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.1 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.1 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [54.240.27.21 listed in list.dnswl.org]
+ no trust [54.240.27.186 listed in list.dnswl.org]
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
  mail domains are different
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -94,103 +90,67 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Ulf Hansson <ulf.hansson@linaro.org>, Tony Lindgren <tony@atomide.com>,
- linux-wireless <linux-wireless@vger.kernel.org>,
- Brian Norris <briannorris@chromium.org>,
- Linux MMC List <linux-mmc@vger.kernel.org>,
- Doug Anderson <dianders@chromium.org>, ath10k@lists.infradead.org,
- Adrian Hunter <adrian.hunter@intel.com>,
- Erik Stromdahl <erik.stromdahl@gmail.com>,
- Matthias Kaehlcke <mka@chromium.org>, Eyal Reizer <eyalreizer@gmail.com>
+Cc: devicetree@vger.kernel.org, linux-wireless@vger.kernel.org,
+ ath10k@lists.infradead.org
 Content-Transfer-Encoding: 7bit
 Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On 2019-11-21 00:41, Kalle Valo wrote:
-> Ulf Hansson <ulf.hansson@linaro.org> writes:
+Hi Rob,
+
+On 2019-11-15 00:46, Rob Herring wrote:
+> On Mon, Nov 11, 2019 at 09:55:07AM +0530, Govind Singh wrote:
+>> Add boolean context flag to disable SCM call for statically
+>> mapped msa region.
 > 
->> On Wed, 20 Nov 2019 at 08:20, Kalle Valo <kvalo@codeaurora.org> wrote:
->>> 
->>> wgong@codeaurora.org writes:
->>> 
->>> > On 2019-11-20 14:28, Kalle Valo wrote:
->>> >> + wen, ath10k
->>> >>
->>> >> Ulf Hansson <ulf.hansson@linaro.org> writes:
->>> >>
->>> >>> On Tue, 12 Nov 2019 at 01:33, Doug Anderson <dianders@chromium.org>
->>> >>> wrote:
->>> >>>>
->>> >>>> Hi,
->>> >>>>
->>> >>>> On Sat, Nov 9, 2019 at 2:31 AM Ulf Hansson
->>> >>>> <ulf.hansson@linaro.org> wrote:
->>> >>>> >
->>> >>>> > diff --git a/drivers/mmc/core/core.c b/drivers/mmc/core/core.c
->>> >>>> > index 6f8342702c73..abf8f5eb0a1c 100644
->>> >>>> > --- a/drivers/mmc/core/core.c
->>> >>>> > +++ b/drivers/mmc/core/core.c
->>> >>>> > @@ -1469,8 +1469,7 @@ void mmc_detach_bus(struct mmc_host *host)
->>> >>>> >         mmc_bus_put(host);
->>> >>>> >  }
->>> >>>> >
->>> >>>> > -static void _mmc_detect_change(struct mmc_host *host, unsigned long delay,
->>> >>>> > -                               bool cd_irq)
->>> >>>> > +void _mmc_detect_change(struct mmc_host *host, unsigned long delay, bool cd_irq)
->>> >>>> >  {
->>> >>>> >         /*
->>> >>>> >          * If the device is configured as wakeup, we prevent a new sleep for
->>> >>>> > @@ -2129,7 +2128,7 @@ int mmc_hw_reset(struct mmc_host *host)
->>> >>>> >         ret = host->bus_ops->hw_reset(host);
->>> >>>> >         mmc_bus_put(host);
->>> >>>> >
->>> >>>> > -       if (ret)
->>> >>>> > +       if (ret < 0)
->>> >>>> >                 pr_warn("%s: tried to HW reset card, got error %d\n",
->>> >>>> >                         mmc_hostname(host), ret);
->>> >>>>
->>> >>>> Other callers besides marvell need to be updated?  In theory only
->>> >>>> SDIO
->>> >>>> should have positive return values so I guess we don't care about the
->>> >>>> caller in drivers/mmc/core/block.c, right?
->>> >>>
->>> >>> Correct, but maybe I should add some more information about that in a
->>> >>> function header of mmc_hw_reset(). Let me consider doing that as a
->>> >>> change on top.
->>> >>>
->>> >>>>  What about:
->>> >>>>
->>> >>>> drivers/net/wireless/ath/ath10k/sdio.c
->>> >>>>
->>> >>>> ...I guess I don't know if there is more than one function probed
->>> >>>> there.  Maybe there's not and thus we're fine here too?
->>> >>>
->>> >>> Well, honestly I don't know.
->>> >>>
->>> >>> In any case, that would mean the driver is broken anyways and needs to
->>> >>> be fixed. At least that's my approach to doing this change.
->>> >>
->>> >> Wen, does QCA6174 or QCA9377 SDIO devices have other SDIO functions,
->>> >> for
->>> >> example bluetooth? I'm just wondering how should we handle this in
->>> >> ath10k.
->>> >
->>> > it does not have other SDIO functions for QCA6174 or QCA9377.
->>> 
->>> Thanks, then I don't think we need to change anything in ath10k.
->>> 
->>> --
->>> Kalle Valo
->> 
->> Kalle, Wen - thanks for looking into this and for the confirmation.
->> 
->> One thing though, perhaps it's worth to add this as a comment in the
->> code for ath10k, where mmc_hw_reset() is called. Just to make it
->> clear.
+> Can't this be implied by the compatible string?
 > 
-> Good point. Wen, can you send a patch, please?
-Kalle, sure, I will send the patch.
+
+same soc compatible will be used in older TZ vs new TZ.
+Due to this reason I added this.
+
+>> 
+>> Signed-off-by: Govind Singh <govinds@codeaurora.org>
+>> ---
+>>  .../devicetree/bindings/net/wireless/qcom,ath10k.txt          | 4 
+>> ++++
+>>  1 file changed, 4 insertions(+)
+>> 
+>> diff --git 
+>> a/Documentation/devicetree/bindings/net/wireless/qcom,ath10k.txt 
+>> b/Documentation/devicetree/bindings/net/wireless/qcom,ath10k.txt
+>> index 017128394a3e..7ba22918bab7 100644
+>> --- a/Documentation/devicetree/bindings/net/wireless/qcom,ath10k.txt
+>> +++ b/Documentation/devicetree/bindings/net/wireless/qcom,ath10k.txt
+>> @@ -88,6 +88,9 @@ Optional properties:
+>>  		    of the host capability QMI request
+>>  - qcom,xo-cal-data: xo cal offset to be configured in xo trim 
+>> register.
+>> 
+>> +- qcom,msa_fixed_perm: Boolean context flag to disable SCM call for 
+>> statically
+>> +		       mapped msa region.
+>> +
+> 
+> s/_/-/
+> 
+>>  Example (to supply PCI based wifi block details):
+>> 
+>>  In this example, the node is defined as child node of the PCI 
+>> controller.
+>> @@ -185,4 +188,5 @@ wifi@18000000 {
+>>  		vdd-3.3-ch0-supply = <&vreg_l25a_3p3>;
+>>  		memory-region = <&wifi_msa_mem>;
+>>  		iommus = <&apps_smmu 0x0040 0x1>;
+>> +		qcom,msa_fixed_perm;
+>>  };
+>> --
+>> 2.22.0
+>> 
+
+BR,
+Govind
 
 _______________________________________________
 ath10k mailing list
