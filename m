@@ -2,64 +2,68 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B2232104E4A
-	for <lists+ath10k@lfdr.de>; Thu, 21 Nov 2019 09:46:39 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 009A0106903
+	for <lists+ath10k@lfdr.de>; Fri, 22 Nov 2019 10:45:43 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:Message-ID:References:In-Reply-To:Subject:To:From:
-	Date:MIME-Version:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=sIpbUmCBbbwmbbPj+tiPcUXKz3p4kQjNkNg668U3knQ=; b=Cz8kLS0sKx2Ov4jTC8isw+uLi
-	1v22tW7EA4eIIZtiKYaBQ4NFB+ZnjgQ4v/d4ADAJWOfIFqhZOYZ/QWBnH5MIDLvu3pyYx0DKzH+Qg
-	Pnu3ICBW/nfcw+0s9x/Y2lzVtz3vG/bG1a/9I2ubNggAoNAzsAHRgBjUE6tZI5coqunj87fQfHx+p
-	bfMrpH5glSbMdqTS4AmqSSXudXIEtdyOHQoFqdMcZpuktd+rFCWh1m9l2yJohCNqDRwtuWJqO1Sbi
-	0UQf/vIqdhepKC76v5IjbCyONTBDIFW4RUomqErFL+bpLWh+bv1BDKvdezarrLLWO9eBy1lNQQTxF
-	5Thp3niGw==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
+	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=G3Y18v90k5e/E9HJKmJkuKPlN66TCauwm/D3ci1fF8M=; b=swjLfz8B9HTapu
+	iSb+rnkh0x/7PfGSEWElV5N7VLdU8SZbV9JCnFb9410jFVUklscW98/YTME9RfXF32i7QegS0KbvI
+	/I2GzKrusfy9TD8EIaqs/cIjXFuXfdR97wjgyLhj8VOS/9Dp9Wb/C4zsuyD6elIAPFD0pEWy+Vba+
+	IOlKmOKwZaDfbhJDKSEzpQwkU/g/e6Ddu7lxOCpZ5DSHqfqeJvCLuQ9gfWk8xwbdLIGKshRgzH430
+	xZFDYubSbvqMtTjlj6PEhKqkPDev15Wxv/KSTH/24nRo4+Q5Bb4V4LRwAk2EeTpUC1LgOXAanzkQz
+	zEcB90GraCOVqEeTB2QQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iXi6j-0000JL-NB; Thu, 21 Nov 2019 08:46:33 +0000
-Received: from a27-186.smtp-out.us-west-2.amazonses.com ([54.240.27.186])
+	id 1iY5VR-0000px-0P; Fri, 22 Nov 2019 09:45:37 +0000
+Received: from a27-55.smtp-out.us-west-2.amazonses.com ([54.240.27.55])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iXi6f-0000Ic-Rt
- for ath10k@lists.infradead.org; Thu, 21 Nov 2019 08:46:31 +0000
+ id 1iY5VJ-0000mn-Rk
+ for ath10k@lists.infradead.org; Fri, 22 Nov 2019 09:45:32 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
- s=zsmsymrwgfyinv5wlfyidntwsjeeldzt; d=codeaurora.org; t=1574325987;
- h=MIME-Version:Content-Type:Content-Transfer-Encoding:Date:From:To:Cc:Subject:In-Reply-To:References:Message-ID;
- bh=H2LwRHOGZFXT5Nqja6YXpjgeYSHAigz0iR5WesZP3fc=;
- b=XZDGllOb6U/+0apd1rmnNEg0DyjFseZbpM/mODoy/Z8FL/BhN9tJ+NDAi49xNh85
- D7A3QlBrZVNB1E8pUVfmp1qACUbGJB6vREr0K6bj5NoCPIs2IBwv0tBYAEGpKyz6szK
- XKAgO6zZQkc4qu+M1V5SUXPlb+tjraJbEJJIpi+U=
+ s=zsmsymrwgfyinv5wlfyidntwsjeeldzt; d=codeaurora.org; t=1574415927;
+ h=From:To:Cc:Subject:References:Date:In-Reply-To:Message-ID:MIME-Version:Content-Type;
+ bh=am+FFL6VsTvZN6iBIEE+fypD9VaYtOR93JqaXHR6Suo=;
+ b=omk8toF88LkUEnBlEgiW3W70MkZFW4JmmCVMViGiG3H8AMAZWRdYUlQ+4pdOid/u
+ zEyFxOIWl+vKQQUdPV7LfJPdbJjlQeMjiPtv646/Ihp6lLk+ztswbFFx5QfOZe0tPn2
+ ReiErpVGtSTqeO3Kuy4udAaeJNfq+0GZ9Hbma92Q=
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
- s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1574325987;
- h=MIME-Version:Content-Type:Content-Transfer-Encoding:Date:From:To:Cc:Subject:In-Reply-To:References:Message-ID:Feedback-ID;
- bh=H2LwRHOGZFXT5Nqja6YXpjgeYSHAigz0iR5WesZP3fc=;
- b=Q44baoURx5mKh/QYndAPm4Fon6SKNpmSefH9XhrT8lwZRqY/8spyzqaHSPDXJbOz
- C0eQ46DCfTXTW9aiuH3ZhW+lFyweEmpnOxrPUFPSYvxW4+FEM4fh1c2eYlqsOMVeW/y
- Tcch5uU21jvx9tE6vra+CeYFV7yrCC4pkq8DZcEw=
+ s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1574415927;
+ h=From:To:Cc:Subject:References:Date:In-Reply-To:Message-ID:MIME-Version:Content-Type:Feedback-ID;
+ bh=am+FFL6VsTvZN6iBIEE+fypD9VaYtOR93JqaXHR6Suo=;
+ b=QO5j5PAxwJmCFImEss223OJW87U+z6gpKndu9auPthBe/+EIn9azgA6cwtaO3o/I
+ tqKLiEwWTsuGsM6VoM+PQk/CMZr8k8CnCUA0IHt2LoFwAGxveZqWzLI0bhHfTCZTmF0
+ RbYm23qdaSmcmtIayMQ/JBog9D7O10LQMV5F0CTc=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  aws-us-west-2-caf-mail-1.web.codeaurora.org
 X-Spam-Level: 
-X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,URIBL_BLOCKED
- autolearn=unavailable autolearn_force=no version=3.4.0
+X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,SPF_NONE
+ autolearn=ham autolearn_force=no version=3.4.0
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 5A660C447A9
+Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
+ spf=none smtp.mailfrom=kvalo@codeaurora.org
+From: Kalle Valo <kvalo@codeaurora.org>
+To: Zhi Chen <zhichen@codeaurora.org>
+Subject: Re: [PATCH RFC,
+ v2] Revert "ath10k: fix DMA related firmware crashes on multiple
+ devices"
+References: <1573808573-12159-1-git-send-email-zhichen@codeaurora.org>
+Date: Fri, 22 Nov 2019 09:45:27 +0000
+In-Reply-To: <1573808573-12159-1-git-send-email-zhichen@codeaurora.org> (Zhi
+ Chen's message of "Fri, 15 Nov 2019 17:02:53 +0800")
+Message-ID: <0101016e9280880c-721d1923-ec22-463b-8945-d219f88c915b-000000@us-west-2.amazonses.com>
+User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/24.5 (gnu/linux)
 MIME-Version: 1.0
-Date: Thu, 21 Nov 2019 08:46:27 +0000
-From: govinds@codeaurora.org
-To: Rob Herring <robh@kernel.org>
-Subject: Re: [PATCH v2 1/2] dt: bindings: add dt entry flag to skip SCM call
- for msa region
-In-Reply-To: <20191114191640.GA8426@bogus>
-References: <20191111042508.12628-1-govinds@codeaurora.org>
- <20191111042508.12628-2-govinds@codeaurora.org>
- <20191114191640.GA8426@bogus>
-Message-ID: <0101016e8d2426fc-31499903-e1a0-44b3-83eb-73ba4f4a8b4a-000000@us-west-2.amazonses.com>
-X-Sender: govinds@codeaurora.org
-User-Agent: Roundcube Webmail/1.3.9
-X-SES-Outgoing: 2019.11.21-54.240.27.186
+X-SES-Outgoing: 2019.11.22-54.240.27.55
 Feedback-ID: 1.us-west-2.CZuq2qbDmUIuT3qdvXlRHZZCpfZqZ4GtG9v3VKgRyF0=:AmazonSES
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191121_004629_928899_ACB1A53B 
-X-CRM114-Status: UNSURE (   8.15  )
+X-CRM114-CacheID: sfid-20191122_014530_464480_A7634DEA 
+X-CRM114-Status: UNSURE (   7.99  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.1 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -67,7 +71,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [54.240.27.186 listed in list.dnswl.org]
+ no trust [54.240.27.55 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
@@ -90,67 +94,40 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, linux-wireless@vger.kernel.org,
- ath10k@lists.infradead.org
+Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org
+Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Hi Rob,
+Zhi Chen <zhichen@codeaurora.org> writes:
 
-On 2019-11-15 00:46, Rob Herring wrote:
-> On Mon, Nov 11, 2019 at 09:55:07AM +0530, Govind Singh wrote:
->> Add boolean context flag to disable SCM call for statically
->> mapped msa region.
-> 
-> Can't this be implied by the compatible string?
-> 
+> This reverts commit 76d164f582150fd0259ec0fcbc485470bcd8033e.
+> PCIe hung issue was observed on multiple platforms. The issue was reproduced
+> when DUT was configured as AP and associated with 50+ STAs.
+>
+> With PCIe protocol analyzer, we can see DMA Read crossing 4KB boundary when
+> issue happened. It broke PCIe spec and caused PCIe stuck.
+>
+> Tested:  IPQ8064 + QCA9984 with firmware 10.4-3.10-00047
+>          QCS404 + QCA9984 with firmware 10.4-3.9.0.2--00044
+>          Synaptics AS370 + QCA9888  with firmware 10.4-3.9.0.2--00040
+>
+> Signed-off-by: Zhi Chen <zhichen@codeaurora.org>
+> ---
 
-same soc compatible will be used in older TZ vs new TZ.
-Due to this reason I added this.
+All comments under --- line is not added to the git repository.
 
->> 
->> Signed-off-by: Govind Singh <govinds@codeaurora.org>
->> ---
->>  .../devicetree/bindings/net/wireless/qcom,ath10k.txt          | 4 
->> ++++
->>  1 file changed, 4 insertions(+)
->> 
->> diff --git 
->> a/Documentation/devicetree/bindings/net/wireless/qcom,ath10k.txt 
->> b/Documentation/devicetree/bindings/net/wireless/qcom,ath10k.txt
->> index 017128394a3e..7ba22918bab7 100644
->> --- a/Documentation/devicetree/bindings/net/wireless/qcom,ath10k.txt
->> +++ b/Documentation/devicetree/bindings/net/wireless/qcom,ath10k.txt
->> @@ -88,6 +88,9 @@ Optional properties:
->>  		    of the host capability QMI request
->>  - qcom,xo-cal-data: xo cal offset to be configured in xo trim 
->> register.
->> 
->> +- qcom,msa_fixed_perm: Boolean context flag to disable SCM call for 
->> statically
->> +		       mapped msa region.
->> +
-> 
-> s/_/-/
-> 
->>  Example (to supply PCI based wifi block details):
->> 
->>  In this example, the node is defined as child node of the PCI 
->> controller.
->> @@ -185,4 +188,5 @@ wifi@18000000 {
->>  		vdd-3.3-ch0-supply = <&vreg_l25a_3p3>;
->>  		memory-region = <&wifi_msa_mem>;
->>  		iommus = <&apps_smmu 0x0040 0x1>;
->> +		qcom,msa_fixed_perm;
->>  };
->> --
->> 2.22.0
->> 
+> v2: revert 10.4 only because old chips have different AXI RD/WR CFG
 
-BR,
-Govind
+So you should also mention this in the commit log so it gets properly
+archived.
+
+And in the next version please remove RFC, as it seems we are reaching a
+consensus that is the right approach. Or are there any comments?
+
+-- 
+https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
 
 _______________________________________________
 ath10k mailing list
