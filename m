@@ -2,70 +2,70 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9605F108D43
-	for <lists+ath10k@lfdr.de>; Mon, 25 Nov 2019 12:51:17 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1A43F108D4B
+	for <lists+ath10k@lfdr.de>; Mon, 25 Nov 2019 12:52:59 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:Date:Message-ID:To:References:
 	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Gn3469OvntByuVZZUpApVBW7Njb7DUSHh46lzzcq09k=; b=qzpkThddInPjas
-	UqHFF0mLFoaFaHtQYjccrBnovWHuevWxKblSkZhZHAHYRmH2OvWwPNn8ugDfi1J6SvEuWZanCLXIm
-	4vcgKZp49XLIQWP5395j5QVmSSh5tBc3VxKlSQH2sM18KjMcdp4KudhrRXMFL0POAvAzY03z/s8F4
-	doPdr+Vb+ZdPNm/Gvo0inOE0msLD6Hn5EWWlMo8PK+uPqQkC6238ixxJMeyiHDNcMjlS8hiC/lyQ1
-	5DIHrCC51OJbMQfv/iZ5I1Jkg92/N0ZNfLWYXEylh+l/Z0UL5pvCx9jSuDV/tZrUIZpu3mHvOo9AD
-	UsNrYHjAPLzGhmZ2MwrQ==;
+	List-Owner; bh=FGh6hGcqqDJ/TCNv8HlE2yPXkGEKMDttBUDcZFbwtlY=; b=OhaAEYVKDLR/aN
+	TyYQZcRKfJQlolNdkUt1XJU5ujZo5Tv2UHFoW8WFYQR0EbPP0srMFY1zDfEFGU4Pc6ANJwbEWY36i
+	xhvtq3y8m0h+shXjpv60WpwvvjTozvRV8XgiGwmbxTGZC3vwDVPQOr2E3K4wam0Rw9AMQiKp+u6YZ
+	mjiCS7pbrwLmBPgaYRaCn8F1N7U5lAOkhbCnL/ZCLxL9bf1X6NhWlxGrag0rnC5AbfPAfaK7JvVNT
+	IE5Hfj53nDNaUk1toaH8785xtwbBM5JnS/ZNTFZhzIbNtU8MlkUOsZvsnIluFeMJIwWITg7UaGmUF
+	1bN3h1eSEyzvghasz3Nw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iZCtf-0004Oo-TL; Mon, 25 Nov 2019 11:51:15 +0000
+	id 1iZCvJ-0004pG-LD; Mon, 25 Nov 2019 11:52:57 +0000
 Received: from a27-18.smtp-out.us-west-2.amazonses.com ([54.240.27.18])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iZCtb-0004OT-K4
- for ath10k@lists.infradead.org; Mon, 25 Nov 2019 11:51:12 +0000
+ id 1iZCvE-0004ml-GS
+ for ath10k@lists.infradead.org; Mon, 25 Nov 2019 11:52:55 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
- s=zsmsymrwgfyinv5wlfyidntwsjeeldzt; d=codeaurora.org; t=1574682669;
+ s=zsmsymrwgfyinv5wlfyidntwsjeeldzt; d=codeaurora.org; t=1574682770;
  h=Content-Type:MIME-Version:Content-Transfer-Encoding:Subject:From:In-Reply-To:References:To:Cc:Message-Id:Date;
- bh=XpjGUJp83UVgBT72TD+mw58jNf4gK89doIdvMQ7q054=;
- b=c9L49gzMQ0JZHUga7hzWKEfcbZJ+10HpLOYxEpHOzg7DdoJwlH4d+XFbu3vDs9KU
- 8nUT4cZ5Dp+dRdePtxcnZ7h5nOrb8Td0q1o1cs106e0jAyZ2b+AtK1j3GOYt+e1FJnt
- gy1iaenvPA/ltAcVQ6eWQ22BHaFCRJDHyfEvZKGE=
+ bh=uWtxVtS/eSocGqMTSWcaIGLD0hEon0BJRNZIcLgytwk=;
+ b=oLu/ZUXY561iZwUxgzLPqkUUnT/LCRFjHlel303XKQRacoV0w3GWT2CCMTC2uF89
+ /evJnCp4hMLGajuV+rCxcNN/bYHH12hv2rJR6Qdxu9IUnbec1vJoU4X2oNo0u0Tm7yU
+ NP4P5Fz1yaqpt6g7ZzbooknGzaRXQyBYXCk29AI4=
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
- s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1574682669;
+ s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1574682770;
  h=Content-Type:MIME-Version:Content-Transfer-Encoding:Subject:From:In-Reply-To:References:To:Cc:Message-Id:Date:Feedback-ID;
- bh=XpjGUJp83UVgBT72TD+mw58jNf4gK89doIdvMQ7q054=;
- b=WYcEHguyhZxEXqdPcv0afF9WyuRfA7W/giPDt2hOwrOxX+uiDE8wpmAU3xB4IxJa
- RZeE++qz8Bz5nq40PsBWECl1DPMyLD3XhVnY5Q1KNp5GkKrv0BDTgWCDWiXw2K1LAw+
- +kzE6w7nYIssxu6uA0BZYBzHzjeEFH878lyn9ilA=
+ bh=uWtxVtS/eSocGqMTSWcaIGLD0hEon0BJRNZIcLgytwk=;
+ b=LbHiPvzVlN5CafSgo/V5bOiIWVUQZscAuNvb7uJ7AO24B+S2Z20+GoFFH2zY45lC
+ 6b8SyI3vwkrQ9NkS0eGaBalE4YwI94QEC6LlAVZOc+aJGVjA5KVthzsAUJLYXexB8mI
+ /pAoSuI72oIlh2ndV1pE7UxmXDoLatvQV8fbFLy0=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  aws-us-west-2-caf-mail-1.web.codeaurora.org
 X-Spam-Level: 
 X-Spam-Status: No, score=0.5 required=2.0 tests=ALL_TRUSTED,MISSING_DATE,
- MISSING_MID,SPF_NONE,URIBL_BLOCKED autolearn=no autolearn_force=no
- version=3.4.0
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org E4E70C43383
+ MISSING_MID,SPF_NONE autolearn=no autolearn_force=no version=3.4.0
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 12F9BC76F44
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
  spf=none smtp.mailfrom=kvalo@codeaurora.org
 MIME-Version: 1.0
-Subject: Re: [PATCH 1/2] ath10k: cosmetic cleanup to sdio files
+Subject: Re: [PATCH] ath10k: correct the tlv len of
+ ath10k_wmi_tlv_op_gen_config_pno_start
 From: Kalle Valo <kvalo@codeaurora.org>
-In-Reply-To: <1571910849-11489-1-git-send-email-kvalo@codeaurora.org>
-References: <1571910849-11489-1-git-send-email-kvalo@codeaurora.org>
-To: Kalle Valo <kvalo@codeaurora.org>
+In-Reply-To: <20191107093031.24131-1-wgong@codeaurora.org>
+References: <20191107093031.24131-1-wgong@codeaurora.org>
+To: Wen Gong <wgong@codeaurora.org>
 User-Agent: pwcli/0.0.0-git (https://github.com/kvalo/pwcli/) Python/2.7.12
-Message-ID: <0101016ea266b076-ab83853f-010c-4aca-bee0-f37af2e05a8c-000000@us-west-2.amazonses.com>
-Date: Mon, 25 Nov 2019 11:51:09 +0000
+Message-ID: <0101016ea2683bf1-d3eb71cd-3511-4c90-a46a-f6e42d02656f-000000@us-west-2.amazonses.com>
+Date: Mon, 25 Nov 2019 11:52:50 +0000
 X-SES-Outgoing: 2019.11.25-54.240.27.18
 Feedback-ID: 1.us-west-2.CZuq2qbDmUIuT3qdvXlRHZZCpfZqZ4GtG9v3VKgRyF0=:AmazonSES
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191125_035111_682287_9D056D1A 
-X-CRM114-Status: UNSURE (   2.51  )
+X-CRM114-CacheID: sfid-20191125_035252_591135_3BDC021A 
+X-CRM114-Status: UNSURE (   4.01  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: 2.5 (++)
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (2.5 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
@@ -81,7 +81,6 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
- 2.5 TO_EQ_FM_DIRECT_MX     To == From and direct-to-MX
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -99,19 +98,25 @@ Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Kalle Valo <kvalo@codeaurora.org> wrote:
+Wen Gong <wgong@codeaurora.org> wrote:
 
-> Do some cosmetic cleanup while reviewing the files. No functional changes.
+> the tlv len is set to the total len of the wmi cmd, it will trigger
+> firmware crash, correct the tlv len.
 > 
+> Tested with QCA6174 SDIO with firmware
+> WLAN.RMH.4.4.1-00017-QCARMSWP-1 and QCA6174
+> PCIE with firmware WLAN.RM.4.4.1-00110-QCARMSWPZ-1.
+> 
+> Fixes: ce834e280f2f875 ("ath10k: support NET_DETECT WoWLAN feature")
+> Signed-off-by: Wen Gong <wgong@codeaurora.org>
 > Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 
-2 patches applied to ath-next branch of ath.git, thanks.
+Patch applied to ath-next branch of ath.git, thanks.
 
-efd2f4c5016b ath10k: sdio: cosmetic cleanup
-2246c2156590 ath10k: sdio: remove struct ath10k_sdio_rx_data::status
+e01cc82c4d1e ath10k: correct the tlv len of ath10k_wmi_tlv_op_gen_config_pno_start
 
 -- 
-https://patchwork.kernel.org/patch/11208761/
+https://patchwork.kernel.org/patch/11232379/
 
 https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
 
