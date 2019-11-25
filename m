@@ -2,67 +2,63 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2486F108DA9
-	for <lists+ath10k@lfdr.de>; Mon, 25 Nov 2019 13:14:17 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6E5E7108E84
+	for <lists+ath10k@lfdr.de>; Mon, 25 Nov 2019 14:10:13 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:Date:Message-ID:To:References:
-	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=sYfU8JPtIR2oWpODix/oudzNr5M0fqd3Q6Z619wdjXw=; b=NAPzi6EZNViFF/
-	grmJfZ3b72nOG6XGzyYBWjejjmH3JHPT+nwxmIxeCf4bEhdndHMuA7Pdvom+STNYFpQLvKaqzXwIo
-	9OLEh8q9OKs2p/Z4Vbc0mOOkJKuVTabZPvywKsfzUkUecTJz3aaf6U8EmxFzDM/YnQslTd7PGVnZb
-	z+EhmSRSO4PlvYUUxz0xOchBGrFhRKFR26lRiIfC90iyXGH9MAvuShVXqxLkAPkIgqWJCFt4BVNbi
-	wCe2Xyt2Xq+ibXa3Q/awx2yVHrYA+nCwlFZ4bD2kmhSgypB/yEGoD0LFY/6zOKK+mLLWNBHFoAxy9
-	fwBjgeJ7f2ArJfPwxGHg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=4WNyHP10t8Nj5/6gPLimjE0gNIMttV9s5S8zgE7r9kM=; b=BZAPDNnh7vRKEl
+	SxYyLrukTm2c9+i8puk6UI/MfIit1fV4U8PTqIDpxJB8txy2X04KU9cKLyo1FlspZ1OmjxG43/nUY
+	VsHtWzTNTo+pq1BwBD0lMnglQM8APNBUuCnJYkkjMQSU4JOKiijL8CX/3crczyeSuxH7UsYWaPStq
+	pOPeLDXRDyjKhAWslCenBog4K8+taCyr3itmGRZmDDuO4SlgNZOaM8CHQTz8JKzDdLI0rbLTNcyzT
+	e0qL48YCG7Y2y3E/DsiZ8z6j9ertuvLAbbXZGZaE6597hK26h2WRoIPaPhQptfpWN0oIWXx0NRyHp
+	K2dQpVQL7tlXGK393zHw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iZDFv-00041V-Cd; Mon, 25 Nov 2019 12:14:15 +0000
-Received: from a27-55.smtp-out.us-west-2.amazonses.com ([54.240.27.55])
+	id 1iZE82-0000qb-Ca; Mon, 25 Nov 2019 13:10:10 +0000
+Received: from a27-10.smtp-out.us-west-2.amazonses.com ([54.240.27.10])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iZDFq-00040p-Sc
- for ath10k@lists.infradead.org; Mon, 25 Nov 2019 12:14:12 +0000
+ id 1iZE7x-0008Qe-4O
+ for ath10k@lists.infradead.org; Mon, 25 Nov 2019 13:10:06 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
- s=zsmsymrwgfyinv5wlfyidntwsjeeldzt; d=codeaurora.org; t=1574684048;
- h=Content-Type:MIME-Version:Content-Transfer-Encoding:Subject:From:In-Reply-To:References:To:Cc:Message-Id:Date;
- bh=OGZ2n8F7a9gKBAe87Xm3/4zY0uhWgsuXNCXAZXK+jtE=;
- b=Gtr9lo4oSzhuSwwzXSD+ysgNb4eVuBlbuYk7TRChJotBgXI2mGb++kacjvTAg0Ak
- Iq4EbPSVfEMyh/fHoA2mDynvzlc4PA3Ln+rHchP/F4McseQrfXRRYhmVIZQyoLxdpEm
- 7xh/D3mnBIQRr3W9D+6hloKoZkjZsQSHlPx45TeE=
+ s=zsmsymrwgfyinv5wlfyidntwsjeeldzt; d=codeaurora.org; t=1574687400;
+ h=From:To:Cc:Subject:Date:Message-Id:MIME-Version:Content-Transfer-Encoding;
+ bh=2Owm28Qx56PjGaPFd81gPGhv/n64vef1LWZesWq1Udw=;
+ b=ECczmBC+mmwX8H2MjzRZYTp6kN2KQtGbvbiuCEamxlGEVxI49v4dX4A1s2gRQ3q2
+ tKCH/KBuXrv+JrJ2h6IJNiVhqSCrJSpOGot9eOEZE5o4pQB1SW6h5Ul8ZwqzPz8eham
+ nUIotvITUsX5zLYaOU9lugUebEkj4+Ox1gZRJZy0=
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
- s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1574684048;
- h=Content-Type:MIME-Version:Content-Transfer-Encoding:Subject:From:In-Reply-To:References:To:Cc:Message-Id:Date:Feedback-ID;
- bh=OGZ2n8F7a9gKBAe87Xm3/4zY0uhWgsuXNCXAZXK+jtE=;
- b=PDJGsBygcORFxW9KDVoeFi0h5LjnUipLq/CSswDvDCiSrJ4ScPMQSlJZ6YNmjimm
- zG+C5r4Ibu072ORpk5pjubCrzs+c5fc2nDUy+lEZo2VnNz6qwqc8CigeZ7Q5Kk9gtTx
- HDauPAuOOYVF4BJWso7+ifa0n6mxneHGaNGnLBPU=
+ s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1574687400;
+ h=From:To:Cc:Subject:Date:Message-Id:MIME-Version:Content-Transfer-Encoding:Feedback-ID;
+ bh=2Owm28Qx56PjGaPFd81gPGhv/n64vef1LWZesWq1Udw=;
+ b=dGx9RGhjt4PKwgL8tRiur+nWKp4zD32Afxn5hQVDMlcxDAFd3sjoASGPTwnBeO6r
+ /kWrXkDY2Kq+hSbU0A1Id+HFDIgsdJT2sape19knDHqRsz1EXH+SEunSL51QTdISMjp
+ ai5uhcjBqdG8xt+jOIovZCOVWmaHMD7w/MR1nD0U=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  aws-us-west-2-caf-mail-1.web.codeaurora.org
 X-Spam-Level: 
-X-Spam-Status: No, score=0.5 required=2.0 tests=ALL_TRUSTED,MISSING_DATE,
- MISSING_MID,SPF_NONE,URIBL_BLOCKED autolearn=no autolearn_force=no
- version=3.4.0
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 147E2C447A0
+X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,SPF_NONE,
+ URIBL_BLOCKED autolearn=ham autolearn_force=no version=3.4.0
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org E8196C433CB
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
- spf=none smtp.mailfrom=kvalo@codeaurora.org
+ spf=none smtp.mailfrom=govinds@codeaurora.org
+From: Govind Singh <govinds@codeaurora.org>
+To: ath10k@lists.infradead.org
+Subject: [PATCH] ath10k: move non-fatal warn logs to dbg level
+Date: Mon, 25 Nov 2019 13:10:00 +0000
+Message-ID: <0101016ea2aee33d-d5d92d04-d737-42be-8e94-c964dec2fc8f-000000@us-west-2.amazonses.com>
+X-Mailer: git-send-email 2.22.0
 MIME-Version: 1.0
-Subject: Re: [PATCH net-next v2] ath10k: fix RX of frames with broken FCS in
- monitor mode
-From: Kalle Valo <kvalo@codeaurora.org>
-In-Reply-To: <20191115105612.8531-1-linus.luessing@c0d3.blue>
-References: <20191115105612.8531-1-linus.luessing@c0d3.blue>
-To: =?utf-8?q?Linus_L=C3=BCssing?= <linus.luessing@c0d3.blue>
-User-Agent: pwcli/0.0.0-git (https://github.com/kvalo/pwcli/) Python/2.7.12
-Message-ID: <0101016ea27bbb36-28d87d93-198a-4e07-abb4-fe4efc2b9614-000000@us-west-2.amazonses.com>
-Date: Mon, 25 Nov 2019 12:14:08 +0000
-X-SES-Outgoing: 2019.11.25-54.240.27.55
+X-SES-Outgoing: 2019.11.25-54.240.27.10
 Feedback-ID: 1.us-west-2.CZuq2qbDmUIuT3qdvXlRHZZCpfZqZ4GtG9v3VKgRyF0=:AmazonSES
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191125_041410_952618_595619C8 
-X-CRM114-Status: UNSURE (   4.21  )
+X-CRM114-CacheID: sfid-20191125_051005_208504_5285A36B 
+X-CRM114-Status: UNSURE (   7.57  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -70,7 +66,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [54.240.27.55 listed in list.dnswl.org]
+ no trust [54.240.27.10 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
  mail domains are different
@@ -93,32 +89,58 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: =?utf-8?q?Linus_L?==?utf-8?q?=C3=BCssing?= <ll@simonwunderlich.de>,
- Simon Wunderlich <sw@simonwunderlich.de>, netdev@vger.kernel.org,
- linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
- ath10k@lists.infradead.org, Ben Greear <greearb@candelatech.com>,
- "David S . Miller" <davem@davemloft.net>
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Cc: Govind Singh <govinds@codeaurora.org>, linux-wireless@vger.kernel.org
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-TGludXMgTMO8c3Npbmcgd3JvdGU6Cgo+IFNvIGZhciwgZnJhbWVzIHdlcmUgZm9yd2FyZGVkIHJl
-Z2FyZGxlc3Mgb2YgdGhlIEZDUyBjb3JyZWN0bmVzcyBsZWFkaW5nCj4gdG8gdXNlcnNwYWNlIGFw
-cGxpY2F0aW9ucyBsaXN0ZW5pbmcgb24gdGhlIG1vbml0b3IgbW9kZSBpbnRlcmZhY2UgdG8KPiBy
-ZWNlaXZlIHBvdGVudGlhbGx5IGJyb2tlbiBmcmFtZXMsIGV2ZW4gd2l0aCB0aGUgImZjc2ZhaWwi
-IGZsYWcgdW5zZXQuCj4gCj4gQnkgZGVmYXVsdCwgd2l0aCB0aGUgImZjc2ZhaWwiIGZsYWcgb2Yg
-YSBtb25pdG9yIG1vZGUgaW50ZXJmYWNlCj4gdW5zZXQsIGZyYW1lcyB3aXRoIEZDUyBlcnJvcnMg
-c2hvdWxkIGJlIGRyb3BwZWQuIFdpdGggdGhpcyBwYXRjaCwgdGhlCj4gZmNzZmFpbCBmbGFnIGlz
-IHRha2VuIGludG8gYWNjb3VudCBjb3JyZWN0bHkuCj4gCj4gVGVzdGVkLW9uOiBRQ0E0MDE5IGZp
-cm13YXJlLTUtY3QtZnVsbC1jb21tdW5pdHktMTIuYmluLWxlZGUuMDExCj4gCj4gQ2M6IFNpbW9u
-IFd1bmRlcmxpY2ggPHN3QHNpbW9ud3VuZGVybGljaC5kZT4KPiBTaWduZWQtb2ZmLWJ5OiBMaW51
-cyBMw7xzc2luZyA8bGxAc2ltb253dW5kZXJsaWNoLmRlPgo+IFNpZ25lZC1vZmYtYnk6IEthbGxl
-IFZhbG8gPGt2YWxvQGNvZGVhdXJvcmEub3JnPgoKUGF0Y2ggYXBwbGllZCB0byBhdGgtbmV4dCBi
-cmFuY2ggb2YgYXRoLmdpdCwgdGhhbmtzLgoKZWEwYzNlMmE0NzAyIGF0aDEwazogZml4IFJYIG9m
-IGZyYW1lcyB3aXRoIGJyb2tlbiBGQ1MgaW4gbW9uaXRvciBtb2RlCgotLSAKaHR0cHM6Ly9wYXRj
-aHdvcmsua2VybmVsLm9yZy9wYXRjaC8xMTI0NjA0NS8KCmh0dHBzOi8vd2lyZWxlc3Mud2lraS5r
-ZXJuZWwub3JnL2VuL2RldmVsb3BlcnMvZG9jdW1lbnRhdGlvbi9zdWJtaXR0aW5ncGF0Y2hlcwoK
-Cl9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fCmF0aDEwayBt
-YWlsaW5nIGxpc3QKYXRoMTBrQGxpc3RzLmluZnJhZGVhZC5vcmcKaHR0cDovL2xpc3RzLmluZnJh
-ZGVhZC5vcmcvbWFpbG1hbi9saXN0aW5mby9hdGgxMGsK
+During driver load below warn logs are printed in the console if
+firmware doesn't support some optional HTC services, ex:pktlog.
+It is likely some older fw version may not support PKTLOG HTC
+service as legacy fw uses HTC DATA service  for pktlog.
+Move this log to debug level to remove un-necessary warn message
+on console.
+
+htc.c:803:  ath10k_warn(ar, "unsupported HTC service id: %d\n",
+htc.c:881:  ath10k_warn(ar, "unsupported HTC service id: %d\n",
+
+Signed-off-by: Govind Singh <govinds@codeaurora.org>
+---
+ drivers/net/wireless/ath/ath10k/htc.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/drivers/net/wireless/ath/ath10k/htc.c b/drivers/net/wireless/ath/ath10k/htc.c
+index 28daed5981a1..367b762632d1 100644
+--- a/drivers/net/wireless/ath/ath10k/htc.c
++++ b/drivers/net/wireless/ath/ath10k/htc.c
+@@ -809,8 +809,8 @@ int ath10k_htc_connect_service(struct ath10k_htc *htc,
+ 						&ep->ul_pipe_id,
+ 						&ep->dl_pipe_id);
+ 	if (status) {
+-		ath10k_warn(ar, "unsupported HTC service id: %d\n",
+-			    ep->service_id);
++		ath10k_dbg(ar, ATH10K_DBG_BOOT, "unsupported HTC service id: %d\n",
++			   ep->service_id);
+ 		return status;
+ 	}
+ 
+@@ -887,8 +887,8 @@ static bool ath10k_htc_pktlog_svc_supported(struct ath10k *ar)
+ 						&ul_pipe_id,
+ 						&dl_pipe_id);
+ 	if (status) {
+-		ath10k_warn(ar, "unsupported HTC service id: %d\n",
+-			    ATH10K_HTC_SVC_ID_HTT_LOG_MSG);
++		ath10k_dbg(ar, ATH10K_DBG_BOOT, "unsupported HTC pktlog service id: %d\n",
++			   ATH10K_HTC_SVC_ID_HTT_LOG_MSG);
+ 
+ 		return false;
+ 	}
+-- 
+2.22.0
+
+
+_______________________________________________
+ath10k mailing list
+ath10k@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/ath10k
