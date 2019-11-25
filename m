@@ -2,66 +2,66 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id DAFA6108D50
-	for <lists+ath10k@lfdr.de>; Mon, 25 Nov 2019 12:54:35 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 640A2108D56
+	for <lists+ath10k@lfdr.de>; Mon, 25 Nov 2019 12:56:25 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:Date:Message-ID:To:References:
 	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Bm2NtoxxHHeRHQqDwpNTT5Lngi+lB4kvQBX0kWYWHEg=; b=IOJcUVhk1AMzjb
-	xAVyaXVlVbNvwc/IosDdqP6fWB8LdxXCHxagcEzutdANdlRpdGYz0KbvyGvnh0Q8EkyDieH2pOaoA
-	/nrQqiNBXwdsHPMel8A76c0+R6l/vD1pQEqcHX8nMSKj6rGEc/1pc8wRmUlH048ZgVZGxnSBx8bDi
-	JkvXHeibrce2Anevo+5sMEOHFD6mF6EmxRGhckM9a3YhJrW0rMOpJScjdPpQdqTecvRpaakT79i/2
-	Qt2Knxy0NInmCsz4C8zyKJOFX3a5mTUHtL3mROXSs612lciIM376tcH7B4FaE99S1QbSdhhUgn/Vm
-	98IUVlWaGK5pKF9L78xw==;
+	List-Owner; bh=Nn2kjWc9jUEOvdEdyYpRKeff4DNb1geB9fNqc3n9Adw=; b=g27DiUEziwMQK8
+	bngYnun+qHVQEbFHTD6eVoWOioYSBEBvQDrgEpyPvVJNQAE9vJXAsjlMuhj12UKAN7zF4qBVQb+10
+	xiO2j6GfkASbOd4NcZD8erM2jyB9+vkf1m1fioZxpWdA9zMRCQ/rLv2vFdKroKXlBXbRzGWR+KQA9
+	dvU9DMCIxMcOcQeOekgZgctKjmOgzoKNaqVuN3rZM7THTULTt5QrarsbZBT0M+QhiN13Dvh1W2DYM
+	KnZslf/YDv1Fyl48OtrmETQ03iOicpJdG1y+wttzb90gwrSXvhp0Ld93oc4wVoJuyFsonu6DcfI7h
+	E/Yyg6KAEtljxF71v96A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iZCws-0004zJ-6q; Mon, 25 Nov 2019 11:54:34 +0000
+	id 1iZCyd-0006LJ-St; Mon, 25 Nov 2019 11:56:23 +0000
 Received: from a27-188.smtp-out.us-west-2.amazonses.com ([54.240.27.188])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iZCwo-0004yi-VU
- for ath10k@lists.infradead.org; Mon, 25 Nov 2019 11:54:32 +0000
+ id 1iZCyZ-0006KN-9O
+ for ath10k@lists.infradead.org; Mon, 25 Nov 2019 11:56:20 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
- s=zsmsymrwgfyinv5wlfyidntwsjeeldzt; d=codeaurora.org; t=1574682868;
+ s=zsmsymrwgfyinv5wlfyidntwsjeeldzt; d=codeaurora.org; t=1574682977;
  h=Content-Type:MIME-Version:Content-Transfer-Encoding:Subject:From:In-Reply-To:References:To:Cc:Message-Id:Date;
- bh=RPWz9nO9IZFXf6ojtnISMP4vkbdmgCzEn0pao2zsMrc=;
- b=l8NHwRzngSkrOxHQs76s2gx3W1WjiG1bGMiAnjpYyrR0hMoR69pvGerg/NE4RUwp
- 7snlMn9ydrQXzUqkdGXKYfQR1n830HPodOdyN5ih9eOYmTAuHJTYr/BcmZrYVSHXV9O
- Xlwovgpkqa3VKWpTA6RNlfDztnrha6ykMC6DLSRo=
+ bh=cTtwrlGNTkiAUYkuNC9OPAuoAAZBBpmDBW6s3hPB4Xw=;
+ b=nQvvjNs8xf5bdIvS+Y4M284e2+mLXjYSWpf5uM/mu+waMg7GWLjQQ9SlvPraEAxW
+ C6kiKwQEYm6OHpsuA+Z0+h9/T6p4dL7XuYn/9/4UrMb7dylfHvxZ516eNqTv7+eSi0b
+ e2vpQpvSMnoxogC0LRQI9Oy95dij3PStcqr/fJdE=
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
- s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1574682868;
+ s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1574682977;
  h=Content-Type:MIME-Version:Content-Transfer-Encoding:Subject:From:In-Reply-To:References:To:Cc:Message-Id:Date:Feedback-ID;
- bh=RPWz9nO9IZFXf6ojtnISMP4vkbdmgCzEn0pao2zsMrc=;
- b=T7stF1bOxfTbuNEJjOYhEbtJ8VCgR15P/RX8lU1AD74nE4Leleg95fKGtPQf51ur
- IXfH2Nf+HIMn78kdI+olaPLO+sp42Uv+mtFES1vZmpquZZ+cVuJn7WnSL6SvXzTFbcp
- cY8crumEHjgtCg7tgXKs7/L0EpGZe6Zf6Ylt3gB8=
+ bh=cTtwrlGNTkiAUYkuNC9OPAuoAAZBBpmDBW6s3hPB4Xw=;
+ b=RU3F3sdEdqTOPE7596fMF8KT+31B3T3sbrmW69R2kPs50bYKi2Jc3AF/y3s8DlU2
+ Nr5+7xMU+egb78uQcjknOpeUZUsn8cjX3bHPE6dt0PO6EEsrHnImpErguQetdoEGjMy
+ rdU+4V/s3wgrgm1Z7meYOUhG7argfnS5mzGDhO50=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  aws-us-west-2-caf-mail-1.web.codeaurora.org
 X-Spam-Level: 
 X-Spam-Status: No, score=0.5 required=2.0 tests=ALL_TRUSTED,MISSING_DATE,
- MISSING_MID,SPF_NONE,URIBL_BLOCKED autolearn=no autolearn_force=no
- version=3.4.0
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org EC002C447A2
+ MISSING_MID,SPF_NONE autolearn=no autolearn_force=no version=3.4.0
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 958EEC43383
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
  spf=none smtp.mailfrom=kvalo@codeaurora.org
 MIME-Version: 1.0
-Subject: Re: [PATCH] ath10k: add large size for BMI download data for SDIO
+Subject: Re: [PATCH] ath10k: Handle when FW doesn't support
+ QMI_WLFW_HOST_CAP_REQ_V01
 From: Kalle Valo <kvalo@codeaurora.org>
-In-Reply-To: <20191107100809.17982-1-wgong@codeaurora.org>
-References: <20191107100809.17982-1-wgong@codeaurora.org>
-To: Wen Gong <wgong@codeaurora.org>
+In-Reply-To: <20191106233130.2169-1-jeffrey.l.hugo@gmail.com>
+References: <20191106233130.2169-1-jeffrey.l.hugo@gmail.com>
+To: Jeffrey Hugo <jeffrey.l.hugo@gmail.com>
 User-Agent: pwcli/0.0.0-git (https://github.com/kvalo/pwcli/) Python/2.7.12
-Message-ID: <0101016ea269b8df-d13c2173-799f-4f69-a1e7-43709bb9a2c2-000000@us-west-2.amazonses.com>
-Date: Mon, 25 Nov 2019 11:54:28 +0000
+Message-ID: <0101016ea26b6399-d6caa372-d7b8-49bd-81eb-4e3d96507211-000000@us-west-2.amazonses.com>
+Date: Mon, 25 Nov 2019 11:56:17 +0000
 X-SES-Outgoing: 2019.11.25-54.240.27.188
 Feedback-ID: 1.us-west-2.CZuq2qbDmUIuT3qdvXlRHZZCpfZqZ4GtG9v3VKgRyF0=:AmazonSES
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191125_035431_040530_686451CF 
-X-CRM114-Status: UNSURE (   4.49  )
+X-CRM114-CacheID: sfid-20191125_035619_355382_76A4AB60 
+X-CRM114-Status: UNSURE (   4.36  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -92,32 +92,32 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org
+Cc: Jeffrey Hugo <jeffrey.l.hugo@gmail.com>, netdev@vger.kernel.org,
+ linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
+ ath10k@lists.infradead.org, linux-arm-msm@vger.kernel.org, davem@davemloft.net
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Wen Gong <wgong@codeaurora.org> wrote:
+Jeffrey Hugo <jeffrey.l.hugo@gmail.com> wrote:
 
-> Download firmware time cost of SDIO is too long, it is about 480ms,
-> add large size 2048 bytes for BMI download for SDIO chip, its time
-> cost will reduced to 240ms.
+> Firmware with the build id QC_IMAGE_VERSION_STRING=WLAN.HL.1.0.2-XXXX does
+> not support the QMI_WLFW_HOST_CAP_REQ_V01 message and will return the
+> QMI not supported error to the ath10k driver.  Since not supporting this
+> message is not fatal to the firmware nor the ath10k driver, lets catch
+> this particular scenario and ignore it so that we can still bring up
+> wifi services successfully.
 > 
-> This will optimize the download firmware time cost.
-> 
-> Tested with QCA6174 SDIO with firmware
-> WLAN.RMH.4.4.1-00017-QCARMSWP-1.
-> 
-> Signed-off-by: Wen Gong <wgong@codeaurora.org>
+> Signed-off-by: Jeffrey Hugo <jeffrey.l.hugo@gmail.com>
 > Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 
 Patch applied to ath-next branch of ath.git, thanks.
 
-d58f466a5dee ath10k: add large size for BMI download data for SDIO
+501d4152b018 ath10k: Handle when FW doesn't support QMI_WLFW_HOST_CAP_REQ_V01
 
 -- 
-https://patchwork.kernel.org/patch/11232449/
+https://patchwork.kernel.org/patch/11231343/
 
 https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
 
