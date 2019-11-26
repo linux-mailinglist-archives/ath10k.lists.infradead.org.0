@@ -2,76 +2,72 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A2A92109AFD
-	for <lists+ath10k@lfdr.de>; Tue, 26 Nov 2019 10:18:42 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 37EE3109B4D
+	for <lists+ath10k@lfdr.de>; Tue, 26 Nov 2019 10:36:43 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=NV+uu6U9ZzHmsqTtDIXottjrXOrS80OUgYK1rPvllfM=; b=YDTeZnWXJa3PDo
-	a1aDO8TJPtgIX0mQecTm1XDTC/prr7jreMmme3fXrwq41dH8P7aw1wgruyF0tzZ5S8wpZYZgUIBaj
-	d1bEGn6pnjOOYHUrdc+2sm8bq2aefDh/AMKIKJo6fCMmqDys9vKaGSSyHmcD5d2XCzPeoSc5VQpQ1
-	ffXl7JeSpT+lZ2rMuQCjuiuiS/MkYF/nRR0UfmBQlnOhX1DpFEl+ROavdRTX0rIQgvY132qFosw7J
-	w+E6lCU/ps4OBmIiXECo9Orzt2IVXF5N3NHoBdFcoJDuxCT9gV2xB/b5fJHIX+m4bcNvl2Q6RCKuC
-	0+LgzKOrc4OQEM8uO+Zg==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:Message-ID:Subject:To:From:Date:MIME-Version:
+	Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender
+	:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Owner;
+	bh=biQWVjnmQ9HANMhfmTI9jrO2x/+kjSvcB6gdamXmw+g=; b=XJGCnUpLum9b25RFhVMl2MNxvm
+	3Kp7BDmhHMxcTmt/GFkqQwrbl4SIeFq144l+4nENKjJHFOqOUQ9c/GZx0wSO6DiQQHWxkgjm2N3wB
+	IfhIvQPt7z8pdTzXoNV08ULPkWqtrZOFksnSTCN15X1ikbD/qpsKwjszRMq97M6C4PwGRuIlzj6zd
+	GtmUyfR2h1EVBneOFnORwwTxbyc+LdUNIpaNN4MyfQ3af5484QlSNs5IzDjTloCROL8koNRXJqeE/
+	Z5COAy21Fa5Ng4dHFvnTbcZA8q+ukrsKa7wTpOHblwP52hU7XdCVYkuAIrXgUy/ijP5iwpJiRLsza
+	YUVc9k4w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iZWzS-00058m-Ow; Tue, 26 Nov 2019 09:18:34 +0000
-Received: from a27-21.smtp-out.us-west-2.amazonses.com ([54.240.27.21])
+	id 1iZXGy-0005Jg-61; Tue, 26 Nov 2019 09:36:40 +0000
+Received: from a27-188.smtp-out.us-west-2.amazonses.com ([54.240.27.188])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iZWzP-00058J-Hg
- for ath10k@lists.infradead.org; Tue, 26 Nov 2019 09:18:32 +0000
+ id 1iZXGt-0005Av-Nc
+ for ath10k@lists.infradead.org; Tue, 26 Nov 2019 09:36:37 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
- s=zsmsymrwgfyinv5wlfyidntwsjeeldzt; d=codeaurora.org; t=1574759907;
- h=From:To:Cc:Subject:Date:Message-Id:MIME-Version:Content-Transfer-Encoding;
- bh=X5V8s0Eli1EcgJsp36WqwwwNfr8P8+kw3efGveKQfu0=;
- b=Gx6zRrGjftLYjnaA9rWZSrUXfdzE9I0yEEIZdcRGGbalf3mSN9ocxThvghaLMKIX
- 3l4fZOMXEdS17mcigOGwEYvX14us5Z3ltVU+Lz2RrsZHMm1SPXc/y9onRQcWcLdcP7y
- vsZwr+Mt5YcyriXImDrAcBxBwWyyWgANEvU+1ksc=
+ s=zsmsymrwgfyinv5wlfyidntwsjeeldzt; d=codeaurora.org; t=1574760993;
+ h=MIME-Version:Content-Type:Content-Transfer-Encoding:Date:From:To:Cc:Subject:Message-ID;
+ bh=WqnlfxtF6WQ1UXwO3jQwpAJI3jcfSkzxdr2oXhs+rWY=;
+ b=AeOzsZ0YMEplWg9qwOpibFo3DqJlBnLZtxFqVmdDH8yX18sY8AE+Hc+9gCqdDTqO
+ bEklHVlPh4sj9TjTG3CNcoGHl7f70+GTtK6A5KrLwImuPZxly/ejjJzHrUDpMyQOajN
+ AQWrC+rf3QXVbjO9hC+OMDNuNKH3Z43iaTE+OSLc=
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
- s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1574759907;
- h=From:To:Cc:Subject:Date:Message-Id:MIME-Version:Content-Transfer-Encoding:Feedback-ID;
- bh=X5V8s0Eli1EcgJsp36WqwwwNfr8P8+kw3efGveKQfu0=;
- b=akfjZjhRIsU9VfJ3klpMgCkkH7nI5SXV0PUYGsl8Tzccn/oBhc4nMNy8+qKDsH9q
- kAMKYNMlS523g0/lW16H8EoNpLOI4ELBSVm9bBzqdD0mG8gEQ8C7tNradS60iicKYA3
- kg7ExN179J3BGzJPxcJy5U+6qvp9/AWIfuQ73Oy4=
+ s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1574760993;
+ h=MIME-Version:Content-Type:Content-Transfer-Encoding:Date:From:To:Cc:Subject:Message-ID:Feedback-ID;
+ bh=WqnlfxtF6WQ1UXwO3jQwpAJI3jcfSkzxdr2oXhs+rWY=;
+ b=DU1/cECgP+TlPQwAHMAq8ZNesuxSM6I0zHcd6gNFLerVqcsudmDY1tTKWdb7JLdf
+ SlkNPucWJvQ+78Vhgh9SiWVmX+jTDE+AP+lWe23oc0OIn64nId79tuOLgsw67XZACW2
+ kL4mAIvBWG9AbrcUpZMSeeE3WzS++rjAJfCZ7xc8=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  aws-us-west-2-caf-mail-1.web.codeaurora.org
 X-Spam-Level: 
-X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,SPF_NONE,
- URIBL_BLOCKED autolearn=ham autolearn_force=no version=3.4.0
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 95B09C433CB
-Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
- dmarc=none (p=none dis=none) header.from=codeaurora.org
-Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
- spf=none smtp.mailfrom=wgong@codeaurora.org
-From: Wen Gong <wgong@codeaurora.org>
-To: ath10k@lists.infradead.org
-Subject: [PATCH] ath10k: drop the TX packet which size exceed credit size for
- sdio
-Date: Tue, 26 Nov 2019 09:18:27 +0000
-Message-ID: <0101016ea70141b4-8bba1ff2-ed89-438b-bc8a-faf94f91686f-000000@us-west-2.amazonses.com>
-X-Mailer: git-send-email 2.23.0
+X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,URIBL_BLOCKED
+ autolearn=ham autolearn_force=no version=3.4.0
 MIME-Version: 1.0
-X-SES-Outgoing: 2019.11.26-54.240.27.21
+Date: Tue, 26 Nov 2019 09:36:33 +0000
+From: wgong@codeaurora.org
+To: ath10k@lists.infradead.org
+Subject: RE: [EXT] [PATCH] ath10k: enable firmware log by default for sdio
+Message-ID: <0101016ea711d28f-004d7903-92c1-4c30-9b75-6c05d5ade612-000000@us-west-2.amazonses.com>
+X-Sender: wgong@codeaurora.org
+User-Agent: Roundcube Webmail/1.3.9
+X-SES-Outgoing: 2019.11.26-54.240.27.188
 Feedback-ID: 1.us-west-2.CZuq2qbDmUIuT3qdvXlRHZZCpfZqZ4GtG9v3VKgRyF0=:AmazonSES
+X-Bad-Reply: 'Re:' in Subject but no References or In-Reply-To headers
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191126_011831_712759_887C55A4 
-X-CRM114-Status: UNSURE (   7.26  )
+X-CRM114-CacheID: sfid-20191126_013635_913058_92D7AEB1 
+X-CRM114-Status: UNSURE (   5.83  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.1 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.1 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [54.240.27.21 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
  mail domains are different
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [54.240.27.188 listed in list.dnswl.org]
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -91,43 +87,24 @@ List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
 Cc: linux-wireless@vger.kernel.org
-Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-sdio chip use DMA buffer to receive TX packet from ath10k, and it has
-limitation of each buffer, if the packet size exceed the credit size,
-it will trigger error in firmware.
+> -----Original Message-----
+> From: ath10k <ath10k-bounces@lists.infradead.org> On Behalf Of Wen Gong
+> Sent: Friday, November 8, 2019 5:19 PM
+> To: ath10k@lists.infradead.org
+> Cc: linux-wireless@vger.kernel.org
+> Subject: [EXT] [PATCH] ath10k: enable firmware log by default for sdio
 
-Tested with QCA6174 SDIO with firmware
-WLAN.RMH.4.4.1-00017-QCARMSWP-1.
+Hi Kalle,
 
-Signed-off-by: Wen Gong <wgong@codeaurora.org>
----
-this patch depens on the patch "ath10k: add htt TX bundle for sdio"
- drivers/net/wireless/ath/ath10k/htc.c | 5 +++++
- 1 file changed, 5 insertions(+)
-
-diff --git a/drivers/net/wireless/ath/ath10k/htc.c b/drivers/net/wireless/ath/ath10k/htc.c
-index 03c358cd16d4..51addcc654a0 100644
---- a/drivers/net/wireless/ath/ath10k/htc.c
-+++ b/drivers/net/wireless/ath/ath10k/htc.c
-@@ -846,6 +846,11 @@ int ath10k_htc_send_hl(struct ath10k_htc *htc,
- 	struct ath10k_htc_ep *ep = &htc->endpoint[eid];
- 	struct ath10k *ar = htc->ar;
- 
-+	if (sizeof(struct ath10k_htc_hdr) + skb->len > ep->tx_credit_size) {
-+		ath10k_dbg(ar, ATH10K_DBG_HTC, "tx exceed max len %d\n", skb->len);
-+		return -ENOMEM;
-+	}
-+
- 	ath10k_dbg(ar, ATH10K_DBG_HTC, "htc send hl: eid:%d, bundle:%d, tx count:%d, len:%d\n",
- 		   eid, ep->bundle_tx, skb_queue_len(&ep->tx_req_head), skb->len);
- 
--- 
-2.23.0
-
+I found this patch has removed from pending branch, and not in ath-next 
+branch.
+It is in pending branch before.
+https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git/commit/?h=pending&id=497363abab79eac916f2e2c6f9ab2b9bb4aa4b11
 
 _______________________________________________
 ath10k mailing list
