@@ -2,70 +2,71 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C4109109BB8
-	for <lists+ath10k@lfdr.de>; Tue, 26 Nov 2019 11:06:22 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id BB89010A8EF
+	for <lists+ath10k@lfdr.de>; Wed, 27 Nov 2019 03:59:50 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
 	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=L4oqD+z0LI1h6TUQuY8Kf0Lx+I4stpaxMQdF61uaktM=; b=ncZ1eDboYn4Vfi
-	y2dXYOkA5cLg93bw17A+OD/eJkwpFXwVCxJyeYDfOdNOzmY+d5oq3M8HlCi+m4DRLC9DzmsumeC56
-	EeMASI+IPK9Ud8cxOvGdnY06Mv2uVqdHFDxCazH/rjgfIcx+tBH1ZF6Dy/5tJ5qJ74q4nDhBZQ1ab
-	mQaf+AHzy5oTiJUO2FAjFtb/rYNdP7LeNZFtSFkrX2QQNC2NLioUgxWX2s2VA4szK0UB1N4yDYiQI
-	SB2i/Lp53/vpxst0fe9Opw7+wUcs/7u6ghxh4pXL2zkRV+RH7qbiHrajjjPrrWmtrjOl97cluY3H8
-	bEjFs2LMbQ/QGqX+hS1A==;
+	List-Owner; bh=u+5CxQL0RdmtoniCNxagfp5Xg/BYgmGGhkvtG27F8YI=; b=g3FlkDFPzasePs
+	4Aq2hIH9FifpiyGBFXnhsPoj03DLzp4tTmRGuhM2pgFoiD8qKIotODifEDDHRsyUk3WgMWmADGtQb
+	yqkij0o008k44tIQdKgJzkNgvOAiqWQWtitC5MooCRG44+uTqZOk6OcePcqHZOt/FkT/xg0A5YkPq
+	UDJmkABaAzuAjMz7MUyKzzRvDhwdLkR+f6kVuo5LbgbeHAVs4e6hKoVoI0DvPrAmZWRr+qsAssxxg
+	r5ZlGoQvgBV1lvNq14rcJLN00AEEuOd1VJBMvo3Fciuell6CDe4azjpnxfW+KR+pAz9a9GFDovvBI
+	+2kFhCXhd3F1nGh3MS9g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iZXje-0000tb-9I; Tue, 26 Nov 2019 10:06:18 +0000
-Received: from a27-55.smtp-out.us-west-2.amazonses.com ([54.240.27.55])
+	id 1iZnYM-0003NY-FC; Wed, 27 Nov 2019 02:59:42 +0000
+Received: from a27-185.smtp-out.us-west-2.amazonses.com ([54.240.27.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iZXjY-0008E3-I3
- for ath10k@lists.infradead.org; Tue, 26 Nov 2019 10:06:14 +0000
+ id 1iZnYE-0003N2-RU
+ for ath10k@lists.infradead.org; Wed, 27 Nov 2019 02:59:38 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
- s=zsmsymrwgfyinv5wlfyidntwsjeeldzt; d=codeaurora.org; t=1574762764;
+ s=zsmsymrwgfyinv5wlfyidntwsjeeldzt; d=codeaurora.org; t=1574823569;
  h=From:To:Cc:Subject:Date:Message-Id:MIME-Version:Content-Transfer-Encoding;
- bh=yTiK9glvulsqITImJlWDAB4xSvy0kI5KM/v2o3aPCmA=;
- b=eSLQ2+Rr31koXmqrifVtZ3B8fyDQFEM06MbvlgV5ZHaLZP7srz9U/8G7stjFmtX/
- S2IczAaOsLHuqOjZr2r3qVPPYyTtTeifBcOut3A0XsLky3KRkhW692iOPjcVucH5yzD
- PmEuXZTSkXCpgWrVjMY0nwVWfixmFVuoel2Qnkt8=
+ bh=v95gBZ3VAsv1yFIp+edO6sWwlF1JTcZQtDQw10B41Xg=;
+ b=cJHFPd9dqPOvjpD6Lxp2bOFm84dxwnFw/4ndxBTszpAdHNJG4qeWTwMMIWVJInCZ
+ tMXAUow8q88ZourDQ/W3yOBJttlLd9MZzX1+Pi24qYgWPJUQZTgITdV2mIxADwUhZ8z
+ WHie96wuxS5NkbiB0hBvuOh5lQ+unNBBpiQjTxPk=
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
- s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1574762764;
+ s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1574823569;
  h=From:To:Cc:Subject:Date:Message-Id:MIME-Version:Content-Transfer-Encoding:Feedback-ID;
- bh=yTiK9glvulsqITImJlWDAB4xSvy0kI5KM/v2o3aPCmA=;
- b=Aice7wHMZ+h+x6yYQIP+9E1oZZmwl7H/gq/EymGM0mhZxB50nqNNDcVLsTJsAsM3
- FRpjcpqgDfLpJU2C/TsFCBTD4e0a2ul8s5gWWr9aWA4mvaHH3VAwG5rP6a/FdxNTuxx
- cgxBuYLtbLXndXQUmvsuXv5EVjQM2XaSbVHNF58Q=
+ bh=v95gBZ3VAsv1yFIp+edO6sWwlF1JTcZQtDQw10B41Xg=;
+ b=dh1/CWuw2cvrZh3iDNHZNJSX7DxE2q/rRqZ/adxbhg4P3VHWpFLSAhcAbkk6pasH
+ gOhlNHouw7uZHZwgsZvLnYCBJRrMjuaXIVmQck29XDO/4gxMRrN0XiXlV00Avhq0r70
+ ugGqIxG0SBQ+/x7uEYkV6JujeF5vE6eIH8Cic9NU=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  aws-us-west-2-caf-mail-1.web.codeaurora.org
 X-Spam-Level: 
-X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,SPF_NONE
- autolearn=unavailable autolearn_force=no version=3.4.0
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org E9C67C43383
+X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,SPF_NONE,
+ URIBL_BLOCKED autolearn=unavailable autolearn_force=no version=3.4.0
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 0B302C433CB
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
  spf=none smtp.mailfrom=wgong@codeaurora.org
 From: Wen Gong <wgong@codeaurora.org>
 To: ath10k@lists.infradead.org
-Subject: [PATCH] ath10k: change bundle count for max rx bundle for sdio
-Date: Tue, 26 Nov 2019 10:06:04 +0000
-Message-ID: <0101016ea72cd7e7-72d2803f-29e8-4125-badf-2eda7651eb0a-000000@us-west-2.amazonses.com>
+Subject: [PATCH] ath10k: set max mtu to 1500 for sdio chip
+Date: Wed, 27 Nov 2019 02:59:29 +0000
+Message-ID: <0101016eaacca93c-357e80e9-f3e0-44e6-b441-ceaf9183880f-000000@us-west-2.amazonses.com>
 X-Mailer: git-send-email 2.23.0
 MIME-Version: 1.0
-X-SES-Outgoing: 2019.11.26-54.240.27.55
+X-SES-Outgoing: 2019.11.27-54.240.27.185
 Feedback-ID: 1.us-west-2.CZuq2qbDmUIuT3qdvXlRHZZCpfZqZ4GtG9v3VKgRyF0=:AmazonSES
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191126_020612_636595_5C668DBF 
-X-CRM114-Status: GOOD (  13.52  )
+X-CRM114-CacheID: sfid-20191126_185934_921787_1C0F5F81 
+X-CRM114-Status: UNSURE (   6.92  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.1 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.1 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [54.240.27.55 listed in list.dnswl.org]
+ no trust [54.240.27.185 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
@@ -94,105 +95,32 @@ Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-For max bundle size 32, the bundle mask is not same with 8/16.
-Change it to match the max bundle size of htc. Otherwise it
-will not match with firmware, for example, when bundle count
-is 17, then flags of ath10k_htc_hdr is 0x4, if without this
-patch, it will be considered as non-bundled packet because it
-does not have mask 0xF0, then trigger error message later:
-payload length 56747 exceeds max htc length: 4088.
+For sdio chip, the max credit size in firmware is 1556, the 1556
+include payload, ieee80211 header, htt header, htc header. So it
+need to set the max mtu to 1500 to forbidden TX packet which exceed
+1500 form application.
 
-htc->max_msgs_per_htc_bundle is the min value of
-HTC_HOST_MAX_MSG_PER_RX_BUNDLE and
-msg->ready_ext.max_msgs_per_htc_bundle of ath10k_htc_wait_target,
-it will be sent to firmware later in ath10k_htc_start, then
-firmware will use it as the final max rx bundle count, in
-WLAN.RMH.4.4.1-00029, msg->ready_ext.max_msgs_per_htc_bundle
-is 32, it is same with HTC_HOST_MAX_MSG_PER_RX_BUNDLE, so the
-final max rx bundle count will be set to 32 in firmware.
-
-This patch only effect sdio chips.
-
-Tested with QCA6174 SDIO with firmware WLAN.RMH.4.4.1-00029.
+Tested with QCA6174 SDIO with firmware
+WLAN.RMH.4.4.1-00017-QCARMSWP-1.
 
 Signed-off-by: Wen Gong <wgong@codeaurora.org>
-Fixes: 224776520ead69e ("ath10k: change max RX bundle size from 8 to 32 for sdio")
 ---
- drivers/net/wireless/ath/ath10k/htc.c  |  2 +-
- drivers/net/wireless/ath/ath10k/htc.h  | 10 ++++++----
- drivers/net/wireless/ath/ath10k/sdio.c | 10 ++++++----
- 3 files changed, 13 insertions(+), 9 deletions(-)
+ drivers/net/wireless/ath/ath10k/sdio.c | 2 ++
+ 1 file changed, 2 insertions(+)
 
-diff --git a/drivers/net/wireless/ath/ath10k/htc.c b/drivers/net/wireless/ath/ath10k/htc.c
-index 03c358cd16d4..4696d4ab5f6c 100644
---- a/drivers/net/wireless/ath/ath10k/htc.c
-+++ b/drivers/net/wireless/ath/ath10k/htc.c
-@@ -311,7 +311,7 @@ ath10k_htc_process_lookahead_bundle(struct ath10k_htc *htc,
- 	struct ath10k *ar = htc->ar;
- 	int bundle_cnt = len / sizeof(*report);
- 
--	if (!bundle_cnt || (bundle_cnt > HTC_HOST_MAX_MSG_PER_RX_BUNDLE)) {
-+	if (!bundle_cnt || (bundle_cnt > htc->max_msgs_per_htc_bundle)) {
- 		ath10k_warn(ar, "Invalid lookahead bundle count: %d\n",
- 			    bundle_cnt);
- 		return -EINVAL;
-diff --git a/drivers/net/wireless/ath/ath10k/htc.h b/drivers/net/wireless/ath/ath10k/htc.h
-index b3f48fe7436e..0d25d2150ea5 100644
---- a/drivers/net/wireless/ath/ath10k/htc.h
-+++ b/drivers/net/wireless/ath/ath10k/htc.h
-@@ -58,13 +58,15 @@ enum ath10k_htc_rx_flags {
- #define ATH10K_HTC_BUNDLE_EXTRA_MASK GENMASK(3, 2)
- #define ATH10K_HTC_BUNDLE_EXTRA_SHIFT 4
- 
--static inline unsigned int ath10k_htc_get_bundle_count(u8 flags)
-+static inline unsigned int ath10k_htc_get_bundle_count(u8 max_msgs, u8 flags)
- {
--	unsigned int count, extra_count;
-+	unsigned int count, extra_count = 0;
- 
- 	count = FIELD_GET(ATH10K_HTC_FLAG_BUNDLE_MASK, flags);
--	extra_count = FIELD_GET(ATH10K_HTC_BUNDLE_EXTRA_MASK, flags) <<
--		ATH10K_HTC_BUNDLE_EXTRA_SHIFT;
-+
-+	if (max_msgs > 16)
-+		extra_count = FIELD_GET(ATH10K_HTC_BUNDLE_EXTRA_MASK, flags) <<
-+			ATH10K_HTC_BUNDLE_EXTRA_SHIFT;
- 
- 	return count + extra_count;
- }
 diff --git a/drivers/net/wireless/ath/ath10k/sdio.c b/drivers/net/wireless/ath/ath10k/sdio.c
-index 60849ab8088f..987d7c3eb32a 100644
+index 60849ab8088f..8aa8ebc1d8e9 100644
 --- a/drivers/net/wireless/ath/ath10k/sdio.c
 +++ b/drivers/net/wireless/ath/ath10k/sdio.c
-@@ -500,14 +500,15 @@ static int ath10k_sdio_mbox_alloc_bundle(struct ath10k *ar,
- 					 size_t *bndl_cnt)
- {
- 	int ret, i;
-+	u8 max_msgs = ar->htc.max_msgs_per_htc_bundle;
+@@ -2185,6 +2185,8 @@ static int ath10k_sdio_probe(struct sdio_func *func,
+ 	bus_params.chip_id = 0;
+ 	bus_params.hl_msdu_ids = true;
  
--	*bndl_cnt = ath10k_htc_get_bundle_count(htc_hdr->flags);
-+	*bndl_cnt = ath10k_htc_get_bundle_count(max_msgs, htc_hdr->flags);
- 
--	if (*bndl_cnt > HTC_HOST_MAX_MSG_PER_RX_BUNDLE) {
-+	if (*bndl_cnt > max_msgs) {
- 		ath10k_warn(ar,
- 			    "HTC bundle length %u exceeds maximum %u\n",
- 			    le16_to_cpu(htc_hdr->len),
--			    HTC_HOST_MAX_MSG_PER_RX_BUNDLE);
-+			    max_msgs);
- 		return -ENOMEM;
- 	}
- 
-@@ -570,7 +571,8 @@ static int ath10k_sdio_mbox_rx_alloc(struct ath10k *ar,
- 			goto err;
- 		}
- 
--		if (htc_hdr->flags & ATH10K_HTC_FLAG_BUNDLE_MASK) {
-+		if (ath10k_htc_get_bundle_count(
-+			ar->htc.max_msgs_per_htc_bundle, htc_hdr->flags)) {
- 			/* HTC header indicates that every packet to follow
- 			 * has the same padded length so that it can be
- 			 * optimally fetched as a full bundle.
++	ar->hw->max_mtu = ETH_DATA_LEN;
++
+ 	ret = ath10k_core_register(ar, &bus_params);
+ 	if (ret) {
+ 		ath10k_err(ar, "failed to register driver core: %d\n", ret);
 -- 
 2.23.0
 
