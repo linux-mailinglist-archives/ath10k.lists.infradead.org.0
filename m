@@ -2,64 +2,89 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7E96110EF03
-	for <lists+ath10k@lfdr.de>; Mon,  2 Dec 2019 19:17:43 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id C48AB10EF86
+	for <lists+ath10k@lfdr.de>; Mon,  2 Dec 2019 19:49:07 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
-	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=THQPS5xW+EBpwad6jB6uHECRxWnNPuP2mz2421G2AxA=; b=QS3iiY3ZQ9hRXP0/4QFIt45Xo
-	LGjKmp09WBhUXU9KKOqkWrSwB6sdrdkPBN3Hc4gpHy2rgYvKxbu6nJAuggOjWjzZS8pHtVw0mJj0F
-	SanA35A+ngAGDuTdmmU51UpSf3ODC7FkiXXd7tziF37hY7fuCP8e8e+Eg+bSyNVTgvSe9trf8adWs
-	TEYx02LcKA9KvyC4Nh/xJbD0sIUoqg4pzZsWr05buo6Sx0YpcpixQqOpxPlyyCes/xh3stVXbgV2Z
-	f/ukHdG6iozYeg4U/pCLvI/a91AoRkf/Ffv64FgL3g61ii+D+XSNPe/i1UBO0J9t1OjwGNU6a3kjH
-	PBbfMZvcw==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=JSCycnrFQKDuTn8er6SwetxYyuvuWDUBbiQTNMMRSgo=; b=sCL1c/Rj5w1Ys1
+	Wu225ARyfZJflw/JorEOGT5ofOi4qWEQm4aM8/HNfQPIaRDuhKZw+Qa1oNz+oWHgCkuWxCYA8GubX
+	GssWpShutH/kY16oIruxNDb0lBSRRPzQt2EBFj8ralh6SgAsy8jq1Uj75kEfdMLPEdZpEB+GP7VpB
+	/w93svk9+LkjV1N1wgtkKltlbfmw7se0FRk4vdSD63H5kufQsrpTurdPjao9mhC4LYR7q8+NMKerV
+	ssK0w/yGr24VNNkQqsnqvYvjGai2UBy49DOuM3C9EgentlWZih5Bd2/NPKZ6WzNKmcLpwf4kUcQU0
+	JsNtm+s3ByB+MKHxjGXQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ibqGP-0002fQ-D5; Mon, 02 Dec 2019 18:17:37 +0000
-Received: from mail2.candelatech.com ([208.74.158.173]
- helo=mail3.candelatech.com)
- by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ibqGL-0002ew-Cr
- for ath10k@lists.infradead.org; Mon, 02 Dec 2019 18:17:34 +0000
-Received: from [192.168.100.195] (50-251-239-81-static.hfc.comcastbusiness.net
- [50.251.239.81])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
- (No client certificate requested)
- by mail3.candelatech.com (Postfix) with ESMTPSA id 1544F137531;
- Mon,  2 Dec 2019 10:17:31 -0800 (PST)
-DKIM-Filter: OpenDKIM Filter v2.11.0 mail3.candelatech.com 1544F137531
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=candelatech.com;
- s=default; t=1575310651;
- bh=/2PhJ5xFWBl4QKp0sJThhBjgqj8x5G6dX5WbrLLGJX0=;
- h=Subject:To:Cc:References:From:Date:In-Reply-To:From;
- b=JAGV8C+RWwb5o5IPTnPBPM+9aoTmOfZqCQelhV3/V4iGkHhD55Z+syJ14fM89ZxNV
- 7GqV228r75AOkhy/jxschYh8L9Y5clW7j8FtAnA4XjPrb8ePP6/vZI+NK39ejudH7/
- yVBOE/SvAwdKxwdn1syOVQR1iOjl0+0JS/7yNuPQ=
-Subject: Re: [PATCH] ath10k: set WMI_PEER_AUTHORIZE after a firmware crash
-To: Justin Capella <justincapella@gmail.com>, Kalle Valo <kvalo@codeaurora.org>
-References: <0101016eaadee57a-54500c6d-4751-423f-8bab-5acd8fad2175-000000@us-west-2.amazonses.com>
- <0101016eb61d9520-b0306a23-c9b9-4b57-b708-9f80ac47eef1-000000@us-west-2.amazonses.com>
- <CAMrEMU-VOYeHO2F5AjyWJLqgEVq5HOUHZkMJqGio1qovFPo8ug@mail.gmail.com>
-From: Ben Greear <greearb@candelatech.com>
-Organization: Candela Technologies
-Message-ID: <b5404ac0-1be1-229f-a9e3-8033cdf7eea9@candelatech.com>
-Date: Mon, 2 Dec 2019 10:17:30 -0800
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
- Thunderbird/68.1.1
+	id 1ibqkq-0007CE-34; Mon, 02 Dec 2019 18:49:04 +0000
+Received: from mail-io1-xd29.google.com ([2607:f8b0:4864:20::d29])
+ by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
+ id 1ibqkm-0007BI-C6
+ for ath10k@lists.infradead.org; Mon, 02 Dec 2019 18:49:01 +0000
+Received: by mail-io1-xd29.google.com with SMTP id z26so509142iot.8
+ for <ath10k@lists.infradead.org>; Mon, 02 Dec 2019 10:48:59 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=tJ+m0mSzIeOb5sZruqACdh0sGgA9QWLB1HsmrayP9B4=;
+ b=Of7gE+DwkR5XuGo8buT3QWoDgHM8egXbttQebXtPXHv6nKdCiqBk+K49zrUDTWhM13
+ Sm/5Bc9HspVWUQrABojD2VPLtBc0AgOiF9cCQNSnJHpE4GYKNy0XEY4yjzCm4wfel4tN
+ UtS2KOxSd/dWLxFZPCCkP3hEmjiChfx9egTaA=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=tJ+m0mSzIeOb5sZruqACdh0sGgA9QWLB1HsmrayP9B4=;
+ b=qPQn4jJdKdQGpPOrE6RLQP4X1KKx1PgisyWy1qYnB4MsJMN23CfOYxcRCETC3oIRiP
+ plQ75qnh5pO/KWfGrKNl3QqEVoGXPJfZ1uxC/kTRk12e83FiYmZjZZO4LycU3Pe1aOhM
+ 9CqymzBYqeJ4eTuAmfbpm3EpALHfPGKb0ncu8fW6mDfgEtLfNWadPrukcmgEVmOAGXna
+ PbL3TsuH6sXRzL7gh8TGGkRNGvqdRLA8LN/ZHeFGvkR4pfLwlxaGvg66KZ1JTK7DvJFi
+ eMuN916HTPBbzaMBtgXz8GBt+6SQAHV0VEQEI/rDyiO2HQ7ocZfEUJ9Brua0if7Iy1Fy
+ CPqg==
+X-Gm-Message-State: APjAAAUcz85bPvvAyjGblesuyq8o9KRZbfyt/gi87ERjAlKI8aHcDGle
+ J7lx2VqgJn1JyWdmuXkO6hvlxwkQh+w=
+X-Google-Smtp-Source: APXvYqz+WDcfKRVLVRoaPNl0gNLlBRvevbIR4m+Nenny3T9eYBvSgWx7uBhz5/qymS1UHZQfAm5Jzg==
+X-Received: by 2002:a02:c6d5:: with SMTP id r21mr1021510jan.129.1575312537878; 
+ Mon, 02 Dec 2019 10:48:57 -0800 (PST)
+Received: from mail-il1-f174.google.com (mail-il1-f174.google.com.
+ [209.85.166.174])
+ by smtp.gmail.com with ESMTPSA id w2sm70754iod.50.2019.12.02.10.48.55
+ for <ath10k@lists.infradead.org>
+ (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+ Mon, 02 Dec 2019 10:48:55 -0800 (PST)
+Received: by mail-il1-f174.google.com with SMTP id r81so686953ilk.0
+ for <ath10k@lists.infradead.org>; Mon, 02 Dec 2019 10:48:55 -0800 (PST)
+X-Received: by 2002:a92:d18a:: with SMTP id z10mr263197ilz.48.1575312535313;
+ Mon, 02 Dec 2019 10:48:55 -0800 (PST)
 MIME-Version: 1.0
-In-Reply-To: <CAMrEMU-VOYeHO2F5AjyWJLqgEVq5HOUHZkMJqGio1qovFPo8ug@mail.gmail.com>
-Content-Language: en-US
+References: <1542163848-837-1-git-send-email-wgong@codeaurora.org>
+ <20181115002836.GA71934@google.com>
+ <c94346b26a6d4b11a045a176ca854051@aptaiexm02f.ap.qualcomm.com>
+ <20181115184333.GA87504@google.com> <87va4x8q2c.fsf@codeaurora.org>
+ <CABvG-CVAnwkiKVJik0PdsmRxF62kKv2N+aRKNq=nbopoExLvDA@mail.gmail.com>
+ <87y36q75wr.fsf@kamboji.qca.qualcomm.com>
+ <CA+ASDXO8NujrORVLZMPbDy916cnzOvx_Bp8Vr-VvkbBwJvB97A@mail.gmail.com>
+ <87h8cd8zy2.fsf@kamboji.qca.qualcomm.com>
+In-Reply-To: <87h8cd8zy2.fsf@kamboji.qca.qualcomm.com>
+From: Brian Norris <briannorris@chromium.org>
+Date: Mon, 2 Dec 2019 10:48:44 -0800
+X-Gmail-Original-Message-ID: <CA+ASDXM8gtn3=p5pQ=GOFdfTy-698ZPW91JEgAfapdLEcU+eMg@mail.gmail.com>
+Message-ID: <CA+ASDXM8gtn3=p5pQ=GOFdfTy-698ZPW91JEgAfapdLEcU+eMg@mail.gmail.com>
+Subject: Re: [PATCH] ath10k: support PCIe enter L1 state
+To: Kalle Valo <kvalo@codeaurora.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191202_101733_490626_E69AA024 
-X-CRM114-Status: GOOD (  13.47  )
+X-CRM114-CacheID: sfid-20191202_104900_439608_788B11D6 
+X-CRM114-Status: UNSURE (   9.15  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:d29 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
@@ -69,6 +94,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  valid
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -80,64 +106,37 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless@vger.kernel.org, ath10k <ath10k@lists.infradead.org>,
+Cc: =?UTF-8?Q?Micha=C5=82_Kazior?= <kazikcz@gmail.com>,
+ linux-wireless <linux-wireless@vger.kernel.org>, ath10k@lists.infradead.org,
  Wen Gong <wgong@codeaurora.org>
+Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On 12/1/19 8:45 PM, Justin Capella wrote:
-> Are there security concerns here? Was the peer known to be authorized
-> beforehand? Would it be better to just trash the peer in the event of
-> a fw crash?
+On Fri, Mar 8, 2019 at 1:42 AM Kalle Valo <kvalo@codeaurora.org> wrote:
+> Brian Norris <briannorris@chromium.org> writes:
+> > On Fri, Feb 8, 2019 at 5:42 AM Kalle Valo <kvalo@codeaurora.org> wrote:
+> >> No replies from anyone (including Wen) for 3 months about testing this
+> >> patch on anything else than QCA6174. So I'll drop this now, please
+> >> resubmit once test coverage is better.
+> >
+> > I know this isn't exactly what you're asking for, but FWIW we've been
+> > using this since late November on all our QCA6174 products. No issues
+> > seen as far as I know, and we have seen some power savings.
+>
+> Thanks for the feedback, this is very good to know. I also would like to
+> apply this but not before we have some testing feedback from AP chipsets
+> like QCA988X or QCA9984. Wen, are you planning to test those and
+> resubmit?
 
-I think you should completely re-associate the peer(s) when firmware
-crashes.  The driver does not cache all possible changes, so it cannot
-exactly rebuild the config to the previous state.
+May I ping here? We (Chromium OS) are continuing to carry this patch,
+and would love to come up with something that can land upstream. If
+necessary, I can rework it to apply more specifically -- e.g., only to
+QCA6174 PCI IDs.
 
 Thanks,
-Ben
-
-> 
-> On Thu, Nov 28, 2019 at 11:46 PM Kalle Valo <kvalo@codeaurora.org> wrote:
->>
->> Wen Gong <wgong@codeaurora.org> wrote:
->>
->>> After the firmware crashes ath10k recovers via ieee80211_reconfig(),
->>> which eventually leads to firmware configuration and including the
->>> encryption keys. However, because there is no new auth/assoc and
->>> 4-way-handshake, and firmware set the authorize flag after
->>> 4-way-handshake, so the authorize flag in firmware is not set in
->>> firmware without 4-way-handshake. This will lead to a failure of data
->>> transmission after recovery done when using encrypted connections like
->>> WPA-PSK. Set authorize flag after installing keys to firmware will fix
->>> the issue.
->>>
->>> This was noticed by testing firmware crashing using simulate_fw_crash
->>> debugfs file.
->>>
->>> Tested with QCA6174 SDIO with firmware WLAN.RMH.4.4.1-00007-QCARMSWP-1.
->>>
->>> Signed-off-by: Wen Gong <wgong@codeaurora.org>
->>> Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
->>
->> Patch applied to ath-next branch of ath.git, thanks.
->>
->> 382e51c139ef ath10k: set WMI_PEER_AUTHORIZE after a firmware crash
->>
->> --
->> https://patchwork.kernel.org/patch/11263357/
->>
->> https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
->>
-> 
-
-
--- 
-Ben Greear <greearb@candelatech.com>
-Candela Technologies Inc  http://www.candelatech.com
-
+Brian
 
 _______________________________________________
 ath10k mailing list
