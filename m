@@ -2,66 +2,65 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2993010E816
-	for <lists+ath10k@lfdr.de>; Mon,  2 Dec 2019 11:00:48 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id C74F210E837
+	for <lists+ath10k@lfdr.de>; Mon,  2 Dec 2019 11:07:42 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:Date:Message-ID:To:References:
 	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Kz/2AAMUnOwXyR8SiPQUG5zqCnFB9xscbva+u452ycI=; b=RIHOYG2zz12m+l
-	hiO4Y4g0nAVdCSp02l12YF/KD7ESUdEyn3X1gq/9YxYs88QZd07JkVLX09P0awdJ/3sQckcmLTNJQ
-	8y30wlLcMxOM4rjM8V5/J8g5daTknaDq624aEFWbgmrb0Pw+IZwpWNwNZOwlsjWjemEJXkr2gBZzv
-	+R5eoNRT9C85rFYs+xHh0KvV4QcFGMVMDxBvsSfKySZkNOcPmm3vqks9XcdZ4FeFiH3IdqbkOUHit
-	5irqIBshmTS83LsGaE2nMkccosh0dXgNUBaiFrbPT3vqDclg3w+tWDSKpiEHHZDI+A/06AkoWgDJ8
-	mz1pFYpNzRdeORpS6EcQ==;
+	List-Owner; bh=iXXRCfZg4n1QVdIsovU6NiJ6njuT4+Or/FV/IgbqxO4=; b=jc00rYr6wVzSxX
+	RPR1qHTtCqZjnLcKIBo5KviyvGvZqtdT4fwxiSBhE5ssnL5E2mRt2XvuvK/Y7x8MfMLw4//aQqc+g
+	QK7ktOTB7eHLU7me2C+PZsHEXYUAkaMmH8ivR6IyQav1/hlcMuD7Flvfj6jAshYqKTODyMHvWu2k4
+	EjF6s3xQMmS2HSM0Wk34QXngVIVhZPBd2ScUaPCAhNzCIXCVg7cXCiPMLik5N99tGLEuHcw4tMh0A
+	S1xQc+OtoNlkrq0M2Ceu2pJguzV8RPxKO46AAnPd6xYTgK2yHazeCY0RGNG+HPXqNVGaRF3K15+50
+	bUhuQJCETJAdqCM0z/LA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ibiVX-0003Re-JU; Mon, 02 Dec 2019 10:00:43 +0000
-Received: from a27-186.smtp-out.us-west-2.amazonses.com ([54.240.27.186])
+	id 1ibicH-0005fP-97; Mon, 02 Dec 2019 10:07:41 +0000
+Received: from a27-185.smtp-out.us-west-2.amazonses.com ([54.240.27.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ibiVQ-0003Q7-Nl
- for ath10k@lists.infradead.org; Mon, 02 Dec 2019 10:00:40 +0000
+ id 1ibicD-0005dD-5n
+ for ath10k@lists.infradead.org; Mon, 02 Dec 2019 10:07:38 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
- s=zsmsymrwgfyinv5wlfyidntwsjeeldzt; d=codeaurora.org; t=1575280833;
+ s=zsmsymrwgfyinv5wlfyidntwsjeeldzt; d=codeaurora.org; t=1575281254;
  h=Content-Type:MIME-Version:Content-Transfer-Encoding:Subject:From:In-Reply-To:References:To:Cc:Message-Id:Date;
- bh=pvgALQaUZ3SsfA3R4TZvrNTPXc3QZNqWAwOtLwIfUcs=;
- b=JJXZVGf2u1TjiUZ6Q2M6voEy/5LYza4KlwUi8rGtwwICjGflIvW1pCJxsZtnYh4J
- 5Qw/wJcNB2vAk3rr6cTxm34tFHMhSO6s+NFiafEs5eeEOeri/pbd3jPe4yRk1qeooSb
- JInmzandIhKZqTxoEI/IM5OrwbjwRbNONX6e4AjQ=
+ bh=cLeNu81ClBU0podQJ9rpP21GnCcW8uTo3of4/Ze/v9M=;
+ b=DLXe1EeMew8UQFPdzHkdjMqk8QGU9cIB00+6oVFM1dNr+szcsDn6sFs+/k0syIDd
+ 688fniywBF5pEVqc/pHag/N4i5tR4A2SYbxp8zkdxlyvqfj3nU2rrVDpqVkTWHiTCwR
+ gOwCrSUQe2PR9RtXcbZZ0aqyAvB9zBlgdtPRBSdc=
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
- s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1575280833;
+ s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1575281254;
  h=Content-Type:MIME-Version:Content-Transfer-Encoding:Subject:From:In-Reply-To:References:To:Cc:Message-Id:Date:Feedback-ID;
- bh=pvgALQaUZ3SsfA3R4TZvrNTPXc3QZNqWAwOtLwIfUcs=;
- b=cwrbf8gFjqtzqZ9pVise2BB5NfQG4PFJosUG9ONMr4JNJpVTrxzVg9TYm/1UZYNX
- GlL35CaVtOE+HXFNYMdwHdp+gLWBfqMR/p5FVdzB4g6Q/5wdTRlpnME33Udw1Y+14Df
- 60yQUIFqpfV/i8EzdIgHyHmuArVg1W2Fj/WFCg7s=
+ bh=cLeNu81ClBU0podQJ9rpP21GnCcW8uTo3of4/Ze/v9M=;
+ b=JPF+FACy7JE8bLsvlJTk1OuaNZTwHTEtaQH4M4on14r+IiTAJCR7jaUzP5sk/L8h
+ wLAGDUiHeaY1BPhgmORgOSgooKbupKrq3t3XqNo6hB8QmmbzmCBz7AZDEWVk+7s13pV
+ 995+FpT5ubB/LNkaYovz8hijUCD2hZBcObv5flps=
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  aws-us-west-2-caf-mail-1.web.codeaurora.org
 X-Spam-Level: 
 X-Spam-Status: No, score=0.5 required=2.0 tests=ALL_TRUSTED,MISSING_DATE,
- MISSING_MID,SPF_NONE,URIBL_BLOCKED autolearn=no autolearn_force=no
- version=3.4.0
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 9CD34C774C7
+ MISSING_MID,SPF_NONE autolearn=no autolearn_force=no version=3.4.0
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 592DBC433CB
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
  spf=none smtp.mailfrom=kvalo@codeaurora.org
 MIME-Version: 1.0
-Subject: Re: [PATCH v6] ath10k: enable napi on RX path for sdio
+Subject: Re: [PATCH] ath10k: change bundle count for max rx bundle for sdio
 From: Kalle Valo <kvalo@codeaurora.org>
-In-Reply-To: <20191014114753.7459-1-wgong@codeaurora.org>
-References: <20191014114753.7459-1-wgong@codeaurora.org>
+In-Reply-To: <0101016ea72cd3fc-d998517d-4033-4659-b1f8-2b6dd2717682-000000@us-west-2.amazonses.com>
+References: <0101016ea72cd3fc-d998517d-4033-4659-b1f8-2b6dd2717682-000000@us-west-2.amazonses.com>
 To: Wen Gong <wgong@codeaurora.org>
 User-Agent: pwcli/0.0.0-git (https://github.com/kvalo/pwcli/) Python/2.7.12
-Message-ID: <0101016ec60df3c7-ee61b7de-3557-4084-8145-15e3fd562161-000000@us-west-2.amazonses.com>
-Date: Mon, 2 Dec 2019 10:00:33 +0000
-X-SES-Outgoing: 2019.12.02-54.240.27.186
+Message-ID: <0101016ec614610c-2702f676-611d-4d34-b5e5-cb4f665a87aa-000000@us-west-2.amazonses.com>
+Date: Mon, 2 Dec 2019 10:07:34 +0000
+X-SES-Outgoing: 2019.12.02-54.240.27.185
 Feedback-ID: 1.us-west-2.CZuq2qbDmUIuT3qdvXlRHZZCpfZqZ4GtG9v3VKgRyF0=:AmazonSES
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191202_020036_807475_1C0F50E3 
-X-CRM114-Status: UNSURE (   9.17  )
+X-CRM114-CacheID: sfid-20191202_020737_248847_1C4D92A8 
+X-CRM114-Status: UNSURE (   8.54  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.1 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -69,7 +68,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [54.240.27.186 listed in list.dnswl.org]
+ no trust [54.240.27.185 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
  mail domains are different
@@ -100,76 +99,37 @@ Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
 Wen Gong <wgong@codeaurora.org> wrote:
 
-> For tcp RX, the quantity of tcp acks to remote is 1/2 of the quantity
-> of tcp data from remote, then it will have many small length packets
-> on TX path of sdio bus, then it reduce the RX packets's bandwidth of
-> tcp.
+> For max bundle size 32, the bundle mask is not same with 8/16.
+> Change it to match the max bundle size of htc. Otherwise it
+> will not match with firmware, for example, when bundle count
+> is 17, then flags of ath10k_htc_hdr is 0x4, if without this
+> patch, it will be considered as non-bundled packet because it
+> does not have mask 0xF0, then trigger error message later:
+> payload length 56747 exceeds max htc length: 4088.
 > 
-> This patch enable napi on RX path, then the RX packet of tcp will not
-> feed to tcp stack immeditely from mac80211 since GRO is enabled by
-> default, it will feed to tcp stack after napi complete, if rx bundle
-> is enabled, then it will feed to tcp stack one time for each bundle
-> of RX. For example, RX bundle size is 32, then tcp stack will receive
-> one large length packet, its length is neary 1500*32, then tcp stack
-> will send a tcp ack for this large packet, this will reduce the tcp
-> acks ratio from 1/2 to 1/32. This results in significant performance
-> improvement for tcp RX.
+> htc->max_msgs_per_htc_bundle is the min value of
+> HTC_HOST_MAX_MSG_PER_RX_BUNDLE and
+> msg->ready_ext.max_msgs_per_htc_bundle of ath10k_htc_wait_target,
+> it will be sent to firmware later in ath10k_htc_start, then
+> firmware will use it as the final max rx bundle count, in
+> WLAN.RMH.4.4.1-00029, msg->ready_ext.max_msgs_per_htc_bundle
+> is 32, it is same with HTC_HOST_MAX_MSG_PER_RX_BUNDLE, so the
+> final max rx bundle count will be set to 32 in firmware.
 > 
-> Tcp rx throughout is 240Mbps without this patch, and it arrive 390Mbps
-> with this patch. The cpu usage has no obvious difference with and
-> without NAPI.
+> This patch only effect sdio chips.
 > 
-> call stack for each RX packet on GRO path:
-> (skb length is about 1500 bytes)
->   skb_gro_receive ([kernel.kallsyms])
->   tcp4_gro_receive ([kernel.kallsyms])
->   inet_gro_receive ([kernel.kallsyms])
->   dev_gro_receive ([kernel.kallsyms])
->   napi_gro_receive ([kernel.kallsyms])
->   ieee80211_deliver_skb ([mac80211])
->   ieee80211_rx_handlers ([mac80211])
->   ieee80211_prepare_and_rx_handle ([mac80211])
->   ieee80211_rx_napi ([mac80211])
->   ath10k_htt_rx_proc_rx_ind_hl ([ath10k_core])
->   ath10k_htt_rx_pktlog_completion_handler ([ath10k_core])
->   ath10k_sdio_napi_poll ([ath10k_sdio])
->   net_rx_action ([kernel.kallsyms])
->   softirqentry_text_start ([kernel.kallsyms])
->   do_softirq ([kernel.kallsyms])
-> 
-> call stack for napi complete and send tcp ack from tcp stack:
-> (skb length is about 1500*32 bytes)
->  _tcp_ack_snd_check ([kernel.kallsyms])
->  tcp_v4_do_rcv ([kernel.kallsyms])
->  tcp_v4_rcv ([kernel.kallsyms])
->  local_deliver_finish ([kernel.kallsyms])
->  ip_local_deliver ([kernel.kallsyms])
->  ip_rcv_finish ([kernel.kallsyms])
->  ip_rcv ([kernel.kallsyms])
->  netif_receive_skb_core ([kernel.kallsyms])
->  netif_receive_skb_one_core([kernel.kallsyms])
->  netif_receive_skb ([kernel.kallsyms])
->  netif_receive_skb_internal ([kernel.kallsyms])
->  napi_gro_complete ([kernel.kallsyms])
->  napi_gro_flush ([kernel.kallsyms])
->  napi_complete_done ([kernel.kallsyms])
->  ath10k_sdio_napi_poll ([ath10k_sdio])
->  net_rx_action ([kernel.kallsyms])
->  __softirqentry_text_start ([kernel.kallsyms])
->  do_softirq ([kernel.kallsyms])
-> 
-> Tested with QCA6174 SDIO with firmware
-> WLAN.RMH.4.4.1-00017-QCARMSWP-1.
+> Tested with QCA6174 SDIO with firmware WLAN.RMH.4.4.1-00029.
 > 
 > Signed-off-by: Wen Gong <wgong@codeaurora.org>
+> Fixes: 224776520ead69e ("ath10k: change max RX bundle size from 8 to 32 for sdio")
 > Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 
 Patch applied to ath-next branch of ath.git, thanks.
 
-cfee8793a74d ath10k: enable napi on RX path for sdio
+4a9912451630 ath10k: change bundle count for max rx bundle for sdio
 
 -- 
-https://patchwork.kernel.org/patch/11188393/
+https://patchwork.kernel.org/patch/11261779/
 
 https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
 
