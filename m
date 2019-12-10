@@ -2,54 +2,54 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 89EC5119640
-	for <lists+ath10k@lfdr.de>; Tue, 10 Dec 2019 22:25:55 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id A7ACA11974E
+	for <lists+ath10k@lfdr.de>; Tue, 10 Dec 2019 22:32:45 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=pR8x6Ee/vNPryNIBtutqobegK5/JiilRKJx3R+ALdqo=; b=DPk0Ir+w5JLT6h
-	kHSfjFkiGD/almq+DvetuLZpVxe6K3pcd9yTIllXMjhb7HxkFD4KG5/GJuRWCEMKZy+uWbWCVW+Df
-	tr48o/bIuN8pmbcRQGX8B5zghOprgXGk54x9Ngf5dF/llp95ho+MQhQwwTJsgfNcktpHEN+rLZ3qf
-	gM/hkWGvVOKOYzYjSh2v0Ay8LM0dZi7SkiJnGHSEwtz5xO1FqQlC/AuXHmeUGC/NTuxqTWV0dqbVx
-	Uc3zW9H3z80rz1Rlj1vsK3Xob662M0uBiOiubwyMTAProp/hilPQZs8c8r6DA4nniIKB3IMS5mmq+
-	o2iwi2fGBBZD+GwCcFbQ==;
+	List-Owner; bh=yTkL2eyp4I+4JxuX8fh1AULpLkGeCcZVPs5FVT7T+00=; b=Wv4rXI9EFCnjlg
+	2viCiOmiP19F2N0Gz03pIfqvIAUqVutRfq01W1BcbYaUozjxrOY2RoX3I6VmYyDaxwCgirBiewtxb
+	clqaK5e6NdOYC309aaIQr0AIwcgaPQJcVRwZgtEVw63R4n09But3ndwFok4rDjRRbKr6ctxh7GFhi
+	05vxX0s5urrQCVOw/TpjvTAhA5maFFDgcN4FCHwSCywN9BR+jI4j+e4WNRGAotnJI1puM1zGNsSzC
+	Hha9VnU/Ccz5xBE+D6Aq9TbmOC8cTyGy5rS4jvLC/AuT/02nT5nDUw25MiqTEXYTuHNoySEsE+tQa
+	2lcAvMYzYn4kXP4S1zbA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ien0z-0007lR-QR; Tue, 10 Dec 2019 21:25:53 +0000
+	id 1ien7a-0001jt-Ky; Tue, 10 Dec 2019 21:32:42 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ien0n-0007gT-F4
- for ath10k@lists.infradead.org; Tue, 10 Dec 2019 21:25:43 +0000
+ id 1ien7V-0001iY-U5
+ for ath10k@lists.infradead.org; Tue, 10 Dec 2019 21:32:39 +0000
 Received: from sasha-vm.mshome.net (c-73-47-72-35.hsd1.nh.comcast.net
  [73.47.72.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id E74D5206D5;
- Tue, 10 Dec 2019 21:25:39 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id CFE1B214AF;
+ Tue, 10 Dec 2019 21:32:36 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1576013140;
- bh=Q4VBBcVHLUBqiODns1zyQG5zfK8ZHI0uDaGYoWiea0U=;
+ s=default; t=1576013557;
+ bh=IcOno1mqnFSoa4NxvV+ES7nTKiGmjKuk/TyPFW6PQyo=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=UdEUMuPg9WmufsAXN1hqd8kJYBmRurF2o3kez5RXpv/IEBai9AYIoTCpaTZd0zWKk
- z8mHWKHUEbFJdTKHDUVwAnPRFoNlNmlO3H35tFD40UAtQJCk4kKBA8pJA8vQzILFlg
- DZ7aja27mGZOGVm7f53dsZrSjccCvDLQaVBnjegw=
+ b=uTEqePgAuF8YrUhvv7877BOqocP7sXnBEBCukKboLcvhoVbEkWfw9WZP1wooLCuV0
+ Z5296jc7ydHiWQbEkmjBCC8faM7khlQqOAhAAi/UvOoVUaWjUn2DIrALif28mBIrsz
+ ZzgOoVgn435crdsGvvDn3Vo9QTg4P5eCu5yoPkoU=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 5.3 024/292] ath10k: fix backtrace on coredump
-Date: Tue, 10 Dec 2019 16:20:43 -0500
-Message-Id: <20191210212511.11392-24-sashal@kernel.org>
+Subject: [PATCH AUTOSEL 4.19 013/177] ath10k: fix backtrace on coredump
+Date: Tue, 10 Dec 2019 16:29:37 -0500
+Message-Id: <20191210213221.11921-13-sashal@kernel.org>
 X-Mailer: git-send-email 2.20.1
-In-Reply-To: <20191210212511.11392-1-sashal@kernel.org>
-References: <20191210212511.11392-1-sashal@kernel.org>
+In-Reply-To: <20191210213221.11921-1-sashal@kernel.org>
+References: <20191210213221.11921-1-sashal@kernel.org>
 MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191210_132541_565841_FC219245 
+X-CRM114-CacheID: sfid-20191210_133238_007110_D6BC6C53 
 X-CRM114-Status: UNSURE (   9.87  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
@@ -126,10 +126,10 @@ Signed-off-by: Sasha Levin <sashal@kernel.org>
  1 file changed, 8 insertions(+), 3 deletions(-)
 
 diff --git a/drivers/net/wireless/ath/ath10k/coredump.c b/drivers/net/wireless/ath/ath10k/coredump.c
-index b6d2932383cf6..1cfe75a2d0c3a 100644
+index 4d28063052fec..385b84f24322d 100644
 --- a/drivers/net/wireless/ath/ath10k/coredump.c
 +++ b/drivers/net/wireless/ath/ath10k/coredump.c
-@@ -1208,9 +1208,11 @@ static struct ath10k_dump_file_data *ath10k_coredump_build(struct ath10k *ar)
+@@ -1105,9 +1105,11 @@ static struct ath10k_dump_file_data *ath10k_coredump_build(struct ath10k *ar)
  		dump_tlv = (struct ath10k_tlv_dump_data *)(buf + sofar);
  		dump_tlv->type = cpu_to_le32(ATH10K_FW_CRASH_DUMP_RAM_DATA);
  		dump_tlv->tlv_len = cpu_to_le32(crash_data->ramdump_buf_len);
@@ -143,8 +143,8 @@ index b6d2932383cf6..1cfe75a2d0c3a 100644
 +		}
  	}
  
- 	mutex_unlock(&ar->dump_mutex);
-@@ -1257,6 +1259,9 @@ int ath10k_coredump_register(struct ath10k *ar)
+ 	spin_unlock_bh(&ar->data_lock);
+@@ -1154,6 +1156,9 @@ int ath10k_coredump_register(struct ath10k *ar)
  	if (test_bit(ATH10K_FW_CRASH_DUMP_RAM_DATA, &ath10k_coredump_mask)) {
  		crash_data->ramdump_buf_len = ath10k_coredump_get_ramdump_size(ar);
  
