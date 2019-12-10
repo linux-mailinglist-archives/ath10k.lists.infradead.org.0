@@ -2,56 +2,56 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2F7551192BB
-	for <lists+ath10k@lfdr.de>; Tue, 10 Dec 2019 22:04:50 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id C913F119305
+	for <lists+ath10k@lfdr.de>; Tue, 10 Dec 2019 22:08:05 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=pR8x6Ee/vNPryNIBtutqobegK5/JiilRKJx3R+ALdqo=; b=Fj/fznZCqxhQE7
-	/3N1HZvEHmduMMZTGEh4uzyiyb673czGmTgZjmfPhlPrIQYcdv0LBa3nc0r5gYEelVdg6ATa+fSr6
-	UDEbjVzzFloUpLoA6BMbNVGKjKREHMZzLSGp5hGzpHEO8VK90R2amaqwOFMJTqBkTBSy4f4S6wHVN
-	j9Nhh4vrjmZjbF5fRWybEJKjayQWqzG8PHNWKgBSUA1D1g1hLe1yFgpihZVlK7U+Fzzc3ujUlS0vn
-	f1OLZNhs3toBkuk+EgI06kdFH6wQd2bmhHfX8YDAich/tSnel/cUIZxajlEk8oe5jZd7Jq3cHDvdx
-	Hr2PTS8KRANmMRq37tqg==;
+	List-Owner; bh=vtq56nXzkVOdeGGiiGC+WyiQ8zxrN6v0gOB7e/4TR2Y=; b=LAdNcK48VgMf49
+	0tgJMxloe1oF0cl1L0XgRXtmhGkDMBeb6tPh5G+FN85R6EKtRo0qB/+P9eUP+/9npuU+pDZIJTWjR
+	DUeCTD25KlmYm+p7vz2QcOkqcPSRl/vZLO1Uk9JTLsJWzdo3xu7hADu8mzqioNY3PA2REbPYSHr/d
+	mTpk3asQYvWAr0NT0f6MPf0C/5ystLhKHxj35cOgXN5CAhBWMsR1iFWo3zOiN1DaDSlBk9Ksl+rnw
+	OWPPDER69FpDNmJDhllpvG/BYp5G8Atb+fhhDdNWfG+JndeiHlPHvPuaWbeBV/AlV/5qtpdC8TULM
+	Q1Ui0KN6f8/O+4ZpIjWg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iemga-0007L7-Af; Tue, 10 Dec 2019 21:04:48 +0000
+	id 1iemjj-0001H4-QF; Tue, 10 Dec 2019 21:08:03 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iemgR-0007JO-45
- for ath10k@lists.infradead.org; Tue, 10 Dec 2019 21:04:40 +0000
+ id 1iemjT-00015L-Cg
+ for ath10k@lists.infradead.org; Tue, 10 Dec 2019 21:07:49 +0000
 Received: from sasha-vm.mshome.net (c-73-47-72-35.hsd1.nh.comcast.net
  [73.47.72.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 00FC424681;
- Tue, 10 Dec 2019 21:04:37 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id 29E0724687;
+ Tue, 10 Dec 2019 21:07:46 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1576011878;
- bh=Q4VBBcVHLUBqiODns1zyQG5zfK8ZHI0uDaGYoWiea0U=;
+ s=default; t=1576012067;
+ bh=haEPsc2yk+K9gE7Q79DHnfLRnG8eqSnhALg/2VZ68rs=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=ABiTZDP4RElvF4xNw8CHfsiZQeg3E2zaQIAAy/muOWb79oVvW3toDXGhIMqMcZmLk
- +5V6jVMHFncxY7NGOxxNWT7gWme3brgAgV8OOGLDn1OJ6rxbcs2T4ePbjXTVrxNzxV
- Pmc2Rr6YAk87KqgXa6oUHIbnPxXCPZ6L7jCJCy6Y=
+ b=gDSbtHDcb5PUAx59sI1U+1ftHFouuLji+F9FdnMLwOl8k05sPzJaQwH8RM+iDvJsg
+ HQy2A+hF6qZQQubYshddlfW1TjBc6uSQFmSbelVF5P2op3AzU8b8jRdqd0rsz1fHjJ
+ 1WbxoZq/F2Vtji1H3ITwbLMFdKXzqlYJ9+BEL8xM=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 5.4 030/350] ath10k: fix backtrace on coredump
-Date: Tue, 10 Dec 2019 15:58:42 -0500
-Message-Id: <20191210210402.8367-30-sashal@kernel.org>
+Subject: [PATCH AUTOSEL 5.4 048/350] ath10k: fix offchannel tx failure when no
+ ath10k_mac_tx_frm_has_freq
+Date: Tue, 10 Dec 2019 16:02:33 -0500
+Message-Id: <20191210210735.9077-9-sashal@kernel.org>
 X-Mailer: git-send-email 2.20.1
-In-Reply-To: <20191210210402.8367-1-sashal@kernel.org>
-References: <20191210210402.8367-1-sashal@kernel.org>
+In-Reply-To: <20191210210735.9077-1-sashal@kernel.org>
+References: <20191210210735.9077-1-sashal@kernel.org>
 MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191210_130439_203371_9A897A0D 
-X-CRM114-Status: UNSURE (   9.87  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20191210_130747_508012_5CFC2B44 
+X-CRM114-Status: GOOD (  12.09  )
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-5.2 points)
@@ -80,80 +80,127 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Sasha Levin <sashal@kernel.org>, netdev@vger.kernel.org,
- Anilkumar Kolli <akolli@codeaurora.org>, linux-wireless@vger.kernel.org,
- ath10k@lists.infradead.org, Kalle Valo <kvalo@codeaurora.org>
+Cc: Antonio Quartulli <antonio.quartulli@kaiwoo.ai>,
+ Sasha Levin <sashal@kernel.org>, netdev@vger.kernel.org,
+ linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
+ Ben Greear <greearb@candelatech.com>, Kalle Valo <kvalo@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-From: Anilkumar Kolli <akolli@codeaurora.org>
+From: Ben Greear <greearb@candelatech.com>
 
-[ Upstream commit d98ddae85a4a57124f87960047b1b6419312147f ]
+[ Upstream commit cc6df017e55764ffef9819dd9554053182535ffd ]
 
-In a multiradio board with one QCA9984 and one AR9987
-after enabling the crashdump with module parameter
-coredump_mask=7, below backtrace is seen.
+Offchannel management frames were failing:
 
-vmalloc: allocation failure: 0 bytes
- kworker/u4:0: page allocation failure: order:0, mode:0x80d2
- CPU: 0 PID: 6 Comm: kworker/u4:0 Not tainted 3.14.77 #130
- Workqueue: ath10k_wq ath10k_core_register_work [ath10k_core]
- (unwind_backtrace) from [<c021abf8>] (show_stack+0x10/0x14)
- (dump_stack+0x80/0xa0)
- (warn_alloc_failed+0xd0/0xfc)
- (__vmalloc_node_range+0x1b4/0x1d8)
- (__vmalloc_node+0x34/0x40)
- (vzalloc+0x24/0x30)
- (ath10k_coredump_register+0x6c/0x88 [ath10k_core])
- (ath10k_core_register_work+0x350/0xb34 [ath10k_core])
- (process_one_work+0x20c/0x32c)
- (worker_thread+0x228/0x360)
+[18099.253732] ath10k_pci 0000:01:00.0: timed out waiting for offchannel skb cf0e3780
+[18102.293686] ath10k_pci 0000:01:00.0: timed out waiting for offchannel skb cf0e3780
+[18105.333653] ath10k_pci 0000:01:00.0: timed out waiting for offchannel skb cf0e3780
+[18108.373712] ath10k_pci 0000:01:00.0: timed out waiting for offchannel skb cf0e3780
+[18111.413687] ath10k_pci 0000:01:00.0: timed out waiting for offchannel skb cf0e36c0
+[18114.453726] ath10k_pci 0000:01:00.0: timed out waiting for offchannel skb cf0e3f00
+[18117.493773] ath10k_pci 0000:01:00.0: timed out waiting for offchannel skb cf0e36c0
+[18120.533631] ath10k_pci 0000:01:00.0: timed out waiting for offchannel skb cf0e3f00
 
-This is due to ath10k_hw_mem_layout is not defined for AR9987.
-For coredump undefined hw ramdump_size is 0.
-Check for the ramdump_size before allocation memory.
+This bug appears to have been added between 4.0 (which works for us),
+and 4.4, which does not work.
 
-Tested on: AR9987, QCA9984
-FW version: 10.4-3.9.0.2-00044
+I think this is because the tx-offchannel logic gets in a loop when
+ath10k_mac_tx_frm_has_freq(ar) is false, so pkt is never actually
+sent to the firmware for transmit.
 
-Signed-off-by: Anilkumar Kolli <akolli@codeaurora.org>
+This patch fixes the problem on 4.9 for me, and now HS20 clients
+can work again with my firmware.
+
+Antonio: tested with 10.4-3.5.3-00057 on QCA4019 and QCA9888
+
+Signed-off-by: Ben Greear <greearb@candelatech.com>
+Tested-by: Antonio Quartulli <antonio.quartulli@kaiwoo.ai>
+[kvalo@codeaurora.org: improve commit log, remove unneeded parenthesis]
 Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 Signed-off-by: Sasha Levin <sashal@kernel.org>
 ---
- drivers/net/wireless/ath/ath10k/coredump.c | 11 ++++++++---
- 1 file changed, 8 insertions(+), 3 deletions(-)
+ drivers/net/wireless/ath/ath10k/mac.c | 22 +++++++++++-----------
+ 1 file changed, 11 insertions(+), 11 deletions(-)
 
-diff --git a/drivers/net/wireless/ath/ath10k/coredump.c b/drivers/net/wireless/ath/ath10k/coredump.c
-index b6d2932383cf6..1cfe75a2d0c3a 100644
---- a/drivers/net/wireless/ath/ath10k/coredump.c
-+++ b/drivers/net/wireless/ath/ath10k/coredump.c
-@@ -1208,9 +1208,11 @@ static struct ath10k_dump_file_data *ath10k_coredump_build(struct ath10k *ar)
- 		dump_tlv = (struct ath10k_tlv_dump_data *)(buf + sofar);
- 		dump_tlv->type = cpu_to_le32(ATH10K_FW_CRASH_DUMP_RAM_DATA);
- 		dump_tlv->tlv_len = cpu_to_le32(crash_data->ramdump_buf_len);
--		memcpy(dump_tlv->tlv_data, crash_data->ramdump_buf,
--		       crash_data->ramdump_buf_len);
--		sofar += sizeof(*dump_tlv) + crash_data->ramdump_buf_len;
-+		if (crash_data->ramdump_buf_len) {
-+			memcpy(dump_tlv->tlv_data, crash_data->ramdump_buf,
-+			       crash_data->ramdump_buf_len);
-+			sofar += sizeof(*dump_tlv) + crash_data->ramdump_buf_len;
-+		}
+diff --git a/drivers/net/wireless/ath/ath10k/mac.c b/drivers/net/wireless/ath/ath10k/mac.c
+index 40889b79fc70d..a40e1a998f4cd 100644
+--- a/drivers/net/wireless/ath/ath10k/mac.c
++++ b/drivers/net/wireless/ath/ath10k/mac.c
+@@ -3708,7 +3708,7 @@ static int ath10k_mac_tx(struct ath10k *ar,
+ 			 struct ieee80211_vif *vif,
+ 			 enum ath10k_hw_txrx_mode txmode,
+ 			 enum ath10k_mac_tx_path txpath,
+-			 struct sk_buff *skb)
++			 struct sk_buff *skb, bool noque_offchan)
+ {
+ 	struct ieee80211_hw *hw = ar->hw;
+ 	struct ieee80211_tx_info *info = IEEE80211_SKB_CB(skb);
+@@ -3738,10 +3738,10 @@ static int ath10k_mac_tx(struct ath10k *ar,
+ 		}
  	}
  
- 	mutex_unlock(&ar->dump_mutex);
-@@ -1257,6 +1259,9 @@ int ath10k_coredump_register(struct ath10k *ar)
- 	if (test_bit(ATH10K_FW_CRASH_DUMP_RAM_DATA, &ath10k_coredump_mask)) {
- 		crash_data->ramdump_buf_len = ath10k_coredump_get_ramdump_size(ar);
+-	if (info->flags & IEEE80211_TX_CTL_TX_OFFCHAN) {
++	if (!noque_offchan && info->flags & IEEE80211_TX_CTL_TX_OFFCHAN) {
+ 		if (!ath10k_mac_tx_frm_has_freq(ar)) {
+-			ath10k_dbg(ar, ATH10K_DBG_MAC, "queued offchannel skb %pK\n",
+-				   skb);
++			ath10k_dbg(ar, ATH10K_DBG_MAC, "mac queued offchannel skb %pK len %d\n",
++				   skb, skb->len);
  
-+		if (!crash_data->ramdump_buf_len)
-+			return 0;
-+
- 		crash_data->ramdump_buf = vzalloc(crash_data->ramdump_buf_len);
- 		if (!crash_data->ramdump_buf)
- 			return -ENOMEM;
+ 			skb_queue_tail(&ar->offchan_tx_queue, skb);
+ 			ieee80211_queue_work(hw, &ar->offchan_tx_work);
+@@ -3803,8 +3803,8 @@ void ath10k_offchan_tx_work(struct work_struct *work)
+ 
+ 		mutex_lock(&ar->conf_mutex);
+ 
+-		ath10k_dbg(ar, ATH10K_DBG_MAC, "mac offchannel skb %pK\n",
+-			   skb);
++		ath10k_dbg(ar, ATH10K_DBG_MAC, "mac offchannel skb %pK len %d\n",
++			   skb, skb->len);
+ 
+ 		hdr = (struct ieee80211_hdr *)skb->data;
+ 		peer_addr = ieee80211_get_DA(hdr);
+@@ -3850,7 +3850,7 @@ void ath10k_offchan_tx_work(struct work_struct *work)
+ 		txmode = ath10k_mac_tx_h_get_txmode(ar, vif, sta, skb);
+ 		txpath = ath10k_mac_tx_h_get_txpath(ar, skb, txmode);
+ 
+-		ret = ath10k_mac_tx(ar, vif, txmode, txpath, skb);
++		ret = ath10k_mac_tx(ar, vif, txmode, txpath, skb, true);
+ 		if (ret) {
+ 			ath10k_warn(ar, "failed to transmit offchannel frame: %d\n",
+ 				    ret);
+@@ -3860,8 +3860,8 @@ void ath10k_offchan_tx_work(struct work_struct *work)
+ 		time_left =
+ 		wait_for_completion_timeout(&ar->offchan_tx_completed, 3 * HZ);
+ 		if (time_left == 0)
+-			ath10k_warn(ar, "timed out waiting for offchannel skb %pK\n",
+-				    skb);
++			ath10k_warn(ar, "timed out waiting for offchannel skb %pK, len: %d\n",
++				    skb, skb->len);
+ 
+ 		if (!peer && tmp_peer_created) {
+ 			ret = ath10k_peer_delete(ar, vdev_id, peer_addr);
+@@ -4097,7 +4097,7 @@ int ath10k_mac_tx_push_txq(struct ieee80211_hw *hw,
+ 		spin_unlock_bh(&ar->htt.tx_lock);
+ 	}
+ 
+-	ret = ath10k_mac_tx(ar, vif, txmode, txpath, skb);
++	ret = ath10k_mac_tx(ar, vif, txmode, txpath, skb, false);
+ 	if (unlikely(ret)) {
+ 		ath10k_warn(ar, "failed to push frame: %d\n", ret);
+ 
+@@ -4378,7 +4378,7 @@ static void ath10k_mac_op_tx(struct ieee80211_hw *hw,
+ 		spin_unlock_bh(&ar->htt.tx_lock);
+ 	}
+ 
+-	ret = ath10k_mac_tx(ar, vif, txmode, txpath, skb);
++	ret = ath10k_mac_tx(ar, vif, txmode, txpath, skb, false);
+ 	if (ret) {
+ 		ath10k_warn(ar, "failed to transmit frame: %d\n", ret);
+ 		if (is_htt) {
 -- 
 2.20.1
 
