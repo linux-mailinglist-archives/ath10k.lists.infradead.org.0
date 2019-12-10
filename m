@@ -2,47 +2,47 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 452F9119771
-	for <lists+ath10k@lfdr.de>; Tue, 10 Dec 2019 22:33:33 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id A86AF1197B7
+	for <lists+ath10k@lfdr.de>; Tue, 10 Dec 2019 22:35:03 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=pqJ7ZFj3YH3cbujc7NwhZGoiPl/32I5Vp+mX18Yp6H4=; b=lhGwJYkIjApsHI
-	6FiyKtXhlHMkmkG/nIrrgPU1dejd+yB/O0KFlFjbAALfbFvAA+szOetfcQvXeY4zg9fM+WkgHKDzv
-	aBNtakwIUU7mRxl3V1pgkUV5aC+maQMBSqGyJZzd2/C2Vf2C2maHVAT+CCO/LquNCaKA3OCEOuukg
-	WTrIE4Xcl8t/wDO9NqmHoGle7CzqmOdYb9poCwpAtPDk7UJoG7grsrNy380Eqc9yXLkJpK+lTP+oy
-	fUgcvXGCOWcCDmJ2bvV65L0tj8BH8wws4kgtCfMyxqjPTKc9ZXIondQLeGVDjBbzjGXqDpcayaBSC
-	GofJroR57vkSkN7AfI9g==;
+	List-Owner; bh=4akZb5EQ+8Kva9QwXmAv0SuNnrO4dPcA0UyiIOxISJo=; b=TvUNSp27CvLFUd
+	PXuzjTvRnMp6IKPbLCcoD0oY2KithMvrcsJKdpIPynJ4BKN64hfsmQNs1uI+vrVoXjSg+pJryeNG+
+	A5y+wjjE8C1w7vcwyNmqIe29VBEKBCcAVhyVGEMzMP2CKz3PLRW3moVgM2huhJWc7FwzTPGDPe1iY
+	AYL4EMtUuu5rzYFxmEiWNJT3PZ0OFuhXmzlmHqR17z1ryspTapiJ8UP25aLfhXzUrjSI6vItq4uED
+	OmH8Rkf5OiSxpx738tVuQkvdV75DnE0UnyPcjsINVfR4yvP7kog73fOp4QjnXl792yHO1Y1MPLxcX
+	O6zgWLmGajj4LmWTaUGw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ien8N-00025k-MK; Tue, 10 Dec 2019 21:33:31 +0000
+	id 1ien9p-0003CY-9u; Tue, 10 Dec 2019 21:35:01 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ien8K-00025E-7e
- for ath10k@lists.infradead.org; Tue, 10 Dec 2019 21:33:29 +0000
+ id 1ien9l-0003Bi-Um
+ for ath10k@lists.infradead.org; Tue, 10 Dec 2019 21:34:59 +0000
 Received: from sasha-vm.mshome.net (c-73-47-72-35.hsd1.nh.comcast.net
  [73.47.72.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 09A2A24655;
- Tue, 10 Dec 2019 21:33:26 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id A61B92465A;
+ Tue, 10 Dec 2019 21:34:56 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1576013607;
- bh=Zmqhn+gLHF4HZ1l6ptap/Srkv2xAvfXDEkW1pu0VASY=;
+ s=default; t=1576013697;
+ bh=PVEGQdHiy+KQDr4ywzZbSqkTER8rUHDJ++jaJtm196k=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=XhH1yKWIe7HbPDIZHXBcQVglSmsN1tR+G6G5i2kk1QcXGKIDhpTE7PfliqpGDCUe+
- 2YGfpDszWC3wvOUrgmAevVzSm+EIt0ig1gZI/u3p5jxka7jhMtV6diTdUAt0QnGqke
- GH9YzQBtdT87B0/nXQBvIGUe5mBie334QIGvtvxM=
+ b=yaNPWpMJPOCDW6RtJk2+ywyt+GHu+lGIzJPbXNCxUnlu1Ni3z26GQ2rUo+8y2N+Ga
+ W6B3QWjHZgP8vGcqpD5p+WPVMdmvy9HV9s5jp2uRdQ3HeJyY3EAmxsUL+8udwS6fLS
+ 8DxITwGLRa+qnwNlFV8RPwkjLmIWSiwn331lVSlA=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 4.19 054/177] ath10k: Correct error handling of
- dma_map_single()
-Date: Tue, 10 Dec 2019 16:30:18 -0500
-Message-Id: <20191210213221.11921-54-sashal@kernel.org>
+Subject: [PATCH AUTOSEL 4.19 127/177] ath10k: fix get invalid tx rate for Mesh
+ metric
+Date: Tue, 10 Dec 2019 16:31:31 -0500
+Message-Id: <20191210213221.11921-127-sashal@kernel.org>
 X-Mailer: git-send-email 2.20.1
 In-Reply-To: <20191210213221.11921-1-sashal@kernel.org>
 References: <20191210213221.11921-1-sashal@kernel.org>
@@ -50,8 +50,8 @@ MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191210_133328_293241_919D24AA 
-X-CRM114-Status: UNSURE (   9.29  )
+X-CRM114-CacheID: sfid-20191210_133458_005631_6865824A 
+X-CRM114-Status: UNSURE (   6.66  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -81,51 +81,49 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Sasha Levin <sashal@kernel.org>, netdev@vger.kernel.org,
+Cc: Sasha Levin <sashal@kernel.org>, Miaoqing Pan <miaoqing@codeaurora.org>,
+ netdev@vger.kernel.org, Anilkumar Kolli <akolli@codeaurora.org>,
  linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
- Bjorn Andersson <bjorn.andersson@linaro.org>,
- Niklas Cassel <niklas.cassel@linaro.org>, Kalle Valo <kvalo@codeaurora.org>
+ Hou Bao Hou <houbao@codeaurora.org>, Kalle Valo <kvalo@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-From: Bjorn Andersson <bjorn.andersson@linaro.org>
+From: Miaoqing Pan <miaoqing@codeaurora.org>
 
-[ Upstream commit d43810b2c1808ac865aa1a2a2c291644bf95345c ]
+[ Upstream commit 05a11003a56507023f18d3249a4d4d119c0a3e9c ]
 
-The return value of dma_map_single() should be checked for errors using
-dma_mapping_error() and the skb has been dequeued so it needs to be
-freed.
+ath10k does not provide transmit rate info per MSDU
+in tx completion, mark that as -1 so mac80211
+will ignore the rates. This fixes mac80211 update Mesh
+link metric with invalid transmit rate info.
 
-This was found when enabling CONFIG_DMA_API_DEBUG and it warned about the
-missing dma_mapping_error() call.
+Tested HW: QCA9984
+Tested FW: 10.4-3.9.0.2-00035
 
-Fixes: 1807da49733e ("ath10k: wmi: add management tx by reference support over wmi")
-Reported-by: Niklas Cassel <niklas.cassel@linaro.org>
-Signed-off-by: Bjorn Andersson <bjorn.andersson@linaro.org>
+Signed-off-by: Hou Bao Hou <houbao@codeaurora.org>
+Signed-off-by: Anilkumar Kolli <akolli@codeaurora.org>
+Signed-off-by: Miaoqing Pan <miaoqing@codeaurora.org>
 Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 Signed-off-by: Sasha Levin <sashal@kernel.org>
 ---
- drivers/net/wireless/ath/ath10k/mac.c | 4 +++-
- 1 file changed, 3 insertions(+), 1 deletion(-)
+ drivers/net/wireless/ath/ath10k/txrx.c | 2 ++
+ 1 file changed, 2 insertions(+)
 
-diff --git a/drivers/net/wireless/ath/ath10k/mac.c b/drivers/net/wireless/ath/ath10k/mac.c
-index 174e0ce31c42b..448e3a8c33a6d 100644
---- a/drivers/net/wireless/ath/ath10k/mac.c
-+++ b/drivers/net/wireless/ath/ath10k/mac.c
-@@ -3844,8 +3844,10 @@ void ath10k_mgmt_over_wmi_tx_work(struct work_struct *work)
- 			     ar->running_fw->fw_file.fw_features)) {
- 			paddr = dma_map_single(ar->dev, skb->data,
- 					       skb->len, DMA_TO_DEVICE);
--			if (!paddr)
-+			if (dma_mapping_error(ar->dev, paddr)) {
-+				ieee80211_free_txskb(ar->hw, skb);
- 				continue;
-+			}
- 			ret = ath10k_wmi_mgmt_tx_send(ar, skb, paddr);
- 			if (ret) {
- 				ath10k_warn(ar, "failed to transmit management frame by ref via WMI: %d\n",
+diff --git a/drivers/net/wireless/ath/ath10k/txrx.c b/drivers/net/wireless/ath/ath10k/txrx.c
+index 6f62ddc0494c3..6c47e4b6aa6cd 100644
+--- a/drivers/net/wireless/ath/ath10k/txrx.c
++++ b/drivers/net/wireless/ath/ath10k/txrx.c
+@@ -101,6 +101,8 @@ int ath10k_txrx_tx_unref(struct ath10k_htt *htt,
+ 
+ 	info = IEEE80211_SKB_CB(msdu);
+ 	memset(&info->status, 0, sizeof(info->status));
++	info->status.rates[0].idx = -1;
++
+ 	trace_ath10k_txrx_tx_unref(ar, tx_done->msdu_id);
+ 
+ 	if (!(info->flags & IEEE80211_TX_CTL_NO_ACK))
 -- 
 2.20.1
 
