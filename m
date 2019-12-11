@@ -2,7 +2,7 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7946C11C09A
+	by mail.lfdr.de (Postfix) with ESMTPS id 7314B11C099
 	for <lists+ath10k@lfdr.de>; Thu, 12 Dec 2019 00:32:20 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
@@ -10,60 +10,59 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
 	References:In-Reply-To:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=VOF/GMjRx6REMSG7XlDgAn+uNduZgQVhmrYx+biF1gU=; b=EkBWHTve8Loj/6
-	aNmusW9yHN2aDbq2nUdRNOTgil0X1AkG4eoriPRVGrWePlDnUNohR6YgOta20HGmtbKH422jiyehT
-	IEOlXo3iJDjoFnzm7vn2N1VqitrGc0h0ajnJ7a19dWzd1Ht9omLcvRbuH2p2j3PjPTvKr/ngTfcUg
-	xdBnVMee3gl+pVv10YLJjrKd/Br+XG+9+CsyAFTScmcf3EnRHT/KPfQBgn4JKO9+Iuqlak3vNvoBt
-	9XVjQl4Ew5wHhkm1CFNtQCahnJWWtXYJK+7IEDTsvB+WuK0UdicsC1IJeTX98XGhs1a+8DdCtTPEZ
-	NbAolAo8NrMVUWhBu88Q==;
+	List-Owner; bh=VOF/GMjRx6REMSG7XlDgAn+uNduZgQVhmrYx+biF1gU=; b=bFEmxFWYmSFlSZ
+	GPXmxZXQNrUSykS6+CWMvwwMCkTWFNi221Iidj3sg6NvthCUZbV61T4Nl4fWHX+YkzYh6q9kPhZeu
+	UBn051HjrKkeuZ6eKQtm+lbE9U9C1FormNWwrx3GrPWXZ5G1Cv9913jiOPz8hSzwsMlHPyYG7pRNy
+	lHl4jzUlujm/TXkR1OtOAbX+9iRcaCCHQOs/d3gY99ir5wKC9fqqlLH/q4mJPl7vGa3BUyzuKa8Pp
+	f8BPqwzXlhJsizwCbLespeMlNkTb4w4xYd57zFb2o77mvL8Sb0w7t1DzTH5Ch69AoJgOA4od0gA7f
+	6c9eRHLCeYsowPeIZ6Cg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ifBSs-0002LZ-4S; Wed, 11 Dec 2019 23:32:18 +0000
+	id 1ifBSo-0002KX-Mh; Wed, 11 Dec 2019 23:32:14 +0000
 Received: from mail-ot1-x342.google.com ([2607:f8b0:4864:20::342])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ifBSl-0002Js-AB
+ id 1ifBSl-0002Jt-AC
  for ath10k@lists.infradead.org; Wed, 11 Dec 2019 23:32:13 +0000
-Received: by mail-ot1-x342.google.com with SMTP id 77so431677oty.6
+Received: by mail-ot1-x342.google.com with SMTP id h20so441226otn.5
  for <ath10k@lists.infradead.org>; Wed, 11 Dec 2019 15:32:11 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=mime-version:in-reply-to:references:from:date:message-id:subject:to
  :cc; bh=XdXIQ76v1wFKwiSmOednotYz6V9EXx/6azbsZaWFe18=;
- b=YnlsnnblT2aKm2K+k47yxKjcQo7xq+gfR/Q1mx8FbSuVGqUShJ0PLhL8KNMAiaCZa8
- ZOyp057LDnaKcfWdKrzmSBJkJx/aMtwZ4upw8v7fuSkZT8aPmLggzTQeP4do9gfXOaXL
- tfJZty78DyYO2DoxTNt4/9yp7lOVeOS4hjWlU+zgLijPDj5eVLYETbE6t3Et9ivlS1Rw
- v05JrPkzsU4gRJjqR8fASLT61L/9xeigUeJcUVgY422Ovu+YOa7eaJsm0KumfFeMJaLF
- cQ7dpF25qXEN0rWLpt7jExtJiNN+ggP5WCrfZF5IyfJEJFdAEENWchfa3XxkHWtHCUmo
- sGEg==
+ b=VdS/AlFnQ0Imyu/nZZy6+yuk52ZkuqxedWSWmA+uAwtAvR0uffpDccQUzlKY7cPg76
+ Pc/tDh7EMduGdIygfaeYHBccYjCL7uQKJYgWFmLS8E0QTal9b8rZLWG1KQVXSfajGz66
+ GspjD127HbpNzbRDGb7gt86KO3nWPP1ryGfeZ0OluzI8wKLLW5EmQuidmSqHWAxmwJP0
+ 88PVC4UErj2+oWPnKuOO24zC9rg7p5MzArEKFRnmBeUDBd8uyqgLpNQppJ77hvM+5ebR
+ HRmXHwGrsdj9r+kf/hcn/YkwFqsuczWRBXC98yEZmXYIYdzcw43HP5L309v3CaAzC7yS
+ YOVQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:mime-version:in-reply-to:references:from:date
  :message-id:subject:to:cc;
  bh=XdXIQ76v1wFKwiSmOednotYz6V9EXx/6azbsZaWFe18=;
- b=pAINBw5oOW+QP4/c8RLA6p10ga80tnJZZBqskvhgV4IJ8rUCLiR82/skBxbaeHDtJK
- OS+IZ7eQiO19DuJn5zGezX5OJVaeGK4MBF9ii1P5Fv4CiSlyxVGGW0W+G+5moQtpdTlE
- MKxv3QtJT1ltnJA3E+kV4ZtpUxHvzPh6Y4N4w8vn3xP/1PbewLpi4yr32kcBB92/OBuP
- 56EHyHb4X7NGPc+d64qXT6dqsPNXLyQf3Q3U4EBt0+urbMWGlBb2TPjq9fJlhD/QksxC
- Z9OAoGSzF1iNUmNKRgqU7xYdswomVIfq6weGbxvCaEETXOtQpi0pvGvCsJQOl668JvFa
- SFPQ==
-X-Gm-Message-State: APjAAAWoWB6+gbKkbZ/IlN7pFFLLQCQWt2pgvA9kG6zx8Qhr3IpabK4P
- cBwrvxB/R7oPu1T0YJz53YkbjqBu36gw+mI+3ZpMRg==
-X-Google-Smtp-Source: APXvYqyi5g76BAjV1S0akuvjOKG6BXqx2qdJ+9ui9hGsU0eYpkBfYQJ1FD2maQrQOUJWU6WyFcizIhML6YTr2ztMj00=
-X-Received: by 2002:a05:6830:1116:: with SMTP id
- w22mr4730092otq.63.1576107130399; 
+ b=agx6JJfP7eqTY5vdk3MLrfAmcRV938H4nHnowV1EgVAEvSG1SxrgnhaIHl8UYMlsCA
+ POP+YyKfmGgqNBerBkXbILIJvWBLFNttPpZ34HZfBNoJvIyOAi4ZkhsLWjMM9/uF4rkp
+ MJBWiuT5tOU9o9TjHEAM/5J+4jX/LNJIcr2oFLRSbEWQReEZOpKgo8Z2EN1TOfGMEGJ1
+ g5n2lKw3BpCXQE5zYxZlgjxXWfsfJqGEyku2JGEQWUYInhUIxteQHnLTeKKmWtU65CEy
+ KCpcmCxY1ZXl8vw845monJm9yWbWRC6jHilyQ8s/rOBKXIMFHxOEfITeX8jjnbcM9xYl
+ uC/Q==
+X-Gm-Message-State: APjAAAUaLoOwrQMN11wOmzwtl3fjNVyuXjUsmSh1P8MSG1edxuzVDVHW
+ EFDAJ5ArAvy74HcuPNPKTPirLKoZkjn25dR3c7cLig==
+X-Google-Smtp-Source: APXvYqyxQQTXXSw2ODBdJRiXK1P+MJkpgfnNiz39XN8x5J2JnqKI6C5yewIJa9HGUO9HOteQ8Q135zcTvMmgh0BYb/8=
+X-Received: by 2002:a9d:7f16:: with SMTP id j22mr4538824otq.256.1576107130624; 
  Wed, 11 Dec 2019 15:32:10 -0800 (PST)
 MIME-Version: 1.0
 Received: by 2002:a9d:350:0:0:0:0:0 with HTTP;
- Wed, 11 Dec 2019 15:32:09 -0800 (PST)
+ Wed, 11 Dec 2019 15:32:10 -0800 (PST)
 In-Reply-To: <CADe2dM7GWv2mGak-XyvKz6sWj5Tb7i-P_oRvQtEo5B9N_mEnyg@mail.gmail.com>
 References: <CADe2dM7GWv2mGak-XyvKz6sWj5Tb7i-P_oRvQtEo5B9N_mEnyg@mail.gmail.com>
 From: Tom Psyborg <pozega.tomislav@gmail.com>
-Date: Thu, 12 Dec 2019 00:32:09 +0100
-Message-ID: <CAKR_QVK9_7oUyFYR_FbmJLwEYPpGjc+tPu2SEL4-WO6M-oJzfA@mail.gmail.com>
+Date: Thu, 12 Dec 2019 00:32:10 +0100
+Message-ID: <CAKR_QVLD8+Y+8zWpRjSR7BQiRpgebjSj-SVu+e5XG0UVZaaQ9g@mail.gmail.com>
 Subject: Re: Cannot bring up SDIO based 9377 (dma_alloc_coherent() fails)
 To: Girish Mahadevan <girish_mahadevan@trimble.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191211_153211_389706_3FA73958 
-X-CRM114-Status: GOOD (  18.40  )
+X-CRM114-CacheID: sfid-20191211_153211_412321_5843DF07 
+X-CRM114-Status: GOOD (  18.50  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
