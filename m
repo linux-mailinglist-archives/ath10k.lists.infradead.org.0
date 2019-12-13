@@ -2,8 +2,8 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0823811DE86
-	for <lists+ath10k@lfdr.de>; Fri, 13 Dec 2019 08:19:34 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 657D311DE87
+	for <lists+ath10k@lfdr.de>; Fri, 13 Dec 2019 08:19:39 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,69 +11,69 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=lYUDC9qx9DohC4EX7VZ8kUrRJoFMBXCgz495n3KyLfo=; b=cs2jToHsQj6PJnrqxvHZkl4oxJ
-	1nsvyZacb0JZ7g2jvXcBysIDkqICerONJaxIV2NoH1esCRTKUjVgTey0pXtPvUC8q8WIx4LhHdclf
-	JkgQtcBfN7qLjVD6YH2tt0RfxPH/4TBPlCLpfPQ1S5Drk7TqDJWYZnyXnQSHP/cL/EF6ia0A+mlXE
-	h+zKaXmIVDWBIOS9X3waifz+cvNSod1uKECJFt1o6kS3bc1zGk5axA174DMWpk2zJeqjeZzDu1AFP
-	QyjMMKp/bFthojebXeH1Remg83xW0LPemm/oiz96ot1aFX20DcC7ZeaoprNH0EeptqcorroxaJgJP
-	hu/NP7PA==;
+	bh=BNtG3Jl+Zv4FJjXMeWo9tcNyTEVUoCy/LoqMCXfWCBU=; b=jLYw02J9z8Xy3za4GLWeJHR9E+
+	XRFVs61odLVk0JKAwHKktQWzfBE73YyUv9JRvF1PyIjPcxLkPCXNpdOb1NdHQu5+ZTqDXPc2xLDX+
+	qzBuBhDp5UhN4pAsLMcX/mZcUk9m36k+B9UwgoCqOVnyeymqwRAAbvG0sEmOjkHDcQmws9tcvLHti
+	7oRfugVwPGkDKd5Dbs5k8xTkp94qOJwYxKcbL/sOq1+Fwty11JbQDcxJ6T9M7hiKVuE+lMuEuQvFt
+	UFnzd1xcC00n6wx9v8LvNqtNyJln8f4uS845pMlD/LHZl/Jv1y0EXL9U90ZyllGQK/TG0HMjWtNo8
+	YOOoI6CA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1iffEa-0002fP-4O; Fri, 13 Dec 2019 07:19:32 +0000
-Received: from m228-5.mailgun.net ([159.135.228.5])
+	id 1iffEf-0002nZ-Rn; Fri, 13 Dec 2019 07:19:37 +0000
+Received: from m228-4.mailgun.net ([159.135.228.4])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1iffEP-0002Xj-Lm
- for ath10k@lists.infradead.org; Fri, 13 Dec 2019 07:19:23 +0000
+ id 1iffER-0002YL-6c
+ for ath10k@lists.infradead.org; Fri, 13 Dec 2019 07:19:24 +0000
 DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
  q=dns/txt; 
- s=smtp; t=1576221561; h=References: In-Reply-To: Message-Id: Date:
+ s=smtp; t=1576221563; h=References: In-Reply-To: Message-Id: Date:
  Subject: Cc: To: From: Sender;
- bh=YXtkS+WCDRchtLlhZcdIFPjO82KlbppU6JgdHQbzzmE=;
- b=AJ6p2hYAhaCVHw+b7ibgS/TStr8ujVmTTtqsrI30Q6tMJObuEH59eCEvValge2Z7wdqI6JBt
- bTD21ZikTcxsq4rhEubavDEpYWtR5G9xrtH5ptETUye/Gts6cvOF6eMaYRPcexdrLy/KG6Pf
- I1cd283QRTq1E/fDT22nk4il1vs=
-X-Mailgun-Sending-Ip: 159.135.228.5
+ bh=XNpN3pNlMo4tSut6/1EubIcb6843QC7lvbIt+YGPNIQ=;
+ b=bLs5rODNLj88br4FJ2tiEAvVS8zUIAi2UFO7m4qUa0Lp9F07+3Cge9ZIAdBOQB5N+9JoE3Zy
+ cd0eQqd3D5TM1LF8iFmeMb1/J6EII4SN1WpzVItfF2zFSToeEVscedkLr4gYg8TC5d3JEP+3
+ xogB4pDXUg0ojBoJViaAeyAoNT8=
+X-Mailgun-Sending-Ip: 159.135.228.4
 X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
 Received: from smtp.codeaurora.org
  (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
- by mxa.mailgun.org with ESMTP id 5df33b77.7f132bbdb0a0-smtp-out-n02;
- Fri, 13 Dec 2019 07:19:19 -0000 (UTC)
+ by mxa.mailgun.org with ESMTP id 5df33b7a.7f5a99eec688-smtp-out-n02;
+ Fri, 13 Dec 2019 07:19:22 -0000 (UTC)
 Received: by smtp.codeaurora.org (Postfix, from userid 1001)
- id E3CC7C4479F; Fri, 13 Dec 2019 07:19:18 +0000 (UTC)
+ id 298D4C433A2; Fri, 13 Dec 2019 07:19:21 +0000 (UTC)
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  aws-us-west-2-caf-mail-1.web.codeaurora.org
 X-Spam-Level: 
 X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,SPF_NONE,
- URIBL_BLOCKED autolearn=unavailable autolearn_force=no version=3.4.0
+ URIBL_BLOCKED autolearn=ham autolearn_force=no version=3.4.0
 Received: from ybzhao-HP-Z230-SFF-Workstation.ap.qualcomm.com (unknown
  [180.166.53.21])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
  (No client certificate requested) (Authenticated sender: yiboz)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id E0E0AC43383;
- Fri, 13 Dec 2019 07:19:16 +0000 (UTC)
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org E0E0AC43383
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id E3A9AC43383;
+ Fri, 13 Dec 2019 07:19:19 +0000 (UTC)
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org E3A9AC43383
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
  spf=none smtp.mailfrom=yiboz@codeaurora.org
 From: Yibo Zhao <yiboz@codeaurora.org>
 To: linux-wireless@vger.kernel.org
-Subject: [PATCH 2/4] mac80211: fix issue in loop scenario
-Date: Fri, 13 Dec 2019 15:19:51 +0800
-Message-Id: <1576221593-1086-3-git-send-email-yiboz@codeaurora.org>
+Subject: [PATCH 3/4] mac80211: fix low throughput in multi-clients situation
+Date: Fri, 13 Dec 2019 15:19:52 +0800
+Message-Id: <1576221593-1086-4-git-send-email-yiboz@codeaurora.org>
 X-Mailer: git-send-email 1.9.1
 In-Reply-To: <1576221593-1086-1-git-send-email-yiboz@codeaurora.org>
 References: <1576221593-1086-1-git-send-email-yiboz@codeaurora.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191212_231921_833859_02EE0D27 
-X-CRM114-Status: GOOD (  13.31  )
+X-CRM114-CacheID: sfid-20191212_231923_355890_BFF93142 
+X-CRM114-Status: GOOD (  13.69  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [159.135.228.5 listed in list.dnswl.org]
+ no trust [159.135.228.4 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -97,100 +97,92 @@ Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-In a loop txqs dequeue scenario, if the first txq in the rbtree gets
-removed from rbtree immediately in the ieee80211_return_txq(), the
-loop will break soon in the ieee80211_next_txq() due to schedule_pos
-not leading to the second txq in the rbtree. Thus update schedule_pos
-to previous node once the node of schedule_pos is either removed from
-rbtree or move to other location in rbtree due to airtime update.
+Not long after the start of multi-clients test, not a single station is
+an eligible candidate for transmission since global virtual time(g_vt) is
+smaller than the virtual airtime(s_vt) of all the stations. As a result,
+the Tx has been blocked and throughput is quite low.
+
+This may mainly due accumulative deviation from the devision calculation
+of g_vt.
+
+For example:
+Suppose we have 50 clients in first round.
+Round 1:
+STA	weight	Tx_time_round  wt_sum	s_vt	g_vt  valid_for_next_Tx
+1	256	2048		12800	2048	2000	N
+2	256	2048			2048		N
+.	.	.			.		.
+.	.	.			.		.
+.	.	.			.		.
+50	256	2048			2048		N
+
+After this round, all the stations are not valid for next transmission due to
+accumulative deviation.
+
+The real situation can be more complicate, above is one of the extremely case.
+
+To avoid this situation to occur, the new proposal is:
+
+- If global virtual time is less than the virtual airtime of any station,
+  sync it to the airtime of first station in the red-black tree
+
+- Round the division result
 
 Signed-off-by: Yibo Zhao <yiboz@codeaurora.org>
 ---
- net/mac80211/ieee80211_i.h |  2 ++
- net/mac80211/tx.c          | 14 +++++++++++++-
- 2 files changed, 15 insertions(+), 1 deletion(-)
+ net/mac80211/sta_info.c |  3 ++-
+ net/mac80211/tx.c       | 16 +++++++++++++++-
+ 2 files changed, 17 insertions(+), 2 deletions(-)
 
-diff --git a/net/mac80211/ieee80211_i.h b/net/mac80211/ieee80211_i.h
-index a4556f9..ed85400 100644
---- a/net/mac80211/ieee80211_i.h
-+++ b/net/mac80211/ieee80211_i.h
-@@ -847,6 +847,7 @@ struct txq_info {
- 	struct codel_stats cstats;
- 	struct sk_buff_head frags;
- 	struct rb_node schedule_order;
-+	u16 schedule_round;
- 	unsigned long flags;
+diff --git a/net/mac80211/sta_info.c b/net/mac80211/sta_info.c
+index 9d01fdd..feac975 100644
+--- a/net/mac80211/sta_info.c
++++ b/net/mac80211/sta_info.c
+@@ -1852,7 +1852,8 @@ void ieee80211_sta_register_airtime(struct ieee80211_sta *pubsta, u8 tid,
  
- 	/* keep last! */
-@@ -1144,6 +1145,7 @@ struct ieee80211_local {
- 	struct rb_node *schedule_pos[IEEE80211_NUM_ACS];
- 	u64 airtime_v_t[IEEE80211_NUM_ACS];
- 	u64 airtime_weight_sum[IEEE80211_NUM_ACS];
-+	u16 schedule_round[IEEE80211_NUM_ACS];
+ 	weight_sum = local->airtime_weight_sum[ac] ?: sta->airtime_weight;
  
- 	u16 airtime_flags;
+-	local->airtime_v_t[ac] += airtime / weight_sum;
++	/* Round the calculation of global vt */
++	local->airtime_v_t[ac] += (airtime + (weight_sum >> 1)) / weight_sum;
+ 	sta->airtime[ac].v_t += airtime / sta->airtime_weight;
+ 	ieee80211_resort_txq(&local->hw, txq);
  
 diff --git a/net/mac80211/tx.c b/net/mac80211/tx.c
-index d00baaa..c1444e7 100644
+index c1444e7..b40cf91 100644
 --- a/net/mac80211/tx.c
 +++ b/net/mac80211/tx.c
-@@ -3644,6 +3644,7 @@ struct ieee80211_txq *ieee80211_next_txq(struct ieee80211_hw *hw, u8 ac)
+@@ -3822,15 +3822,29 @@ bool ieee80211_txq_may_transmit(struct ieee80211_hw *hw,
+ 				struct ieee80211_txq *txq)
+ {
+ 	struct ieee80211_local *local = hw_to_local(hw);
+-	struct txq_info *txqi = to_txq_info(txq);
++	struct txq_info *first_txqi, *txqi = to_txq_info(txq);
++	struct rb_node *node = NULL;
+ 	struct sta_info *sta;
+ 	u8 ac = txq->ac;
++	first_txqi = NULL;
  
  	lockdep_assert_held(&local->active_txq_lock[ac]);
  
-+begin:
- 	if (!node) {
- 		node = rb_first_cached(&local->active_txqs[ac]);
- 		first = true;
-@@ -3668,7 +3669,10 @@ struct ieee80211_txq *ieee80211_next_txq(struct ieee80211_hw *hw, u8 ac)
- 		}
- 	}
+ 	if (!txqi->txq.sta)
+ 		return true;
  
-+	if (txqi->schedule_round == local->schedule_round[ac])
-+		goto begin;
- 
-+	txqi->schedule_round = local->schedule_round[ac];
- 	local->schedule_pos[ac] = node;
- 	return &txqi->txq;
- }
-@@ -3752,6 +3756,9 @@ void ieee80211_resort_txq(struct ieee80211_hw *hw,
- 	u8 ac = txq->ac;
- 
- 	if (!RB_EMPTY_NODE(&txqi->schedule_order)) {
-+		if (local->schedule_pos[ac] == &txqi->schedule_order)
-+			local->schedule_pos[ac] = rb_prev(&txqi->schedule_order);
++	node = rb_first_cached(&local->active_txqs[ac]);
++	if (node) {
++		first_txqi = container_of(node, struct txq_info,
++					  schedule_order);
++		if (first_txqi->txq.sta) {
++			sta = container_of(first_txqi->txq.sta,
++					   struct sta_info, sta);
++			if (local->airtime_v_t[ac] < sta->airtime[ac].v_t)
++				local->airtime_v_t[ac] = sta->airtime[ac].v_t;
++		}
++	}
 +
- 		rb_erase_cached(&txqi->schedule_order,
- 				&local->active_txqs[ac]);
- 		RB_CLEAR_NODE(&txqi->schedule_order);
-@@ -3771,6 +3778,9 @@ static void __ieee80211_unschedule_txq(struct ieee80211_hw *hw,
- 	if (RB_EMPTY_NODE(&txqi->schedule_order))
- 		return;
- 
-+	if (local->schedule_pos[ac] == &txqi->schedule_order)
-+		local->schedule_pos[ac] = rb_prev(&txqi->schedule_order);
-+
- 	if (txq->sta) {
- 		struct sta_info *sta = container_of(txq->sta,
- 						    struct sta_info, sta);
-@@ -3803,7 +3813,7 @@ void ieee80211_return_txq(struct ieee80211_hw *hw,
- 	lockdep_assert_held(&local->active_txq_lock[txq->ac]);
- 
- 	if (!RB_EMPTY_NODE(&txqi->schedule_order) &&
--	    (skb_queue_empty(&txqi->frags) && !txqi->tin.backlog_packets))
-+	    !txq_has_queue(&txqi->txq))
- 		__ieee80211_unschedule_txq(hw, txq);
+ 	sta = container_of(txqi->txq.sta, struct sta_info, sta);
+ 	return (sta->airtime[ac].v_t <= local->airtime_v_t[ac]);
  }
- EXPORT_SYMBOL(ieee80211_return_txq);
-@@ -3832,6 +3842,8 @@ void ieee80211_txq_schedule_start(struct ieee80211_hw *hw, u8 ac)
- 	struct ieee80211_local *local = hw_to_local(hw);
- 
- 	spin_lock_bh(&local->active_txq_lock[ac]);
-+	local->schedule_round[ac]++;
-+
- }
- EXPORT_SYMBOL(ieee80211_txq_schedule_start);
- 
 -- 
 1.9.1
 
