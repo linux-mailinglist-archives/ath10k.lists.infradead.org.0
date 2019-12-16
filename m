@@ -2,48 +2,82 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 776E11200E4
-	for <lists+ath10k@lfdr.de>; Mon, 16 Dec 2019 10:22:43 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id C474B120430
+	for <lists+ath10k@lfdr.de>; Mon, 16 Dec 2019 12:42:21 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=dlS/5upHKxqgd7wUzF/7tvtcPc5X9fOYhiBQaL+F8nU=; b=H2hj/Z2DueqrK8
-	Fg3EoVAeN7E8CVshSSqvh1MKBNEflcTpPBCXKVcnHYU1u9Itb8VZhSvrUN6FSamMGky78g/eMYE8q
-	wOMG8YBsia8jFb2n8G3vOfg1m4slMPHlgpWhbzD5Y/jBt9F9THv/N/Hplsb4YA4pkRoBUncoXpdAn
-	a2TagECIrCVn8Eb7qstUAFACaMtU2EG2bgM4hiAIldKSLko1I3GTuuJ+3Tm+pJg9VcuEt66oC52Zi
-	9eCPBdmv9kHXzDtDajikSeStakRi9D3vamTkAb5D7ViWO6JqWxB+0+oq17tjhfXsLefP+67meTt2K
-	gEVx5b7+YCZHFTRNpfIw==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
+	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=HzBcUkYmZ22axNSVI4GkmShKKCnZw//fKDQBrTq3WCU=; b=gAp
+	FJfP0vZoso2gx+/sqwC6pabB3Nnt5wxCos6j6qV0oV3Ifdn4iAJpvWAV4Eo+Cm08YP8N4fxlZRAs0
+	5zWPhZXwJXwO2dgv14uLZL/7HRV6IPTmvxfUKrKZr5LBFVDHqO0swD6+6KuyaMZ3h88IzBXoUL+KX
+	R61cil4n8AliUL+B1AVjXCkvHOMi2xxZw4w8Sm5RXdDxjaFWV1aakf33/W2zs+lusHA+hwQzJUjiX
+	pPIIzd5rCstAVK7B+KvXstSRxxAXSahQYT+lQxHMK2uZSlICrhGeoj8WWYuOUGabwDYv3nHIOyWVi
+	Uvm609RlSg9ehj7ihfLMkeTXtSu4vyw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1igmaL-0008A3-Kf; Mon, 16 Dec 2019 09:22:37 +0000
-Received: from nbd.name ([2a01:4f8:221:3d45::2])
+	id 1igolV-0000L1-T8; Mon, 16 Dec 2019 11:42:17 +0000
+Received: from mail25.static.mailgun.info ([104.130.122.25])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1igma6-0007y6-US
- for ath10k@lists.infradead.org; Mon, 16 Dec 2019 09:22:25 +0000
-Received: from pd95fd428.dip0.t-ipconnect.de ([217.95.212.40]
- helo=bertha.datto.lan) by ds12 with esmtpa (Exim 4.89)
- (envelope-from <john@phrozen.org>)
- id 1igma2-0003OF-4f; Mon, 16 Dec 2019 10:22:18 +0100
-From: John Crispin <john@phrozen.org>
-To: Kalle Valo <kvalo@codeaurora.org>
-Subject: [RESEND] ath10k: add tx hw 802.11 encapusaltion offloading support
-Date: Mon, 16 Dec 2019 10:22:07 +0100
-Message-Id: <20191216092207.31032-1-john@phrozen.org>
-X-Mailer: git-send-email 2.20.1
-MIME-Version: 1.0
+ id 1igolS-0000Jh-VE
+ for ath10k@lists.infradead.org; Mon, 16 Dec 2019 11:42:16 +0000
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
+ q=dns/txt; 
+ s=smtp; t=1576496532; h=Message-Id: Date: Subject: Cc: To: From:
+ Sender; bh=3FEt1x6PkgE7MJoaVAZA0pUlBjtjXhuR6plIbJ7ZDV8=;
+ b=WLt0x+E8ztKdD1WVnVOa+W6rnVmIJu3xM/6E/PoVinMXJbeqQ/027BYZ33JfHAFtRJCMgThp
+ OgwcplgVwo27b8XSS/AFowzVWWYa5F6f2/hkdFlXYGo/OaODlAZc5tIvNGFHm1hQnXde/ApR
+ S5ct6mRcxQ75dqTZre9RyC1xuUI=
+X-Mailgun-Sending-Ip: 104.130.122.25
+X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
+Received: from smtp.codeaurora.org
+ (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
+ by mxa.mailgun.org with ESMTP id 5df76d8d.7f94a3cae6f8-smtp-out-n01;
+ Mon, 16 Dec 2019 11:42:05 -0000 (UTC)
+Received: by smtp.codeaurora.org (Postfix, from userid 1001)
+ id 9D789C433A2; Mon, 16 Dec 2019 11:42:05 +0000 (UTC)
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ aws-us-west-2-caf-mail-1.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,SPF_NONE,
+ URIBL_BLOCKED autolearn=unavailable autolearn_force=no version=3.4.0
+Received: from cheath10p342229-lin.qca.qualcomm.com
+ (blr-c-bdr-fw-01_globalnat_allzones-outside.qualcomm.com [103.229.19.19])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
+ (No client certificate requested) (Authenticated sender: tamizhr)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 06D80C433CB;
+ Mon, 16 Dec 2019 11:42:03 +0000 (UTC)
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 06D80C433CB
+Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
+ spf=none smtp.mailfrom=tamizhr@codeaurora.org
+From: Tamizh Chelvam <tamizhr@codeaurora.org>
+To: ath10k@lists.infradead.org
+Subject: [PATCH 1/2] dt-bindings: ath10k: Add new dt entries to identify coex
+ support
+Date: Mon, 16 Dec 2019 17:10:14 +0530
+Message-Id: <1576496415-23064-1-git-send-email-tamizhr@codeaurora.org>
+X-Mailer: git-send-email 1.9.1
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191216_012223_173114_F157B360 
-X-CRM114-Status: GOOD (  17.07  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20191216_034215_063732_D750A62D 
+X-CRM114-Status: GOOD (  11.47  )
+X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [104.130.122.25 listed in list.dnswl.org]
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [104.130.122.25 listed in wl.mailspike.net]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -55,352 +89,50 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Vasanthakumar Thiagarajan <vthiagar@qti.qualcomm.com>,
- linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
- John Crispin <john@phrozen.org>
+Cc: devicetree@vger.kernel.org, linux-wireless@vger.kernel.org,
+ Tamizh Chelvam <tamizhr@codeaurora.org>
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-This patch adds support for ethernet rxtx mode to the driver. The feature
-is enabled via a new module parameter. If enabled to driver will enable
-the feature on a per vif basis if all other requirements were met.
+This adds new dt entries qcom,coexist-support and qcom,coexist-gpio-pin
+which will be used by ath10k driver to identify coex support
+of a hardware and notify wifi firmware the gpio pin number.
+This pin number information is needed for the hardware QCA4019.
 
-Testing on a IPQ4019 based hardware shows a increase in TCP throughput
-of ~20% when the feature is enabled.
-
-Signed-off-by: Vasanthakumar Thiagarajan <vthiagar@qti.qualcomm.com>
-Signed-off-by: John Crispin <john@phrozen.org>
+Signed-off-by: Tamizh Chelvam <tamizhr@codeaurora.org>
 ---
-Resending as Johannes has merged the mac80211 part, which means we can now
-also merge the driver support patches.
+ Documentation/devicetree/bindings/net/wireless/qcom,ath10k.txt | 6 ++++++
+ 1 file changed, 6 insertions(+)
 
- drivers/net/wireless/ath/ath10k/core.c   | 11 ++++
- drivers/net/wireless/ath/ath10k/core.h   |  3 +
- drivers/net/wireless/ath/ath10k/htt_tx.c | 24 +++++---
- drivers/net/wireless/ath/ath10k/mac.c    | 75 +++++++++++++++++++-----
- drivers/net/wireless/ath/ath10k/txrx.c   | 11 +++-
- 5 files changed, 99 insertions(+), 25 deletions(-)
-
-diff --git a/drivers/net/wireless/ath/ath10k/core.c b/drivers/net/wireless/ath/ath10k/core.c
-index 5ec16ce19b69..99d3d74c0033 100644
---- a/drivers/net/wireless/ath/ath10k/core.c
-+++ b/drivers/net/wireless/ath/ath10k/core.c
-@@ -34,6 +34,7 @@ static bool uart_print;
- static bool skip_otp;
- static bool rawmode;
- static bool fw_diag_log;
-+static bool ethernetmode;
+diff --git a/Documentation/devicetree/bindings/net/wireless/qcom,ath10k.txt b/Documentation/devicetree/bindings/net/wireless/qcom,ath10k.txt
+index 0171283..a41e936 100644
+--- a/Documentation/devicetree/bindings/net/wireless/qcom,ath10k.txt
++++ b/Documentation/devicetree/bindings/net/wireless/qcom,ath10k.txt
+@@ -87,6 +87,10 @@ Optional properties:
+ 	Definition: Quirk specifying that the firmware expects the 8bit version
+ 		    of the host capability QMI request
+ - qcom,xo-cal-data: xo cal offset to be configured in xo trim register.
++- qcom,coexist-support : should contain eithr "0" or "1" to indicate coex
++			 support by the hardware.
++- qcom,coexist-gpio-pin : gpio pin number  information to support coex
++			  which will be used by wifi firmware.
  
- unsigned long ath10k_coredump_mask = BIT(ATH10K_FW_CRASH_DUMP_REGISTERS) |
- 				     BIT(ATH10K_FW_CRASH_DUMP_CE_DATA);
-@@ -46,6 +47,7 @@ module_param(skip_otp, bool, 0644);
- module_param(rawmode, bool, 0644);
- module_param(fw_diag_log, bool, 0644);
- module_param_named(coredump_mask, ath10k_coredump_mask, ulong, 0444);
-+module_param(ethernetmode, bool, 0644);
+ Example (to supply PCI based wifi block details):
  
- MODULE_PARM_DESC(debug_mask, "Debugging mask");
- MODULE_PARM_DESC(uart_print, "Uart target debugging");
-@@ -54,6 +56,7 @@ MODULE_PARM_DESC(cryptmode, "Crypto mode: 0-hardware, 1-software");
- MODULE_PARM_DESC(rawmode, "Use raw 802.11 frame datapath");
- MODULE_PARM_DESC(coredump_mask, "Bitfield of what to include in firmware crash file");
- MODULE_PARM_DESC(fw_diag_log, "Diag based fw log debugging");
-+MODULE_PARM_DESC(ethernetmode, "Use ethernet frame datapath");
- 
- static const struct ath10k_hw_params ath10k_hw_params_list[] = {
- 	{
-@@ -3030,6 +3033,14 @@ static void ath10k_core_register_work(struct work_struct *work)
- 	/* peer stats are enabled by default */
- 	set_bit(ATH10K_FLAG_PEER_STATS, &ar->dev_flags);
- 
-+	if (ethernetmode && rawmode) {
-+		ath10k_err(ar, "ethernet and raw mode cannot co-exist\n");
-+		status = -EINVAL;
-+		goto err;
-+	}
-+
-+	ar->ethernetmode = ethernetmode;
-+
- 	status = ath10k_core_probe_fw(ar);
- 	if (status) {
- 		ath10k_err(ar, "could not probe fw (%d)\n", status);
-diff --git a/drivers/net/wireless/ath/ath10k/core.h b/drivers/net/wireless/ath/ath10k/core.h
-index 5101bf2b5b15..fe0affbc9d29 100644
---- a/drivers/net/wireless/ath/ath10k/core.h
-+++ b/drivers/net/wireless/ath/ath10k/core.h
-@@ -109,6 +109,7 @@ enum ath10k_skb_flags {
- 	ATH10K_SKB_F_MGMT = BIT(3),
- 	ATH10K_SKB_F_QOS = BIT(4),
- 	ATH10K_SKB_F_RAW_TX = BIT(5),
-+	ATH10K_SKB_F_HW_80211_ENCAP = BIT(6),
+@@ -156,6 +160,8 @@ wifi0: wifi@a000000 {
+ 	qcom,msi_addr = <0x0b006040>;
+ 	qcom,msi_base = <0x40>;
+ 	qcom,ath10k-pre-calibration-data = [ 01 02 03 ... ];
++	qcom,coexist-support = <1>;
++	qcom,coexist-gpio-pin = <0x33>;
  };
  
- struct ath10k_skb_cb {
-@@ -1222,6 +1223,8 @@ struct ath10k {
- 	struct ath10k_bus_params bus_param;
- 	struct completion peer_delete_done;
- 
-+	bool ethernetmode;
-+
- 	/* must be last */
- 	u8 drv_priv[0] __aligned(sizeof(void *));
- };
-diff --git a/drivers/net/wireless/ath/ath10k/htt_tx.c b/drivers/net/wireless/ath/ath10k/htt_tx.c
-index a182c0944cc7..0ca0705fe69a 100644
---- a/drivers/net/wireless/ath/ath10k/htt_tx.c
-+++ b/drivers/net/wireless/ath/ath10k/htt_tx.c
-@@ -1144,6 +1144,10 @@ static u8 ath10k_htt_tx_get_tid(struct sk_buff *skb, bool is_eth)
- 	struct ieee80211_hdr *hdr = (void *)skb->data;
- 	struct ath10k_skb_cb *cb = ATH10K_SKB_CB(skb);
- 
-+	/* Firmware takes care of tid classification for ethernet format */
-+	if (cb->flags & ATH10K_SKB_F_HW_80211_ENCAP)
-+		return skb->priority % IEEE80211_QOS_CTL_TID_MASK;
-+
- 	if (!is_eth && ieee80211_is_mgmt(hdr->frame_control))
- 		return HTT_DATA_TX_EXT_TID_MGMT;
- 	else if (cb->flags & ATH10K_SKB_F_QOS)
-@@ -1378,15 +1382,17 @@ static int ath10k_htt_tx_32(struct ath10k_htt *htt,
- 	txbuf_paddr = htt->txbuf.paddr +
- 		      (sizeof(struct ath10k_htt_txbuf_32) * msdu_id);
- 
--	if ((ieee80211_is_action(hdr->frame_control) ||
--	     ieee80211_is_deauth(hdr->frame_control) ||
--	     ieee80211_is_disassoc(hdr->frame_control)) &&
--	     ieee80211_has_protected(hdr->frame_control)) {
--		skb_put(msdu, IEEE80211_CCMP_MIC_LEN);
--	} else if (!(skb_cb->flags & ATH10K_SKB_F_NO_HWCRYPT) &&
--		   txmode == ATH10K_HW_TXRX_RAW &&
--		   ieee80211_has_protected(hdr->frame_control)) {
--		skb_put(msdu, IEEE80211_CCMP_MIC_LEN);
-+	if (!(info->control.flags & IEEE80211_TX_CTRL_HW_80211_ENCAP)) {
-+		if ((ieee80211_is_action(hdr->frame_control) ||
-+		     ieee80211_is_deauth(hdr->frame_control) ||
-+		     ieee80211_is_disassoc(hdr->frame_control)) &&
-+		    ieee80211_has_protected(hdr->frame_control)) {
-+			skb_put(msdu, IEEE80211_CCMP_MIC_LEN);
-+		} else if (!(skb_cb->flags & ATH10K_SKB_F_NO_HWCRYPT) &&
-+			   txmode == ATH10K_HW_TXRX_RAW &&
-+			   ieee80211_has_protected(hdr->frame_control)) {
-+			skb_put(msdu, IEEE80211_CCMP_MIC_LEN);
-+		}
- 	}
- 
- 	skb_cb->paddr = dma_map_single(dev, msdu->data, msdu->len,
-diff --git a/drivers/net/wireless/ath/ath10k/mac.c b/drivers/net/wireless/ath/ath10k/mac.c
-index 767c7bf16975..a7a6a8330d6a 100644
---- a/drivers/net/wireless/ath/ath10k/mac.c
-+++ b/drivers/net/wireless/ath/ath10k/mac.c
-@@ -3427,12 +3427,16 @@ ath10k_mac_tx_h_get_txmode(struct ath10k *ar,
- 			   struct sk_buff *skb)
- {
- 	const struct ieee80211_hdr *hdr = (void *)skb->data;
-+	struct ieee80211_tx_info *tx_info = IEEE80211_SKB_CB(skb);
- 	const struct ath10k_skb_cb *skb_cb = ATH10K_SKB_CB(skb);
- 	__le16 fc = hdr->frame_control;
- 
- 	if (!vif || vif->type == NL80211_IFTYPE_MONITOR)
- 		return ATH10K_HW_TXRX_RAW;
- 
-+	if (tx_info->control.flags & IEEE80211_TX_CTRL_HW_80211_ENCAP)
-+		return ATH10K_HW_TXRX_ETHERNET;
-+
- 	if (ieee80211_is_mgmt(fc))
- 		return ATH10K_HW_TXRX_MGMT;
- 
-@@ -3585,6 +3589,15 @@ static void ath10k_mac_tx_h_fill_cb(struct ath10k *ar,
- 			ieee80211_is_data_qos(hdr->frame_control);
- 
- 	cb->flags = 0;
-+	cb->vif = vif;
-+	cb->txq = txq;
-+	cb->airtime_est = airtime;
-+
-+	if (info->control.flags & IEEE80211_TX_CTRL_HW_80211_ENCAP) {
-+		cb->flags |= ATH10K_SKB_F_HW_80211_ENCAP;
-+		return;
-+	}
-+
- 	if (!ath10k_tx_h_use_hwcrypto(vif, skb))
- 		cb->flags |= ATH10K_SKB_F_NO_HWCRYPT;
- 
-@@ -3603,10 +3616,6 @@ static void ath10k_mac_tx_h_fill_cb(struct ath10k *ar,
- 		cb->flags |= ATH10K_SKB_F_NO_HWCRYPT;
- 		cb->flags |= ATH10K_SKB_F_RAW_TX;
- 	}
--
--	cb->vif = vif;
--	cb->txq = txq;
--	cb->airtime_est = airtime;
- }
- 
- bool ath10k_mac_tx_frm_has_freq(struct ath10k *ar)
-@@ -3716,6 +3725,9 @@ static int ath10k_mac_tx(struct ath10k *ar,
- 	const struct ath10k_skb_cb *skb_cb = ATH10K_SKB_CB(skb);
- 	int ret;
- 
-+	if (info->control.flags & IEEE80211_TX_CTRL_HW_80211_ENCAP)
-+		goto skip_encap;
-+
- 	/* We should disable CCK RATE due to P2P */
- 	if (info->flags & IEEE80211_TX_CTL_NO_CCK_RATE)
- 		ath10k_dbg(ar, ATH10K_DBG_MAC, "IEEE80211_TX_CTL_NO_CCK_RATE\n");
-@@ -3739,6 +3751,7 @@ static int ath10k_mac_tx(struct ath10k *ar,
- 		}
- 	}
- 
-+skip_encap:
- 	if (!noque_offchan && info->flags & IEEE80211_TX_CTL_TX_OFFCHAN) {
- 		if (!ath10k_mac_tx_frm_has_freq(ar)) {
- 			ath10k_dbg(ar, ATH10K_DBG_MAC, "mac queued offchannel skb %pK len %d\n",
-@@ -3788,6 +3801,7 @@ void ath10k_offchan_tx_work(struct work_struct *work)
- 	int ret;
- 	unsigned long time_left;
- 	bool tmp_peer_created = false;
-+	struct ieee80211_tx_info *info;
- 
- 	/* FW requirement: We must create a peer before FW will send out
- 	 * an offchannel frame. Otherwise the frame will be stuck and
-@@ -3807,8 +3821,14 @@ void ath10k_offchan_tx_work(struct work_struct *work)
- 		ath10k_dbg(ar, ATH10K_DBG_MAC, "mac offchannel skb %pK len %d\n",
- 			   skb, skb->len);
- 
--		hdr = (struct ieee80211_hdr *)skb->data;
--		peer_addr = ieee80211_get_DA(hdr);
-+		info = IEEE80211_SKB_CB(skb);
-+
-+		if (info->control.flags & IEEE80211_TX_CTRL_HW_80211_ENCAP) {
-+			peer_addr = skb->data;
-+		} else {
-+			hdr = (struct ieee80211_hdr *)skb->data;
-+			peer_addr = ieee80211_get_DA(hdr);
-+		}
- 
- 		spin_lock_bh(&ar->data_lock);
- 		vdev_id = ar->scan.vdev_id;
-@@ -4338,7 +4358,7 @@ static void ath10k_mac_op_tx(struct ieee80211_hw *hw,
- 	struct ieee80211_vif *vif = info->control.vif;
- 	struct ieee80211_sta *sta = control->sta;
- 	struct ieee80211_txq *txq = NULL;
--	struct ieee80211_hdr *hdr = (void *)skb->data;
-+	struct ieee80211_hdr *hdr;
- 	enum ath10k_hw_txrx_mode txmode;
- 	enum ath10k_mac_tx_path txpath;
- 	bool is_htt;
-@@ -4369,14 +4389,20 @@ static void ath10k_mac_op_tx(struct ieee80211_hw *hw,
- 			return;
- 		}
- 
--		ret = ath10k_htt_tx_mgmt_inc_pending(htt, is_mgmt, is_presp);
--		if (ret) {
--			ath10k_dbg(ar, ATH10K_DBG_MAC, "failed to increase tx mgmt pending count: %d, dropping\n",
--				   ret);
--			ath10k_htt_tx_dec_pending(htt);
--			spin_unlock_bh(&ar->htt.tx_lock);
--			ieee80211_free_txskb(ar->hw, skb);
--			return;
-+		if (is_mgmt) {
-+			hdr = (struct ieee80211_hdr *)skb->data;
-+			is_presp = ieee80211_is_probe_resp(hdr->frame_control);
-+
-+			ret = ath10k_htt_tx_mgmt_inc_pending(htt, is_mgmt,
-+							     is_presp);
-+			if (ret) {
-+				ath10k_dbg(ar, ATH10K_DBG_MAC, "failed to increase tx mgmt pending count: %d, dropping\n",
-+					   ret);
-+				ath10k_htt_tx_dec_pending(htt);
-+				spin_unlock_bh(&ar->htt.tx_lock);
-+				ieee80211_free_txskb(ar->hw, skb);
-+				return;
-+			}
- 		}
- 		spin_unlock_bh(&ar->htt.tx_lock);
- 	}
-@@ -5209,10 +5235,12 @@ static int ath10k_mac_set_txbf_conf(struct ath10k_vif *arvif)
- static int ath10k_add_interface(struct ieee80211_hw *hw,
- 				struct ieee80211_vif *vif)
- {
-+	struct wireless_dev *wdev = ieee80211_vif_to_wdev(vif);
- 	struct ath10k *ar = hw->priv;
- 	struct ath10k_vif *arvif = (void *)vif->drv_priv;
- 	struct ath10k_peer *peer;
- 	enum wmi_sta_powersave_param param;
-+	int hw_encap = 0;
- 	int ret = 0;
- 	u32 value;
- 	int bit;
-@@ -5304,6 +5332,21 @@ static int ath10k_add_interface(struct ieee80211_hw *hw,
- 		break;
- 	}
- 
-+	switch (vif->type) {
-+	case NL80211_IFTYPE_STATION:
-+	case NL80211_IFTYPE_AP_VLAN:
-+		if (wdev->netdev->ieee80211_ptr->use_4addr)
-+			break;
-+	/* fall through */
-+	case NL80211_IFTYPE_AP:
-+		hw_encap = 1;
-+		break;
-+	default:
-+		break;
-+	}
-+
-+	ieee80211_set_hw_80211_encap(vif, ar->ethernetmode & hw_encap);
-+
- 	/* Using vdev_id as queue number will make it very easy to do per-vif
- 	 * tx queue locking. This shouldn't wrap due to interface combinations
- 	 * but do a modulo for correctness sake and prevent using offchannel tx
-@@ -8883,6 +8926,8 @@ int ath10k_mac_register(struct ath10k *ar)
- 	ieee80211_hw_set(ar->hw, QUEUE_CONTROL);
- 	ieee80211_hw_set(ar->hw, SUPPORTS_TX_FRAG);
- 	ieee80211_hw_set(ar->hw, REPORTS_LOW_ACK);
-+	if (ar->ethernetmode)
-+		ieee80211_hw_set(ar->hw, SUPPORTS_80211_ENCAP);
- 
- 	if (!test_bit(ATH10K_FLAG_RAW_MODE, &ar->dev_flags))
- 		ieee80211_hw_set(ar->hw, SW_CRYPTO_CONTROL);
-diff --git a/drivers/net/wireless/ath/ath10k/txrx.c b/drivers/net/wireless/ath/ath10k/txrx.c
-index 39abf8b12903..1d8a6c2571a1 100644
---- a/drivers/net/wireless/ath/ath10k/txrx.c
-+++ b/drivers/net/wireless/ath/ath10k/txrx.c
-@@ -50,6 +50,8 @@ int ath10k_txrx_tx_unref(struct ath10k_htt *htt,
- 	struct ath10k_skb_cb *skb_cb;
- 	struct ath10k_txq *artxq;
- 	struct sk_buff *msdu;
-+	struct ieee80211_vif *vif;
-+	u8 flags;
- 
- 	ath10k_dbg(ar, ATH10K_DBG_HTT,
- 		   "htt tx completion msdu_id %u status %d\n",
-@@ -78,6 +80,9 @@ int ath10k_txrx_tx_unref(struct ath10k_htt *htt,
- 		artxq->num_fw_queued--;
- 	}
- 
-+	flags = skb_cb->flags;
-+	vif = skb_cb->vif;
-+
- 	ath10k_htt_tx_free_msdu_id(htt, tx_done->msdu_id);
- 	ath10k_htt_tx_dec_pending(htt);
- 	if (htt->num_pending_tx == 0)
-@@ -123,7 +128,11 @@ int ath10k_txrx_tx_unref(struct ath10k_htt *htt,
- 		info->status.is_valid_ack_signal = true;
- 	}
- 
--	ieee80211_tx_status(htt->ar->hw, msdu);
-+	if (flags & ATH10K_SKB_F_HW_80211_ENCAP)
-+		ieee80211_tx_status_8023(htt->ar->hw, vif, msdu);
-+	else
-+		ieee80211_tx_status(htt->ar->hw, msdu);
-+
- 	/* we do not own the msdu anymore */
- 
- 	return 0;
+ Example (to supply wcn3990 SoC wifi block details):
 -- 
-2.20.1
-
+1.9.1
 
 _______________________________________________
 ath10k mailing list
