@@ -2,61 +2,81 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4312D1230FA
-	for <lists+ath10k@lfdr.de>; Tue, 17 Dec 2019 16:58:40 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 31440123250
+	for <lists+ath10k@lfdr.de>; Tue, 17 Dec 2019 17:23:33 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
-	References:To:Subject:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=TlIo/OWIftgCc4ZPZeAE2TifvooWAyrlxOmv5Z6KOVU=; b=Cet3ozmb2swwqA8O+dgCBETtC
-	6f8MkJKylyjnsLPLiqqnbjSr1WaZFKUfVeuX79mlb1GFxy96XrsD03WO8YRH39aSJvWfnyY7U7z0u
-	Rn+n0FyKdVHm3kE1Z2Wg+RZ6mwfSgDs9FzSUJQf90dUzSTYZNEggnYaydzWxE0VFm023djzsEz8m1
-	kL5zWwnL4iY0KiUVDloB286MYxmsvXmEw6coEYCPaUekj5PlBssP5zsUV8LK0Lg5IYCwzCUlYeFDs
-	xe4MjHLphyFfhh8XwhMcWlMuYdlgJRiLLifB1IBc27P93COsRs7impmha0UVSJQKiUAaVDtqrW5Zi
-	flDcAYA0w==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=0e79bPFvnCTgHiDkJjdHR8hIKSG454dAW7Lslp8rnqs=; b=k96bzPzk1yQXQJ
+	E0HRQlcFuid7vGXs+9LYqsTScvIh34yhJJFFgyM3jBJMqovXmsQj2cpxsVpXLmm7HGFh9XkxZdhg1
+	GP9wGRSG84MGRWDUu0BxTpX6na/vS5cKsW7ePYmUXRxFsI4e3Vx4ZcazWMyaR2PEGVISD3ad4kQHo
+	c8cMKHyQ5oOkfNbiN0vKMRrOsqSUWfyjgymEdZprbyLgJVCqBCnvjCeJmbbJrbGtV/Cnrl32z+dHy
+	twf40Rs5XUPANbpBXHEy8agbnYC2fMSk6UbZn5nrrFoQU70iR7KcLJbRYxblJJikF+s9NfjeDLiME
+	0ZKePOmFN21PXZExWDVw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ihFF7-00016D-GK; Tue, 17 Dec 2019 15:58:37 +0000
-Received: from smtps.newmedia-net.de ([2a05:a1c0:0:de::167]
- helo=webmail.newmedia-net.de)
+	id 1ihFdA-0002SU-RO; Tue, 17 Dec 2019 16:23:28 +0000
+Received: from mail-ot1-x343.google.com ([2607:f8b0:4864:20::343])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ihFF0-00015H-CA
- for ath10k@lists.infradead.org; Tue, 17 Dec 2019 15:58:34 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=newmedia-net.de; s=mikd; 
- h=Content-Transfer-Encoding:Content-Type:In-Reply-To:MIME-Version:Date:Message-ID:From:References:To:Subject;
- bh=za3cJOCaZuT5GQwiv3nIfwdkTIVrTryKwXbjymuUcJI=; 
- b=Xqx9JngcLIaRiGJLcEd346Qs4i6PP5f/3fyKtzKNEgGiGMDBsYSvJdyLaAS9YnyootYN2SHvL3a9HvBfvR4QY06m2TQn6WOTYrTb1H0+MK1nIrjSFC0jHyP+vb7LdbMq9Xn0OTedIsW39zYflQ1f0ELlvLji+z8GcM/YkZFbr8c=;
-Subject: Re: [PATCH] ath10k: Per-chain rssi should sum the secondary channels
-To: Ben Greear <greearb@candelatech.com>, linux-wireless@vger.kernel.org,
- ath10k@lists.infradead.org
+ id 1ihFd6-0002Rt-Gr
+ for ath10k@lists.infradead.org; Tue, 17 Dec 2019 16:23:26 +0000
+Received: by mail-ot1-x343.google.com with SMTP id h20so14368387otn.5
+ for <ath10k@lists.infradead.org>; Tue, 17 Dec 2019 08:23:24 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=K3H12C+SygQfJoVwwFR5ByI1QMvjeQLqC2Ngz5U/neI=;
+ b=gk+J6y3DhHmR32W49GTAiZvwcFiOuWmgzmGEsjgStsBTRjbsKLji/5QRUCzqGJpyus
+ nPiG7OYs3V5BiRd7MIi329rd/ZTmcvk+GzWzJHeUghNouwEG7tmMiRDbNwk+QmN4R5+v
+ O2s0+AileSvah4nR3ytW3h24ZjMe0M4DJn6AVhyV36VJ4rnTkUtUJjE7g/EHVw/NJCIX
+ 3xG3q9r47wGqztj2ntzuwpjxCnj2cEUmeKd/NeUSLEfwYufQlRFm2UK0/bJJQmA/rwfP
+ IpS4MWgL56VCZos3jw4VdrryDeonohWYI6taS4D1LhH7Zd9/9kpvQq+xumj43UeaIXEp
+ hlHQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=K3H12C+SygQfJoVwwFR5ByI1QMvjeQLqC2Ngz5U/neI=;
+ b=fPvjUwvxMIQE+LibxAB8i2yoPvcASLArQHIPa0AUJNlbiM0jwr2yeqHJdoefRJTUlt
+ m9uac9pYu8PDrQpCOSYf5isra5KErL1P+rlDLAzaH9P+Q4GX+uf/4ym5Qq/jIbQofu8H
+ H3xXw2N/pVeX0WGFNH6UVyA07dYZi29j2jZjSH5NyVIw6IuDhVgE2vS+Oxx7IYpJBhJH
+ R9jZzo8xMztkHJ/pNRaXkj4NFaBofPTA8E/bZDmFZpyX5EPWExiklVpUAdZPp0PePy1L
+ BxccUUi296P7d1cLi4rvAaV1zA7kN9QRBuwVkJKlnQe3uATAwEYdjPLbSRE67CDfUlBn
+ uS/g==
+X-Gm-Message-State: APjAAAXp0AXkZBFsyLRmUW6gZPMg7z6eX1vp3Nwm3k2pC5bq4U6u+WM8
+ L9dP0YCeIbEwZA0u635lxLf2DHLynVD1UaWe0aAGmhy207Gj7w==
+X-Google-Smtp-Source: APXvYqzRfnMw0xscFHcs1CYLjh5EGdilE9HA1iOKfIiUDGElP5pzvAeAdUBTHz3AZzc3Bo3YW770TlgA4wrTjMxwBk0=
+X-Received: by 2002:a9d:6c81:: with SMTP id c1mr39364148otr.39.1576599803320; 
+ Tue, 17 Dec 2019 08:23:23 -0800 (PST)
+MIME-Version: 1.0
 References: <20191216220747.887-1-greearb@candelatech.com>
  <a2af03e9-8b53-b297-467b-d0f07b8a002b@newmedia-net.de>
  <b5d63d96-4ba6-bbab-bf1c-a61c6c437f37@newmedia-net.de>
  <80700614-679a-336e-bd9a-e88622e75c9a@candelatech.com>
-From: Sebastian Gottschall <s.gottschall@newmedia-net.de>
-Message-ID: <4775d91a-9719-46f8-b0f2-979b8d86cf9f@newmedia-net.de>
-Date: Tue, 17 Dec 2019 16:58:24 +0100
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101
- Thunderbird/68.3.0
-MIME-Version: 1.0
-In-Reply-To: <80700614-679a-336e-bd9a-e88622e75c9a@candelatech.com>
-X-Received: from [2a01:7700:8040:3500:8860:b628:52d9:8f37]
- by webmail.newmedia-net.de with esmtpsa (TLSv1:AES128-SHA:128)
- (Exim 4.72) (envelope-from <s.gottschall@newmedia-net.de>)
- id 1ihFDb-0007YZ-Pq; Tue, 17 Dec 2019 16:57:03 +0100
+ <4775d91a-9719-46f8-b0f2-979b8d86cf9f@newmedia-net.de>
+In-Reply-To: <4775d91a-9719-46f8-b0f2-979b8d86cf9f@newmedia-net.de>
+From: Justin Capella <justincapella@gmail.com>
+Date: Tue, 17 Dec 2019 08:23:10 -0800
+Message-ID: <CAMrEMU-vGB8uR-JZbD2vj4vXgWNHfFqcbsqB=gOqBBDZWGkzQA@mail.gmail.com>
+Subject: Re: [PATCH] ath10k: Per-chain rssi should sum the secondary channels
+To: Sebastian Gottschall <s.gottschall@newmedia-net.de>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191217_075832_181805_8376A3FF 
-X-CRM114-Status: GOOD (  15.31  )
+X-CRM114-CacheID: sfid-20191217_082324_583958_2E75F06E 
+X-CRM114-Status: GOOD (  19.50  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:343 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (justincapella[at]gmail.com)
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
@@ -75,121 +95,186 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Content-Transfer-Encoding: base64
-Content-Type: text/plain; charset="utf-8"; Format="flowed"
+Cc: Ben Greear <greearb@candelatech.com>, linux-wireless@vger.kernel.org,
+ ath10k <ath10k@lists.infradead.org>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Cj4+IGN1cnJlbnRseSBkZWJ1Z2dpbmcgaW4geW91ciBjb2RlLCBidXQgaSBhbHJlYWR5IGhhdmUg
-c2VlbiB0aGF0IHRoZSAKPj4gdmFsdWVzIGFyZSB3cm9uZyBub3cgZm9yIHRoaXMgY2hpcHNldAo+
-Cj4gVGhhbmtzIGZvciB0ZXN0aW5nLsKgIEknbGwgYWRkIGEgY2hlY2sgZm9yIDAgYW5kIGlnbm9y
-ZSB0aGF0IHZhbHVlIAo+IHRvby7CoCBUaGF0IHNlZW0gT0s/CmkgdGVzdGVkIGFscmVhZHkgdGhl
-IDAgY2hlY2sgYW5kIGl0IHdvcmtzCj4KPiBXZXJlIHRoZSBwZXItY2hhaW4gdmFsdWVzIE9LPwpv
-biA5OTg0IGkgc2VlIG5vIGRpc2FkdmFudGFnZSBzbyBmYXIuIHNlZW0gdG8gd29yayBhbmQgdGhl
-IHZhbHVlcyBsb29rIApzYW5lLiBpIHdpbGwgZG8gYSBzaWRlIGJ5IHNpZGUgY29tcGFyaXNhdGlv
-biBsYXRlciB0aGlzIGRheSBvbiA5OTg0Cj4KPiBUaGFua3MsCj4gQmVuCj4KPj4+Cj4+PiBBbSAx
-Ni4xMi4yMDE5IHVtIDIzOjA3IHNjaHJpZWIgZ3JlZWFyYkBjYW5kZWxhdGVjaC5jb206Cj4+Pj4g
-RnJvbTogQmVuIEdyZWVhciA8Z3JlZWFyYkBjYW5kZWxhdGVjaC5jb20+Cj4+Pj4KPj4+PiBUaGlz
-IG1ha2VzIHBlci1jaGFpbiBSU1NJIGJlIG1vcmUgY29uc2lzdGVudCBiZXR3ZWVuIEhUMjAsIEhU
-NDAsIEhUODAuCj4+Pj4gSW5zdGVhZCBvZiBkb2luZyBwcmVjaXNlIGxvZyBtYXRoIGZvciBhZGRp
-bmcgZGJtLCBJIGRpZCBhIHJvdWdoIAo+Pj4+IGVzdGltYXRlLAo+Pj4+IGl0IHNlZW1zIHRvIHdv
-cmsgZ29vZCBlbm91Z2guCj4+Pj4KPj4+PiBUZXN0ZWQgb24gYXRoMTBrLWN0IDk5ODQgZmlybXdh
-cmUuCj4+Pj4KPj4+PiBTaWduZWQtb2ZmLWJ5OiBCZW4gR3JlZWFyIDxncmVlYXJiQGNhbmRlbGF0
-ZWNoLmNvbT4KPj4+PiAtLS0KPj4+PiDCoCBkcml2ZXJzL25ldC93aXJlbGVzcy9hdGgvYXRoMTBr
-L2h0dF9yeC5jwqAgfCA2NCAKPj4+PiArKysrKysrKysrKysrKysrKysrKy0tLQo+Pj4+IMKgIGRy
-aXZlcnMvbmV0L3dpcmVsZXNzL2F0aC9hdGgxMGsvcnhfZGVzYy5oIHzCoCAzICstCj4+Pj4gwqAg
-MiBmaWxlcyBjaGFuZ2VkLCA2MCBpbnNlcnRpb25zKCspLCA3IGRlbGV0aW9ucygtKQo+Pj4+Cj4+
-Pj4gZGlmZiAtLWdpdCBhL2RyaXZlcnMvbmV0L3dpcmVsZXNzL2F0aC9hdGgxMGsvaHR0X3J4LmMg
-Cj4+Pj4gYi9kcml2ZXJzL25ldC93aXJlbGVzcy9hdGgvYXRoMTBrL2h0dF9yeC5jCj4+Pj4gaW5k
-ZXggMTNmNjUyYjYyMmRmLi4wMzRkNGFjZTIyOGQgMTAwNjQ0Cj4+Pj4gLS0tIGEvZHJpdmVycy9u
-ZXQvd2lyZWxlc3MvYXRoL2F0aDEway9odHRfcnguYwo+Pj4+ICsrKyBiL2RyaXZlcnMvbmV0L3dp
-cmVsZXNzL2F0aC9hdGgxMGsvaHR0X3J4LmMKPj4+PiBAQCAtMTE2Nyw2ICsxMTY3LDQ0IEBAIHN0
-YXRpYyBib29sIGF0aDEwa19odHRfcnhfaF9jaGFubmVsKHN0cnVjdCAKPj4+PiBhdGgxMGsgKmFy
-LAo+Pj4+IMKgwqDCoMKgwqAgcmV0dXJuIHRydWU7Cj4+Pj4gwqAgfQo+Pj4+IMKgICtzdGF0aWMg
-aW50IGF0aDEwa19zdW1fc2lnc18yKGludCBhLCBpbnQgYikgewo+Pj4+ICvCoMKgwqAgaW50IGRp
-ZmY7Cj4+Pj4gKwo+Pj4+ICvCoMKgwqAgaWYgKGIgPT0gMHg4MCkKPj4+PiArwqDCoMKgwqDCoMKg
-wqAgcmV0dXJuIGE7Cj4+Pj4gKwo+Pj4+ICvCoMKgwqAgaWYgKGEgPj0gYikgewo+Pj4+ICvCoMKg
-wqDCoMKgwqDCoCBkaWZmID0gYSAtIGI7Cj4+Pj4gK8KgwqDCoMKgwqDCoMKgIGlmIChkaWZmID09
-IDApCj4+Pj4gK8KgwqDCoMKgwqDCoMKgwqDCoMKgwqAgcmV0dXJuIGEgKyAzOwo+Pj4+ICvCoMKg
-wqDCoMKgwqDCoCBlbHNlIGlmIChkaWZmID09IDEpCj4+Pj4gK8KgwqDCoMKgwqDCoMKgwqDCoMKg
-wqAgcmV0dXJuIGEgKyAyOwo+Pj4+ICvCoMKgwqDCoMKgwqDCoCBlbHNlIGlmIChkaWZmID09IDIp
-Cj4+Pj4gK8KgwqDCoMKgwqDCoMKgwqDCoMKgwqAgcmV0dXJuIGEgKyAxOwo+Pj4+ICvCoMKgwqDC
-oMKgwqDCoCByZXR1cm4gYTsKPj4+PiArwqDCoMKgIH0KPj4+PiArwqDCoMKgIGVsc2Ugewo+Pj4+
-ICvCoMKgwqDCoMKgwqDCoCBkaWZmID0gYiAtIGE7Cj4+Pj4gK8KgwqDCoMKgwqDCoMKgIGlmIChk
-aWZmID09IDApCj4+Pj4gK8KgwqDCoMKgwqDCoMKgwqDCoMKgwqAgcmV0dXJuIGIgKyAzOwo+Pj4+
-ICvCoMKgwqDCoMKgwqDCoCBlbHNlIGlmIChkaWZmID09IDEpCj4+Pj4gK8KgwqDCoMKgwqDCoMKg
-wqDCoMKgwqAgcmV0dXJuIGIgKyAyOwo+Pj4+ICvCoMKgwqDCoMKgwqDCoCBlbHNlIGlmIChkaWZm
-ID09IDIpCj4+Pj4gK8KgwqDCoMKgwqDCoMKgwqDCoMKgwqAgcmV0dXJuIGIgKyAxOwo+Pj4+ICvC
-oMKgwqDCoMKgwqDCoCByZXR1cm4gYjsKPj4+PiArwqDCoMKgIH0KPj4+PiArfQo+Pj4+ICsKPj4+
-PiArc3RhdGljIGludCBhdGgxMGtfc3VtX3NpZ3MoaW50IHAyMCwgaW50IGUyMCwgaW50IGU0MCwg
-aW50IGU4MCkgewo+Pj4+ICvCoMKgwqAgLyogSGFja3kgYXR0ZW1wdCBhdCBzdW1taW5nIGRibSB3
-aXRob3V0IHJlc29ydGluZyB0byBsb2coMTApIAo+Pj4+IGJ1c2luZXNzICovCj4+Pj4gK8KgwqDC
-oCBpZiAoZTQwICE9IDB4ODApIHsKPj4+PiArwqDCoMKgwqDCoMKgwqAgcmV0dXJuIGF0aDEwa19z
-dW1fc2lnc18yKGF0aDEwa19zdW1fc2lnc18yKHAyMCwgZTIwKSwgCj4+Pj4gYXRoMTBrX3N1bV9z
-aWdzXzIoZTQwLCBlODApKTsKPj4+PiArwqDCoMKgIH0KPj4+PiArwqDCoMKgIGVsc2Ugewo+Pj4+
-ICvCoMKgwqDCoMKgwqDCoCByZXR1cm4gYXRoMTBrX3N1bV9zaWdzXzIocDIwLCBlMjApOwo+Pj4+
-ICvCoMKgwqAgfQo+Pj4+ICt9Cj4+Pj4gKwo+Pj4+IMKgIHN0YXRpYyB2b2lkIGF0aDEwa19odHRf
-cnhfaF9zaWduYWwoc3RydWN0IGF0aDEwayAqYXIsCj4+Pj4gwqDCoMKgwqDCoMKgwqDCoMKgwqDC
-oMKgwqDCoMKgwqDCoMKgwqDCoCBzdHJ1Y3QgaWVlZTgwMjExX3J4X3N0YXR1cyAqc3RhdHVzLAo+
-Pj4+IMKgwqDCoMKgwqDCoMKgwqDCoMKgwqDCoMKgwqDCoMKgwqDCoMKgwqAgc3RydWN0IGh0dF9y
-eF9kZXNjICpyeGQpCj4+Pj4gQEAgLTExNzcsMTggKzEyMTUsMzIgQEAgc3RhdGljIHZvaWQgYXRo
-MTBrX2h0dF9yeF9oX3NpZ25hbChzdHJ1Y3QgCj4+Pj4gYXRoMTBrICphciwKPj4+PiDCoMKgwqDC
-oMKgwqDCoMKgwqAgc3RhdHVzLT5jaGFpbnMgJj0gfkJJVChpKTsKPj4+PiDCoMKgwqDCoMKgwqDC
-oMKgwqDCoMKgIGlmIChyeGQtPnBwZHVfc3RhcnQucnNzaV9jaGFpbnNbaV0ucHJpMjBfbWh6ICE9
-IDB4ODApIHsKPj4+PiAtwqDCoMKgwqDCoMKgwqDCoMKgwqDCoCBzdGF0dXMtPmNoYWluX3NpZ25h
-bFtpXSA9IEFUSDEwS19ERUZBVUxUX05PSVNFX0ZMT09SICsKPj4+PiAtIHJ4ZC0+cHBkdV9zdGFy
-dC5yc3NpX2NoYWluc1tpXS5wcmkyMF9taHo7Cj4+Pj4gK8KgwqDCoMKgwqDCoMKgwqDCoMKgwqAg
-c3RhdHVzLT5jaGFpbl9zaWduYWxbaV0gPSBBVEgxMEtfREVGQVVMVF9OT0lTRV9GTE9PUgo+Pj4+
-ICvCoMKgwqDCoMKgwqDCoMKgwqDCoMKgwqDCoMKgwqAgKyAKPj4+PiBhdGgxMGtfc3VtX3NpZ3Mo
-cnhkLT5wcGR1X3N0YXJ0LnJzc2lfY2hhaW5zW2ldLnByaTIwX21oeiwKPj4+PiArIHJ4ZC0+cHBk
-dV9zdGFydC5yc3NpX2NoYWluc1tpXS5leHQyMF9taHosCj4+Pj4gKyByeGQtPnBwZHVfc3RhcnQu
-cnNzaV9jaGFpbnNbaV0uZXh0NDBfbWh6LAo+Pj4+ICsgcnhkLT5wcGR1X3N0YXJ0LnJzc2lfY2hh
-aW5zW2ldLmV4dDgwX21oeik7Cj4+Pj4gK8KgwqDCoMKgwqDCoMKgwqDCoMKgwqAgLy9hdGgxMGtf
-d2FybihhciwgInJ4LWgtc2lnLCBjaGFpblslaV0gcHJpMjA6ICVkIAo+Pj4+IGV4dDIwOiAlZMKg
-IGV4dDQwOiAlZMKgIGV4dDgwOiAlZFxuIiwKPj4+PiArwqDCoMKgwqDCoMKgwqDCoMKgwqDCoCAv
-L8KgwqDCoMKgwqDCoMKgIGksIHJ4ZC0+cHBkdV9zdGFydC5yc3NpX2NoYWluc1tpXS5wcmkyMF9t
-aHosIAo+Pj4+IHJ4ZC0+cHBkdV9zdGFydC5yc3NpX2NoYWluc1tpXS5leHQyMF9taHosCj4+Pj4g
-K8KgwqDCoMKgwqDCoMKgwqDCoMKgwqAgLy8gcnhkLT5wcGR1X3N0YXJ0LnJzc2lfY2hhaW5zW2ld
-LmV4dDQwX21oeiwgCj4+Pj4gcnhkLT5wcGR1X3N0YXJ0LnJzc2lfY2hhaW5zW2ldLmV4dDgwX21o
-eik7Cj4+Pj4gwqDCoMKgwqDCoMKgwqDCoMKgwqDCoMKgwqDCoMKgIHN0YXR1cy0+Y2hhaW5zIHw9
-IEJJVChpKTsKPj4+PiDCoMKgwqDCoMKgwqDCoMKgwqAgfQo+Pj4+IMKgwqDCoMKgwqAgfQo+Pj4+
-IMKgwqDCoMKgwqDCoMKgIC8qIEZJWE1FOiBHZXQgcmVhbCBORiAqLwo+Pj4+IC3CoMKgwqAgc3Rh
-dHVzLT5zaWduYWwgPSBBVEgxMEtfREVGQVVMVF9OT0lTRV9GTE9PUiArCj4+Pj4gLcKgwqDCoMKg
-wqDCoMKgwqDCoMKgwqDCoCByeGQtPnBwZHVfc3RhcnQucnNzaV9jb21iOwo+Pj4+IC3CoMKgwqAg
-LyogYXRoMTBrX3dhcm4oYXIsICJyeC1oLXNpZywgc2lnbmFsOiAlZMKgIGNoYWluczogMHgleCAK
-Pj4+PiBjaGFpblswXTogJWTCoCBjaGFpblsxXTogJWTCoCBjaGFuWzJdOiAlZFxuIiwKPj4+PiAt
-wqDCoMKgwqDCoMKgwqDCoMKgwqDCoMKgwqDCoMKgwqDCoMKgwqDCoMKgwqAgc3RhdHVzLT5zaWdu
-YWwsIHN0YXR1cy0+Y2hhaW5zLCAKPj4+PiBzdGF0dXMtPmNoYWluX3NpZ25hbFswXSwgc3RhdHVz
-LT5jaGFpbl9zaWduYWxbMV0sIAo+Pj4+IHN0YXR1cy0+Y2hhaW5fc2lnbmFsWzJdKTsgKi8KPj4+
-PiArwqDCoMKgIGlmIChyeGQtPnBwZHVfc3RhcnQucnNzaV9jb21iX2h0ICE9IDB4ODApIHsKPj4+
-PiArwqDCoMKgwqDCoMKgwqAgc3RhdHVzLT5zaWduYWwgPSBBVEgxMEtfREVGQVVMVF9OT0lTRV9G
-TE9PUiArCj4+Pj4gK8KgwqDCoMKgwqDCoMKgwqDCoMKgwqAgcnhkLT5wcGR1X3N0YXJ0LnJzc2lf
-Y29tYl9odDsKPj4+PiArwqDCoMKgIH0KPj4+PiArwqDCoMKgIGVsc2Ugewo+Pj4+ICvCoMKgwqDC
-oMKgwqDCoCBzdGF0dXMtPnNpZ25hbCA9IEFUSDEwS19ERUZBVUxUX05PSVNFX0ZMT09SICsKPj4+
-PiArwqDCoMKgwqDCoMKgwqDCoMKgwqDCoCByeGQtPnBwZHVfc3RhcnQucnNzaV9jb21iOwo+Pj4+
-ICvCoMKgwqAgfQo+Pj4+ICsKPj4+PiArwqDCoMKgIC8vYXRoMTBrX3dhcm4oYXIsICJyeC1oLXNp
-Zywgc2lnbmFsOiAlZMKgIGNoYWluczogMHgleCAKPj4+PiBjaGFpblswXTogJWTCoCBjaGFpblsx
-XTogJWTCoCBjaGFpblsyXTogJWQgY2hhaW5bM106ICVkXG4iLAo+Pj4+ICvCoMKgwqAgLy/CoMKg
-wqDCoMKgwqDCoCBzdGF0dXMtPnNpZ25hbCwgc3RhdHVzLT5jaGFpbnMsIAo+Pj4+IHN0YXR1cy0+
-Y2hhaW5fc2lnbmFsWzBdLAo+Pj4+ICvCoMKgwqAgLy/CoMKgwqDCoMKgwqDCoCBzdGF0dXMtPmNo
-YWluX3NpZ25hbFsxXSwgc3RhdHVzLT5jaGFpbl9zaWduYWxbMl0sIAo+Pj4+IHN0YXR1cy0+Y2hh
-aW5fc2lnbmFsWzNdKTsKPj4+PiDCoMKgwqDCoMKgIHN0YXR1cy0+ZmxhZyAmPSB+UlhfRkxBR19O
-T19TSUdOQUxfVkFMOwo+Pj4+IMKgIH0KPj4+PiDCoCBkaWZmIC0tZ2l0IGEvZHJpdmVycy9uZXQv
-d2lyZWxlc3MvYXRoL2F0aDEway9yeF9kZXNjLmggCj4+Pj4gYi9kcml2ZXJzL25ldC93aXJlbGVz
-cy9hdGgvYXRoMTBrL3J4X2Rlc2MuaAo+Pj4+IGluZGV4IGRlYzE1ODIwMDViOS4uNmI0NDY3NzQ3
-NGRkIDEwMDY0NAo+Pj4+IC0tLSBhL2RyaXZlcnMvbmV0L3dpcmVsZXNzL2F0aC9hdGgxMGsvcnhf
-ZGVzYy5oCj4+Pj4gKysrIGIvZHJpdmVycy9uZXQvd2lyZWxlc3MvYXRoL2F0aDEway9yeF9kZXNj
-LmgKPj4+PiBAQCAtNzI2LDcgKzcyNiw4IEBAIHN0cnVjdCByeF9wcGR1X3N0YXJ0IHsKPj4+PiDC
-oMKgwqDCoMKgwqDCoMKgwqAgdTggZXh0ODBfbWh6Owo+Pj4+IMKgwqDCoMKgwqAgfSByc3NpX2No
-YWluc1s0XTsKPj4+PiDCoMKgwqDCoMKgIHU4IHJzc2lfY29tYjsKPj4+PiAtwqDCoMKgIF9fbGUx
-NiByc3ZkMDsKPj4+PiArwqDCoMKgIHU4IHJzdmQwOyAvKiBmaXJzdCB0d28gYml0cyBhcmUgYmFu
-ZHdpZHRoLCBvdGhlciA2IGFyZSAKPj4+PiByZXNlcnZlZCAqLwo+Pj4+ICvCoMKgwqAgdTggcnNz
-aV9jb21iX2h0Owo+Pj4+IMKgwqDCoMKgwqAgdTggaW5mbzA7IC8qICVSWF9QUERVX1NUQVJUX0lO
-Rk8wXyAqLwo+Pj4+IMKgwqDCoMKgwqAgX19sZTMyIGluZm8xOyAvKiAlUlhfUFBEVV9TVEFSVF9J
-TkZPMV8gKi8KPj4+PiDCoMKgwqDCoMKgIF9fbGUzMiBpbmZvMjsgLyogJVJYX1BQRFVfU1RBUlRf
-SU5GTzJfICovCj4+Pgo+Pj4gX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
-X19fX19fX18KPj4+IGF0aDEwayBtYWlsaW5nIGxpc3QKPj4+IGF0aDEwa0BsaXN0cy5pbmZyYWRl
-YWQub3JnCj4+PiBodHRwOi8vbGlzdHMuaW5mcmFkZWFkLm9yZy9tYWlsbWFuL2xpc3RpbmZvL2F0
-aDEwawo+Pj4KPj4KPgoKX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
-X19fX18KYXRoMTBrIG1haWxpbmcgbGlzdAphdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZwpodHRw
-Oi8vbGlzdHMuaW5mcmFkZWFkLm9yZy9tYWlsbWFuL2xpc3RpbmZvL2F0aDEwawo=
+I believe someone recently submitted a patch that defined noise floors
+per band (2/5).
+
+Can't say I'm a fan of the hacky code, in particular the if/else for
+min/max // maybe abs(a-b)?
+
+if (e40 != 0x80) { // whats this case about?
+
+Are there reasons to not use log?
+
+
+
+
+On Tue, Dec 17, 2019 at 7:59 AM Sebastian Gottschall
+<s.gottschall@newmedia-net.de> wrote:
+>
+>
+> >> currently debugging in your code, but i already have seen that the
+> >> values are wrong now for this chipset
+> >
+> > Thanks for testing.  I'll add a check for 0 and ignore that value
+> > too.  That seem OK?
+> i tested already the 0 check and it works
+> >
+> > Were the per-chain values OK?
+> on 9984 i see no disadvantage so far. seem to work and the values look
+> sane. i will do a side by side comparisation later this day on 9984
+> >
+> > Thanks,
+> > Ben
+> >
+> >>>
+> >>> Am 16.12.2019 um 23:07 schrieb greearb@candelatech.com:
+> >>>> From: Ben Greear <greearb@candelatech.com>
+> >>>>
+> >>>> This makes per-chain RSSI be more consistent between HT20, HT40, HT80.
+> >>>> Instead of doing precise log math for adding dbm, I did a rough
+> >>>> estimate,
+> >>>> it seems to work good enough.
+> >>>>
+> >>>> Tested on ath10k-ct 9984 firmware.
+> >>>>
+> >>>> Signed-off-by: Ben Greear <greearb@candelatech.com>
+> >>>> ---
+> >>>>   drivers/net/wireless/ath/ath10k/htt_rx.c  | 64
+> >>>> ++++++++++++++++++++---
+> >>>>   drivers/net/wireless/ath/ath10k/rx_desc.h |  3 +-
+> >>>>   2 files changed, 60 insertions(+), 7 deletions(-)
+> >>>>
+> >>>> diff --git a/drivers/net/wireless/ath/ath10k/htt_rx.c
+> >>>> b/drivers/net/wireless/ath/ath10k/htt_rx.c
+> >>>> index 13f652b622df..034d4ace228d 100644
+> >>>> --- a/drivers/net/wireless/ath/ath10k/htt_rx.c
+> >>>> +++ b/drivers/net/wireless/ath/ath10k/htt_rx.c
+> >>>> @@ -1167,6 +1167,44 @@ static bool ath10k_htt_rx_h_channel(struct
+> >>>> ath10k *ar,
+> >>>>       return true;
+> >>>>   }
+> >>>>   +static int ath10k_sum_sigs_2(int a, int b) {
+> >>>> +    int diff;
+> >>>> +
+> >>>> +    if (b == 0x80)
+> >>>> +        return a;
+> >>>> +
+> >>>> +    if (a >= b) {
+> >>>> +        diff = a - b;
+> >>>> +        if (diff == 0)
+> >>>> +            return a + 3;
+> >>>> +        else if (diff == 1)
+> >>>> +            return a + 2;
+> >>>> +        else if (diff == 2)
+> >>>> +            return a + 1;
+> >>>> +        return a;
+> >>>> +    }
+> >>>> +    else {
+> >>>> +        diff = b - a;
+> >>>> +        if (diff == 0)
+> >>>> +            return b + 3;
+> >>>> +        else if (diff == 1)
+> >>>> +            return b + 2;
+> >>>> +        else if (diff == 2)
+> >>>> +            return b + 1;
+> >>>> +        return b;
+> >>>> +    }
+> >>>> +}
+> >>>> +
+> >>>> +static int ath10k_sum_sigs(int p20, int e20, int e40, int e80) {
+> >>>> +    /* Hacky attempt at summing dbm without resorting to log(10)
+> >>>> business */
+> >>>> +    if (e40 != 0x80) {
+> >>>> +        return ath10k_sum_sigs_2(ath10k_sum_sigs_2(p20, e20),
+> >>>> ath10k_sum_sigs_2(e40, e80));
+> >>>> +    }
+> >>>> +    else {
+> >>>> +        return ath10k_sum_sigs_2(p20, e20);
+> >>>> +    }
+> >>>> +}
+> >>>> +
+> >>>>   static void ath10k_htt_rx_h_signal(struct ath10k *ar,
+> >>>>                      struct ieee80211_rx_status *status,
+> >>>>                      struct htt_rx_desc *rxd)
+> >>>> @@ -1177,18 +1215,32 @@ static void ath10k_htt_rx_h_signal(struct
+> >>>> ath10k *ar,
+> >>>>           status->chains &= ~BIT(i);
+> >>>>             if (rxd->ppdu_start.rssi_chains[i].pri20_mhz != 0x80) {
+> >>>> -            status->chain_signal[i] = ATH10K_DEFAULT_NOISE_FLOOR +
+> >>>> - rxd->ppdu_start.rssi_chains[i].pri20_mhz;
+> >>>> +            status->chain_signal[i] = ATH10K_DEFAULT_NOISE_FLOOR
+> >>>> +                +
+> >>>> ath10k_sum_sigs(rxd->ppdu_start.rssi_chains[i].pri20_mhz,
+> >>>> + rxd->ppdu_start.rssi_chains[i].ext20_mhz,
+> >>>> + rxd->ppdu_start.rssi_chains[i].ext40_mhz,
+> >>>> + rxd->ppdu_start.rssi_chains[i].ext80_mhz);
+> >>>> +            //ath10k_warn(ar, "rx-h-sig, chain[%i] pri20: %d
+> >>>> ext20: %d  ext40: %d  ext80: %d\n",
+> >>>> +            //        i, rxd->ppdu_start.rssi_chains[i].pri20_mhz,
+> >>>> rxd->ppdu_start.rssi_chains[i].ext20_mhz,
+> >>>> +            // rxd->ppdu_start.rssi_chains[i].ext40_mhz,
+> >>>> rxd->ppdu_start.rssi_chains[i].ext80_mhz);
+> >>>>                 status->chains |= BIT(i);
+> >>>>           }
+> >>>>       }
+> >>>>         /* FIXME: Get real NF */
+> >>>> -    status->signal = ATH10K_DEFAULT_NOISE_FLOOR +
+> >>>> -             rxd->ppdu_start.rssi_comb;
+> >>>> -    /* ath10k_warn(ar, "rx-h-sig, signal: %d  chains: 0x%x
+> >>>> chain[0]: %d  chain[1]: %d  chan[2]: %d\n",
+> >>>> -                       status->signal, status->chains,
+> >>>> status->chain_signal[0], status->chain_signal[1],
+> >>>> status->chain_signal[2]); */
+> >>>> +    if (rxd->ppdu_start.rssi_comb_ht != 0x80) {
+> >>>> +        status->signal = ATH10K_DEFAULT_NOISE_FLOOR +
+> >>>> +            rxd->ppdu_start.rssi_comb_ht;
+> >>>> +    }
+> >>>> +    else {
+> >>>> +        status->signal = ATH10K_DEFAULT_NOISE_FLOOR +
+> >>>> +            rxd->ppdu_start.rssi_comb;
+> >>>> +    }
+> >>>> +
+> >>>> +    //ath10k_warn(ar, "rx-h-sig, signal: %d  chains: 0x%x
+> >>>> chain[0]: %d  chain[1]: %d  chain[2]: %d chain[3]: %d\n",
+> >>>> +    //        status->signal, status->chains,
+> >>>> status->chain_signal[0],
+> >>>> +    //        status->chain_signal[1], status->chain_signal[2],
+> >>>> status->chain_signal[3]);
+> >>>>       status->flag &= ~RX_FLAG_NO_SIGNAL_VAL;
+> >>>>   }
+> >>>>   diff --git a/drivers/net/wireless/ath/ath10k/rx_desc.h
+> >>>> b/drivers/net/wireless/ath/ath10k/rx_desc.h
+> >>>> index dec1582005b9..6b44677474dd 100644
+> >>>> --- a/drivers/net/wireless/ath/ath10k/rx_desc.h
+> >>>> +++ b/drivers/net/wireless/ath/ath10k/rx_desc.h
+> >>>> @@ -726,7 +726,8 @@ struct rx_ppdu_start {
+> >>>>           u8 ext80_mhz;
+> >>>>       } rssi_chains[4];
+> >>>>       u8 rssi_comb;
+> >>>> -    __le16 rsvd0;
+> >>>> +    u8 rsvd0; /* first two bits are bandwidth, other 6 are
+> >>>> reserved */
+> >>>> +    u8 rssi_comb_ht;
+> >>>>       u8 info0; /* %RX_PPDU_START_INFO0_ */
+> >>>>       __le32 info1; /* %RX_PPDU_START_INFO1_ */
+> >>>>       __le32 info2; /* %RX_PPDU_START_INFO2_ */
+> >>>
+> >>> _______________________________________________
+> >>> ath10k mailing list
+> >>> ath10k@lists.infradead.org
+> >>> http://lists.infradead.org/mailman/listinfo/ath10k
+> >>>
+> >>
+> >
+
+_______________________________________________
+ath10k mailing list
+ath10k@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/ath10k
