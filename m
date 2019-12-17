@@ -2,58 +2,44 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 025F6123AFA
-	for <lists+ath10k@lfdr.de>; Wed, 18 Dec 2019 00:37:46 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id D1B68123B06
+	for <lists+ath10k@lfdr.de>; Wed, 18 Dec 2019 00:43:37 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	References:In-Reply-To:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=hYsj+yNNpWMQkfB2UYl/y087WcgX0TTGjgqRNxCLB2Q=; b=BNxSuIRY8kBEzc
-	RJHPUwzUfYe4fIphnk84LaCrxUuTb67ZXq7I5U6DiGW7dqsVykKMnme0qw8JOdmkqAQnTaib4Hw3k
-	n2TRR5VADKqtTbDIEn2UmIQjtorlJnd96Thz9OGYi2zgq3XREAyB5IhCn/xAFQRkMWM/UP5pxLZwY
-	+kpKQ0cX3321ZeHckLdPiheHtfo9qn2i7y7wd7xYHHsnAD5Fv+zGHVFyFhXquPtCqFFAK4x6OnC4a
-	eSZU68a2U7a0oqrOSBXaB6gTfaiWaYLLf91trV2PIaIDaFowO/O/jhTFhZk/M/0Qoy+QkVFFDg+kS
-	Rw6yNYJIvLW4pJptB5yw==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
+	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=uX9G2bWGnEfamLDfRdrvb3tD+x7QgWk5C7w1mBlPqXM=; b=WNMDXn81mIYnUHYLjWxEYGrJn
+	KTul6stU1ODkKdXi/C65gwfGtpRCN3pDB0343jZ/+OBeVvZrhQXTr1+6XC8Jgb7BXJ/IkaXHsISnU
+	vnOlihKvL3a654EbLlhviDFN18pcbUK8iGjuf2ydXDB/N1v106QHMKsMxhO1J4lqeQuGPxP/viPza
+	2Y/GA7h/yCdZqNBzzfxkqDUYsI7jEwszBD8iThwL1KqzAyBpve+TugHorvsPbVb1j5n3kZQhYA3yO
+	WJKdkX+KXT0sNGgcQwix8x3NGCe7vPhoExDJMH9guvaYTK3nLG+MtsuP5z7ekkFcUC3WkUrudOtHv
+	dc8gMzTxA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ihMPQ-0008Pa-6K; Tue, 17 Dec 2019 23:37:44 +0000
-Received: from mail-ot1-x330.google.com ([2607:f8b0:4864:20::330])
- by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ihMPM-0008PA-9B
- for ath10k@lists.infradead.org; Tue, 17 Dec 2019 23:37:41 +0000
-Received: by mail-ot1-x330.google.com with SMTP id 77so39563oty.6
- for <ath10k@lists.infradead.org>; Tue, 17 Dec 2019 15:37:40 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=mime-version:in-reply-to:references:from:date:message-id:subject:to
- :cc; bh=/0x5LI6Cliq3r3WqRFVAa6MjVnvEl/FWbTVS8rks1Rc=;
- b=SSXE6m2UYNXz8kYy8zX/wy9u/yK2pRIZcSBDPuHAnGUKAfMcomJpHXRhIX+JfSPkxJ
- aZODGITphMVBoxlQ1H/WOsd3JOYKIJyK3Jw4AErx2vIFgi3y59BhLZCPuhH6oSki5i91
- 7+DYf2U4MU3woXQoxIHCnY+efh7gAs5obWi3fapyWiL/ZY2cDffdOA/vaknooGNKAzkJ
- w1xwdo+a3eZhmDRrp/oMro53e+RIBNZgxNa2v7ChJmfKcgilll4JgHzCCdTkoxQdKE+B
- vmuCAI8xoSdfi9t68DopSx2yUGVSNwIQhgJD+6AqyjKDHMi0qB+vsnRyUN2b5BBSv5O3
- Zd3A==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:in-reply-to:references:from:date
- :message-id:subject:to:cc;
- bh=/0x5LI6Cliq3r3WqRFVAa6MjVnvEl/FWbTVS8rks1Rc=;
- b=k1MI85T+E9uTHNu+0A9e9Il7d/72j0X2PwaIKxhn0c77agnw4ee55eoGLBZXlS/cDX
- ba6yICSC8e6XUbNXkgEJqV7GBgqjbeRuk6NNxqUO/VTmhmZmZ9u26r4BS2nHP/PbB6dO
- MW30lIk0JORojjfvskHnz0uMt6EVyCFgPWRjPoVQ9gNARe4ls+r1Zt4TaE7mXw3I+lpl
- HtVcKa2uHAqTPeRN7TxRbWvBnk44W7yg9eRPcAT/ErTvHu9CPDx2QPvUaK4vwfMZ8Tyx
- a+caL19JpKJhRqHnH++oFubXiZab2noCzkl6+lY1HulBiMq4UABsITTd3VwGSqxEUgrm
- VXzg==
-X-Gm-Message-State: APjAAAVNDmKaJXizt05yHRJmEeEL2Fsa0TaGoQtbY/k5UZIlfFFwVMbh
- KjOb5P1hSgvX73p4z9lYQcW4tYgIjgidEwY/QaQ=
-X-Google-Smtp-Source: APXvYqzNaLUQ/yA7iMcwgimKTSeMakiGiiIK1Ad9Mr21DmVINFZYCBr8EEuCo4o96Bok2xQ20QY4e2n369iwZuXVEpY=
-X-Received: by 2002:a9d:7f16:: with SMTP id j22mr59798otq.256.1576625859483;
- Tue, 17 Dec 2019 15:37:39 -0800 (PST)
-MIME-Version: 1.0
-Received: by 2002:a9d:362:0:0:0:0:0 with HTTP;
- Tue, 17 Dec 2019 15:37:38 -0800 (PST)
-In-Reply-To: <CAKR_QVL0P4qYidtqLwhhacCOpx2iq+4RRhTXbGhfRnf2PUj5tA@mail.gmail.com>
+	id 1ihMV5-0001Xy-5a; Tue, 17 Dec 2019 23:43:35 +0000
+Received: from mail2.candelatech.com ([208.74.158.173]
+ helo=mail3.candelatech.com)
+ by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
+ id 1ihMV1-0001XJ-Bv
+ for ath10k@lists.infradead.org; Tue, 17 Dec 2019 23:43:32 +0000
+Received: from [192.168.100.195] (50-251-239-81-static.hfc.comcastbusiness.net
+ [50.251.239.81])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested)
+ by mail3.candelatech.com (Postfix) with ESMTPSA id 4A72A13C283;
+ Tue, 17 Dec 2019 15:43:30 -0800 (PST)
+DKIM-Filter: OpenDKIM Filter v2.11.0 mail3.candelatech.com 4A72A13C283
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=candelatech.com;
+ s=default; t=1576626210;
+ bh=W4EeFtOn6k8fxk6cPbhJW7G5Q9zNW6cz6lNTDxCi1UE=;
+ h=Subject:To:Cc:References:From:Date:In-Reply-To:From;
+ b=lTfcrIKz2sYsI040hvtQFod8r9jSgltjqAnuNaceRFIOYT9XxFBEH61hKNB3SNa3n
+ ZTQ2VjUbqhaGXSmjYQTpJp3akPLGdHPb8a2D3MjW/hLFodt171VbwsUpk5eUKQNqrt
+ GnMXdE2a189VG6V1XKJKj7PHoqL5rp3m+A+jetT4=
+Subject: Re: [PATCH] ath10k: Per-chain rssi should sum the secondary channels
+To: Tom Psyborg <pozega.tomislav@gmail.com>
 References: <20191216220747.887-1-greearb@candelatech.com>
  <a2af03e9-8b53-b297-467b-d0f07b8a002b@newmedia-net.de>
  <b5d63d96-4ba6-bbab-bf1c-a61c6c437f37@newmedia-net.de>
@@ -64,27 +50,26 @@ References: <20191216220747.887-1-greearb@candelatech.com>
  <CAKR_QV+xNbAzzw12x3Ku49bHnERTxYRAK8AfUSwp_uOgNMbY4Q@mail.gmail.com>
  <a95e7f6d-1cb8-3188-aea4-233dce6f9330@candelatech.com>
  <CAKR_QVL0P4qYidtqLwhhacCOpx2iq+4RRhTXbGhfRnf2PUj5tA@mail.gmail.com>
-From: Tom Psyborg <pozega.tomislav@gmail.com>
-Date: Wed, 18 Dec 2019 00:37:38 +0100
-Message-ID: <CAKR_QV+KV1dR_QKjANL34DGJuyf3OSN8J6gs3bqcmiRCCzkdXA@mail.gmail.com>
-Subject: Re: [PATCH] ath10k: Per-chain rssi should sum the secondary channels
-To: Ben Greear <greearb@candelatech.com>
+ <CAKR_QV+KV1dR_QKjANL34DGJuyf3OSN8J6gs3bqcmiRCCzkdXA@mail.gmail.com>
+From: Ben Greear <greearb@candelatech.com>
+Organization: Candela Technologies
+Message-ID: <475d9be9-622c-08b7-12b9-d7cdf80a04f6@candelatech.com>
+Date: Tue, 17 Dec 2019 15:43:29 -0800
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
+ Thunderbird/68.1.1
+MIME-Version: 1.0
+In-Reply-To: <CAKR_QV+KV1dR_QKjANL34DGJuyf3OSN8J6gs3bqcmiRCCzkdXA@mail.gmail.com>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191217_153740_322649_1E3FC9EC 
-X-CRM114-Status: UNSURE (   4.36  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20191217_154331_436640_063E2439 
+X-CRM114-Status: GOOD (  11.73  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:330 listed in]
- [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (pozega.tomislav[at]gmail.com)
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
@@ -106,28 +91,45 @@ List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
 Cc: Sebastian Gottschall <s.gottschall@newmedia-net.de>,
  linux-wireless@vger.kernel.org, ath10k <ath10k@lists.infradead.org>,
  Justin Capella <justincapella@gmail.com>
-Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-also noticed now that the noise floor changes with signal strength as
-described in this bug report:
-https://www.mail-archive.com/ath10k@lists.infradead.org/msg11553.html
+On 12/17/19 3:37 PM, Tom Psyborg wrote:
+> also noticed now that the noise floor changes with signal strength as
+> described in this bug report:
+> https://www.mail-archive.com/ath10k@lists.infradead.org/msg11553.html
+> 
+> after wifi restart
+> 
+> iwinfo:
+> 
+> signal: -59dBm noise: -108dBm
+> 
+> then goes to
+> 
+> signal: -52dBm noise: -103dBm
+> 
+> and finally drops to
+> 
+> signal: -59dBm noise: -103dBm
+> 
 
-after wifi restart
+The problem with debugging this sort of stuff is that you need an RF scope
+to determine whether signal power of transmitter is changing or receiver
+is reporting stuff weirdly.
 
-iwinfo:
+If you are comparing against ath9k, probably you need to force your ath10k station to do /n only
+(or change your AP to do /n only) so that you can be comparing similar MCS rates.
 
-signal: -59dBm noise: -108dBm
+Thanks,
+Ben
 
-then goes to
+-- 
+Ben Greear <greearb@candelatech.com>
+Candela Technologies Inc  http://www.candelatech.com
 
-signal: -52dBm noise: -103dBm
-
-and finally drops to
-
-signal: -59dBm noise: -103dBm
 
 _______________________________________________
 ath10k mailing list
