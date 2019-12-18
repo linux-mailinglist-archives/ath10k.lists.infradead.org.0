@@ -2,68 +2,70 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 404BA1252F3
-	for <lists+ath10k@lfdr.de>; Wed, 18 Dec 2019 21:14:43 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 82EB212571C
+	for <lists+ath10k@lfdr.de>; Wed, 18 Dec 2019 23:45:17 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
 	References:In-Reply-To:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=0LqrQHHDHpt348aySyWgPgGNkngE/iGd5WhxYBkAAxY=; b=HZJkcr1i5Avrdr
-	yumtMAByO//v7aXuYaiQgAyz8rj8HKp+m7res0wluVJ41HTeckYgVZFKYjpZRB/knkh5InyGkRcOq
-	7UddEFrUplCuF3Tb6EF1CNi1AbWrR9Ho0BW7Mq0mr2iCj3wXzI8TSFF6ABNjVjelA3fEl2zqSsvX9
-	C5bANIPr9PGf2FHwhuKyMddH+lEVklseUy7dy6/AHoflf6mpZErOuo9h7G4qTZ4026433tIJh8Xgi
-	cwuFu8/YhEpibVqd6nR3R2D7dzcs7ot0BMTOmgigtlxLeGiHK+JLhiozS30Vf1ZMouABl7Dd32juC
-	Qp9vY7zbXIrEZibgUlVg==;
+	List-Owner; bh=CvliGJaEuStzg6zqCGfxYqdXYoG4ov7iaOMwXB/LTg0=; b=cTRA8R80IKa4F8
+	ilWr1E77SSo6pcxkZLSdtjNUy1sMbpc7ZYUBSiJIiya60O5yP04X8ZIha6w3Gfm5Sbo/8vNJ15NcO
+	oCjLTZrn/x7KAdQupF0FEiqKlcyLReibJzOOIMUOJLksv1HZrs7i0mTeoi8VJLI5sSgHZmGIG86Mu
+	gTuV/T4qcZxU171378DmyDRPtlVBTazw9RUQLO7pWp4mfdWo04XvUHwy1nHN3/U4KkG9U4mK5f34G
+	Zqa2Vy56tO52fEjN3IwHgeGOdkQ4PdLtT+8UVHxOWN/TnGZcfjcAJHbR1lN51kmQOqzjJVAiGjejm
+	PpL2POunxRAIhFLjNUFw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ihfiS-0001Tz-WD; Wed, 18 Dec 2019 20:14:41 +0000
-Received: from mail-oi1-x244.google.com ([2607:f8b0:4864:20::244])
+	id 1ihi4A-0003li-Ms; Wed, 18 Dec 2019 22:45:14 +0000
+Received: from mail-ot1-x341.google.com ([2607:f8b0:4864:20::341])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ihfiO-0001RV-24
- for ath10k@lists.infradead.org; Wed, 18 Dec 2019 20:14:37 +0000
-Received: by mail-oi1-x244.google.com with SMTP id b8so1822597oiy.5
- for <ath10k@lists.infradead.org>; Wed, 18 Dec 2019 12:14:35 -0800 (PST)
+ id 1ihi47-0003ko-G5
+ for ath10k@lists.infradead.org; Wed, 18 Dec 2019 22:45:12 +0000
+Received: by mail-ot1-x341.google.com with SMTP id r27so4437285otc.8
+ for <ath10k@lists.infradead.org>; Wed, 18 Dec 2019 14:45:11 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=mime-version:in-reply-to:references:from:date:message-id:subject:to
- :cc; bh=ak4IdTSq0yrRUmmZNdJtmrrHyp40e8oWD/CHPhAwXvw=;
- b=TcBS08aVmpDwrjilD2Hfl2W4EuyALoxKCbi0uwSfm9uW42Ua+FZwLV1Xi3xO1XVHCf
- ltGJAIyt+tpifIEzauz2+mJ7DjB/ovGRqMoETMGNgzb4zMPg7j4BJ2UyJ9GOx/j8qZgp
- 60bMGWFIhChv/5ynScY/X1TdQwXrHAlUqKFjP8j9ezPzGCafi/8h0vQsiR3G9JMz74BW
- JV3HoAZVp7GOArlhjPsXnRR2s+6bNFvmC1WDsS7VIiUUUQutRN65fz12BRhKATLy50zC
- qrIPBG82QpaBE5vT7Y8uasTDx227MBenXRMayYvj/BtY0R/lpiDi3X/cXTf3jc+ItzAl
- 2ACQ==
+ :cc; bh=oUM61ig48dGp6BTSyXKlzMTD2Se0Ze6HBqgSf5x4H8U=;
+ b=TPvPsRBQ4RU9841X5EEjyKkIQKLPNUTPwte/PUm3es1Bhy80tSRxEfr+LbKduirPS9
+ 5KdfHy6GO7Rt+zVg+5z+cQgYPBv4QaijMUfeeT07WA/N4Knq6qx3vJE7orLPdJ/OcIe6
+ 7VZSEr0Mb7j6QbCX640q/TifvQ8O1Rk0T8VUmERs1gHQcHBz58E6G72G1fUoOd0MrmRy
+ TKlvTUqHat8eNPK20246Ksl/RErAiTo/F7r3uGtPnrtUfa7SALOp3y9heYdnDrR2+0lJ
+ /bWkE8iI0nHBLXd39fK105Dqntgh9/KVkwkz0pFkyPsZLWLSSKU4Y6CnhGeMtXbQKWY2
+ Pugw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:mime-version:in-reply-to:references:from:date
  :message-id:subject:to:cc;
- bh=ak4IdTSq0yrRUmmZNdJtmrrHyp40e8oWD/CHPhAwXvw=;
- b=sn/V6TCt94FFTXcEul0grb1LKxATE09FI8QZDiyrg/hWb+MhUKCpwonuADZgRO93LT
- AK2ofSU7BoE0XaHs/dE5iF88fe3E4HkPejZNtAe7M34VpAJIsnQ60v4fGfeSLz1bjLrc
- dQP7IkR8yBGFoXy8Ls1llit425IsWXT820jcBWoIYtIm3GumM5dvsh6kBn6pXY32lh/t
- QkfRZ+aUW4REQ9k/6tHLoTAqMMIXIICB4RswgNANUZY5dLmZSrkXlQf5PgVrE+zGQfXH
- Fyb97LLbK0PRSQbNjig+mzOIdh844S5EquSxp8NLQkSDyHIGYyasl2/yL3vOIHVVWYvK
- xhCw==
-X-Gm-Message-State: APjAAAXL0UNPoHbJqe5Gif2OEXaIF1alv5NMOZvp1DJu73lk/IQKIHaU
- QaO8Ho+cbpOwNd2D29Zb641qf1HKA+Ec9vMFkY0=
-X-Google-Smtp-Source: APXvYqxcJq+FRaKbA1sazXdbynHRsoWhPOzQwa624odcO6H869EYMu+ka6tsC30WQqoO737vodHwt093EwkPhtN3DlE=
-X-Received: by 2002:aca:7244:: with SMTP id p65mr1293671oic.50.1576700074510; 
- Wed, 18 Dec 2019 12:14:34 -0800 (PST)
+ bh=oUM61ig48dGp6BTSyXKlzMTD2Se0Ze6HBqgSf5x4H8U=;
+ b=H1RyT9Oyj68ucMg5kwcFz3b9hKSsg3KG6LOrOHrF8t02IGCumfjcMNO4/Tan9Ia0Jg
+ bd+W5CxSg0zH7LhGplVCTUlpEs6IBAeW4O9yNMl9NvWbCGr1Mftgj/2FiQh2WtY1+8BK
+ PNWWf0Vns3sI7AGciO9d1MU86ySelwb5aWY3pU5B+PK6UVRlcJZ2QnqOgavtxxbpr7pD
+ IHVUK3Kh6ngGi/h1FHhYUVlHHZEozAZa0ArnPoSA3TB0NsbXdh4ZMBpudTyS8+GIZcxH
+ yNneMaoD8uZCu8roG0C7pCIyTuDaKrz9Ct7d4NAA3uX04IplZ4usadHQJDlfAccnuFTf
+ W6OQ==
+X-Gm-Message-State: APjAAAXkAuvC6FJKl/zIV9GScy17Ca7v7XCP880ppI3IhKuRBdj99hws
+ 6prQ69GOkTH7cgOs1DxycaMfDDSwQpR3RG758Eg=
+X-Google-Smtp-Source: APXvYqyv4FSgGRe5K+ifNRYBl/StBzCnqJV+gR+y7xJRLH5ARyXNyfkBMSVi9HvdffmRpnkvGfwtPjs0J2BqM2c3/+8=
+X-Received: by 2002:a05:6830:1116:: with SMTP id
+ w22mr5311658otq.63.1576709110567; 
+ Wed, 18 Dec 2019 14:45:10 -0800 (PST)
 MIME-Version: 1.0
 Received: by 2002:a9d:362:0:0:0:0:0 with HTTP;
- Wed, 18 Dec 2019 12:14:34 -0800 (PST)
-In-Reply-To: <20191217153000.76AB1C4479C@smtp.codeaurora.org>
+ Wed, 18 Dec 2019 14:45:09 -0800 (PST)
+In-Reply-To: <CAKR_QVJVfqid8i5PXj3Yg8VJjht=MF2fZg+twkLgEkKuMB2bbQ@mail.gmail.com>
 References: <20191216092207.31032-1-john@phrozen.org>
  <20191217153000.76AB1C4479C@smtp.codeaurora.org>
+ <CAKR_QVJVfqid8i5PXj3Yg8VJjht=MF2fZg+twkLgEkKuMB2bbQ@mail.gmail.com>
 From: Tom Psyborg <pozega.tomislav@gmail.com>
-Date: Wed, 18 Dec 2019 21:14:34 +0100
-Message-ID: <CAKR_QVJVfqid8i5PXj3Yg8VJjht=MF2fZg+twkLgEkKuMB2bbQ@mail.gmail.com>
+Date: Wed, 18 Dec 2019 23:45:09 +0100
+Message-ID: <CAKR_QVJ1PhCHfAO5Rp6pm-wjAO-HcZiq-9Lw67FzBFO5jjYtbA@mail.gmail.com>
 Subject: Re: [RESEND] ath10k: add tx hw 802.11 encapusaltion offloading support
 To: Kalle Valo <kvalo@codeaurora.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191218_121436_098835_41A639D3 
-X-CRM114-Status: UNSURE (   9.39  )
+X-CRM114-CacheID: sfid-20191218_144511_585635_3213F873 
+X-CRM114-Status: UNSURE (   4.47  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
@@ -71,7 +73,7 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:244 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:341 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
@@ -96,41 +98,24 @@ List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
 Cc: Vasanthakumar Thiagarajan <vthiagar@qti.qualcomm.com>,
- linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
- John Crispin <john@phrozen.org>
+ Johannes Berg <johannes@sipsolutions.net>, linux-wireless@vger.kernel.org,
+ ath10k@lists.infradead.org, John Crispin <john@phrozen.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On 17/12/2019, Kalle Valo <kvalo@codeaurora.org> wrote:
-> John Crispin <john@phrozen.org> wrote:
->
->> This patch adds support for ethernet rxtx mode to the driver. The feature
->> is enabled via a new module parameter. If enabled to driver will enable
->> the feature on a per vif basis if all other requirements were met.
->>
->> Testing on a IPQ4019 based hardware shows a increase in TCP throughput
->> of ~20% when the feature is enabled.
->>
->> Signed-off-by: Vasanthakumar Thiagarajan <vthiagar@qti.qualcomm.com>
->> Signed-off-by: John Crispin <john@phrozen.org>
->
-> Depends on:
->
-> 50ff477a8639 mac80211: add 802.11 encapsulation offloading support
->
-> Currently in mac80211-next.
->
-> Patch set to Awaiting Upstream.
->
-> --
-> https://patchwork.kernel.org/patch/11293627/
->
-> https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
->
+ccing Johannes Berg since upstream change (mac80211-next) breaks build:
 
-the changeset is missing support for 64bit targets in htt_tx.c
+In the commit log its written: remove SUPPORTS_80211_ENCAP HW flag
+
+Any sane reasons for doing that? mac80211 fails to build because of
+removed flags, this is on backports-5.3-rc4
+
+Other than that the feature delivers the promised:
+QCA9880 iperf between wired and wireless machine
+native mode 449Mbps
+ethernet mode 522Mbps
 
 _______________________________________________
 ath10k mailing list
