@@ -2,85 +2,80 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9AD45124C20
-	for <lists+ath10k@lfdr.de>; Wed, 18 Dec 2019 16:48:49 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id BC2C412512E
+	for <lists+ath10k@lfdr.de>; Wed, 18 Dec 2019 20:00:12 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:References:
-	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
-	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
-	:Resent-Message-ID:List-Owner;
-	bh=r8xDon+J2guUAK5q0bIWiTQwq25K764m/FI9NKv6HzA=; b=rYQ7kWaiYoPXIY1hjIIcJvspkz
-	q3O4yNbBZPvgXYEh4c3n3f0F23IsHsRPj5musaqi3JPj3LwdPMAQfJy/YrKHqOz0ZpzNEY+KvkD24
-	PmGWi/GrwpXNggGwkfw9RBF7VWMomnAuv0irItC3qkROUxGbZc+O7IF+v3sInEG/zrbbbMJpJsyg/
-	n4z81q+vJZwUZGqX9fWokMO2kf3+oZe79qrXevE0FC08iGGIX5mjcKXfK/3K8+eeb8of+kvhnTRGB
-	ENunnWaVyA22p4LVI9S/ARijliBFTR8RaSGmVtKtWgF3KXOlLRK7/DeNNScjqwLZLW4TOvgb5Fwsf
-	zZHq2cQA==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
+	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=aX98xJ2ilLDyO2h/wsZWcJ5A/vHiX0WW2DLdPqzLpe4=; b=aYshbn1/hQ+axJJCsm/ekvNpJ
+	FOZSNctr1oo514xRP3GhF1f/A7GVCEzjJNHRC+tJpSpJNSNdy8/7zauWOZyZNyDHzxgM5EhaX0TEf
+	or9DKGeBnjmseRffwdNOyJKbE10j1aE//7m6ppAOBCwPYC+ApjeUm7pdqQJ2jomo2fwYiJhLnH0py
+	KD/C9Rv0UeM2Hrb9fQzFo3zQYCUn+DBMKM6j0ICgQIkAiLJ9N+oVyJwms0+gdUIFkufFzmq4z5bT5
+	f5lf6CDkW/yUU1S2vDR3AJGS2af6FMswpNr+LSxhziFe3wXYnsQgPiynmAZ4kMUBe2ith66Of8tbi
+	MYrgpshzw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ihbZA-0000J5-9T; Wed, 18 Dec 2019 15:48:48 +0000
-Received: from mail26.static.mailgun.info ([104.130.122.26])
+	id 1iheYH-0003DX-Kv; Wed, 18 Dec 2019 19:00:05 +0000
+Received: from smtps.newmedia-net.de ([2a05:a1c0:0:de::167]
+ helo=webmail.newmedia-net.de)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ihbZ1-0000Ca-R3
- for ath10k@lists.infradead.org; Wed, 18 Dec 2019 15:48:42 +0000
-DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
- q=dns/txt; 
- s=smtp; t=1576684120; h=References: In-Reply-To: Message-Id: Date:
- Subject: Cc: To: From: Sender;
- bh=ZbA/dfYpPCzni0YnfHb/A1A+QgKAg444uelme3/TLcw=;
- b=XUCXrzZP1LBDOukT82+bM6wiiMplPfvvap4m80XE9JWu/1pfYavghZdqwmj7rNu7+VWiRJa1
- Y0UXOKUlM2vyfd98+OSNlrDIUUokI+KYgdtTsZ1YE+x3fW9J6loXbR+J7yTQ+FYeZTdfv3UP
- O8h+z6QqXgur/rXG5Xe7hkr06d0=
-X-Mailgun-Sending-Ip: 104.130.122.26
-X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
-Received: from smtp.codeaurora.org
- (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
- by mxa.mailgun.org with ESMTP id 5dfa4a55.7f3f0203a6f8-smtp-out-n02;
- Wed, 18 Dec 2019 15:48:37 -0000 (UTC)
-Received: by smtp.codeaurora.org (Postfix, from userid 1001)
- id 7E7C2C43383; Wed, 18 Dec 2019 15:48:36 +0000 (UTC)
-X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
- aws-us-west-2-caf-mail-1.web.codeaurora.org
-X-Spam-Level: 
-X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,SPF_NONE
- autolearn=ham autolearn_force=no version=3.4.0
-Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
- [88.114.240.156])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
- (No client certificate requested) (Authenticated sender: kvalo)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id BF2FDC4479F;
- Wed, 18 Dec 2019 15:48:34 +0000 (UTC)
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org BF2FDC4479F
-Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
- dmarc=none (p=none dis=none) header.from=codeaurora.org
-Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
- spf=none smtp.mailfrom=kvalo@codeaurora.org
-From: Kalle Valo <kvalo@codeaurora.org>
-To: ath10k@lists.infradead.org
-Subject: [PATCH 2/2] ath10k: allow dynamic SAR power limits to be configured
-Date: Wed, 18 Dec 2019 17:48:28 +0200
-Message-Id: <1576684108-30177-3-git-send-email-kvalo@codeaurora.org>
-X-Mailer: git-send-email 2.7.4
-In-Reply-To: <1576684108-30177-1-git-send-email-kvalo@codeaurora.org>
-References: <1576684108-30177-1-git-send-email-kvalo@codeaurora.org>
+ id 1iheYA-00035o-IF
+ for ath10k@lists.infradead.org; Wed, 18 Dec 2019 19:00:01 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=newmedia-net.de; s=mikd; 
+ h=Content-Transfer-Encoding:Content-Type:In-Reply-To:MIME-Version:Date:Message-ID:From:References:Cc:To:Subject;
+ bh=D2enaLawDGBEW5JcqOdvz7w8+XSpRsZH2OKVQt19760=; 
+ b=v+AmHLjj9IQixLMZWklmAz/gpOY7nSHRQZ7ePmNWjBUZWohWXu6D5xh+W/K2GZyhpr2JmipJh9MzORAsUZU+VE1zoxWiRU+Nq+t7noYvSpBT7OT69KZnNGvXICmu4fblBi/8Rgz7zCQNXsZNNmXW624EEtlK0lwWeSAvdWVhjmI=;
+Subject: Re: [PATCH] ath10k: Per-chain rssi should sum the secondary channels
+To: Ben Greear <greearb@candelatech.com>,
+ Justin Capella <justincapella@gmail.com>
+References: <20191216220747.887-1-greearb@candelatech.com>
+ <a2af03e9-8b53-b297-467b-d0f07b8a002b@newmedia-net.de>
+ <b5d63d96-4ba6-bbab-bf1c-a61c6c437f37@newmedia-net.de>
+ <80700614-679a-336e-bd9a-e88622e75c9a@candelatech.com>
+ <4775d91a-9719-46f8-b0f2-979b8d86cf9f@newmedia-net.de>
+ <CAMrEMU-vGB8uR-JZbD2vj4vXgWNHfFqcbsqB=gOqBBDZWGkzQA@mail.gmail.com>
+ <11290a30-46e8-638e-4110-86e6b2eb3d3f@candelatech.com>
+ <CAKR_QV+xNbAzzw12x3Ku49bHnERTxYRAK8AfUSwp_uOgNMbY4Q@mail.gmail.com>
+ <a95e7f6d-1cb8-3188-aea4-233dce6f9330@candelatech.com>
+ <CAKR_QVL0P4qYidtqLwhhacCOpx2iq+4RRhTXbGhfRnf2PUj5tA@mail.gmail.com>
+ <CAKR_QV+KV1dR_QKjANL34DGJuyf3OSN8J6gs3bqcmiRCCzkdXA@mail.gmail.com>
+ <5e3f22d1-b8ba-d756-a15c-1e7ae56c1dad@newmedia-net.de>
+ <8eae96cd-a94e-abc1-4750-73f931d657d6@candelatech.com>
+ <9431f1a2-a44e-9b81-72b0-9a703e1841ac@newmedia-net.de>
+ <CAMrEMU8UrY9F++ut88to0AxKJXHTi9cwUs8uGOmN=k0ymcH0FA@mail.gmail.com>
+ <c06008e6-680f-5fec-081f-1f832034c92a@candelatech.com>
+From: Sebastian Gottschall <s.gottschall@newmedia-net.de>
+Message-ID: <216c0feb-2fa1-3a61-df2d-507f7fc497e9@newmedia-net.de>
+Date: Wed, 18 Dec 2019 19:59:49 +0100
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101
+ Thunderbird/68.3.0
+MIME-Version: 1.0
+In-Reply-To: <c06008e6-680f-5fec-081f-1f832034c92a@candelatech.com>
+X-Received: from [2a01:7700:8040:3500:ed7a:2c:ab99:851c]
+ by webmail.newmedia-net.de with esmtpsa (TLSv1:AES128-SHA:128)
+ (Exim 4.72) (envelope-from <s.gottschall@newmedia-net.de>)
+ id 1iheWi-0004yv-AD; Wed, 18 Dec 2019 19:58:28 +0100
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191218_074840_469996_30A78485 
-X-CRM114-Status: GOOD (  23.24  )
-X-Spam-Score: -0.0 (/)
+X-CRM114-CacheID: sfid-20191218_105959_108767_536B5FB5 
+X-CRM114-Status: GOOD (  16.63  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [104.130.122.26 listed in list.dnswl.org]
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [104.130.122.26 listed in wl.mailspike.net]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -92,376 +87,116 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless@vger.kernel.org
-MIME-Version: 1.0
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: linux-wireless@vger.kernel.org, Tom Psyborg <pozega.tomislav@gmail.com>,
+ ath10k <ath10k@lists.infradead.org>
+Content-Transfer-Encoding: base64
+Content-Type: text/plain; charset="utf-8"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-From: Wen Gong <wgong@codeaurora.org>
-
-Add support for a vendor command for STATION, the command
-QCA_NL80211_VENDOR_SUBCMD_SET_SAR_LIMITS which is already defined in
-git://w1.fi/hostap.git (src/command/qca-vendor.h). This allows user
-space to configure power limits for 2.4 GHz and 5 GHz bands.
-
-ath10k set pdev parameter WMI_PDEV_PARAM_TXPOWER_LIMIT2G and
-WMI_PDEV_PARAM_TXPOWER_LIMIT5G to firmware, the 2 value will
-be used as one input source to affect the tx power.
-
-When QCA_NL80211_VENDOR_SUBCMD_SET_SAR_LIMITS set to ath10k, it will
-be saved the 2.4G and 5G limit value, If STATION is connected meanwhile,
-then the 2.4G and 5G WMI command will be set to firmware, otherwise
-it will not set to firmware at this moment. When STATION connect
-next time, it will set to firmware.
-
-Tested with QCA6174 SDIO with firmware WLAN.RMH.4.4.1-00029.
-
-Signed-off-by: Wen Gong <wgong@codeaurora.org>
-Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
----
- drivers/net/wireless/ath/ath10k/Makefile |   1 +
- drivers/net/wireless/ath/ath10k/core.c   |   2 +
- drivers/net/wireless/ath/ath10k/core.h   |   2 +
- drivers/net/wireless/ath/ath10k/hw.h     |   3 +
- drivers/net/wireless/ath/ath10k/mac.c    |  64 +++++++++++++++++
- drivers/net/wireless/ath/ath10k/mac.h    |   2 +-
- drivers/net/wireless/ath/ath10k/vendor.c | 114 +++++++++++++++++++++++++++++++
- drivers/net/wireless/ath/ath10k/vendor.h |  13 ++++
- drivers/net/wireless/ath/ath10k/wmi.h    |   6 ++
- 9 files changed, 206 insertions(+), 1 deletion(-)
- create mode 100644 drivers/net/wireless/ath/ath10k/vendor.c
- create mode 100644 drivers/net/wireless/ath/ath10k/vendor.h
-
-diff --git a/drivers/net/wireless/ath/ath10k/Makefile b/drivers/net/wireless/ath/ath10k/Makefile
-index 142c777b287f..6cdc7eba5d25 100644
---- a/drivers/net/wireless/ath/ath10k/Makefile
-+++ b/drivers/net/wireless/ath/ath10k/Makefile
-@@ -13,6 +13,7 @@ ath10k_core-y += mac.o \
- 		 bmi.o \
- 		 hw.o \
- 		 p2p.o \
-+		 vendor.o \
- 		 swap.o
- 
- ath10k_core-$(CONFIG_ATH10K_SPECTRAL) += spectral.o
-diff --git a/drivers/net/wireless/ath/ath10k/core.c b/drivers/net/wireless/ath/ath10k/core.c
-index 5ec16ce19b69..e882d2f2e399 100644
---- a/drivers/net/wireless/ath/ath10k/core.c
-+++ b/drivers/net/wireless/ath/ath10k/core.c
-@@ -25,6 +25,7 @@
- #include "testmode.h"
- #include "wmi-ops.h"
- #include "coredump.h"
-+#include "vendor.h"
- 
- unsigned int ath10k_debug_mask;
- EXPORT_SYMBOL(ath10k_debug_mask);
-@@ -190,6 +191,7 @@ static const struct ath10k_hw_params ath10k_hw_params_list[] = {
- 		.uart_pin_workaround = true,
- 		.tx_stats_over_pktlog = false,
- 		.bmi_large_size_download = true,
-+		.dynamic_sar_support = true,
- 	},
- 	{
- 		.id = QCA6174_HW_2_1_VERSION,
-diff --git a/drivers/net/wireless/ath/ath10k/core.h b/drivers/net/wireless/ath/ath10k/core.h
-index 5101bf2b5b15..b661e0eee0f8 100644
---- a/drivers/net/wireless/ath/ath10k/core.h
-+++ b/drivers/net/wireless/ath/ath10k/core.h
-@@ -983,6 +983,8 @@ struct ath10k {
- 	u8 ps_state_enable;
- 
- 	bool nlo_enabled;
-+	u32 tx_power_2g_limit;
-+	u32 tx_power_5g_limit;
- 	bool p2p;
- 
- 	struct {
-diff --git a/drivers/net/wireless/ath/ath10k/hw.h b/drivers/net/wireless/ath/ath10k/hw.h
-index 21b7a2a873b0..8cee355098e3 100644
---- a/drivers/net/wireless/ath/ath10k/hw.h
-+++ b/drivers/net/wireless/ath/ath10k/hw.h
-@@ -623,6 +623,9 @@ struct ath10k_hw_params {
- 
- 	/* tx stats support over pktlog */
- 	bool tx_stats_over_pktlog;
-+
-+	/* support dynamic sar */
-+	bool dynamic_sar_support;
- };
- 
- struct htt_rx_desc;
-diff --git a/drivers/net/wireless/ath/ath10k/mac.c b/drivers/net/wireless/ath/ath10k/mac.c
-index 7fee35ff966b..75c600e8fff2 100644
---- a/drivers/net/wireless/ath/ath10k/mac.c
-+++ b/drivers/net/wireless/ath/ath10k/mac.c
-@@ -24,6 +24,7 @@
- #include "wmi-tlv.h"
- #include "wmi-ops.h"
- #include "wow.h"
-+#include "vendor.h"
- 
- /*********/
- /* Rates */
-@@ -2843,6 +2844,65 @@ static int ath10k_mac_vif_recalc_txbf(struct ath10k *ar,
- 	return 0;
- }
- 
-+static bool ath10k_mac_get_connected(struct ath10k *ar)
-+{
-+	struct ath10k_vif *arvif;
-+
-+	list_for_each_entry(arvif, &ar->arvifs, list) {
-+		if (arvif->is_up && arvif->vdev_type == WMI_VDEV_TYPE_STA)
-+			return true;
-+	}
-+
-+	return false;
-+}
-+
-+int ath10k_mac_set_sar_power_limit(struct ath10k *ar)
-+{
-+	u32 ret, param, pwr_limit_2G, pwr_limit_5G;
-+	bool connected, tx_power_valid;
-+
-+	if (!ar->hw_params.dynamic_sar_support)
-+		return 0;
-+
-+	connected = ath10k_mac_get_connected(ar);
-+	tx_power_valid = (ar->tx_power_2g_limit != 0 && ar->tx_power_5g_limit != 0);
-+
-+	ath10k_dbg(ar, ATH10K_DBG_MAC, "mac connected %d sar power valid %d\n",
-+		   connected, tx_power_valid);
-+
-+	if (!connected || !tx_power_valid)
-+		return 0;
-+
-+	pwr_limit_2G = ar->tx_power_2g_limit;
-+	pwr_limit_5G = ar->tx_power_5g_limit;
-+
-+	ath10k_dbg(ar, ATH10K_DBG_MAC, "mac sar limits max %d 2.4G %d 5G %d\n",
-+		   ar->hw_max_tx_power,
-+		   pwr_limit_2G,
-+		   pwr_limit_5G);
-+
-+	param = ar->wmi.pdev_param->txpower_limit2g;
-+	ret = ath10k_wmi_pdev_set_param(ar, param, pwr_limit_2G);
-+	if (ret) {
-+		ath10k_warn(ar, "failed to set 2.4G txpower %d: %d\n",
-+			    pwr_limit_2G, ret);
-+		return ret;
-+	}
-+	ath10k_dbg(ar, ATH10K_DBG_MAC, "mac set 2.4G txpower %d success\n", pwr_limit_2G);
-+
-+	param = ar->wmi.pdev_param->txpower_limit5g;
-+	ret = ath10k_wmi_pdev_set_param(ar, param, pwr_limit_5G);
-+	if (ret) {
-+		ath10k_warn(ar, "failed to set 5G txpower %d: %d\n",
-+			    pwr_limit_5G, ret);
-+		return ret;
-+	}
-+
-+	ath10k_dbg(ar, ATH10K_DBG_MAC, "mac set 5G txpower %d success\n", pwr_limit_5G);
-+
-+	return 0;
-+}
-+
- /* can be called only in mac80211 callbacks due to `key_count` usage */
- static void ath10k_bss_assoc(struct ieee80211_hw *hw,
- 			     struct ieee80211_vif *vif,
-@@ -2926,6 +2986,8 @@ static void ath10k_bss_assoc(struct ieee80211_hw *hw,
- 
- 	arvif->is_up = true;
- 
-+	ath10k_mac_set_sar_power_limit(ar);
-+
- 	/* Workaround: Some firmware revisions (tested with qca6174
- 	 * WLAN.RM.2.0-00073) have buggy powersave state machine and must be
- 	 * poked with peer param command.
-@@ -9074,6 +9136,8 @@ int ath10k_mac_register(struct ath10k *ar)
- 			NL80211_FEATURE_SCAN_RANDOM_MAC_ADDR;
- 	}
- 
-+	ath10k_vendor_register(ar);
-+
- 	ar->hw->wiphy->cipher_suites = cipher_suites;
- 
- 	/* QCA988x and QCA6174 family chips do not support CCMP-256, GCMP-128
-diff --git a/drivers/net/wireless/ath/ath10k/mac.h b/drivers/net/wireless/ath/ath10k/mac.h
-index 98d83a26ea60..54c8cfcef611 100644
---- a/drivers/net/wireless/ath/ath10k/mac.h
-+++ b/drivers/net/wireless/ath/ath10k/mac.h
-@@ -58,7 +58,7 @@ u8 ath10k_mac_hw_rate_to_idx(const struct ieee80211_supported_band *sband,
- 			     u8 hw_rate, bool cck);
- u8 ath10k_mac_bitrate_to_idx(const struct ieee80211_supported_band *sband,
- 			     u32 bitrate);
--
-+int ath10k_mac_set_sar_power_limit(struct ath10k *ar);
- void ath10k_mac_tx_lock(struct ath10k *ar, int reason);
- void ath10k_mac_tx_unlock(struct ath10k *ar, int reason);
- void ath10k_mac_vif_tx_lock(struct ath10k_vif *arvif, int reason);
-diff --git a/drivers/net/wireless/ath/ath10k/vendor.c b/drivers/net/wireless/ath/ath10k/vendor.c
-new file mode 100644
-index 000000000000..755dbf7146cb
---- /dev/null
-+++ b/drivers/net/wireless/ath/ath10k/vendor.c
-@@ -0,0 +1,114 @@
-+// SPDX-License-Identifier: ISC
-+/*
-+ * Copyright (c) 2019, The Linux Foundation. All rights reserved.
-+ */
-+
-+#include <net/netlink.h>
-+#include <uapi/nl80211-vnd-qca.h>
-+
-+#include "mac.h"
-+#include "debug.h"
-+#include "vendor.h"
-+
-+static const struct nla_policy
-+sar_limits_policy[QCA_WLAN_VENDOR_ATTR_SAR_LIMITS_MAX + 1] = {
-+	[QCA_WLAN_VENDOR_ATTR_SAR_LIMITS_SPEC_BAND] = {.type = NLA_U32},
-+	[QCA_WLAN_VENDOR_ATTR_SAR_LIMITS_SPEC_POWER_LIMIT] = {.type = NLA_U32},
-+};
-+
-+static int ath10k_vendor_set_dynamic_sar_power_limits(struct wiphy *wiphy,
-+						      struct wireless_dev *wdev,
-+						      const void *data,
-+						      int data_len)
-+{
-+	int rem;
-+	struct ieee80211_hw *hw = wiphy_to_ieee80211_hw(wiphy);
-+	struct ath10k *ar = hw->priv;
-+	struct nlattr *spec[QCA_WLAN_VENDOR_ATTR_SAR_LIMITS_MAX + 1];
-+	struct nlattr *tb[QCA_WLAN_VENDOR_ATTR_SAR_LIMITS_MAX + 1];
-+	struct nlattr *spec_list;
-+	u32 limit;
-+	enum nl80211_band band;
-+	bool sar_valid = false;
-+
-+	if (!ar->hw_params.dynamic_sar_support)
-+		return -ENOTSUPP;
-+
-+	if (nla_parse(tb, QCA_WLAN_VENDOR_ATTR_SAR_LIMITS_MAX, data, data_len,
-+		      sar_limits_policy, NULL)) {
-+		ath10k_warn(ar, "invalid SAR attr\n");
-+		return -EINVAL;
-+	}
-+
-+	if (!tb[QCA_WLAN_VENDOR_ATTR_SAR_LIMITS_SPEC]) {
-+		ath10k_warn(ar, "invalid SAR specification list\n");
-+		return -EINVAL;
-+	}
-+
-+	nla_for_each_nested(spec_list, tb[QCA_WLAN_VENDOR_ATTR_SAR_LIMITS_SPEC], rem) {
-+		if (nla_parse(spec,
-+			      QCA_WLAN_VENDOR_ATTR_SAR_LIMITS_MAX,
-+			      nla_data(spec_list),
-+			      nla_len(spec_list),
-+			      sar_limits_policy,
-+			      NULL)) {
-+			ath10k_warn(ar, "nla_parse failed for SAR Spec list\n");
-+			return -EINVAL;
-+		}
-+
-+		if (spec[QCA_WLAN_VENDOR_ATTR_SAR_LIMITS_SPEC_POWER_LIMIT]) {
-+			limit = nla_get_u32(
-+				spec[QCA_WLAN_VENDOR_ATTR_SAR_LIMITS_SPEC_POWER_LIMIT]);
-+		} else {
-+			ath10k_warn(ar, "not have spec power limit\n");
-+			return -EINVAL;
-+		}
-+
-+		if (spec[QCA_WLAN_VENDOR_ATTR_SAR_LIMITS_SPEC_BAND]) {
-+			band = nla_get_u32(
-+				spec[QCA_WLAN_VENDOR_ATTR_SAR_LIMITS_SPEC_BAND]);
-+		} else {
-+			/* if QCA_WLAN_VENDOR_ATTR_SAR_LIMITS_SPEC_BAND is
-+			 * unset the limit applies to both bands
-+			 */
-+			if (limit <= ar->hw_max_tx_power) {
-+				ar->tx_power_2g_limit = limit;
-+				ar->tx_power_5g_limit = limit;
-+				sar_valid = true;
-+			}
-+
-+			break;
-+		}
-+
-+		sar_valid = true;
-+		if (band == NL80211_BAND_2GHZ && limit <= ar->hw_max_tx_power)
-+			ar->tx_power_2g_limit = limit;
-+		else if (band == NL80211_BAND_5GHZ && limit <= ar->hw_max_tx_power)
-+			ar->tx_power_5g_limit = limit;
-+	}
-+
-+	if (sar_valid)
-+		return ath10k_mac_set_sar_power_limit(ar);
-+
-+	return 0;
-+}
-+
-+static const struct wiphy_vendor_command ath10k_vendor_commands[] = {
-+	{
-+		.info = {
-+			.vendor_id = QCA_NL80211_VENDOR_ID,
-+			.subcmd = QCA_NL80211_VENDOR_SUBCMD_SET_SAR_LIMITS,
-+		},
-+		.flags = WIPHY_VENDOR_CMD_NEED_WDEV |
-+			 WIPHY_VENDOR_CMD_NEED_RUNNING,
-+		.doit = ath10k_vendor_set_dynamic_sar_power_limits,
-+		.policy = sar_limits_policy,
-+	}
-+};
-+
-+void ath10k_vendor_register(struct ath10k *ar)
-+{
-+	ar->hw->wiphy->vendor_commands = ath10k_vendor_commands;
-+	ar->hw->wiphy->n_vendor_commands = ARRAY_SIZE(ath10k_vendor_commands);
-+}
-+
-diff --git a/drivers/net/wireless/ath/ath10k/vendor.h b/drivers/net/wireless/ath/ath10k/vendor.h
-new file mode 100644
-index 000000000000..827614cb6991
---- /dev/null
-+++ b/drivers/net/wireless/ath/ath10k/vendor.h
-@@ -0,0 +1,13 @@
-+/* SPDX-License-Identifier: ISC */
-+/*
-+ * Copyright (c) 2019 The Linux Foundation. All rights reserved.
-+ */
-+
-+#ifndef _VENDOR_H_
-+#define _VENDOR_H_
-+
-+#include <linux/kernel.h>
-+
-+void ath10k_vendor_register(struct ath10k *ar);
-+
-+#endif /* _VENDOR_H_ */
-diff --git a/drivers/net/wireless/ath/ath10k/wmi.h b/drivers/net/wireless/ath/ath10k/wmi.h
-index 972d53d77654..f0cadaa12399 100644
---- a/drivers/net/wireless/ath/ath10k/wmi.h
-+++ b/drivers/net/wireless/ath/ath10k/wmi.h
-@@ -3695,6 +3695,12 @@ struct wmi_csa_event {
- #define VDEV_DEFAULT_STATS_UPDATE_PERIOD    500
- #define PEER_DEFAULT_STATS_UPDATE_PERIOD    500
- 
-+/* the mask of 4 sub band of 5G for SAR parameters */
-+#define ATH10K_WMI_SAR_5G_0_MASK GENMASK(7, 0)
-+#define ATH10K_WMI_SAR_5G_1_MASK GENMASK(15, 8)
-+#define ATH10K_WMI_SAR_5G_2_MASK GENMASK(23, 16)
-+#define ATH10K_WMI_SAR_5G_3_MASK GENMASK(31, 24)
-+
- struct wmi_pdev_param_map {
- 	u32 tx_chain_mask;
- 	u32 rx_chain_mask;
--- 
-2.7.4
-
-_______________________________________________
-ath10k mailing list
-ath10k@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/ath10k
+Cj4gSSBkb24ndCB0aGluayBpdCBpcyBjb3JyZWN0IHRvIHNheSBwZXJpb2RpYyBjYWxpYnJhdGlv
+biBkb2VzIG5vdCAKPiBoYXBwZW4gd2l0aAo+IGF0aDEway7CoCBNYXliZSB2ZXJ5IG9sZCB3YXZl
+LTEgZmlybXdhcmUgaGFzIHNvbWUgaXNzdWVzLCBidXQgcmVjZW50IAo+IHN0dWZmIGFwcGVhcnMK
+PiB0byB3b3JrLsKgIEkgZG8gc2VlIHJlcG9ydGVkIG5vaXNlIGZsb29yIGNoYW5naW5nIG9uIDk5
+ODQuCmxpa2Ugb24gcWNhOTk4eCBpIGV4cGVjdCBpdCB0byBjaGFuZ2UgYXQgbGVhc3QgZXZlcnkg
+MzAwIHNlY29uZHMuIHRoYXRzIAp0aGUgY2FsaWJyYXRpb24gaW50ZXJ2YWxsIGZvciA5ODh4LiBm
+b3IgOTk4NCBpIG5lZWQKdG8gY2hlY2sgaWYgaXRzIGRpZmZlcmVudAo+Cj4gVGhhbmtzLAo+IEJl
+bgo+Cj4+Cj4+IE9uIFR1ZSwgRGVjIDE3LCAyMDE5IGF0IDg6MDUgUE0gU2ViYXN0aWFuIEdvdHRz
+Y2hhbGwKPj4gPHMuZ290dHNjaGFsbEBuZXdtZWRpYS1uZXQuZGU+IHdyb3RlOgo+Pj4KPj4+Cj4+
+PiBBbSAxOC4xMi4yMDE5IHVtIDAzOjM3IHNjaHJpZWIgQmVuIEdyZWVhcjoKPj4+Pgo+Pj4+Cj4+
+Pj4gT24gMTIvMTcvMjAxOSAwNjoxMiBQTSwgU2ViYXN0aWFuIEdvdHRzY2hhbGwgd3JvdGU6Cj4+
+Pj4+IGkgZG9udCBrbm93IHdoYXQgeW91IHdhbnQgdG8gY29tcGFyZSBoZXJlLgo+Pj4+Pgo+Pj4+
+PiAxLiB5b3UgY29tcGFyZSAyIGRpZmZlcmVudCB3aWZpIGNoaXBzZXRzLiBib3RoIGhhdmUgZGlm
+ZmVyZW50Cj4+Pj4+IHNlbnNpdGl0aXZ5IGFuZCBvdmVyYWxsIG91dHB1dCBwb3dlciBzcGVjCj4+
+Pj4+Cj4+Pj4+IDIuIGJvdGggaGF2ZSBkaWZmZXJlbnQgYW1vdW50IG9mIGFudGVubmEgY2hhaW5z
+LiB3aGljaCBkb2VzIG1ha2UgYQo+Pj4+PiBkaWZmZXJlbmNlIGluIGlucHV0IHNlbnNpdGl2aXR5
+Cj4+Pj4+Cj4+Pj4+IDMuIHRoZSBwYXRjaCBiZW4gbWFkZSBoYXMgbm8gZWZmZWN0IG9uIHFjYTk4
+ODAgY2hpcHNldHMuIGl0IG9ubHkKPj4+Pj4gdGFrZXMgZWZmZWN0IG9uIDEwLjQgYmFzZWQgY2hp
+cHNldHMgbGlrZSA5OTg0Cj4+Pj4KPj4+PiBUaGUgcGFydCBvZiBteSBwYXRjaCB0aGF0IHN1bXMg
+c2Vjb25kYXJ5IGZyZXF1ZW5jaWVzIHNob3VsZCBhcHBseSB0bwo+Pj4+IHdhdmUtMSBhcyB3ZWxs
+LCBidXQgSSBoYXZlCj4+Pj4gbm90IHZlcmlmaWVkIHRoYXQgeWV0Lgo+Pj4geWVhaC4gcmlnaHQu
+IHNvcnJ5IGkgd2FzIGp1c3QgbG9va2luZyBhdCB0b3RhbCBzaWduYWwgc3VtIHdoaWNoIHVzZXMK
+Pj4+IHJzc2lfY29tYl9odAo+Pj4+Cj4+Pj4KPj4+Pj4gYWJvdXQgbm9pc2UgZmxvb3JzIGluIGdl
+bmVyYWwuIG5vaXNlIGZsb29ycyBvZiAtMTA4IGFyZSBib2d1cy4gdGhlcmUKPj4+Pj4gaXMgYSBw
+aHlzaWNhbCBsaW1pdCBhIG5vaXNlIGxldmVsIGNhbiBiZS4KPj4+Pj4gc2luY2UgZHJpdmVycyBs
+aWtlIGF0aDlrIGFyZSBkb2luZyBhIGN5Y2xpYyBjYWxpYnJhdGlvbiwgdGhlIG5vaXNlCj4+Pj4+
+IHZhbHVlIG1pZ2h0IGluZGVlZCBjaGFuZ2UuIGJ1dCB0aGlzIGNhbGlicmF0aW9uIGlzCj4+Pj4+
+IG5vdCBydW5uaW5nIGluIHJlYWx0aW1lLiBpdHMgY3ljbGljLiBpJ20gbm90IGF3YXJlIGlmIGNo
+aXBzZXRzIGxpa2UKPj4+Pj4gcWNhOTg4eCBhcmUgZ29pbmcgdGhlIHNhbWUgd2F5LCBidXQgc2lu
+Y2UgcWNhOTg4eAo+Pj4+PiBoYXMgc2ltZSBzaW1pbGFyaWVzIHdpdGggYXRoOWsgY2hpcHNldHMg
+dW5saWtlIHRoZSBuZXdlciA5OTg0Cj4+Pj4+IHZhcmlhbnRzLCBpdCBjb3VsZCBiZS4gdGhlIDMw
+IHNlY29uZHMgbWVudGlvbmVkCj4+Pj4+IGluIHRoZSBidWcgcmVwb3J0IGZpdHMgdG8gbXkgZXhw
+ZWN0YXRpb25zIG9mIHRoZSBlYXJseSBub2lzZWZsb29yCj4+Pj4+IGNhbGlicmF0aW9uIHdoaWNo
+IGhhcyBhIHNob3J0IGRlbGF5IGFuZCBhZnRlciBzdWNjZXNzCj4+Pj4+IHR1cm5pbmcgdG8gdXNl
+IGEgbG9uZyBkZWxheS4gYW55d2F5LiBpbiB0aGlzIGVhcmx5IGNhbGlicmF0aW9uIHBoYXNlCj4+
+Pj4+IHNpZ25hbHMgbWlnaHQgY2hhbmdlIGFuZCB3aWxsIHN0YWJpbGl6ZSBhZnRlci4gdGhpcyBp
+c250IGEgaXNzdWUKPj4+Pj4gc2luY2UgeW91ciBjb25uZWN0aW9uIHdpbGwgd29yayBhbnl3YXkg
+ZXZlbiBpZiBpdCBtaWdodCB0YWtlIGEgbGl0dGxlCj4+Pj4+IGJpdCBsb25nZXIgaWYgeW91IGhh
+dmUgcG9vciBzaWduYWwgbGV2ZWxzCj4+Pj4+Cj4+Pj4+IEBiZW4uIGFtIGkgd3Jvbmcgb3Igd2hh
+dCBkbyB0aGluaz8KPj4+Pgo+Pj4+IEkgZG9uJ3Qga25vdyBlbm91Z2ggYWJvdXQgaG93IHRoZSBu
+b2lzZSBmbG9vciBjYWxjdWxhdGlvbnMgYXJlIGRvbmUgb3IKPj4+PiBob3cgdGhlIGFwcGx5IHRv
+IHNldHRpbmdzCj4+Pj4gdG8ga25vdyB0aGUgYW5zd2VyLgo+Pj4+Cj4+Pj4gSSB3aWxsIGJlIGhh
+cHB5IGluIGdlbmVyYWwgaWYgYXRoMTBrIHdhdmUtMSwgd2F2ZS0yLCBhbmQgYXRoOWsgcmVwb3J0
+Cj4+Pj4gc2ltaWxhciBSU1NJIGZvciBzaW1pbGFyCj4+Pj4gc2V0dXBzLgo+Pj4gdGhhdCB3aWxs
+IG5vdCB3b3JrLiB5b3UgY29tcGFyZSBkaWZmZXJlbnQgY2hpcHNldHMgYW5kIGRlcGVuZGluZyBv
+biB0aGUKPj4+IGltcGxlbWVudGF0aW9uIGJ5IHRoZSBjYXJkIHZlbmRvcgo+Pj4gcmYgc2Vuc2l0
+aXZpdHkgY2FuIGJlIHZlcnkgZGlmZmVudC4gdGhlIHNhbWUgZ29lcyBmb3Igb3V0cHV0IHBvd2Vy
+LiAKPj4+IHNvbWUKPj4+IHZlbmRvcnMgYXJlIHVzaW5nIGFkZGl0aW9uYWwgcmYgYW1wcwo+Pj4g
+Zm9yIGVuaGFuY2luZyBvdXRwdXQgcG93ZXIgKHViaXF1aXRpIGlzIGJlc3QgZXhhbXBsZSBoZXJl
+KS4gdGhpcyB0aGVzZQo+Pj4gYW1wcyBhbHNvIG1heSBoYXZlIGluZmx1ZW5jZSB0byBzZW5zaXRp
+dml0eS4KPj4+IG9uIHRoZXNlIGNhcmRzIHlvdSBzZXQgMTAgZGIgb3V0cHV0IHBvd2VyLCBidXQg
+aW4gZmFjdCBpdCBvdXRwdXRzIDE4IAo+Pj4gZGIuCj4+PiBzbyB0aGVyZSBpcyBhIGJpYXMgb2Zm
+c2V0IG9uIHRoZXNlIGNhcmRzIG9yIGRldmljZXMuICh0aGUgb2Zmc2V0IGlzCj4+PiBkZXBlbmRp
+bmcgb24gdGhlIGRldmljZSBtb2RlbCkKPj4+Cj4+PiB3aGF0IHlvdSBtZWFzdXJlIGlzIHdoYXQg
+dGhlIGNoaXAgcmVjZWl2ZXMsIGJ1dCBub3Qgd2hhdCB3YXMgbG9zdCBvbiAKPj4+IHRoZQo+Pj4g
+cGNiIGxheW91dC4gKG9yIHdhcyBldmVuIGdlbmVyYXRlZCBpbiBjYXNlIG9mIG5vaXNlKQo+Pj4g
+YW5kIHdoZW4gaXQgY29tZXMgdG8gY2FsaWJyYXRpb24gZGF0YS4gY29ycmVjdCB3b3VsZCBiZSBp
+ZiBlYWNoCj4+PiBpbmRpdmlkdWFsIGNhcmQgaXMgY2FsaWJyYXRlZCBiZWZvcmUgc2hpcG1lbnQu
+IGluIHJlYWxpdHkgbWFudWZhY3R1cmVzCj4+PiBhcmUgZG9pbmcgY2FsaWJyYXRpb24gb24gYSBz
+aW5nbGUgcmVmZXJlbmNlIGNhcmQgYW5kIGNsb25lIGl0IG9uIGFsbAo+Pj4gZm9sbG93aW5nIGNh
+cmRzIHRvIHNhdmUgdGltZS4gdGhlIHJlc3VsdCBkZXBlbmRzIG9uIGRheSBvciB3ZWVrIG9mCj4+
+PiBwcm9kdWN0aW9uCj4+PiBhbmQgY3VycmVudCBwb3NpdGlvbiBvZiB0aGUgbW9vbiBhbmQgc3Vu
+LiBlcnJvcnMgb2YgKy0gMiBkYiBhcmUgY29tbW9uCj4+PiBoZXJlLiAodGhpcyBpcyBub3QgYSBm
+YWN0IGZvciBhbGwgY2FyZCBvciBkZXZpY2UgdmVuZG9ycykKPj4+Cj4+Pj4KPj4+PiBJZiB5b3Ug
+bG9vayBhdCB0aGUgdHgtcmF0ZS1wb3dlciB0YWJsZSBpbiBhdGgxMGssIGZvciBpbnN0YW5jZSwg
+eW91Cj4+Pj4gY2FuIHNlZSBkaWZmZXJlbnQgTUNTIGFyZSB0cmFuc21pdHRlZAo+Pj4+IGF0IGRp
+ZmZlcmVudCBzaWduYWwgbGV2ZWxzLsKgIFNvLCBzb21lIGNoYW5nZSBmcm9tIGluaXRpYWwgY29u
+ZGl0aW9ucwo+Pj4+IG1pZ2h0IGJlIGJlY2F1c2UgaGlnaGVyIE1DUyBpcwo+Pj4+IGJlaW5nIHRy
+YW5zbWl0dGVkIGFmdGVyIHJhdGUtY3RybCBzY2FsZXMgdXA/Cj4+PiB5ZXMuIHRoaXMgaXMgbW9k
+dWxhdGlvbiByZWxhdGVkLiBhcyBoaWdoZXIgdGhlIHJhdGUgZ29lcyBhcyBsb3dlciB0aGUKPj4+
+IHBvd2VyIHdpbGwgYmUuIHRoYXRzIHByaW5jaWJsZSBvZiBRQU0uCj4+PiBhbmQgdGhlIHJhdGUg
+Y29udHJvbCBpdHNlbGYgaXNudCBzaWduYWwgYnV0IGVycm9yIHJhdGUgYmFzZWQuIHNvIGhpZ2gK
+Pj4+IHBhY2tldCBsb3NzIHRyaWdnZXJzIHRoZSByYXRlIGNvbnRyb2wgdG8gbG93ZXIgdGhlIHJh
+dGUgd2hpY2ggcmVzdWx0cwo+Pj4gaW4gaW5jcmVhc2VkIG91dHB1dCBwb3dlciBhbmQgdmljZSB2
+ZXJzYS4gYnV0IGFzIG1lbnRpb25lZC4gYXQgY2FyZAo+Pj4gc3RhcnR1cCBhIG5vaXNlIGZsb29y
+IGNhbGlicmF0aW9uIHN0YXJ0cyB3aGljaCBtYXkgc3VjY2VlZCBvciBmYWlsLgo+Pj4gaWYgaXQg
+c3VjY2VlZHMgaXQgd2lsbCB0dXJuIGludG8gYSBsb25nIGRlbGF5IHBoYXNlLiBzbyBjeWNsaWMK
+Pj4+IGNhbGlicmF0aW9uLiB0aGUgY2FsaWJyYXRpb24gdGltZSBpcyBleGFjdGx5IDMwIHNlY29u
+ZHMgKG1pbmltdW0pIAo+Pj4gYW5kIGlmCj4+PiBpdCBmYWlscyBpdCBjYW4KPj4+IGV4Y2VlZCB0
+byA2MCBzZWNvbmRzLiBhZnRlciB0aGF0IHRpbWUgaXQgd2lsbCBzbGVlcCBmb3IgMzAwIHNlY29u
+ZHMgYW5kCj4+PiB3aWxsIGNoZWNrIGZvciByZWNhbGlicmF0aW9uIGNvbmRpdGlvbnMuICh0aGVy
+ZSBhcmUgcnVsZXMgbGlrZSBoaWdoCj4+PiBub2lzZSBmbG9vciBjaGFuZ2VzIGV0Yy4pCj4+PiBh
+IHJlY2FsaWJyYXRpb24gaXMgYWxzbyB0cmlnZ2VyZWQgYXQgY2hhbm5lbCBjaGFuZ2VzwqAgYW5k
+IGlmIGNoaXBzZXQKPj4+IHRlbXBlcmF0dXJlIGNoYW5nZXMgYXQgYSBjZXJ0YWluIGxldmVsLgo+
+Pj4gZnJvbSB3aGF0IGkgaGF2ZSBzZWVuIHRoZSBwcm9jZWR1cmUgaW4gdGhlIHFjYTk4ODAgZmly
+bXdhcmUgaXMgZXhhY3RseQo+Pj4gdGhlIHNhbWUgYXMgaW4gYXRoOWsuCj4+PiBhbnl3YXkuIHdo
+aWxlIHRoaXMgY2FsaWJyYXRpb24gaXMgcnVubmluZywgdGhlIHNpZ25hbCBhbmQgbm9pc2UgZmxv
+b3IKPj4+IG1pZ2h0IGJlIHVuc3RhYmxlIG9yIGV2ZW4gYm9ndXMgdW50aWwgdGhpcyBpcyBmaW5p
+c2hlZCBhbmQgcmF0ZSBjb250cm9sCj4+PiBtaWdodCBub3QgYmUgb3B0aW1hbAo+Pj4gdW5kZXIg
+c3RyZXNzIGNvbmRpdGlvbnMgbGlrZSBsb25nIHJhbmdlIGxpbmtzIHdpdGggbG93IHNpZ25hbHMu
+IHdpdGgKPj4+IHN0YW5kYXJkIHdpZmkgdXNhZ2UgeW91IHNob3VsZCBub3Qgbm90aWNlIGl0IHRo
+YXQgbXVjaCBzaW5jZSBzaWduYWwgdG8KPj4+IG5vaXNlIHJhdGlvIGlzIGhpZ2ggZW5vdWdoIGFu
+eXdheQo+Pj4KPj4+Cj4+Pj4KPj4+PiBMb3RzIG9mIG1vdmluZyBwYXJ0cy4uLgo+Pj4+Cj4+Pj4g
+VGhhbmtzLAo+Pj4+IEJlbgo+Pj4+Cj4+Pj4+Cj4+Pj4+IFNlYmFzdGlhbgo+Pj4+Pgo+Pj4+PiBB
+bSAxOC4xMi4yMDE5IHVtIDAwOjM3IHNjaHJpZWIgVG9tIFBzeWJvcmc6Cj4+Pj4+PiBhbHNvIG5v
+dGljZWQgbm93IHRoYXQgdGhlIG5vaXNlIGZsb29yIGNoYW5nZXMgd2l0aCBzaWduYWwgCj4+Pj4+
+PiBzdHJlbmd0aCBhcwo+Pj4+Pj4gZGVzY3JpYmVkIGluIHRoaXMgYnVnIHJlcG9ydDoKPj4+Pj4+
+IGh0dHBzOi8vd3d3Lm1haWwtYXJjaGl2ZS5jb20vYXRoMTBrQGxpc3RzLmluZnJhZGVhZC5vcmcv
+bXNnMTE1NTMuaHRtbCAKPj4+Pj4+Cj4+Pj4+Pgo+Pj4+Pj4gYWZ0ZXIgd2lmaSByZXN0YXJ0Cj4+
+Pj4+Pgo+Pj4+Pj4gaXdpbmZvOgo+Pj4+Pj4KPj4+Pj4+IHNpZ25hbDogLTU5ZEJtIG5vaXNlOiAt
+MTA4ZEJtCj4+Pj4+Pgo+Pj4+Pj4gdGhlbiBnb2VzIHRvCj4+Pj4+Pgo+Pj4+Pj4gc2lnbmFsOiAt
+NTJkQm0gbm9pc2U6IC0xMDNkQm0KPj4+Pj4+Cj4+Pj4+PiBhbmQgZmluYWxseSBkcm9wcyB0bwo+
+Pj4+Pj4KPj4+Pj4+IHNpZ25hbDogLTU5ZEJtIG5vaXNlOiAtMTAzZEJtCj4+Pj4+Pgo+Pj4+Pgo+
+Pj4+Cj4+Cj4KCl9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
+CmF0aDEwayBtYWlsaW5nIGxpc3QKYXRoMTBrQGxpc3RzLmluZnJhZGVhZC5vcmcKaHR0cDovL2xp
+c3RzLmluZnJhZGVhZC5vcmcvbWFpbG1hbi9saXN0aW5mby9hdGgxMGsK
