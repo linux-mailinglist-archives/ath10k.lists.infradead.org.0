@@ -2,80 +2,69 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 96F2E123BAD
-	for <lists+ath10k@lfdr.de>; Wed, 18 Dec 2019 01:36:59 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 03F47123CF1
+	for <lists+ath10k@lfdr.de>; Wed, 18 Dec 2019 03:12:47 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	References:In-Reply-To:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=rTWwIgGv2S9IP/JN2F6J3mS/oCcwDdrurJ3BsteQw4M=; b=FGW74wWE64J3gv
-	74yjdFjkm4iX9436JANXBiF66S7UTsCDO3pcB1mPZhXh/O0UZ+bAUIzBUR+w+ysdfWQUWxNZgIxS4
-	iLqjLkLkgeKYeu+sayJ63h4YT1zSSB3rABN9vQQntoqDafZ1L/kFzoJ+1UbGLkaYS09sVKCD3LNTs
-	/l9sdWiVonOrBzAVYEcG8PjwMnGPlVc2G7jNwlRWmFe6NE8LvYnnwt77B2FQ7WpxCsPQXZSePKWyd
-	hptb9RykUqRYx1epjH8Ehdqapt1QQG5x60Ht08RUmOI+2qQAklcp9YL4cZXZlT9ERWtd+HIIbZc27
-	7P1Bp9CLsxeHde95D7yQ==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
+	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=1E7tZlewWwuWOQAhhDbRXkXH2G63vNCMR35waV3lLy4=; b=EB5q0UyZfNiMXNu64ba6i73NQ
+	HirNo45Vi2ZR48b4oUjnbuWjwyxJRX3a1AiQr3SX295Ng9mW46eY4Io9gbqn5iH0X202pAXkigAab
+	faXLOpf7jWaW7zqnuhHu9ut7OVn2ANuBFvhgDwZy2AD8ZlDxap46VCVips6tQ8IX/jnD4Z33Exryg
+	1sGmMKDcTFQ1B3+5PYwCjB7t5OsLNgpxm2yHTikokPQcIUFmsHYd7QPtx8huLxcKPNcFXGRp5QBVH
+	wpZdXHLaWuPrqfyQfaHdqtgxcD7Sri1VLa8KtIIrnYVrV+lR8hFf0sgiOdExVibhvQ/T6tvSpCa9g
+	zU8U353pw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ihNKg-0004Hm-FK; Wed, 18 Dec 2019 00:36:54 +0000
-Received: from mail-oi1-x22e.google.com ([2607:f8b0:4864:20::22e])
+	id 1ihOpN-0004Ba-VQ; Wed, 18 Dec 2019 02:12:41 +0000
+Received: from smtps.newmedia-net.de ([2a05:a1c0:0:de::167]
+ helo=webmail.newmedia-net.de)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ihNKb-0004HK-Sv
- for ath10k@lists.infradead.org; Wed, 18 Dec 2019 00:36:52 +0000
-Received: by mail-oi1-x22e.google.com with SMTP id 6so178304oix.7
- for <ath10k@lists.infradead.org>; Tue, 17 Dec 2019 16:36:49 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=mime-version:in-reply-to:references:from:date:message-id:subject:to
- :cc; bh=l+5X5vMQ6YkQcZtac3wkcM7mV4o2WEa8wKesrwPdpfo=;
- b=miRzFCkvA1IM/AfGOimn+QqAvoCqJbKu6sDr+xpJu2T7jjuVJR41/7N4Q5LbV2bPY4
- asMf2nkeQpPBeIFOVh5H4Qpu3tI9tkhEYPXn6qkjjqSRkNQFKnZxNNR63KihF/aoEzLj
- ghU9yhJY5OxxBDbQmeSnWWhnixTefgB2asjdLAppbISTbjeGGMzpczAC64KRIo0Ni1qz
- 2YIzBtjVc6rTT3Oax1IxlKEbuWHJDqcVXyyQMTW4K4DJFnGX/Wz29SksL3ErbE5pPkFr
- M/r8Zq/gg1qow7RIzGB77gzkjJJLzfb+k4EFr3ajgn520NLI6IqcddkwRh/XIA1DEJ09
- PYVQ==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:in-reply-to:references:from:date
- :message-id:subject:to:cc;
- bh=l+5X5vMQ6YkQcZtac3wkcM7mV4o2WEa8wKesrwPdpfo=;
- b=cm+RN1ax6C2MRwJLuqYK+mSRPAjhpfqnqb8vh71nSQQyGOxIsONIh8wSzSNvrfoJXQ
- M68dyaM42iMN9His93Rf0WdyyVSdzlp1oTLRbysaR2xK6qsso/0r8KWQmnNTG1rilKaA
- I5Au+braEcVeYXcZGfwWVyB8lEh7dpThxx5/5mYnm9aeQ3hr4VUzMOkiDOIb80keVT2w
- LCEaUUpv8ik3kr+3pv9d6vbb00P4DI0p4TyE3N+qj8lWV2aAoxw+a0hk7zOc9SkfYBkt
- 1yqQZseKCu/rTzNXWPWwwPzlt5VwD/TiKOHD+up2W3aAjCVWU2oaUsSXXRPh3KAoHQp1
- wARQ==
-X-Gm-Message-State: APjAAAWxU0ol92fH0uoobXtkCxCR2cOJXNBaqvKM4YCi7jod1vAy/Rcj
- eu29xsULDeVQ5vgm3SkGaihSI6/IQnDd8izOzDoNOQ==
-X-Google-Smtp-Source: APXvYqxX9UgXZHIY8njDh20T1lCIcfy4T0iDtyDTbrKPQCfOA0oKSz9ip/2F3uZMvNTntqP5KglSfEbPxHQy8lLtCYs=
-X-Received: by 2002:aca:ea43:: with SMTP id i64mr119364oih.30.1576629408473;
- Tue, 17 Dec 2019 16:36:48 -0800 (PST)
+ id 1ihOpB-00042N-48
+ for ath10k@lists.infradead.org; Wed, 18 Dec 2019 02:12:31 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+ d=newmedia-net.de; s=mikd; 
+ h=Content-Transfer-Encoding:Content-Type:In-Reply-To:MIME-Version:Date:Message-ID:From:References:Cc:To:Subject;
+ bh=6WLqXU5/gbK10W8fO9D9QGVt2yPBkaTAhbB6ArSqfrQ=; 
+ b=rYsCqbyhyjdCE+CC4UML99qXFhOW1lvyafL5pvD8WMYKFWIXyUQpeXPTriwKEL8htW8nJhn26QdQW6sm6+pcs29iDo7i7p4pttxRiPyvhV84FXXD7KD8wlztPz/vfhk/N3UxpUhja9ABAEfUdIskAvE9jt0nrtM2IF6E+KfpZFY=;
+Subject: Re: [PATCH] ath10k: Per-chain rssi should sum the secondary channels
+To: Tom Psyborg <pozega.tomislav@gmail.com>,
+ Ben Greear <greearb@candelatech.com>
+References: <20191216220747.887-1-greearb@candelatech.com>
+ <a2af03e9-8b53-b297-467b-d0f07b8a002b@newmedia-net.de>
+ <b5d63d96-4ba6-bbab-bf1c-a61c6c437f37@newmedia-net.de>
+ <80700614-679a-336e-bd9a-e88622e75c9a@candelatech.com>
+ <4775d91a-9719-46f8-b0f2-979b8d86cf9f@newmedia-net.de>
+ <CAMrEMU-vGB8uR-JZbD2vj4vXgWNHfFqcbsqB=gOqBBDZWGkzQA@mail.gmail.com>
+ <11290a30-46e8-638e-4110-86e6b2eb3d3f@candelatech.com>
+ <CAKR_QV+xNbAzzw12x3Ku49bHnERTxYRAK8AfUSwp_uOgNMbY4Q@mail.gmail.com>
+ <a95e7f6d-1cb8-3188-aea4-233dce6f9330@candelatech.com>
+ <CAKR_QVL0P4qYidtqLwhhacCOpx2iq+4RRhTXbGhfRnf2PUj5tA@mail.gmail.com>
+ <CAKR_QV+KV1dR_QKjANL34DGJuyf3OSN8J6gs3bqcmiRCCzkdXA@mail.gmail.com>
+From: Sebastian Gottschall <s.gottschall@newmedia-net.de>
+Message-ID: <5e3f22d1-b8ba-d756-a15c-1e7ae56c1dad@newmedia-net.de>
+Date: Wed, 18 Dec 2019 03:12:22 +0100
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101
+ Thunderbird/68.3.0
 MIME-Version: 1.0
-Received: by 2002:a9d:362:0:0:0:0:0 with HTTP;
- Tue, 17 Dec 2019 16:36:47 -0800 (PST)
-In-Reply-To: <CAKR_QVLabBXcsPfcCt8MdQXUrkgw5aNVAJD9XUke-G7XhsTwAA@mail.gmail.com>
-References: <CAKR_QVLabBXcsPfcCt8MdQXUrkgw5aNVAJD9XUke-G7XhsTwAA@mail.gmail.com>
-From: Tom Psyborg <pozega.tomislav@gmail.com>
-Date: Wed, 18 Dec 2019 01:36:47 +0100
-Message-ID: <CAKR_QVK2fJkR6OveFAhcjqjToh_mJMxfvjD6vJssqVtpmbQkGA@mail.gmail.com>
-Subject: Re: [RFC] ath10k: possible RSSI recalibration bug?
-To: ath10k <ath10k@lists.infradead.org>
+In-Reply-To: <CAKR_QV+KV1dR_QKjANL34DGJuyf3OSN8J6gs3bqcmiRCCzkdXA@mail.gmail.com>
+X-Received: from [2003:c9:3f0e:3a00:383d:f7f7:6179:80c8]
+ by webmail.newmedia-net.de with esmtpsa (TLSv1:AES128-SHA:128)
+ (Exim 4.72) (envelope-from <s.gottschall@newmedia-net.de>)
+ id 1ihOnl-00065C-Qy; Wed, 18 Dec 2019 03:11:01 +0100
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191217_163649_937962_7EC3EBD4 
-X-CRM114-Status: UNSURE (   4.21  )
+X-CRM114-CacheID: sfid-20191217_181229_525680_CC84B1F5 
+X-CRM114-Status: UNSURE (   9.15  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: 2.8 (++)
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (2.8 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:22e listed in]
- [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (pozega.tomislav[at]gmail.com)
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
@@ -83,10 +72,6 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  author's domain
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
- 1.0 PDS_TONAME_EQ_TOLOCAL_VSHORT Very short body and From looks like
- 2 different emails
- 2.0 PDS_TONAME_EQ_TOLOCAL_SHORT Short body with To: name matches
- everything in local email
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -98,14 +83,63 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless <linux-wireless@vger.kernel.org>
-Content-Type: text/plain; charset="us-ascii"
+Cc: linux-wireless@vger.kernel.org, ath10k <ath10k@lists.infradead.org>,
+ Justin Capella <justincapella@gmail.com>
 Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-some more testing revealed it might be NF related bug:
-https://marc.info/?l=linux-wireless&m=157662586107288&w=2
+i dont know what you want to compare here.
+
+1. you compare 2 different wifi chipsets. both have different 
+sensititivy and overall output power spec
+
+2. both have different amount of antenna chains. which does make a 
+difference in input sensitivity
+
+3. the patch ben made has no effect on qca9880 chipsets. it only takes 
+effect on 10.4 based chipsets like 9984
+
+
+about noise floors in general. noise floors of -108 are bogus. there is 
+a physical limit a noise level can be.
+since drivers like ath9k are doing a cyclic calibration, the noise value 
+might indeed change. but this calibration is
+not running in realtime. its cyclic. i'm not aware if chipsets like 
+qca988x are going the same way, but since qca988x
+has sime similaries with ath9k chipsets unlike the newer 9984 variants, 
+it could be. the 30 seconds mentioned
+in the bug report fits to my expectations of the early noisefloor 
+calibration which has a short delay and after success
+turning to use a long delay. anyway. in this early calibration phase 
+signals might change and will stabilize after. this isnt a issue
+since your connection will work anyway even if it might take a little 
+bit longer if you have poor signal levels
+
+@ben. am i wrong or what do think?
+
+Sebastian
+
+Am 18.12.2019 um 00:37 schrieb Tom Psyborg:
+> also noticed now that the noise floor changes with signal strength as
+> described in this bug report:
+> https://www.mail-archive.com/ath10k@lists.infradead.org/msg11553.html
+>
+> after wifi restart
+>
+> iwinfo:
+>
+> signal: -59dBm noise: -108dBm
+>
+> then goes to
+>
+> signal: -52dBm noise: -103dBm
+>
+> and finally drops to
+>
+> signal: -59dBm noise: -103dBm
+>
 
 _______________________________________________
 ath10k mailing list
