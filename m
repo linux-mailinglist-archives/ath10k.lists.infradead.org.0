@@ -2,94 +2,93 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 74C68123F22
-	for <lists+ath10k@lfdr.de>; Wed, 18 Dec 2019 06:29:44 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3430F124102
+	for <lists+ath10k@lfdr.de>; Wed, 18 Dec 2019 09:05:36 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=B66UP9XIdQEMpU+2LIf31z8pww/c+nFHoVxNcMuIe+E=; b=BpTRrDnfiku/iG
-	veJK7F2J5hZFRjN51a1AJ/kCJ/o9M93Nu1Lg/XKUi3HBK7IVCHrN1pI+loeOSpJtJALckU2cwgduT
-	+0h6lK54RxDDdwbwUp2Vzn5ProfFWfKH8Lp5of4PjSc9VCbYkixTdA5KSVJfclVMrArjH95e/vDl2
-	ozR11nzQUDJZUJdZj43J4V7b+gd0hZKwjSt8+pj1/NWJ2LnvqM4hFNAbBv8QQfhR2TMQ2e4XJyPQ4
-	FOorbiFd197JnkBACEI/0euOw0fOu1eMZtTK0karIiqXpUJQrsuKbncnm91ZgC7D2j37eWOeZJF4X
-	Qbj+n1USXfL5ZG6Qm6lQ==;
+	List-Archive:List-Unsubscribe:List-Id:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:To:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:List-Owner;
+	bh=ptIXKA++QLisRZqEj1UkC//5m0KvfTyNcEGkvvh6LgU=; b=bs0vA6ymRIEdhL0GApmMC6z8ld
+	4p0ueJ8ki1yhcF42coPOV/fXH0FrCKR6O84us7oTyTnBwNBq0nULGma80qR8erM11tt2g2L6dI6Xn
+	SUkrWA4qc8Q7W7g69yqPnXWrguUf6j7GbopneWqT+VzgBPfgtM8rtr16sWT7M3QS7cQMy41hxXCXR
+	qzGoMVpogToL0ajUWSzLQ1zA/ZTuLkTJz4OIwxWkN9jQxaWT2zYwp7VKU5RI7V06Tn3xI6jfo7dD7
+	mpoFzu7KfmRWuiX3FdOJbVoH9hWqqtHa3NWabI1BxvdYBS0PKESZ36MEtb14NuZT0tjNfrtqlVcQe
+	wQjUP40w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ihRtz-0006ao-M8; Wed, 18 Dec 2019 05:29:39 +0000
-Received: from userp2130.oracle.com ([156.151.31.86])
+	id 1ihUKp-0007Oo-BL; Wed, 18 Dec 2019 08:05:31 +0000
+Received: from mail-ot1-x343.google.com ([2607:f8b0:4864:20::343])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ihRtw-0006aM-2g
- for ath10k@lists.infradead.org; Wed, 18 Dec 2019 05:29:37 +0000
-Received: from pps.filterd (userp2130.oracle.com [127.0.0.1])
- by userp2130.oracle.com (8.16.0.27/8.16.0.27) with SMTP id xBI5F1cc014132;
- Wed, 18 Dec 2019 05:29:30 GMT
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=oracle.com;
- h=date : from : to : cc
- : subject : message-id : references : mime-version : content-type :
- in-reply-to; s=corp-2019-08-05;
- bh=zJTs4wkULJS+a90GrfbPGPpqSA2lLPv3IbJQu22kaxc=;
- b=T/iqncc02AxcwFXTyn20lWBtPJO/UXWHlqz6WZqXzpjsH6sEKZA054U0fpH6Qthy3DOD
- USLvF8alc3h1ZpoHd5dNrpPQPMM466nJDgcDV7LwgZ3/dqnJfrmaLtSSOgt6g8yLAE4I
- V9DKLlnBomA6+iZEo3svlKJJWDVqKjtB4i1JQmR0EiisJkh8B/K52e8j1xjoYy6REnF1
- LFxEmuIm+mgMdz+2Hgtc+qVNMd1I94GriZDV2lqeUVtFlHuMmirgCGxfQQybL3MPhklj
- VKFDbvJ8XelKyMBqJkkxQIljDh9Fp2JV3EU1j3KzUi/z3O4BquWG6VdXjb+luIv+uB30 nw== 
-Received: from aserp3030.oracle.com (aserp3030.oracle.com [141.146.126.71])
- by userp2130.oracle.com with ESMTP id 2wvq5uke0w-1
- (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
- Wed, 18 Dec 2019 05:29:30 +0000
-Received: from pps.filterd (aserp3030.oracle.com [127.0.0.1])
- by aserp3030.oracle.com (8.16.0.27/8.16.0.27) with SMTP id xBI5K44h144475;
- Wed, 18 Dec 2019 05:27:29 GMT
-Received: from userv0121.oracle.com (userv0121.oracle.com [156.151.31.72])
- by aserp3030.oracle.com with ESMTP id 2wxm4wv80s-1
- (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
- Wed, 18 Dec 2019 05:27:29 +0000
-Received: from abhmp0008.oracle.com (abhmp0008.oracle.com [141.146.116.14])
- by userv0121.oracle.com (8.14.4/8.13.8) with ESMTP id xBI5RSRh023838;
- Wed, 18 Dec 2019 05:27:28 GMT
-Received: from kadam (/129.205.23.165) by default (Oracle Beehive Gateway v4.0)
- with ESMTP ; Tue, 17 Dec 2019 21:27:27 -0800
-Date: Wed, 18 Dec 2019 08:27:21 +0300
-From: Dan Carpenter <dan.carpenter@oracle.com>
-To: Ulf Hansson <ulf.hansson@linaro.org>
-Subject: Re: [bug report] mmc: core: Re-work HW reset for SDIO cards
-Message-ID: <20191218052721.GC2524@kadam>
-References: <20191213185050.m6iku7defq44syrl@kili.mountain>
- <CAPDyKFoKvhGDuQ+C0Sp2N3==CXiMWfpcrT28+dQ2+Nq_UPaXYQ@mail.gmail.com>
+ id 1ihUKl-0007OO-Qr
+ for ath10k@lists.infradead.org; Wed, 18 Dec 2019 08:05:29 +0000
+Received: by mail-ot1-x343.google.com with SMTP id c22so1362588otj.13
+ for <ath10k@lists.infradead.org>; Wed, 18 Dec 2019 00:05:26 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:cc;
+ bh=YPlZOW/aPNkuA3+s2dx+BjJOVi8FoqUpaaFUagdrhDE=;
+ b=b9859j71qg4oAqwLoIu5G9uNeNhAfd15vyAmPgnOPXwPik+DxSk7IahVCIXBUfl2SD
+ 4ww6HHU+HzWZLhyk4PfTMwTrRxjDTrHWq05ZKcrmTATJiJWO6q68hNVgmr8XBXrg7NW0
+ OTPY+MjtE6jXS5JgWFewd/iiRxpS4FuhQ6gSjdI3xedS8ydiJJRGGPg8OWTT0wEcipne
+ g23bvUBk5jzJUTuGxIS/sUiHqokVpCT1Rz/jBeDQOCl6PTcOHscx5W2fJAYQ4eiqIVdB
+ b2PQaWMr5ryacAIJlMuB29nVAi9ANETcZP48VOBeN3m0F4wHJ0OvhCz2koEivS4+U7Ow
+ RgGQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:cc;
+ bh=YPlZOW/aPNkuA3+s2dx+BjJOVi8FoqUpaaFUagdrhDE=;
+ b=LwvVqGH22Qza25+X5x5+CuZP7Dmes0gA8WOe6gmTViQiWr+s6g8RYt9nctAZ2WKpTP
+ eV3p2r9Va/QuhgMuSZTZIqDDP0PANiqycpWa2cU7o+qtjV73TRpB64pIXet1gJwWlkyS
+ hI8YVhYdNU9dYg4nJm8QIZxgq/xKy14Uu9MuK4MegB8INKot0ffU3RP2LA4VI423Kokl
+ MsG3U13cwS0bsrfWukDc0/w8eUtLFtnuhVDIiumFweQV8Rtr67h4xqC7Kfig0CARxLBH
+ ImIFjQcnKgSL7/KB0S6aj97gADl54OWD+1BhYjtb0HXkCqCvH9YdlyDjdYeJrAhTY95m
+ zT6w==
+X-Gm-Message-State: APjAAAWPkBTvxPdoHTc1JxjdGR285AlClblAF2/nYt3KYHTYIxFf0HdN
+ Miady8zJHBzzMjQf7C7qOPZGB42LRaxtR5luhOU=
+X-Received: by 2002:a05:6830:159a:: with SMTP id
+ i26mt1161066otr.3.1576656325920; 
+ Wed, 18 Dec 2019 00:05:25 -0800 (PST)
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <CAPDyKFoKvhGDuQ+C0Sp2N3==CXiMWfpcrT28+dQ2+Nq_UPaXYQ@mail.gmail.com>
-User-Agent: Mutt/1.9.4 (2018-02-28)
-X-Proofpoint-Virus-Version: vendor=nai engine=6000 definitions=9474
- signatures=668685
-X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 suspectscore=0
- malwarescore=0
- phishscore=0 bulkscore=0 spamscore=0 mlxscore=0 mlxlogscore=999
- adultscore=0 classifier=spam adjust=0 reason=mlx scancount=1
- engine=8.0.1-1911140001 definitions=main-1912180041
-X-Proofpoint-Virus-Version: vendor=nai engine=6000 definitions=9474
- signatures=668685
-X-Proofpoint-Spam-Details: rule=notspam policy=default score=0
- priorityscore=1501 malwarescore=0
- suspectscore=0 phishscore=0 bulkscore=0 spamscore=0 clxscore=1015
- lowpriorityscore=0 mlxscore=0 impostorscore=0 mlxlogscore=999 adultscore=0
- classifier=spam adjust=0 reason=mlx scancount=1 engine=8.0.1-1911140001
- definitions=main-1912180041
+References: <20191216220747.887-1-greearb@candelatech.com>
+ <a2af03e9-8b53-b297-467b-d0f07b8a002b@newmedia-net.de>
+ <b5d63d96-4ba6-bbab-bf1c-a61c6c437f37@newmedia-net.de>
+ <80700614-679a-336e-bd9a-e88622e75c9a@candelatech.com>
+ <4775d91a-9719-46f8-b0f2-979b8d86cf9f@newmedia-net.de>
+ <CAMrEMU-vGB8uR-JZbD2vj4vXgWNHfFqcbsqB=gOqBBDZWGkzQA@mail.gmail.com>
+ <11290a30-46e8-638e-4110-86e6b2eb3d3f@candelatech.com>
+ <CAKR_QV+xNbAzzw12x3Ku49bHnERTxYRAK8AfUSwp_uOgNMbY4Q@mail.gmail.com>
+ <a95e7f6d-1cb8-3188-aea4-233dce6f9330@candelatech.com>
+ <CAKR_QVL0P4qYidtqLwhhacCOpx2iq+4RRhTXbGhfRnf2PUj5tA@mail.gmail.com>
+ <CAKR_QV+KV1dR_QKjANL34DGJuyf3OSN8J6gs3bqcmiRCCzkdXA@mail.gmail.com>
+ <5e3f22d1-b8ba-d756-a15c-1e7ae56c1dad@newmedia-net.de>
+ <8eae96cd-a94e-abc1-4750-73f931d657d6@candelatech.com>
+ <9431f1a2-a44e-9b81-72b0-9a703e1841ac@newmedia-net.de>
+In-Reply-To: <9431f1a2-a44e-9b81-72b0-9a703e1841ac@newmedia-net.de>
+From: Justin Capella <justincapella@gmail.com>
+Date: Wed, 18 Dec 2019 00:05:12 -0800
+Message-ID: <CAMrEMU8UrY9F++ut88to0AxKJXHTi9cwUs8uGOmN=k0ymcH0FA@mail.gmail.com>
+Subject: Re: [PATCH] ath10k: Per-chain rssi should sum the secondary channels
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191217_212936_205944_856880ED 
-X-CRM114-Status: GOOD (  19.63  )
-X-Spam-Score: -2.5 (--)
+X-CRM114-CacheID: sfid-20191218_000527_875475_CF23E0BC 
+X-CRM114-Status: GOOD (  29.22  )
+X-Spam-Score: 3.5 (+++)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-2.5 points)
+ Content analysis details:   (3.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [156.151.31.86 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:343 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ 1.2 MISSING_HEADERS        Missing To: header
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 1.0 FORGED_GMAIL_RCVD      'From' gmail.com does not match 'Received'
+ headers
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (justincapella[at]gmail.com)
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
@@ -97,9 +96,8 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  author's domain
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 1.5 MALFORMED_FREEMAIL     Bad headers on message from free email
+ service
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -111,78 +109,156 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless <linux-wireless@vger.kernel.org>, ath10k@lists.infradead.org,
- Kalle Valo <kvalo@codeaurora.org>
+Cc: Sebastian Gottschall <s.gottschall@newmedia-net.de>,
+ Ben Greear <greearb@candelatech.com>, linux-wireless@vger.kernel.org,
+ Tom Psyborg <pozega.tomislav@gmail.com>, ath10k <ath10k@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On Tue, Dec 17, 2019 at 08:54:47AM +0100, Ulf Hansson wrote:
-> + Kalle
-> 
-> On Fri, 13 Dec 2019 at 19:51, Dan Carpenter <dan.carpenter@oracle.com> wrote:
-> >
-> > Hello Ulf Hansson,
-> >
-> > The patch 2ac55d5e5ec9: "mmc: core: Re-work HW reset for SDIO cards"
-> > from Oct 17, 2019, leads to the following static checker warning:
-> >
-> >         drivers/net/wireless/ath/ath10k/sdio.c:1521 ath10k_sdio_hif_power_down()
-> >         warn: 'ret' can be either negative or positive
-> 
-> Thanks for reporting!
-> 
-> >
-> > drivers/net/wireless/ath/ath10k/sdio.c
-> >   1495  static void ath10k_sdio_hif_power_down(struct ath10k *ar)
-> >   1496  {
-> >   1497          struct ath10k_sdio *ar_sdio = ath10k_sdio_priv(ar);
-> >   1498          int ret;
-> >   1499
-> >   1500          if (ar_sdio->is_disabled)
-> >   1501                  return;
-> >   1502
-> >   1503          ath10k_dbg(ar, ATH10K_DBG_BOOT, "sdio power off\n");
-> >   1504
-> >   1505          /* Disable the card */
-> >   1506          sdio_claim_host(ar_sdio->func);
-> >   1507
-> >   1508          ret = sdio_disable_func(ar_sdio->func);
-> >   1509          if (ret) {
-> >   1510                  ath10k_warn(ar, "unable to disable sdio function: %d\n", ret);
-> >   1511                  sdio_release_host(ar_sdio->func);
-> >   1512                  return;
-> >   1513          }
-> >   1514
-> >   1515          ret = mmc_hw_reset(ar_sdio->func->card->host);
-> >   1516          if (ret)
-> >
-> > It used to be that mmc_hw_reset() return negative error codes or zero
-> > but now it returns 1 on certain success paths.
-> 
-> Correct.
-> 
-> I was actually looking into this while changing the behaviour of
-> mmc_hw_reset(). However I decided to leave this as is.
-> 
-> The main reason is, that mmc_hw_reset() is not going to power down the
-> card. It's hard power cycle, so I am kind of surprised that is being
-> used at all in this path. This in combination of expecting the value
-> from mmc_hw_reset() to never be 1 here, seemed like a good idea to
-> preserve the logging of the warning message.
-> 
-> To silent the static checker tool from warning, we could check
-> explicitly for "1". Is that something you want me to do?
+Don't mean to steal your thread here, but since it's being discussed--
+is there something that can be done to provide more accurate/precise
+data? Use of the default is widespread so not a reason to hold back
+the patch imo, but with a proposed pcap-ng capture information block
+they would become more accessible and maybe there will be increased
+interest in real values.
 
-I feel like checking for 1 would be more readable for humans as well.
+Anyway to fill out IEEE80211_RADIOTAP_DBM_ANT{SIGNAL,NOISE}?
 
-Or we could just leave it as-is.  I'm not likely to ever publish this
-static checker warning.
+I recall from another thread that there isn't currently periodic
+calibration but the floor could change with environment too.
 
-regards,
-dan carpenter
-
+On Tue, Dec 17, 2019 at 8:05 PM Sebastian Gottschall
+<s.gottschall@newmedia-net.de> wrote:
+>
+>
+> Am 18.12.2019 um 03:37 schrieb Ben Greear:
+> >
+> >
+> > On 12/17/2019 06:12 PM, Sebastian Gottschall wrote:
+> >> i dont know what you want to compare here.
+> >>
+> >> 1. you compare 2 different wifi chipsets. both have different
+> >> sensititivy and overall output power spec
+> >>
+> >> 2. both have different amount of antenna chains. which does make a
+> >> difference in input sensitivity
+> >>
+> >> 3. the patch ben made has no effect on qca9880 chipsets. it only
+> >> takes effect on 10.4 based chipsets like 9984
+> >
+> > The part of my patch that sums secondary frequencies should apply to
+> > wave-1 as well, but I have
+> > not verified that yet.
+> yeah. right. sorry i was just looking at total signal sum which uses
+> rssi_comb_ht
+> >
+> >
+> >> about noise floors in general. noise floors of -108 are bogus. there
+> >> is a physical limit a noise level can be.
+> >> since drivers like ath9k are doing a cyclic calibration, the noise
+> >> value might indeed change. but this calibration is
+> >> not running in realtime. its cyclic. i'm not aware if chipsets like
+> >> qca988x are going the same way, but since qca988x
+> >> has sime similaries with ath9k chipsets unlike the newer 9984
+> >> variants, it could be. the 30 seconds mentioned
+> >> in the bug report fits to my expectations of the early noisefloor
+> >> calibration which has a short delay and after success
+> >> turning to use a long delay. anyway. in this early calibration phase
+> >> signals might change and will stabilize after. this isnt a issue
+> >> since your connection will work anyway even if it might take a little
+> >> bit longer if you have poor signal levels
+> >>
+> >> @ben. am i wrong or what do think?
+> >
+> > I don't know enough about how the noise floor calculations are done or
+> > how the apply to settings
+> > to know the answer.
+> >
+> > I will be happy in general if ath10k wave-1, wave-2, and ath9k report
+> > similar RSSI for similar
+> > setups.
+> that will not work. you compare different chipsets and depending on the
+> implementation by the card vendor
+> rf sensitivity can be very diffent. the same goes for output power. some
+> vendors are using additional rf amps
+> for enhancing output power (ubiquiti is best example here). this these
+> amps also may have influence to sensitivity.
+> on these cards you set 10 db output power, but in fact it outputs 18 db.
+> so there is a bias offset on these cards or devices. (the offset is
+> depending on the device model)
+>
+> what you measure is what the chip receives, but not what was lost on the
+> pcb layout. (or was even generated in case of noise)
+> and when it comes to calibration data. correct would be if each
+> individual card is calibrated before shipment. in reality manufactures
+> are doing calibration on a single reference card and clone it on all
+> following cards to save time. the result depends on day or week of
+> production
+> and current position of the moon and sun. errors of +- 2 db are common
+> here. (this is not a fact for all card or device vendors)
+>
+> >
+> > If you look at the tx-rate-power table in ath10k, for instance, you
+> > can see different MCS are transmitted
+> > at different signal levels.  So, some change from initial conditions
+> > might be because higher MCS is
+> > being transmitted after rate-ctrl scales up?
+> yes. this is modulation related. as higher the rate goes as lower the
+> power will be. thats princible of QAM.
+> and the rate control itself isnt signal but error rate based. so high
+> packet loss triggers the rate control to lower the rate which results
+> in increased output power and vice versa. but as mentioned. at card
+> startup a noise floor calibration starts which may succeed or fail.
+> if it succeeds it will turn into a long delay phase. so cyclic
+> calibration. the calibration time is exactly 30 seconds (minimum) and if
+> it fails it can
+> exceed to 60 seconds. after that time it will sleep for 300 seconds and
+> will check for recalibration conditions. (there are rules like high
+> noise floor changes etc.)
+> a recalibration is also triggered at channel changes  and if chipset
+> temperature changes at a certain level.
+> from what i have seen the procedure in the qca9880 firmware is exactly
+> the same as in ath9k.
+> anyway. while this calibration is running, the signal and noise floor
+> might be unstable or even bogus until this is finished and rate control
+> might not be optimal
+> under stress conditions like long range links with low signals. with
+> standard wifi usage you should not notice it that much since signal to
+> noise ratio is high enough anyway
+>
+>
+> >
+> > Lots of moving parts...
+> >
+> > Thanks,
+> > Ben
+> >
+> >>
+> >> Sebastian
+> >>
+> >> Am 18.12.2019 um 00:37 schrieb Tom Psyborg:
+> >>> also noticed now that the noise floor changes with signal strength as
+> >>> described in this bug report:
+> >>> https://www.mail-archive.com/ath10k@lists.infradead.org/msg11553.html
+> >>>
+> >>> after wifi restart
+> >>>
+> >>> iwinfo:
+> >>>
+> >>> signal: -59dBm noise: -108dBm
+> >>>
+> >>> then goes to
+> >>>
+> >>> signal: -52dBm noise: -103dBm
+> >>>
+> >>> and finally drops to
+> >>>
+> >>> signal: -59dBm noise: -103dBm
+> >>>
+> >>
+> >
 
 _______________________________________________
 ath10k mailing list
