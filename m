@@ -2,36 +2,44 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 03F47123CF1
-	for <lists+ath10k@lfdr.de>; Wed, 18 Dec 2019 03:12:47 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id E952C123D2B
+	for <lists+ath10k@lfdr.de>; Wed, 18 Dec 2019 03:37:43 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
 	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
 	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
 	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
 	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=1E7tZlewWwuWOQAhhDbRXkXH2G63vNCMR35waV3lLy4=; b=EB5q0UyZfNiMXNu64ba6i73NQ
-	HirNo45Vi2ZR48b4oUjnbuWjwyxJRX3a1AiQr3SX295Ng9mW46eY4Io9gbqn5iH0X202pAXkigAab
-	faXLOpf7jWaW7zqnuhHu9ut7OVn2ANuBFvhgDwZy2AD8ZlDxap46VCVips6tQ8IX/jnD4Z33Exryg
-	1sGmMKDcTFQ1B3+5PYwCjB7t5OsLNgpxm2yHTikokPQcIUFmsHYd7QPtx8huLxcKPNcFXGRp5QBVH
-	wpZdXHLaWuPrqfyQfaHdqtgxcD7Sri1VLa8KtIIrnYVrV+lR8hFf0sgiOdExVibhvQ/T6tvSpCa9g
-	zU8U353pw==;
+	 bh=rynsOKL0NkIDyEYbST4mZmdtJ8TAn/GDVpiDrol1vMc=; b=ZqYH6q8Uhy5YvKP7ZquflzwNg
+	MpI8PovjaTEi/tFM5dx4nU/AKli4lfmOXQAcxb0rLRnIGz7lUlypWeBhFDyylycNoHuzHlsmoNDYM
+	+ZEe67BjJTFFGN0NGawzqDnXOOeH4X4PIX2+Ydnd0CUaelXOJndJXBFO7oIXAgU2QyWoAKd8jO+ei
+	dvjN6ANwxAk9TxG595mwCqk5lKaeS6I+/t7koYa0oX1J1UVW2ZPO2GLu+P0MVkY0g2weQkLPYdfZ4
+	ZyrDv+gnmoRIO0+Q5ZtoN6W9IeXQyVfgcK2cIm1u+siPXwvlAKm/h5QqsQY8oBFdtlsLsxzKaregA
+	i1nfdcwQQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ihOpN-0004Ba-VQ; Wed, 18 Dec 2019 02:12:41 +0000
-Received: from smtps.newmedia-net.de ([2a05:a1c0:0:de::167]
- helo=webmail.newmedia-net.de)
- by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ihOpB-00042N-48
- for ath10k@lists.infradead.org; Wed, 18 Dec 2019 02:12:31 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=newmedia-net.de; s=mikd; 
- h=Content-Transfer-Encoding:Content-Type:In-Reply-To:MIME-Version:Date:Message-ID:From:References:Cc:To:Subject;
- bh=6WLqXU5/gbK10W8fO9D9QGVt2yPBkaTAhbB6ArSqfrQ=; 
- b=rYsCqbyhyjdCE+CC4UML99qXFhOW1lvyafL5pvD8WMYKFWIXyUQpeXPTriwKEL8htW8nJhn26QdQW6sm6+pcs29iDo7i7p4pttxRiPyvhV84FXXD7KD8wlztPz/vfhk/N3UxpUhja9ABAEfUdIskAvE9jt0nrtM2IF6E+KfpZFY=;
+	id 1ihPDZ-00055P-V6; Wed, 18 Dec 2019 02:37:41 +0000
+Received: from mail2.candelatech.com ([208.74.158.173]
+ helo=mail3.candelatech.com)
+ by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
+ id 1ihPDV-00054V-7T
+ for ath10k@lists.infradead.org; Wed, 18 Dec 2019 02:37:38 +0000
+Received: from [192.168.1.47] (unknown [50.34.171.50])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested)
+ by mail3.candelatech.com (Postfix) with ESMTPSA id 0360213C283;
+ Tue, 17 Dec 2019 18:37:33 -0800 (PST)
+DKIM-Filter: OpenDKIM Filter v2.11.0 mail3.candelatech.com 0360213C283
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=candelatech.com;
+ s=default; t=1576636654;
+ bh=3H9trgQNWBrc22X6PZNQFVkDGnRAXE2r7TDukdsqHVQ=;
+ h=Subject:To:References:Cc:From:Date:In-Reply-To:From;
+ b=nb0yZIc3xm4CgGP+DHzlq3JVfwEbNs07eAp3Nh6ERXUWG+32wtl71aAOaCNIy++rF
+ KaIe5vVmL25thAo0Fv08Ntz8EhMYE1/jbH2yGUxgZSxD/8S6d837v3JfoYc7Fhag8c
+ C0r3tGgB4QmrOPWkSf3iPCG3jUBv2pKdzequSLwU=
 Subject: Re: [PATCH] ath10k: Per-chain rssi should sum the secondary channels
-To: Tom Psyborg <pozega.tomislav@gmail.com>,
- Ben Greear <greearb@candelatech.com>
+To: Sebastian Gottschall <s.gottschall@newmedia-net.de>,
+ Tom Psyborg <pozega.tomislav@gmail.com>
 References: <20191216220747.887-1-greearb@candelatech.com>
  <a2af03e9-8b53-b297-467b-d0f07b8a002b@newmedia-net.de>
  <b5d63d96-4ba6-bbab-bf1c-a61c6c437f37@newmedia-net.de>
@@ -43,21 +51,17 @@ References: <20191216220747.887-1-greearb@candelatech.com>
  <a95e7f6d-1cb8-3188-aea4-233dce6f9330@candelatech.com>
  <CAKR_QVL0P4qYidtqLwhhacCOpx2iq+4RRhTXbGhfRnf2PUj5tA@mail.gmail.com>
  <CAKR_QV+KV1dR_QKjANL34DGJuyf3OSN8J6gs3bqcmiRCCzkdXA@mail.gmail.com>
-From: Sebastian Gottschall <s.gottschall@newmedia-net.de>
-Message-ID: <5e3f22d1-b8ba-d756-a15c-1e7ae56c1dad@newmedia-net.de>
-Date: Wed, 18 Dec 2019 03:12:22 +0100
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101
- Thunderbird/68.3.0
+ <5e3f22d1-b8ba-d756-a15c-1e7ae56c1dad@newmedia-net.de>
+From: Ben Greear <greearb@candelatech.com>
+Message-ID: <8eae96cd-a94e-abc1-4750-73f931d657d6@candelatech.com>
+Date: Tue, 17 Dec 2019 18:37:33 -0800
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101
+ Thunderbird/45.8.0
 MIME-Version: 1.0
-In-Reply-To: <CAKR_QV+KV1dR_QKjANL34DGJuyf3OSN8J6gs3bqcmiRCCzkdXA@mail.gmail.com>
-X-Received: from [2003:c9:3f0e:3a00:383d:f7f7:6179:80c8]
- by webmail.newmedia-net.de with esmtpsa (TLSv1:AES128-SHA:128)
- (Exim 4.72) (envelope-from <s.gottschall@newmedia-net.de>)
- id 1ihOnl-00065C-Qy; Wed, 18 Dec 2019 03:11:01 +0100
+In-Reply-To: <5e3f22d1-b8ba-d756-a15c-1e7ae56c1dad@newmedia-net.de>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191217_181229_525680_CC84B1F5 
-X-CRM114-Status: UNSURE (   9.15  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20191217_183737_318125_86E5D505 
+X-CRM114-Status: GOOD (  17.42  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -90,56 +94,73 @@ Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-i dont know what you want to compare here.
-
-1. you compare 2 different wifi chipsets. both have different 
-sensititivy and overall output power spec
-
-2. both have different amount of antenna chains. which does make a 
-difference in input sensitivity
-
-3. the patch ben made has no effect on qca9880 chipsets. it only takes 
-effect on 10.4 based chipsets like 9984
 
 
-about noise floors in general. noise floors of -108 are bogus. there is 
-a physical limit a noise level can be.
-since drivers like ath9k are doing a cyclic calibration, the noise value 
-might indeed change. but this calibration is
-not running in realtime. its cyclic. i'm not aware if chipsets like 
-qca988x are going the same way, but since qca988x
-has sime similaries with ath9k chipsets unlike the newer 9984 variants, 
-it could be. the 30 seconds mentioned
-in the bug report fits to my expectations of the early noisefloor 
-calibration which has a short delay and after success
-turning to use a long delay. anyway. in this early calibration phase 
-signals might change and will stabilize after. this isnt a issue
-since your connection will work anyway even if it might take a little 
-bit longer if you have poor signal levels
+On 12/17/2019 06:12 PM, Sebastian Gottschall wrote:
+> i dont know what you want to compare here.
+>
+> 1. you compare 2 different wifi chipsets. both have different sensititivy and overall output power spec
+>
+> 2. both have different amount of antenna chains. which does make a difference in input sensitivity
+>
+> 3. the patch ben made has no effect on qca9880 chipsets. it only takes effect on 10.4 based chipsets like 9984
 
-@ben. am i wrong or what do think?
+The part of my patch that sums secondary frequencies should apply to wave-1 as well, but I have
+not verified that yet.
 
-Sebastian
 
-Am 18.12.2019 um 00:37 schrieb Tom Psyborg:
-> also noticed now that the noise floor changes with signal strength as
-> described in this bug report:
-> https://www.mail-archive.com/ath10k@lists.infradead.org/msg11553.html
+> about noise floors in general. noise floors of -108 are bogus. there is a physical limit a noise level can be.
+> since drivers like ath9k are doing a cyclic calibration, the noise value might indeed change. but this calibration is
+> not running in realtime. its cyclic. i'm not aware if chipsets like qca988x are going the same way, but since qca988x
+> has sime similaries with ath9k chipsets unlike the newer 9984 variants, it could be. the 30 seconds mentioned
+> in the bug report fits to my expectations of the early noisefloor calibration which has a short delay and after success
+> turning to use a long delay. anyway. in this early calibration phase signals might change and will stabilize after. this isnt a issue
+> since your connection will work anyway even if it might take a little bit longer if you have poor signal levels
 >
-> after wifi restart
+> @ben. am i wrong or what do think?
+
+I don't know enough about how the noise floor calculations are done or how the apply to settings
+to know the answer.
+
+I will be happy in general if ath10k wave-1, wave-2, and ath9k report similar RSSI for similar
+setups.
+
+If you look at the tx-rate-power table in ath10k, for instance, you can see different MCS are transmitted
+at different signal levels.  So, some change from initial conditions might be because higher MCS is
+being transmitted after rate-ctrl scales up?
+
+Lots of moving parts...
+
+Thanks,
+Ben
+
 >
-> iwinfo:
+> Sebastian
 >
-> signal: -59dBm noise: -108dBm
+> Am 18.12.2019 um 00:37 schrieb Tom Psyborg:
+>> also noticed now that the noise floor changes with signal strength as
+>> described in this bug report:
+>> https://www.mail-archive.com/ath10k@lists.infradead.org/msg11553.html
+>>
+>> after wifi restart
+>>
+>> iwinfo:
+>>
+>> signal: -59dBm noise: -108dBm
+>>
+>> then goes to
+>>
+>> signal: -52dBm noise: -103dBm
+>>
+>> and finally drops to
+>>
+>> signal: -59dBm noise: -103dBm
+>>
 >
-> then goes to
->
-> signal: -52dBm noise: -103dBm
->
-> and finally drops to
->
-> signal: -59dBm noise: -103dBm
->
+
+-- 
+Ben Greear <greearb@candelatech.com>
+Candela Technologies Inc  http://www.candelatech.com
 
 _______________________________________________
 ath10k mailing list
