@@ -2,87 +2,90 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 90CB51262D0
-	for <lists+ath10k@lfdr.de>; Thu, 19 Dec 2019 14:02:32 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8BF0412631E
+	for <lists+ath10k@lfdr.de>; Thu, 19 Dec 2019 14:15:30 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
-	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=sGMx1ALTIgvkJ/O5vuQSV5GMBOU3i9XN81gWUlJV4a4=; b=a5GfPtk01agwwj
-	ecB3a7Vbax5hwyEvbWZf2L4uHqY9VeSGcZZl7/pEXQxP/8V/HvYAzaUSEkEmim8Oj/3StLqdziXWg
-	jlUGoyKsTbBI7uakeUkz5p6PSGpISNFFHiduu2sBNIyw9P4un78i8Fe/coSUauIxzlQaEWDcwYWmF
-	2X9NVKlp51Z+OkoqmiXf7py7Aq8VisZT4O/Br6ZGgPpUs2dWW0NtcvxtaMrzWS6gng1g6/+UYS+HB
-	zHAtkt2N1FVlnNUkzcSXEOvS829AjfJoeGnNerVsUhrKsc8T8OvCdk4Lkj2XverRH8aaVQYYW8qOQ
-	jAhYVLI3XhB/85fU4GIA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=VTK3NtwmvOBmCmEL2GPqCLZ9vKV8rRNd4xRjVoaKFcE=; b=RkWxe399WX6lJy
+	gdhQQdST5yhZQj7mk6gSGBLCIWGfcCUY672V4oo3gj3ogg3StbWNcT+EZCkIRYc5rcEZ8oUxBizAN
+	qR7WUtdIxHEfwSSVvD+fYnOzez8k2Xn9NFobxWgJoxwHQ5nvN09mQT52X07v0St3sp6z4XbwlLmbz
+	atJHH39s1c7LoSYQeYElHP5sR9VYcehTnAwkdCyBg2fUi69Hzz90+JRsGctsKC+xPaG8k7RtPjnBU
+	kAOHkS19cRNbrQkousZkPRgzVy7yWyy4tb9gjr6ZKveG+u+/RXDC6WDk/ORzjQzY02XA3I4uzfOq0
+	pelBhfDlRzkS7Qy6r4GA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ihvRh-00053w-QA; Thu, 19 Dec 2019 13:02:25 +0000
-Received: from mail26.static.mailgun.info ([104.130.122.26])
+	id 1ihveK-00026s-RB; Thu, 19 Dec 2019 13:15:28 +0000
+Received: from mail-ed1-x544.google.com ([2a00:1450:4864:20::544])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ihvRc-00052v-R2
- for ath10k@lists.infradead.org; Thu, 19 Dec 2019 13:02:22 +0000
-DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
- q=dns/txt; 
- s=smtp; t=1576760540; h=Date: Message-Id: Cc: To: References:
- In-Reply-To: From: Subject: Content-Transfer-Encoding: MIME-Version:
- Content-Type: Sender; bh=G5+Jkm2dPR/VOa+pmA3els3GZLK825N+nliQuh2uYAg=;
- b=L3NxO6VpIroHp9F64nIrQBho0L+x7jdEFSvT2ARJeeZiZTBPYfcLeO6KfphXeW04BxgvN8FZ
- 8j1I5y2eKKhqIFbdZrUqCnCu5N3WRdR0dU8u/la3COZPTe5P6UCfPbOUDuHJnbWQnDSggpxL
- UR6zj2Z7kFMi0ez+/0CAG/xrO+U=
-X-Mailgun-Sending-Ip: 104.130.122.26
-X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
-Received: from smtp.codeaurora.org
- (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
- by mxa.mailgun.org with ESMTP id 5dfb74d7.7faefc367810-smtp-out-n02;
- Thu, 19 Dec 2019 13:02:15 -0000 (UTC)
-Received: by smtp.codeaurora.org (Postfix, from userid 1001)
- id A627AC433CB; Thu, 19 Dec 2019 13:02:15 +0000 (UTC)
-X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
- aws-us-west-2-caf-mail-1.web.codeaurora.org
-X-Spam-Level: 
-X-Spam-Status: No, score=0.5 required=2.0 tests=ALL_TRUSTED,MISSING_DATE,
- MISSING_MID,SPF_NONE autolearn=no autolearn_force=no version=3.4.0
-Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
- [88.114.240.156])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested) (Authenticated sender: kvalo)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 90A83C43383;
- Thu, 19 Dec 2019 13:02:14 +0000 (UTC)
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 90A83C43383
-Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
- dmarc=none (p=none dis=none) header.from=codeaurora.org
-Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
- spf=none smtp.mailfrom=kvalo@codeaurora.org
+ id 1ihveG-00026E-IX
+ for ath10k@lists.infradead.org; Thu, 19 Dec 2019 13:15:25 +0000
+Received: by mail-ed1-x544.google.com with SMTP id f8so4844603edv.2
+ for <ath10k@lists.infradead.org>; Thu, 19 Dec 2019 05:15:22 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=B+Ei4HzxmBsPDZTHsP8DZ9d6KPTrEHJVVPZdhv56adw=;
+ b=awGrenJDW7xKsLpiPGeIRrNo2A6uiQq9t9EbV7eHgKbZd1UBgDN85SFMihKdxt44j+
+ McN6qtLM1968DRzpP0a3v1ukyOodwO29cpQTXazvDOHdqsYuLciQ55UDCyfH+YdBIzMq
+ e49/fSYwOLqpnkDyCM7423wQOymJVFx9tuO+4fdWihvKsrcHQOtw/Z//n47v3AOFLdi8
+ brJY7pAPzOpBHP2CpfB/576DEtHzcWed93QDWBBfdlUSxAchDeMGW4TcBgkotPbzDVsG
+ ndCmD8SioCy8XIc/BYIZKmVa4g5oVP+OhjkzBlqEJOiSJPmIpaQoNw4E9LQYgfptBYm3
+ Y6Dg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=B+Ei4HzxmBsPDZTHsP8DZ9d6KPTrEHJVVPZdhv56adw=;
+ b=HUd0RbmBndDNn5bu8VlmkRtAHbBX3eaNIJh7xCi/ykCuDBUzgdS3DRQrPCZak3QQpo
+ VOG2TS7poUwu16Y3+c1SPwtUVwzA32nGUw5FSupa+S7u5zwAz0lLPfFWxbrQD8lTmr4r
+ w9ZlAH5s3mVt1lksHeDbSgDvFNb9rZdem0PwsqRc1k94IYufLNfQW1OQPV5qIBf3/zI4
+ cj82BQ0b48cynI1GgMdFkZ0hDsRbh9HEnFZf1qorB575TV3O50qeEMH4YiXZ53tzhdEA
+ ExLGd6n2iM+M45CdjAAbP01mbqFnfbWefTUvyQUmV+tBQaZX0td7dcZN69l3hh0nm6BD
+ mYOw==
+X-Gm-Message-State: APjAAAVKVT1KoNqwh3Xxm94sMC5ikgG4Gagr2QigT5Y4Rkn+9KXJtrgp
+ cQDnFc2/vV0cjcAAgDzqxV8XsrP3rLM=
+X-Google-Smtp-Source: APXvYqymawJmDlguUa+XbUmftPeGxh/G8AqwTN3gz+ZSDE2nbWk2kcAbb2U2kwmtlKldOU5GpAIRBg==
+X-Received: by 2002:a17:906:19ca:: with SMTP id
+ h10mr9395261ejd.282.1576761321093; 
+ Thu, 19 Dec 2019 05:15:21 -0800 (PST)
+Received: from localhost.localdomain ([176.61.57.127])
+ by smtp.gmail.com with ESMTPSA id cw15sm410286edb.44.2019.12.19.05.15.20
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Thu, 19 Dec 2019 05:15:20 -0800 (PST)
+From: Bryan O'Donoghue <bryan.odonoghue@linaro.org>
+To: kvalo@codeaurora.org,
+	akolli@codeaurora.org,
+	ath10k@lists.infradead.org
+Subject: [PATCH 0/2] ath10k: pci: Two PCI related fixups
+Date: Thu, 19 Dec 2019 13:15:37 +0000
+Message-Id: <20191219131539.1003793-1-bryan.odonoghue@linaro.org>
+X-Mailer: git-send-email 2.24.0
 MIME-Version: 1.0
-Subject: Re: [PATCH,
- v3] Revert "ath10k: fix DMA related firmware crashes on multiple
- devices"
-From: Kalle Valo <kvalo@codeaurora.org>
-In-Reply-To: <0101016ef916f2e7-28683312-1d0b-4c2e-b967-c13c3e45ce31-000000@us-west-2.amazonses.com>
-References: <0101016ef916f2e7-28683312-1d0b-4c2e-b967-c13c3e45ce31-000000@us-west-2.amazonses.com>
-To: Zhi Chen <zhichen@codeaurora.org>
-User-Agent: pwcli/0.0.0-git (https://github.com/kvalo/pwcli/) Python/2.7.12
-Message-Id: <20191219130215.A627AC433CB@smtp.codeaurora.org>
-Date: Thu, 19 Dec 2019 13:02:15 +0000 (UTC)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191219_050220_943783_0BB534DD 
-X-CRM114-Status: GOOD (  10.93  )
-X-Spam-Score: -0.0 (/)
+X-CRM114-CacheID: sfid-20191219_051524_611457_A1D91B22 
+X-CRM114-Status: UNSURE (   6.91  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [104.130.122.26 listed in list.dnswl.org]
+ no trust [2a00:1450:4864:20:0:0:0:544 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [104.130.122.26 listed in wl.mailspike.net]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -94,50 +97,47 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org
+Cc: Bryan O'Donoghue <bryan.odonoghue@linaro.org>,
+ linux-wireless@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Zhi Chen <zhichen@codeaurora.org> wrote:
+This set addresses two issues one a contrived but real corner-case crash
+scenario and the other a simple typo.
 
-> This reverts commit 76d164f582150fd0259ec0fcbc485470bcd8033e.
-> PCIe hung issue was observed on multiple platforms. The issue was 
-> reproduced
-> when DUT was configured as AP and associated with 50+ STAs.
-> 
-> For QCA9984/QCA9888, the DMA_BURST_SIZE register controls the AXI burst 
-> size
-> of the RD/WR access to the HOST MEM.
-> 0 - No split , RAW read/write transfer size from MAC is put out on bus
->      as burst length
-> 1 - Split at 256 byte boundary
-> 2,3 - Reserved
-> 
-> With PCIe protocol analyzer, we can see DMA Read crossing 4KB boundary 
-> when
-> issue happened. It broke PCIe spec and caused PCIe stuck. So revert
-> the default value from 0 to 1.
-> 
-> Tested:  IPQ8064 + QCA9984 with firmware 10.4-3.10-00047
->           QCS404 + QCA9984 with firmware 10.4-3.9.0.2--00044
->           Synaptics AS370 + QCA9888  with firmware 10.4-3.9.0.2--00040
-> 
-> Signed-off-by: Zhi Chen <zhichen@codeaurora.org>
+Debugging on a QCS405 which has an ath10k attached to PCIe its been found
+that a loop similar to the below [1] will cause.
 
-Fails to apply:
+1. A significant slow-down in the time it takes an individual ioread32()
+   to complete.
+2. A secure watchdog bite.
 
-error: patch failed: drivers/net/wireless/ath/ath10k/hw.h:813
-error: drivers/net/wireless/ath/ath10k/hw.h: patch does not apply
-stg import: Diff does not apply cleanly
+This is as a result of the restart routine and the dump register routine
+running in parallel and a period of time during restart where dumping
+registers is unstable.
 
-Patch set to Changes Requested.
+The second patch is a simple fix to an apparent copy/paste error describing
+the behavior of a similar dump function.
+
+[1] Reset method
+while $1
+do
+echo hw-restart > /sys/kernel/debug/ieee80211/phy0/ath10k/simulate_fw_crash
+echo hard >  /sys/kernel/debug/ieee80211/phy0/ath10k/simulate_fw_crash
+done;
+
+Bryan O'Donoghue (2):
+  ath10k: pci: Only dump ATH10K_MEM_REGION_TYPE_IOREG when safe
+  ath10k: pci: Fix comment on ath10k_pci_dump_memory_sram
+
+ drivers/net/wireless/ath/ath10k/pci.c | 21 ++++++++++++++++++---
+ 1 file changed, 18 insertions(+), 3 deletions(-)
 
 -- 
-https://patchwork.kernel.org/patch/11287143/
+2.24.0
 
-https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
 
 _______________________________________________
 ath10k mailing list
