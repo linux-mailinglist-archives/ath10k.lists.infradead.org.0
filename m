@@ -2,76 +2,91 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 610B2125DF1
-	for <lists+ath10k@lfdr.de>; Thu, 19 Dec 2019 10:45:26 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 69A40125EF1
+	for <lists+ath10k@lfdr.de>; Thu, 19 Dec 2019 11:32:03 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Content-ID:In-Reply-To:
-	References:Message-ID:Date:Subject:To:From:Reply-To:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	References:In-Reply-To:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=rZxrHTkj2ph9ttrG6217w/RqfF0CKJ7gAmcm7R/PRis=; b=ry1HBN70vzPeRv
-	Nf0fo1aruJ8EqFerwr5+OFHqXJS7lDeo63geZFoElJSHeyRzT9int0gg+NjgkPtJBjEx1SV4a+fin
-	9a9q/hopQKen6cCbrKwnG6R7cJmRaX3m5/epRG+Gf96I4cO8w75eAzgsi5NK0pIaGJEfok4JBGijf
-	KAe37x+3E+G7V8u+fTBgXIH2kYpLJ0/AusB8/xb3iga30NB2Y35S9LD2GxWxXEEmlAETedxKVLpis
-	DOq1OKuPPwnXoD3kXgDtkCGWXW7Eh7UIMYcFtVIrVKsnTMOUQMudn32k1AXDovQAu/jZB0XOffO/b
-	i6S58xPulesYT1wPFzfA==;
+	List-Owner; bh=h471S+69/BQV0o3b+WCeL3hjQJsuuIIHEvV5m/mGXrI=; b=mP91EaM3VyH2Vr
+	iNd892NZOJeAElqs5uohfvuuwOuab324p+4LAeJda2FTHK7/zz+7M7uuHMCd/QQ5txiVZko/QRd1y
+	2u5W7m6dkjxUsWNywIth4CGlvTtUHDwKSpKwG+lglE20YpFRE8Aa7gkNLsKBGr6nJwIuEtK2A87HV
+	LZUIQ4HAAunJxkEuddU0wbxv95ETvl+O3NxaZBC2BEIQ7XxDizI7/T8tKilchBP9OkHb5e+164u0w
+	APtCVsWl0WjtSNmuJPQSWns8bx1fw7sH1V6MZv1OeraE4yQIJJIFRJsImLN4Y3hagrhhrv/zZyacS
+	U2z+AsZFqT2gAC1xnqaQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ihsN3-0002tu-25; Thu, 19 Dec 2019 09:45:25 +0000
-Received: from rtits2.realtek.com ([211.75.126.72] helo=rtits2.realtek.com.tw)
- by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat
- Linux)) id 1ihsMy-0002rX-LF
- for ath10k@lists.infradead.org; Thu, 19 Dec 2019 09:45:22 +0000
-Authenticated-By: 
-X-SpamFilter-By: BOX Solutions SpamTrap 5.62 with qID xBJ9jFDW003133,
- This message is accepted by code: ctloc85258
-Received: from mail.realtek.com (RTITCAS12.realtek.com.tw[172.21.6.16])
- by rtits2.realtek.com.tw (8.15.2/2.57/5.78) with ESMTPS id xBJ9jFDW003133
- (version=TLSv1.2 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT);
- Thu, 19 Dec 2019 17:45:15 +0800
-Received: from RTEXMB03.realtek.com.tw (172.21.6.96) by
- RTITCAS12.realtek.com.tw (172.21.6.16) with Microsoft SMTP Server (TLS) id
- 14.3.468.0; Thu, 19 Dec 2019 17:45:15 +0800
-Received: from RTEXMB04.realtek.com.tw (172.21.6.97) by
- RTEXMB03.realtek.com.tw (172.21.6.96) with Microsoft SMTP Server
- (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256) id
- 15.1.1779.2; Thu, 19 Dec 2019 17:45:15 +0800
-Received: from RTEXMB04.realtek.com.tw ([fe80::d9c5:a079:495e:b999]) by
- RTEXMB04.realtek.com.tw ([fe80::d9c5:a079:495e:b999%6]) with mapi id
- 15.01.1779.005; Thu, 19 Dec 2019 17:45:15 +0800
-From: Pkshih <pkshih@realtek.com>
-To: "kvalo@codeaurora.org" <kvalo@codeaurora.org>,
- "ath10k@lists.infradead.org" <ath10k@lists.infradead.org>
-Subject: Re: [PATCH 2/2] ath10k: allow dynamic SAR power limits to be
- configured
-Thread-Topic: [PATCH 2/2] ath10k: allow dynamic SAR power limits to be
- configured
-Thread-Index: AQHVtbqgmfC7L3CRJUO4KPQhAXkz/6fAsHQA
-Date: Thu, 19 Dec 2019 09:45:14 +0000
-Message-ID: <1576748714.7758.18.camel@realtek.com>
-References: <1576684108-30177-1-git-send-email-kvalo@codeaurora.org>
- <1576684108-30177-3-git-send-email-kvalo@codeaurora.org>
-In-Reply-To: <1576684108-30177-3-git-send-email-kvalo@codeaurora.org>
-Accept-Language: en-US, zh-TW
-Content-Language: zh-TW
-X-MS-Has-Attach: 
-X-MS-TNEF-Correlator: 
-x-originating-ip: [172.21.69.95]
-Content-ID: <7E4378CAE2EA9E4480D1745429D99BF2@realtek.com>
+	id 1iht69-000473-IZ; Thu, 19 Dec 2019 10:32:01 +0000
+Received: from mail-ot1-x342.google.com ([2607:f8b0:4864:20::342])
+ by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
+ id 1iht65-00046Y-GE
+ for ath10k@lists.infradead.org; Thu, 19 Dec 2019 10:31:58 +0000
+Received: by mail-ot1-x342.google.com with SMTP id 77so6653337oty.6
+ for <ath10k@lists.infradead.org>; Thu, 19 Dec 2019 02:31:57 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+ :cc; bh=DLEszXaacQuiY1BjIoGn6m52GPWZFUM5WSBXLC5+nqU=;
+ b=j/yeYtDpICBA+SJzbt05tOW/PahPplwQV4ZOJ9ucdGkgfFDcE0G1s9YyKMo2zsCHZN
+ /PBs5juTVvOBGQAGIaTXLno8RiuQ6Mpg6yL809m0APZBQ1ZFXf1C8qICBQgq8+hTgsj8
+ U04JYdlI/rbv4P16uzFKDMtLoZFu8ywikTH6CIerUJhpSiWDI+jH/kfpyJm7ftDORh7h
+ IE0MDcC40edGmUDkf+IjzbZ10Zy/y2MGLZyPd5k9DghKFR9+C2RqE08w1hRr/D74Jz5q
+ fwQs7YuY50XJhVg3Cjo1S+cGbkhG1DQSNXq0dNfk8WWXW1KS9gqiQ3jThuIwBiV74P5n
+ +2FQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+ :message-id:subject:to:cc;
+ bh=DLEszXaacQuiY1BjIoGn6m52GPWZFUM5WSBXLC5+nqU=;
+ b=WX/mQpJZ31I+t4rom6t94jELygSLRmLDlGR0XRq2Mpdfs864OZnHvxWntHVWXtYUdp
+ XonfbP0kU/emrOF1Ul+xVKylOWZpLIfGT+ARdzGjE4sOHkhguJX3KsqHLgrAPyXNRq7p
+ MbIOKjYl56NnKuQarl1y1d6a2V9OI2Rq6JuKxN1o3K4sJJ0qndJTcvR2m3rGE4ZzTg4Y
+ DULQB0XMvcAHpe0hATopZhRrq6H7DkPljaTgMhkldtsCWJ+GtAKxoAGWeED+pH+yzjwh
+ xLNASJ53pVoqyNXmcNtw9a4LfdAhSQMLjTMwBr+yMKqn4FaPdxRT3sXclrI0YTssjJc0
+ u0zw==
+X-Gm-Message-State: APjAAAVJoJf7kWWnYoG92aI7IkIIUyf+c7KqVpfTIgyr4imMfYYTd6rK
+ ssJ5jiDSNNdaIUbGy42/6kTFPyJwDq9ORLXicYY=
+X-Google-Smtp-Source: APXvYqx71mdsFZDaUgRQ7Z+PzB+5glVEdowDZbofAdFjoFbb7Nfqol4pOGu/W4hQH/S8p7UB/s8LOlTjKTGOuP443YQ=
+X-Received: by 2002:a05:6830:1116:: with SMTP id
+ w22mr8263740otq.63.1576751516699; 
+ Thu, 19 Dec 2019 02:31:56 -0800 (PST)
 MIME-Version: 1.0
+Received: by 2002:a9d:362:0:0:0:0:0 with HTTP;
+ Thu, 19 Dec 2019 02:31:56 -0800 (PST)
+In-Reply-To: <d24c7821-4e5e-28b5-5d1d-f076cfd762fc@newmedia-net.de>
+References: <20191216092207.31032-1-john@phrozen.org>
+ <20191217153000.76AB1C4479C@smtp.codeaurora.org>
+ <CAKR_QVJVfqid8i5PXj3Yg8VJjht=MF2fZg+twkLgEkKuMB2bbQ@mail.gmail.com>
+ <CAKR_QVJ1PhCHfAO5Rp6pm-wjAO-HcZiq-9Lw67FzBFO5jjYtbA@mail.gmail.com>
+ <d24c7821-4e5e-28b5-5d1d-f076cfd762fc@newmedia-net.de>
+From: Tom Psyborg <pozega.tomislav@gmail.com>
+Date: Thu, 19 Dec 2019 11:31:56 +0100
+Message-ID: <CAKR_QVLKfoo15EqszGSZ9zf6YnfEkih9=PeB0d92k3i0SJZfxQ@mail.gmail.com>
+Subject: Re: [RESEND] ath10k: add tx hw 802.11 encapusaltion offloading support
+To: Sebastian Gottschall <s.gottschall@newmedia-net.de>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191219_014520_835531_9D332DB1 
-X-CRM114-Status: GOOD (  17.21  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20191219_023157_565224_3BE1C1F8 
+X-CRM114-Status: GOOD (  10.37  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [211.75.126.72 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (pozega.tomislav[at]gmail.com)
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:342 listed in]
+ [list.dnswl.org]
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -83,59 +98,45 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: "linux-wireless@vger.kernel.org" <linux-wireless@vger.kernel.org>
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Cc: Vasanthakumar Thiagarajan <vthiagar@qti.qualcomm.com>,
+ linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
+ John Crispin <john@phrozen.org>, Johannes Berg <johannes@sipsolutions.net>,
+ Kalle Valo <kvalo@codeaurora.org>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-T24gV2VkLCAyMDE5LTEyLTE4IGF0IDE3OjQ4ICswMjAwLCBLYWxsZSBWYWxvIHdyb3RlOg0KPiBG
-cm9tOiBXZW4gR29uZyA8d2dvbmdAY29kZWF1cm9yYS5vcmc+DQo+IA0KPiBBZGQgc3VwcG9ydCBm
-b3IgYSB2ZW5kb3IgY29tbWFuZCBmb3IgU1RBVElPTiwgdGhlIGNvbW1hbmQNCj4gUUNBX05MODAy
-MTFfVkVORE9SX1NVQkNNRF9TRVRfU0FSX0xJTUlUUyB3aGljaCBpcyBhbHJlYWR5IGRlZmluZWQg
-aW4NCj4gZ2l0Oi8vdzEuZmkvaG9zdGFwLmdpdCAoc3JjL2NvbW1hbmQvcWNhLXZlbmRvci5oKS4g
-VGhpcyBhbGxvd3MgdXNlcg0KPiBzcGFjZSB0byBjb25maWd1cmUgcG93ZXIgbGltaXRzIGZvciAy
-LjQgR0h6IGFuZCA1IEdIeiBiYW5kcy4NCj4gDQo+IGF0aDEwayBzZXQgcGRldiBwYXJhbWV0ZXIg
-V01JX1BERVZfUEFSQU1fVFhQT1dFUl9MSU1JVDJHIGFuZA0KPiBXTUlfUERFVl9QQVJBTV9UWFBP
-V0VSX0xJTUlUNUcgdG8gZmlybXdhcmUsIHRoZSAyIHZhbHVlIHdpbGwNCj4gYmUgdXNlZCBhcyBv
-bmUgaW5wdXQgc291cmNlIHRvIGFmZmVjdCB0aGUgdHggcG93ZXIuDQo+IA0KPiBXaGVuIFFDQV9O
-TDgwMjExX1ZFTkRPUl9TVUJDTURfU0VUX1NBUl9MSU1JVFMgc2V0IHRvIGF0aDEwaywgaXQgd2ls
-bA0KPiBiZSBzYXZlZCB0aGUgMi40RyBhbmQgNUcgbGltaXQgdmFsdWUsIElmIFNUQVRJT04gaXMg
-Y29ubmVjdGVkIG1lYW53aGlsZSwNCj4gdGhlbiB0aGUgMi40RyBhbmQgNUcgV01JIGNvbW1hbmQg
-d2lsbCBiZSBzZXQgdG8gZmlybXdhcmUsIG90aGVyd2lzZQ0KPiBpdCB3aWxsIG5vdCBzZXQgdG8g
-ZmlybXdhcmUgYXQgdGhpcyBtb21lbnQuIFdoZW4gU1RBVElPTiBjb25uZWN0DQo+IG5leHQgdGlt
-ZSwgaXQgd2lsbCBzZXQgdG8gZmlybXdhcmUuDQo+IA0KPiBUZXN0ZWQgd2l0aCBRQ0E2MTc0IFNE
-SU8gd2l0aCBmaXJtd2FyZSBXTEFOLlJNSC40LjQuMS0wMDAyOS4NCj4gDQo+IFNpZ25lZC1vZmYt
-Ynk6IFdlbiBHb25nIDx3Z29uZ0Bjb2RlYXVyb3JhLm9yZz4NCj4gU2lnbmVkLW9mZi1ieTogS2Fs
-bGUgVmFsbyA8a3ZhbG9AY29kZWF1cm9yYS5vcmc+DQo+IC0tLQ0KPiDCoGRyaXZlcnMvbmV0L3dp
-cmVsZXNzL2F0aC9hdGgxMGsvTWFrZWZpbGUgfMKgwqDCoDEgKw0KPiDCoGRyaXZlcnMvbmV0L3dp
-cmVsZXNzL2F0aC9hdGgxMGsvY29yZS5jwqDCoMKgfMKgwqDCoDIgKw0KPiDCoGRyaXZlcnMvbmV0
-L3dpcmVsZXNzL2F0aC9hdGgxMGsvY29yZS5owqDCoMKgfMKgwqDCoDIgKw0KPiDCoGRyaXZlcnMv
-bmV0L3dpcmVsZXNzL2F0aC9hdGgxMGsvaHcuaMKgwqDCoMKgwqB8wqDCoMKgMyArDQo+IMKgZHJp
-dmVycy9uZXQvd2lyZWxlc3MvYXRoL2F0aDEway9tYWMuY8KgwqDCoMKgfMKgwqA2NCArKysrKysr
-KysrKysrKysrKw0KPiDCoGRyaXZlcnMvbmV0L3dpcmVsZXNzL2F0aC9hdGgxMGsvbWFjLmjCoMKg
-wqDCoHzCoMKgwqAyICstDQo+IMKgZHJpdmVycy9uZXQvd2lyZWxlc3MvYXRoL2F0aDEway92ZW5k
-b3IuYyB8IDExNA0KPiArKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrDQo+IMKgZHJpdmVy
-cy9uZXQvd2lyZWxlc3MvYXRoL2F0aDEway92ZW5kb3IuaCB8wqDCoDEzICsrKysNCj4gwqBkcml2
-ZXJzL25ldC93aXJlbGVzcy9hdGgvYXRoMTBrL3dtaS5owqDCoMKgwqB8wqDCoMKgNiArKw0KPiDC
-oDkgZmlsZXMgY2hhbmdlZCwgMjA2IGluc2VydGlvbnMoKyksIDEgZGVsZXRpb24oLSkNCj4gwqBj
-cmVhdGUgbW9kZSAxMDA2NDQgZHJpdmVycy9uZXQvd2lyZWxlc3MvYXRoL2F0aDEway92ZW5kb3Iu
-Yw0KPiDCoGNyZWF0ZSBtb2RlIDEwMDY0NCBkcml2ZXJzL25ldC93aXJlbGVzcy9hdGgvYXRoMTBr
-L3ZlbmRvci5oDQo+IA0KDQpbLi4uXQ0KDQo+IGRpZmYgLS1naXQgYS9kcml2ZXJzL25ldC93aXJl
-bGVzcy9hdGgvYXRoMTBrL3dtaS5oDQo+IGIvZHJpdmVycy9uZXQvd2lyZWxlc3MvYXRoL2F0aDEw
-ay93bWkuaA0KPiBpbmRleCA5NzJkNTNkNzc2NTQuLmYwY2FkYWExMjM5OSAxMDA2NDQNCj4gLS0t
-IGEvZHJpdmVycy9uZXQvd2lyZWxlc3MvYXRoL2F0aDEway93bWkuaA0KPiArKysgYi9kcml2ZXJz
-L25ldC93aXJlbGVzcy9hdGgvYXRoMTBrL3dtaS5oDQo+IEBAIC0zNjk1LDYgKzM2OTUsMTIgQEAg
-c3RydWN0IHdtaV9jc2FfZXZlbnQgew0KPiDCoCNkZWZpbmUgVkRFVl9ERUZBVUxUX1NUQVRTX1VQ
-REFURV9QRVJJT0TCoMKgwqDCoDUwMA0KPiDCoCNkZWZpbmUgUEVFUl9ERUZBVUxUX1NUQVRTX1VQ
-REFURV9QRVJJT0TCoMKgwqDCoDUwMA0KPiDCoA0KPiArLyogdGhlIG1hc2sgb2YgNCBzdWIgYmFu
-ZCBvZiA1RyBmb3IgU0FSIHBhcmFtZXRlcnMgKi8NCj4gKyNkZWZpbmUgQVRIMTBLX1dNSV9TQVJf
-NUdfMF9NQVNLIEdFTk1BU0soNywgMCkNCj4gKyNkZWZpbmUgQVRIMTBLX1dNSV9TQVJfNUdfMV9N
-QVNLIEdFTk1BU0soMTUsIDgpDQo+ICsjZGVmaW5lIEFUSDEwS19XTUlfU0FSXzVHXzJfTUFTSyBH
-RU5NQVNLKDIzLCAxNikNCj4gKyNkZWZpbmUgQVRIMTBLX1dNSV9TQVJfNUdfM19NQVNLIEdFTk1B
-U0soMzEsIDI0KQ0KPiArDQoNClRoZXNlIG1hc2tzIGFyZW4ndCB1c2VkLg0KRG8geW91IHVzZSAn
-dTMyJyBhcyBmb3VyICd1OCcgU0FSIHBvd2VyIGxpbWl0IGZvciBmb3VyIGJhbmRzPw0KDQo+IMKg
-c3RydWN0IHdtaV9wZGV2X3BhcmFtX21hcCB7DQo+IMKgCXUzMiB0eF9jaGFpbl9tYXNrOw0KPiDC
-oAl1MzIgcnhfY2hhaW5fbWFzazsNCl9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
-X19fX19fX19fX19fCmF0aDEwayBtYWlsaW5nIGxpc3QKYXRoMTBrQGxpc3RzLmluZnJhZGVhZC5v
-cmcKaHR0cDovL2xpc3RzLmluZnJhZGVhZC5vcmcvbWFpbG1hbi9saXN0aW5mby9hdGgxMGsK
+On 19/12/2019, Sebastian Gottschall <s.gottschall@newmedia-net.de> wrote:
+>
+> Am 18.12.2019 um 23:45 schrieb Tom Psyborg:
+>> ccing Johannes Berg since upstream change (mac80211-next) breaks build:
+>>
+>> In the commit log its written: remove SUPPORTS_80211_ENCAP HW flag
+>>
+>> Any sane reasons for doing that? mac80211 fails to build because of
+>> removed flags, this is on backports-5.3-rc4
+>>
+>> Other than that the feature delivers the promised:
+>> QCA9880 iperf between wired and wireless machine
+>> native mode 449Mbps
+>> ethernet mode 522Mbps
+> johns patch does not work for qca9880 wave 1 chipsets. it works only for
+> 10.4 firmares like 9984, ipq40xx  etc. the 9880 has no benefit from it
+> and has no effect.
+>
+> so your test seem to have false results
+>
+> Sebastian
+>
+>>
+>
+
+no way. check that you applied code correctly and enabled ethernetmode
+parameter. iperf or ping also wouldn't start from wired machine in
+ethernetmode unless pinged from wireless machine first
+
+_______________________________________________
+ath10k mailing list
+ath10k@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/ath10k
