@@ -2,82 +2,81 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6AE14126360
-	for <lists+ath10k@lfdr.de>; Thu, 19 Dec 2019 14:24:30 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id D08FA126361
+	for <lists+ath10k@lfdr.de>; Thu, 19 Dec 2019 14:24:32 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=fMOvdbPJuM7n+n+Jjmlrff8/ZSXB2ZE2rmSQPbFtZYM=; b=CWH+aiR7Vv87v8
-	SUhT51NmQraqbumLS300/IH6KXXgWoLTVp27suKvqAV7EUZ2nRj4p3GXQA9EdN9Eghq7TlpyOWTjA
-	+TlMd/3wvu6AK6VtI+L7aiNv2hyeY0D9g0tORkvjnm6sIXq8sbtLyDhmRrtDXzFEr1MFY9jL6tvXw
-	lgadm/FK+MierEdRuOUYnx4327rh/kNC6Y7wh9FndLvvpDyFg3rGA+5AdMg0lB0olYALDcbfNSj+v
-	q/rHt/f7VSRHp3Tnc56laVvsvIrXeR6ZaOynd4bjQhv1tyBU3RYJ31SIOxRoVLQiGKKiZBVHarKIh
-	ILcHOOM3sHpVD87zBLLQ==;
+	List-Owner; bh=4L0dHF4fkAKnynkRm1akOt7GCX6HjZS6nu1TuqmPi6Y=; b=I1Op/pX3gD9STR
+	YDWNTuO3mXu4WV9Y38hlC+VifdRZO+Pl5nI75SPwpiYdInvO1H17QxRGgRUmnX2HsUk5ZrhvTZtp0
+	cyfhhnQCc9bZ0LRdIbSCO/Sat3t1E/yWCzfydN7CAHt9xbZuwfGoHad2mHBnbOHlmaBfSmZ9OUa3Q
+	7E1xMR4m2dOz0BhBzOilF9kv78Ojmkoj8iojrCEgQpE3EVrRm4fuLDgUk83NJZMT388//B+T8ATVX
+	/Jzb5STQMZs8mLKOcTLzsiL1qiJH+WnwEgE4J7kWuQcRHxicwDLSQOxUyjnxk35Iwa49dxrJnk0Gf
+	/YIbaoaqYLklgA1sx9nA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ihvn2-00047r-R2; Thu, 19 Dec 2019 13:24:28 +0000
-Received: from mail-ed1-x544.google.com ([2a00:1450:4864:20::544])
+	id 1ihvn5-00049d-AK; Thu, 19 Dec 2019 13:24:31 +0000
+Received: from mail-ed1-x543.google.com ([2a00:1450:4864:20::543])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ihvmx-000475-Qr
- for ath10k@lists.infradead.org; Thu, 19 Dec 2019 13:24:25 +0000
-Received: by mail-ed1-x544.google.com with SMTP id i16so4856310edr.5
- for <ath10k@lists.infradead.org>; Thu, 19 Dec 2019 05:24:23 -0800 (PST)
+ id 1ihvn0-00047K-Js
+ for ath10k@lists.infradead.org; Thu, 19 Dec 2019 13:24:27 +0000
+Received: by mail-ed1-x543.google.com with SMTP id f8so4869743edv.2
+ for <ath10k@lists.infradead.org>; Thu, 19 Dec 2019 05:24:25 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=WcPY2DOnYcilQeR9udjKYbcsm2SYeFm9eHViqPb53Zw=;
- b=Zd+QfflrbWOQrYRJjFg/z6bsfmD77k5rL3ZvM0YgaDvYRLS5DxLLLVh4UKFHFtWRRL
- vs2qOnVa276iQ6wezrdEWkCuso8BRVMtvhJbi0iBQhuUvHroYXAX4TmHENTp77DHIjXQ
- l8SE1yv80yIETnXD4PJhCEdOrttC6tBfJ92O+9oSxtVPYptWbr7rckseN1duEwCdtGvC
- JY8poG+HbUP/8qehMlgxzh67ghpl8qm6LujOb6xEgYhdeovZz8bwJfj7JVDSuZJPFBq7
- 91wEbZWLCF+xQl4wj510/bNs5I7x76vadsaQGrqvYnguT0tJgHvKag5ciCeO4c+VWUvb
- ROcw==
+ bh=uH+aDS9FUX0GfFwi0ZzL3xSE3Gr6/KDnkMPDTHrbWGU=;
+ b=RX/8tecahw1r+PMulH8xINJ4kaoUwAGQs0CjBfHXoXKe+ddKMMVL98ff/55YHZHUpq
+ yz1iwfJnQxcCJNookUWotO6cCBnhD+nZMSZJE0Z5Ilyjvz3L/h69HYiuqLMDO2XI7S7e
+ QpZw+eRlmNE1IIaLhbIHW6/GkfbfIUQ2+0ftG3TqUgdTDaC1N2aFREZ7IWBaOtJBcQuG
+ +kOojnN65cO/XwKn0j/vfRq+wOt66EfKKxIeY2Xupa31oGxOCyxrwIpTpFUrHS/J9E7y
+ X1LmQZUJCLAV0DDu8J8k2EgRi2E6DrcR+ccrlhsAMZQ4sqMLtapT4f+0uD/jTxUmw780
+ w75w==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=WcPY2DOnYcilQeR9udjKYbcsm2SYeFm9eHViqPb53Zw=;
- b=n4hu+4Zx6uqcMdnIOglr/IgFu9Y2NYIMk/VMsTNOKPClqm6iZ4Jutz2emR8B3RmdN2
- IVUTPsd9rwxp6cutVVpwBN8bZx2a6PgVhi6GwObjxHx3UjxqM8VU2zGma+2hSIAeaH0V
- w2vEZgCTuhIJGYBjHO6V+BrRiHj1cfLz4myI16Tu/8FI/T3WnqvDuBXa/YTPUdWq+179
- sB9iePPnKH+qSF00Fyj+lnSDIOyOuufb92sotmIFsiYhjNsx62Ofx1HBmTWAR/x+2iyp
- dPsAXgiI0wvjl9kqdaHd5DjJ7BXrhLp2bS7IkeMXUXqcoCBGoduRvFqATN1z8FZp6MBp
- 2VFw==
-X-Gm-Message-State: APjAAAWxnRgfk8bzhRpXKyB2ydR1EipkBxCh8VMs5tgsbcF0vrjXGhqm
- 1S2TlNuEdCLZK+y2iO9V7vBRkg==
-X-Google-Smtp-Source: APXvYqw2s6q/NPfbe/cw73hwaCHBRODtJnwzmB3wMsgxBRGt63lzJh2FMbaaOA+cvBquVXHeAyrMiw==
-X-Received: by 2002:a17:906:3d62:: with SMTP id
- r2mr9197382ejf.150.1576761862623; 
- Thu, 19 Dec 2019 05:24:22 -0800 (PST)
+ bh=uH+aDS9FUX0GfFwi0ZzL3xSE3Gr6/KDnkMPDTHrbWGU=;
+ b=fCdcyBVfQ8JfnuA/RIQ+pzmc4IT0DlKvoHS8mCKsHgzQt8/Ojn8UA46e36Mvt/tSXc
+ AAZ4is68GPfwM6lTEUSpy1ujRY9bomudfKxdwn1+T1Aa+dPjo0N76pAo9mcECRGr9wRh
+ LS+5cOa6Qm5rVuoQ7Ltv7l5R3LxQtCiKUPiQ4R+3hpxUPHTER5D+7pkHTy8qJeoKL97d
+ nRbE99yiUxKTISI4qUB9Ha5lvN5TT8HoQAhdxvM8SBUlv9EYhoC6lbBD+6n7KEKtvFYN
+ WKOis7l0lNgZ6OJyCjczOzlqR9OfakzRCtL7ftUSZL7FzJagwCS50q7o0SKCbDwtKrMC
+ vfQQ==
+X-Gm-Message-State: APjAAAXbE3YFGEZ5nYPgiPQKAFCZZbBNkL741nMkX8moQWulxg6X/3/Y
+ 28eRcEjdqkAgS8UZn0BErC6nug==
+X-Google-Smtp-Source: APXvYqzllGHKaz42y389MG+UUUFshXZdU8TK+QtM1Os0aRVrOP2s4lubdfeYnEqljWeTGFXE629Dzg==
+X-Received: by 2002:a17:906:260b:: with SMTP id
+ h11mr9333551ejc.327.1576761863807; 
+ Thu, 19 Dec 2019 05:24:23 -0800 (PST)
 Received: from localhost.localdomain ([176.61.57.127])
- by smtp.gmail.com with ESMTPSA id cw15sm410286edb.44.2019.12.19.05.24.21
+ by smtp.gmail.com with ESMTPSA id cw15sm410286edb.44.2019.12.19.05.24.22
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Thu, 19 Dec 2019 05:24:22 -0800 (PST)
+ Thu, 19 Dec 2019 05:24:23 -0800 (PST)
 From: Bryan O'Donoghue <bryan.odonoghue@linaro.org>
 To: kvalo@codeaurora.org,
 	akolli@codeaurora.org,
 	ath10k@lists.infradead.org
-Subject: [PATCH 1/2] ath10k: pci: Only dump ATH10K_MEM_REGION_TYPE_IOREG when
- safe
-Date: Thu, 19 Dec 2019 13:15:38 +0000
-Message-Id: <20191219131539.1003793-2-bryan.odonoghue@linaro.org>
+Subject: [PATCH 2/2] ath10k: pci: Fix comment on ath10k_pci_dump_memory_sram
+Date: Thu, 19 Dec 2019 13:15:39 +0000
+Message-Id: <20191219131539.1003793-3-bryan.odonoghue@linaro.org>
 X-Mailer: git-send-email 2.24.0
 In-Reply-To: <20191219131539.1003793-1-bryan.odonoghue@linaro.org>
 References: <20191219131539.1003793-1-bryan.odonoghue@linaro.org>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191219_052424_001229_5DF95440 
-X-CRM114-Status: GOOD (  13.65  )
+X-CRM114-CacheID: sfid-20191219_052426_648182_2934BBFB 
+X-CRM114-Status: GOOD (  10.91  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:544 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:543 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
@@ -106,63 +105,29 @@ Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-ath10k_pci_dump_memory_reg() will try to access memory of type
-ATH10K_MEM_REGION_TYPE_IOREG however, if a hardware restart is in progress
-this can crash a system.
-
-Individual ioread32() time has been observed to jump from 15-20 ticks to >
-80k ticks followed by a secure-watchdog bite and a system reset.
-
-Work around this corner case by only issuing the read transaction when the
-driver state is ATH10K_STATE_ON.
+The description of ath10k_pci_dump_memory_sram() is inaccurate, an error
+can never be returned, it is always the length. Update the comment to
+reflect.
 
 Fixes: 219cc084c6706 ("ath10k: add memory dump support QCA9984")
 Signed-off-by: Bryan O'Donoghue <bryan.odonoghue@linaro.org>
 ---
- drivers/net/wireless/ath/ath10k/pci.c | 19 +++++++++++++++++--
- 1 file changed, 17 insertions(+), 2 deletions(-)
+ drivers/net/wireless/ath/ath10k/pci.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/net/wireless/ath/ath10k/pci.c b/drivers/net/wireless/ath/ath10k/pci.c
-index bb44f5a0941b..4822a65f6f3c 100644
+index 4822a65f6f3c..ded7a220a4aa 100644
 --- a/drivers/net/wireless/ath/ath10k/pci.c
 +++ b/drivers/net/wireless/ath/ath10k/pci.c
-@@ -1604,11 +1604,22 @@ static int ath10k_pci_dump_memory_reg(struct ath10k *ar,
- {
- 	struct ath10k_pci *ar_pci = ath10k_pci_priv(ar);
- 	u32 i;
-+	int ret;
-+
-+	mutex_lock(&ar->conf_mutex);
-+	if (ar->state != ATH10K_STATE_ON) {
-+		ath10k_warn(ar, "Skipping pci_dump_memory_reg invalid state\n");
-+		ret = -EIO;
-+		goto done;
-+	}
- 
- 	for (i = 0; i < region->len; i += 4)
- 		*(u32 *)(buf + i) = ioread32(ar_pci->mem + region->start + i);
- 
--	return region->len;
-+	ret = region->len;
-+done:
-+	mutex_unlock(&ar->conf_mutex);
-+	return ret;
+@@ -1578,7 +1578,7 @@ static int ath10k_pci_set_ram_config(struct ath10k *ar, u32 config)
+ 	return 0;
  }
  
- /* if an error happened returns < 0, otherwise the length */
-@@ -1704,7 +1715,11 @@ static void ath10k_pci_dump_memory(struct ath10k *ar,
- 			count = ath10k_pci_dump_memory_sram(ar, current_region, buf);
- 			break;
- 		case ATH10K_MEM_REGION_TYPE_IOREG:
--			count = ath10k_pci_dump_memory_reg(ar, current_region, buf);
-+			ret = ath10k_pci_dump_memory_reg(ar, current_region, buf);
-+			if (ret < 0)
-+				break;
-+
-+			count = ret;
- 			break;
- 		default:
- 			ret = ath10k_pci_dump_memory_generic(ar, current_region, buf);
+-/* if an error happened returns < 0, otherwise the length */
++/* Always returns the length */
+ static int ath10k_pci_dump_memory_sram(struct ath10k *ar,
+ 				       const struct ath10k_mem_region *region,
+ 				       u8 *buf)
 -- 
 2.24.0
 
