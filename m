@@ -2,97 +2,83 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D6A281271A3
-	for <lists+ath10k@lfdr.de>; Fri, 20 Dec 2019 00:41:07 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 913DA1275D7
+	for <lists+ath10k@lfdr.de>; Fri, 20 Dec 2019 07:38:56 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ZytkELLu5lmMIcnAQ9iLerDCk7Zazq5ds42amEx2Q4w=; b=pHlPPIJmSJgfsl
-	70DwQxJMZInM/WJMJlGc99s4/b5OapMb/9NqnYTCVI9z26DUhMQH2uuFYLSJHGLrMchm2DJHbr3lC
-	YIylV073TnfPv9mzU6TNBrGWeXvjX03h+AnUt2g4ckOBmB4ZQT2D2Mn1FZ6IcXD3RWP8/5VxAmUVj
-	tfrrfY1ZrEQisgE5TCMxzgmwRzJiZ7EEBayL9sQVl3x7QdK4SDJu7n2Savv7WhzP+0cDO73GRPWiA
-	BrsjiNT8PVCzIB6U/Ph2QL0tp7W+o8SAV72mouDqkaBLnUFLqfMAzIp0FQj5MSyjdMidEK5WHj5UT
-	1xizW5Yqns0vNpQdmCBA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=KZ1Gdcx8P7oH5c0XNgNZmjBilczVirIPOTBa172HDbk=; b=DWuN0Wi+cGrdn6
+	aAh2dUJ9dGKmwObdfb1H7HUAWCPwl+8EJCfbtX+egdHj3jzaC4T81g22QkbO5qhPtaqrH6MqTyAhi
+	Q01E3qsKjBvbVXJ54AdCXFbNPbsTaDg332dRVwHJ4UwPBtHejCwPyKKTkh94iZV4OsSG0RGIDnKro
+	lKCGGIQxC/fmwsL2coOcSavD0/+F1HKcAI+2j6LtP2s2gzxDm/3RhgfgfW2k6hjXe8dd1XcC0ywy0
+	1o4XbdYYJDRq4BAAqaVz4HBOUTYciqa4H5soPPoiWDiNZwLAJKOlzSCc4/luDfJ37VQffkI/YaP7U
+	+MxwS7ebbPdktlPamldA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ii5Pi-0000Sc-R0; Thu, 19 Dec 2019 23:41:02 +0000
-Received: from mail-qk1-x742.google.com ([2607:f8b0:4864:20::742])
+	id 1iiBw2-0005G9-Iw; Fri, 20 Dec 2019 06:38:50 +0000
+Received: from mail26.static.mailgun.info ([104.130.122.26])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ii5Pe-0000Re-O2
- for ath10k@lists.infradead.org; Thu, 19 Dec 2019 23:41:00 +0000
-Received: by mail-qk1-x742.google.com with SMTP id t129so6129038qke.10
- for <ath10k@lists.infradead.org>; Thu, 19 Dec 2019 15:40:57 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=uG8r1HUS9fGO+BwiDUVGLE//cKSZauHELXBsBFK0kD4=;
- b=fdF5CxkfLEktgqkt8kaiPh8D4WrWusI8mQmmsjSHoa8Aotr4lla6lsjWPnYK50jrkc
- 1eDg59Pg9PbXcszaB4E0mohlBHOn91ajkWGmuAuPvAfWJdtjiQQYyUpSfE4o8AoaD1ww
- yWrnvexJ9VbEgokUhGopsfylFFLufvW5VhsHQ=
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=uG8r1HUS9fGO+BwiDUVGLE//cKSZauHELXBsBFK0kD4=;
- b=VR0qaYXiI+5mGi/tsd9OuzOkOmmjWPecpryRHpuQt1SM1u3s64OFZUlFR/3N09/C3i
- LDp9vDKNMgD/pnAE4Ty5R0RWcedfPIimC2a/6NTuKrE1+YfXZZPvQEEflqOvFsfvrJsp
- 72B61QAOn0waGWsByW2ml6FOwdCKSWs8bEsiOFzAUVCO6pOZi4Wm0Yf8/2Fr1gvGZkmd
- aDZqgheHL6ArrzPgeQv6EXW70J5mYel8OeFm1lPYMqLT6RvwBA5Ug1Aj7WAp+jtIfsQ9
- WZyKmAoOn6sWb0kYmwxpNjOO2SmClLO+cJcAtP8l9Ab8nSBkO05Hj1PdszEe9WXTXn9S
- Eumw==
-X-Gm-Message-State: APjAAAUxfeATpsy8HE6eQ/Ej0lbvQu4/tNLdFudOP5/4KuCXKWBEokX5
- ZVqQpk29TX9CcScbHMu7cqMfl7GxmBQ=
-X-Google-Smtp-Source: APXvYqzb4tKqW06cxFO9nHmZATi5v1J9sjDFx2z4FQmW25YI6f3BUXEJksSaje1kM9FYKMD4xZTklQ==
-X-Received: by 2002:a05:620a:1403:: with SMTP id
- d3mr1715528qkj.243.1576798856332; 
- Thu, 19 Dec 2019 15:40:56 -0800 (PST)
-Received: from mail-qt1-f180.google.com (mail-qt1-f180.google.com.
- [209.85.160.180])
- by smtp.gmail.com with ESMTPSA id q5sm2202394qkf.14.2019.12.19.15.40.55
- for <ath10k@lists.infradead.org>
- (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Thu, 19 Dec 2019 15:40:55 -0800 (PST)
-Received: by mail-qt1-f180.google.com with SMTP id k40so6581572qtk.8
- for <ath10k@lists.infradead.org>; Thu, 19 Dec 2019 15:40:55 -0800 (PST)
-X-Received: by 2002:ac8:4086:: with SMTP id p6mr9221206qtl.161.1576798854764; 
- Thu, 19 Dec 2019 15:40:54 -0800 (PST)
+ id 1iiBvx-0005Fm-Vq
+ for ath10k@lists.infradead.org; Fri, 20 Dec 2019 06:38:48 +0000
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
+ q=dns/txt; 
+ s=smtp; t=1576823922; h=Content-Transfer-Encoding: MIME-Version:
+ Message-Id: Date: Subject: Cc: To: From: Sender;
+ bh=Pv2a2tytQSb2zHg63QnnfYS3gCEO4hOfLtm/nplwJPw=;
+ b=nAnQJ+sGvWY+XwFIbYY24M+++pYj+b3YeoqX7QAVK3sLSCV30vbmA7/NLpA5zdBbxh2EkK+m
+ yVGJmW3FwbQVOMLZ0lQN80nBvbj1+SRhYMqQVEd6u9Ub3xqlTBtSggzBlMaFGjInevYj7H9g
+ TACMf01DRKqI91SJcjep4vhjKJY=
+X-Mailgun-Sending-Ip: 104.130.122.26
+X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
+Received: from smtp.codeaurora.org
+ (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
+ by mxa.mailgun.org with ESMTP id 5dfc6c70.7f9515cc6848-smtp-out-n03;
+ Fri, 20 Dec 2019 06:38:40 -0000 (UTC)
+Received: by smtp.codeaurora.org (Postfix, from userid 1001)
+ id DA66EC43383; Fri, 20 Dec 2019 06:38:39 +0000 (UTC)
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ aws-us-west-2-caf-mail-1.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,SPF_NONE
+ autolearn=ham autolearn_force=no version=3.4.0
+Received: from wgong-HP-Z240-SFF-Workstation.qca.qualcomm.com (unknown
+ [180.166.53.21])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
+ (No client certificate requested) (Authenticated sender: wgong)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id A8C70C433CB;
+ Fri, 20 Dec 2019 06:38:38 +0000 (UTC)
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org A8C70C433CB
+Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
+ spf=none smtp.mailfrom=wgong@codeaurora.org
+From: Wen Gong <wgong@codeaurora.org>
+To: ath10k@lists.infradead.org
+Subject: [PATCH] ath10k: select the min len of RX skb for sdio
+Date: Fri, 20 Dec 2019 14:38:29 +0800
+Message-Id: <20191220063829.11873-1-wgong@codeaurora.org>
+X-Mailer: git-send-email 2.23.0
 MIME-Version: 1.0
-References: <1576684108-30177-1-git-send-email-kvalo@codeaurora.org>
- <1576684108-30177-2-git-send-email-kvalo@codeaurora.org>
- <1576748692.7758.17.camel@realtek.com>
- <20191219154828.GA12287@w1.fi>
- <CA+ASDXMTYLGbEkBPHSqtyitMEvY5o_MjU0s+NoWdnN_ORy1gDw@mail.gmail.com>
- <20191219185522.GA16010@w1.fi>
-In-Reply-To: <20191219185522.GA16010@w1.fi>
-From: Brian Norris <briannorris@chromium.org>
-Date: Thu, 19 Dec 2019 15:40:43 -0800
-X-Gmail-Original-Message-ID: <CA+ASDXNOxkrZTxL0Jo4ONR2YtL83BVc_w-rBXc6ggBLdwUpDZw@mail.gmail.com>
-Message-ID: <CA+ASDXNOxkrZTxL0Jo4ONR2YtL83BVc_w-rBXc6ggBLdwUpDZw@mail.gmail.com>
-Subject: Re: [PATCH 1/2] nl80211: vendor-cmd: qca: add dynamic SAR power limits
-To: Jouni Malinen <j@w1.fi>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191219_154058_809200_0E3AD6A6 
-X-CRM114-Status: GOOD (  35.47  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20191219_223846_090864_1FFCFC4E 
+X-CRM114-Status: GOOD (  14.85  )
+X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:742 listed in]
- [list.dnswl.org]
+ no trust [104.130.122.26 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [104.130.122.26 listed in wl.mailspike.net]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -104,137 +90,127 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Pkshih <pkshih@realtek.com>,
- "linux-wireless@vger.kernel.org" <linux-wireless@vger.kernel.org>,
- "kvalo@codeaurora.org" <kvalo@codeaurora.org>,
- "ath10k@lists.infradead.org" <ath10k@lists.infradead.org>
+Cc: linux-wireless@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On Thu, Dec 19, 2019 at 10:55 AM Jouni Malinen <j@w1.fi> wrote:
->
-> On Thu, Dec 19, 2019 at 10:32:06AM -0800, Brian Norris wrote:
-> > On Thu, Dec 19, 2019 at 7:48 AM Jouni Malinen <j@w1.fi> wrote:
-> > > On Thu, Dec 19, 2019 at 09:44:52AM +0000, Pkshih wrote:
-> > > > On Wed, 2019-12-18 at 17:48 +0200, Kalle Valo wrote:
-> > > > > diff --git a/include/uapi/nl80211-vnd-qca.h b/include/uapi/nl80211-vnd-qca.h
-> > > > > + * NOTE: The authoritative place for definition of QCA_NL80211_VENDOR_ID,
-> > > > > + * vendor subcmd definitions prefixed with QCA_NL80211_VENDOR_SUBCMD, and
-> > > > > + * qca_wlan_vendor_attr is open source file src/common/qca-vendor.h in
-> > > > > + * git://w1.fi/srv/git/hostap.git; the values here are just a copy of that
-> >
-> > By the way, I wonder -- why have this statement? That's not how I
-> > recall any other piece of kernel development ever working; upstream
-> > Linux defines the upstream Linux API, not some arbitrary user space
-> > project. This statement could be useful for saying, "don't stomp on
-> > those command numbers please," but the response should probably be to
-> > go out and define a totally new vendor ID or something. (See below.)
->
-> As far as the OUI 00:13:74 is concerned, the defined mechanism for
-> getting any new identifier values assigned is by getting a patch applied
-> into hostap.git. If another OUI is used, that can clearly use different
-> mechanism for this. Anyway, I'd expect the process for OUI 00:13:74 to
-> be the most convenient one to use.
+When simulate random transfer fail for sdio write and read, it crash
+sometimes.
 
-OK, I guess that makes a little more sense. But I'm not sure I agree
-with the phrase "convenient."
+Test steps:
+1. Add config and update kernel:
+CONFIG_FAIL_MMC_REQUEST=y
+CONFIG_FAULT_INJECTION=y
+CONFIG_FAULT_INJECTION_DEBUG_FS=y
 
-> For 00:13:74, that would mean defining the
-> subcmds/attributes first with TBD ID values and once the definitions are
-> otherwise fine in the kernel patch review, contributing a patch to
-> hostap.git to get the identifiers assigned, updating the kernel patch to
-> use the assigned values, and apply it to the kernel.
+2. run simulate fail:
+cd /sys/kernel/debug/mmc1/fail_mmc_request
+echo 10 > probability
+echo 10 > times # repeat until hitting issues
 
-That doesn't really sound convenient at all. But I suppose that's
-beside the point, so I won't harp on that.
+3. it crash, the act len of ath10k_htc_hdr is higher than allocate len, it cause panic:
+[   99.723482] skbuff: skb_over_panic: text:00000000caa0f780 len:57013 put:57013 head:000000004116f24a data:0000000019ecb4dc tail:0xdef5 end:0x640 dev:<NULL>
+[   99.737697] ------------[ cut here ]------------
+[   99.742327] kernel BUG at /mnt/host/source/src/third_party/kernel/v4.19/net/core/skbuff.c:104!
+[   99.750937] Internal error: Oops - BUG: 0 [#1] PREEMPT SMP
+[   99.831154] Process kworker/0:2 (pid: 151, stack limit = 0x00000000728010bf)
+[   99.838200] CPU: 0 PID: 151 Comm: kworker/0:2 Tainted: G W 4.19.85 #48
+[   99.846022] Hardware name: MediaTek krane sku0 board (DT)
+[   99.851429] Workqueue: events sdio_irq_work
+[   99.855614] pstate: 60000005 (nZCv daif -PAN -UAO)
+[   99.860402] pc : skb_panic+0x64/0x68
+[   99.863974] lr : skb_panic+0x64/0x68
+[   99.867542] sp : ffffff8008833a90
+[   99.870850] x29: ffffff8008833ac0 x28: ffffffe52e337370
+[   99.876159] x27: ffffffe52e328a90 x26: 000000000000e0d0
+[   99.881469] x25: ffffffe52e336b60 x24: 000000000000deb5
+[   99.886779] x23: ffffffe52e340680 x22: ffffffe4efd47e00
+[   99.892088] x21: 000000000000deb5 x20: ffffffa516d85b4c
+[   99.897397] x19: ffffffa526928037 x18: 0000000000000000
+[   99.902706] x17: 000000000000003c x16: ffffffa5265b6c80
+[   99.908015] x15: 0000000000000006 x14: 3a76656420303436
+[   99.913325] x13: 0000000000029bf0 x12: 0000000000000000
+[   99.918634] x11: 0000000000000000 x10: 0000000000000000
+[   99.923943] x9 : a3b907e4b2783000 x8 : a3b907e4b2783000
+[   99.929253] x7 : 0000000000000000 x6 : ffffffa526f66d76
+[   99.934563] x5 : 0000000000000000 x4 : 0000000000000000
+[   99.939872] x3 : 000000000002a5ab x2 : ffffffe53feed918
+[   99.945182] x1 : ffffffe53fee4a08 x0 : 000000000000008e
+[   99.950491] Call trace:
+[   99.952937]  skb_panic+0x64/0x68
+[   99.956165]  skb_put+0x7c/0x84
+[   99.959224]  ath10k_sdio_irq_handler+0x740/0xbb8 [ath10k_sdio]
+[   99.965055]  process_sdio_pending_irqs+0x58/0x1a4
+[   99.969758]  sdio_run_irqs+0x34/0x60
+[   99.973329]  sdio_irq_work+0x1c/0x28
+[   99.974930] cros-ec-spi spi2.0: SPI transfer timed out
+[   99.976904]  process_one_work+0x210/0x410
+[   99.976911]  worker_thread+0x234/0x3dc
+[   99.976923]  kthread+0x120/0x130
+[   99.982090] cros-ec-spi spi2.0: spi transfer failed: -110
+[   99.986054]  ret_from_fork+0x10/0x18
+[   99.986063] Code: aa1403e2 2a1503e4 a90023e9 97e37d1a (d4210000)
+[   99.986068] ---[ end trace cb6d948c5a0fd6c7 ]---
+[  100.017250] Kernel panic - not syncing: Fatal exception
+[  100.018879] cros-ec-spi spi2.0: Command xfer error (err:-110)
+[  100.023659] SMP: stopping secondary CPUs
+[  100.023703] Kernel Offset: 0x251dc00000 from 0xffffff8008000000
+[  100.023707] CPU features: 0x0,2188200c
+[  100.023709] Memory Limit: none
 
-> > > Please note that the vendor subcmd and attributes used here are already
-> > > deployed and in use as a kernel interface. As such, the existing
-> > > attributes cannot really be modified; if anything else would be needed,
-> > > that would need to be defined as a new attribute and/or command.
-> >
-> > Clarification: you're talking about out-of-tree drivers, which really
-> > have no relevance in upstream discussion, except possibly as examples.
-> > I don't think it's ever been a valid approach to dictate upstream
-> > kernel design based simply on "what $vendor already implemented for
-> > Android."
->
-> There is clearly no requirement to use an existing attribute, but since
-> there is such an attribute already defined, I'd claim it is perfectly
-> fine to consider it as an option for this. If something else is
-> identified to be needed, a new subcmd/attribute can obviously be
-> defined.
+The simulate fail of sdio is not a real sdio transter fail, it only
+set an error status in mmc_should_fail_request after the transfer end,
+actually the transfer is success, then sdio_io_rw_ext_helper will
+return error status and stop transfer the left data. For example,
+the really RX len is 286 bytes, then it will split to 2 blocks in
+sdio_io_rw_ext_helper, one is 256 bytes, left is 30 bytes, if the
+first 256 bytes get an error status by mmc_should_fail_request,then
+the left 30 bytes will not read in this RX operation. Then when the
+next RX arrive, the left 30 bytes will be considered as the header
+of the read, the top 8 bytes will be considered as ath10k_htc_hdr,
+but actually the 8 bytes is not the ath10k_htc_hdr, so the act_len
+from this ath10k_htc_hdr is not correct, if it is a big value, such
+as 57013, it will trigger skb_panic.
 
-Ack, thanks. I think I misinterpreted your intention to say, "I won't
-take suggestions, because the attributes are already decided
-elsewhere."
+Select the min value of act_len and alloc_len for skb_put and
+skb_put_data is reasonable.
 
-> > > This was discussed during the 2019 wireless workshop. The conclusion
-> > > from that discussion was that while there is clear need for SAR power
-> > > limits for various devices and multiple vendors/drivers, it did not look
-> > > clear that a single common interface could be defined cleanly taken into
-> > > account the differences in the ways vendors have designed the mechanism
-> > > in driver and firmware implementations. As such, vendor specific
-> > > commands were identified as the approach.
-> >
-> > [citation needed]
->
-> I'm not aware of any publicly available meeting minutes that covered the
-> details for that discussion. My personal notes indicate that there were
-> at least two vendors indicating existence of vendor specific commands
-> for configuring SAR parameters, a discussion about the parameters used
-> for this being different, and a conclusion that this would be an example
-> kernel interface where a generic nl80211 interface may not be achievable
-> and a vendor specific interface would be more likely. This discussion
-> resulted in the discussion on how to use vendor specific nl80211
-> commands/attributes in upstream drivers and the eventual documentation
-> of that in the location you noted.
+This patch only effect sdio chips.
 
-Hmm, I actually think I was only around for the pre-discussion, in
-which y'all suggested you might later meet to decide what eventually
-became [1]. So maybe I missed some specific examples that would
-provide the [citation] I requested.
+Tested with QCA6174 SDIO with firmware WLAN.RMH.4.4.1-00029.
 
-That being said, I have personally fielded out-of-tree SAR
-implementations from 4 different vendors:
+Signed-off-by: Wen Gong <wgong@codeaurora.org>
+---
+ drivers/net/wireless/ath/ath10k/sdio.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
 
-(a) Two of them (this ath10k proposal, roughly; and Realtek's) employ
-exactly the same concept: N frequency ranges, each with associated
-power limits.
-(b) Two of them (Intel/variant-of-iwiwifi and Marvell/mwifiex) utilize
-a platform-specific (BIOS or Device Tree) mechanism for enumerating
-power tables, and the nl80211 API simply takes an index N (e.g., 0 or
-1), so user space can say "switch to mode N"
-
-Unfortunately, for (b), I think there are enough reasons to think they
-won't share an API similar to (a) (for Marvell, their
-platform-specific tables are large undocumented blobs -- I have a
-feeling if we already had a common API for (a), they *could* have
-implemented some translation in a nicer way in their driver, but they
-haven't chosen to do that work and probably won't be convinced to do
-so).
-
-But that still means there's some hope for (a).
-
-Anyway, I am happy that there's a documented policy for vendor APIs
-[1], and I'm happy to see this proposal out here. I just want to see a
-critical eye put to this particular proposal if possible, to see if we
-can improve its flexibility (either now, or in a later version of a
-QCA vendor command, or even in a common nl80211-proper command).
-
-So to put a little different spin on Pkshih's request: is there any
-value in making this particular ath10k proposal a little more generic
-(e.g., more granularity or flexibility in frequency bands, or more
-precision in power limits), such that other vendors might implement
-the same thing? Or would it be better to let each vendor implement
-their similar-looking APIs (i.e., (a); or maybe even (b)) on their
-own, and only later look at sharing?
-
-Brian
-
-[1] https://wireless.wiki.kernel.org/en/developers/documentation/nl80211#vendor-specific_api
+diff --git a/drivers/net/wireless/ath/ath10k/sdio.c b/drivers/net/wireless/ath/ath10k/sdio.c
+index 7b894dcaad2e..71ce2674c543 100644
+--- a/drivers/net/wireless/ath/ath10k/sdio.c
++++ b/drivers/net/wireless/ath/ath10k/sdio.c
+@@ -651,7 +651,7 @@ static int ath10k_sdio_mbox_rx_fetch(struct ath10k *ar)
+ 
+ 	htc_hdr = (struct ath10k_htc_hdr *)skb->data;
+ 	pkt->act_len = le16_to_cpu(htc_hdr->len) + sizeof(*htc_hdr);
+-	skb_put(skb, pkt->act_len);
++	skb_put(skb, min_t(size_t, pkt->alloc_len, pkt->act_len));
+ 
+ 	return ret;
+ }
+@@ -687,7 +687,8 @@ static int ath10k_sdio_mbox_rx_fetch_bundle(struct ath10k *ar)
+ 		htc_hdr = (struct ath10k_htc_hdr *)(ar_sdio->vsg_buffer + pkt_offset);
+ 		pkt->act_len = le16_to_cpu(htc_hdr->len) + sizeof(*htc_hdr);
+ 
+-		skb_put_data(pkt->skb, htc_hdr, pkt->act_len);
++		skb_put_data(pkt->skb, htc_hdr,
++			     min_t(size_t, pkt->alloc_len, pkt->act_len));
+ 		pkt_offset += pkt->alloc_len;
+ 	}
+ 
+-- 
+2.23.0
 
 _______________________________________________
 ath10k mailing list
