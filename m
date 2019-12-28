@@ -2,82 +2,92 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7E8D212ADFB
-	for <lists+ath10k@lfdr.de>; Thu, 26 Dec 2019 19:51:49 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2918612BC6D
+	for <lists+ath10k@lfdr.de>; Sat, 28 Dec 2019 04:21:24 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	References:In-Reply-To:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=29eyjx49jHi9EzCwOFBdNxsHrGpDsrhY+vP7zpV2yhg=; b=AZ/HktDLSnVI5p
-	P/ez3+CoZju/i+JecZcicmLWplalOJmvI+B4xjPdV5y3y9ZAQqNrkPdAXw3Iquz2Glnjo6aqmeeSc
-	CgSEoIR0qCg54AEMRG/4bojsr4x4io1eGQu3zaxaTcn/2xVEzUnurrnfIPbLoU4NBZPjUSBqCkRq6
-	LA9M02fmX0FGIQyhTnwJZyCA9x0wqLqkEpiyu62VESmGwRt9bUJgpkXMGONV5+HdKfuLb3MiZddu4
-	mt975ONL8PUCTf706qWqzXUSc8hE+K55bWy5uwuw6zlLIXPCSzYxZjJDmeHf9Kr2s4adDTfs8f09l
-	e+ygMqv5i+oqo407pBcg==;
+	List-Owner; bh=KaRB1GfFKS0ZX46ezfF5dVOHMM2VA9dpJDQFAspZwuc=; b=lvA2xujkOZXqwC
+	77356DP5t82+wgY2XkG/VfuPGDIV+TJ65ESZrMYZuUtw4/WDAArKTLikC/8G3wFN5wP2OW9zUTLc0
+	tcS3dQgxmeKk6eCX2qRDS79063GyCPNhZXubWoDuNjs7J4JeiggCwu+n7yJC/IbF61QjzntFLn43g
+	9p94JQtIjXnQJbvbLxRWKMJLZm4Z+YveIT+gRDFdT4Gju3PNqz8fHMfM+XOkR7btaX0l6msmgKiTl
+	1gtreLvwwDRywf0NTEyQRgQIXcKFX1VcKDIu7ecsA9KP8DaFwsKgyy5iSu4CzJNR1YmNg5bbolhjO
+	GyFzI2O8Ta1EBh0S/D9Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ikYEX-0001qn-HK; Thu, 26 Dec 2019 18:51:41 +0000
-Received: from mail-il1-f196.google.com ([209.85.166.196])
+	id 1il2fE-0007E4-EM; Sat, 28 Dec 2019 03:21:16 +0000
+Received: from mail-ot1-x344.google.com ([2607:f8b0:4864:20::344])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ikYET-0001qO-IS
- for ath10k@lists.infradead.org; Thu, 26 Dec 2019 18:51:38 +0000
-Received: by mail-il1-f196.google.com with SMTP id g12so20803597ild.2
- for <ath10k@lists.infradead.org>; Thu, 26 Dec 2019 10:51:35 -0800 (PST)
+ id 1il2f9-0007DQ-U0
+ for ath10k@lists.infradead.org; Sat, 28 Dec 2019 03:21:13 +0000
+Received: by mail-ot1-x344.google.com with SMTP id 59so38598662otp.12
+ for <ath10k@lists.infradead.org>; Fri, 27 Dec 2019 19:21:11 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+ :cc; bh=C27axE1tFb+X9nCVJoaSxmxUBrTHkIjyI8OLf34c6eo=;
+ b=czR0skgirhf+2x6xaCBVqbwn7dfDAINw3FhReBjaBFkG3J0V2MbKQXWUtt5th3a13A
+ zMM75pfpLms1Oopwzm6eVyB/4CVif/s0nEeNT2HjQ++oLLfAHY11yGLiH5QF/qNraI8P
+ u3/t7ykD+4o1w+r+gHS6/1bQyW6YbIOYEQkPz3fxPkSv9qvzRbKD6sKzLA/H1KNp94Aj
+ mbcAbB+NKlrEl3zJF87jefmz45+M9+0+hBWjLCvcHuZzDZwkIjB+j3+H9rRwaXdkQSpY
+ UGkSXZLWUogbv9zDEh9SM0SviOCXuN2mPlM+SOdGnQo778feu/8vYyXNZtBMLhlSKpo1
+ ccPg==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=3UMtDU8DxQ3MGtUa2c3Y90UpyYpDwJplb5ZS1zSkCmc=;
- b=cHkmZosTIcHmrnRrwLyfFRq3cpOZe9Xg/xgilU9guKeeO/Za4C9zpF2aTFzhKm+h6X
- zhlaZVvEXQpVMdhm8xOWRejy20CGbM9hwN5bfkN/mGYrtrUt6yxu+TYfNaF1PgrOczT5
- nOBsXVQWnnEC3zAB0HWgYuqPvnglKGolH2d3DqbMEsPM9iTWwsTk9dhjjDLrnno25f6+
- oTMfs7TPCIWDI60D+Zbfjjq/g2xjQri5pwYE6Y3nhjoRtclGYT/sPo61iOSgtBGZ3nH2
- KpIopAU8oOzH3lGdizJGV150F00Us5nFVXrkLytwaVe4GM1atp52R3+9Ci6jNCZq/7tI
- 6fOQ==
-X-Gm-Message-State: APjAAAXoa5UPNrg+a5q/gMg+ZZwNhDUAEfykw4iX+IAOxa4kBU6M8Vho
- rAj6As1PbaV3yp1ms6eiFw==
-X-Google-Smtp-Source: APXvYqySldlRAzOb9NpZjVOq6WC0G5C70Vuhd2vFmw3FOsorrKM5EEz3CstEkjK7Hu4QPpJKtktk+g==
-X-Received: by 2002:a92:9a56:: with SMTP id t83mr40442318ili.200.1577386294850; 
- Thu, 26 Dec 2019 10:51:34 -0800 (PST)
-Received: from localhost ([64.188.179.250])
- by smtp.gmail.com with ESMTPSA id k16sm12454714ili.35.2019.12.26.10.51.33
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Thu, 26 Dec 2019 10:51:34 -0800 (PST)
-Date: Thu, 26 Dec 2019 11:51:32 -0700
-From: Rob Herring <robh@kernel.org>
-To: Tamizh Chelvam <tamizhr@codeaurora.org>
-Subject: Re: [PATCH 1/2] dt-bindings: ath10k: Add new dt entries to identify
- coex support
-Message-ID: <20191226185132.GA31120@bogus>
-References: <1576496415-23064-1-git-send-email-tamizhr@codeaurora.org>
+ h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+ :message-id:subject:to:cc;
+ bh=C27axE1tFb+X9nCVJoaSxmxUBrTHkIjyI8OLf34c6eo=;
+ b=DftgN2hs0CjjjNHgvKYrmW4d8rVPd+7aT88ntsKqmK/HaBt+MkyzJDas9LZjbxN/ap
+ sEXlZf17jhxTHsAgiaImuB7C1Dv1qA03fbxeBLP0GceXeKHrmKD8BgU7V/APrDR+u/zE
+ 4aff3D+SWa2lf7d7WRbHKwQSMsvU6tXaIPGTCjtyFo/Y0oo8zRJu37zt/phkqlGOBvOn
+ vLf2fwdca2j6o2c9wUwF8xr0ExEOgtS3qUCcRn/lJmwXPYkiU+a5vDD33zCijaGOl0BJ
+ a4b6lu0gWSYWGM6g+uwiZCRTiAHcpNMXVI8grOAHUpY/Rf0YD2vysAXND++RdQ88qrMX
+ HmLQ==
+X-Gm-Message-State: APjAAAUxu1+Cy1Aen+Yq7aeo8UfoYGfuixxSkW0iVlujsGyls0lFBfd4
+ TET7KMaQH12lFgYjne4qd61tTw2cW61EbJgFB7k=
+X-Google-Smtp-Source: APXvYqwYPhzHflt5XWxv53y/jLWPorZnyJzczQlF0rXFve1TEs1h+7a4j2FaSjng3saQDDFLarM2kyoGPrkxwOFPvx4=
+X-Received: by 2002:a05:6830:22ee:: with SMTP id
+ t14mr58731937otc.236.1577503270731; 
+ Fri, 27 Dec 2019 19:21:10 -0800 (PST)
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <1576496415-23064-1-git-send-email-tamizhr@codeaurora.org>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+Received: by 2002:a9d:362:0:0:0:0:0 with HTTP;
+ Fri, 27 Dec 2019 19:21:10 -0800 (PST)
+In-Reply-To: <d2e4207c-1cd6-198e-84df-21496f0be378@phrozen.org>
+References: <20191216092207.31032-1-john@phrozen.org>
+ <20191217153000.76AB1C4479C@smtp.codeaurora.org>
+ <CAKR_QVJVfqid8i5PXj3Yg8VJjht=MF2fZg+twkLgEkKuMB2bbQ@mail.gmail.com>
+ <CAKR_QVJ1PhCHfAO5Rp6pm-wjAO-HcZiq-9Lw67FzBFO5jjYtbA@mail.gmail.com>
+ <d2e4207c-1cd6-198e-84df-21496f0be378@phrozen.org>
+From: Tom Psyborg <pozega.tomislav@gmail.com>
+Date: Sat, 28 Dec 2019 04:21:10 +0100
+Message-ID: <CAKR_QVJE6c-VTR-rGdBUt08ijt=w2rCRjeNQ2+=E6ZQ6_N+g=Q@mail.gmail.com>
+Subject: Re: [RESEND] ath10k: add tx hw 802.11 encapusaltion offloading support
+To: John Crispin <john@phrozen.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20191226_105137_609028_EEDC51B4 
-X-CRM114-Status: GOOD (  15.93  )
-X-Spam-Score: 0.7 (/)
+X-CRM114-CacheID: sfid-20191227_192111_997451_4B5AAB5A 
+X-CRM114-Status: UNSURE (   6.93  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (0.7 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider (robherring2[at]gmail.com)
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.166.196 listed in list.dnswl.org]
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit (robherring2[at]gmail.com)
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
+ no trust [2607:f8b0:4864:20:0:0:0:344 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.166.196 listed in wl.mailspike.net]
- 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (pozega.tomislav[at]gmail.com)
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -89,56 +99,38 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, linux-wireless@vger.kernel.org,
- ath10k@lists.infradead.org
+Cc: Vasanthakumar Thiagarajan <vthiagar@qti.qualcomm.com>,
+ Johannes Berg <johannes@sipsolutions.net>, linux-wireless@vger.kernel.org,
+ ath10k@lists.infradead.org, Kalle Valo <kvalo@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On Mon, Dec 16, 2019 at 05:10:14PM +0530, Tamizh Chelvam wrote:
-> This adds new dt entries qcom,coexist-support and qcom,coexist-gpio-pin
-> which will be used by ath10k driver to identify coex support
-> of a hardware and notify wifi firmware the gpio pin number.
-> This pin number information is needed for the hardware QCA4019.
-> 
-> Signed-off-by: Tamizh Chelvam <tamizhr@codeaurora.org>
-> ---
->  Documentation/devicetree/bindings/net/wireless/qcom,ath10k.txt | 6 ++++++
->  1 file changed, 6 insertions(+)
-> 
-> diff --git a/Documentation/devicetree/bindings/net/wireless/qcom,ath10k.txt b/Documentation/devicetree/bindings/net/wireless/qcom,ath10k.txt
-> index 0171283..a41e936 100644
-> --- a/Documentation/devicetree/bindings/net/wireless/qcom,ath10k.txt
-> +++ b/Documentation/devicetree/bindings/net/wireless/qcom,ath10k.txt
-> @@ -87,6 +87,10 @@ Optional properties:
->  	Definition: Quirk specifying that the firmware expects the 8bit version
->  		    of the host capability QMI request
->  - qcom,xo-cal-data: xo cal offset to be configured in xo trim register.
-> +- qcom,coexist-support : should contain eithr "0" or "1" to indicate coex
-> +			 support by the hardware.
-> +- qcom,coexist-gpio-pin : gpio pin number  information to support coex
-> +			  which will be used by wifi firmware.
+On 19/12/2019, John Crispin <john@phrozen.org> wrote:
+> On 18/12/2019 23:45, Tom Psyborg wrote:
+>> ccing Johannes Berg since upstream change (mac80211-next) breaks build:
+>>
+>> In the commit log its written: remove SUPPORTS_80211_ENCAP HW flag
+>>
+>> Any sane reasons for doing that? mac80211 fails to build because of
+>> removed flags, this is on backports-5.3-rc4
+>>
+>> Other than that the feature delivers the promised:
+>> QCA9880 iperf between wired and wireless machine
+>> native mode 449Mbps
+>> ethernet mode 522Mbps
+>>
+>
+> superseded due to johill's fixup of the patch, new version coming up
+> 	John
+>
 
-What combinations of these 2 properties are valid?
+in case it doesn't fix up scan crash i can provide more details.
 
-Is qcom,coexist-gpio-pin required for coexist support? If so then it 
-alone should be enough to enable/disable coexist.
-
->  
->  Example (to supply PCI based wifi block details):
->  
-> @@ -156,6 +160,8 @@ wifi0: wifi@a000000 {
->  	qcom,msi_addr = <0x0b006040>;
->  	qcom,msi_base = <0x40>;
->  	qcom,ath10k-pre-calibration-data = [ 01 02 03 ... ];
-> +	qcom,coexist-support = <1>;
-> +	qcom,coexist-gpio-pin = <0x33>;
->  };
->  
->  Example (to supply wcn3990 SoC wifi block details):
-> -- 
-> 1.9.1
+triggering scan (from luci at least) would always crash the driver
+unless vdev was already started, right after the message: mac create
+vdev 0 map ffff
 
 _______________________________________________
 ath10k mailing list
