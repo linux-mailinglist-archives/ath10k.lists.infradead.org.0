@@ -2,93 +2,77 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id F13BF134082
-	for <lists+ath10k@lfdr.de>; Wed,  8 Jan 2020 12:31:37 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8A2E813415D
+	for <lists+ath10k@lfdr.de>; Wed,  8 Jan 2020 13:02:24 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:References
-	:In-Reply-To:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=elxFBU0afxArHlScwkWN719ZsHR3AW0Oh+mW3NJAM4Y=; b=HnQyA/kwAzaLTP
-	9q4t+c76/TTmSiSZpPWwhwfFrZMvn4k9UAiwGmrk4QyeC4u3DCsZK94w2r5Cn54q+Bqm6CNaG4Hdr
-	9S4l0fuv716SgMC9u2gv+PbJQCFZrycWdIhKxxxzBpSPk+ZZs3Zf1MvHJb1dd7q183vDqqjb+Ri6Q
-	7pn3Gog8B2iJRcEQVWi5+BeGeFA4A4P+k7ffCRasJZJUq7+2HccqMzgYNSgpI8b3oYSoLAdVfGMSD
-	sDP7my78b/6eeupjdWYUKuZ2PlkL6wjA7OoDYN8RmaWAakK3sjKtRVv8ULezHMFVUON1L+WFjOv1w
-	+geeEQ26/9KFqP/3DTHw==;
+	List-Owner; bh=oi53sTHo31xxGdj0uUMl5booCijgp4e+mEAkK17Ypes=; b=OdA8Co5rccd17v
+	8SUDtvzdaKWjZA0pBVC0QwdGgqHEPO9DBMvoQI26ynnL3Cgvi6aCyocLbWxWjOr8MW54n2oSnDKgn
+	pXiuoKTxBnlpLxKm4CU/0E3UcipyEJ7ncTvWtg8+1nDJWYcohurm0sjOTza1XcBjsnyoknpX+rG/2
+	CGM5TMewWGLLi0M8V1O0yoQBUogaVDoNDuivut+xjT+Nn6zYexmNBJGCOThDJkqqsm89fRZjC/4T3
+	DQVHOlWOT+p0Se88KTyNt7Tg7Kl0KZQoPSRtXjRE9D1bkH+auRRWWa2nN23+oISKDp60M4XBQySdx
+	cIRHYLrdCflVNh9iNwDg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ip9Yl-000138-0q; Wed, 08 Jan 2020 11:31:35 +0000
-Received: from us-smtp-1.mimecast.com ([205.139.110.61]
- helo=us-smtp-delivery-1.mimecast.com)
+	id 1ipA2Y-0005vl-0M; Wed, 08 Jan 2020 12:02:22 +0000
+Received: from mail-oi1-x243.google.com ([2607:f8b0:4864:20::243])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ip9Yh-00012S-BE
- for ath10k@lists.infradead.org; Wed, 08 Jan 2020 11:31:33 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
- s=mimecast20190719; t=1578483088;
- h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
- to:to:cc:cc:mime-version:mime-version:content-type:content-type:
- content-transfer-encoding:content-transfer-encoding:
- in-reply-to:in-reply-to:references:references;
- bh=/OageDLG6RxUzUD9TkM1rFJAKj/7G8+QteYbgN68XfI=;
- b=BruRO2DhbMXyzkUcb2UwCX9u2ZdUS9IdSN6ku0RfSPgzyQA+zXZ2Wz/gDcuOxIZ5yORIOp
- YaM3ZhsjSwLoTjV8uXKLmLvJc58/G789VVQvighzqGr0xHblkGhe2WxWKOTMANZE7f2Pw/
- jNKrx3Ir1uQSDvfBm0HVdDDFqoIvXyw=
-Received: from mail-wr1-f70.google.com (mail-wr1-f70.google.com
- [209.85.221.70]) (Using TLS) by relay.mimecast.com with ESMTP id
- us-mta-52-JNbKSLXxNY-Bj0kA4Jg4ow-1; Wed, 08 Jan 2020 06:31:26 -0500
-Received: by mail-wr1-f70.google.com with SMTP id d8so1310853wrq.12
- for <ath10k@lists.infradead.org>; Wed, 08 Jan 2020 03:31:26 -0800 (PST)
+ id 1ipA2R-0005tt-CI
+ for ath10k@lists.infradead.org; Wed, 08 Jan 2020 12:02:17 +0000
+Received: by mail-oi1-x243.google.com with SMTP id z64so2397648oia.4
+ for <ath10k@lists.infradead.org>; Wed, 08 Jan 2020 04:02:14 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=A+4ekRz0HS4SHBbvZctSkuL3O7+gGpKDr+t7B4bqj6Y=;
+ b=r4VU/ksCnzNHMh0zR08v1hz8zZwHgRi0UJxiHPc0fKlFcrwRp4KWeCZLSXo6rASudc
+ 9lH8W5HtDsIjSBEf+AaQtXEkTPDjflf4AO71AfCdKVr1MINNB/QMGeeIbQwjsD6b+LpJ
+ XuemmdSawH1x2WN26ddDyOzBPdBZjphJgqDokv9CO5aoUPTm8cDpb5uW33s9yGA7iAXo
+ Akkqi06MCQf64twoQjHIcR//X7uWgxFYaEBV38ngRDPHQO35idRX5oIyTS1qDetkzBAK
+ QRxsJ4NZ5TDObHPg/PfPOC2tTqrg3P/FPj3Kc78DCpapu2JlpBne+TltGmCxoGzHX7Ye
+ FHug==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:in-reply-to:references:date
- :message-id:mime-version;
- bh=/OageDLG6RxUzUD9TkM1rFJAKj/7G8+QteYbgN68XfI=;
- b=eRgyKd2ojJYBQJt3y00jRcSCQ/gm4uFzGRopU/cAiJ7xnvLwDG4I8pTo22/lEoyAq9
- 8mD4CNVM6rhZx8kk5Z0Ibjbm8zjfj7QbJCAJ4QxX9OqF3UeB2ZzvLhdryKk3m9KERKqK
- lGZsjcfyR2Zum5FVR9pK3jnC/16Sair8TM7x7C8+hMQ8QmdhBpUbjnzxiX112U4w0Os3
- AKOajnIk2sa65KeTSV4pMZh20t99iXxroZVYsHYkSnPxpLAzizfuiFGiQ+Gt/ENrb4AN
- WcUgaj4eCugQxgLnTt32r+GX7uPmNx82CRC6BnQybRUVZBiyUCZu9it9FS8wjgOpPZwj
- H5vQ==
-X-Gm-Message-State: APjAAAX73T6TvURxWuXlOOnx7GvmimRbgxDwhRG63rjEYxuXScCjZNy6
- v99JoKuDmAg4dHF6nr4EyTFlTKrRX66WOKnzT568La3ta/Xjnh34fhhwJvBOW1cT5wkFZc8nr3J
- s7PWTwS0ovmcw1o/ukCEj2g==
-X-Received: by 2002:adf:fe8c:: with SMTP id l12mr3756689wrr.215.1578483085474; 
- Wed, 08 Jan 2020 03:31:25 -0800 (PST)
-X-Google-Smtp-Source: APXvYqwxnyhVvM1qxOyT6o22YoHnbJyuSgKx5ARe0pjQgUYQ/msryfsiIFlJWyzmn/XVugpWCzMPLQ==
-X-Received: by 2002:adf:fe8c:: with SMTP id l12mr3756671wrr.215.1578483085267; 
- Wed, 08 Jan 2020 03:31:25 -0800 (PST)
-Received: from alrua-x1.borgediget.toke.dk ([45.145.92.2])
- by smtp.gmail.com with ESMTPSA id t131sm1413947wmb.13.2020.01.08.03.31.24
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Wed, 08 Jan 2020 03:31:24 -0800 (PST)
-Received: by alrua-x1.borgediget.toke.dk (Postfix, from userid 1000)
- id F1C4A180ADD; Wed,  8 Jan 2020 12:31:22 +0100 (CET)
-From: Toke =?utf-8?Q?H=C3=B8iland-J=C3=B8rgensen?= <toke@redhat.com>
-To: Justin Capella <justincapella@gmail.com>, Yibo Zhao <yiboz@codeaurora.org>
-Subject: Re: [PATCH 3/4] mac80211: fix low throughput in multi-clients
- situation
-In-Reply-To: <CAMrEMU8qoD=-45sePbp+W+F+5mQmviMQaZjzXe_Ph2cNjan+OA@mail.gmail.com>
-References: <1576221593-1086-1-git-send-email-yiboz@codeaurora.org>
- <1576221593-1086-4-git-send-email-yiboz@codeaurora.org>
- <CAMrEMU8qoD=-45sePbp+W+F+5mQmviMQaZjzXe_Ph2cNjan+OA@mail.gmail.com>
-X-Clacks-Overhead: GNU Terry Pratchett
-Date: Wed, 08 Jan 2020 12:31:22 +0100
-Message-ID: <87sgkqgp6d.fsf@toke.dk>
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=A+4ekRz0HS4SHBbvZctSkuL3O7+gGpKDr+t7B4bqj6Y=;
+ b=EIMRsdzpewLHbmY+BHoQWjBqyMgFaP27Z2J+U8CWcFyGcjrcH28QtuybzG5O/oX0gj
+ OQ1w0d1BwWXrRYDm+C7CSV9f7t+55ZcNuUBXuUUZm7wzFXLEFe12thzXq0u/LWpsw4S6
+ ux6b0x5ZA92uMOEAHEQJMXdbPQw4Bcm3QsFjrHQtfQO4lV1+1G/V+5a4z/F83mTj5RKA
+ /3c4ldWs29tNKI5XhE+LiAdgReUW8W4Bx2K5RUFaTfjWEWG5z+uroddWh7SVBG9oqsvK
+ 9zOvwjAEmiB68WBQSP8zJKu2SOdAmYIAlVWTVWnrlYOcmdeEsFEAtxmCTgg3g3yCMBbN
+ AtOg==
+X-Gm-Message-State: APjAAAXJ2lsg1pMbFCVwSX6dMNWxmWkNTW8jTNZV0bBYnfiLfOLrYyrk
+ yI81xrrZ1j5PCXvo7Wavk4g4VpJPPAAlEBL99UM=
+X-Google-Smtp-Source: APXvYqyWl/oDeXA1kB34IRJknI45nNof2KCrLrrPmZHH2Wp71YXKB2KoEayjedgosaCIcsub5mNj5pezYFwvfNpEXpM=
+X-Received: by 2002:a05:6808:3c2:: with SMTP id
+ o2mr2729856oie.145.1578484933910; 
+ Wed, 08 Jan 2020 04:02:13 -0800 (PST)
 MIME-Version: 1.0
-X-MC-Unique: JNbKSLXxNY-Bj0kA4Jg4ow-1
-X-Mimecast-Spam-Score: 0
+References: <20200108031957.22308-1-wgong@codeaurora.org>
+ <20200108031957.22308-2-wgong@codeaurora.org>
+In-Reply-To: <20200108031957.22308-2-wgong@codeaurora.org>
+From: Justin Capella <justincapella@gmail.com>
+Date: Wed, 8 Jan 2020 04:02:02 -0800
+Message-ID: <CAMrEMU-UTtxJ-eMoNEBONXJCTpaZCcGc8Mu34wqQNXkpVz=gJA@mail.gmail.com>
+Subject: Re: [PATCH v4 1/2] ath10k: add refcount for ath10k_core_restart
+To: Wen Gong <wgong@codeaurora.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200108_033131_462489_C12EBFE2 
-X-CRM114-Status: UNSURE (   5.66  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200108_040215_439050_406F3BE7 
+X-CRM114-Status: GOOD (  19.20  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [205.139.110.61 listed in list.dnswl.org]
+ no trust [2607:f8b0:4864:20:0:0:0:243 listed in]
+ [list.dnswl.org]
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider (justincapella[at]gmail.com)
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
@@ -98,7 +82,6 @@ X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -116,20 +99,154 @@ Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Justin Capella <justincapella@gmail.com> writes:
+I think this might break the "wedged" state.
 
-> Is there a risk of division by zero?
+Would simply not taking action unless STATE ON avoid the problems with
+multiple calls to _restart? ie:
 
-No, weights are always positive.
+diff --git a/drivers/net/wireless/ath/ath10k/core.c
+b/drivers/net/wireless/ath/ath10k/core.c
+index 5ec16ce19b69..a6c11b2bc97c 100644
+--- a/drivers/net/wireless/ath/ath10k/core.c
++++ b/drivers/net/wireless/ath/ath10k/core.c
+@@ -2198,11 +2198,8 @@ static int ath10k_init_hw_params(struct ath10k *ar)
+  return 0;
+ }
 
-> I'm curious about IEEE80211_AIRTIME_QUANTUM in this multiple sta
-> scenario, should weight maybe be the depth of the queue or something
-> like that? Using real time delta I assume is not performant?
+-static void ath10k_core_restart(struct work_struct *work)
++static void inline _ath10k_core_restart(struct ath10k *ar)
+ {
+- struct ath10k *ar = container_of(work, struct ath10k, restart_work);
+- int ret;
+-
+  set_bit(ATH10K_FLAG_CRASH_FLUSH, &ar->dev_flags);
 
-Eh?
+  /* Place a barrier to make sure the compiler doesn't reorder
+@@ -2232,14 +2229,28 @@ static void ath10k_core_restart(struct
+work_struct *work)
+  */
+  cancel_work_sync(&ar->set_coverage_class_work);
 
--Toke
++ ath10k_halt(ar);
++ ath10k_scan_finish(ar);
++ ieee80211_restart_hw(ar->hw);
++
++ ret = ath10k_coredump_submit(ar);
++ if (ret)
++ ath10k_warn(ar, "failed to send firmware crash dump via devcoredump:
+%d", ret);
++
++ complete(&ar->driver_recovery);
++}
++
++static void ath10k_core_restart(struct work_struct *work)
++{
++ struct ath10k *ar = container_of(work, struct ath10k, restart_work);
++ int ret;
++
+  mutex_lock(&ar->conf_mutex);
 
+  switch (ar->state) {
+  case ATH10K_STATE_ON:
+  ar->state = ATH10K_STATE_RESTARTING;
+- ath10k_halt(ar);
+- ath10k_scan_finish(ar);
+- ieee80211_restart_hw(ar->hw);
++ _ath10k_core_restart(ar);
+  break;
+  case ATH10K_STATE_OFF:
+  /* this can happen if driver is being unloaded
+@@ -2262,13 +2273,6 @@ static void ath10k_core_restart(struct work_struct *work)
+  }
+
+  mutex_unlock(&ar->conf_mutex);
+-
+- ret = ath10k_coredump_submit(ar);
+- if (ret)
+- ath10k_warn(ar, "failed to send firmware crash dump via devcoredump: %d",
+-     ret);
+-
+- complete(&ar->driver_recovery);
+ }
+
+ static void ath10k_core_set_coverage_class_work(struct work_struct *work)
+
+On Tue, Jan 7, 2020 at 7:20 PM Wen Gong <wgong@codeaurora.org> wrote:
+>
+> When it has more than one restart_work queued meanwhile, the 2nd
+> restart_work is very esay to break the 1st restart work and lead
+> recovery fail.
+>
+> Add a ref count to allow only one restart work running untill
+> device successfully recovered.
+>
+> Tested with QCA6174 SDIO with firmware WLAN.RMH.4.4.1-00029.
+>
+> Signed-off-by: Wen Gong <wgong@codeaurora.org>
+> ---
+>  drivers/net/wireless/ath/ath10k/core.c | 13 +++++++++++++
+>  drivers/net/wireless/ath/ath10k/core.h |  2 ++
+>  drivers/net/wireless/ath/ath10k/mac.c  |  1 +
+>  3 files changed, 16 insertions(+)
+>
+> diff --git a/drivers/net/wireless/ath/ath10k/core.c b/drivers/net/wireless/ath/ath10k/core.c
+> index 91f131b87efc..0e31846e6c89 100644
+> --- a/drivers/net/wireless/ath/ath10k/core.c
+> +++ b/drivers/net/wireless/ath/ath10k/core.c
+> @@ -2199,6 +2199,14 @@ static void ath10k_core_restart(struct work_struct *work)
+>  {
+>         struct ath10k *ar = container_of(work, struct ath10k, restart_work);
+>         int ret;
+> +       int restart_count;
+> +
+> +       restart_count = atomic_add_return(1, &ar->restart_count);
+> +       if (restart_count > 1) {
+> +               ath10k_warn(ar, "can not restart, count: %d\n", restart_count);
+> +               atomic_dec(&ar->restart_count);
+> +               return;
+> +       }
+>
+>         set_bit(ATH10K_FLAG_CRASH_FLUSH, &ar->dev_flags);
+>
+> @@ -2231,6 +2239,11 @@ static void ath10k_core_restart(struct work_struct *work)
+>
+>         mutex_lock(&ar->conf_mutex);
+>
+> +       if (ar->state != ATH10K_STATE_ON) {
+> +               ath10k_warn(ar, "state is not on: %d\n", ar->state);
+> +               atomic_dec(&ar->restart_count);
+> +       }
+> +
+>         switch (ar->state) {
+>         case ATH10K_STATE_ON:
+>                 ar->state = ATH10K_STATE_RESTARTING;
+> diff --git a/drivers/net/wireless/ath/ath10k/core.h b/drivers/net/wireless/ath/ath10k/core.h
+> index e57b2e7235e3..810c99f2dc0e 100644
+> --- a/drivers/net/wireless/ath/ath10k/core.h
+> +++ b/drivers/net/wireless/ath/ath10k/core.h
+> @@ -982,6 +982,8 @@ struct ath10k {
+>         /* protected by conf_mutex */
+>         u8 ps_state_enable;
+>
+> +       atomic_t restart_count;
+> +
+>         bool nlo_enabled;
+>         bool p2p;
+>
+> diff --git a/drivers/net/wireless/ath/ath10k/mac.c b/drivers/net/wireless/ath/ath10k/mac.c
+> index 3856edba7915..bc1574145e66 100644
+> --- a/drivers/net/wireless/ath/ath10k/mac.c
+> +++ b/drivers/net/wireless/ath/ath10k/mac.c
+> @@ -7208,6 +7208,7 @@ static void ath10k_reconfig_complete(struct ieee80211_hw *hw,
+>                 ath10k_info(ar, "device successfully recovered\n");
+>                 ar->state = ATH10K_STATE_ON;
+>                 ieee80211_wake_queues(ar->hw);
+> +               atomic_dec(&ar->restart_count);
+>         }
+>
+>         mutex_unlock(&ar->conf_mutex);
+> --
+> 2.23.0
 
 _______________________________________________
 ath10k mailing list
