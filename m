@@ -2,47 +2,47 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6E32B13E699
-	for <lists+ath10k@lfdr.de>; Thu, 16 Jan 2020 18:21:44 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 37C5213E969
+	for <lists+ath10k@lfdr.de>; Thu, 16 Jan 2020 18:38:20 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ImlDSNSNG28zejvXIO2n60KEyvHDKF9fhO3C5HLzbOM=; b=Kk0rNg7ZrG2tJd
-	9wypJr4CveYoQGx0P9Pu7K42TS5Cqy3WpStcrpmQgOGUKpEkUb6h/mRNNxRXbRvSqL+sICs5+maaI
-	OmVotmo6yY+1EON4eMd42rNCBQyKgKlJ9wQC8K5C+qyO/kuhb1DGuzdZBhq2/dxBcwz+GiQe2jA5U
-	U+7Mo8sOHjH4TiQMRBZ67UAX1v5XeIOVlY/RZYDI2isrxFKGWnz57GJJgnOXnTQqQ4kSyuBFwb6MR
-	mzRC5iHBn+i1ObhJ5rwlAwBTeFlRzTdz4ZNz9uRautFWLwoHPbjPuTPGPfME3tZHVps9hLnPLsa93
-	c2dFWA27ZNiRJNlrrirg==;
+	List-Owner; bh=HKIBwViDY8F322vOcn+otP4ppTaUo08Fw09EhZ8P6mo=; b=Kp0C8g+YxNfMj5
+	i9n//UMCvpQwJE9kqkvMr1dnaBqylKpy9RVEjbWavbcDyQkHPW0xWVpW1AWaPopCkh1AQll1JwzKr
+	uxpBG4Kzy8Y12ODdccntEWOQfTBGqV3jrtI7ch1yjwIWRfc+j8NpkA/9g95SEfqPaHyWh6ViEGJc9
+	86ZiRawGOoL9b5wmDum5sBoQFiMfMSzwFGHAOhV1bNBsTeDcBKy2joxKqAgny4YGJDds0vwylNp8L
+	pZxYNzKt0WTwLQoV/BFeMrBoCuRr6rU89z3rR65MmEzk3iTTrHxn4UVsLW3YQXfn92Z4H+IT6/dBQ
+	vcHea6nKGYxpXGmYijGw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1is8px-0007PZ-Rd; Thu, 16 Jan 2020 17:21:41 +0000
+	id 1is960-00077a-Um; Thu, 16 Jan 2020 17:38:17 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1is8bi-0008T0-0R
- for ath10k@lists.infradead.org; Thu, 16 Jan 2020 17:07:03 +0000
+ id 1is8gR-0005TZ-7d
+ for ath10k@lists.infradead.org; Thu, 16 Jan 2020 17:11:56 +0000
 Received: from sasha-vm.mshome.net (c-73-47-72-35.hsd1.nh.comcast.net
  [73.47.72.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 6650A2081E;
- Thu, 16 Jan 2020 17:06:56 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id EF4E22469F;
+ Thu, 16 Jan 2020 17:11:49 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1579194417;
- bh=9LdsUBp7qfC8M7hIx4I1cjSoYSEPj8Dn1kYaez5MelE=;
+ s=default; t=1579194710;
+ bh=b7J+PIPCOnyJlaPoNNjY1W5SUVeTIuhTymopR4zUOrE=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=Yu2aVTu9KuYd2slD/1/jbgFdFzLhTrdsN9MQpu6gcYsu8orlCjCMjbQ1gmOobxPgI
- +BAe2Tap+ksQqFkB38jazEBg2kidEtJ8Sl/4207Vuh3kAt4hOzlC0tjbJEEINR5dn7
- G4lIKUX7pzp2hoIxUoXMem+C/CPdv1g+YkhCSBvw=
+ b=1ezTIBnm4W5EFU9qx9Ko+rdByuwwBXOiOf99Sn2CQY86pbfautOl4fzsVayMJS+WT
+ yS0NaAdL6P4IPKRmYvrTyur4j09iI0jJLWpi2O2ak0k59pxFC9KFGvZK9eRM24Jgbo
+ HyksPYmMAYBQ0sdar2GO0DjtHw9PHUO0HdSGKFYI=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 4.19 338/671] ath10k: Fix encoding for protected
- management frames
-Date: Thu, 16 Jan 2020 11:59:36 -0500
-Message-Id: <20200116170509.12787-75-sashal@kernel.org>
+Subject: [PATCH AUTOSEL 4.19 548/671] ath10k: adjust skb length in
+ ath10k_sdio_mbox_rx_packet
+Date: Thu, 16 Jan 2020 12:03:06 -0500
+Message-Id: <20200116170509.12787-285-sashal@kernel.org>
 X-Mailer: git-send-email 2.20.1
 In-Reply-To: <20200116170509.12787-1-sashal@kernel.org>
 References: <20200116170509.12787-1-sashal@kernel.org>
@@ -50,9 +50,8 @@ MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200116_090658_087410_86D69F75 
-X-CRM114-Status: UNSURE (   8.93  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200116_091151_363280_7D07C769 
+X-CRM114-Status: GOOD (  15.70  )
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
  Content analysis details:   (-5.2 points)
@@ -81,54 +80,108 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Sasha Levin <sashal@kernel.org>, netdev@vger.kernel.org,
- linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
- Rakesh Pillai <pillair@codeaurora.org>, Kalle Valo <kvalo@codeaurora.org>
+Cc: Sasha Levin <sashal@kernel.org>, Nicolas Boichat <drinkcat@chromium.org>,
+ netdev@vger.kernel.org, linux-wireless@vger.kernel.org,
+ ath10k@lists.infradead.org, Wen Gong <wgong@codeaurora.org>,
+ Kalle Valo <kvalo@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-From: Rakesh Pillai <pillair@codeaurora.org>
+From: Nicolas Boichat <drinkcat@chromium.org>
 
-[ Upstream commit 42f1bc43e6a97b9ddbe976eba9bd05306c990c75 ]
+[ Upstream commit b7139960832eb56fa15d390a4b5c8c5739bd0d1a ]
 
-Currently the protected management frames are
-not appended with the MIC_LEN which results in
-the protected management frames being encoded
-incorrectly.
+When the FW bundles multiple packets, pkt->act_len may be incorrect
+as it refers to the first packet only (however, the FW will only
+bundle packets that fit into the same pkt->alloc_len).
 
-Add the extra space at the end of the protected
-management frames to fix this encoding error for
-the protected management frames.
+Before this patch, the skb length would be set (incorrectly) to
+pkt->act_len in ath10k_sdio_mbox_rx_packet, and then later manually
+adjusted in ath10k_sdio_mbox_rx_process_packet.
 
-Tested HW: WCN3990
-Tested FW: WLAN.HL.3.1-00784-QCAHLSWMTPLZ-1
+The first problem is that ath10k_sdio_mbox_rx_process_packet does not
+use proper skb_put commands to adjust the length (it directly changes
+skb->len), so we end up with a mismatch between skb->head + skb->tail
+and skb->data + skb->len. This is quite serious, and causes corruptions
+in the TCP stack, as the stack tries to coalesce packets, and relies
+on skb->tail being correct (that is, skb_tail_pointer must point to
+the first byte_after_ the data).
 
-Fixes: 1807da49733e ("ath10k: wmi: add management tx by reference support over wmi")
-Signed-off-by: Rakesh Pillai <pillair@codeaurora.org>
+Instead of re-adjusting the size in ath10k_sdio_mbox_rx_process_packet,
+this moves the code to ath10k_sdio_mbox_rx_packet, and also add a
+bounds check, as skb_put would crash the kernel if not enough space is
+available.
+
+Tested with QCA6174 SDIO with firmware
+WLAN.RMH.4.4.1-00007-QCARMSWP-1.
+
+Fixes: 8530b4e7b22bc3b ("ath10k: sdio: set skb len for all rx packets")
+Signed-off-by: Nicolas Boichat <drinkcat@chromium.org>
+Signed-off-by: Wen Gong <wgong@codeaurora.org>
 Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 Signed-off-by: Sasha Levin <sashal@kernel.org>
 ---
- drivers/net/wireless/ath/ath10k/wmi-tlv.c | 4 +++-
- 1 file changed, 3 insertions(+), 1 deletion(-)
+ drivers/net/wireless/ath/ath10k/sdio.c | 29 +++++++++++++++++++-------
+ 1 file changed, 21 insertions(+), 8 deletions(-)
 
-diff --git a/drivers/net/wireless/ath/ath10k/wmi-tlv.c b/drivers/net/wireless/ath/ath10k/wmi-tlv.c
-index a90990b8008d..248decb494c2 100644
---- a/drivers/net/wireless/ath/ath10k/wmi-tlv.c
-+++ b/drivers/net/wireless/ath/ath10k/wmi-tlv.c
-@@ -2692,8 +2692,10 @@ ath10k_wmi_tlv_op_gen_mgmt_tx_send(struct ath10k *ar, struct sk_buff *msdu,
- 	if ((ieee80211_is_action(hdr->frame_control) ||
- 	     ieee80211_is_deauth(hdr->frame_control) ||
- 	     ieee80211_is_disassoc(hdr->frame_control)) &&
--	     ieee80211_has_protected(hdr->frame_control))
-+	     ieee80211_has_protected(hdr->frame_control)) {
-+		skb_put(msdu, IEEE80211_CCMP_MIC_LEN);
- 		buf_len += IEEE80211_CCMP_MIC_LEN;
-+	}
+diff --git a/drivers/net/wireless/ath/ath10k/sdio.c b/drivers/net/wireless/ath/ath10k/sdio.c
+index 686759b5613f..0ecaba824fb2 100644
+--- a/drivers/net/wireless/ath/ath10k/sdio.c
++++ b/drivers/net/wireless/ath/ath10k/sdio.c
+@@ -392,16 +392,11 @@ static int ath10k_sdio_mbox_rx_process_packet(struct ath10k *ar,
+ 	struct ath10k_htc_hdr *htc_hdr = (struct ath10k_htc_hdr *)skb->data;
+ 	bool trailer_present = htc_hdr->flags & ATH10K_HTC_FLAG_TRAILER_PRESENT;
+ 	enum ath10k_htc_ep_id eid;
+-	u16 payload_len;
+ 	u8 *trailer;
+ 	int ret;
  
- 	buf_len = min_t(u32, buf_len, WMI_TLV_MGMT_TX_FRAME_MAX_LEN);
- 	buf_len = round_up(buf_len, 4);
+-	payload_len = le16_to_cpu(htc_hdr->len);
+-	skb->len = payload_len + sizeof(struct ath10k_htc_hdr);
+-
+ 	if (trailer_present) {
+-		trailer = skb->data + sizeof(*htc_hdr) +
+-			  payload_len - htc_hdr->trailer_len;
++		trailer = skb->data + skb->len - htc_hdr->trailer_len;
+ 
+ 		eid = pipe_id_to_eid(htc_hdr->eid);
+ 
+@@ -638,13 +633,31 @@ static int ath10k_sdio_mbox_rx_packet(struct ath10k *ar,
+ {
+ 	struct ath10k_sdio *ar_sdio = ath10k_sdio_priv(ar);
+ 	struct sk_buff *skb = pkt->skb;
++	struct ath10k_htc_hdr *htc_hdr;
+ 	int ret;
+ 
+ 	ret = ath10k_sdio_readsb(ar, ar_sdio->mbox_info.htc_addr,
+ 				 skb->data, pkt->alloc_len);
++	if (ret)
++		goto out;
++
++	/* Update actual length. The original length may be incorrect,
++	 * as the FW will bundle multiple packets as long as their sizes
++	 * fit within the same aligned length (pkt->alloc_len).
++	 */
++	htc_hdr = (struct ath10k_htc_hdr *)skb->data;
++	pkt->act_len = le16_to_cpu(htc_hdr->len) + sizeof(*htc_hdr);
++	if (pkt->act_len > pkt->alloc_len) {
++		ath10k_warn(ar, "rx packet too large (%zu > %zu)\n",
++			    pkt->act_len, pkt->alloc_len);
++		ret = -EMSGSIZE;
++		goto out;
++	}
++
++	skb_put(skb, pkt->act_len);
++
++out:
+ 	pkt->status = ret;
+-	if (!ret)
+-		skb_put(skb, pkt->act_len);
+ 
+ 	return ret;
+ }
 -- 
 2.20.1
 
