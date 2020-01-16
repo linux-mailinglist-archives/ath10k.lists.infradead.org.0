@@ -2,73 +2,61 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2276213EE2C
-	for <lists+ath10k@lfdr.de>; Thu, 16 Jan 2020 19:07:38 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id BB55D13F37F
+	for <lists+ath10k@lfdr.de>; Thu, 16 Jan 2020 19:44:53 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=yB5kbF16UI0vyex8nJa1ShaI8Kmd3VUTdvx552INr7Q=; b=DrExn+uvGVSQ/X
-	6wRgYMsnRexFy8Kg1UYQC1oqW5nZQk4FFIThw3ow1VprWMBQ5RNpNoUUtER+OpF4svdoeFM3wjb41
-	GasTX9AUOmOH53a6sSliBHcY1Za0qam32QxGaEW0S1hfjLh/lFhQYDPsoDc0m+OhC9JC1HPaeVrpK
-	up/HFtSLXmvCdtcus1jJYZc0H0vyDITqtqp2XJ/m0JiM1jO1/WMf7O5c/3XBG3THDB1po/rGX3jFj
-	zhtmt4K65RsVREeDLy96fO7obkkMyfE+0n8ToBEMfB2pIXEIwCt3C2LzZFuYyAEk/9spSCb6JK2+O
-	VK2KOW78cVJoMzmCdiVg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Subject:To:From
+	:Date:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=QoE6yRdzTParE9u6Mkph4yhr5xr+TbxYoOta+Dvi4TI=; b=JgyMqkVnjm+XKq
+	oYATArq3wtZkDTuDC3GrWH4NHOhPrDJnrZq01tqaJ+Wwjr9yjqm8SRJEHNwa5zUyntwx0+uUG72hA
+	fLAF+RgT2okLSZsZbYxn811lV6LNAJGkwI6/0teRM/RAeNQ0aH/it3wsJk5HhrA/wU7ASmxGgcd4b
+	dh/zxkD3/apEoWrtIDUMfG+MK0zRcrMdU347kRZ3H5DjLRxFAzHx7neOLMaORm4XtT77z8AcFZIFw
+	tHMAyRWogkC1JYn7ycFq9qwgVVygySYmxlLfAGVjDczT04qWn+ZW+buhGWDyNKaZrY6jozcxbYR7j
+	MtDnB4VspWbYy03Y2oHA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1is9YM-0005fq-Sx; Thu, 16 Jan 2020 18:07:34 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1isA8R-0007Ve-FA; Thu, 16 Jan 2020 18:44:51 +0000
+Received: from mga07.intel.com ([134.134.136.100])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1is8xa-0006nl-7I
- for ath10k@lists.infradead.org; Thu, 16 Jan 2020 17:29:36 +0000
-Received: from sasha-vm.mshome.net (c-73-47-72-35.hsd1.nh.comcast.net
- [73.47.72.35])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 7785024724;
- Thu, 16 Jan 2020 17:29:32 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1579195773;
- bh=RIjjSlgXFljZ+ANBVrJotX5XLZbHnKiqcXVztCjBkvM=;
- h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=Z+HQbpTDiyrmLJXlUaiqVCAyikJ7dBR+hDIbSQ0lf8Kxa9gGonCiVMq9oOgRVfY5L
- JBPSdfw5MYJNZbhcZgSSOBV0fGxGJWOZ1d8bwBpnGUsk4QCl+I5Oy51mv69PhPc4pU
- 7btsQ2K+lTLf3o4JqCQ9aQBuW1IOMBqkSNx/mbA0=
-From: Sasha Levin <sashal@kernel.org>
-To: linux-kernel@vger.kernel.org,
-	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 4.14 299/371] ath10k: adjust skb length in
- ath10k_sdio_mbox_rx_packet
-Date: Thu, 16 Jan 2020 12:22:51 -0500
-Message-Id: <20200116172403.18149-242-sashal@kernel.org>
-X-Mailer: git-send-email 2.20.1
-In-Reply-To: <20200116172403.18149-1-sashal@kernel.org>
-References: <20200116172403.18149-1-sashal@kernel.org>
+ id 1is9fm-0006wh-Qi
+ for ath10k@lists.infradead.org; Thu, 16 Jan 2020 18:15:29 +0000
+X-Amp-Result: SKIPPED(no attachment in message)
+X-Amp-File-Uploaded: False
+Received: from orsmga003.jf.intel.com ([10.7.209.27])
+ by orsmga105.jf.intel.com with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384;
+ 16 Jan 2020 10:15:13 -0800
+X-ExtLoop1: 1
+X-IronPort-AV: E=Sophos;i="5.70,327,1574150400"; d="scan'208";a="226059449"
+Received: from lkp-server01.sh.intel.com (HELO lkp-server01) ([10.239.97.150])
+ by orsmga003.jf.intel.com with ESMTP; 16 Jan 2020 10:15:12 -0800
+Received: from kbuild by lkp-server01 with local (Exim 4.89)
+ (envelope-from <lkp@intel.com>)
+ id 1is9fj-0003gY-Gs; Fri, 17 Jan 2020 02:15:11 +0800
+Date: Fri, 17 Jan 2020 02:14:00 +0800
+From: kbuild test robot <lkp@intel.com>
+To: Kalle Valo <kvalo@codeaurora.org>
+Subject: [ath6kl:pending] BUILD SUCCESS
+ ed89e0f380addd22d249a5afafbad3eedd552a80
+Message-ID: <5e20a7e8.CHgNQxGLvPROvfKI%lkp@intel.com>
+User-Agent: Heirloom mailx 12.5 6/20/10
 MIME-Version: 1.0
-X-stable: review
-X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200116_092934_480003_91F72F67 
-X-CRM114-Status: GOOD (  15.70  )
-X-Spam-Score: -5.2 (-----)
+X-CRM114-CacheID: sfid-20200116_101514_981054_3020F9B0 
+X-CRM114-Status: UNSURE (   7.71  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -1.3 (-)
 X-Spam-Report: SpamAssassin version 3.4.2 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (-1.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [134.134.136.100 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 1.0 HEXHASH_WORD           Multiple instances of word + hexadecimal hash
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -80,111 +68,175 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Sasha Levin <sashal@kernel.org>, Nicolas Boichat <drinkcat@chromium.org>,
- netdev@vger.kernel.org, linux-wireless@vger.kernel.org,
- ath10k@lists.infradead.org, Wen Gong <wgong@codeaurora.org>,
- Kalle Valo <kvalo@codeaurora.org>
+Cc: ath10k@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-From: Nicolas Boichat <drinkcat@chromium.org>
+tree/branch: https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git  pending
+branch HEAD: ed89e0f380addd22d249a5afafbad3eedd552a80  ath11k: fix up some error paths
 
-[ Upstream commit b7139960832eb56fa15d390a4b5c8c5739bd0d1a ]
+elapsed time: 761m
 
-When the FW bundles multiple packets, pkt->act_len may be incorrect
-as it refers to the first packet only (however, the FW will only
-bundle packets that fit into the same pkt->alloc_len).
+configs tested: 148
+configs skipped: 0
 
-Before this patch, the skb length would be set (incorrectly) to
-pkt->act_len in ath10k_sdio_mbox_rx_packet, and then later manually
-adjusted in ath10k_sdio_mbox_rx_process_packet.
+The following configs have been built successfully.
+More configs may be tested in the coming days.
 
-The first problem is that ath10k_sdio_mbox_rx_process_packet does not
-use proper skb_put commands to adjust the length (it directly changes
-skb->len), so we end up with a mismatch between skb->head + skb->tail
-and skb->data + skb->len. This is quite serious, and causes corruptions
-in the TCP stack, as the stack tries to coalesce packets, and relies
-on skb->tail being correct (that is, skb_tail_pointer must point to
-the first byte_after_ the data).
+parisc                            allnoconfig
+parisc                            allyesonfig
+parisc                         b180_defconfig
+parisc                        c3000_defconfig
+parisc                              defconfig
+um                                  defconfig
+um                             i386_defconfig
+um                           x86_64_defconfig
+alpha                               defconfig
+csky                                defconfig
+nds32                             allnoconfig
+nds32                               defconfig
+mips                           32r2_defconfig
+mips                         64r6el_defconfig
+mips                             allmodconfig
+mips                              allnoconfig
+mips                             allyesconfig
+mips                      fuloong2e_defconfig
+mips                      malta_kvm_defconfig
+x86_64               randconfig-b001-20200116
+x86_64               randconfig-b002-20200116
+x86_64               randconfig-b003-20200116
+i386                 randconfig-b001-20200116
+i386                 randconfig-b002-20200116
+i386                 randconfig-b003-20200116
+h8300                     edosk2674_defconfig
+h8300                    h8300h-sim_defconfig
+h8300                       h8s-sim_defconfig
+m68k                             allmodconfig
+m68k                       m5475evb_defconfig
+m68k                          multi_defconfig
+m68k                           sun3_defconfig
+sh                               allmodconfig
+sh                                allnoconfig
+sh                          rsk7269_defconfig
+sh                  sh7785lcr_32bit_defconfig
+sh                            titan_defconfig
+c6x                              allyesconfig
+c6x                        evmc6678_defconfig
+nios2                         10m50_defconfig
+nios2                         3c120_defconfig
+openrisc                    or1ksim_defconfig
+openrisc                 simple_smp_defconfig
+xtensa                       common_defconfig
+xtensa                          iss_defconfig
+arc                              allyesconfig
+arc                                 defconfig
+microblaze                      mmu_defconfig
+microblaze                    nommu_defconfig
+powerpc                           allnoconfig
+powerpc                             defconfig
+powerpc                       ppc64_defconfig
+powerpc                          rhel-kconfig
+alpha                randconfig-a001-20200116
+m68k                 randconfig-a001-20200116
+mips                 randconfig-a001-20200116
+nds32                randconfig-a001-20200116
+parisc               randconfig-a001-20200116
+riscv                randconfig-a001-20200116
+s390                             alldefconfig
+s390                             allmodconfig
+s390                              allnoconfig
+s390                             allyesconfig
+s390                          debug_defconfig
+s390                                defconfig
+s390                       zfcpdump_defconfig
+sparc                            allyesconfig
+sparc                               defconfig
+sparc64                          allmodconfig
+sparc64                           allnoconfig
+sparc64                          allyesconfig
+sparc64                             defconfig
+riscv                            allmodconfig
+riscv                             allnoconfig
+riscv                            allyesconfig
+riscv                               defconfig
+riscv                    nommu_virt_defconfig
+riscv                          rv32_defconfig
+i386                             alldefconfig
+i386                              allnoconfig
+i386                             allyesconfig
+i386                                defconfig
+x86_64               randconfig-d001-20200116
+x86_64               randconfig-d002-20200116
+x86_64               randconfig-d003-20200116
+i386                 randconfig-d001-20200116
+i386                 randconfig-d002-20200116
+i386                 randconfig-d003-20200116
+x86_64                              fedora-25
+x86_64                                  kexec
+x86_64                                    lkp
+x86_64                                   rhel
+x86_64                               rhel-7.6
+ia64                             alldefconfig
+ia64                             allmodconfig
+ia64                              allnoconfig
+ia64                             allyesconfig
+ia64                                defconfig
+x86_64               randconfig-a001-20200116
+x86_64               randconfig-a002-20200116
+x86_64               randconfig-a003-20200116
+i386                 randconfig-a001-20200116
+i386                 randconfig-a002-20200116
+i386                 randconfig-a003-20200116
+arc                  randconfig-a001-20200116
+arm                  randconfig-a001-20200116
+arm64                randconfig-a001-20200116
+ia64                 randconfig-a001-20200116
+powerpc              randconfig-a001-20200116
+sparc                randconfig-a001-20200116
+arc                  randconfig-a001-20200117
+arm                  randconfig-a001-20200117
+arm64                randconfig-a001-20200117
+ia64                 randconfig-a001-20200117
+powerpc              randconfig-a001-20200117
+sparc                randconfig-a001-20200117
+arm                              allmodconfig
+arm                               allnoconfig
+arm                              allyesconfig
+arm                         at91_dt_defconfig
+arm                           efm32_defconfig
+arm                          exynos_defconfig
+arm                        multi_v5_defconfig
+arm                        multi_v7_defconfig
+arm                        shmobile_defconfig
+arm                           sunxi_defconfig
+arm64                            allmodconfig
+arm64                             allnoconfig
+arm64                            allyesconfig
+arm64                               defconfig
+x86_64               randconfig-d001-20200117
+x86_64               randconfig-d002-20200117
+x86_64               randconfig-d003-20200117
+i386                 randconfig-d001-20200117
+i386                 randconfig-d002-20200117
+i386                 randconfig-d003-20200117
+alpha                randconfig-a001-20200117
+m68k                 randconfig-a001-20200117
+mips                 randconfig-a001-20200117
+nds32                randconfig-a001-20200117
+parisc               randconfig-a001-20200117
+riscv                randconfig-a001-20200117
+x86_64               randconfig-e001-20200117
+x86_64               randconfig-e002-20200117
+x86_64               randconfig-e003-20200117
+i386                 randconfig-e001-20200117
+i386                 randconfig-e002-20200117
+i386                 randconfig-e003-20200117
 
-Instead of re-adjusting the size in ath10k_sdio_mbox_rx_process_packet,
-this moves the code to ath10k_sdio_mbox_rx_packet, and also add a
-bounds check, as skb_put would crash the kernel if not enough space is
-available.
-
-Tested with QCA6174 SDIO with firmware
-WLAN.RMH.4.4.1-00007-QCARMSWP-1.
-
-Fixes: 8530b4e7b22bc3b ("ath10k: sdio: set skb len for all rx packets")
-Signed-off-by: Nicolas Boichat <drinkcat@chromium.org>
-Signed-off-by: Wen Gong <wgong@codeaurora.org>
-Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
-Signed-off-by: Sasha Levin <sashal@kernel.org>
 ---
- drivers/net/wireless/ath/ath10k/sdio.c | 29 +++++++++++++++++++-------
- 1 file changed, 21 insertions(+), 8 deletions(-)
-
-diff --git a/drivers/net/wireless/ath/ath10k/sdio.c b/drivers/net/wireless/ath/ath10k/sdio.c
-index 0a1248ebccf5..f49b21b137c1 100644
---- a/drivers/net/wireless/ath/ath10k/sdio.c
-+++ b/drivers/net/wireless/ath/ath10k/sdio.c
-@@ -392,16 +392,11 @@ static int ath10k_sdio_mbox_rx_process_packet(struct ath10k *ar,
- 	struct ath10k_htc_hdr *htc_hdr = (struct ath10k_htc_hdr *)skb->data;
- 	bool trailer_present = htc_hdr->flags & ATH10K_HTC_FLAG_TRAILER_PRESENT;
- 	enum ath10k_htc_ep_id eid;
--	u16 payload_len;
- 	u8 *trailer;
- 	int ret;
- 
--	payload_len = le16_to_cpu(htc_hdr->len);
--	skb->len = payload_len + sizeof(struct ath10k_htc_hdr);
--
- 	if (trailer_present) {
--		trailer = skb->data + sizeof(*htc_hdr) +
--			  payload_len - htc_hdr->trailer_len;
-+		trailer = skb->data + skb->len - htc_hdr->trailer_len;
- 
- 		eid = pipe_id_to_eid(htc_hdr->eid);
- 
-@@ -635,13 +630,31 @@ static int ath10k_sdio_mbox_rx_packet(struct ath10k *ar,
- {
- 	struct ath10k_sdio *ar_sdio = ath10k_sdio_priv(ar);
- 	struct sk_buff *skb = pkt->skb;
-+	struct ath10k_htc_hdr *htc_hdr;
- 	int ret;
- 
- 	ret = ath10k_sdio_readsb(ar, ar_sdio->mbox_info.htc_addr,
- 				 skb->data, pkt->alloc_len);
-+	if (ret)
-+		goto out;
-+
-+	/* Update actual length. The original length may be incorrect,
-+	 * as the FW will bundle multiple packets as long as their sizes
-+	 * fit within the same aligned length (pkt->alloc_len).
-+	 */
-+	htc_hdr = (struct ath10k_htc_hdr *)skb->data;
-+	pkt->act_len = le16_to_cpu(htc_hdr->len) + sizeof(*htc_hdr);
-+	if (pkt->act_len > pkt->alloc_len) {
-+		ath10k_warn(ar, "rx packet too large (%zu > %zu)\n",
-+			    pkt->act_len, pkt->alloc_len);
-+		ret = -EMSGSIZE;
-+		goto out;
-+	}
-+
-+	skb_put(skb, pkt->act_len);
-+
-+out:
- 	pkt->status = ret;
--	if (!ret)
--		skb_put(skb, pkt->act_len);
- 
- 	return ret;
- }
--- 
-2.20.1
-
+0-DAY kernel test infrastructure                 Open Source Technology Center
+https://lists.01.org/hyperkitty/list/kbuild-all@lists.01.org Intel Corporation
 
 _______________________________________________
 ath10k mailing list
