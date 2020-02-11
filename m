@@ -2,92 +2,79 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C71E0158A2F
-	for <lists+ath10k@lfdr.de>; Tue, 11 Feb 2020 08:04:05 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 85DF3158B92
+	for <lists+ath10k@lfdr.de>; Tue, 11 Feb 2020 09:59:57 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
-	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=koqwMjL6TiwCAje+BhMO/4jukbDjS89qR+IBNXPQcaM=; b=u6gw6WtNWlxQW29O22gjPw6oL
-	gkVpzjUhb9tLU7jJu4UmDF/KJthlg71OoVN5wQJgNGFeUaA14o+1mtOeD/VjXPcwWsT1P8is+QGkA
-	iCHVHxiktPI983Ag2FCSHTCm9SjKGR+a4L+MFSVYaqlTDa2RjhNpHjq9Nd/swx96vp+40HNc9X2KH
-	HwFykrv00nkFnd/se9Bcp0RgIIEN5EkhF6blOUq7MDWjIwwkqRpSnW+9tK/NAiWAF3h9G2f6nxZGE
-	/CTTEaonrrurGS4xsffZGokq9Piju+JHZsT+ko+2mBdsT4bz5+ce0lPUJTrWphypdwiegBbxkFb1s
-	jvUDYT8mw==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
+	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=I2Ub2Lmv0RCN4tjD+PF4WrzV3z2UDUtuQG2m5iKZRYA=; b=Q5E
+	w64ZiUMo614pGVBHXFS1ZzToqRWXfOv7p55NgoDWhvAYCHY1NJcoaaUxmkWtFZKh3j7mY313PPpe8
+	ORkqpyLom+NQJwTOU50wcZtthZphhhSNupCIKtA+k+kmGQHLSdaSY1mJnxh+gNlc4x7r4P/FOVw9i
+	FJBj4Em+tKZSlGfEsKm8S3iUfAbTKrzt1gAcHqoQMvKpIiJ+2UQLlbQbF0OhmPk9Oq4foXQJFS/oa
+	N47pFeiW01Z9O0rie0CILoqVSFcPS2y4pznU+uZRa9VubXR7HGqMcJzFwdJV7e9r1L2c0fduc66Wj
+	0BOLpHSHO28hOqiRRquxezJP/3erqOA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j1PaR-0000oq-K1; Tue, 11 Feb 2020 07:03:59 +0000
-Received: from mail-pf1-x441.google.com ([2607:f8b0:4864:20::441])
+	id 1j1ROb-0001e6-MU; Tue, 11 Feb 2020 08:59:53 +0000
+Received: from mail25.static.mailgun.info ([104.130.122.25])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j1PaN-0000oH-WA
- for ath10k@lists.infradead.org; Tue, 11 Feb 2020 07:03:57 +0000
-Received: by mail-pf1-x441.google.com with SMTP id p14so5019795pfn.4
- for <ath10k@lists.infradead.org>; Mon, 10 Feb 2020 23:03:54 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=subject:to:cc:references:from:message-id:date:user-agent
- :mime-version:in-reply-to:content-language:content-transfer-encoding;
- bh=YZSoX/T69rQ+Ck7xhZRWSOsSLw5fJMwxFZcL7ir96Rw=;
- b=Kmc4/Zl1GoI41XIC0TSseAU7S8vIfxo0vToR33StTc/YtOEm4UcyLFr7oE/U2EkjH0
- O8vAUNitWCeXAWfBiSYBsugXJCz9qun5wY76Rv7jjZThu5eddak8bMSwHIbfJo6kwY4w
- tI+jd3g6u1+nobglsNbL8UX4l9qbQcFXbe81Y=
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:subject:to:cc:references:from:message-id:date
- :user-agent:mime-version:in-reply-to:content-language
- :content-transfer-encoding;
- bh=YZSoX/T69rQ+Ck7xhZRWSOsSLw5fJMwxFZcL7ir96Rw=;
- b=HspVNqD7VNPEY5i0xcmztJtmmpN1h2QNq8ZKvBCZK8MBSvgrw3MyBWrmfL/NOuNpJ4
- gQfftA3AryYmnpt4DvTLd+2SN/cHQrHEk7uE1q3wY/eHzuqvCgIyAHsHZDOtp6w/oFMd
- Qbdt2jZQtxQTpG2ZlFvNQgGmUeT6x5q+Fv/5VB66O87RJv4OAgzXShh+pK8Y1svpSEx8
- 8Vv+Q3o3EX4JmMWMvXHfcu4Zzucv4f4AtSIFKsPTigQUNVt+tC/LS/xSyDaheTq6IXP4
- 33191lN82fT1Ug5TcywAtN1icFMZvf7G4Brrlnz2P05c0kjTdaIVgoTcKYzJdZ5mQ67s
- iNEQ==
-X-Gm-Message-State: APjAAAVEP1tU6bSn9K1QXOUy8HH65Hpv5AeCZeVdFnmNMB4MCFheY/0A
- /HG59cFWNXqcK8Yj+zSzQhxP1u1rZJUGeQ==
-X-Google-Smtp-Source: APXvYqxixAyN5h2Jo4CX6YxMuAHF3JVKqsZrJj2xcehzsd8p5iogyxGRKyJOY3qvdpJ4Gsgaj5fVIw==
-X-Received: by 2002:a63:7c4d:: with SMTP id l13mr5498898pgn.275.1581404633807; 
- Mon, 10 Feb 2020 23:03:53 -0800 (PST)
-Received: from pihsun-z840.tpe.corp.google.com
- ([2401:fa00:1:10:70db:a5:26c3:9423])
- by smtp.gmail.com with ESMTPSA id k1sm2791653pfg.66.2020.02.10.23.03.52
- (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Mon, 10 Feb 2020 23:03:53 -0800 (PST)
-Subject: Re: [PATCH v8 1/4] ath10k: disable TX complete indication of htt for
- sdio
-To: Wen Gong <wgong@codeaurora.org>, ath10k@lists.infradead.org
-References: <20191128103030.6429-1-wgong@codeaurora.org>
- <0101016eb1903db0-ef7063b4-0f42-4a01-8886-327541e6c1a4-000000@us-west-2.amazonses.com>
-From: Pi-Hsun Shih <pihsun@chromium.org>
-Message-ID: <76bce8e3-e05b-ace6-3edd-54f522be3fe6@chromium.org>
-Date: Tue, 11 Feb 2020 15:03:51 +0800
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
- Thunderbird/68.4.1
-MIME-Version: 1.0
-In-Reply-To: <0101016eb1903db0-ef7063b4-0f42-4a01-8886-327541e6c1a4-000000@us-west-2.amazonses.com>
-Content-Language: en-GB
+ id 1j1ROY-0001dR-AX
+ for ath10k@lists.infradead.org; Tue, 11 Feb 2020 08:59:51 +0000
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
+ q=dns/txt; 
+ s=smtp; t=1581411588; h=Message-Id: Date: Subject: Cc: To: From:
+ Sender; bh=naIQn2hB0n/P5Vs4krn5QFMSJuLxTMUW9SG3/BdcJfE=;
+ b=DVfPhH7NSiFyiKzffur2GSRbQNaWNuC9xaryTZN89hUY03KWNnhZ9zt758Rdi2ZbA1qOi1iN
+ 1sNZKxnFRtg1g3VJuSkvMS9QizYxyhCxCkvyKSTlhzb8UW0+nMKKLN5+qIGOW5L1vlqShsoU
+ Hhsm14R1H/utsCebwoTftIUfzPA=
+X-Mailgun-Sending-Ip: 104.130.122.25
+X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
+Received: from smtp.codeaurora.org
+ (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
+ by mxa.mailgun.org with ESMTP id 5e426cff.7fc83cbf0c70-smtp-out-n03;
+ Tue, 11 Feb 2020 08:59:43 -0000 (UTC)
+Received: by smtp.codeaurora.org (Postfix, from userid 1001)
+ id AC90AC433A2; Tue, 11 Feb 2020 08:59:42 +0000 (UTC)
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ aws-us-west-2-caf-mail-1.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,SPF_NONE
+ autolearn=ham autolearn_force=no version=3.4.0
+Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
+ [88.114.240.156])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
+ (No client certificate requested) (Authenticated sender: kvalo)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 87E03C43383;
+ Tue, 11 Feb 2020 08:59:41 +0000 (UTC)
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 87E03C43383
+Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
+ spf=none smtp.mailfrom=kvalo@codeaurora.org
+From: Kalle Valo <kvalo@codeaurora.org>
+To: ath10k@lists.infradead.org
+Subject: [PATCH] ath10k: fix few checkpatch warnings
+Date: Tue, 11 Feb 2020 10:59:38 +0200
+Message-Id: <1581411578-26388-1-git-send-email-kvalo@codeaurora.org>
+X-Mailer: git-send-email 2.7.4
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200210_230356_064792_F5C86295 
-X-CRM114-Status: GOOD (  13.10  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200211_005950_427600_2A52DF38 
+X-CRM114-Status: GOOD (  11.15  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:441 listed in]
- [list.dnswl.org]
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ no trust [104.130.122.25 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -100,59 +87,61 @@ List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
 Cc: linux-wireless@vger.kernel.org
+MIME-Version: 1.0
+Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Hi,
+Fix warnings which were recently introduced:
 
-On 11/28/19 6:30 PM, Wen Gong wrote:
-> ...
-> diff --git a/drivers/net/wireless/ath/ath10k/htt_tx.c b/drivers/net/wireless/ath/ath10k/htt_tx.c
-> index a182c0944cc7..c6c4b2a4d20f 100644
-> --- a/drivers/net/wireless/ath/ath10k/htt_tx.c
-> +++ b/drivers/net/wireless/ath/ath10k/htt_tx.c
-> @@ -543,7 +543,35 @@ void ath10k_htt_tx_free(struct ath10k_htt *htt)
->   
->   void ath10k_htt_htc_tx_complete(struct ath10k *ar, struct sk_buff *skb)
->   {
-> +	struct ath10k_htt *htt = &ar->htt;
-> +	struct htt_tx_done tx_done = {0};
-> +	struct htt_cmd_hdr *htt_hdr;
-> +	struct htt_data_tx_desc *desc_hdr;
-> +	u16 flags1;
-> +
->   	dev_kfree_skb_any(skb);
-> +
-> +	if (!htt->disable_tx_comp)
-> +		return;
-> +
-> +	htt_hdr = (struct htt_cmd_hdr *)skb->data;
+drivers/net/wireless/ath/ath10k/ahb.c:462: Alignment should match open parenthesis
+drivers/net/wireless/ath/ath10k/ahb.c:470: Alignment should match open parenthesis
+drivers/net/wireless/ath/ath10k/sdio.c:697: space prohibited before that close parenthesis ')'
 
-skb is already freed on the above line (dev_kfree_skb_any) but is still 
-used here, should the dev_kfree_skb_any be moved to the end of this 
-function?
+Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
+---
+ drivers/net/wireless/ath/ath10k/ahb.c  | 4 ++--
+ drivers/net/wireless/ath/ath10k/sdio.c | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
 
-> +	if (htt_hdr->msg_type != HTT_H2T_MSG_TYPE_TX_FRM)
-> +		return;
-> +
-> +	desc_hdr = (struct htt_data_tx_desc *)
-> +		(skb->data + sizeof(*htt_hdr));
-> +	flags1 = __le16_to_cpu(desc_hdr->flags1);
-> +
-> +	ath10k_dbg(ar, ATH10K_DBG_HTT,
-> +		   "htt tx complete msdu id:%u ,flags1:%x\n",
-> +		   __le16_to_cpu(desc_hdr->id), flags1);
-> +
-> +	if (flags1 & HTT_DATA_TX_DESC_FLAGS1_TX_COMPLETE)
-> +		return;
-> +
-> +	tx_done.status = HTT_TX_COMPL_STATE_ACK;
-> +	tx_done.msdu_id = __le16_to_cpu(desc_hdr->id);
-> +	ath10k_txrx_tx_unref(&ar->htt, &tx_done);
->   }
->   
+diff --git a/drivers/net/wireless/ath/ath10k/ahb.c b/drivers/net/wireless/ath/ath10k/ahb.c
+index ed87bc00f2aa..342a7e58018a 100644
+--- a/drivers/net/wireless/ath/ath10k/ahb.c
++++ b/drivers/net/wireless/ath/ath10k/ahb.c
+@@ -459,7 +459,7 @@ static int ath10k_ahb_resource_init(struct ath10k *ar)
+ 	ar_ahb->mem_len = resource_size(res);
+ 
+ 	ar_ahb->gcc_mem = ioremap(ATH10K_GCC_REG_BASE,
+-					  ATH10K_GCC_REG_SIZE);
++				  ATH10K_GCC_REG_SIZE);
+ 	if (!ar_ahb->gcc_mem) {
+ 		ath10k_err(ar, "gcc mem ioremap error\n");
+ 		ret = -ENOMEM;
+@@ -467,7 +467,7 @@ static int ath10k_ahb_resource_init(struct ath10k *ar)
+ 	}
+ 
+ 	ar_ahb->tcsr_mem = ioremap(ATH10K_TCSR_REG_BASE,
+-					   ATH10K_TCSR_REG_SIZE);
++				   ATH10K_TCSR_REG_SIZE);
+ 	if (!ar_ahb->tcsr_mem) {
+ 		ath10k_err(ar, "tcsr mem ioremap error\n");
+ 		ret = -ENOMEM;
+diff --git a/drivers/net/wireless/ath/ath10k/sdio.c b/drivers/net/wireless/ath/ath10k/sdio.c
+index e5316b911e1d..2e9d78222153 100644
+--- a/drivers/net/wireless/ath/ath10k/sdio.c
++++ b/drivers/net/wireless/ath/ath10k/sdio.c
+@@ -694,7 +694,7 @@ static int ath10k_sdio_mbox_rx_fetch_bundle(struct ath10k *ar)
+ 		htc_hdr = (struct ath10k_htc_hdr *)(ar_sdio->vsg_buffer + pkt_offset);
+ 		pkt->act_len = le16_to_cpu(htc_hdr->len) + sizeof(*htc_hdr);
+ 
+-		if (pkt->act_len > pkt->alloc_len ) {
++		if (pkt->act_len > pkt->alloc_len) {
+ 			ret = -EINVAL;
+ 			goto err;
+ 		}
+-- 
+2.7.4
 
 _______________________________________________
 ath10k mailing list
