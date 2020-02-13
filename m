@@ -2,64 +2,80 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 51E9D15B25E
-	for <lists+ath10k@lfdr.de>; Wed, 12 Feb 2020 21:58:44 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1488615B992
+	for <lists+ath10k@lfdr.de>; Thu, 13 Feb 2020 07:28:01 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Subject:To:From
-	:Date:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=hb3Qq2wEQMSgvDxTSWISEitv56NTMUtatL98tY9LKZg=; b=B1Ruo7sfP9ny0b
-	e35FaxL3TceYKldCyP5tytxvfndnCQ6xLkmarT1XYGV3udb3ORk7plliJ7CRZteeXNo6sxSoeYs84
-	JsccNwoT8P+MpR0NhE2ZouAhJwFmBQsKx6WIQSRJlEeIOoDoAB3MGGYL2PXjGhW/YTElkdF4dP5Xk
-	JeQLFAuFY2sh6gE97NJEeRJe0Ohy1mZ5Ncij9Hz0zbQR7MR3tfN9K8GRumocajHAwdG7KZGB27esn
-	H2HYmaOcvCqojqURLbe4E66sgvxMlnsfG8Bf5VJoD3aZmEdGtKYclthVTCyR/pRzlKsTX6V25Xe6I
-	aukEO8YldNbzCJR49blg==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
+	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=vA0ZaHYkhgYLSvjNApb6Vs5lCJ+BpjvRFlVs7AFDyDE=; b=Rgp
+	Wf+yPY7yILm0Pb6O5+tcN5kt8LuJrquWbd9zqHLeRVfALodWTyyxjhTII7UyZkoCGX+0mGNPn3x7N
+	jhw8OI1S5f5hxc6vg+3AGwiYncDmlKH/o96qb4MVaRkYypZ+ddQQI3wee6v/0L5q/DkFDnPp30EWQ
+	BcJqMGWJotCLZY62EHjes2iEVZlHlMAjqnUp8yrh8RqPGhv5UvK/of9+qwG0/d0ElBmVTVWew07yD
+	W49cyZFtwT5OnfHgXC4yxKvlWpySFlHVEpUhJRKK9ETKiTH6+QojjoiELLuscupdLdlDzDRFphQn8
+	CkXWwH5r0mZYcg1FMEQCePeNsdXTPMw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j1z5k-0003fu-Ml; Wed, 12 Feb 2020 20:58:40 +0000
-Received: from mga09.intel.com ([134.134.136.24])
+	id 1j27yd-0003Ws-VG; Thu, 13 Feb 2020 06:27:55 +0000
+Received: from mail26.static.mailgun.info ([104.130.122.26])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j1z5d-0003X7-1J
- for ath10k@lists.infradead.org; Wed, 12 Feb 2020 20:58:35 +0000
-X-Amp-Result: SKIPPED(no attachment in message)
-X-Amp-File-Uploaded: False
-Received: from orsmga001.jf.intel.com ([10.7.209.18])
- by orsmga102.jf.intel.com with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384;
- 12 Feb 2020 12:58:30 -0800
-X-ExtLoop1: 1
-X-IronPort-AV: E=Sophos;i="5.70,434,1574150400"; d="scan'208";a="313521877"
-Received: from lkp-server01.sh.intel.com (HELO lkp-server01) ([10.239.97.150])
- by orsmga001.jf.intel.com with ESMTP; 12 Feb 2020 12:58:29 -0800
-Received: from kbuild by lkp-server01 with local (Exim 4.89)
- (envelope-from <lkp@intel.com>)
- id 1j1z5Y-0005mf-O0; Thu, 13 Feb 2020 04:58:28 +0800
-Date: Thu, 13 Feb 2020 04:57:57 +0800
-From: kbuild test robot <lkp@intel.com>
-To: Kalle Valo <kvalo@codeaurora.org>
-Subject: [ath6kl:pending] BUILD SUCCESS
- 9250bd4b9215433317852dd3b7554366502a62ab
-Message-ID: <5e4466d5.wfxqc8TIyDXCcE+f%lkp@intel.com>
-User-Agent: Heirloom mailx 12.5 6/20/10
-MIME-Version: 1.0
+ id 1j27yb-0003WZ-Ah
+ for ath10k@lists.infradead.org; Thu, 13 Feb 2020 06:27:54 +0000
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
+ q=dns/txt; 
+ s=smtp; t=1581575273; h=Message-Id: Date: Subject: Cc: To: From:
+ Sender; bh=WOciJxsbOtP7DrKFkMKDj7TwpDa2ZDD5O2ypu1OCZlQ=;
+ b=BCAJ/COBZ7S5YDftcWdDaAjfimqID4W3mT5ohoHra+NT1rmSoaHTM+9zXKTi4grCVBiOa9Vb
+ anu6eMfjcg83RVp4+giZo3EjpsjujSmKsjjTV8+B168f+ndWZHFPSvSC1eBfHcbf+tb9yQ78
+ hYtOTnDgpZtX6ZNWGIUOc9Qbe6U=
+X-Mailgun-Sending-Ip: 104.130.122.26
+X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
+Received: from smtp.codeaurora.org
+ (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
+ by mxa.mailgun.org with ESMTP id 5e44ec61.7f03ac269fb8-smtp-out-n03;
+ Thu, 13 Feb 2020 06:27:45 -0000 (UTC)
+Received: by smtp.codeaurora.org (Postfix, from userid 1001)
+ id 412E9C43383; Thu, 13 Feb 2020 06:27:45 +0000 (UTC)
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ aws-us-west-2-caf-mail-1.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,SPF_NONE
+ autolearn=unavailable autolearn_force=no version=3.4.0
+Received: from ybzhao-HP-Z230-SFF-Workstation.ap.qualcomm.com (unknown
+ [180.166.53.21])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
+ (No client certificate requested) (Authenticated sender: yiboz)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id D3CE4C433A2;
+ Thu, 13 Feb 2020 06:27:43 +0000 (UTC)
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org D3CE4C433A2
+Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
+ spf=none smtp.mailfrom=yiboz@codeaurora.org
+From: Yibo Zhao <yiboz@codeaurora.org>
+To: ath10k@lists.infradead.org
+Subject: [PATCH] Allow qca988x family to support ack rssi of tx data packets.
+Date: Thu, 13 Feb 2020 14:30:51 +0800
+Message-Id: <1581575451-948-1-git-send-email-yiboz@codeaurora.org>
+X-Mailer: git-send-email 1.9.1
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200212_125833_164111_A2F06255 
-X-CRM114-Status: UNSURE (   7.26  )
+X-CRM114-CacheID: sfid-20200212_222753_432195_B7D8AE73 
+X-CRM114-Status: UNSURE (   9.14  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -4.0 (----)
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-4.0 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [134.134.136.24 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [104.130.122.26 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [134.134.136.24 listed in wl.mailspike.net]
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
- 1.0 HEXHASH_WORD           Multiple instances of word + hexadecimal hash
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -71,289 +87,35 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: ath10k@lists.infradead.org
+Cc: Yibo Zhao <yiboz@codeaurora.org>, linux-wireless@vger.kernel.org
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-tree/branch: https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git  pending
-branch HEAD: 9250bd4b9215433317852dd3b7554366502a62ab  ath11k: fix incorrect peer stats counters update
+Hardwares tested : QCA9887
+Firmwares tested : 10.4-3.9.0.1-00036
 
-elapsed time: 2887m
-
-configs tested: 262
-configs skipped: 0
-
-The following configs have been built successfully.
-More configs may be tested in the coming days.
-
-arm                              allmodconfig
-arm                               allnoconfig
-arm                              allyesconfig
-arm                         at91_dt_defconfig
-arm                           efm32_defconfig
-arm                          exynos_defconfig
-arm                        multi_v5_defconfig
-arm                        multi_v7_defconfig
-arm                        shmobile_defconfig
-arm                           sunxi_defconfig
-arm64                            allmodconfig
-arm64                             allnoconfig
-arm64                            allyesconfig
-arm64                               defconfig
-sparc                            allyesconfig
-nds32                             allnoconfig
-riscv                          rv32_defconfig
-sh                          rsk7269_defconfig
-sh                            titan_defconfig
-riscv                               defconfig
-alpha                               defconfig
-openrisc                    or1ksim_defconfig
-sparc64                          allyesconfig
-microblaze                      mmu_defconfig
-s390                                defconfig
-ia64                                defconfig
-nds32                               defconfig
-i386                             alldefconfig
-sparc                               defconfig
-s390                             allyesconfig
-i386                              allnoconfig
-microblaze                    nommu_defconfig
-m68k                             allmodconfig
-um                                  defconfig
-m68k                           sun3_defconfig
-powerpc                       ppc64_defconfig
-sparc64                             defconfig
-xtensa                       common_defconfig
-nios2                         3c120_defconfig
-nios2                         10m50_defconfig
-parisc                           allyesconfig
-i386                             allyesconfig
-i386                                defconfig
-ia64                             alldefconfig
-ia64                             allmodconfig
-ia64                              allnoconfig
-ia64                             allyesconfig
-c6x                              allyesconfig
-c6x                        evmc6678_defconfig
-openrisc                 simple_smp_defconfig
-xtensa                          iss_defconfig
-csky                                defconfig
-h8300                     edosk2674_defconfig
-h8300                    h8300h-sim_defconfig
-h8300                       h8s-sim_defconfig
-m68k                       m5475evb_defconfig
-m68k                          multi_defconfig
-arc                              allyesconfig
-arc                                 defconfig
-powerpc                           allnoconfig
-powerpc                             defconfig
-powerpc                          rhel-kconfig
-mips                           32r2_defconfig
-mips                         64r6el_defconfig
-mips                             allmodconfig
-mips                              allnoconfig
-mips                             allyesconfig
-mips                      fuloong2e_defconfig
-mips                      malta_kvm_defconfig
-parisc                            allnoconfig
-parisc                         b180_defconfig
-parisc                        c3000_defconfig
-parisc                              defconfig
-x86_64               randconfig-a001-20200211
-x86_64               randconfig-a002-20200211
-x86_64               randconfig-a003-20200211
-i386                 randconfig-a001-20200211
-i386                 randconfig-a002-20200211
-i386                 randconfig-a003-20200211
-x86_64               randconfig-a001-20200212
-x86_64               randconfig-a002-20200212
-x86_64               randconfig-a003-20200212
-i386                 randconfig-a001-20200212
-i386                 randconfig-a002-20200212
-i386                 randconfig-a003-20200212
-alpha                randconfig-a001-20200211
-m68k                 randconfig-a001-20200211
-mips                 randconfig-a001-20200211
-nds32                randconfig-a001-20200211
-parisc               randconfig-a001-20200211
-riscv                randconfig-a001-20200211
-alpha                randconfig-a001-20200212
-m68k                 randconfig-a001-20200212
-nds32                randconfig-a001-20200212
-parisc               randconfig-a001-20200212
-riscv                randconfig-a001-20200212
-c6x                  randconfig-a001-20200212
-h8300                randconfig-a001-20200212
-microblaze           randconfig-a001-20200212
-nios2                randconfig-a001-20200212
-sparc64              randconfig-a001-20200212
-c6x                  randconfig-a001-20200211
-h8300                randconfig-a001-20200211
-microblaze           randconfig-a001-20200211
-nios2                randconfig-a001-20200211
-sparc64              randconfig-a001-20200211
-c6x                  randconfig-a001-20200213
-h8300                randconfig-a001-20200213
-microblaze           randconfig-a001-20200213
-nios2                randconfig-a001-20200213
-sparc64              randconfig-a001-20200213
-sh                   randconfig-a001-20200211
-s390                 randconfig-a001-20200211
-xtensa               randconfig-a001-20200211
-openrisc             randconfig-a001-20200211
-csky                 randconfig-a001-20200211
-csky                 randconfig-a001-20200212
-openrisc             randconfig-a001-20200212
-s390                 randconfig-a001-20200212
-sh                   randconfig-a001-20200212
-xtensa               randconfig-a001-20200212
-csky                 randconfig-a001-20200213
-openrisc             randconfig-a001-20200213
-s390                 randconfig-a001-20200213
-sh                   randconfig-a001-20200213
-xtensa               randconfig-a001-20200213
-x86_64               randconfig-b001-20200212
-x86_64               randconfig-b002-20200212
-x86_64               randconfig-b003-20200212
-i386                 randconfig-b001-20200212
-i386                 randconfig-b002-20200212
-i386                 randconfig-b003-20200212
-x86_64               randconfig-b001-20200211
-x86_64               randconfig-b002-20200211
-x86_64               randconfig-b003-20200211
-i386                 randconfig-b001-20200211
-i386                 randconfig-b002-20200211
-i386                 randconfig-b003-20200211
-x86_64               randconfig-c001-20200211
-x86_64               randconfig-c002-20200211
-x86_64               randconfig-c003-20200211
-i386                 randconfig-c001-20200211
-i386                 randconfig-c002-20200211
-i386                 randconfig-c003-20200211
-x86_64               randconfig-c001-20200212
-x86_64               randconfig-c002-20200212
-x86_64               randconfig-c003-20200212
-i386                 randconfig-c001-20200212
-i386                 randconfig-c002-20200212
-i386                 randconfig-c003-20200212
-x86_64               randconfig-c001-20200213
-x86_64               randconfig-c002-20200213
-x86_64               randconfig-c003-20200213
-i386                 randconfig-c001-20200213
-i386                 randconfig-c002-20200213
-i386                 randconfig-c003-20200213
-x86_64               randconfig-d001-20200212
-x86_64               randconfig-d002-20200212
-x86_64               randconfig-d003-20200212
-i386                 randconfig-d001-20200212
-i386                 randconfig-d002-20200212
-i386                 randconfig-d003-20200212
-x86_64               randconfig-d001-20200211
-x86_64               randconfig-d002-20200211
-x86_64               randconfig-d003-20200211
-i386                 randconfig-d001-20200211
-i386                 randconfig-d002-20200211
-i386                 randconfig-d003-20200211
-x86_64               randconfig-d001-20200213
-x86_64               randconfig-d002-20200213
-x86_64               randconfig-d003-20200213
-i386                 randconfig-d001-20200213
-i386                 randconfig-d002-20200213
-i386                 randconfig-d003-20200213
-x86_64               randconfig-e001-20200212
-x86_64               randconfig-e002-20200212
-x86_64               randconfig-e003-20200212
-i386                 randconfig-e001-20200212
-i386                 randconfig-e002-20200212
-i386                 randconfig-e003-20200212
-x86_64               randconfig-f001-20200212
-x86_64               randconfig-f002-20200212
-x86_64               randconfig-f003-20200212
-i386                 randconfig-f001-20200212
-i386                 randconfig-f002-20200212
-i386                 randconfig-f003-20200212
-i386                 randconfig-f001-20200211
-x86_64               randconfig-f002-20200211
-i386                 randconfig-f002-20200211
-x86_64               randconfig-f001-20200211
-x86_64               randconfig-f003-20200211
-i386                 randconfig-f003-20200211
-x86_64               randconfig-g001-20200213
-x86_64               randconfig-g002-20200213
-x86_64               randconfig-g003-20200213
-i386                 randconfig-g001-20200213
-i386                 randconfig-g002-20200213
-i386                 randconfig-g003-20200213
-x86_64               randconfig-g001-20200212
-x86_64               randconfig-g002-20200212
-x86_64               randconfig-g003-20200212
-i386                 randconfig-g001-20200212
-i386                 randconfig-g002-20200212
-i386                 randconfig-g003-20200212
-x86_64               randconfig-g001-20200211
-x86_64               randconfig-g002-20200211
-x86_64               randconfig-g003-20200211
-i386                 randconfig-g001-20200211
-i386                 randconfig-g002-20200211
-i386                 randconfig-g003-20200211
-i386                 randconfig-h002-20200211
-x86_64               randconfig-h002-20200211
-i386                 randconfig-h001-20200211
-x86_64               randconfig-h001-20200211
-i386                 randconfig-h003-20200211
-x86_64               randconfig-h003-20200211
-x86_64               randconfig-h001-20200212
-x86_64               randconfig-h002-20200212
-x86_64               randconfig-h003-20200212
-i386                 randconfig-h001-20200212
-i386                 randconfig-h002-20200212
-i386                 randconfig-h003-20200212
-arc                  randconfig-a001-20200212
-arm                  randconfig-a001-20200212
-arm64                randconfig-a001-20200212
-ia64                 randconfig-a001-20200212
-powerpc              randconfig-a001-20200212
-sparc                randconfig-a001-20200212
-arc                  randconfig-a001-20200211
-arm                  randconfig-a001-20200211
-arm64                randconfig-a001-20200211
-ia64                 randconfig-a001-20200211
-powerpc              randconfig-a001-20200211
-sparc                randconfig-a001-20200211
-arc                  randconfig-a001-20200213
-arm                  randconfig-a001-20200213
-arm64                randconfig-a001-20200213
-ia64                 randconfig-a001-20200213
-powerpc              randconfig-a001-20200213
-sparc                randconfig-a001-20200213
-riscv                            allmodconfig
-riscv                             allnoconfig
-riscv                            allyesconfig
-riscv                    nommu_virt_defconfig
-s390                             alldefconfig
-s390                             allmodconfig
-s390                              allnoconfig
-s390                          debug_defconfig
-s390                       zfcpdump_defconfig
-sh                               allmodconfig
-sh                                allnoconfig
-sh                  sh7785lcr_32bit_defconfig
-sparc64                          allmodconfig
-sparc64                           allnoconfig
-um                             i386_defconfig
-um                           x86_64_defconfig
-x86_64                              fedora-25
-x86_64                                  kexec
-x86_64                                    lkp
-x86_64                                   rhel
-x86_64                         rhel-7.2-clear
-x86_64                               rhel-7.6
-
+Signed-off-by: Yibo Zhao <yiboz@codeaurora.org>
 ---
-0-DAY CI Kernel Test Service, Intel Corporation
-https://lists.01.org/hyperkitty/list/kbuild-all@lists.01.org
+ drivers/net/wireless/ath/ath10k/hw.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/drivers/net/wireless/ath/ath10k/hw.c b/drivers/net/wireless/ath/ath10k/hw.c
+index 2451e0f..57c58af 100644
+--- a/drivers/net/wireless/ath/ath10k/hw.c
++++ b/drivers/net/wireless/ath/ath10k/hw.c
+@@ -1131,6 +1131,7 @@ static int ath10k_get_htt_tx_data_rssi_pad(struct htt_resp *resp)
+ 
+ const struct ath10k_hw_ops qca988x_ops = {
+ 	.set_coverage_class = ath10k_hw_qca988x_set_coverage_class,
++	.is_rssi_enable = ath10k_htt_tx_rssi_enable,
+ };
+ 
+ static int ath10k_qca99x0_rx_desc_get_l3_pad_bytes(struct htt_rx_desc *rxd)
+-- 
+1.9.1
 
 _______________________________________________
 ath10k mailing list
