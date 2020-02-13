@@ -2,75 +2,87 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1488615B992
-	for <lists+ath10k@lfdr.de>; Thu, 13 Feb 2020 07:28:01 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id C31B715BD86
+	for <lists+ath10k@lfdr.de>; Thu, 13 Feb 2020 12:15:54 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
-	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
-	References:List-Owner; bh=vA0ZaHYkhgYLSvjNApb6Vs5lCJ+BpjvRFlVs7AFDyDE=; b=Rgp
-	Wf+yPY7yILm0Pb6O5+tcN5kt8LuJrquWbd9zqHLeRVfALodWTyyxjhTII7UyZkoCGX+0mGNPn3x7N
-	jhw8OI1S5f5hxc6vg+3AGwiYncDmlKH/o96qb4MVaRkYypZ+ddQQI3wee6v/0L5q/DkFDnPp30EWQ
-	BcJqMGWJotCLZY62EHjes2iEVZlHlMAjqnUp8yrh8RqPGhv5UvK/of9+qwG0/d0ElBmVTVWew07yD
-	W49cyZFtwT5OnfHgXC4yxKvlWpySFlHVEpUhJRKK9ETKiTH6+QojjoiELLuscupdLdlDzDRFphQn8
-	CkXWwH5r0mZYcg1FMEQCePeNsdXTPMw==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
+	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=IuQ/b2S/BljN5gIf9tnagFaFeZTuKYERBk/1pjfqzSU=; b=m+coa90s/DgDV8
+	gL/x3xl5IFbvkDX30bCgvkeX9nwUdaKo8/DpIebJPjhcJaZYenvhtPjApMedY8uwxxdcMV+6vQDzL
+	kwrhoj1n8nI0sxhjCgi7E2tJMmeKW4ULIXhzxvoA0AcZHZkfPHhPC9qz82iYdcFbRwpfE6dw645Iw
+	0QuS1DDji/W0Wtl3sdoWgKg1pahUQaWO+C5j/X5gZVdsYFXLux2gtYOoVVq0giv9A3IQo4xntpoHw
+	G0b86i+GiIMmcu0mLrKXqAe3nZNNKksRTHSZDOEOwRjqpBksbjvl0idr6i1zoiP58hB9tfQy2WmNn
+	KvWnMJV0b9TtPA0x5HQw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j27yd-0003Ws-VG; Thu, 13 Feb 2020 06:27:55 +0000
-Received: from mail26.static.mailgun.info ([104.130.122.26])
+	id 1j2CTA-0004fl-PL; Thu, 13 Feb 2020 11:15:44 +0000
+Received: from mail27.static.mailgun.info ([104.130.122.27])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j27yb-0003WZ-Ah
- for ath10k@lists.infradead.org; Thu, 13 Feb 2020 06:27:54 +0000
+ id 1j2CT6-0004WM-52
+ for ath10k@lists.infradead.org; Thu, 13 Feb 2020 11:15:42 +0000
 DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
  q=dns/txt; 
- s=smtp; t=1581575273; h=Message-Id: Date: Subject: Cc: To: From:
- Sender; bh=WOciJxsbOtP7DrKFkMKDj7TwpDa2ZDD5O2ypu1OCZlQ=;
- b=BCAJ/COBZ7S5YDftcWdDaAjfimqID4W3mT5ohoHra+NT1rmSoaHTM+9zXKTi4grCVBiOa9Vb
- anu6eMfjcg83RVp4+giZo3EjpsjujSmKsjjTV8+B168f+ndWZHFPSvSC1eBfHcbf+tb9yQ78
- hYtOTnDgpZtX6ZNWGIUOc9Qbe6U=
-X-Mailgun-Sending-Ip: 104.130.122.26
+ s=smtp; t=1581592540; h=Content-Type: MIME-Version: Message-ID:
+ In-Reply-To: Date: References: Subject: Cc: To: From: Sender;
+ bh=cnJ54l9tLPuroKJZpqlUO46FcTPOrlCyPvCcupmKG8Y=;
+ b=EwNfPuY/YW8aENvA/DHccNrLTZ0TN5eWUvJkzVj0Eztq5GRmJZfo4i2Hvh40BbIGFP3UKWZH
+ rhGVThlT7xFQhasVjq94G8QyLzbGpLo8YnCr2M/Tx4hS40GWSZK8u1S5aDU6jGz9EIWrgwPE
+ BU2MBpQwQginBgbJEX8eedHgQHY=
+X-Mailgun-Sending-Ip: 104.130.122.27
 X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
 Received: from smtp.codeaurora.org
  (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
- by mxa.mailgun.org with ESMTP id 5e44ec61.7f03ac269fb8-smtp-out-n03;
- Thu, 13 Feb 2020 06:27:45 -0000 (UTC)
+ by mxa.mailgun.org with ESMTP id 5e452fd7.7fc054dc1650-smtp-out-n01;
+ Thu, 13 Feb 2020 11:15:35 -0000 (UTC)
 Received: by smtp.codeaurora.org (Postfix, from userid 1001)
- id 412E9C43383; Thu, 13 Feb 2020 06:27:45 +0000 (UTC)
+ id 7D4E8C4479D; Thu, 13 Feb 2020 11:15:34 +0000 (UTC)
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  aws-us-west-2-caf-mail-1.web.codeaurora.org
 X-Spam-Level: 
 X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,SPF_NONE
  autolearn=unavailable autolearn_force=no version=3.4.0
-Received: from ybzhao-HP-Z230-SFF-Workstation.ap.qualcomm.com (unknown
- [180.166.53.21])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
- (No client certificate requested) (Authenticated sender: yiboz)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id D3CE4C433A2;
- Thu, 13 Feb 2020 06:27:43 +0000 (UTC)
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org D3CE4C433A2
+Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
+ [88.114.240.156])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested) (Authenticated sender: kvalo)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 7C7A0C43383;
+ Thu, 13 Feb 2020 11:15:32 +0000 (UTC)
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 7C7A0C43383
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
- spf=none smtp.mailfrom=yiboz@codeaurora.org
-From: Yibo Zhao <yiboz@codeaurora.org>
-To: ath10k@lists.infradead.org
-Subject: [PATCH] Allow qca988x family to support ack rssi of tx data packets.
-Date: Thu, 13 Feb 2020 14:30:51 +0800
-Message-Id: <1581575451-948-1-git-send-email-yiboz@codeaurora.org>
-X-Mailer: git-send-email 1.9.1
+ spf=none smtp.mailfrom=kvalo@codeaurora.org
+From: Kalle Valo <kvalo@codeaurora.org>
+To: Brian Norris <briannorris@chromium.org>
+Subject: Re: [PATCH] ath10k: support PCIe enter L1 state
+References: <1542163848-837-1-git-send-email-wgong@codeaurora.org>
+ <20181115002836.GA71934@google.com>
+ <c94346b26a6d4b11a045a176ca854051@aptaiexm02f.ap.qualcomm.com>
+ <20181115184333.GA87504@google.com> <87va4x8q2c.fsf@codeaurora.org>
+ <CABvG-CVAnwkiKVJik0PdsmRxF62kKv2N+aRKNq=nbopoExLvDA@mail.gmail.com>
+ <87y36q75wr.fsf@kamboji.qca.qualcomm.com>
+ <CA+ASDXO8NujrORVLZMPbDy916cnzOvx_Bp8Vr-VvkbBwJvB97A@mail.gmail.com>
+ <87h8cd8zy2.fsf@kamboji.qca.qualcomm.com>
+ <CA+ASDXM8gtn3=p5pQ=GOFdfTy-698ZPW91JEgAfapdLEcU+eMg@mail.gmail.com>
+Date: Thu, 13 Feb 2020 13:15:30 +0200
+In-Reply-To: <CA+ASDXM8gtn3=p5pQ=GOFdfTy-698ZPW91JEgAfapdLEcU+eMg@mail.gmail.com>
+ (Brian Norris's message of "Mon, 2 Dec 2019 10:48:44 -0800")
+Message-ID: <87r1yywxf1.fsf@kamboji.qca.qualcomm.com>
+User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/24.5 (gnu/linux)
+MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200212_222753_432195_B7D8AE73 
-X-CRM114-Status: UNSURE (   9.14  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200213_031540_852065_E00D4EC1 
+X-CRM114-Status: GOOD (  11.78  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [104.130.122.26 listed in list.dnswl.org]
+ no trust [104.130.122.27 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -87,35 +99,41 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Yibo Zhao <yiboz@codeaurora.org>, linux-wireless@vger.kernel.org
-MIME-Version: 1.0
+Cc: =?utf-8?Q?Micha=C5=82?= Kazior <kazikcz@gmail.com>,
+ linux-wireless <linux-wireless@vger.kernel.org>, ath10k@lists.infradead.org,
+ Wen Gong <wgong@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Hardwares tested : QCA9887
-Firmwares tested : 10.4-3.9.0.1-00036
+Brian Norris <briannorris@chromium.org> writes:
 
-Signed-off-by: Yibo Zhao <yiboz@codeaurora.org>
----
- drivers/net/wireless/ath/ath10k/hw.c | 1 +
- 1 file changed, 1 insertion(+)
+> On Fri, Mar 8, 2019 at 1:42 AM Kalle Valo <kvalo@codeaurora.org> wrote:
+>> Brian Norris <briannorris@chromium.org> writes:
+>> > On Fri, Feb 8, 2019 at 5:42 AM Kalle Valo <kvalo@codeaurora.org> wrote:
+>> >> No replies from anyone (including Wen) for 3 months about testing this
+>> >> patch on anything else than QCA6174. So I'll drop this now, please
+>> >> resubmit once test coverage is better.
+>> >
+>> > I know this isn't exactly what you're asking for, but FWIW we've been
+>> > using this since late November on all our QCA6174 products. No issues
+>> > seen as far as I know, and we have seen some power savings.
+>>
+>> Thanks for the feedback, this is very good to know. I also would like to
+>> apply this but not before we have some testing feedback from AP chipsets
+>> like QCA988X or QCA9984. Wen, are you planning to test those and
+>> resubmit?
+>
+> May I ping here? We (Chromium OS) are continuing to carry this patch,
+> and would love to come up with something that can land upstream. If
+> necessary, I can rework it to apply more specifically -- e.g., only to
+> QCA6174 PCI IDs.
 
-diff --git a/drivers/net/wireless/ath/ath10k/hw.c b/drivers/net/wireless/ath/ath10k/hw.c
-index 2451e0f..57c58af 100644
---- a/drivers/net/wireless/ath/ath10k/hw.c
-+++ b/drivers/net/wireless/ath/ath10k/hw.c
-@@ -1131,6 +1131,7 @@ static int ath10k_get_htt_tx_data_rssi_pad(struct htt_resp *resp)
- 
- const struct ath10k_hw_ops qca988x_ops = {
- 	.set_coverage_class = ath10k_hw_qca988x_set_coverage_class,
-+	.is_rssi_enable = ath10k_htt_tx_rssi_enable,
- };
- 
- static int ath10k_qca99x0_rx_desc_get_l3_pad_bytes(struct htt_rx_desc *rxd)
+Yeah, enabling only for QCA6174 sounds best.
+
 -- 
-1.9.1
+https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
 
 _______________________________________________
 ath10k mailing list
