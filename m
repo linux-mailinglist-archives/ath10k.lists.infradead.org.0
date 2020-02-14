@@ -2,47 +2,47 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 990F315E238
-	for <lists+ath10k@lfdr.de>; Fri, 14 Feb 2020 17:22:55 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 36AFB15E4A3
+	for <lists+ath10k@lfdr.de>; Fri, 14 Feb 2020 17:37:38 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=x4OTZEcYGjeiIz/zteK6UKgkksDrXYuNqYdeAqrgGKc=; b=HvJZKB1DtdulYq
-	VRBssbtyZLPREL3OCKsIDGwnWpHpXHT8kzO3QoH7PsdXK0ducI3MTemor4OiX213wjSgBnupKT80r
-	c5QwRzrwCkUdKadsudo4oiM4unIoRry9D3WizRULYRnqhyXi3hc/KOu5bG+SWerEgdbNHFUQg/vkb
-	z4Oc8ry3NxY1sHTdODG1gvBFlj77xczrMg94LL/qN+Q+IyE+UoElnEYLN2S2+1R8J56EpP3l2zt4D
-	YPJJb5rv6LCXUIyO3FTp0GfiXoSeNDQT98Z3G9+PONkJpYJybqbMD9shVJvqvVsfE9f0Z9sK5KlLf
-	mqdMuL+/Y50mXRPfzhJw==;
+	List-Owner; bh=CufxlNdCQgtCaAKL8cIRsd04KHENMwm00TYZwWirHT0=; b=GKXohXVARS5ZQp
+	mPvDrnVa0aCxitGpy7rhScZbUAv7NhRbtLXuCX4UFRBW0R5JYu+J8ZTCrUjT/vQ8WNppcIHLXxOD7
+	oiovceoDEMmIhEfCmHS2E0MJ0+zVdqwEg7KJhj+n9F65PP/bZn/JkZHebw4QnRnBbADbozroUHt5C
+	E7wXbaQ9RxXOvm1iH5VX/24wh4rEE3evJd4ibtQgHkzBT6YRG8K8LM9FrxVHmeyHuGvhsetJ6S44s
+	JV8QOoFVxOzsU6ganfhylQNxYy/8yby5J6lCHRJ5Q36Jugtf9IEQibMaEKsqdwF5ZjOky57DuGb2d
+	6FtAmflnBSugSg7wXitg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j2djx-0006Tq-AP; Fri, 14 Feb 2020 16:22:53 +0000
+	id 1j2dyB-0006oT-H1; Fri, 14 Feb 2020 16:37:35 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j2dSf-0003h3-AU
- for ath10k@lists.infradead.org; Fri, 14 Feb 2020 16:05:02 +0000
+ id 1j2dXt-0002gY-3o
+ for ath10k@lists.infradead.org; Fri, 14 Feb 2020 16:10:26 +0000
 Received: from sasha-vm.mshome.net (c-73-47-72-35.hsd1.nh.comcast.net
  [73.47.72.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 1A8A52468C;
- Fri, 14 Feb 2020 16:04:59 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id C52552468C;
+ Fri, 14 Feb 2020 16:10:23 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1581696300;
- bh=vwGKyhXHR/VC6+b9YGNFulZZs4DD0OXFatVpw++SAo0=;
+ s=default; t=1581696624;
+ bh=vhpiEMlWQv0v5UwFHSylEGlkZZ/fZXGpzw+pW9F2NEc=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=b+Eps1WzhUBEJtWcRVhI7l8D+jCUaNsk6xVCjhEJhFbrBL2aEhCrToGIfry2LPGKR
- ggZuw/MwpW9u5yTeOKg7xvc6ni8S+D1H+YkLQ5TGOxJvi6FqNyHlE7waK6lJi0tspr
- NAizNEM7AKaisisl8LmVv2aNovyHtOW+dkz/UwdE=
+ b=Vf7ihSTbddNekNrOuLmAdBpr1p5iAAiedK1SyYdF2peCxcN1HleUbRNkgSiRJIsL5
+ g6nQ8dB9OyC8RoSq8meJrOIqo0/zy//Op6M8ZuqBC2cwNWdQkatCgp6oTA4m8yYpoD
+ /1vtnfTHCy8uKOIp3StDEd0QmlRpsJMcOSr2xmE8=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 5.4 145/459] ath10k: correct the tlv len of
- ath10k_wmi_tlv_op_gen_config_pno_start
-Date: Fri, 14 Feb 2020 10:56:35 -0500
-Message-Id: <20200214160149.11681-145-sashal@kernel.org>
+Subject: [PATCH AUTOSEL 5.4 405/459] ath10k: pci: Only dump
+ ATH10K_MEM_REGION_TYPE_IOREG when safe
+Date: Fri, 14 Feb 2020 11:00:55 -0500
+Message-Id: <20200214160149.11681-405-sashal@kernel.org>
 X-Mailer: git-send-email 2.20.1
 In-Reply-To: <20200214160149.11681-1-sashal@kernel.org>
 References: <20200214160149.11681-1-sashal@kernel.org>
@@ -50,9 +50,8 @@ MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200214_080501_399107_50461AE3 
-X-CRM114-Status: UNSURE (   8.50  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200214_081025_265065_B8C5B9AC 
+X-CRM114-Status: GOOD (  12.48  )
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-5.2 points)
@@ -83,57 +82,78 @@ List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
 Cc: Sasha Levin <sashal@kernel.org>, netdev@vger.kernel.org,
  linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
- Wen Gong <wgong@codeaurora.org>, Kalle Valo <kvalo@codeaurora.org>
+ Bryan O'Donoghue <bryan.odonoghue@linaro.org>,
+ Kalle Valo <kvalo@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-From: Wen Gong <wgong@codeaurora.org>
+From: Bryan O'Donoghue <bryan.odonoghue@linaro.org>
 
-[ Upstream commit e01cc82c4d1ec3bddcbb7cd991cf5dc0131ed9a1 ]
+[ Upstream commit d239380196c4e27a26fa4bea73d2bf994c14ec2d ]
 
-the tlv len is set to the total len of the wmi cmd, it will trigger
-firmware crash, correct the tlv len.
+ath10k_pci_dump_memory_reg() will try to access memory of type
+ATH10K_MEM_REGION_TYPE_IOREG however, if a hardware restart is in progress
+this can crash a system.
 
-Tested with QCA6174 SDIO with firmware
-WLAN.RMH.4.4.1-00017-QCARMSWP-1 and QCA6174
-PCIE with firmware WLAN.RM.4.4.1-00110-QCARMSWPZ-1.
+Individual ioread32() time has been observed to jump from 15-20 ticks to >
+80k ticks followed by a secure-watchdog bite and a system reset.
 
-Fixes: ce834e280f2f875 ("ath10k: support NET_DETECT WoWLAN feature")
-Signed-off-by: Wen Gong <wgong@codeaurora.org>
+Work around this corner case by only issuing the read transaction when the
+driver state is ATH10K_STATE_ON.
+
+Tested-on: QCA9988 PCI 10.4-3.9.0.2-00044
+
+Fixes: 219cc084c6706 ("ath10k: add memory dump support QCA9984")
+Signed-off-by: Bryan O'Donoghue <bryan.odonoghue@linaro.org>
 Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 Signed-off-by: Sasha Levin <sashal@kernel.org>
 ---
- drivers/net/wireless/ath/ath10k/wmi-tlv.c | 5 ++++-
- 1 file changed, 4 insertions(+), 1 deletion(-)
+ drivers/net/wireless/ath/ath10k/pci.c | 19 +++++++++++++++++--
+ 1 file changed, 17 insertions(+), 2 deletions(-)
 
-diff --git a/drivers/net/wireless/ath/ath10k/wmi-tlv.c b/drivers/net/wireless/ath/ath10k/wmi-tlv.c
-index 4d5d10c010645..eb0c963d9fd51 100644
---- a/drivers/net/wireless/ath/ath10k/wmi-tlv.c
-+++ b/drivers/net/wireless/ath/ath10k/wmi-tlv.c
-@@ -3650,6 +3650,7 @@ ath10k_wmi_tlv_op_gen_config_pno_start(struct ath10k *ar,
- 	struct wmi_tlv *tlv;
- 	struct sk_buff *skb;
- 	__le32 *channel_list;
-+	u16 tlv_len;
- 	size_t len;
- 	void *ptr;
+diff --git a/drivers/net/wireless/ath/ath10k/pci.c b/drivers/net/wireless/ath/ath10k/pci.c
+index 347bb92e4130d..0a727502d14c5 100644
+--- a/drivers/net/wireless/ath/ath10k/pci.c
++++ b/drivers/net/wireless/ath/ath10k/pci.c
+@@ -1604,11 +1604,22 @@ static int ath10k_pci_dump_memory_reg(struct ath10k *ar,
+ {
+ 	struct ath10k_pci *ar_pci = ath10k_pci_priv(ar);
  	u32 i;
-@@ -3707,10 +3708,12 @@ ath10k_wmi_tlv_op_gen_config_pno_start(struct ath10k *ar,
- 	/* nlo_configured_parameters(nlo_list) */
- 	cmd->no_of_ssids = __cpu_to_le32(min_t(u8, pno->uc_networks_count,
- 					       WMI_NLO_MAX_SSIDS));
-+	tlv_len = __le32_to_cpu(cmd->no_of_ssids) *
-+		sizeof(struct nlo_configured_parameters);
++	int ret;
++
++	mutex_lock(&ar->conf_mutex);
++	if (ar->state != ATH10K_STATE_ON) {
++		ath10k_warn(ar, "Skipping pci_dump_memory_reg invalid state\n");
++		ret = -EIO;
++		goto done;
++	}
  
- 	tlv = ptr;
- 	tlv->tag = __cpu_to_le16(WMI_TLV_TAG_ARRAY_STRUCT);
--	tlv->len = __cpu_to_le16(len);
-+	tlv->len = __cpu_to_le16(tlv_len);
+ 	for (i = 0; i < region->len; i += 4)
+ 		*(u32 *)(buf + i) = ioread32(ar_pci->mem + region->start + i);
  
- 	ptr += sizeof(*tlv);
- 	nlo_list = ptr;
+-	return region->len;
++	ret = region->len;
++done:
++	mutex_unlock(&ar->conf_mutex);
++	return ret;
+ }
+ 
+ /* if an error happened returns < 0, otherwise the length */
+@@ -1704,7 +1715,11 @@ static void ath10k_pci_dump_memory(struct ath10k *ar,
+ 			count = ath10k_pci_dump_memory_sram(ar, current_region, buf);
+ 			break;
+ 		case ATH10K_MEM_REGION_TYPE_IOREG:
+-			count = ath10k_pci_dump_memory_reg(ar, current_region, buf);
++			ret = ath10k_pci_dump_memory_reg(ar, current_region, buf);
++			if (ret < 0)
++				break;
++
++			count = ret;
+ 			break;
+ 		default:
+ 			ret = ath10k_pci_dump_memory_generic(ar, current_region, buf);
 -- 
 2.20.1
 
