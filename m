@@ -2,46 +2,47 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 67B3515DB7E
-	for <lists+ath10k@lfdr.de>; Fri, 14 Feb 2020 16:49:10 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6708A15DC91
+	for <lists+ath10k@lfdr.de>; Fri, 14 Feb 2020 16:54:50 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=zufysIN4Xfd5NegjuIPryv08QU6p7fc5zoL3uAFbkjQ=; b=mr/l2AlueQlKGg
-	5CjIKAlnPgF/VL+NA18tdIywyOysrri2LM/9nqnjtddjMOYhDa78sP4HmeYLCDefeOMmqzb8CUpx8
-	j8FRBfBMYp0rXro69sMeZ5uCstTJJgJtj4bVIv4aUa3X0mV4AQyCyGdR5WPF30k+dWo+MJbITJEVi
-	wpFmTtqrviNY8I7GVr8FV8J48O4hA23OfHRfcHocrxGJuxi1Rrd9dIfZMTA6Lx22b6Wj7KHsK0T0j
-	kev+8N8HanPGZ0OwokaBbDHQdrpY/XPIlQjD3mQLRl5RZI8VDEoCiMW5+t61wiBJ6yPUfugd9IMgh
-	Oc+WPl/FIFcTxUMXftFQ==;
+	List-Owner; bh=Y9LCqeldWXtyGLpNME8ecNHTF5hVlrS8s/6ngQLKHTo=; b=kLvOeAb2pmJAUI
+	JVql9Ou0fjGw9zAZXKcDvthPAmlTQOlXqNNH8ephbtUDg+MZQfgoFHwigRKMQpRPxJyFMU5fFVf4H
+	hvcJMS8qOaQBOYO3J+zNbMEWOo4l9JnHh/gcWJE7QfBcrmL5vnv7uUZo+An7JJnHcrQ5M/vpquOuF
+	OqyxJf40mjTDjHuoV7mh8jP3Mq1mQiU7hiIS6xT86WWcX53i2b3p7zldarnYLJpxcE/3XYob2DySu
+	wBIesGp09jL4iAQx8l+VgwF4l+zuxqVvaUYmeD4mJutotQ12pMdrNrhZvHn2Fi+9272UaJabD2sAv
+	bmITBpGo8V62bvEpZM4A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j2dDE-0001EE-K8; Fri, 14 Feb 2020 15:49:04 +0000
+	id 1j2dIm-0007Yn-DX; Fri, 14 Feb 2020 15:54:48 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j2dDA-0001DG-Mp
- for ath10k@lists.infradead.org; Fri, 14 Feb 2020 15:49:02 +0000
+ id 1j2dFJ-0004GM-S3
+ for ath10k@lists.infradead.org; Fri, 14 Feb 2020 15:51:15 +0000
 Received: from sasha-vm.mshome.net (c-73-47-72-35.hsd1.nh.comcast.net
  [73.47.72.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 15BB0217F4;
- Fri, 14 Feb 2020 15:48:58 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id 7BBCF24684;
+ Fri, 14 Feb 2020 15:51:12 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1581695340;
- bh=QMlfEDdx30p0dC5zoeW0s2ObL8tfzyH+ZQLZg5secJQ=;
+ s=default; t=1581695473;
+ bh=I6NtYLAPNib460xwCVxXUT8qx07WuH0UxST/BdX8blg=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=RKyGreHFrkibAqFG4x9PFm7fEB2HFPDtU/EOuOS9cvbb/b8q1CzNPUur90jsWVEHt
- clbAN3OqdKPmCCtYvGErZ9NI7UGXZB7vv/AGkq8joJmF7pb3VctXMXV/784tsv+BCK
- C35J8Ij37Q7SaV8R50fERXLdYRuoKFr2lecmGIws=
+ b=H8bzkUKMdm/fuQu++Vl81Opck01ZU1FFKRnhjHPcg8rL1Ev7LHvI4lIk40/gFoV7L
+ WzNk9Ab73ZuftL+dk6OFfTESmMSegiD32bfYyq2Ui5vsyQ2qsG6KYi1g0CQmns9wOG
+ 0fDxqCXcsGLNDOycvgAJqo+l0MgUfoIOUbGcC32c=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 5.5 004/542] ath10k: Fix qmi init error handling
-Date: Fri, 14 Feb 2020 10:39:56 -0500
-Message-Id: <20200214154854.6746-4-sashal@kernel.org>
+Subject: [PATCH AUTOSEL 5.5 107/542] ath10k: Correct the DMA direction for
+ management tx buffers
+Date: Fri, 14 Feb 2020 10:41:39 -0500
+Message-Id: <20200214154854.6746-107-sashal@kernel.org>
 X-Mailer: git-send-email 2.20.1
 In-Reply-To: <20200214154854.6746-1-sashal@kernel.org>
 References: <20200214154854.6746-1-sashal@kernel.org>
@@ -49,8 +50,8 @@ MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200214_074900_780463_6FA760E7 
-X-CRM114-Status: GOOD (  10.33  )
+X-CRM114-CacheID: sfid-20200214_075113_955708_1C47A1A9 
+X-CRM114-Status: GOOD (  10.26  )
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-5.2 points)
@@ -79,55 +80,63 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Sasha Levin <sashal@kernel.org>, Jeffrey Hugo <jeffrey.l.hugo@gmail.com>,
- netdev@vger.kernel.org, linux-wireless@vger.kernel.org,
- ath10k@lists.infradead.org, Kalle Valo <kvalo@codeaurora.org>
+Cc: Sasha Levin <sashal@kernel.org>, netdev@vger.kernel.org,
+ linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
+ Rakesh Pillai <pillair@codeaurora.org>, Kalle Valo <kvalo@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-From: Jeffrey Hugo <jeffrey.l.hugo@gmail.com>
+From: Rakesh Pillai <pillair@codeaurora.org>
 
-[ Upstream commit f8a595a87e93a33a10879f4b856be818d2f53c84 ]
+[ Upstream commit 6ba8b3b6bd772f575f7736c8fd893c6981fcce16 ]
 
-When ath10k_qmi_init() fails, the error handling does not free the irq
-resources, which causes an issue if we EPROBE_DEFER as we'll attempt to
-(re-)register irqs which are already registered.
+The management packets, send to firmware via WMI, are
+mapped using the direction DMA_TO_DEVICE. Currently in
+case of wmi cleanup, these buffers are being unmapped
+using an incorrect DMA direction. This can cause unwanted
+behavior when the host driver is handling a restart
+of the wlan firmware.
 
-Fix this by doing a power off since we just powered on the hardware, and
-freeing the irqs as error handling.
+We might see a trace like below
 
-Fixes: ba94c753ccb4 ("ath10k: add QMI message handshake for wcn3990 client")
-Signed-off-by: Jeffrey Hugo <jeffrey.l.hugo@gmail.com>
+[<ffffff8008098b18>] __dma_inv_area+0x28/0x58
+[<ffffff8001176734>] ath10k_wmi_mgmt_tx_clean_up_pending+0x60/0xb0 [ath10k_core]
+[<ffffff80088c7c50>] idr_for_each+0x78/0xe4
+[<ffffff80011766a4>] ath10k_wmi_detach+0x4c/0x7c [ath10k_core]
+[<ffffff8001163d7c>] ath10k_core_stop+0x58/0x68 [ath10k_core]
+[<ffffff800114fb74>] ath10k_halt+0xec/0x13c [ath10k_core]
+[<ffffff8001165110>] ath10k_core_restart+0x11c/0x1a8 [ath10k_core]
+[<ffffff80080c36bc>] process_one_work+0x16c/0x31c
+
+Fix the incorrect DMA direction during the wmi
+management tx buffer cleanup.
+
+Tested HW: WCN3990
+Tested FW: WLAN.HL.3.1-00784-QCAHLSWMTPLZ-1
+
+Fixes: dc405152bb6 ("ath10k: handle mgmt tx completion event")
+Signed-off-by: Rakesh Pillai <pillair@codeaurora.org>
 Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 Signed-off-by: Sasha Levin <sashal@kernel.org>
 ---
- drivers/net/wireless/ath/ath10k/snoc.c | 5 ++++-
- 1 file changed, 4 insertions(+), 1 deletion(-)
+ drivers/net/wireless/ath/ath10k/wmi.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/drivers/net/wireless/ath/ath10k/snoc.c b/drivers/net/wireless/ath/ath10k/snoc.c
-index 16177497bba76..7e85c4916e7f5 100644
---- a/drivers/net/wireless/ath/ath10k/snoc.c
-+++ b/drivers/net/wireless/ath/ath10k/snoc.c
-@@ -1563,13 +1563,16 @@ static int ath10k_snoc_probe(struct platform_device *pdev)
- 	ret = ath10k_qmi_init(ar, msa_size);
- 	if (ret) {
- 		ath10k_warn(ar, "failed to register wlfw qmi client: %d\n", ret);
--		goto err_core_destroy;
-+		goto err_power_off;
- 	}
+diff --git a/drivers/net/wireless/ath/ath10k/wmi.c b/drivers/net/wireless/ath/ath10k/wmi.c
+index 9f564e2b7a148..214d65108b294 100644
+--- a/drivers/net/wireless/ath/ath10k/wmi.c
++++ b/drivers/net/wireless/ath/ath10k/wmi.c
+@@ -9476,7 +9476,7 @@ static int ath10k_wmi_mgmt_tx_clean_up_pending(int msdu_id, void *ptr,
  
- 	ath10k_dbg(ar, ATH10K_DBG_SNOC, "snoc probe\n");
+ 	msdu = pkt_addr->vaddr;
+ 	dma_unmap_single(ar->dev, pkt_addr->paddr,
+-			 msdu->len, DMA_FROM_DEVICE);
++			 msdu->len, DMA_TO_DEVICE);
+ 	ieee80211_free_txskb(ar->hw, msdu);
  
  	return 0;
- 
-+err_power_off:
-+	ath10k_hw_power_off(ar);
-+
- err_free_irq:
- 	ath10k_snoc_free_irq(ar);
- 
 -- 
 2.20.1
 
