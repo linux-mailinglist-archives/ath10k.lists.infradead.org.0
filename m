@@ -2,61 +2,79 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0AF0715CE47
-	for <lists+ath10k@lfdr.de>; Thu, 13 Feb 2020 23:46:55 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id DECA715D017
+	for <lists+ath10k@lfdr.de>; Fri, 14 Feb 2020 03:42:06 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Subject:To:From
-	:Date:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=itT0tU3rc3rORjY1Rlk2vn09xxZNeqwBqvYThJ6PxiY=; b=g5XrR2mZjTW6X3
-	Yn58xKh7vUYFMe6+ycULF1IW3YrRdX1GxkaLAs8Hch3JDXk2GrMKHCErFs26kBSarIKr4/6Rpw1Cv
-	JsDnt5dBi8XEuKkrerX4N3oZbRMPxSKnv+gAed9ZwGq6SVRjHBZ/NU0PIC7nhlWxDMmdqrVZ98tti
-	LQZP/HBj9so7SpyHdiwjn6oKzT8cMlMgbDTTYPy6DEEBJ8uyipGsY0NqX1Cfq0dDacVwJbfwmc1HY
-	Og36DcpTlzHasvQrwdQyEInbiHWdTuJA88StF0qAXJc6vklHx8dfZDrLnUQyvek2l57hlMHEW50SW
-	h4+823JBjtFCB20HRZGg==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:Message-ID:References:In-Reply-To:Subject:To:From:
+	Date:MIME-Version:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=02aksBJBBdREFqyFF/xPsi3nrvdPmWD46un0mgIcIN4=; b=miUm0I6NDlPh53bRgVFXsRHD8
+	nCrybf2cekCCK8onj0VE6Ofo3YzDEQMCCvuPYoIdAo8nWMmAWaGDavuEA+6TSsfwcG+Vq5Keg+ffH
+	mD2m6wnmFwRsQKtr7JOlZKcHIRFKWH8nHeumjfTFaX3M5jhoktk9kcsOjMA3OccXrth0kgQSlmgZ8
+	sQfgmI+DcqCf4BYCzid2JR2qTiWMDPYYx2Gh3oLWif5AzWy/B73JADgXTqRy+cZMrPEj5GexzrEm+
+	p327vXdHjqYON/LNsspvZzBhVk2J1ZhsDZsZI/nxqj9fIKQfNkL8tK4o6ctXL46czLJiNa/+6NnR6
+	qS9HAhhyw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j2NFz-0007Oi-1f; Thu, 13 Feb 2020 22:46:51 +0000
-Received: from mga03.intel.com ([134.134.136.65])
+	id 1j2QvZ-0003lk-FA; Fri, 14 Feb 2020 02:42:01 +0000
+Received: from mail26.static.mailgun.info ([104.130.122.26])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j2NFu-0007O9-Gy
- for ath10k@lists.infradead.org; Thu, 13 Feb 2020 22:46:48 +0000
-X-Amp-Result: SKIPPED(no attachment in message)
-X-Amp-File-Uploaded: False
-Received: from fmsmga007.fm.intel.com ([10.253.24.52])
- by orsmga103.jf.intel.com with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384;
- 13 Feb 2020 14:46:41 -0800
-X-ExtLoop1: 1
-X-IronPort-AV: E=Sophos;i="5.70,438,1574150400"; d="scan'208";a="227224041"
-Received: from lkp-server01.sh.intel.com (HELO lkp-server01) ([10.239.97.150])
- by fmsmga007.fm.intel.com with ESMTP; 13 Feb 2020 14:46:40 -0800
-Received: from kbuild by lkp-server01 with local (Exim 4.89)
- (envelope-from <lkp@intel.com>)
- id 1j2NFo-00058X-48; Fri, 14 Feb 2020 06:46:40 +0800
-Date: Fri, 14 Feb 2020 06:46:32 +0800
-From: kbuild test robot <lkp@intel.com>
-To: Kalle Valo <kvalo@codeaurora.org>
-Subject: [ath6kl:pending] BUILD SUCCESS
- 79c688095b09a5c0bf4eb26bd5606585875b8994
-Message-ID: <5e45d1c8.uHFXy+xOWH+xwZCd%lkp@intel.com>
-User-Agent: Heirloom mailx 12.5 6/20/10
+ id 1j2QvU-0003lF-Nj
+ for ath10k@lists.infradead.org; Fri, 14 Feb 2020 02:41:58 +0000
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
+ q=dns/txt; 
+ s=smtp; t=1581648117; h=Message-ID: References: In-Reply-To: Subject:
+ Cc: To: From: Date: Content-Transfer-Encoding: Content-Type:
+ MIME-Version: Sender; bh=+rqY5qbMExF+ngVa5oDWoRnBVlwOwGnLGAE6LO1jv+w=;
+ b=K1zTwYRyJH2CquE2mPyqmpop+yI0dhKMIdZL/5rCYM9ddY6QIjJ1Ur6Qdnpo6H1w5/T1TIZG
+ wxVlNlS10vZ0M4QadG9/JXuaGMQk6ff0tW8V34LkVH6OWqMxzpM/nJryji8gyqaU4//onKPR
+ evXgXLwglm9dmK3TjNTgch3QpXY=
+X-Mailgun-Sending-Ip: 104.130.122.26
+X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
+Received: from smtp.codeaurora.org
+ (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
+ by mxa.mailgun.org with ESMTP id 5e4608f0.7fb8065cd5a8-smtp-out-n03;
+ Fri, 14 Feb 2020 02:41:52 -0000 (UTC)
+Received: by smtp.codeaurora.org (Postfix, from userid 1001)
+ id 90CF6C433A2; Fri, 14 Feb 2020 02:41:52 +0000 (UTC)
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ aws-us-west-2-caf-mail-1.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED autolearn=ham
+ autolearn_force=no version=3.4.0
+Received: from mail.codeaurora.org (localhost.localdomain [127.0.0.1])
+ (using TLSv1 with cipher ECDHE-RSA-AES256-SHA (256/256 bits))
+ (No client certificate requested) (Authenticated sender: wgong)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 5699BC43383;
+ Fri, 14 Feb 2020 02:41:52 +0000 (UTC)
 MIME-Version: 1.0
+Date: Fri, 14 Feb 2020 10:41:52 +0800
+From: Wen Gong <wgong@codeaurora.org>
+To: Kalle Valo <kvalo@codeaurora.org>
+Subject: Re: [PATCH v2] ath10k: add retry mechanism for ath10k_start
+In-Reply-To: <87mu9mwwhs.fsf@kamboji.qca.qualcomm.com>
+References: <20200120025609.6060-1-wgong@codeaurora.org>
+ <87mu9mwwhs.fsf@kamboji.qca.qualcomm.com>
+Message-ID: <576c72fed4a15a13989dde163d77ed8c@codeaurora.org>
+X-Sender: wgong@codeaurora.org
+User-Agent: Roundcube Webmail/1.3.9
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200213_144646_614841_E17A5520 
-X-CRM114-Status: UNSURE (   6.13  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -4.0 (----)
+X-CRM114-CacheID: sfid-20200213_184157_412292_4475FC26 
+X-CRM114-Status: GOOD (  15.95  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-4.0 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [134.134.136.65 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [104.130.122.26 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 1.0 HEXHASH_WORD           Multiple instances of word + hexadecimal hash
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -68,186 +86,43 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: ath10k@lists.infradead.org
-Content-Type: text/plain; charset="us-ascii"
+Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org
 Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-tree/branch: https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git  pending
-branch HEAD: 79c688095b09a5c0bf4eb26bd5606585875b8994  ath10k: Per-chain rssi should sum the secondary channels
-
-elapsed time: 425m
-
-configs tested: 159
-configs skipped: 0
-
-The following configs have been built successfully.
-More configs may be tested in the coming days.
-
-sparc                            allyesconfig
-i386                              allnoconfig
-riscv                            allmodconfig
-powerpc                             defconfig
-i386                             allyesconfig
-mips                      malta_kvm_defconfig
-riscv                               defconfig
-arm                           sunxi_defconfig
-c6x                              allyesconfig
-i386                             alldefconfig
-i386                                defconfig
-ia64                             alldefconfig
-ia64                             allmodconfig
-ia64                              allnoconfig
-ia64                             allyesconfig
-ia64                                defconfig
-arm                              allmodconfig
-arm64                            allmodconfig
-c6x                        evmc6678_defconfig
-nios2                         10m50_defconfig
-nios2                         3c120_defconfig
-openrisc                    or1ksim_defconfig
-openrisc                 simple_smp_defconfig
-xtensa                       common_defconfig
-xtensa                          iss_defconfig
-nds32                               defconfig
-nds32                             allnoconfig
-csky                                defconfig
-alpha                               defconfig
-h8300                     edosk2674_defconfig
-h8300                    h8300h-sim_defconfig
-h8300                       h8s-sim_defconfig
-m68k                             allmodconfig
-m68k                       m5475evb_defconfig
-m68k                          multi_defconfig
-m68k                           sun3_defconfig
-mips                           32r2_defconfig
-mips                         64r6el_defconfig
-mips                             allmodconfig
-mips                              allnoconfig
-mips                             allyesconfig
-mips                      fuloong2e_defconfig
-parisc                            allnoconfig
-parisc                           allyesconfig
-parisc                         b180_defconfig
-parisc                        c3000_defconfig
-parisc                              defconfig
-x86_64               randconfig-a001-20200214
-x86_64               randconfig-a002-20200214
-x86_64               randconfig-a003-20200214
-i386                 randconfig-a001-20200214
-i386                 randconfig-a002-20200214
-i386                 randconfig-a003-20200214
-i386                 randconfig-a003-20200213
-x86_64               randconfig-a003-20200213
-i386                 randconfig-a001-20200213
-x86_64               randconfig-a002-20200213
-i386                 randconfig-a002-20200213
-x86_64               randconfig-a001-20200213
-alpha                randconfig-a001-20200213
-m68k                 randconfig-a001-20200213
-mips                 randconfig-a001-20200213
-nds32                randconfig-a001-20200213
-parisc               randconfig-a001-20200213
-riscv                randconfig-a001-20200213
-c6x                  randconfig-a001-20200213
-h8300                randconfig-a001-20200213
-microblaze           randconfig-a001-20200213
-nios2                randconfig-a001-20200213
-sparc64              randconfig-a001-20200213
-openrisc             randconfig-a001-20200213
-sh                   randconfig-a001-20200213
-csky                 randconfig-a001-20200213
-s390                 randconfig-a001-20200213
-xtensa               randconfig-a001-20200213
-x86_64               randconfig-b001-20200213
-x86_64               randconfig-b002-20200213
-x86_64               randconfig-b003-20200213
-i386                 randconfig-b001-20200213
-i386                 randconfig-b002-20200213
-i386                 randconfig-b003-20200213
-x86_64               randconfig-c001-20200213
-x86_64               randconfig-c002-20200213
-x86_64               randconfig-c003-20200213
-i386                 randconfig-c001-20200213
-i386                 randconfig-c002-20200213
-i386                 randconfig-c003-20200213
-x86_64               randconfig-d001-20200213
-x86_64               randconfig-d002-20200213
-x86_64               randconfig-d003-20200213
-i386                 randconfig-d001-20200213
-i386                 randconfig-d002-20200213
-i386                 randconfig-d003-20200213
-x86_64               randconfig-e001-20200213
-x86_64               randconfig-e002-20200213
-x86_64               randconfig-e003-20200213
-i386                 randconfig-e001-20200213
-i386                 randconfig-e002-20200213
-i386                 randconfig-e003-20200213
-x86_64               randconfig-e001-20200214
-x86_64               randconfig-e002-20200214
-x86_64               randconfig-e003-20200214
-i386                 randconfig-e001-20200214
-i386                 randconfig-e002-20200214
-i386                 randconfig-e003-20200214
-x86_64               randconfig-f001-20200213
-x86_64               randconfig-f002-20200213
-x86_64               randconfig-f003-20200213
-i386                 randconfig-f001-20200213
-i386                 randconfig-f002-20200213
-i386                 randconfig-f003-20200213
-x86_64               randconfig-g001-20200213
-x86_64               randconfig-g002-20200213
-x86_64               randconfig-g003-20200213
-i386                 randconfig-g001-20200213
-i386                 randconfig-g002-20200213
-i386                 randconfig-g003-20200213
-x86_64               randconfig-h001-20200213
-x86_64               randconfig-h002-20200213
-x86_64               randconfig-h003-20200213
-i386                 randconfig-h001-20200213
-i386                 randconfig-h002-20200213
-i386                 randconfig-h003-20200213
-arc                  randconfig-a001-20200213
-arm                  randconfig-a001-20200213
-arm64                randconfig-a001-20200213
-ia64                 randconfig-a001-20200213
-powerpc              randconfig-a001-20200213
-sparc                randconfig-a001-20200213
-riscv                             allnoconfig
-riscv                            allyesconfig
-riscv                    nommu_virt_defconfig
-riscv                          rv32_defconfig
-s390                             alldefconfig
-s390                             allmodconfig
-s390                              allnoconfig
-s390                             allyesconfig
-s390                          debug_defconfig
-s390                                defconfig
-s390                       zfcpdump_defconfig
-sh                               allmodconfig
-sh                                allnoconfig
-sh                          rsk7269_defconfig
-sh                  sh7785lcr_32bit_defconfig
-sh                            titan_defconfig
-sparc                               defconfig
-sparc64                          allmodconfig
-sparc64                           allnoconfig
-sparc64                          allyesconfig
-sparc64                             defconfig
-um                                  defconfig
-um                             i386_defconfig
-um                           x86_64_defconfig
-x86_64                              fedora-25
-x86_64                                  kexec
-x86_64                                    lkp
-x86_64                                   rhel
-x86_64                         rhel-7.2-clear
-x86_64                               rhel-7.6
-
----
-0-DAY CI Kernel Test Service, Intel Corporation
-https://lists.01.org/hyperkitty/list/kbuild-all@lists.01.org
+On 2020-02-13 19:35, Kalle Valo wrote:
+> 
+> I'm not convinved about this. ath10k assumes that SDIO bus works
+> reliably and there's no data loss. In my opinion if the SDIO is not
+> working reliably we should fail immediately with a clear error message
+> for the user, instead of having an unstable connection. And I 
+> understand
+> from the logs that ath10k fails cleanly in this simulated failure.
+> 
+> So what you do here is ignore the assumption that the SDIO bus should
+> always work reliably and add a workaround by trying to restart the
+> firmware multiple times, and hope that by luck it works during one of 
+> 10
+> retry attempts. But then what? Isn't the WLAN connection flaky as SDIO
+> bus is not reliable? So if we were to follow that design logic,
+> shouldn't we add retries for _all_ ath10k SDIO transactions? But that
+> would make ath10k even more complex as it is.
+for other SDIO transfer, like data tx/rx, if it fail, the upper stack 
+has
+error mechanism to handle the fail.
+but for ath10k_start, if it fails, especailly for recovery, then it can
+not recovery again, because cfg80211_shutdown_all_interfaces, and it 
+need
+to reboot system to recovery wlan by test.
+> 
+> Because I think this patch makes things worse for the user, so I would
+> like to understand the real life use case this patch is trying to fix
+> and how it would help the user.
+sometimes it has recovery/suspend/resume test case, it need to make sure
+ath10k_start success, otherwise wlan will can not recovery unless reboot
+system.
 
 _______________________________________________
 ath10k mailing list
