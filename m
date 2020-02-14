@@ -2,74 +2,77 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id DECA715D017
-	for <lists+ath10k@lfdr.de>; Fri, 14 Feb 2020 03:42:06 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id B413F15D0AF
+	for <lists+ath10k@lfdr.de>; Fri, 14 Feb 2020 04:40:35 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:Message-ID:References:In-Reply-To:Subject:To:From:
-	Date:MIME-Version:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=02aksBJBBdREFqyFF/xPsi3nrvdPmWD46un0mgIcIN4=; b=miUm0I6NDlPh53bRgVFXsRHD8
-	nCrybf2cekCCK8onj0VE6Ofo3YzDEQMCCvuPYoIdAo8nWMmAWaGDavuEA+6TSsfwcG+Vq5Keg+ffH
-	mD2m6wnmFwRsQKtr7JOlZKcHIRFKWH8nHeumjfTFaX3M5jhoktk9kcsOjMA3OccXrth0kgQSlmgZ8
-	sQfgmI+DcqCf4BYCzid2JR2qTiWMDPYYx2Gh3oLWif5AzWy/B73JADgXTqRy+cZMrPEj5GexzrEm+
-	p327vXdHjqYON/LNsspvZzBhVk2J1ZhsDZsZI/nxqj9fIKQfNkL8tK4o6ctXL46czLJiNa/+6NnR6
-	qS9HAhhyw==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=RjbuQY0WVHar5VJNjtLyU22ZlizZCtoz3PwfTYsjUGA=; b=ezwCuF+Hl3E400
+	jsG17Xir8Js4WWxYtF5ElbWQl/ybTkYHDIBJBvnHLw5AqcQe21umAPF/TLk1eUS0oje90V7bkFU4z
+	IIrOVMtZf7qz7fwnwW54QbvZyevPJEn4QDXPVcGIsM96jy9d/ITL1T83cey1+XOpT5wkvxnXaPglA
+	yqwFHe0KDwj5NNRST8Exa7JEr1RheYUtAQU+x7qk0P/Uoy3ibkicafyPE+bxG6C/lkTFoMbgxU+El
+	YLb9B2gocrtWbrNRJkA3gkiJIVuKCzGm72XoJ3Bz2ex5YLNRA7P2ULtbKAAbSWuaos35EgkT/ayiR
+	82auXVy5XR2TBIheQGYA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j2QvZ-0003lk-FA; Fri, 14 Feb 2020 02:42:01 +0000
-Received: from mail26.static.mailgun.info ([104.130.122.26])
+	id 1j2RqD-0001ay-S7; Fri, 14 Feb 2020 03:40:33 +0000
+Received: from mail27.static.mailgun.info ([104.130.122.27])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1j2QvU-0003lF-Nj
- for ath10k@lists.infradead.org; Fri, 14 Feb 2020 02:41:58 +0000
+ id 1j2Rq5-0001JH-2M
+ for ath10k@lists.infradead.org; Fri, 14 Feb 2020 03:40:29 +0000
 DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
  q=dns/txt; 
- s=smtp; t=1581648117; h=Message-ID: References: In-Reply-To: Subject:
- Cc: To: From: Date: Content-Transfer-Encoding: Content-Type:
- MIME-Version: Sender; bh=+rqY5qbMExF+ngVa5oDWoRnBVlwOwGnLGAE6LO1jv+w=;
- b=K1zTwYRyJH2CquE2mPyqmpop+yI0dhKMIdZL/5rCYM9ddY6QIjJ1Ur6Qdnpo6H1w5/T1TIZG
- wxVlNlS10vZ0M4QadG9/JXuaGMQk6ff0tW8V34LkVH6OWqMxzpM/nJryji8gyqaU4//onKPR
- evXgXLwglm9dmK3TjNTgch3QpXY=
-X-Mailgun-Sending-Ip: 104.130.122.26
+ s=smtp; t=1581651624; h=Content-Transfer-Encoding: MIME-Version:
+ Message-Id: Date: Subject: Cc: To: From: Sender;
+ bh=6F6q74eRqaT7YwRMjDoofD8qMcMiA27lN8j/aAC1ZPU=;
+ b=xHvbxnaXwvb8reLR2O3Cx3/HPe7O30oA6s9VgbBc6h4lFt55p90O8CVqj7Gsugp+rHrIVkZA
+ r9OzTNztp/lzR/DyCrAeVT+y0E5bsFZtvNvRy3Rn37zWuqLAWXD9qUzCpg1AZxWIcNNQejiS
+ 0/z1Tzvpd3ar+7vBof87MIxnCAo=
+X-Mailgun-Sending-Ip: 104.130.122.27
 X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
 Received: from smtp.codeaurora.org
  (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
- by mxa.mailgun.org with ESMTP id 5e4608f0.7fb8065cd5a8-smtp-out-n03;
- Fri, 14 Feb 2020 02:41:52 -0000 (UTC)
+ by mxa.mailgun.org with ESMTP id 5e4616a7.7fafa7de0fb8-smtp-out-n01;
+ Fri, 14 Feb 2020 03:40:23 -0000 (UTC)
 Received: by smtp.codeaurora.org (Postfix, from userid 1001)
- id 90CF6C433A2; Fri, 14 Feb 2020 02:41:52 +0000 (UTC)
+ id 1D926C4479D; Fri, 14 Feb 2020 03:40:23 +0000 (UTC)
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  aws-us-west-2-caf-mail-1.web.codeaurora.org
 X-Spam-Level: 
-X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED autolearn=ham
- autolearn_force=no version=3.4.0
-Received: from mail.codeaurora.org (localhost.localdomain [127.0.0.1])
- (using TLSv1 with cipher ECDHE-RSA-AES256-SHA (256/256 bits))
+X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,SPF_NONE,
+ URIBL_BLOCKED autolearn=unavailable autolearn_force=no version=3.4.0
+Received: from wgong-HP-Z240-SFF-Workstation.qca.qualcomm.com (unknown
+ [180.166.53.21])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
  (No client certificate requested) (Authenticated sender: wgong)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 5699BC43383;
- Fri, 14 Feb 2020 02:41:52 +0000 (UTC)
-MIME-Version: 1.0
-Date: Fri, 14 Feb 2020 10:41:52 +0800
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id A2003C43383;
+ Fri, 14 Feb 2020 03:40:21 +0000 (UTC)
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org A2003C43383
+Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
+ spf=none smtp.mailfrom=wgong@codeaurora.org
 From: Wen Gong <wgong@codeaurora.org>
-To: Kalle Valo <kvalo@codeaurora.org>
-Subject: Re: [PATCH v2] ath10k: add retry mechanism for ath10k_start
-In-Reply-To: <87mu9mwwhs.fsf@kamboji.qca.qualcomm.com>
-References: <20200120025609.6060-1-wgong@codeaurora.org>
- <87mu9mwwhs.fsf@kamboji.qca.qualcomm.com>
-Message-ID: <576c72fed4a15a13989dde163d77ed8c@codeaurora.org>
-X-Sender: wgong@codeaurora.org
-User-Agent: Roundcube Webmail/1.3.9
+To: ath10k@lists.infradead.org
+Subject: [PATCH] ath10k: start recovery process when read int status fail for
+ sdio
+Date: Fri, 14 Feb 2020 11:40:07 +0800
+Message-Id: <20200214034007.24512-1-wgong@codeaurora.org>
+X-Mailer: git-send-email 2.23.0
+MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200213_184157_412292_4475FC26 
-X-CRM114-Status: GOOD (  15.95  )
+X-CRM114-CacheID: sfid-20200213_194025_284443_A01A02F3 
+X-CRM114-Status: GOOD (  10.74  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [104.130.122.26 listed in list.dnswl.org]
+ no trust [104.130.122.27 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -86,43 +89,53 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org
+Cc: linux-wireless@vger.kernel.org, wgong@codeaurora.org
+Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On 2020-02-13 19:35, Kalle Valo wrote:
-> 
-> I'm not convinved about this. ath10k assumes that SDIO bus works
-> reliably and there's no data loss. In my opinion if the SDIO is not
-> working reliably we should fail immediately with a clear error message
-> for the user, instead of having an unstable connection. And I 
-> understand
-> from the logs that ath10k fails cleanly in this simulated failure.
-> 
-> So what you do here is ignore the assumption that the SDIO bus should
-> always work reliably and add a workaround by trying to restart the
-> firmware multiple times, and hope that by luck it works during one of 
-> 10
-> retry attempts. But then what? Isn't the WLAN connection flaky as SDIO
-> bus is not reliable? So if we were to follow that design logic,
-> shouldn't we add retries for _all_ ath10k SDIO transactions? But that
-> would make ath10k even more complex as it is.
-for other SDIO transfer, like data tx/rx, if it fail, the upper stack 
-has
-error mechanism to handle the fail.
-but for ath10k_start, if it fails, especailly for recovery, then it can
-not recovery again, because cfg80211_shutdown_all_interfaces, and it 
-need
-to reboot system to recovery wlan by test.
-> 
-> Because I think this patch makes things worse for the user, so I would
-> like to understand the real life use case this patch is trying to fix
-> and how it would help the user.
-sometimes it has recovery/suspend/resume test case, it need to make sure
-ath10k_start success, otherwise wlan will can not recovery unless reboot
-system.
+When running simulate crash stress test, it happened
+"failed to read from address 0x800: -110".
+
+Test steps:
+1. Run command continuous
+echo soft > /sys/kernel/debug/ieee80211/phy0/ath10k/simulate_fw_crash
+
+2. error happened and it did not begin recovery for long time.
+[74377.334846] ath10k_sdio mmc1:0001:1: simulating soft firmware crash
+[74378.378217] ath10k_sdio mmc1:0001:1: failed to read from address 0x800: -110
+[74378.378371] ath10k_sdio mmc1:0001:1: failed to process pending SDIO interrupts: -110
+
+It has sdio errors since it can not read MBOX_HOST_INT_STATUS_ADDRESS,
+then it has to do recovery process to recovery ath10k.
+
+Tested with QCA6174 SDIO with firmware WLAN.RMH.4.4.1-00042.
+
+Signed-off-by: Wen Gong <wgong@codeaurora.org>
+---
+ drivers/net/wireless/ath/ath10k/sdio.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/drivers/net/wireless/ath/ath10k/sdio.c b/drivers/net/wireless/ath/ath10k/sdio.c
+index 7b894dcaad2e..ef389aba046d 100644
+--- a/drivers/net/wireless/ath/ath10k/sdio.c
++++ b/drivers/net/wireless/ath/ath10k/sdio.c
+@@ -941,8 +941,11 @@ static int ath10k_sdio_mbox_read_int_status(struct ath10k *ar,
+ 	 */
+ 	ret = ath10k_sdio_read(ar, MBOX_HOST_INT_STATUS_ADDRESS,
+ 			       irq_proc_reg, sizeof(*irq_proc_reg));
+-	if (ret)
++	if (ret) {
++		queue_work(ar->workqueue, &ar->restart_work);
++		ath10k_warn(ar, "read int status fail, start recovery\n");
+ 		goto out;
++	}
+ 
+ 	/* Update only those registers that are enabled */
+ 	*host_int_status = irq_proc_reg->host_int_status &
+-- 
+2.23.0
 
 _______________________________________________
 ath10k mailing list
