@@ -2,84 +2,80 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 21865165211
-	for <lists+ath10k@lfdr.de>; Wed, 19 Feb 2020 23:05:52 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0CE85165600
+	for <lists+ath10k@lfdr.de>; Thu, 20 Feb 2020 05:01:23 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ufCo7lyFkspE1HBpHmIcslgU2fQGsIb2oAMNF+MGd+Q=; b=PpIzRXDc7UnJjt
-	KbjeHg6MgW8hPsNpPrsmv1A/J3FhT0TfKTHExRkTv3JlQ0gXrbkPtEQZ26fAn2dJ6lNL2u2wyThKk
-	DGOV9LZQaC+0iN0kHuMwjMH4/ivHk5r4tKUn62Nsi0f5Gg/u593AHFZNKre82q/X5s6g4WzmWaxIg
-	3XKQXV5rKj2q6Sa+4FBp3gEv6jbyZZOplN2LhYFLjP7wjZ9D+j+zO0Fl9rp7BC0xig9u2KDP5SH4w
-	INzuoOwPJGqDYacuB8ulrUxDVqHmo51LB21S59sovJb1Ued4scB3oVB+NlzR31mfXYPapTBMbUFqv
-	3ymKt9HcPV4STHCg3F2w==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
+	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=f1ZBBUsc7aI/c517cAUrC56MTYiG7+JMMGuAS50B920=; b=KnW
+	7vtTeO1c8ynxDlrERBj75+CLa5ZQSfY0QVbWMG591Q3TudXQTUvkfmsgwScES7UeYQCZBh5lRyvdV
+	+SkSNRWxvnZf+OpZ7R/NoF0HXJyoBhS9WCiegOZ+aaukgFSBWHw08WTeUHiyTjig/NU0oIl27eUMo
+	R/5urfKVGKkvJfhkBDSeaUVZuR7PG/jmA24EvL3s5nwqXsvtCVX1dLlWnhjkE44b3hwRaeQF7BvIJ
+	+cCJsoZAQiSmqn0oZ9BBra/nU/EhOP3BBrRmTzg1Bl2kOXyedyQVZbKD94d9a8VI29YO0ScJpvQnA
+	nwn9cPotJuXpLbtrp3Bpwu0JJJ1hujA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1j4XTW-0000xW-N0; Wed, 19 Feb 2020 22:05:46 +0000
-Received: from mars.blocktrron.ovh ([51.254.112.43] helo=mail.blocktrron.ovh)
- by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat
- Linux)) id 1j4XTS-0000wi-6t
- for ath10k@lists.infradead.org; Wed, 19 Feb 2020 22:05:44 +0000
-Received: from [IPv6:2003:e5:3f06:b000:7ceb:db69:6202:f8b]
- (p200300E53F06B0007CEBDB6962020F8B.dip0.t-ipconnect.de
- [IPv6:2003:e5:3f06:b000:7ceb:db69:6202:f8b])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
- (No client certificate requested)
- by mail.blocktrron.ovh (Postfix) with ESMTPSA id A1E5422F8A;
- Wed, 19 Feb 2020 23:05:35 +0100 (CET)
-Subject: Re: Management rate-control on IPQ4019
-To: Ben Greear <greearb@candelatech.com>
-References: <20543d04-7847-8a4f-7882-78c2f42c98c0@david-bauer.net>
- <5E4C41F3.2000500@candelatech.com>
- <40026add-c28a-da90-f17a-feeb8379c544@david-bauer.net>
- <5E4D0DFA.3080409@candelatech.com>
-From: David Bauer <mail@david-bauer.net>
-Autocrypt: addr=mail@david-bauer.net; prefer-encrypt=mutual; keydata=
- mQENBFYkGEcBCADbRMHdOXmszxrmE9G/gWUD4/HXklOfn+hyBpEcOul+GKAet0oFxznkchJe
- hO5MbEFYsnM8TZVxjnEi70c3luF1m4JycjgQ91GJ52+xvLV0dVz+L99JBgVJNRDvvt68rLVq
- A8/LCdkXctZ+GBfrtTYQ6dOeuQf/qWuwlNTvuG92uWVZjncyWOmQX73gv+1MTRsCmIGNYQu1
- ZDVyhr3YsTgJIXTHUCxBHQBDglkb3L5lK9WHPf1puQ2grNbUg9VSmo4a9IzUpRauNtCDUFxi
- 1m1e5VnmU5O5/xZyDzwmpWog9tUfScS7X9pdVNQ+2W3zCRrotFEn6FKdD01mhIsLnczjABEB
- AAG0IkRhdmlkIEJhdWVyIDxtYWlsQGRhdmlkLWJhdWVyLm5ldD6JAVkEEwEIAEMCGwMHCwkI
- BwMCAQYVCAIJCgsEFgIDAQIeAQIXgAIZARYhBNcEMml7fEwnOA/No7qzlxS0pLh4BQJbLRhu
- BQkIy2cnAAoJELqzlxS0pLh4It8IALb1ea/ezwy8v65zmTeIepeuO5umWzWIy7fLaAsxzJbH
- rO6rCTnRN5ZLyzuxNlhYMyvXAJL7kmPuEOOzHk5xh3soV24VZLSryzGeB6TG3g8L6D0guJ72
- JMM/2HGP8g1zu/IfIM94DZJk7WEuRKG5sndZp49s/voKhrMqAvAU4G03knpEN5SbJx5RA/Wf
- i5stipz2vqS87jHgOVTL1m67Wg9jhKuzJbSlt+m8rHZCQ9dCQQLtqbHugnyOrFhKxwfGFEMB
- aV0sKwoBfjtWP/g3kb9L5wOvRj8UnDRLTB/fVnOsMD18ILEiNqc6FCh4hIb4y2QQEc0nb68f
- imjr4Hz7TOe5AQ0EViQYRwEIALqz1V6kWIvCTVN/6QN9fepVSwSw+5IiiVBGtf2rtdqujCRD
- bGi96a2ZLYRQzlSQvCZ51skgoZFmIW2YhPP90qiZssSEQxgY1rf+DEYnjWmFSgi3iHqYXRk2
- cY7OI3ZT8D2tAFu9pIAxZpD5FdQznJmUhljeTJw+lGOoxctf1xjHZcRcU6GUFMpFBc4xaLC0
- hUN24HT5pDpklxskPFH91VncDaOsLesqszGaUHWx3hogRfogdADvycUp/bQB80kZO/XqexWN
- GUNJYS4axWM2ND25bWV1h9aFjPpOwFM7FwAyra0VihnnNn7dTL5vBpFztY0IFPlvqyc1Vw8y
- vgtShA0AEQEAAYkBPAQYAQgAJgIbDBYhBNcEMml7fEwnOA/No7qzlxS0pLh4BQJbLRiFBQkI
- y2c+AAoJELqzlxS0pLh4LIcH/jnL+ytxRSAh8VX3U2xrMOhBFOkJbW9fj6UgE2iFfZUEOBZl
- q6fZTYn1LOTOECrnLC6eNUQsnZ2u+/N93I5Fmof0MIICUbVabEVmbF/jCFkKjrTPFv/DbNZy
- c+X2ugyX7LsJT+CdvtPT9fObTLCS1nQc3G49syEGVEIzPNyIFzJbFLyh1AfRxmnzAwlal6xK
- S82CsKe+n2lwWg2dyyoJYqwM2G6hAg/ZFqRBZ1RH6TsACGMnwvmsfW/871mPt/mOTCDoH1s1
- tcsgxxtD87UnEqA4zL8dqi5uRA82ZznWaq3mzOGKcBkgEcxi8nnQWW+EyTiZWC+wJ9xT4kLh
- z03IzJQ=
-Message-ID: <f449c08f-f59f-3543-3580-3ab132e55984@david-bauer.net>
-Date: Wed, 19 Feb 2020 23:05:35 +0100
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
- Thunderbird/68.5.0
-MIME-Version: 1.0
-In-Reply-To: <5E4D0DFA.3080409@candelatech.com>
-Content-Language: en-US
+	id 1j4d1b-0008Dy-Kt; Thu, 20 Feb 2020 04:01:19 +0000
+Received: from mail26.static.mailgun.info ([104.130.122.26])
+ by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
+ id 1j4d1X-0008DH-7d
+ for ath10k@lists.infradead.org; Thu, 20 Feb 2020 04:01:17 +0000
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
+ q=dns/txt; 
+ s=smtp; t=1582171276; h=Message-Id: Date: Subject: Cc: To: From:
+ Sender; bh=hjCwvEXCY+H2ZACPOtBjzPemo157UbrAiuMlfjDqQkw=;
+ b=gkPNGifdOOk0aR0w+c0s6wlvJqv+QVDfkF58B487Ta7yebcZaEs0rfYAH9u8CGJGUyBtqAqr
+ CUrwy3U0UN7Ga0w+XCupwz+B7kCFCs885CIFB9vQTMq5VhO0rlTa5VGGfGOSLO8+slq3HcEC
+ DbmYq+skYqCYXsZsz5gzRusDhcc=
+X-Mailgun-Sending-Ip: 104.130.122.26
+X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
+Received: from smtp.codeaurora.org
+ (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
+ by mxa.mailgun.org with ESMTP id 5e4e047f.7f96474aa8f0-smtp-out-n01;
+ Thu, 20 Feb 2020 04:01:03 -0000 (UTC)
+Received: by smtp.codeaurora.org (Postfix, from userid 1001)
+ id 557A5C433A2; Thu, 20 Feb 2020 04:01:03 +0000 (UTC)
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ aws-us-west-2-caf-mail-1.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,SPF_NONE
+ autolearn=unavailable autolearn_force=no version=3.4.0
+Received: from ybzhao-HP-Z230-SFF-Workstation.ap.qualcomm.com (unknown
+ [180.166.53.21])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
+ (No client certificate requested) (Authenticated sender: yiboz)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id C9CEFC43383;
+ Thu, 20 Feb 2020 04:01:00 +0000 (UTC)
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org C9CEFC43383
+Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
+ spf=none smtp.mailfrom=yiboz@codeaurora.org
+From: Yibo Zhao <yiboz@codeaurora.org>
+To: ath10k@lists.infradead.org
+Subject: [PATCH] ath10k: fix not registering airtime of 11a station with WMM
+ disable
+Date: Thu, 20 Feb 2020 12:03:25 +0800
+Message-Id: <1582171405-27236-1-git-send-email-yiboz@codeaurora.org>
+X-Mailer: git-send-email 1.9.1
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200219_140542_406497_FEC80F7B 
-X-CRM114-Status: UNSURE (   9.71  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200219_200116_493670_AEDCD675 
+X-CRM114-Status: GOOD (  10.71  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [104.130.122.26 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -91,36 +87,46 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: kvalo@qca.qualcomm.com, ath10k@lists.infradead.org
-Content-Type: text/plain; charset="windows-1252"
-Content-Transfer-Encoding: quoted-printable
+Cc: Yibo Zhao <yiboz@codeaurora.org>, linux-wireless@vger.kernel.org
+MIME-Version: 1.0
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Hello Ben
+The tid of 11a station with WMM disable reported by FW is 0x10 in
+tx completion. The tid 16 is mapped to a NULL txq since buffer
+MMPDU capbility is not supported. Then 11a station's airtime will
+not be registered due to NULL txq check. As a results, airtime of
+11a station keeps unchanged in debugfs system.
 
-On 2/19/20 11:29 AM, Ben Greear wrote:
-> Ok, maybe so.=A0 I compile all of the wave-2 targets from the same firmwa=
-re source,
-> but maybe upstream 4019 firmware lags others for one reason or another.
+Mask the tid along with IEEE80211_QOS_CTL_TID_MASK to make it in
+the valid range.
 
-I've just came around to test ath10k-ct with ct firmware (OpenWrt snapshot =
-from today).
-Beacon Frames are sent out at 6Mbit/s when legacy_rates is set to 0 for the=
- radio.
+Hardwares tested : QCA9984
+Firmwares tested : 10.4-3.10-00047
 
-Replacing your firmware with the one from Qualcomm (ath10k-ct + non-ct firm=
-ware) shows the
-old picture. Management Frames are sent out at 1Mbit/s rate with this combi=
-nation.
+Signed-off-by: Yibo Zhao <yiboz@codeaurora.org>
+---
+ drivers/net/wireless/ath/ath10k/htt_rx.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
 
-So this definitely seems to be a firmware bug. Hopefully QCA will address t=
-his in an upcoming
-release for users of their firmware.
-
-Best wishes
-David
-
+diff --git a/drivers/net/wireless/ath/ath10k/htt_rx.c b/drivers/net/wireless/ath/ath10k/htt_rx.c
+index 38a5814..f883f2a 100644
+--- a/drivers/net/wireless/ath/ath10k/htt_rx.c
++++ b/drivers/net/wireless/ath/ath10k/htt_rx.c
+@@ -2744,7 +2744,8 @@ static void ath10k_htt_rx_tx_compl_ind(struct ath10k *ar,
+ 			continue;
+ 		}
+ 
+-		tid = FIELD_GET(HTT_TX_PPDU_DUR_INFO0_TID_MASK, info0);
++		tid = FIELD_GET(HTT_TX_PPDU_DUR_INFO0_TID_MASK, info0) &
++						IEEE80211_QOS_CTL_TID_MASK;
+ 		tx_duration = __le32_to_cpu(ppdu_dur->tx_duration);
+ 
+ 		ieee80211_sta_register_airtime(peer->sta, tid, tx_duration, 0);
+-- 
+1.9.1
 
 _______________________________________________
 ath10k mailing list
