@@ -2,78 +2,81 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 48D45190DEB
-	for <lists+ath10k@lfdr.de>; Tue, 24 Mar 2020 13:47:53 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id DD0B5191294
+	for <lists+ath10k@lfdr.de>; Tue, 24 Mar 2020 15:14:31 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:References:
-	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
-	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
-	:Resent-Message-ID:List-Owner;
-	bh=Zfa3QFzlyc6/eBhBXf8O6aSNd1W3DhLLWB4c6EZpOrA=; b=EvLJkEIinLfJ+p6q3fUw06MhWw
-	Xe5Cc4KIiEo28YRJ2bMFcIqApsMU6tZSDB1pxcKcBYRmifmDYp7PM1VUnGRqEf7nJFtgwxI3eWhqk
-	MSp0GOjyikKiJy1SteRV0cnT+NG+1yb+zS0usmEqdGy/89hisIh9Zuy+V5/nB0vH7JMQ3hNRlDZ3p
-	4Vfcq/PBFCrZe5HCqEiNdthoWq/bUSSisOk4R+yTF5s6Xf2xD8CBrWhtzE+D6naFV0BMFOJHZDKbf
-	oApq+XFyVjjUE4/2dLAoPzwmd3Rhlc4DoHhM1VEVjg0aS01Fm6Vto43+s6bbfGz+EyUg9UyCyUHNK
-	8xGS0muw==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
+	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=KTOCaWvtSFPjYRcuIDkYW7HpqMRD4tqxyYS5I/Ef/lc=; b=Gm5MCIkClrIS5y
+	qii6QIiehkgQ2iII65tE4iJcVXM+sCld4S81SpL/YxqLauGpqWFePCgu1re4aIwdN4LBrX3UDLhrt
+	j2VfCuZrrXVohUwVcwzhzPY1EEjKp4mHyHHZHzEkwKLyD5medNjVJLn0lJTvWDQiqdhzkvScdRiIj
+	iqr3IFxak6QdtGWtJ5hjsZrvqDgKzrXNTKDMJITEZjoPmvomr5E6AsgXiQrofGzPO7is9pf0UlwFG
+	X+xO0GOn6EsJIPWaAzxJfiaVhQOlBzr0NWoHuzsoxFiMLYtG6apo6EPYgi2TfVjdxiG8LYKKmBwza
+	JlcdH8b5ctGSeFZKLXyQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jGiyF-0001s8-2P; Tue, 24 Mar 2020 12:47:51 +0000
-Received: from mail26.static.mailgun.info ([104.130.122.26])
+	id 1jGkK4-0002pl-S4; Tue, 24 Mar 2020 14:14:28 +0000
+Received: from mail27.static.mailgun.info ([104.130.122.27])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jGiy9-0001m6-A8
- for ath10k@lists.infradead.org; Tue, 24 Mar 2020 12:47:48 +0000
+ id 1jGkJv-0002p9-UY
+ for ath10k@lists.infradead.org; Tue, 24 Mar 2020 14:14:25 +0000
 DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
  q=dns/txt; 
- s=smtp; t=1585054066; h=References: In-Reply-To: Message-Id: Date:
- Subject: Cc: To: From: Sender;
- bh=NzRR+EotuW5U5VJDO8XJ4ADNpOlgqXR6IWmr91GAxYo=;
- b=Tb+CtIb2HekME6E4zx1WhwWJt+4luU/9q/yq5oRRY2eTFQhDjsqduso0sw4/2h9rql0nc9Ht
- 5g0ZOAYMCPKFzV4iqwZoPNTtVoFkf1eu9BBOdE38x3duIkVgU8yPvMGqg9OWZ6UQszvT/lYq
- jw9WcydpxowG8ciHzIh6QySpDPg=
-X-Mailgun-Sending-Ip: 104.130.122.26
+ s=smtp; t=1585059263; h=Date: Message-Id: Cc: To: References:
+ In-Reply-To: From: Subject: Content-Transfer-Encoding: MIME-Version:
+ Content-Type: Sender; bh=D0tDkkn7yvngL5blqt4Sx3OwfBCinbjELusDX5Nb7E0=;
+ b=fB1e3GOA0geYX0UaALreTU6wTmTAcMI5lStx0SiPbBM24hAfT7wxbDvNO1C68++3XqZzQdsg
+ ndxGzeWfpxerT1A0LRrl7OXuc3allHvONKJzWr0+5er+f1p/aa3oDkB0enMYRce7BgS8QiKi
+ oOsQTA2DsXhUvOEaHX0w9QWRTCg=
+X-Mailgun-Sending-Ip: 104.130.122.27
 X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
 Received: from smtp.codeaurora.org
  (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
- by mxa.mailgun.org with ESMTP id 5e7a016c.7fdc71324b90-smtp-out-n04;
- Tue, 24 Mar 2020 12:47:40 -0000 (UTC)
+ by mxa.mailgun.org with ESMTP id 5e7a15ad.7f43bc71b378-smtp-out-n02;
+ Tue, 24 Mar 2020 14:14:05 -0000 (UTC)
 Received: by smtp.codeaurora.org (Postfix, from userid 1001)
- id 36519C433CB; Tue, 24 Mar 2020 12:47:39 +0000 (UTC)
+ id 8C9B9C433BA; Tue, 24 Mar 2020 14:14:04 +0000 (UTC)
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  aws-us-west-2-caf-mail-1.web.codeaurora.org
 X-Spam-Level: 
-X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,SPF_NONE,
- URIBL_BLOCKED autolearn=unavailable autolearn_force=no version=3.4.0
-Received: from pillair-linux.qualcomm.com
- (blr-c-bdr-fw-01_GlobalNAT_AllZones-Outside.qualcomm.com [103.229.19.19])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
- (No client certificate requested) (Authenticated sender: pillair)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 9A079C433BA;
- Tue, 24 Mar 2020 12:47:36 +0000 (UTC)
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 9A079C433BA
+X-Spam-Status: No, score=0.5 required=2.0 tests=ALL_TRUSTED,MISSING_DATE,
+ MISSING_MID,SPF_NONE,URIBL_BLOCKED autolearn=no autolearn_force=no
+ version=3.4.0
+Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
+ [88.114.240.156])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested) (Authenticated sender: kvalo)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 928C0C433D2;
+ Tue, 24 Mar 2020 14:14:02 +0000 (UTC)
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 928C0C433D2
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
- spf=none smtp.mailfrom=pillair@codeaurora.org
-From: Rakesh Pillai <pillair@codeaurora.org>
-To: ath10k@lists.infradead.org
-Subject: [PATCH 3/3] ath10k: Add support for targets without trustzone
-Date: Tue, 24 Mar 2020 18:17:24 +0530
-Message-Id: <1585054044-18667-4-git-send-email-pillair@codeaurora.org>
-X-Mailer: git-send-email 2.7.4
-In-Reply-To: <1585054044-18667-1-git-send-email-pillair@codeaurora.org>
-References: <1585054044-18667-1-git-send-email-pillair@codeaurora.org>
+ spf=none smtp.mailfrom=kvalo@codeaurora.org
+MIME-Version: 1.0
+Subject: Re: [PATCH 1/3] dt-bindings: ath10k: Add wifi-firmware subnode for
+ wifi node
+From: Kalle Valo <kvalo@codeaurora.org>
+In-Reply-To: <1585054044-18667-2-git-send-email-pillair@codeaurora.org>
+References: <1585054044-18667-2-git-send-email-pillair@codeaurora.org>
+To: Rakesh Pillai <pillair@codeaurora.org>
+User-Agent: pwcli/0.0.0-git (https://github.com/kvalo/pwcli/) Python/2.7.12
+Message-Id: <20200324141404.8C9B9C433BA@smtp.codeaurora.org>
+Date: Tue, 24 Mar 2020 14:14:04 +0000 (UTC)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200324_054747_019447_2F282241 
-X-CRM114-Status: GOOD (  16.35  )
+X-CRM114-CacheID: sfid-20200324_071424_000892_ACD8EF09 
+X-CRM114-Status: UNSURE (   9.04  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [104.130.122.26 listed in list.dnswl.org]
+ no trust [104.130.122.27 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
@@ -91,206 +94,107 @@ List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
 Cc: Rakesh Pillai <pillair@codeaurora.org>, devicetree@vger.kernel.org,
- linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org
-MIME-Version: 1.0
+ linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
+ ath10k@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Add the support to attach and map iommu
-domain for targets which do not have the
-support of TrustZone.
+Rakesh Pillai <pillair@codeaurora.org> wrote:
 
-Tested HW: WCN3990
-Tested FW: WLAN.HL.3.1-01040-QCAHLSWMTPLZ-1
+> Add a wifi-firmware subnode for the wifi node.
+> This wifi-firmware subnode is needed for the
+> targets which do not support TrustZone.
+> 
+> Signed-off-by: Rakesh Pillai <pillair@codeaurora.org>
 
-Signed-off-by: Rakesh Pillai <pillair@codeaurora.org>
----
- drivers/net/wireless/ath/ath10k/snoc.c | 119 ++++++++++++++++++++++++++++++++-
- drivers/net/wireless/ath/ath10k/snoc.h |   7 ++
- 2 files changed, 125 insertions(+), 1 deletion(-)
+Fails to build and has warnings. How did you test this?
 
-diff --git a/drivers/net/wireless/ath/ath10k/snoc.c b/drivers/net/wireless/ath/ath10k/snoc.c
-index baba36c..207ad37 100644
---- a/drivers/net/wireless/ath/ath10k/snoc.c
-+++ b/drivers/net/wireless/ath/ath10k/snoc.c
-@@ -12,6 +12,7 @@
- #include <linux/property.h>
- #include <linux/regulator/consumer.h>
- #include <linux/of_address.h>
-+#include <linux/iommu.h>
- 
- #include "ce.h"
- #include "coredump.h"
-@@ -1500,6 +1501,112 @@ static int ath10k_setup_msa_resources(struct ath10k *ar, u32 msa_size)
- 	return 0;
- }
- 
-+static int ath10k_fw_init(struct ath10k *ar)
-+{
-+	struct ath10k_snoc *ar_snoc = ath10k_snoc_priv(ar);
-+	struct device *host_dev = &ar_snoc->dev->dev;
-+	struct platform_device_info info;
-+	struct iommu_domain *iommu_dom;
-+	struct platform_device *pdev;
-+	struct device_node *node;
-+	int ret;
-+
-+	node = of_get_child_by_name(host_dev->of_node, "wifi-firmware");
-+	if (!node) {
-+		ar_snoc->use_tz = true;
-+		return 0;
-+	}
-+
-+	memset(&info, 0, sizeof(info));
-+	info.fwnode = &node->fwnode;
-+	info.parent = host_dev;
-+	info.name = node->name;
-+	info.dma_mask = DMA_BIT_MASK(32);
-+
-+	pdev = platform_device_register_full(&info);
-+	if (IS_ERR(pdev)) {
-+		of_node_put(node);
-+		return PTR_ERR(pdev);
-+	}
-+
-+	pdev->dev.of_node = node;
-+
-+	ret = of_dma_configure(&pdev->dev, node, true);
-+	if (ret) {
-+		ath10k_err(ar, "dma configure fail: %d\n", ret);
-+		goto err_unregister;
-+	}
-+
-+	ar_snoc->fw.dev = &pdev->dev;
-+
-+	iommu_dom = iommu_domain_alloc(&platform_bus_type);
-+	if (!iommu_dom) {
-+		ath10k_err(ar, "failed to allocate iommu domain\n");
-+		ret = -ENOMEM;
-+		goto err_unregister;
-+	}
-+
-+	ret = iommu_attach_device(iommu_dom, ar_snoc->fw.dev);
-+	if (ret) {
-+		ath10k_err(ar, "could not attach device: %d\n", ret);
-+		goto err_iommu_free;
-+	}
-+
-+	ar_snoc->fw.iommu_domain = iommu_dom;
-+	ar_snoc->fw.fw_start_addr = ar->msa.paddr;
-+
-+	ret = iommu_map(iommu_dom, ar_snoc->fw.fw_start_addr,
-+			ar->msa.paddr, ar->msa.mem_size,
-+			IOMMU_READ | IOMMU_WRITE);
-+	if (ret) {
-+		ath10k_err(ar, "failed to map firmware region: %d\n", ret);
-+		goto err_iommu_detach;
-+	}
-+
-+	of_node_put(node);
-+
-+	return 0;
-+
-+err_iommu_detach:
-+	iommu_detach_device(iommu_dom, ar_snoc->fw.dev);
-+
-+err_iommu_free:
-+	iommu_domain_free(iommu_dom);
-+
-+err_unregister:
-+	platform_device_unregister(pdev);
-+	of_node_put(node);
-+
-+	return ret;
-+}
-+
-+static int ath10k_fw_deinit(struct ath10k *ar)
-+{
-+	struct ath10k_snoc *ar_snoc = ath10k_snoc_priv(ar);
-+	struct iommu_domain *iommu;
-+	const size_t mapped_size;
-+	size_t unmapped_size;
-+
-+	if (ar_snoc->use_tz)
-+		return 0;
-+
-+	mapped_size = ar_snoc->fw.mapped_mem_size;
-+	iommu = ar_snoc->fw.iommu_domain;
-+
-+	unmapped_size = iommu_unmap(iommu, ar_snoc->fw.fw_start_addr,
-+				    mapped_size);
-+	if (unmapped_size != mapped_size)
-+		ath10k_err(ar, "failed to unmap firmware: %d\n",
-+			   unmapped_size);
-+
-+	iommu_detach_device(iommu, ar_snoc->fw.dev);
-+	iommu_domain_free(iommu);
-+
-+	platform_device_unregister(to_platform_device(ar_snoc->fw.dev));
-+
-+	return 0;
-+}
-+
- static const struct of_device_id ath10k_snoc_dt_match[] = {
- 	{ .compatible = "qcom,wcn3990-wifi",
- 	 .data = &drv_priv,
-@@ -1608,16 +1715,25 @@ static int ath10k_snoc_probe(struct platform_device *pdev)
- 		goto err_power_off;
- 	}
- 
-+	ret = ath10k_fw_init(ar);
-+	if (ret) {
-+		ath10k_err(ar, "failed to initialize firmware: %d\n", ret);
-+		goto err_power_off;
-+	}
-+
- 	ret = ath10k_qmi_init(ar, msa_size);
- 	if (ret) {
- 		ath10k_warn(ar, "failed to register wlfw qmi client: %d\n", ret);
--		goto err_power_off;
-+		goto err_fw_deinit;
- 	}
- 
- 	ath10k_dbg(ar, ATH10K_DBG_SNOC, "snoc probe\n");
- 
- 	return 0;
- 
-+err_fw_deinit:
-+	ath10k_fw_deinit(ar);
-+
- err_power_off:
- 	ath10k_hw_power_off(ar);
- 
-@@ -1649,6 +1765,7 @@ static int ath10k_snoc_remove(struct platform_device *pdev)
- 
- 	ath10k_core_unregister(ar);
- 	ath10k_hw_power_off(ar);
-+	ath10k_fw_deinit(ar);
- 	ath10k_snoc_free_irq(ar);
- 	ath10k_snoc_release_resource(ar);
- 	ath10k_qmi_deinit(ar);
-diff --git a/drivers/net/wireless/ath/ath10k/snoc.h b/drivers/net/wireless/ath/ath10k/snoc.h
-index c05df45..18e19fb 100644
---- a/drivers/net/wireless/ath/ath10k/snoc.h
-+++ b/drivers/net/wireless/ath/ath10k/snoc.h
-@@ -55,6 +55,13 @@ struct regulator_bulk_data;
- struct ath10k_snoc {
- 	struct platform_device *dev;
- 	struct ath10k *ar;
-+	unsigned int use_tz;
-+	struct video_firmware {
-+		struct device *dev;
-+		dma_addr_t fw_start_addr;
-+		struct iommu_domain *iommu_domain;
-+		size_t mapped_mem_size;
-+	} fw;
- 	void __iomem *mem;
- 	dma_addr_t mem_pa;
- 	struct ath10k_snoc_target_info target_info;
+drivers/net/wireless/ath/ath10k/qmi.c: In function 'ath10k_qmi_msa_mem_info_send_sync_msg':
+drivers/net/wireless/ath/ath10k/qmi.c:160:23: error: 'struct ath10k_qmi' has no member named 'msa_pa'
+  max_mapped_addr = qmi->msa_pa + qmi->msa_mem_size;
+                       ^~
+drivers/net/wireless/ath/ath10k/qmi.c:160:37: error: 'struct ath10k_qmi' has no member named 'msa_mem_size'
+  max_mapped_addr = qmi->msa_pa + qmi->msa_mem_size;
+                                     ^~
+drivers/net/wireless/ath/ath10k/qmi.c:163:41: error: 'struct ath10k_qmi' has no member named 'msa_mem_size'
+   if (resp.mem_region_info[i].size > qmi->msa_mem_size ||
+                                         ^~
+drivers/net/wireless/ath/ath10k/qmi.c:165:48: error: 'struct ath10k_qmi' has no member named 'msa_pa'
+       resp.mem_region_info[i].region_addr < qmi->msa_pa ||
+                                                ^~
+make[5]: *** [drivers/net/wireless/ath/ath10k/qmi.o] Error 1
+make[5]: *** Waiting for unfinished jobs....
+In file included from ./include/linux/byteorder/little_endian.h:5,
+                 from ./arch/x86/include/uapi/asm/byteorder.h:5,
+                 from ./include/asm-generic/bitops/le.h:6,
+                 from ./arch/x86/include/asm/bitops.h:395,
+                 from ./include/linux/bitops.h:29,
+                 from ./include/linux/kernel.h:12,
+                 from ./include/linux/clk.h:13,
+                 from drivers/net/wireless/ath/ath10k/snoc.c:6:
+drivers/net/wireless/ath/ath10k/snoc.c: In function 'ath10k_msa_dump_memory':
+drivers/net/wireless/ath/ath10k/snoc.c:1424:54: error: 'struct ath10k_qmi' has no member named 'msa_va'
+  hdr->start = cpu_to_le32((unsigned long)ar_snoc->qmi->msa_va);
+                                                      ^~
+./include/uapi/linux/byteorder/little_endian.h:33:51: note: in definition of macro '__cpu_to_le32'
+ #define __cpu_to_le32(x) ((__force __le32)(__u32)(x))
+                                                   ^
+drivers/net/wireless/ath/ath10k/snoc.c:1424:15: note: in expansion of macro 'cpu_to_le32'
+  hdr->start = cpu_to_le32((unsigned long)ar_snoc->qmi->msa_va);
+               ^~~~~~~~~~~
+drivers/net/wireless/ath/ath10k/snoc.c:1425:40: error: 'struct ath10k_qmi' has no member named 'msa_mem_size'
+  hdr->length = cpu_to_le32(ar_snoc->qmi->msa_mem_size);
+                                        ^~
+./include/uapi/linux/byteorder/little_endian.h:33:51: note: in definition of macro '__cpu_to_le32'
+ #define __cpu_to_le32(x) ((__force __le32)(__u32)(x))
+                                                   ^
+drivers/net/wireless/ath/ath10k/snoc.c:1425:16: note: in expansion of macro 'cpu_to_le32'
+  hdr->length = cpu_to_le32(ar_snoc->qmi->msa_mem_size);
+                ^~~~~~~~~~~
+drivers/net/wireless/ath/ath10k/snoc.c:1427:40: error: 'struct ath10k_qmi' has no member named 'msa_mem_size'
+  if (current_region->len < ar_snoc->qmi->msa_mem_size) {
+                                        ^~
+drivers/net/wireless/ath/ath10k/snoc.c:1428:27: error: 'struct ath10k_qmi' has no member named 'msa_va'
+   memcpy(buf, ar_snoc->qmi->msa_va, current_region->len);
+                           ^~
+drivers/net/wireless/ath/ath10k/snoc.c:1430:41: error: 'struct ath10k_qmi' has no member named 'msa_mem_size'
+        current_region->len, ar_snoc->qmi->msa_mem_size);
+                                         ^~
+drivers/net/wireless/ath/ath10k/snoc.c:1432:27: error: 'struct ath10k_qmi' has no member named 'msa_va'
+   memcpy(buf, ar_snoc->qmi->msa_va, ar_snoc->qmi->msa_mem_size);
+                           ^~
+drivers/net/wireless/ath/ath10k/snoc.c:1432:49: error: 'struct ath10k_qmi' has no member named 'msa_mem_size'
+   memcpy(buf, ar_snoc->qmi->msa_va, ar_snoc->qmi->msa_mem_size);
+                                                 ^~
+drivers/net/wireless/ath/ath10k/snoc.c: In function 'ath10k_fw_deinit':
+drivers/net/wireless/ath/ath10k/snoc.c:1593:14: error: assignment of read-only variable 'mapped_size'
+  mapped_size = ar_snoc->fw.mapped_mem_size;
+              ^
+drivers/net/wireless/ath/ath10k/snoc.c:1599:46: warning: format '%d' expects argument of type 'int', but argument 3 has type 'size_t' {aka 'long unsigned int'} [-Wformat=]
+   ath10k_err(ar, "failed to unmap firmware: %d\n",
+                                             ~^
+                                             %ld
+       unmapped_size);
+       ~~~~~~~~~~~~~                           
+make[5]: *** [drivers/net/wireless/ath/ath10k/snoc.o] Error 1
+make[4]: *** [drivers/net/wireless/ath/ath10k] Error 2
+make[3]: *** [drivers/net/wireless/ath] Error 2
+make[2]: *** [drivers/net/wireless] Error 2
+make[1]: *** [drivers/net] Error 2
+make: *** [drivers] Error 2
+
+3 patches set to Changes Requested.
+
+11455345 [1/3] dt-bindings: ath10k: Add wifi-firmware subnode for wifi node
+11455351 [2/3] ath10k: Setup the msa resources before qmi init
+11455353 [3/3] ath10k: Add support for targets without trustzone
+
 -- 
-2.7.4
+https://patchwork.kernel.org/patch/11455345/
+
+https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
 
 _______________________________________________
 ath10k mailing list
