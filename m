@@ -2,65 +2,86 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 826E4192278
-	for <lists+ath10k@lfdr.de>; Wed, 25 Mar 2020 09:18:23 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8E7CC192675
+	for <lists+ath10k@lfdr.de>; Wed, 25 Mar 2020 12:01:00 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Subject:To:From
-	:Date:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=Z6uUu6Si9KGW8TTaYTcNJoDAXj+d4u8j57VZflCejtU=; b=nNVXTEKfrlLRhL
-	bGoZ2ka0TSisOMvcqh6IFsm7j1MH+7t9j/+oDIxQBJ2bdfW571TjB2gZC1ws8L3c4WGslmk2L4E++
-	nSRC8iI4kRbvEceLPx1QNnx9hg/LdAU5zyUwMV4ubM4FF0BP2doR116vwcFvQ4iPmSewOrLHdsg5/
-	G60Fz0U4q8HSfsStT/nTAWy8WhfjXKQoFNZOyhCLtw5nHrwOqcSAS9+iDGCf3LEz15hp8ENrJhv41
-	oZau85xcW8/yTLnX/xGXy4uhIEjF9tuRtz0eYJ/K+2gds3MG+vtpO4C4jhuO1LKsX+1QXal0+hSuI
-	yND7lKh+hUz8ywmNx+Bg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:
+	In-Reply-To:References:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=uy9kQnszE+2KOgovae5U6kdPb+knqVsvzpVzeIyH1JI=; b=q4MqVUAJEHEuLo
+	3iDzBqrY4zGhwBzJ+l2LCfdu6RkvxhrN7q87Oxnu3IUFJQtjfVi3hSq2W+E3BdkiyqxpiaZB51FMC
+	ty5uibvBzzsBKusqYyc9DzFYBP+Oo/UzGKOui6be8jSvqz6/kmjdSTKaysA2PvN9lfTDo/a39yXvP
+	NroCf5P8uLXQ1Z9sYxDM+bk9UD1paepPPnubq+sMpbHxQPwqec/qKGojv9sBXnL+223uSWvM8U3Zu
+	L1+jR20Hh1s6iH4cYix5zRcKX3eFkibElnh1WlpastFInXI+a0HSwBDZJw/dz2C+VP6XWtRNzyGZk
+	hR9JP8Hn9fPZ6mvjcenw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jH1Ew-0006KK-WF; Wed, 25 Mar 2020 08:18:19 +0000
-Received: from mga18.intel.com ([134.134.136.126])
+	id 1jH3mJ-0000Za-UG; Wed, 25 Mar 2020 11:00:55 +0000
+Received: from mail26.static.mailgun.info ([104.130.122.26])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jH1Et-0006F1-0a
- for ath10k@lists.infradead.org; Wed, 25 Mar 2020 08:18:16 +0000
-IronPort-SDR: gyBMMse+kfZj2bpL7C01MkJwOngrM5Vw2NSX7zllbVfcEWRUE62blXKLp5H19QC/oLgx0S/UO4
- +XG0fZ5Tysww==
-X-Amp-Result: SKIPPED(no attachment in message)
-X-Amp-File-Uploaded: False
-Received: from fmsmga007.fm.intel.com ([10.253.24.52])
- by orsmga106.jf.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
- 25 Mar 2020 01:18:10 -0700
-IronPort-SDR: s75MDgcuQuLGT4teuQloppSMpDvtqjw34/IR55e/95aa9k29IB/2BKnKgMHDmPOGfftwUGyLL1
- LydJWCSasUjg==
-X-ExtLoop1: 1
-X-IronPort-AV: E=Sophos;i="5.72,303,1580803200"; d="scan'208";a="238462015"
-Received: from lkp-server01.sh.intel.com (HELO lkp-server01) ([10.239.97.150])
- by fmsmga007.fm.intel.com with ESMTP; 25 Mar 2020 01:18:08 -0700
-Received: from kbuild by lkp-server01 with local (Exim 4.89)
- (envelope-from <lkp@intel.com>)
- id 1jH1El-000BUc-TV; Wed, 25 Mar 2020 16:18:07 +0800
-Date: Wed, 25 Mar 2020 16:17:12 +0800
-From: kbuild test robot <lkp@intel.com>
-To: Kalle Valo <kvalo@codeaurora.org>
-Subject: [ath6kl:pending] BUILD SUCCESS
- 39f1f4fc590acf87f3fd8c7fb7274689356fe6db
-Message-ID: <5e7b1388.7aM1LzLv24RteOYJ%lkp@intel.com>
-User-Agent: Heirloom mailx 12.5 6/20/10
+ id 1jH3mF-0000Yc-AF
+ for ath10k@lists.infradead.org; Wed, 25 Mar 2020 11:00:54 +0000
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
+ q=dns/txt; 
+ s=smtp; t=1585134052; h=Content-Transfer-Encoding: Content-Type:
+ MIME-Version: Message-ID: Date: Subject: In-Reply-To: References: Cc:
+ To: From: Sender; bh=mHjWNEnv5917EKxAOANEuTjIJkXbIPTe1KiHqOWLln0=;
+ b=Z/5Kcl0EORsTZLHNsPkkAYES6fk6OxAl9aVQiWfuWIy0wGtBPE2bGSN/0YW4e0R1RGdVg7j8
+ +1TtaK2v5M3oe9ES4mXotx2LfxIwvubqOGk+Cl2NvQLRm5EJ1u/WuThXuv8S3zQwdXoeYIh/
+ 6D5eCh81HDGvyuNpP2JtKjTaHFA=
+X-Mailgun-Sending-Ip: 104.130.122.26
+X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
+Received: from smtp.codeaurora.org
+ (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
+ by mxa.mailgun.org with ESMTP id 5e7b39d3.7f578898b030-smtp-out-n02;
+ Wed, 25 Mar 2020 11:00:35 -0000 (UTC)
+Received: by smtp.codeaurora.org (Postfix, from userid 1001)
+ id 4E8F6C433BA; Wed, 25 Mar 2020 11:00:35 +0000 (UTC)
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ aws-us-west-2-caf-mail-1.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,SPF_NONE
+ autolearn=unavailable autolearn_force=no version=3.4.0
+Received: from Pillair (unknown [183.83.66.17])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested) (Authenticated sender: pillair)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 3362EC433D2;
+ Wed, 25 Mar 2020 11:00:29 +0000 (UTC)
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 3362EC433D2
+Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
+ spf=none smtp.mailfrom=pillair@codeaurora.org
+From: <pillair@codeaurora.org>
+To: "'Kalle Valo'" <kvalo@codeaurora.org>
+References: <1585054044-18667-2-git-send-email-pillair@codeaurora.org>
+ <20200324141404.C9A7FC432C2@smtp.codeaurora.org>
+In-Reply-To: <20200324141404.C9A7FC432C2@smtp.codeaurora.org>
+Subject: RE: [PATCH 1/3] dt-bindings: ath10k: Add wifi-firmware subnode for
+ wifi node
+Date: Wed, 25 Mar 2020 16:30:25 +0530
+Message-ID: <000001d60294$9abcfb20$d036f160$@codeaurora.org>
 MIME-Version: 1.0
+X-Mailer: Microsoft Outlook 16.0
+Thread-Index: AQIav5wwSpfWqpn79mByT9bYGdzwAAIfXdf4p76udaA=
+Content-Language: en-us
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200325_011815_106094_DC564C82 
-X-CRM114-Status: UNSURE (   6.12  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -1.0 (-)
+X-CRM114-CacheID: sfid-20200325_040052_364831_3C4D3071 
+X-CRM114-Status: GOOD (  15.86  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-1.0 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [134.134.136.126 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [104.130.122.26 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 1.3 HEXHASH_WORD           Multiple instances of word + hexadecimal hash
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -72,193 +93,147 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: ath10k@lists.infradead.org
+Cc: devicetree@vger.kernel.org, linux-wireless@vger.kernel.org,
+ linux-kernel@vger.kernel.org, ath10k@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-tree/branch: https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git  pending
-branch HEAD: 39f1f4fc590acf87f3fd8c7fb7274689356fe6db  ath10k: enable alt data of TX path for sdio
+Hi Kalle,
 
-elapsed time: 866m
+I had tested it on a slightly older ath10k tree, and missed a few cleanup while rebasing it on the ath10k tree tip.
+I have now fixed these build errors and will send out v2 for this patchset.
 
-configs tested: 166
-configs skipped: 0
+Thanks,
+Rakesh Pillai.
 
-The following configs have been built successfully.
-More configs may be tested in the coming days.
+> -----Original Message-----
+> From: Kalle Valo <kvalo@codeaurora.org>
+> Sent: Tuesday, March 24, 2020 7:44 PM
+> To: Rakesh Pillai <pillair@codeaurora.org>
+> Cc: ath10k@lists.infradead.org; linux-wireless@vger.kernel.org;
+> devicetree@vger.kernel.org; linux-kernel@vger.kernel.org; Rakesh Pillai
+> <pillair@codeaurora.org>
+> Subject: Re: [PATCH 1/3] dt-bindings: ath10k: Add wifi-firmware subnode for
+> wifi node
+> 
+> Rakesh Pillai <pillair@codeaurora.org> wrote:
+> 
+> > Add a wifi-firmware subnode for the wifi node.
+> > This wifi-firmware subnode is needed for the
+> > targets which do not support TrustZone.
+> >
+> > Signed-off-by: Rakesh Pillai <pillair@codeaurora.org>
+> 
+> Fails to build and has warnings. How did you test this?
+> 
+> drivers/net/wireless/ath/ath10k/qmi.c: In function
+> 'ath10k_qmi_msa_mem_info_send_sync_msg':
+> drivers/net/wireless/ath/ath10k/qmi.c:160:23: error: 'struct ath10k_qmi' has
+> no member named 'msa_pa'
+>   max_mapped_addr = qmi->msa_pa + qmi->msa_mem_size;
+>                        ^~
+> drivers/net/wireless/ath/ath10k/qmi.c:160:37: error: 'struct ath10k_qmi' has
+> no member named 'msa_mem_size'
+>   max_mapped_addr = qmi->msa_pa + qmi->msa_mem_size;
+>                                      ^~
+> drivers/net/wireless/ath/ath10k/qmi.c:163:41: error: 'struct ath10k_qmi' has
+> no member named 'msa_mem_size'
+>    if (resp.mem_region_info[i].size > qmi->msa_mem_size ||
+>                                          ^~
+> drivers/net/wireless/ath/ath10k/qmi.c:165:48: error: 'struct ath10k_qmi' has
+> no member named 'msa_pa'
+>        resp.mem_region_info[i].region_addr < qmi->msa_pa ||
+>                                                 ^~
+> make[5]: *** [drivers/net/wireless/ath/ath10k/qmi.o] Error 1
+> make[5]: *** Waiting for unfinished jobs....
+> In file included from ./include/linux/byteorder/little_endian.h:5,
+>                  from ./arch/x86/include/uapi/asm/byteorder.h:5,
+>                  from ./include/asm-generic/bitops/le.h:6,
+>                  from ./arch/x86/include/asm/bitops.h:395,
+>                  from ./include/linux/bitops.h:29,
+>                  from ./include/linux/kernel.h:12,
+>                  from ./include/linux/clk.h:13,
+>                  from drivers/net/wireless/ath/ath10k/snoc.c:6:
+> drivers/net/wireless/ath/ath10k/snoc.c: In function
+> 'ath10k_msa_dump_memory':
+> drivers/net/wireless/ath/ath10k/snoc.c:1424:54: error: 'struct ath10k_qmi'
+> has no member named 'msa_va'
+>   hdr->start = cpu_to_le32((unsigned long)ar_snoc->qmi->msa_va);
+>                                                       ^~
+> ./include/uapi/linux/byteorder/little_endian.h:33:51: note: in definition of
+> macro '__cpu_to_le32'
+>  #define __cpu_to_le32(x) ((__force __le32)(__u32)(x))
+>                                                    ^
+> drivers/net/wireless/ath/ath10k/snoc.c:1424:15: note: in expansion of macro
+> 'cpu_to_le32'
+>   hdr->start = cpu_to_le32((unsigned long)ar_snoc->qmi->msa_va);
+>                ^~~~~~~~~~~
+> drivers/net/wireless/ath/ath10k/snoc.c:1425:40: error: 'struct ath10k_qmi'
+> has no member named 'msa_mem_size'
+>   hdr->length = cpu_to_le32(ar_snoc->qmi->msa_mem_size);
+>                                         ^~
+> ./include/uapi/linux/byteorder/little_endian.h:33:51: note: in definition of
+> macro '__cpu_to_le32'
+>  #define __cpu_to_le32(x) ((__force __le32)(__u32)(x))
+>                                                    ^
+> drivers/net/wireless/ath/ath10k/snoc.c:1425:16: note: in expansion of macro
+> 'cpu_to_le32'
+>   hdr->length = cpu_to_le32(ar_snoc->qmi->msa_mem_size);
+>                 ^~~~~~~~~~~
+> drivers/net/wireless/ath/ath10k/snoc.c:1427:40: error: 'struct ath10k_qmi'
+> has no member named 'msa_mem_size'
+>   if (current_region->len < ar_snoc->qmi->msa_mem_size) {
+>                                         ^~
+> drivers/net/wireless/ath/ath10k/snoc.c:1428:27: error: 'struct ath10k_qmi'
+> has no member named 'msa_va'
+>    memcpy(buf, ar_snoc->qmi->msa_va, current_region->len);
+>                            ^~
+> drivers/net/wireless/ath/ath10k/snoc.c:1430:41: error: 'struct ath10k_qmi'
+> has no member named 'msa_mem_size'
+>         current_region->len, ar_snoc->qmi->msa_mem_size);
+>                                          ^~
+> drivers/net/wireless/ath/ath10k/snoc.c:1432:27: error: 'struct ath10k_qmi'
+> has no member named 'msa_va'
+>    memcpy(buf, ar_snoc->qmi->msa_va, ar_snoc->qmi->msa_mem_size);
+>                            ^~
+> drivers/net/wireless/ath/ath10k/snoc.c:1432:49: error: 'struct ath10k_qmi'
+> has no member named 'msa_mem_size'
+>    memcpy(buf, ar_snoc->qmi->msa_va, ar_snoc->qmi->msa_mem_size);
+>                                                  ^~
+> drivers/net/wireless/ath/ath10k/snoc.c: In function 'ath10k_fw_deinit':
+> drivers/net/wireless/ath/ath10k/snoc.c:1593:14: error: assignment of read-
+> only variable 'mapped_size'
+>   mapped_size = ar_snoc->fw.mapped_mem_size;
+>               ^
+> drivers/net/wireless/ath/ath10k/snoc.c:1599:46: warning: format '%d'
+> expects argument of type 'int', but argument 3 has type 'size_t' {aka 'long
+> unsigned int'} [-Wformat=]
+>    ath10k_err(ar, "failed to unmap firmware: %d\n",
+>                                              ~^
+>                                              %ld
+>        unmapped_size);
+>        ~~~~~~~~~~~~~
+> make[5]: *** [drivers/net/wireless/ath/ath10k/snoc.o] Error 1
+> make[4]: *** [drivers/net/wireless/ath/ath10k] Error 2
+> make[3]: *** [drivers/net/wireless/ath] Error 2
+> make[2]: *** [drivers/net/wireless] Error 2
+> make[1]: *** [drivers/net] Error 2
+> make: *** [drivers] Error 2
+> 
+> 3 patches set to Changes Requested.
+> 
+> 11455345 [1/3] dt-bindings: ath10k: Add wifi-firmware subnode for wifi node
+> 11455351 [2/3] ath10k: Setup the msa resources before qmi init
+> 11455353 [3/3] ath10k: Add support for targets without trustzone
+> 
+> --
+> https://patchwork.kernel.org/patch/11455345/
+> 
+> https://wireless.wiki.kernel.org/en/developers/documentation/submittingp
+> atches
 
-arm64                            allyesconfig
-arm                              allyesconfig
-arm64                             allnoconfig
-arm                               allnoconfig
-arm                         at91_dt_defconfig
-arm                           efm32_defconfig
-arm                          exynos_defconfig
-arm                        multi_v5_defconfig
-arm                        multi_v7_defconfig
-arm                        shmobile_defconfig
-arm                           sunxi_defconfig
-arm64                               defconfig
-sparc                            allyesconfig
-parisc                generic-64bit_defconfig
-powerpc                       ppc64_defconfig
-s390                             alldefconfig
-sparc                               defconfig
-nds32                               defconfig
-i386                                defconfig
-m68k                       m5475evb_defconfig
-alpha                               defconfig
-i386                             allyesconfig
-i386                             alldefconfig
-i386                              allnoconfig
-ia64                             alldefconfig
-ia64                             allmodconfig
-ia64                              allnoconfig
-ia64                             allyesconfig
-ia64                                defconfig
-arm64                            allmodconfig
-arm                              allmodconfig
-nios2                         3c120_defconfig
-nios2                         10m50_defconfig
-c6x                        evmc6678_defconfig
-xtensa                          iss_defconfig
-c6x                              allyesconfig
-xtensa                       common_defconfig
-openrisc                 simple_smp_defconfig
-openrisc                    or1ksim_defconfig
-nds32                             allnoconfig
-csky                                defconfig
-h8300                       h8s-sim_defconfig
-h8300                     edosk2674_defconfig
-m68k                             allmodconfig
-h8300                    h8300h-sim_defconfig
-m68k                           sun3_defconfig
-m68k                          multi_defconfig
-arc                                 defconfig
-arc                              allyesconfig
-powerpc                          rhel-kconfig
-microblaze                      mmu_defconfig
-microblaze                    nommu_defconfig
-powerpc                           allnoconfig
-mips                           32r2_defconfig
-mips                         64r6el_defconfig
-mips                             allmodconfig
-mips                              allnoconfig
-mips                             allyesconfig
-mips                      fuloong2e_defconfig
-mips                      malta_kvm_defconfig
-parisc                            allnoconfig
-parisc                           allyesconfig
-parisc                generic-32bit_defconfig
-i386                 randconfig-a002-20200324
-x86_64               randconfig-a002-20200324
-i386                 randconfig-a001-20200324
-x86_64               randconfig-a001-20200324
-i386                 randconfig-a003-20200324
-x86_64               randconfig-a003-20200324
-mips                 randconfig-a001-20200324
-nds32                randconfig-a001-20200324
-m68k                 randconfig-a001-20200324
-parisc               randconfig-a001-20200324
-alpha                randconfig-a001-20200324
-riscv                randconfig-a001-20200324
-c6x                  randconfig-a001-20200324
-h8300                randconfig-a001-20200324
-microblaze           randconfig-a001-20200324
-nios2                randconfig-a001-20200324
-sparc64              randconfig-a001-20200324
-csky                 randconfig-a001-20200324
-openrisc             randconfig-a001-20200324
-s390                 randconfig-a001-20200324
-xtensa               randconfig-a001-20200324
-x86_64               randconfig-b001-20200324
-x86_64               randconfig-b002-20200324
-x86_64               randconfig-b003-20200324
-i386                 randconfig-b001-20200324
-i386                 randconfig-b002-20200324
-i386                 randconfig-b003-20200324
-x86_64               randconfig-c001-20200324
-x86_64               randconfig-c002-20200324
-x86_64               randconfig-c003-20200324
-i386                 randconfig-c001-20200324
-i386                 randconfig-c002-20200324
-i386                 randconfig-c003-20200324
-x86_64               randconfig-d001-20200324
-x86_64               randconfig-d002-20200324
-x86_64               randconfig-d003-20200324
-i386                 randconfig-d001-20200324
-i386                 randconfig-d002-20200324
-i386                 randconfig-d003-20200324
-x86_64               randconfig-e001-20200324
-i386                 randconfig-e002-20200324
-i386                 randconfig-e003-20200324
-x86_64               randconfig-e002-20200324
-i386                 randconfig-e001-20200324
-x86_64               randconfig-f001-20200324
-x86_64               randconfig-f002-20200324
-x86_64               randconfig-f003-20200324
-i386                 randconfig-f001-20200324
-i386                 randconfig-f002-20200324
-i386                 randconfig-f003-20200324
-i386                 randconfig-f001-20200325
-i386                 randconfig-f003-20200325
-i386                 randconfig-f002-20200325
-x86_64               randconfig-f002-20200325
-x86_64               randconfig-f003-20200325
-x86_64               randconfig-f001-20200325
-i386                 randconfig-g003-20200324
-x86_64               randconfig-g002-20200324
-i386                 randconfig-g001-20200324
-i386                 randconfig-g002-20200324
-x86_64               randconfig-g001-20200324
-x86_64               randconfig-g003-20200324
-x86_64               randconfig-h001-20200324
-x86_64               randconfig-h002-20200324
-x86_64               randconfig-h003-20200324
-i386                 randconfig-h001-20200324
-i386                 randconfig-h002-20200324
-i386                 randconfig-h003-20200324
-arm                  randconfig-a001-20200324
-arm64                randconfig-a001-20200324
-ia64                 randconfig-a001-20200324
-arc                  randconfig-a001-20200324
-sparc                randconfig-a001-20200324
-riscv                            allyesconfig
-riscv                    nommu_virt_defconfig
-riscv                             allnoconfig
-riscv                               defconfig
-riscv                          rv32_defconfig
-riscv                            allmodconfig
-s390                             allmodconfig
-s390                              allnoconfig
-s390                             allyesconfig
-s390                          debug_defconfig
-s390                                defconfig
-s390                       zfcpdump_defconfig
-sh                               allmodconfig
-sh                                allnoconfig
-sh                          rsk7269_defconfig
-sh                  sh7785lcr_32bit_defconfig
-sh                            titan_defconfig
-sparc64                             defconfig
-sparc64                           allnoconfig
-sparc64                          allyesconfig
-sparc64                          allmodconfig
-um                           x86_64_defconfig
-um                             i386_defconfig
-um                                  defconfig
-x86_64                              fedora-25
-x86_64                                  kexec
-x86_64                                    lkp
-x86_64                                   rhel
-x86_64                         rhel-7.2-clear
-x86_64                               rhel-7.6
-
----
-0-DAY CI Kernel Test Service, Intel Corporation
-https://lists.01.org/hyperkitty/list/kbuild-all@lists.01.org
 
 _______________________________________________
 ath10k mailing list
