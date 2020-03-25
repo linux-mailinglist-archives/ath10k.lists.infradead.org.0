@@ -2,71 +2,69 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 81AD919267E
-	for <lists+ath10k@lfdr.de>; Wed, 25 Mar 2020 12:02:09 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 780B6192BA0
+	for <lists+ath10k@lfdr.de>; Wed, 25 Mar 2020 15:58:34 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:References:
-	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
-	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
-	:Resent-Message-ID:List-Owner;
-	bh=q3WVHLx+2nDJaw3zn7wvErF7H5IX8TY1XgXgE3gKL88=; b=dhPcrkBIJxUmw+ALngOz4bHpe2
-	PTmVXag0IKonGQ4vbcpdNsnxt/RZdwO80+O4q6foeIJxJCAi7KpbOKkmxLikLpZr2NzPDQJXd0bIa
-	icmeQH4BqeawuFFrGDh9vnQ89YmDfPYgGaIc4lCmW83KYlCJThE2VfGuheeUCna73SVJozNvi0sBp
-	xthAhbQwyatKAe0pNv6j5bdL0OZeLmJ1xYMJ2+oUzF01hKyYDBb5wCulVbQ2EofOVmvXpX0EEa5tM
-	yjqqPkg4ZsZVxs1hEbueFWgs6HK07YMlbtTcwmtVuh1RuXOXdWlQuzEwyV0woKYlDmY3HnK9v4Aln
-	eaGljQuA==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=MJ1dijo+eW+Vmw8r4HjULwrfuWRN8IPjCJqBoXZvsLc=; b=r0/hEuAF6YcF5Q
+	FJb9UM5FMunvu1vFRqA2g8BkCU4u4XGxomd5jmlRtApVqcd3AORbVaujXdbBzOwLezxA5P2lrCgD7
+	5PvS6ysY2+RK9UGGDW/DHNcDmQyhsfGqKo4lm2AyE8E1yxJ0qAcr/VVBXeVUwnJV/HaNvKeTg9ZWk
+	pD4TDUFD27G0OCcqwmoIJGT8myd4dQV182yP3VbwY2FRoY/G63c5EiMwHZnOA0u5wuKwYoiXakEE6
+	VnJqx/MCSZmx4hrxUG7h1p4bYd/b2mgx/lJKzgQ+KuBjSCc4Jjl1hdojCPyhhouIWSynDpnDANOni
+	zKKITJ6/gOj/O7A69czA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jH3nT-0000m6-J7; Wed, 25 Mar 2020 11:02:07 +0000
+	id 1jH7UD-0007uE-2J; Wed, 25 Mar 2020 14:58:29 +0000
 Received: from mail27.static.mailgun.info ([104.130.122.27])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jH3nN-0000lF-1T
- for ath10k@lists.infradead.org; Wed, 25 Mar 2020 11:02:04 +0000
+ id 1jH7U2-0007tS-J7
+ for ath10k@lists.infradead.org; Wed, 25 Mar 2020 14:58:26 +0000
 DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
  q=dns/txt; 
- s=smtp; t=1585134123; h=References: In-Reply-To: Message-Id: Date:
- Subject: Cc: To: From: Sender;
- bh=YT77Y3PiLLkhZFIv48nITvZQYlTFm9I4Mzg/D8qc6B0=;
- b=G0kZUGRwX+j/KplOfUwvddAa25YioR0OFglENbg8htUjit7Ka+uK77hUCHujKH3XD4xw/3i2
- IIy/bqBiiQPLVN5BNSm81va+whaA6M7IRDhF8iM9t10kObTnmWrLtQU0tH6AEwRDxvaKko8Q
- v8MAUikTrp90VCBGOdExdhrto88=
+ s=smtp; t=1585148300; h=Content-Transfer-Encoding: Content-Type:
+ MIME-Version: Message-Id: Date: Subject: Cc: To: From: Sender;
+ bh=YPm5zFe6TztoMrTqRaug9PANDnGVa9P+qtPJaS5gfmk=;
+ b=KV8nuvjTU9tfntgAcQ37yYBLomjCc8dYdi/Sv5zg68sFpq3OJHjqkWS9+Wo9ARf7UfSJLomC
+ mwTLK7TQBz/tceLj+rvOCQb73AafMk2PvPpHwSGfBWV2Rdohkk8jOQY2a9TyXF2avKC+3BU5
+ AoOPQBZE/CYHQzjRXic8X0dyi5w=
 X-Mailgun-Sending-Ip: 104.130.122.27
 X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
 Received: from smtp.codeaurora.org
  (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
- by mxa.mailgun.org with ESMTP id 5e7b3a27.7fdb17ea5ed8-smtp-out-n04;
- Wed, 25 Mar 2020 11:01:59 -0000 (UTC)
+ by mxa.mailgun.org with ESMTP id 5e7b7184.7fed62d7c260-smtp-out-n04;
+ Wed, 25 Mar 2020 14:58:12 -0000 (UTC)
 Received: by smtp.codeaurora.org (Postfix, from userid 1001)
- id 3C347C43636; Wed, 25 Mar 2020 11:01:58 +0000 (UTC)
+ id 7D06EC433BA; Wed, 25 Mar 2020 14:58:11 +0000 (UTC)
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  aws-us-west-2-caf-mail-1.web.codeaurora.org
 X-Spam-Level: 
 X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,SPF_NONE
  autolearn=unavailable autolearn_force=no version=3.4.0
-Received: from pillair-linux.qualcomm.com
+Received: from c-gseset-linux.qualcomm.com
  (blr-c-bdr-fw-01_GlobalNAT_AllZones-Outside.qualcomm.com [103.229.19.19])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
- (No client certificate requested) (Authenticated sender: pillair)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 19536C433D2;
- Wed, 25 Mar 2020 11:01:54 +0000 (UTC)
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 19536C433D2
+ (No client certificate requested) (Authenticated sender: ssreeela)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 5519DC433D2;
+ Wed, 25 Mar 2020 14:58:08 +0000 (UTC)
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 5519DC433D2
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
- spf=none smtp.mailfrom=pillair@codeaurora.org
-From: Rakesh Pillai <pillair@codeaurora.org>
+ spf=none smtp.mailfrom=ssreeela@codeaurora.org
+From: Sowmiya Sree Elavalagan <ssreeela@codeaurora.org>
 To: ath10k@lists.infradead.org
-Subject: [PATCH v2 3/3] ath10k: Add support for targets without trustzone
-Date: Wed, 25 Mar 2020 16:31:40 +0530
-Message-Id: <1585134100-5944-4-git-send-email-pillair@codeaurora.org>
-X-Mailer: git-send-email 2.7.4
-In-Reply-To: <1585134100-5944-1-git-send-email-pillair@codeaurora.org>
-References: <1585134100-5944-1-git-send-email-pillair@codeaurora.org>
+Subject: [PATCH] ath10k: enable VHT160 and VHT80+80 modes
+Date: Wed, 25 Mar 2020 20:26:09 +0530
+Message-Id: <1585148169-2320-1-git-send-email-ssreeela@codeaurora.org>
+X-Mailer: git-send-email 1.9.1
+MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200325_040203_461477_AF69F65F 
-X-CRM114-Status: GOOD (  16.38  )
+X-CRM114-CacheID: sfid-20200325_075824_373632_FA6A9F25 
+X-CRM114-Status: GOOD (  18.48  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -90,208 +88,156 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Rakesh Pillai <pillair@codeaurora.org>, devicetree@vger.kernel.org,
- linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org
-MIME-Version: 1.0
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: Lei Wang <leiwa@codeaurora.org>,
+ Sowmiya Sree Elavalagan <ssreeela@codeaurora.org>,
+ Rick Wu <rwu@codeaurora.org>, linux-wireless@vger.kernel.org,
+ Sebastian Gottschall <s.gottschall@dd-wrt.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Add the support to attach and map iommu
-domain for targets which do not have the
-support of TrustZone.
-
-Tested HW: WCN3990
-Tested FW: WLAN.HL.3.1-01040-QCAHLSWMTPLZ-1
-
-Signed-off-by: Rakesh Pillai <pillair@codeaurora.org>
----
- drivers/net/wireless/ath/ath10k/snoc.c | 118 ++++++++++++++++++++++++++++++++-
- drivers/net/wireless/ath/ath10k/snoc.h |   7 ++
- 2 files changed, 124 insertions(+), 1 deletion(-)
-
-diff --git a/drivers/net/wireless/ath/ath10k/snoc.c b/drivers/net/wireless/ath/ath10k/snoc.c
-index 3633ea5..7a7e79b 100644
---- a/drivers/net/wireless/ath/ath10k/snoc.c
-+++ b/drivers/net/wireless/ath/ath10k/snoc.c
-@@ -12,6 +12,7 @@
- #include <linux/property.h>
- #include <linux/regulator/consumer.h>
- #include <linux/of_address.h>
-+#include <linux/iommu.h>
- 
- #include "ce.h"
- #include "coredump.h"
-@@ -1499,6 +1500,111 @@ static int ath10k_setup_msa_resources(struct ath10k *ar, u32 msa_size)
- 	return 0;
- }
- 
-+static int ath10k_fw_init(struct ath10k *ar)
-+{
-+	struct ath10k_snoc *ar_snoc = ath10k_snoc_priv(ar);
-+	struct device *host_dev = &ar_snoc->dev->dev;
-+	struct platform_device_info info;
-+	struct iommu_domain *iommu_dom;
-+	struct platform_device *pdev;
-+	struct device_node *node;
-+	int ret;
-+
-+	node = of_get_child_by_name(host_dev->of_node, "wifi-firmware");
-+	if (!node) {
-+		ar_snoc->use_tz = true;
-+		return 0;
-+	}
-+
-+	memset(&info, 0, sizeof(info));
-+	info.fwnode = &node->fwnode;
-+	info.parent = host_dev;
-+	info.name = node->name;
-+	info.dma_mask = DMA_BIT_MASK(32);
-+
-+	pdev = platform_device_register_full(&info);
-+	if (IS_ERR(pdev)) {
-+		of_node_put(node);
-+		return PTR_ERR(pdev);
-+	}
-+
-+	pdev->dev.of_node = node;
-+
-+	ret = of_dma_configure(&pdev->dev, node, true);
-+	if (ret) {
-+		ath10k_err(ar, "dma configure fail: %d\n", ret);
-+		goto err_unregister;
-+	}
-+
-+	ar_snoc->fw.dev = &pdev->dev;
-+
-+	iommu_dom = iommu_domain_alloc(&platform_bus_type);
-+	if (!iommu_dom) {
-+		ath10k_err(ar, "failed to allocate iommu domain\n");
-+		ret = -ENOMEM;
-+		goto err_unregister;
-+	}
-+
-+	ret = iommu_attach_device(iommu_dom, ar_snoc->fw.dev);
-+	if (ret) {
-+		ath10k_err(ar, "could not attach device: %d\n", ret);
-+		goto err_iommu_free;
-+	}
-+
-+	ar_snoc->fw.iommu_domain = iommu_dom;
-+	ar_snoc->fw.fw_start_addr = ar->msa.paddr;
-+
-+	ret = iommu_map(iommu_dom, ar_snoc->fw.fw_start_addr,
-+			ar->msa.paddr, ar->msa.mem_size,
-+			IOMMU_READ | IOMMU_WRITE);
-+	if (ret) {
-+		ath10k_err(ar, "failed to map firmware region: %d\n", ret);
-+		goto err_iommu_detach;
-+	}
-+
-+	of_node_put(node);
-+
-+	return 0;
-+
-+err_iommu_detach:
-+	iommu_detach_device(iommu_dom, ar_snoc->fw.dev);
-+
-+err_iommu_free:
-+	iommu_domain_free(iommu_dom);
-+
-+err_unregister:
-+	platform_device_unregister(pdev);
-+	of_node_put(node);
-+
-+	return ret;
-+}
-+
-+static int ath10k_fw_deinit(struct ath10k *ar)
-+{
-+	struct ath10k_snoc *ar_snoc = ath10k_snoc_priv(ar);
-+	const size_t mapped_size = ar_snoc->fw.mapped_mem_size;
-+	struct iommu_domain *iommu;
-+	size_t unmapped_size;
-+
-+	if (ar_snoc->use_tz)
-+		return 0;
-+
-+	iommu = ar_snoc->fw.iommu_domain;
-+
-+	unmapped_size = iommu_unmap(iommu, ar_snoc->fw.fw_start_addr,
-+				    mapped_size);
-+	if (unmapped_size != mapped_size)
-+		ath10k_err(ar, "failed to unmap firmware: %zu\n",
-+			   unmapped_size);
-+
-+	iommu_detach_device(iommu, ar_snoc->fw.dev);
-+	iommu_domain_free(iommu);
-+
-+	platform_device_unregister(to_platform_device(ar_snoc->fw.dev));
-+
-+	return 0;
-+}
-+
- static const struct of_device_id ath10k_snoc_dt_match[] = {
- 	{ .compatible = "qcom,wcn3990-wifi",
- 	 .data = &drv_priv,
-@@ -1607,16 +1713,25 @@ static int ath10k_snoc_probe(struct platform_device *pdev)
- 		goto err_power_off;
- 	}
- 
-+	ret = ath10k_fw_init(ar);
-+	if (ret) {
-+		ath10k_err(ar, "failed to initialize firmware: %d\n", ret);
-+		goto err_power_off;
-+	}
-+
- 	ret = ath10k_qmi_init(ar, msa_size);
- 	if (ret) {
- 		ath10k_warn(ar, "failed to register wlfw qmi client: %d\n", ret);
--		goto err_power_off;
-+		goto err_fw_deinit;
- 	}
- 
- 	ath10k_dbg(ar, ATH10K_DBG_SNOC, "snoc probe\n");
- 
- 	return 0;
- 
-+err_fw_deinit:
-+	ath10k_fw_deinit(ar);
-+
- err_power_off:
- 	ath10k_hw_power_off(ar);
- 
-@@ -1648,6 +1763,7 @@ static int ath10k_snoc_remove(struct platform_device *pdev)
- 
- 	ath10k_core_unregister(ar);
- 	ath10k_hw_power_off(ar);
-+	ath10k_fw_deinit(ar);
- 	ath10k_snoc_free_irq(ar);
- 	ath10k_snoc_release_resource(ar);
- 	ath10k_qmi_deinit(ar);
-diff --git a/drivers/net/wireless/ath/ath10k/snoc.h b/drivers/net/wireless/ath/ath10k/snoc.h
-index c05df45..18e19fb 100644
---- a/drivers/net/wireless/ath/ath10k/snoc.h
-+++ b/drivers/net/wireless/ath/ath10k/snoc.h
-@@ -55,6 +55,13 @@ struct regulator_bulk_data;
- struct ath10k_snoc {
- 	struct platform_device *dev;
- 	struct ath10k *ar;
-+	unsigned int use_tz;
-+	struct video_firmware {
-+		struct device *dev;
-+		dma_addr_t fw_start_addr;
-+		struct iommu_domain *iommu_domain;
-+		size_t mapped_mem_size;
-+	} fw;
- 	void __iomem *mem;
- 	dma_addr_t mem_pa;
- 	struct ath10k_snoc_target_info target_info;
--- 
-2.7.4
-
-_______________________________________________
-ath10k mailing list
-ath10k@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/ath10k
+RnJvbTogTGVpIFdhbmcgPGxlaXdhQGNvZGVhdXJvcmEub3JnPgoKU2V0IHJpZ2h0IGNoYW5uZWwg
+ZnJlcXVlbmNpZXMgaW4gVkhUMTYwIG1vZGUgYWNjb3JkaW5nIHRvIHRoZSBWSFQxNjAKaW50ZXJv
+cGVyYWJpbGl0eSB3b3JrYXJvdW5kIGFkZGVkIGFzIHBhcnQgb2YgSUVFRSBTdGQgODAyLjEx4oSi
+LTIwMTYgaW4KIlRhYmxlIDktMjUy4oCUVkhUIE9wZXJhdGlvbiBJbmZvcm1hdGlvbiBzdWJmaWVs
+ZHMiLCBiYW5kX2NlbnRlcl9mcmVxMgpjb3JyZXNwb25kcyB0byBDQ0ZTMSBpbiBUYWJsZSA5LTI1
+My4gUHJldmlvdXMgaW1wbGVtZW50YXRpb24KKGJhbmRfY2VudGVyX2ZyZXEyID0gMCBmb3IgVkhU
+MTYwKSBpcyBvbmx5IGRlcHJlY2F0ZWQuCgpFbmFibGUgVkhUODArODAgbW9kZSBhbmQgc2V0IHRo
+ZSBwcm9wZXIgcGVlciBSWCBuc3MgdmFsdWUgZm9yIFZIVDE2MCBhbmQKVkhUODArODAgbW9kZS4K
+CkJhc2VkIG9uIHBhdGNoZXMgYnkgU2ViYXN0aWFuIEdvdHRzY2hhbGw6CgpodHRwczovL2xrbWwu
+a2VybmVsLm9yZy9yLzIwMTgwNzA0MDk1NDQ0LjY2Mi0xLXMuZ290dHNjaGFsbEBkZC13cnQuY29t
+CgpodHRwczovL2xrbWwua2VybmVsLm9yZy9yLzIwMTgwNzA0MTIwNTE5LjY0NzktMS1zLmdvdHRz
+Y2hhbGxAZGQtd3J0LmNvbQoKVGVzdGVkOiBxY2E5OTg0IHdpdGggZmlybXdhcmUgdmVyIDEwLjQt
+My4xMC0wMDA0NwoKQ28tZGV2ZWxvcGVkLWJ5OiBTZWJhc3RpYW4gR290dHNjaGFsbCA8cy5nb3R0
+c2NoYWxsQGRkLXdydC5jb20+ClNpZ25lZC1vZmYtYnk6IFNlYmFzdGlhbiBHb3R0c2NoYWxsIDxz
+LmdvdHRzY2hhbGxAZGQtd3J0LmNvbT4KQ28tZGV2ZWxvcGVkLWJ5OiBSaWNrIFd1IDxyd3VAY29k
+ZWF1cm9yYS5vcmc+ClNpZ25lZC1vZmYtYnk6IFJpY2sgV3UgPHJ3dUBjb2RlYXVyb3JhLm9yZz4K
+U2lnbmVkLW9mZi1ieTogTGVpIFdhbmcgPGxlaXdhQGNvZGVhdXJvcmEub3JnPgpTaWduZWQtb2Zm
+LWJ5OiBTb3dtaXlhIFNyZWUgRWxhdmFsYWdhbiA8c3NyZWVlbGFAY29kZWF1cm9yYS5vcmc+Ci0t
+LQogZHJpdmVycy9uZXQvd2lyZWxlc3MvYXRoL2F0aDEway9tYWMuYyB8IDg0ICsrKysrKysrKysr
+KysrKysrKysrKysrKystLS0tLS0tLS0tCiBkcml2ZXJzL25ldC93aXJlbGVzcy9hdGgvYXRoMTBr
+L3dtaS5jIHwgMjMgKysrKysrLS0tLQogZHJpdmVycy9uZXQvd2lyZWxlc3MvYXRoL2F0aDEway93
+bWkuaCB8ICA1ICsrLQogMyBmaWxlcyBjaGFuZ2VkLCA4MCBpbnNlcnRpb25zKCspLCAzMiBkZWxl
+dGlvbnMoLSkKCmRpZmYgLS1naXQgYS9kcml2ZXJzL25ldC93aXJlbGVzcy9hdGgvYXRoMTBrL21h
+Yy5jIGIvZHJpdmVycy9uZXQvd2lyZWxlc3MvYXRoL2F0aDEway9tYWMuYwppbmRleCA4MWUxNDhl
+Li43YzJlMzk2IDEwMDY0NAotLS0gYS9kcml2ZXJzL25ldC93aXJlbGVzcy9hdGgvYXRoMTBrL21h
+Yy5jCisrKyBiL2RyaXZlcnMvbmV0L3dpcmVsZXNzL2F0aC9hdGgxMGsvbWFjLmMKQEAgLTI1MDUs
+NiArMjUwNSwzMCBAQCBzdGF0aWMgaW50IGF0aDEwa19wZWVyX2Fzc29jX3Fvc19hcChzdHJ1Y3Qg
+YXRoMTBrICphciwKIAlyZXR1cm4gdHhfbWNzX3NldDsKIH0KIAorc3RhdGljIHUzMiBnZXRfMTYw
+bWh6X25zc19mcm9tX21heHJhdGUoaW50IHJhdGUpCit7CisJdTMyIG5zczsKKworCXN3aXRjaCAo
+cmF0ZSkgeworCWNhc2UgNzgwOgorCQluc3MgPSAxOworCQlicmVhazsKKwljYXNlIDE1NjA6CisJ
+CW5zcyA9IDI7CisJCWJyZWFrOworCWNhc2UgMjEwNjoKKwkJbnNzID0gMzsgLyogbm90IHN1cHBv
+cnQgTUNTOSBmcm9tIHNwZWMqLworCQlicmVhazsKKwljYXNlIDMxMjA6CisJCW5zcyA9IDQ7CisJ
+CWJyZWFrOworCWRlZmF1bHQ6CisJCSBuc3MgPSAwOworCX0KKworCXJldHVybiBuc3M7Cit9CisK
+IHN0YXRpYyB2b2lkIGF0aDEwa19wZWVyX2Fzc29jX2hfdmh0KHN0cnVjdCBhdGgxMGsgKmFyLAog
+CQkJCSAgICBzdHJ1Y3QgaWVlZTgwMjExX3ZpZiAqdmlmLAogCQkJCSAgICBzdHJ1Y3QgaWVlZTgw
+MjExX3N0YSAqc3RhLApAQCAtMjUxMiw2ICsyNTM2LDcgQEAgc3RhdGljIHZvaWQgYXRoMTBrX3Bl
+ZXJfYXNzb2NfaF92aHQoc3RydWN0IGF0aDEwayAqYXIsCiB7CiAJY29uc3Qgc3RydWN0IGllZWU4
+MDIxMV9zdGFfdmh0X2NhcCAqdmh0X2NhcCA9ICZzdGEtPnZodF9jYXA7CiAJc3RydWN0IGF0aDEw
+a192aWYgKmFydmlmID0gKHZvaWQgKil2aWYtPmRydl9wcml2OworCXN0cnVjdCBhdGgxMGtfaHdf
+cGFyYW1zICpodyA9ICZhci0+aHdfcGFyYW1zOwogCXN0cnVjdCBjZmc4MDIxMV9jaGFuX2RlZiBk
+ZWY7CiAJZW51bSBubDgwMjExX2JhbmQgYmFuZDsKIAljb25zdCB1MTYgKnZodF9tY3NfbWFzazsK
+QEAgLTI1NzgsMjIgKzI2MDMsMzggQEAgc3RhdGljIHZvaWQgYXRoMTBrX3BlZXJfYXNzb2NfaF92
+aHQoc3RydWN0IGF0aDEwayAqYXIsCiAJYXJnLT5wZWVyX3ZodF9yYXRlcy50eF9tY3Nfc2V0ID0g
+YXRoMTBrX3BlZXJfYXNzb2NfaF92aHRfbGltaXQoCiAJCV9fbGUxNl90b19jcHUodmh0X2NhcC0+
+dmh0X21jcy50eF9tY3NfbWFwKSwgdmh0X21jc19tYXNrKTsKIAotCWF0aDEwa19kYmcoYXIsIEFU
+SDEwS19EQkdfTUFDLCAibWFjIHZodCBwZWVyICVwTSBtYXhfbXBkdSAlZCBmbGFncyAweCV4XG4i
+LAotCQkgICBzdGEtPmFkZHIsIGFyZy0+cGVlcl9tYXhfbXBkdSwgYXJnLT5wZWVyX2ZsYWdzKTsK
+KwkvKiBDb25maWd1cmUgYmFuZHdpZHRoLU5TUyBtYXBwaW5nIHRvIEZXCisJICogZm9yIHRoZSBj
+aGlwJ3MgdHggY2hhaW5zIHNldHRpbmcgb24gMTYwTWh6IGJ3CisJICovCisJaWYgKGFyZy0+cGVl
+cl9waHltb2RlID09IE1PREVfMTFBQ19WSFQxNjAgfHwKKwkgICAgYXJnLT5wZWVyX3BoeW1vZGUg
+PT0gTU9ERV8xMUFDX1ZIVDgwXzgwKSB7CisJCXUzMiByeF9uc3M7CisJCXUzMiBtYXhfcmF0ZTsK
+IAotCWlmIChhcmctPnBlZXJfdmh0X3JhdGVzLnJ4X21heF9yYXRlICYmCi0JICAgIChzdGEtPnZo
+dF9jYXAuY2FwICYgSUVFRTgwMjExX1ZIVF9DQVBfU1VQUF9DSEFOX1dJRFRIX01BU0spKSB7Ci0J
+CXN3aXRjaCAoYXJnLT5wZWVyX3ZodF9yYXRlcy5yeF9tYXhfcmF0ZSkgewotCQljYXNlIDE1NjA6
+Ci0JCQkvKiBNdXN0IGJlIDJ4MiBhdCAxNjBNaHogaXMgYWxsIGl0IGNhbiBkby4gKi8KLQkJCWFy
+Zy0+cGVlcl9id19yeG5zc19vdmVycmlkZSA9IDI7Ci0JCQlicmVhazsKLQkJY2FzZSA3ODA6Ci0J
+CQkvKiBDYW4gb25seSBkbyAxeDEgYXQgMTYwTWh6IChMb25nIEd1YXJkIEludGVydmFsKSAqLwot
+CQkJYXJnLT5wZWVyX2J3X3J4bnNzX292ZXJyaWRlID0gMTsKLQkJCWJyZWFrOworCQltYXhfcmF0
+ZSA9IGFyZy0+cGVlcl92aHRfcmF0ZXMucnhfbWF4X3JhdGU7CisJCXJ4X25zcyA9IGdldF8xNjBt
+aHpfbnNzX2Zyb21fbWF4cmF0ZShtYXhfcmF0ZSk7CisKKwkJaWYgKHJ4X25zcyA9PSAwKQorCQkJ
+cnhfbnNzID0gYXJnLT5wZWVyX251bV9zcGF0aWFsX3N0cmVhbXM7CisJCWVsc2UKKwkJCXJ4X25z
+cyA9IG1pbihhcmctPnBlZXJfbnVtX3NwYXRpYWxfc3RyZWFtcywgcnhfbnNzKTsKKworCQltYXhf
+cmF0ZSA9IGh3LT52aHQxNjBfbWNzX3R4X2hpZ2hlc3Q7CisJCXJ4X25zcyA9IG1pbihyeF9uc3Ms
+IGdldF8xNjBtaHpfbnNzX2Zyb21fbWF4cmF0ZShtYXhfcmF0ZSkpOworCisJCWFyZy0+cGVlcl9i
+d19yeG5zc19vdmVycmlkZSA9CisJCQlGSUVMRF9QUkVQKFdNSV9QRUVSX05TU19NQVBfRU5BQkxF
+LCAxKSB8CisJCQlGSUVMRF9QUkVQKFdNSV9QRUVSX05TU18xNjBNSFpfTUFTSywgKHJ4X25zcyAt
+IDEpKTsKKworCQlpZiAoYXJnLT5wZWVyX3BoeW1vZGUgPT0gTU9ERV8xMUFDX1ZIVDgwXzgwKSB7
+CisJCQlhcmctPnBlZXJfYndfcnhuc3Nfb3ZlcnJpZGUgfD0KKwkJCUZJRUxEX1BSRVAoV01JX1BF
+RVJfTlNTXzgwXzgwTUhaX01BU0ssIChyeF9uc3MgLSAxKSk7CiAJCX0KIAl9CisJYXRoMTBrX2Ri
+ZyhhciwgQVRIMTBLX0RCR19NQUMsCisJCSAgICJtYWMgdmh0IHBlZXIgJXBNIG1heF9tcGR1ICVk
+IGZsYWdzIDB4JXggcGVlcl9yeF9uc3Nfb3ZlcnJpZGUgMHgleFxuIiwKKwkJICAgc3RhLT5hZGRy
+LCBhcmctPnBlZXJfbWF4X21wZHUsCisJCSAgIGFyZy0+cGVlcl9mbGFncywgYXJnLT5wZWVyX2J3
+X3J4bnNzX292ZXJyaWRlKTsKIH0KIAogc3RhdGljIHZvaWQgYXRoMTBrX3BlZXJfYXNzb2NfaF9x
+b3Moc3RydWN0IGF0aDEwayAqYXIsCkBAIC0yNzQ1LDkgKzI3ODYsOSBAQCBzdGF0aWMgaW50IGF0
+aDEwa19wZWVyX2Fzc29jX3ByZXBhcmUoc3RydWN0IGF0aDEwayAqYXIsCiAJYXRoMTBrX3BlZXJf
+YXNzb2NfaF9jcnlwdG8oYXIsIHZpZiwgc3RhLCBhcmcpOwogCWF0aDEwa19wZWVyX2Fzc29jX2hf
+cmF0ZXMoYXIsIHZpZiwgc3RhLCBhcmcpOwogCWF0aDEwa19wZWVyX2Fzc29jX2hfaHQoYXIsIHZp
+Ziwgc3RhLCBhcmcpOworCWF0aDEwa19wZWVyX2Fzc29jX2hfcGh5bW9kZShhciwgdmlmLCBzdGEs
+IGFyZyk7CiAJYXRoMTBrX3BlZXJfYXNzb2NfaF92aHQoYXIsIHZpZiwgc3RhLCBhcmcpOwogCWF0
+aDEwa19wZWVyX2Fzc29jX2hfcW9zKGFyLCB2aWYsIHN0YSwgYXJnKTsKLQlhdGgxMGtfcGVlcl9h
+c3NvY19oX3BoeW1vZGUoYXIsIHZpZiwgc3RhLCBhcmcpOwogCiAJcmV0dXJuIDA7CiB9CkBAIC00
+NTYxLDEzICs0NjAyLDYgQEAgc3RhdGljIHN0cnVjdCBpZWVlODAyMTFfc3RhX3ZodF9jYXAgYXRo
+MTBrX2NyZWF0ZV92aHRfY2FwKHN0cnVjdCBhdGgxMGsgKmFyKQogCQl2aHRfY2FwLmNhcCB8PSB2
+YWw7CiAJfQogCi0JLyogQ3VycmVudGx5IHRoZSBmaXJtd2FyZSBzZWVtcyB0byBiZSBidWdneSwg
+ZG9uJ3QgZW5hYmxlIDgwKzgwCi0JICogbW9kZSB1bnRpbCB0aGF0J3MgcmVzb2x2ZWQuCi0JICov
+Ci0JaWYgKChhci0+dmh0X2NhcF9pbmZvICYgSUVFRTgwMjExX1ZIVF9DQVBfU0hPUlRfR0lfMTYw
+KSAmJgotCSAgICAoYXItPnZodF9jYXBfaW5mbyAmIElFRUU4MDIxMV9WSFRfQ0FQX1NVUFBfQ0hB
+Tl9XSURUSF9NQVNLKSA9PSAwKQotCQl2aHRfY2FwLmNhcCB8PSBJRUVFODAyMTFfVkhUX0NBUF9T
+VVBQX0NIQU5fV0lEVEhfMTYwTUhaOwotCiAJbWNzX21hcCA9IDA7CiAJZm9yIChpID0gMDsgaSA8
+IDg7IGkrKykgewogCQlpZiAoKGkgPCBhci0+bnVtX3JmX2NoYWlucykgJiYgKGFyLT5jZmdfdHhf
+Y2hhaW5tYXNrICYgQklUKGkpKSkKQEAgLTg2MjMsNyArODY1Nyw5IEBAIHZvaWQgYXRoMTBrX21h
+Y19kZXN0cm95KHN0cnVjdCBhdGgxMGsgKmFyKQogCQkucmFkYXJfZGV0ZWN0X3dpZHRocyA9CUJJ
+VChOTDgwMjExX0NIQU5fV0lEVEhfMjBfTk9IVCkgfAogCQkJCQlCSVQoTkw4MDIxMV9DSEFOX1dJ
+RFRIXzIwKSB8CiAJCQkJCUJJVChOTDgwMjExX0NIQU5fV0lEVEhfNDApIHwKLQkJCQkJQklUKE5M
+ODAyMTFfQ0hBTl9XSURUSF84MCksCisJCQkJCUJJVChOTDgwMjExX0NIQU5fV0lEVEhfODApIHwK
+KwkJCQkJQklUKE5MODAyMTFfQ0hBTl9XSURUSF84MFA4MCkgfAorCQkJCQlCSVQoTkw4MDIxMV9D
+SEFOX1dJRFRIXzE2MCksCiAjZW5kaWYKIAl9LAogfTsKQEAgLTg2NDEsNyArODY3Nyw5IEBAIHZv
+aWQgYXRoMTBrX21hY19kZXN0cm95KHN0cnVjdCBhdGgxMGsgKmFyKQogCQkucmFkYXJfZGV0ZWN0
+X3dpZHRocyA9ICBCSVQoTkw4MDIxMV9DSEFOX1dJRFRIXzIwX05PSFQpIHwKIAkJCQkJQklUKE5M
+ODAyMTFfQ0hBTl9XSURUSF8yMCkgfAogCQkJCQlCSVQoTkw4MDIxMV9DSEFOX1dJRFRIXzQwKSB8
+Ci0JCQkJCUJJVChOTDgwMjExX0NIQU5fV0lEVEhfODApLAorCQkJCQlCSVQoTkw4MDIxMV9DSEFO
+X1dJRFRIXzgwKSB8CisJCQkJCUJJVChOTDgwMjExX0NIQU5fV0lEVEhfODBQODApIHwKKwkJCQkJ
+QklUKE5MODAyMTFfQ0hBTl9XSURUSF8xNjApLAogI2VuZGlmCiAJfSwKIH07CmRpZmYgLS1naXQg
+YS9kcml2ZXJzL25ldC93aXJlbGVzcy9hdGgvYXRoMTBrL3dtaS5jIGIvZHJpdmVycy9uZXQvd2ly
+ZWxlc3MvYXRoL2F0aDEway93bWkuYwppbmRleCAyZWE3N2JiLi5kYjZmNGM3IDEwMDY0NAotLS0g
+YS9kcml2ZXJzL25ldC93aXJlbGVzcy9hdGgvYXRoMTBrL3dtaS5jCisrKyBiL2RyaXZlcnMvbmV0
+L3dpcmVsZXNzL2F0aC9hdGgxMGsvd21pLmMKQEAgLTE3MTQsMTIgKzE3MTQsMjMgQEAgdm9pZCBh
+dGgxMGtfd21pX3B1dF93bWlfY2hhbm5lbChzdHJ1Y3Qgd21pX2NoYW5uZWwgKmNoLAogCWlmIChh
+cmctPmNoYW5fcmFkYXIpCiAJCWZsYWdzIHw9IFdNSV9DSEFOX0ZMQUdfREZTOwogCisJY2gtPmJh
+bmRfY2VudGVyX2ZyZXEyID0gMDsKIAljaC0+bWh6ID0gX19jcHVfdG9fbGUzMihhcmctPmZyZXEp
+OwogCWNoLT5iYW5kX2NlbnRlcl9mcmVxMSA9IF9fY3B1X3RvX2xlMzIoYXJnLT5iYW5kX2NlbnRl
+cl9mcmVxMSk7CiAJaWYgKGFyZy0+bW9kZSA9PSBNT0RFXzExQUNfVkhUODBfODApCiAJCWNoLT5i
+YW5kX2NlbnRlcl9mcmVxMiA9IF9fY3B1X3RvX2xlMzIoYXJnLT5iYW5kX2NlbnRlcl9mcmVxMik7
+Ci0JZWxzZQotCQljaC0+YmFuZF9jZW50ZXJfZnJlcTIgPSAwOworCisJaWYgKGFyZy0+bW9kZSA9
+PSBNT0RFXzExQUNfVkhUMTYwKSB7CisJCWlmIChhcmctPmZyZXEgPiBhcmctPmJhbmRfY2VudGVy
+X2ZyZXExKQorCQkJY2gtPmJhbmRfY2VudGVyX2ZyZXExID0KKwkJCQlfX2NwdV90b19sZTMyKGFy
+Zy0+YmFuZF9jZW50ZXJfZnJlcTEgKyA0MCk7CisJCWVsc2UKKwkJCWNoLT5iYW5kX2NlbnRlcl9m
+cmVxMSA9CisJCQkJX19jcHVfdG9fbGUzMihhcmctPmJhbmRfY2VudGVyX2ZyZXExIC0gNDApOwor
+CisJCWNoLT5iYW5kX2NlbnRlcl9mcmVxMiA9IF9fY3B1X3RvX2xlMzIoYXJnLT5iYW5kX2NlbnRl
+cl9mcmVxMSk7CisJfQorCiAJY2gtPm1pbl9wb3dlciA9IGFyZy0+bWluX3Bvd2VyOwogCWNoLT5t
+YXhfcG93ZXIgPSBhcmctPm1heF9wb3dlcjsKIAljaC0+cmVnX3Bvd2VyID0gYXJnLT5tYXhfcmVn
+X3Bvd2VyOwpAQCAtNzYyOCwxMiArNzYzOSw4IEBAIHZvaWQgYXRoMTBrX3dtaV9zdGFydF9zY2Fu
+X2luaXQoc3RydWN0IGF0aDEwayAqYXIsCiAJc3RydWN0IHdtaV8xMF80X3BlZXJfYXNzb2NfY29t
+cGxldGVfY21kICpjbWQgPSBidWY7CiAKIAlhdGgxMGtfd21pX3BlZXJfYXNzb2NfZmlsbF8xMF8y
+KGFyLCBidWYsIGFyZyk7Ci0JaWYgKGFyZy0+cGVlcl9id19yeG5zc19vdmVycmlkZSkKLQkJY21k
+LT5wZWVyX2J3X3J4bnNzX292ZXJyaWRlID0KLQkJCV9fY3B1X3RvX2xlMzIoKGFyZy0+cGVlcl9i
+d19yeG5zc19vdmVycmlkZSAtIDEpIHwKLQkJCQkgICAgICBCSVQoUEVFUl9CV19SWE5TU19PVkVS
+UklERV9PRkZTRVQpKTsKLQllbHNlCi0JCWNtZC0+cGVlcl9id19yeG5zc19vdmVycmlkZSA9IDA7
+CisJY21kLT5wZWVyX2J3X3J4bnNzX292ZXJyaWRlID0KKwkJX19jcHVfdG9fbGUzMihhcmctPnBl
+ZXJfYndfcnhuc3Nfb3ZlcnJpZGUpOwogfQogCiBzdGF0aWMgaW50CmRpZmYgLS1naXQgYS9kcml2
+ZXJzL25ldC93aXJlbGVzcy9hdGgvYXRoMTBrL3dtaS5oIGIvZHJpdmVycy9uZXQvd2lyZWxlc3Mv
+YXRoL2F0aDEway93bWkuaAppbmRleCA5NzJkNTNkLi5mNzIyZWVmMyAxMDA2NDQKLS0tIGEvZHJp
+dmVycy9uZXQvd2lyZWxlc3MvYXRoL2F0aDEway93bWkuaAorKysgYi9kcml2ZXJzL25ldC93aXJl
+bGVzcy9hdGgvYXRoMTBrL3dtaS5oCkBAIC02NTAxLDcgKzY1MDEsMTAgQEAgc3RydWN0IHdtaV8x
+MF8yX3BlZXJfYXNzb2NfY29tcGxldGVfY21kIHsKIAlfX2xlMzIgaW5mbzA7IC8qIFdNSV9QRUVS
+X0FTU09DX0lORk8wXyAqLwogfSBfX3BhY2tlZDsKIAotI2RlZmluZSBQRUVSX0JXX1JYTlNTX09W
+RVJSSURFX09GRlNFVCAgMzEKKy8qIE5TUyBNYXBwaW5nIHRvIEZXICovCisjZGVmaW5lIFdNSV9Q
+RUVSX05TU19NQVBfRU5BQkxFCUJJVCgzMSkKKyNkZWZpbmUgV01JX1BFRVJfTlNTXzE2ME1IWl9N
+QVNLCUdFTk1BU0soMiwgMCkKKyNkZWZpbmUgV01JX1BFRVJfTlNTXzgwXzgwTUhaX01BU0sJR0VO
+TUFTSyg1LCAzKQogCiBzdHJ1Y3Qgd21pXzEwXzRfcGVlcl9hc3NvY19jb21wbGV0ZV9jbWQgewog
+CXN0cnVjdCB3bWlfMTBfMl9wZWVyX2Fzc29jX2NvbXBsZXRlX2NtZCBjbWQ7Ci0tIAoxLjkuMQoK
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18KYXRoMTBrIG1h
+aWxpbmcgbGlzdAphdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZwpodHRwOi8vbGlzdHMuaW5mcmFk
+ZWFkLm9yZy9tYWlsbWFuL2xpc3RpbmZvL2F0aDEwawo=
