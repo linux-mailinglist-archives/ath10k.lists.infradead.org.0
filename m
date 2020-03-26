@@ -2,79 +2,68 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6FDC61941DF
-	for <lists+ath10k@lfdr.de>; Thu, 26 Mar 2020 15:47:53 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 674891946B8
+	for <lists+ath10k@lfdr.de>; Thu, 26 Mar 2020 19:44:06 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:Message-ID:References:In-Reply-To:Subject:To:From:
-	Date:MIME-Version:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=WEUsxCZY1Px7PrvBfjNP2EEHtc31+rW+tgcBYDL0Bpw=; b=Rjk3FMUaLaqs5bfKyPA2Eq4v1
-	aFiTsD5KUNnJIWe73AmiuoFi0E7NOfDYbDezAon6KRxn1cJWq85YvxA3cymZfC/NSh5a/wUE/r0kQ
-	VDSEJHuUQNuIsN4xRhQ7nvLGjilD/sPDGxz+61LZYewVaVzpliNkAOUGB4paJx7aRU9KvpezI3/J5
-	kpQeznQo4ia18pE6nFftzN4zRP3tM5yUfTwzp0YCjokK0zRbOIj4GgPUkQ+3NxdsPQ1sEpCAkAR2K
-	DlJPyDnr150g0aSFY4Xz2/izxha2d7G3E4ZLfXh+94RI6h/yuHr/Lfl5tYHeusbqOEvsCDk/Hiyef
-	ylBGaoyNw==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Subject:To:From
+	:Date:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=qTCazPliw4RkawOz1pEiULy12MEzcWq0OVKVck8LWpE=; b=AjtX3Zx23uh/T3
+	hfcdxwhHOAj2cCg2ZQ71NUhVtGxl2t4Q8ax84FYj82mwyry3EnL4w6PppQ6WeVG3C/iOtP7Wqepm2
+	L1eZGL54y92FYnrAtpiC3tazzfOYHkMGTqzsbsci1kmReTDG2i+P4qJiuMgZCSOl4Hf2gh/wqG4IP
+	YM98LfqUAc1Jqp0D44MD06DVkC99KEvT990c0VIrrg4PQPUZzj3ENMQOnHzjEfI0yYs4Z2RHZ+QdE
+	qhlo+UGSZohhkzT9YP/8AqXqFt0DjUKcN0FpRslqMwXQW7ocp1m7xXThVZGH7bNNWuVH3JJw0wtYz
+	28Gzy00k2DpLOPjV0ZDQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jHTnT-0002ot-VT; Thu, 26 Mar 2020 14:47:51 +0000
-Received: from mail27.static.mailgun.info ([104.130.122.27])
+	id 1jHXU0-00058e-KO; Thu, 26 Mar 2020 18:44:00 +0000
+Received: from mga01.intel.com ([192.55.52.88])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jHTnM-0002cB-SG
- for ath10k@lists.infradead.org; Thu, 26 Mar 2020 14:47:50 +0000
-DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
- q=dns/txt; 
- s=smtp; t=1585234068; h=Message-ID: References: In-Reply-To: Subject:
- Cc: To: From: Date: Content-Transfer-Encoding: Content-Type:
- MIME-Version: Sender; bh=gJypkRBMTN5AeLQ5YUl1fTy/Tw2JI3Ibd/npijA4wvQ=;
- b=YAmRGtwQ9Vc5GKO16GSg4IDI9r8yxJT6aH2hMaDhwZLEaAl4ZNOxx0ij6ea1gZgbcJv6VJ2P
- 0DO8KOCfrhxg2q9z+ithdc+zIAWrlD8zta53oElNjUqM9AclQzOnMJ/MBTbNLT3f5Jm0WYo5
- zZAgqE1dPmCk7dH1JV97b9lB68g=
-X-Mailgun-Sending-Ip: 104.130.122.27
-X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
-Received: from smtp.codeaurora.org
- (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
- by mxa.mailgun.org with ESMTP id 5e7cc08d.7f8cbd32d3b0-smtp-out-n01;
- Thu, 26 Mar 2020 14:47:41 -0000 (UTC)
-Received: by smtp.codeaurora.org (Postfix, from userid 1001)
- id 4B2B3C433F2; Thu, 26 Mar 2020 14:47:40 +0000 (UTC)
-X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
- aws-us-west-2-caf-mail-1.web.codeaurora.org
-X-Spam-Level: 
-X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,URIBL_BLOCKED
- autolearn=ham autolearn_force=no version=3.4.0
-Received: from mail.codeaurora.org (localhost.localdomain [127.0.0.1])
- (using TLSv1 with cipher ECDHE-RSA-AES256-SHA (256/256 bits))
- (No client certificate requested) (Authenticated sender: mkenna)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id C40A6C433BA;
- Thu, 26 Mar 2020 14:47:39 +0000 (UTC)
+ id 1jHXTv-00056Y-6X
+ for ath10k@lists.infradead.org; Thu, 26 Mar 2020 18:43:56 +0000
+IronPort-SDR: uPAe2H30EGiujBr/rfPUBYYeN6M4SUsG7v1UhPI4Qux6FbinFMBAgdaUX+gSWCZi6qiWe/XG6G
+ NWwBOqu/h4bA==
+X-Amp-Result: SKIPPED(no attachment in message)
+X-Amp-File-Uploaded: False
+Received: from fmsmga007.fm.intel.com ([10.253.24.52])
+ by fmsmga101.fm.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
+ 26 Mar 2020 11:43:54 -0700
+IronPort-SDR: DARtu5x/iDEIdFJDj9pVd0LjPV1Si0a4Zi8xg6tAk1342oQ93Uga2xOTHDiytG3pORLpcmu9bt
+ 53YYYVjuxpzQ==
+X-ExtLoop1: 1
+X-IronPort-AV: E=Sophos;i="5.72,309,1580803200"; d="scan'208";a="238882860"
+Received: from lkp-server01.sh.intel.com (HELO lkp-server01) ([10.239.97.150])
+ by fmsmga007.fm.intel.com with ESMTP; 26 Mar 2020 11:43:53 -0700
+Received: from kbuild by lkp-server01 with local (Exim 4.89)
+ (envelope-from <lkp@intel.com>)
+ id 1jHXTs-000IDO-V2; Fri, 27 Mar 2020 02:43:52 +0800
+Date: Fri, 27 Mar 2020 02:43:21 +0800
+From: kbuild test robot <lkp@intel.com>
+To: Kalle Valo <kvalo@codeaurora.org>
+Subject: [ath6kl:master-pending] BUILD SUCCESS
+ 5ea4ed9d20beb2890c1f396cb4cba21bd6ae5439
+Message-ID: <5e7cf7c9.OMeU8bQKKf+qPHNf%lkp@intel.com>
+User-Agent: Heirloom mailx 12.5 6/20/10
 MIME-Version: 1.0
-Date: Thu, 26 Mar 2020 20:17:39 +0530
-From: Maharaja Kennadyrajan <mkenna@codeaurora.org>
-To: ath10k@lists.infradead.org
-Subject: Re: [PATCH] ath11k: add pktlog checksum in trace events to support
- pktlog
-In-Reply-To: <1585234044-30362-1-git-send-email-mkenna@codeaurora.org>
-References: <1585234044-30362-1-git-send-email-mkenna@codeaurora.org>
-Message-ID: <6a4d557a6bb5ef9f9f243c01e67be090@codeaurora.org>
-X-Sender: mkenna@codeaurora.org
-User-Agent: Roundcube Webmail/1.3.9
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200326_074748_559397_CF90124E 
-X-CRM114-Status: GOOD (  17.34  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20200326_114355_250760_5495DFC0 
+X-CRM114-Status: UNSURE (   4.99  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -3.7 (---)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-3.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [104.130.122.27 listed in list.dnswl.org]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [192.55.52.88 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
+ 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [192.55.52.88 listed in wl.mailspike.net]
+ 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+ 1.3 HEXHASH_WORD           Multiple instances of word + hexadecimal hash
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -86,192 +75,173 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless@vger.kernel.org
+Cc: ath10k@lists.infradead.org
+Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Hi,
+tree/branch: https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git  master-pending
+branch HEAD: 5ea4ed9d20beb2890c1f396cb4cba21bd6ae5439  Merge branch 'pending' into master-pending
 
-Please ignore this patch. Sent to wrong mailing list. Regret for the 
-inconvenience caused.
+elapsed time: 484m
 
-Regards,
-Maha
+configs tested: 146
+configs skipped: 0
 
+The following configs have been built successfully.
+More configs may be tested in the coming days.
 
-On 2020-03-26 20:17, Maharaja Kennadyrajan wrote:
-> Pktlog data are different among the chipset & chipset versions.
-> As part of enhancing the user space script to decode the pktlog
-> trace events generated, it is desirable to know which chipset or
-> which chipset version has provided the events and thereby decode
-> the pktlogs appropriately.
-> 
-> Pktlog checksum helps to determine the chipset variant which is
-> given by the firmware in the struct wmi_ready_event.
-> 
-> Pktlog checksums are computed during the firmware build.
-> So, adding that pktlog checksum in the pklog trace events.
-> 
-> Signed-off-by: Maharaja Kennadyrajan <mkenna@codeaurora.org>
-> ---
->  drivers/net/wireless/ath/ath11k/core.h  |  1 +
->  drivers/net/wireless/ath/ath11k/dp_rx.c |  3 ++-
->  drivers/net/wireless/ath/ath11k/trace.h | 12 ++++++++----
->  drivers/net/wireless/ath/ath11k/wmi.c   | 21 +++++++++++++--------
->  drivers/net/wireless/ath/ath11k/wmi.h   |  8 +++++++-
->  5 files changed, 31 insertions(+), 14 deletions(-)
-> 
-> diff --git a/drivers/net/wireless/ath/ath11k/core.h
-> b/drivers/net/wireless/ath/ath11k/core.h
-> index 6e7b8ec..a1e29f3 100644
-> --- a/drivers/net/wireless/ath/ath11k/core.h
-> +++ b/drivers/net/wireless/ath/ath11k/core.h
-> @@ -650,6 +650,7 @@ struct ath11k_base {
->  		/* protected by data_lock */
->  		u32 fw_crash_counter;
->  	} stats;
-> +	u32 pktlog_defs_checksum;
->  };
-> 
->  struct ath11k_fw_stats_pdev {
-> diff --git a/drivers/net/wireless/ath/ath11k/dp_rx.c
-> b/drivers/net/wireless/ath/ath11k/dp_rx.c
-> index f74a0e7..a3f2c76 100644
-> --- a/drivers/net/wireless/ath/ath11k/dp_rx.c
-> +++ b/drivers/net/wireless/ath/ath11k/dp_rx.c
-> @@ -1491,7 +1491,8 @@ static void ath11k_htt_pktlog(struct ath11k_base
-> *ab, struct sk_buff *skb)
->  		return;
->  	}
-> 
-> -	trace_ath11k_htt_pktlog(ar, data->payload, hdr->size);
-> +	trace_ath11k_htt_pktlog(ar, data->payload, hdr->size,
-> +				ar->ab->pktlog_defs_checksum);
->  }
-> 
->  static void ath11k_htt_backpressure_event_handler(struct ath11k_base 
-> *ab,
-> diff --git a/drivers/net/wireless/ath/ath11k/trace.h
-> b/drivers/net/wireless/ath/ath11k/trace.h
-> index 8700a62..66d0aae 100644
-> --- a/drivers/net/wireless/ath/ath11k/trace.h
-> +++ b/drivers/net/wireless/ath/ath11k/trace.h
-> @@ -21,14 +21,16 @@
->  #define TRACE_SYSTEM ath11k
-> 
->  TRACE_EVENT(ath11k_htt_pktlog,
-> -	    TP_PROTO(struct ath11k *ar, const void *buf, u16 buf_len),
-> +	    TP_PROTO(struct ath11k *ar, const void *buf, u16 buf_len,
-> +		     u32 pktlog_checksum),
-> 
-> -	TP_ARGS(ar, buf, buf_len),
-> +	TP_ARGS(ar, buf, buf_len, pktlog_checksum),
-> 
->  	TP_STRUCT__entry(
->  		__string(device, dev_name(ar->ab->dev))
->  		__string(driver, dev_driver_string(ar->ab->dev))
->  		__field(u16, buf_len)
-> +		__field(u32, pktlog_checksum)
->  		__dynamic_array(u8, pktlog, buf_len)
->  	),
-> 
-> @@ -36,14 +38,16 @@
->  		__assign_str(device, dev_name(ar->ab->dev));
->  		__assign_str(driver, dev_driver_string(ar->ab->dev));
->  		__entry->buf_len = buf_len;
-> +		__entry->pktlog_checksum = pktlog_checksum;
->  		memcpy(__get_dynamic_array(pktlog), buf, buf_len);
->  	),
-> 
->  	TP_printk(
-> -		"%s %s size %hu",
-> +		"%s %s size %hu pktlog_checksum %d",
->  		__get_str(driver),
->  		__get_str(device),
-> -		__entry->buf_len
-> +		__entry->buf_len,
-> +		__entry->pktlog_checksum
->  	 )
->  );
-> 
-> diff --git a/drivers/net/wireless/ath/ath11k/wmi.c
-> b/drivers/net/wireless/ath/ath11k/wmi.c
-> index e7ce369..ad88efe 100644
-> --- a/drivers/net/wireless/ath/ath11k/wmi.c
-> +++ b/drivers/net/wireless/ath/ath11k/wmi.c
-> @@ -87,8 +87,8 @@ struct wmi_tlv_rdy_parse {
->  		= { .min_len = sizeof(struct wmi_pdev_bss_chan_info_event) },
->  	[WMI_TAG_VDEV_INSTALL_KEY_COMPLETE_EVENT]
->  		= { .min_len = sizeof(struct wmi_vdev_install_key_compl_event) },
-> -	[WMI_TAG_READY_EVENT]
-> -		= {.min_len = sizeof(struct wmi_ready_event) },
-> +	[WMI_TAG_READY_EVENT] = {
-> +		.min_len = sizeof(struct wmi_ready_event_min) },
->  	[WMI_TAG_SERVICE_AVAILABLE_EVENT]
->  		= {.min_len = sizeof(struct wmi_service_available_event) },
->  	[WMI_TAG_PEER_ASSOC_CONF_EVENT]
-> @@ -4851,7 +4851,7 @@ static int ath11k_wmi_tlv_rdy_parse(struct
-> ath11k_base *ab, u16 tag, u16 len,
->  				    const void *ptr, void *data)
->  {
->  	struct wmi_tlv_rdy_parse *rdy_parse = data;
-> -	struct wmi_ready_event *fixed_param;
-> +	struct wmi_ready_event fixed_param;
->  	struct wmi_mac_addr *addr_list;
->  	struct ath11k_pdev *pdev;
->  	u32 num_mac_addr;
-> @@ -4859,11 +4859,16 @@ static int ath11k_wmi_tlv_rdy_parse(struct
-> ath11k_base *ab, u16 tag, u16 len,
-> 
->  	switch (tag) {
->  	case WMI_TAG_READY_EVENT:
-> -		fixed_param = (struct wmi_ready_event *)ptr;
-> -		ab->wlan_init_status = fixed_param->status;
-> -		rdy_parse->num_extra_mac_addr = fixed_param->num_extra_mac_addr;
-> -
-> -		ether_addr_copy(ab->mac_addr, fixed_param->mac_addr.addr);
-> +		memset(&fixed_param, 0, sizeof(fixed_param));
-> +		memcpy(&fixed_param, (struct wmi_ready_event *)ptr,
-> +		       min_t(u16, sizeof(fixed_param), len));
-> +		ab->wlan_init_status = fixed_param.ready_event_min.status;
-> +		rdy_parse->num_extra_mac_addr =
-> +			fixed_param.ready_event_min.num_extra_mac_addr;
-> +
-> +		ether_addr_copy(ab->mac_addr,
-> +				fixed_param.ready_event_min.mac_addr.addr);
-> +		ab->pktlog_defs_checksum = fixed_param.pktlog_defs_checksum;
->  		ab->wmi_ready = true;
->  		break;
->  	case WMI_TAG_ARRAY_FIXED_STRUCT:
-> diff --git a/drivers/net/wireless/ath/ath11k/wmi.h
-> b/drivers/net/wireless/ath/ath11k/wmi.h
-> index 510f9c6..58f9098 100644
-> --- a/drivers/net/wireless/ath/ath11k/wmi.h
-> +++ b/drivers/net/wireless/ath/ath11k/wmi.h
-> @@ -2345,7 +2345,7 @@ struct wmi_mac_addr {
->  	} __packed;
->  } __packed;
-> 
-> -struct wmi_ready_event {
-> +struct wmi_ready_event_min {
->  	struct wmi_abi_version fw_abi_vers;
->  	struct wmi_mac_addr mac_addr;
->  	u32 status;
-> @@ -2355,6 +2355,12 @@ struct wmi_ready_event {
->  	u32 num_extra_peers;
->  } __packed;
-> 
-> +struct wmi_ready_event {
-> +	struct wmi_ready_event_min ready_event_min;
-> +	u32 max_ast_index;
-> +	u32 pktlog_defs_checksum;
-> +} __packed;
-> +
->  struct wmi_service_available_event {
->  	u32 wmi_service_segment_offset;
->  	u32 wmi_service_segment_bitmap[WMI_SERVICE_SEGMENT_BM_SIZE32];
+arm                              allmodconfig
+arm                               allnoconfig
+arm                              allyesconfig
+arm64                            allmodconfig
+arm64                             allnoconfig
+arm64                            allyesconfig
+arm                         at91_dt_defconfig
+arm                           efm32_defconfig
+arm                          exynos_defconfig
+arm                        multi_v5_defconfig
+arm                        multi_v7_defconfig
+arm                        shmobile_defconfig
+arm                           sunxi_defconfig
+arm64                               defconfig
+sparc                            allyesconfig
+um                             i386_defconfig
+mips                             allmodconfig
+powerpc                             defconfig
+riscv                               defconfig
+um                                  defconfig
+c6x                        evmc6678_defconfig
+riscv                    nommu_virt_defconfig
+s390                             alldefconfig
+nds32                               defconfig
+riscv                          rv32_defconfig
+i386                              allnoconfig
+i386                             alldefconfig
+i386                             allyesconfig
+i386                                defconfig
+ia64                             alldefconfig
+ia64                             allmodconfig
+ia64                              allnoconfig
+ia64                             allyesconfig
+ia64                                defconfig
+nios2                         3c120_defconfig
+nios2                         10m50_defconfig
+xtensa                          iss_defconfig
+c6x                              allyesconfig
+xtensa                       common_defconfig
+openrisc                 simple_smp_defconfig
+openrisc                    or1ksim_defconfig
+alpha                               defconfig
+csky                                defconfig
+nds32                             allnoconfig
+h8300                     edosk2674_defconfig
+h8300                    h8300h-sim_defconfig
+h8300                       h8s-sim_defconfig
+m68k                             allmodconfig
+m68k                       m5475evb_defconfig
+m68k                          multi_defconfig
+m68k                           sun3_defconfig
+arc                              allyesconfig
+arc                                 defconfig
+microblaze                      mmu_defconfig
+microblaze                    nommu_defconfig
+powerpc                           allnoconfig
+powerpc                       ppc64_defconfig
+powerpc                          rhel-kconfig
+mips                      fuloong2e_defconfig
+mips                      malta_kvm_defconfig
+mips                             allyesconfig
+mips                         64r6el_defconfig
+mips                              allnoconfig
+mips                           32r2_defconfig
+parisc                            allnoconfig
+parisc                           allyesconfig
+parisc                generic-32bit_defconfig
+parisc                generic-64bit_defconfig
+x86_64               randconfig-a001-20200326
+x86_64               randconfig-a002-20200326
+x86_64               randconfig-a003-20200326
+i386                 randconfig-a001-20200326
+i386                 randconfig-a002-20200326
+i386                 randconfig-a003-20200326
+alpha                randconfig-a001-20200326
+m68k                 randconfig-a001-20200326
+mips                 randconfig-a001-20200326
+nds32                randconfig-a001-20200326
+parisc               randconfig-a001-20200326
+riscv                randconfig-a001-20200326
+h8300                randconfig-a001-20200326
+microblaze           randconfig-a001-20200326
+nios2                randconfig-a001-20200326
+c6x                  randconfig-a001-20200326
+sparc64              randconfig-a001-20200326
+csky                 randconfig-a001-20200326
+openrisc             randconfig-a001-20200326
+s390                 randconfig-a001-20200326
+xtensa               randconfig-a001-20200326
+sh                   randconfig-a001-20200326
+x86_64               randconfig-c001-20200326
+x86_64               randconfig-c002-20200326
+x86_64               randconfig-c003-20200326
+i386                 randconfig-c001-20200326
+i386                 randconfig-c002-20200326
+i386                 randconfig-c003-20200326
+x86_64               randconfig-e001-20200326
+x86_64               randconfig-e002-20200326
+x86_64               randconfig-e003-20200326
+i386                 randconfig-e001-20200326
+i386                 randconfig-e002-20200326
+i386                 randconfig-e003-20200326
+x86_64               randconfig-f001-20200326
+x86_64               randconfig-f002-20200326
+x86_64               randconfig-f003-20200326
+i386                 randconfig-f001-20200326
+i386                 randconfig-f002-20200326
+i386                 randconfig-f003-20200326
+x86_64               randconfig-h001-20200326
+x86_64               randconfig-h002-20200326
+x86_64               randconfig-h003-20200326
+i386                 randconfig-h001-20200326
+i386                 randconfig-h002-20200326
+i386                 randconfig-h003-20200326
+arc                  randconfig-a001-20200326
+arm                  randconfig-a001-20200326
+arm64                randconfig-a001-20200326
+ia64                 randconfig-a001-20200326
+powerpc              randconfig-a001-20200326
+sparc                randconfig-a001-20200326
+riscv                            allyesconfig
+riscv                             allnoconfig
+riscv                            allmodconfig
+s390                       zfcpdump_defconfig
+s390                          debug_defconfig
+s390                             allyesconfig
+s390                              allnoconfig
+s390                             allmodconfig
+s390                                defconfig
+sh                               allmodconfig
+sh                                allnoconfig
+sh                          rsk7269_defconfig
+sh                  sh7785lcr_32bit_defconfig
+sh                            titan_defconfig
+sparc                               defconfig
+sparc64                          allmodconfig
+sparc64                           allnoconfig
+sparc64                          allyesconfig
+sparc64                             defconfig
+um                           x86_64_defconfig
+x86_64                                   rhel
+x86_64                               rhel-7.6
+x86_64                         rhel-7.2-clear
+x86_64                                    lkp
+x86_64                              fedora-25
+x86_64                                  kexec
+
+---
+0-DAY CI Kernel Test Service, Intel Corporation
+https://lists.01.org/hyperkitty/list/kbuild-all@lists.01.org
 
 _______________________________________________
 ath10k mailing list
