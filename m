@@ -2,83 +2,65 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4177B197CDF
-	for <lists+ath10k@lfdr.de>; Mon, 30 Mar 2020 15:28:04 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3A398199F47
+	for <lists+ath10k@lfdr.de>; Tue, 31 Mar 2020 21:40:15 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:References:
-	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
-	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
-	:Resent-Message-ID:List-Owner;
-	bh=81s6ElsJKuLbpt+pt7bat9sv0BNpiSZJBdxO6TJ68IM=; b=RQ1Bdu2kCSmuRwcGFcjwy6P/p0
-	Y9zvNiLW0N6im/15T0kYsdwCXZaZYh8zx2BjT8AI+k6X5KP9sANsrqO18PovG0nwSVmXmMcrzHuA6
-	9aRCJcB1Uepux3IqIu5MPhotsl2faMbBGPzQAW8HoNr28iagvm3umFrzBiCeAaf3tVato4u3F222e
-	VO1OiwNiUaCq/DeVlXk6nCGIoXY0Oll0MyZM6rLB22JWDLyGP7cfDJPeB3T1SybXwDb5kqfCIUHqZ
-	g6Q1hhT3zn/SiSGpCB8xRF4F2e3THdTiL4jag1GQZxUe8QGW9ZKnMV96WG7C126hhtBqRkQAU5ONr
-	EJ7jxK/w==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Subject:To:From
+	:Date:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=9cJcHo3A1GbUbEt616NyxhjJv1SiZ7hhqSCuECMItss=; b=aGX2rF4ExNxxn6
+	u13mI2g6lUbPgJNoEZHdhH0FbyMKVl2YW85mtfXZmiNXvjCzpj4wXcT413KBUcnf+24BBaaeG8im5
+	uFbOfBBC2KuW/oenVSb7T8y2qVRW9ck/bRqsL5tQXu0nipLDxZ8+Bqr7zY/oPiJVFQH/ZFQdgfrNr
+	btpd/ywkx6emARVKgwwnqTod9TNMchuUyAZpkOZhrQN5qi06RyhEqfI7fj3fTMBbZHir1FE7VX8Nf
+	k3m5Y0YxwRP9viczwTnGSuYma1EGG2UDcEJPYl16GAIrKXnVfBfR4qpdREtSk9pQ6IuhLTYnUWprI
+	S6CoM9NM3raNyczErGtw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jIuSQ-0001Hl-RT; Mon, 30 Mar 2020 13:28:02 +0000
-Received: from mail26.static.mailgun.info ([104.130.122.26])
+	id 1jJMk4-0005al-O1; Tue, 31 Mar 2020 19:40:08 +0000
+Received: from mga11.intel.com ([192.55.52.93])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jIuSL-0001AW-4q
- for ath10k@lists.infradead.org; Mon, 30 Mar 2020 13:27:59 +0000
-DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
- q=dns/txt; 
- s=smtp; t=1585574877; h=References: In-Reply-To: Message-Id: Date:
- Subject: Cc: To: From: Sender;
- bh=bL5TknO6PNMYpOMDonJSd4HSxilU2Vltpsp65VWRTDY=;
- b=Hguhw7UCaXSkz4I9C1vi3RgTc43MwSgCcDoCE1hV8u2jgQdDKh3IswPetPyaX5RmZNJSU2Eq
- jCHAGkfEXEEsar6r+K6HWq5IoQnL42C4ToPrmL6/2v1/SVyuNxSdxftEnTkbMs1ZXzJkYhp5
- f5O/g5yoGAAXwStrJfcMiL1oVuo=
-X-Mailgun-Sending-Ip: 104.130.122.26
-X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
-Received: from smtp.codeaurora.org
- (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
- by mxa.mailgun.org with ESMTP id 5e81f3dc.7feaa6ebdc38-smtp-out-n01;
- Mon, 30 Mar 2020 13:27:56 -0000 (UTC)
-Received: by smtp.codeaurora.org (Postfix, from userid 1001)
- id 07813C44788; Mon, 30 Mar 2020 13:27:56 +0000 (UTC)
-X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
- aws-us-west-2-caf-mail-1.web.codeaurora.org
-X-Spam-Level: 
-X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,SPF_NONE
- autolearn=ham autolearn_force=no version=3.4.0
-Received: from ssreeela-linux.qualcomm.com
- (blr-c-bdr-fw-01_GlobalNAT_AllZones-Outside.qualcomm.com [103.229.19.19])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
- (No client certificate requested) (Authenticated sender: ssreeela)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 91187C433F2;
- Mon, 30 Mar 2020 13:27:45 +0000 (UTC)
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 91187C433F2
-Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
- dmarc=none (p=none dis=none) header.from=codeaurora.org
-Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
- spf=none smtp.mailfrom=ssreeela@codeaurora.org
-From: Sowmiya Sree Elavalagan <ssreeela@codeaurora.org>
-To: ath10k@lists.infradead.org
-Subject: [PATCH v2 2/2] ath10k: enable radar detection in secondary segment
-Date: Mon, 30 Mar 2020 18:56:32 +0530
-Message-Id: <1585574792-719-2-git-send-email-ssreeela@codeaurora.org>
-X-Mailer: git-send-email 2.7.4
-In-Reply-To: <1585574792-719-1-git-send-email-ssreeela@codeaurora.org>
-References: <1585574792-719-1-git-send-email-ssreeela@codeaurora.org>
+ id 1jJMjy-0004jL-VE
+ for ath10k@lists.infradead.org; Tue, 31 Mar 2020 19:40:04 +0000
+IronPort-SDR: LqUsWNsZ2C+8maRU3zLFdqGC1PJhVmGFk3YosGWoLOQr8VUJNL7DwFXD2WtgtEtZJBN16aKJg/
+ EDXeUd0yBCHA==
+X-Amp-Result: SKIPPED(no attachment in message)
+X-Amp-File-Uploaded: False
+Received: from fmsmga007.fm.intel.com ([10.253.24.52])
+ by fmsmga102.fm.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
+ 31 Mar 2020 12:39:57 -0700
+IronPort-SDR: 7eh5hzeddcTE5pcyWS0HQBFBgkoqFb9K6yxKDup6QveMHy0D8NNyGQX0Zv7jZlp+8zNZqUK+a4
+ 8vGYCvod5Bmg==
+X-ExtLoop1: 1
+X-IronPort-AV: E=Sophos;i="5.72,328,1580803200"; d="scan'208";a="240230128"
+Received: from lkp-server01.sh.intel.com (HELO lkp-server01) ([10.239.97.150])
+ by fmsmga007.fm.intel.com with ESMTP; 31 Mar 2020 12:39:56 -0700
+Received: from kbuild by lkp-server01 with local (Exim 4.89)
+ (envelope-from <lkp@intel.com>)
+ id 1jJMjr-0007OZ-Nb; Wed, 01 Apr 2020 03:39:55 +0800
+Date: Wed, 01 Apr 2020 03:39:37 +0800
+From: kbuild test robot <lkp@intel.com>
+To: Kalle Valo <kvalo@codeaurora.org>
+Subject: [ath6kl:pending] BUILD SUCCESS
+ 34a25d43a2b8b711b02a86d25984aae1cbf50036
+Message-ID: <5e839c79.H8rOptaDLr2dMgnH%lkp@intel.com>
+User-Agent: Heirloom mailx 12.5 6/20/10
+MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200330_062758_052975_3E63707A 
-X-CRM114-Status: GOOD (  15.50  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20200331_124003_030587_336285D6 
+X-CRM114-Status: UNSURE (   5.33  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -2.9 (--)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-2.9 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [104.130.122.26 listed in list.dnswl.org]
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [192.55.52.93 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 2.1 HEXHASH_WORD           Multiple instances of word + hexadecimal hash
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -90,175 +72,184 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Lei Wang <leiwa@codeaurora.org>,
- Sowmiya Sree Elavalagan <ssreeela@codeaurora.org>,
- linux-wireless@vger.kernel.org
-MIME-Version: 1.0
+Cc: ath10k@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-From: Lei Wang <leiwa@codeaurora.org>
+tree/branch: https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git  pending
+branch HEAD: 34a25d43a2b8b711b02a86d25984aae1cbf50036  ath10k: enable alt data of TX path for sdio
 
-Enable radar detection in secondary segment for VHT160 and VHT80+80 mode
-on DFS channels. Otherwise, when injecting radar pulse in the secondary
-segment, the DUT can't detect radar pulse.
+elapsed time: 483m
 
-Tested: qca9984 with firmware ver 10.4-3.10-00047
+configs tested: 157
+configs skipped: 0
 
-Signed-off-by: Lei Wang <leiwa@codeaurora.org>
-Signed-off-by: Sowmiya Sree Elavalagan <ssreeela@codeaurora.org>
+The following configs have been built successfully.
+More configs may be tested in the coming days.
+
+arm64                            allyesconfig
+arm                              allyesconfig
+arm64                             allnoconfig
+arm                               allnoconfig
+arm                           efm32_defconfig
+arm                         at91_dt_defconfig
+arm                        shmobile_defconfig
+arm64                               defconfig
+arm                          exynos_defconfig
+arm                        multi_v5_defconfig
+arm                           sunxi_defconfig
+arm                        multi_v7_defconfig
+sparc                            allyesconfig
+um                           x86_64_defconfig
+csky                                defconfig
+sh                                allnoconfig
+i386                              allnoconfig
+i386                             allyesconfig
+i386                             alldefconfig
+i386                                defconfig
+ia64                             allmodconfig
+ia64                                defconfig
+ia64                              allnoconfig
+ia64                             allyesconfig
+ia64                             alldefconfig
+arm                              allmodconfig
+arm64                            allmodconfig
+nios2                         3c120_defconfig
+nios2                         10m50_defconfig
+c6x                        evmc6678_defconfig
+xtensa                          iss_defconfig
+c6x                              allyesconfig
+xtensa                       common_defconfig
+openrisc                 simple_smp_defconfig
+openrisc                    or1ksim_defconfig
+alpha                               defconfig
+nds32                             allnoconfig
+nds32                               defconfig
+h8300                       h8s-sim_defconfig
+h8300                     edosk2674_defconfig
+m68k                       m5475evb_defconfig
+m68k                             allmodconfig
+h8300                    h8300h-sim_defconfig
+m68k                           sun3_defconfig
+m68k                          multi_defconfig
+arc                                 defconfig
+arc                              allyesconfig
+powerpc                             defconfig
+powerpc                       ppc64_defconfig
+powerpc                          rhel-kconfig
+microblaze                      mmu_defconfig
+microblaze                    nommu_defconfig
+powerpc                           allnoconfig
+mips                      fuloong2e_defconfig
+mips                      malta_kvm_defconfig
+mips                             allyesconfig
+mips                         64r6el_defconfig
+mips                              allnoconfig
+mips                           32r2_defconfig
+mips                             allmodconfig
+parisc                            allnoconfig
+parisc                generic-64bit_defconfig
+parisc                generic-32bit_defconfig
+parisc                           allyesconfig
+alpha                randconfig-a001-20200331
+m68k                 randconfig-a001-20200331
+mips                 randconfig-a001-20200331
+nds32                randconfig-a001-20200331
+parisc               randconfig-a001-20200331
+riscv                randconfig-a001-20200331
+c6x                  randconfig-a001-20200331
+h8300                randconfig-a001-20200331
+microblaze           randconfig-a001-20200331
+nios2                randconfig-a001-20200331
+sparc64              randconfig-a001-20200331
+csky                 randconfig-a001-20200331
+s390                 randconfig-a001-20200331
+xtensa               randconfig-a001-20200331
+openrisc             randconfig-a001-20200331
+sh                   randconfig-a001-20200331
+x86_64               randconfig-b001-20200331
+x86_64               randconfig-b002-20200331
+x86_64               randconfig-b003-20200331
+i386                 randconfig-b001-20200331
+i386                 randconfig-b002-20200331
+i386                 randconfig-b003-20200331
+x86_64               randconfig-c001-20200331
+x86_64               randconfig-c002-20200331
+x86_64               randconfig-c003-20200331
+i386                 randconfig-c001-20200331
+i386                 randconfig-c002-20200331
+i386                 randconfig-c003-20200331
+x86_64               randconfig-d001-20200331
+x86_64               randconfig-d002-20200331
+x86_64               randconfig-d003-20200331
+i386                 randconfig-d001-20200331
+i386                 randconfig-d002-20200331
+i386                 randconfig-d003-20200331
+x86_64               randconfig-f001-20200331
+x86_64               randconfig-f002-20200331
+x86_64               randconfig-f003-20200331
+i386                 randconfig-f001-20200331
+i386                 randconfig-f002-20200331
+i386                 randconfig-f003-20200331
+x86_64               randconfig-g001-20200331
+x86_64               randconfig-g002-20200331
+x86_64               randconfig-g003-20200331
+i386                 randconfig-g001-20200331
+i386                 randconfig-g002-20200331
+i386                 randconfig-g003-20200331
+x86_64               randconfig-h001-20200331
+x86_64               randconfig-h002-20200331
+x86_64               randconfig-h003-20200331
+i386                 randconfig-h001-20200331
+i386                 randconfig-h002-20200331
+i386                 randconfig-h003-20200331
+arc                  randconfig-a001-20200401
+arm                  randconfig-a001-20200401
+arm64                randconfig-a001-20200401
+ia64                 randconfig-a001-20200401
+powerpc              randconfig-a001-20200401
+sparc                randconfig-a001-20200401
+arc                  randconfig-a001-20200331
+arm                  randconfig-a001-20200331
+arm64                randconfig-a001-20200331
+ia64                 randconfig-a001-20200331
+powerpc              randconfig-a001-20200331
+sparc                randconfig-a001-20200331
+riscv                            allyesconfig
+riscv                    nommu_virt_defconfig
+riscv                             allnoconfig
+riscv                               defconfig
+riscv                          rv32_defconfig
+s390                             alldefconfig
+s390                             allmodconfig
+s390                              allnoconfig
+s390                             allyesconfig
+s390                          debug_defconfig
+s390                                defconfig
+s390                       zfcpdump_defconfig
+sh                          rsk7269_defconfig
+sh                               allmodconfig
+sh                  sh7785lcr_32bit_defconfig
+sh                            titan_defconfig
+sparc                               defconfig
+sparc64                          allmodconfig
+sparc64                           allnoconfig
+sparc64                          allyesconfig
+sparc64                             defconfig
+um                             i386_defconfig
+um                                  defconfig
+x86_64                              fedora-25
+x86_64                                  kexec
+x86_64                                    lkp
+x86_64                                   rhel
+x86_64                         rhel-7.2-clear
+x86_64                               rhel-7.6
+
 ---
- drivers/net/wireless/ath/ath10k/wmi-tlv.c |  6 ++---
- drivers/net/wireless/ath/ath10k/wmi.c     | 39 ++++++++++++++++++++++---------
- drivers/net/wireless/ath/ath10k/wmi.h     |  5 ++--
- 3 files changed, 34 insertions(+), 16 deletions(-)
-
-diff --git a/drivers/net/wireless/ath/ath10k/wmi-tlv.c b/drivers/net/wireless/ath/ath10k/wmi-tlv.c
-index 4e68deb..e1ab900f 100644
---- a/drivers/net/wireless/ath/ath10k/wmi-tlv.c
-+++ b/drivers/net/wireless/ath/ath10k/wmi-tlv.c
-@@ -2123,7 +2123,7 @@ ath10k_wmi_tlv_op_gen_vdev_start(struct ath10k *ar,
- 	tlv->tag = __cpu_to_le16(WMI_TLV_TAG_STRUCT_CHANNEL);
- 	tlv->len = __cpu_to_le16(sizeof(*ch));
- 	ch = (void *)tlv->value;
--	ath10k_wmi_put_wmi_channel(ch, &arg->channel);
-+	ath10k_wmi_put_wmi_channel(ar, ch, &arg->channel);
- 
- 	ptr += sizeof(*tlv);
- 	ptr += sizeof(*ch);
-@@ -2763,7 +2763,7 @@ ath10k_wmi_tlv_op_gen_scan_chan_list(struct ath10k *ar,
- 		tlv->len = __cpu_to_le16(sizeof(*ci));
- 		ci = (void *)tlv->value;
- 
--		ath10k_wmi_put_wmi_channel(ci, ch);
-+		ath10k_wmi_put_wmi_channel(ar, ci, ch);
- 
- 		chans += sizeof(*tlv);
- 		chans += sizeof(*ci);
-@@ -3450,7 +3450,7 @@ ath10k_wmi_tlv_op_gen_tdls_peer_update(struct ath10k *ar,
- 		tlv->tag = __cpu_to_le16(WMI_TLV_TAG_STRUCT_CHANNEL);
- 		tlv->len = __cpu_to_le16(sizeof(*chan));
- 		chan = (void *)tlv->value;
--		ath10k_wmi_put_wmi_channel(chan, &chan_arg[i]);
-+		ath10k_wmi_put_wmi_channel(ar, chan, &chan_arg[i]);
- 
- 		ptr += sizeof(*tlv);
- 		ptr += sizeof(*chan);
-diff --git a/drivers/net/wireless/ath/ath10k/wmi.c b/drivers/net/wireless/ath/ath10k/wmi.c
-index db6f4c7..4a3a698 100644
---- a/drivers/net/wireless/ath/ath10k/wmi.c
-+++ b/drivers/net/wireless/ath/ath10k/wmi.c
-@@ -1694,10 +1694,11 @@ static const struct wmi_peer_flags_map wmi_10_2_peer_flags_map = {
- 	.bw160 = WMI_10_2_PEER_160MHZ,
- };
- 
--void ath10k_wmi_put_wmi_channel(struct wmi_channel *ch,
-+void ath10k_wmi_put_wmi_channel(struct ath10k *ar, struct wmi_channel *ch,
- 				const struct wmi_channel_arg *arg)
- {
- 	u32 flags = 0;
-+	struct ieee80211_channel *chan = NULL;
- 
- 	memset(ch, 0, sizeof(*ch));
- 
-@@ -1717,20 +1718,36 @@ void ath10k_wmi_put_wmi_channel(struct wmi_channel *ch,
- 	ch->band_center_freq2 = 0;
- 	ch->mhz = __cpu_to_le32(arg->freq);
- 	ch->band_center_freq1 = __cpu_to_le32(arg->band_center_freq1);
--	if (arg->mode == MODE_11AC_VHT80_80)
-+	if (arg->mode == MODE_11AC_VHT80_80) {
- 		ch->band_center_freq2 = __cpu_to_le32(arg->band_center_freq2);
-+		chan = ieee80211_get_channel(ar->hw->wiphy,
-+					     arg->band_center_freq2 - 10);
-+	}
- 
- 	if (arg->mode == MODE_11AC_VHT160) {
--		if (arg->freq > arg->band_center_freq1)
--			ch->band_center_freq1 =
--				__cpu_to_le32(arg->band_center_freq1 + 40);
--		else
--			ch->band_center_freq1 =
--				__cpu_to_le32(arg->band_center_freq1 - 40);
-+		u32 band_center_freq1;
-+		u32 band_center_freq2;
-+
-+		if (arg->freq > arg->band_center_freq1) {
-+			band_center_freq1 = arg->band_center_freq1 + 40;
-+			band_center_freq2 = arg->band_center_freq1 - 40;
-+		} else {
-+			band_center_freq1 = arg->band_center_freq1 - 40;
-+			band_center_freq2 = arg->band_center_freq1 + 40;
-+		}
- 
-+		ch->band_center_freq1 =
-+					__cpu_to_le32(band_center_freq1);
-+		/* Minus 10 to get a defined 5G channel frequency*/
-+		chan = ieee80211_get_channel(ar->hw->wiphy,
-+					     band_center_freq2 - 10);
-+		/* The center frequency of the entire VHT160 */
- 		ch->band_center_freq2 = __cpu_to_le32(arg->band_center_freq1);
- 	}
- 
-+	if (chan && chan->flags & IEEE80211_CHAN_RADAR)
-+		flags |= WMI_CHAN_FLAG_DFS_CFREQ2;
-+
- 	ch->min_power = arg->min_power;
- 	ch->max_power = arg->max_power;
- 	ch->reg_power = arg->max_reg_power;
-@@ -7176,7 +7193,7 @@ ath10k_wmi_op_gen_vdev_start(struct ath10k *ar,
- 		memcpy(cmd->ssid.ssid, arg->ssid, arg->ssid_len);
- 	}
- 
--	ath10k_wmi_put_wmi_channel(&cmd->chan, &arg->channel);
-+	ath10k_wmi_put_wmi_channel(ar, &cmd->chan, &arg->channel);
- 
- 	ath10k_dbg(ar, ATH10K_DBG_WMI,
- 		   "wmi vdev %s id 0x%x flags: 0x%0X, freq %d, mode %d, ch_flags: 0x%0X, max_power: %d\n",
-@@ -7548,7 +7565,7 @@ ath10k_wmi_op_gen_scan_chan_list(struct ath10k *ar,
- 		ch = &arg->channels[i];
- 		ci = &cmd->chan_info[i];
- 
--		ath10k_wmi_put_wmi_channel(ci, ch);
-+		ath10k_wmi_put_wmi_channel(ar, ci, ch);
- 	}
- 
- 	return skb;
-@@ -8952,7 +8969,7 @@ ath10k_wmi_10_4_gen_tdls_peer_update(struct ath10k *ar,
- 
- 	for (i = 0; i < cap->peer_chan_len; i++) {
- 		chan = (struct wmi_channel *)&peer_cap->peer_chan_list[i];
--		ath10k_wmi_put_wmi_channel(chan, &chan_arg[i]);
-+		ath10k_wmi_put_wmi_channel(ar, chan, &chan_arg[i]);
- 	}
- 
- 	ath10k_dbg(ar, ATH10K_DBG_WMI,
-diff --git a/drivers/net/wireless/ath/ath10k/wmi.h b/drivers/net/wireless/ath/ath10k/wmi.h
-index 5ba0c9a..2090707 100644
---- a/drivers/net/wireless/ath/ath10k/wmi.h
-+++ b/drivers/net/wireless/ath/ath10k/wmi.h
-@@ -2094,7 +2094,8 @@ enum wmi_channel_change_cause {
- 
- /* Indicate reason for channel switch */
- #define WMI_CHANNEL_CHANGE_CAUSE_CSA (1 << 13)
--
-+/* DFS required on channel for 2nd segment of VHT160 and VHT80+80*/
-+#define WMI_CHAN_FLAG_DFS_CFREQ2  (1 << 15)
- #define WMI_MAX_SPATIAL_STREAM        3 /* default max ss */
- 
- /* HT Capabilities*/
-@@ -7351,7 +7352,7 @@ void ath10k_wmi_put_start_scan_common(struct wmi_start_scan_common *cmn,
- 				      const struct wmi_start_scan_arg *arg);
- void ath10k_wmi_set_wmm_param(struct wmi_wmm_params *params,
- 			      const struct wmi_wmm_params_arg *arg);
--void ath10k_wmi_put_wmi_channel(struct wmi_channel *ch,
-+void ath10k_wmi_put_wmi_channel(struct ath10k *ar, struct wmi_channel *ch,
- 				const struct wmi_channel_arg *arg);
- int ath10k_wmi_start_scan_verify(const struct wmi_start_scan_arg *arg);
- 
--- 
-2.7.4
+0-DAY CI Kernel Test Service, Intel Corporation
+https://lists.01.org/hyperkitty/list/kbuild-all@lists.01.org
 
 _______________________________________________
 ath10k mailing list
