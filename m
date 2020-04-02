@@ -2,77 +2,93 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C2B4319A95E
-	for <lists+ath10k@lfdr.de>; Wed,  1 Apr 2020 12:18:40 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 59BB019BB34
+	for <lists+ath10k@lfdr.de>; Thu,  2 Apr 2020 06:50:04 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
-	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
-	References:List-Owner; bh=tjVqN+9N7CTV9vBh+RzTFhQ2LZfDG+lRrMdnPaKBe7I=; b=PWo
-	6wm1bTexRomJSDfFqXeQ4ZEyaLxIOVcx0SFVarm4q4gbMqEqucxepJgTIgF9+g/gC3c6+MqoIa+n7
-	zu67L5ILogwXp1TTA95jO7xbq/ungD2TXimPo3xT/Bs29nqbW3Wm+8/NJwbSLX/lXCu45XQHa77vg
-	fePacXKNBowjipI6fxzvSec7D0YSOiPlKx+LWD/aqfTdPYLfp155BKOUcPoSsaMLB+sD/NJv54FLZ
-	Eq6jkNEPB3Xr0twdOXkmga980H1GAkXK7Cvbh5u/6wTtpSMSUKW92hjGS698cY8RsfXMk2sbyt6rz
-	IOcL3OJLc9qpHoHt5QHYdL0nfjwG7rA==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:List-Subscribe:List-Help
+	:List-Post:List-Archive:List-Unsubscribe:List-Id:Content-Type:Subject:To:From
+	:Date:Message-Id:Mime-Version:Reply-To:Cc:Content-Transfer-Encoding:
+	Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Owner;
+	bh=LRQsOCgS7ISjgZdfT999nKrrrZpBKBWWM26FOQe11i4=; b=sxSS4G4izdmgwVc2iBwnj03dyg
+	PSxlgE2/ippIAHKzc6PNhdZrFtTMDuQ/NzMSKHhN5HMNounMYKPgJL142uFukKGPiQJ3Am4qblIB5
+	gZa3PbTW0F1OZSgCro+QLUSmhg8lf71bfupXC+o6LIEf+cf1Aq4SvYyb7/TEEuAiINDkRm16nzFvY
+	/p9Xxb8BqhdEdiQgRDsKQXdn6hmDWPxQ8Jl3k2R2THU66uKIkcOBV2zuT/J6A0TUr8AQv4LAc/ecm
+	96pdQ5eNPtX3EkQrM97BhrOlAfXp5qrgqisLExxJ+P0mcg2gMo4Tr2bPhdNw8xMhgVOnkhOHqfToY
+	WRweNfKw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jJaSC-0006IN-0m; Wed, 01 Apr 2020 10:18:36 +0000
-Received: from mail27.static.mailgun.info ([104.130.122.27])
+	id 1jJrne-0008Kf-Bs; Thu, 02 Apr 2020 04:49:54 +0000
+Received: from out5-smtp.messagingengine.com ([66.111.4.29])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jJaS6-0006HL-Qi
- for ath10k@lists.infradead.org; Wed, 01 Apr 2020 10:18:33 +0000
-DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
- q=dns/txt; 
- s=smtp; t=1585736312; h=Message-Id: Date: Subject: Cc: To: From:
- Sender; bh=OfZiRXyl5PVeBvmkOGvR32tTRTmOR19KTl0C35AMiTI=;
- b=IT/d7+IhuMeCr4Ia44F/NxGpfrQ2kRK08QpIf9cMxwAFyOXluacloqBMUBuTFT5r63Ro4zun
- +C5Y3Xxzp7noKdBkBa0A+sAX0Yt3sBMsX+XO8pjsLhULDcHCafLuYersXIcnGvopIdMsDN0z
- nwlWQ815iGaTFmzMK4QIWnfBISk=
-X-Mailgun-Sending-Ip: 104.130.122.27
-X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
-Received: from smtp.codeaurora.org
- (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
- by mxa.mailgun.org with ESMTP id 5e846a6e.7f62545f01f0-smtp-out-n05;
- Wed, 01 Apr 2020 10:18:22 -0000 (UTC)
-Received: by smtp.codeaurora.org (Postfix, from userid 1001)
- id 3EAA3C433D2; Wed,  1 Apr 2020 10:18:22 +0000 (UTC)
-X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
- aws-us-west-2-caf-mail-1.web.codeaurora.org
-X-Spam-Level: 
-X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,SPF_NONE
- autolearn=ham autolearn_force=no version=3.4.0
-Received: from vnaralas-linux.qualcomm.com
- (blr-c-bdr-fw-01_GlobalNAT_AllZones-Outside.qualcomm.com [103.229.19.19])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
- (No client certificate requested) (Authenticated sender: vnaralas)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id DA512C44788;
- Wed,  1 Apr 2020 10:18:19 +0000 (UTC)
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org DA512C44788
-Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
- dmarc=none (p=none dis=none) header.from=codeaurora.org
-Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
- spf=none smtp.mailfrom=vnaralas@codeaurora.org
-From: Venkateswara Naralasetty <vnaralas@codeaurora.org>
+ id 1jJrna-0008Jd-4p
+ for ath10k@lists.infradead.org; Thu, 02 Apr 2020 04:49:52 +0000
+Received: from compute1.internal (compute1.nyi.internal [10.202.2.41])
+ by mailout.nyi.internal (Postfix) with ESMTP id 8571F5C042A
+ for <ath10k@lists.infradead.org>; Thu,  2 Apr 2020 00:49:46 -0400 (EDT)
+Received: from imap27 ([10.202.2.77])
+ by compute1.internal (MEProxy); Thu, 02 Apr 2020 00:49:46 -0400
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mxxn.io; h=
+ mime-version:message-id:date:from:to:subject:content-type; s=
+ fm2; bh=zr3H6ZzRH2m38Pwjj2jMiGLFPofFOZsC4gSQZ4hZ59k=; b=FLOR5rYU
+ eY0vqU0R/pzqKsuqsG1kE7p3I4IqVDtwl89xAI/kWXZ729rzolbgYtE+q5CbxRdQ
+ 8dwoGchGq8E/8EyWYm0xCTOZYdnXIdGlTLPDxx4ITpfITU1yxf6+4WpA6RiR5oAs
+ II0QuvNCTRVCHwq7G0AmX0VgNO/MP2Wuh7HeBG6ki09PdWwrGz8ce+5HGBl5Jmml
+ Ali0SEhR1E3uMV7igKz1fSfF4gMUfOjmAqeu6YhzOolkKoitJ3yPPmhPullOpsRy
+ +g6eZXgV8jMzdupw4yoIUCQZs953fqGcdFW1bMZ3fjZi+69Fjjkdt8kjP9YHMsT8
+ WbNrOg/Tjx7VIA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=
+ messagingengine.com; h=content-type:date:from:message-id
+ :mime-version:subject:to:x-me-proxy:x-me-proxy:x-me-sender
+ :x-me-sender:x-sasl-enc; s=fm2; bh=zr3H6ZzRH2m38Pwjj2jMiGLFPofFO
+ ZsC4gSQZ4hZ59k=; b=FkS3+4AMcx5xiRWEj8n6onaOFt3RCkcjzvzE+/slaO41r
+ laZOyajcXp6lCy6ZKNkV7iXLJWsqSFIyA9PY/O/1ygFClEhQWPkqrYvPhDiDP7xt
+ MGqB0S09TCV+LanxENK91vCiGmMVzSXuBadeBUxgVNAUf9wuagTxxEWMMd1ocQME
+ Wv+1Pl1UPC1YkdoUw5334aNgAbhx2oFuHZgDg8qVJkaM/ZBm5KJSxsmletcn1pfL
+ cjR4A/HyKEn9SgkmjXuAG8pDIbbMOiteqYMXeXpxVDFMgdBfuzWiaUz6Jqh1bQhK
+ jlOai4WLjFXKJ2Hsqgmr5yGHJZW/HtKDoVG+eZfyQ==
+X-ME-Sender: <xms:6m6FXmrD9hbUyHHJOC_TJx96lmkk32Mlb8T-qcxezRXcBi5WkSgqxw>
+X-ME-Proxy-Cause: gggruggvucftvghtrhhoucdtuddrgeduhedrtdefgdeklecutefuodetggdotefrodftvf
+ curfhrohhfihhlvgemucfhrghsthforghilhdpqfgfvfdpuffrtefokffrpgfnqfghnecu
+ uegrihhlohhuthemuceftddtnecunecujfgurhepofgfggfkfffhvffutgesmhdtreerre
+ erjeenucfhrhhomhepuehlrgkkpgfjrhgrshhtnhhikhcuoegslhgriiesmhiggihnrdhi
+ oheqnecuffhomhgrihhnpehkihhllhgvrhhnvghtfihorhhkihhnghdrtghomhdpghhith
+ hhuhgsrdgtohhmpdhrvgguhhgrthdrtghomhenucevlhhushhtvghrufhiiigvpedtnecu
+ rfgrrhgrmhepmhgrihhlfhhrohhmpegslhgriiesmhiggihnrdhioh
+X-ME-Proxy: <xmx:6m6FXvblE9Z5p1uHSzuYWhOOAFMIAk0L3qjFiKoJVJxxezOE77otZQ>
+ <xmx:6m6FXkjYEObC7bruTzrEnT_Kr3CnLp7ZxkAm6sgjlHC9tYNtvVEr6w>
+ <xmx:6m6FXkoXOOTuvolKLT1zFX4M3ZqtFMfSflhYeUeQnvHtgGh6o2CXHA>
+ <xmx:6m6FXtlA0-SAr3H9X7OH0KqIqXboVxtXZpKKYI7cH7Rp1Q0lw6ShiQ>
+Received: by mailuser.nyi.internal (Postfix, from userid 501)
+ id 4846BD2009F; Thu,  2 Apr 2020 00:49:46 -0400 (EDT)
+X-Mailer: MessagingEngine.com Webmail Interface
+User-Agent: Cyrus-JMAP/3.1.7-1079-ga710375-fmstable-20200402v4
+Mime-Version: 1.0
+Message-Id: <0765166b-aaf8-49f4-b7e6-cbed301aa4a6@www.fastmail.com>
+Date: Thu, 02 Apr 2020 04:49:25 +0000
+From: =?UTF-8?Q?Bla=C5=BE_Hrastnik?= <blaz@mxxn.io>
 To: ath10k@lists.infradead.org
-Subject: [PATCH] ath10k: fix kernel null pointer dereference
-Date: Wed,  1 Apr 2020 15:48:10 +0530
-Message-Id: <1585736290-17661-1-git-send-email-vnaralas@codeaurora.org>
-X-Mailer: git-send-email 2.7.4
+Subject: =?UTF-8?Q?ath10k-firmware:_QCA6174A_hw3.2:_Add_Killer_Networking/Surface?=
+ =?UTF-8?Q?_Go_specific_board?=
+Content-Type: multipart/mixed;
+ boundary=d88519677d1949a9aa0e1f8b09062008
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200401_031832_506840_40FE1783 
-X-CRM114-Status: UNSURE (   9.94  )
+X-CRM114-CacheID: sfid-20200401_214950_384872_BF6F7776 
+X-CRM114-Status: UNSURE (   1.82  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.0 (/)
+X-Spam-Score: -0.9 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.9 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [104.130.122.27 listed in list.dnswl.org]
+ -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
+ low trust [66.111.4.29 listed in list.dnswl.org]
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
@@ -87,71 +103,266 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Venkateswara Naralasetty <vnaralas@codeaurora.org>,
- linux-wireless@vger.kernel.org
-MIME-Version: 1.0
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Currently sta airtime is updated without any lock in case of
-host based airtime calculation. Which may result in accessing the
-invalid sta pointer in case of continuous station connect/disconnect.
+--d88519677d1949a9aa0e1f8b09062008
+Content-Type: text/plain
 
-This patch fix the kernel null pointer dereference by updating the
-station airtime with proper RCU lock in case of host based airtime
-calculation.
+* description for what hardware this is:
 
-Proceeding with the analysis of "ARM Kernel Panic".
-The APSS crash happened due to OOPS on CPU 0.
-Crash Signature : Unable to handle kernel NULL pointer dereference
-at virtual address 00000300
-During the crash,
-PC points to "ieee80211_sta_register_airtime+0x1c/0x448 [mac80211]"
-LR points to "ath10k_txrx_tx_unref+0x17c/0x364 [ath10k_core]".
-The Backtrace obtained is as follows:
-[<bf880238>] (ieee80211_sta_register_airtime [mac80211]) from
-[<bf945a38>] (ath10k_txrx_tx_unref+0x17c/0x364 [ath10k_core])
-[<bf945a38>] (ath10k_txrx_tx_unref [ath10k_core]) from
-[<bf9428e4>] (ath10k_htt_txrx_compl_task+0xa50/0xfc0 [ath10k_core])
-[<bf9428e4>] (ath10k_htt_txrx_compl_task [ath10k_core]) from
-[<bf9b9bc8>] (ath10k_pci_napi_poll+0x50/0xf8 [ath10k_pci])
-[<bf9b9bc8>] (ath10k_pci_napi_poll [ath10k_pci]) from
-[<c059e3b0>] (net_rx_action+0xac/0x160)
-[<c059e3b0>] (net_rx_action) from [<c02329a4>] (__do_softirq+0x104/0x294)
-[<c02329a4>] (__do_softirq) from [<c0232b64>] (run_ksoftirqd+0x30/0x90)
-[<c0232b64>] (run_ksoftirqd) from [<c024e358>] (smpboot_thread_fn+0x25c/0x274)
-[<c024e358>] (smpboot_thread_fn) from [<c02482fc>] (kthread+0xd8/0xec)
+  - it is a QCA6174A based radio used for wi-fi in Surface Go and various other laptops
 
-Tested HW: QCA9888
-Tested FW: 10.4-3.10-00047
+* origin of the board file (did you create it yourself or where you
+  downloaded)
 
-Signed-off-by: Venkateswara Naralasetty <vnaralas@codeaurora.org>
----
- drivers/net/wireless/ath/ath10k/txrx.c | 2 ++
- 1 file changed, 2 insertions(+)
+  - Taken from Killer Networking's website:
+    https://support.killernetworking.com/knowledge-base/installing-the-killer-wireless-ac-1535-in-steamos/
 
-diff --git a/drivers/net/wireless/ath/ath10k/txrx.c b/drivers/net/wireless/ath/ath10k/txrx.c
-index 39abf8b..f46b908 100644
---- a/drivers/net/wireless/ath/ath10k/txrx.c
-+++ b/drivers/net/wireless/ath/ath10k/txrx.c
-@@ -84,9 +84,11 @@ int ath10k_txrx_tx_unref(struct ath10k_htt *htt,
- 		wake_up(&htt->empty_tx_wq);
- 	spin_unlock_bh(&htt->tx_lock);
- 
-+	rcu_read_lock();
- 	if (txq && txq->sta && skb_cb->airtime_est)
- 		ieee80211_sta_register_airtime(txq->sta, txq->tid,
- 					       skb_cb->airtime_est, 0);
-+	rcu_read_unlock();
- 
- 	if (ar->bus_param.dev_type != ATH10K_DEV_TYPE_HL)
- 		dma_unmap_single(dev, skb_cb->paddr, msdu->len, DMA_TO_DEVICE);
--- 
-2.7.4
+    https://support.killernetworking.com/K1535_Debian/board.bin
+
+* ids to be used with the board file (ATH10K_BD_IE_BOARD_NAME in ath10k)
+
+  - QCA6174 hw3.2
+
+    + bus=pci,vendor=168c,device=003e,subsystem-vendor=168c,subsystem-device=3370
+      sha256sum:
+      e79b80e2243c62f41fbaf1cc92845cefb11019b0a6d1c91488cf43fd63dcf85c
+
+Some more information:
+
+It's been a very common workaround that's spread out by word of mouth. I'm not
+sure why nobody upstreamed it yet.
+
+https://github.com/linux-surface/linux-surface/wiki/Surface-Go
+
+Here's the output from the driver without the board:
+
+[ 28.517788] ath10k_pci 0000:01:00.0: pci irq msi oper_irq_mode 2 irq_mode 0 reset_mode 0
+[ 28.797409] ath10k_pci 0000:01:00.0: qca6174 hw3.2 target 0x05030000 chip_id 0x00340aff sub 168c:3370
+[ 28.797414] ath10k_pci 0000:01:00.0: kconfig debug 0 debugfs 1 tracing 1 dfs 0 testmode 0
+[ 28.798350] ath10k_pci 0000:01:00.0: firmware ver WLAN.RM.4.4.1-00079-QCARMSWPZ-1 api 6 features wowlan,ignore-otp crc32 fd869beb
+[ 28.869124] ath10k_pci 0000:01:00.0: failed to fetch board data for bus=pci,vendor=168c,device=003e,subsystem-vendor=168c,subsystem-device=3370 from ath10k/QCA6174/hw3.0/board-2.bin
+[ 28.869475] ath10k_pci 0000:01:00.0: board_file api 1 bmi_id N/A crc32 ed5f849a
+[ 28.948849] ath10k_pci 0000:01:00.0: unsupported HTC service id: 1536
+[ 28.967687] ath10k_pci 0000:01:00.0: htt-ver 3.47 wmi-op 4 htt-op 3 cal otp max-sta 32 raw 0 hwcrypto 1
+[ 32.111815] ath10k_pci 0000:01:00.0: wmi command 16389 timeout, restarting hardware
+[ 35.183798] ath10k_pci 0000:01:00.0: wmi command 69633 timeout, restarting hardware
+[ 35.183803] ath10k_pci 0000:01:00.0: could not suspend target (-11)
+[ 35.287491] ath10k_pci 0000:01:00.0 wlp1s0: renamed from wlan0
+[ 35.303832] ath10k_pci 0000:01:00.0: cannot restart a device that hasn't been started
+[ 35.579498] ath10k_pci 0000:01:00.0: unsupported HTC service id: 1536
+[ 38.767832] ath10k_pci 0000:01:00.0: wmi command 16387 timeout, restarting hardware
+[ 38.767840] ath10k_pci 0000:01:00.0: failed to enable PMF QOS: -11
+[ 38.768373] ath10k_pci 0000:01:00.0: could not suspend target (-108)
+[ 38.849525] ath10k_pci 0000:01:00.0: cannot restart a device that hasn't been started
+[ 39.090593] ath10k_pci 0000:01:00.0: unsupported HTC service id: 1536
+[ 42.351960] ath10k_pci 0000:01:00.0: htt version request timed out
+[ 42.351966] ath10k_pci 0000:01:00.0: failed to setup htt: -110
+[ 42.433909] ath10k_pci 0000:01:00.0: Could not init core: -110
+[ 42.662892] ath10k_pci 0000:01:00.0: unsupported HTC service id: 1536
+[ 45.935887] ath10k_pci 0000:01:00.0: failed to ping firmware: -110
+[ 45.935896] ath10k_pci 0000:01:00.0: failed to reset rx filter: -110
+[ 46.016938] ath10k_pci 0000:01:00.0: Could not init core: -110
+[ 56.238713] ath10k_pci 0000:01:00.0: unsupported HTC service id: 1536
+[ 59.503838] ath10k_pci 0000:01:00.0: wmi command 16387 timeout, restarting hardware
+[ 59.503845] ath10k_pci 0000:01:00.0: failed to enable PMF QOS: -11
+[ 59.504257] ath10k_pci 0000:01:00.0: could not suspend target (-108)
+[ 59.584865] ath10k_pci 0000:01:00.0: cannot restart a device that hasn't been started
+[ 59.810940] ath10k_pci 0000:01:00.0: unsupported HTC service id: 1536
+[ 62.831868] ath10k_pci 0000:01:00.0: htt version request timed out
+[ 62.831874] ath10k_pci 0000:01:00.0: failed to setup htt: -110
+[ 62.914010] ath10k_pci 0000:01:00.0: Could not init core: -110
+
+Here's the output after the board files are swapped:
+
+[ 22.265640] ath10k_pci 0000:01:00.0: pci irq msi oper_irq_mode 2 irq_mode 0 reset_mode 0
+[ 22.556869] ath10k_pci 0000:01:00.0: qca6174 hw3.2 target 0x05030000 chip_id 0x00340aff sub 168c:3370
+[ 22.556875] ath10k_pci 0000:01:00.0: kconfig debug 0 debugfs 1 tracing 1 dfs 0 testmode 0
+[ 22.557773] ath10k_pci 0000:01:00.0: firmware ver WLAN.RM.4.4.1-00079-QCARMSWPZ-1 api 6 features wowlan,ignore-otp crc32 fd869beb
+[ 22.630144] ath10k_pci 0000:01:00.0: board_file api 1 bmi_id N/A crc32 70c38a29
+[ 22.722890] ath10k_pci 0000:01:00.0: unsupported HTC service id: 1536
+[ 22.742657] ath10k_pci 0000:01:00.0: htt-ver 3.47 wmi-op 4 htt-op 3 cal otp max-sta 32 raw 0 hwcrypto 1
+[ 22.996371] ath10k_pci 0000:01:00.0 wlp1s0: renamed from wlan0
+[ 24.535624] ath10k_pci 0000:01:00.0: unsupported HTC service id: 1536
+
+Here's some more discussion on how the Killer board was found:
+
+https://bugzilla.redhat.com/show_bug.cgi?id=1651779#c1
+
+It's likely that this also fixes wifi on Surface Laptop 3 AMD since users have
+been using an identical workaround.
+
+Note: It's also recommended to enable ignore-otp for this board. Not sure if it
+actually helps or not though.
+
+--d88519677d1949a9aa0e1f8b09062008
+Content-Disposition: attachment;filename="board.bin"
+Content-Type: application/macbinary; name="board.bin"
+Content-Transfer-Encoding: BASE64
+
+vB8A/wIBAAN/wgBDAAAAAD9xBAAAQAAEAAAfAAAAAAABAxEBMwAAAAAAAABORkEzNjRBeHAA
+AAAAAAAAAAAAAB4eEQEBAD02Njb39fUgZB4GAAADAsTEOa8CCgAAAAAAAAAAAQAAAAAAAAAA
+AAAAAFxcXFZUUExEOAAAAABqaGViW04ABwAENlm9AAAAAAAAAAADOwECIDwDAgAAAAAAAAAA
+AAAAAAAAAAAAAAADAAAHHHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAApAgkA
+mZkJABAAEAAAAAAABwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHg8A
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAACgEQABAAAAAAACkCCQCZmQkAIAAgAAAAAAADAAARHQAAAPjjjz/4448/+OOPP/jj
+jz8AAAAAFAAAAAAAAAAAAAAoDwAAAO7uAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8PDwAPDw8ADw8PAA8PDwAQEBAAEBAQABAQEAAQ
+EBAAEBAQABAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+In8GCKQAAAAAAPEAAAAAAKAUUBWoFQAWWBawFgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAM7Ozs7OzgAAAAAAAAAAAAAAAAAAAAAAAAAAAAD29ticnKAMAHCOoqz/////
+////////AAAAAAAAAAAAAAAAAACYnXBmSD1BGkKwmJ1wZkg+QRpCrfDwkYsAkJBwaEhAQR1C
+tZCRcGlIQkEeQrHw8JGKAJCRcGpIQUEfQrmQk2hjSEU5GTqr8PCRigCQkXBqSEJBIEK6kJRo
+ZUA9ORs6rPDwkIkAIHYYZxBXCEgAOShxIGEYUhBCCDL48ImJACB8GG4QXghOAD8obSBdGE0Q
+PQguAMiJiAAgehhrEFwITAA9IGwYXBBNCD0ALgDoiYgAIHgYaRBZCEkAOyhrIFsYSxA7CCwA
+wImIACB2GGcQWAhIADkgchhjEFQIRAA1APCJiAAgfBhuEF0ITgA/KGogWhhLEDsIKwjQiYgA
+IHoYaxBcCEwAPSBuGF8QUAhAADEI0ImIACB4GGkQWQhKADsobSBcGE0QPQgtCNiJiAAgfRhu
+EF4ITgA/KGogWhhKEDoIKxDYiYgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHl5AAAAAAAJDBIa
+FyEeKEJGXl6FeJSOm5ieoAAAAAAJFBEgFycYKD9KW156dpCOl5maoAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwrHCJrABwiaKseomirAAAAAAkJCQk
+JCQkJCQiHhwkIh4cJCIeHBYWzopGAmgkgBYWzopGAmgkgBYWzopGAmgkgBYWzopGAmgkgBYW
+qopGAmgkgBYWqopGAmgkgBYWqopGAmgkgBYWqopGAmgkgDMDKwMjAxMDAwMzAysDIwMTAwMD
+MwMrAyMDEwMDAzMDKwMjAxMDAwMREhUXGhxBQkVHSkwxMjU3OjwAAHB1naJwdZ2icHWdonp/
+k5hwdZ2ien+TmHB1rLhwdaescHWnrHp/naJwdaesen+donB1p6xwdaescHWnrHp/naJwdaes
+en+dojx8PDw8fDw8PHw8PDx8PDw8fDw8PHw8PDx8PDw8fDw8PHw8PDx8PDw8fDw8PHw8PDx8
+PDw8fDw8PHw8PDx8PDw8fDw8PHw8PAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAcHqOonB6jqLe3/Dl3+Lw5tHh9uzY2Ori19Tt5tbU6uTRzujm0tHk4AAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQXGSQoLDByf//////////
+/////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOZ8heQE/
+AT8BPzGgGXYBTAFMAUz4+JGLADmfIXkBQAE/AT8xoRl3AU4BTQFN+PiRiwA5oCF6AUABQAFA
+MaAZdwFNAU0BTfj4kYsAOZohbwE1ATUBNTGXIXoBQQFBAUH4+JGLAEGgKXgJPgEuAS45niF0
+AToBOgE6+PiSiwBBmylyCTcBKAEoOZghbAEyATIBMvj4kosASZgxdxE9CS0JLUGdKXIJNwEn
+CTf4+JKMAEmXMXYROwksCSxBmiluCTMJMwEj+PiSjAA4cDBhKFAgQBgwM3UZYwFUAUgBN9j4
+in4ASH44ZjBWKEYgNjN0GWIBUgFHATbQ+Ip+ADh8MG0oXSBMGDw7fCFjAVEBQAEw6PiKfgBI
+ejhjMFIoQiAyO3AhYAFUAUMBM9D4in4AKHggaRhZEEwIPDt/IWcBVQFEATMI+Ip/ADh3MGco
+ViBGGDY4ezBpKFcgRxg38OCLfwAocSBhGFIQRgg1OHgwZyhVIEUYNRDgin4AKHcgaRhaEE0I
+PTh7MGkoWCBHGDcg6Ip/ADBzKGQgVRhFEDk4eTBnKFYgRRg1EOiKfgAwfSBiGFMQRgg2OHkw
+ZyhVIEQYNSDoi38AMHcoaCBZGEoQPTh4MGYoVSBEGDQY6It+AHB9YGdYX0hPODc4dzBlKFMg
+QhgzwOiMfwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeXkAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AHl5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB5eQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeXkA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAHl5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB5eQAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAeXkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHl5AAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAB5eQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeXkAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAHl5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB5eQAJDRUcHCQfKEJHXl99d56N
+s5nFoQAAAAAKDxIdGCYbKj5IWV99dpmPopetoAAAAAAAAAAHDREcGCQbKDtHWV92eJWOpZe1
+oAAAAAAHEQ4dFCQXKDdIU19weIqNmpiknwAAAAAAAAAA7wwMGBwiKDxBXV2EfKOPtJjBnwAA
+AAAC+goRFCAeKDlEVV2BepKPm5eqoQAAAAAAAAAA0wQBAAAAdzkAAPcSdzl3OfcSdzl3OXc5
+AAD3Enc5dzn3Enc5dzmOnZihnwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMVGiMoLnJzUxUaIygucnNTFRojKC5yc1MVGiM
+oLnJzSIgHhwiIB4cIiAeHCIgHhwiIB4cIiAeHCIgHhwiIB4cFBTurGgCiiagFBTurGgCiiag
+FBTurGgCiiagFBTurGgCiiagFBTurGgCiiagFBTurGgCiiagFBTurGgCiiagFBTurGgCiiag
+FBTMrGgCiiagFBTMrGgCiiagFBTMrGgCiiagFBTMrGgCiiagFBTMrGgCiiagFBTMrGgCiiag
+FBTMrGgCiiagFBTMrGgCiiagEhLMzIoErEjAEhLMzIoErEjAEhLMzIoErEjAEhLMzIoErEjA
+EhLMzIoErEjAEhLMzIoErEjAEhLMzIoErEjAEhLMzIoErEjAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAQFhgZGx1ARkhJS00wNjg5Oz0AAAAATFxgjLS4vc1MXGCMtLi9zU5eZo6utr/H
+UmKSorLD//9MXGCMtLi9zU5eZo6utr/HTFhcaIyQsLRMWFxojJCwtE5WXmaOlqauUmKSov//
+//9MWFxojJCwtE5WXmaOlqauTFxgjLS4vc1MXGCMtLi9zU5eZo6utr/HUmKSorLD//9MXGCM
+tLi9zU5eZo6utr/HfDx8fDw8fDx8PHx8PDx8PHw8PHw8PDw8PDw8PDw8PDx8PHx8PDx8PHw8
+PHw8PDw8fDx8PDx8PDx8PHw8PHw8PDw8PDw8fDw8PDw8PDw8PDx8PHw8PHw8PDw8PDw8fDw8
+fDx8fDw8fDx8PHx8PDx8PHw8PHw8PDw8PDw8PDw8PDx8PHx8PDx8PHw8PHw8PDw8AAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFRojJigrL3JVGiMmKCs
+vcnY09rS2NLb0tbP183czdXL1MzUytHJ1MnPx9LIzsbQxt/b2dLd19XN087OyNjTzsjY0c3G
+1M7LxdPOy8TTzszFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADEoiEBGIUmABCFJgAAniEB
+oBYAAJ4TAAConjEB3uDwgN7g8IDe4PCA3tzwgN7c8IBAnjEBIBiGDSAYhg0gGKYNIBgmDSAY
+hg08njEBQgStz0IErc9CBC3OQqMczUKjHM4opBEBLAg0DiykEQE0DjAOMKQRASwOLA4ApBEB
+AR/ED1ygIwECAAAAAQAAANCfIQGTO9kLkDsZAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+--d88519677d1949a9aa0e1f8b09062008
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
 
 _______________________________________________
 ath10k mailing list
 ath10k@lists.infradead.org
 http://lists.infradead.org/mailman/listinfo/ath10k
+
+--d88519677d1949a9aa0e1f8b09062008--
+
