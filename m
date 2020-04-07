@@ -2,66 +2,64 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id CD1511A04F6
-	for <lists+ath10k@lfdr.de>; Tue,  7 Apr 2020 04:37:07 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A95191A04F7
+	for <lists+ath10k@lfdr.de>; Tue,  7 Apr 2020 04:37:11 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Subject:To:From
 	:Date:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=pqSRIM2a0mKnRETNlTJcBrBcxxFDcBda79elFmU5ZgE=; b=ZyerBKY2bpGXNB
-	bWMHqBGJ84A7Iy9qKHI8DGzatVEIliSkS8/GOaup6d7xEY0l/r/QKRFIpMJRZj4IYoAmpOTG4xy0h
-	bqhuDbRplHDWRFJUapOnkNY6JpD6Y9jaW/syJRR4NSQBLQLzsQ30PVJejP+EdogMeYTx3JVqTOBS3
-	zdIpYuEqOGNkHwOaGOYE9PGGV4gcr/B9rbj+9V45mRHFnry9P5UOeW5FMvXeL/09s2w/cg26ny0YN
-	7nSlSVN30jhCaCVSEzWHAGwaEGbaymDa+glNSeSyL61BufBIX9fScx/IhTOYvhXRzYZF7b+YOIeKv
-	n1AI6vg+yGG96KwQubBA==;
+	List-Owner; bh=wg4DTfCNKw/N+U/9EqHxnnz98iSeYMDr9xQXlEjevas=; b=ltNHDP0hW2+zb8
+	eny/fgZNTf7JzuyzUWC+qzGOFXsyU0SJPww9/4iLRkEgIYE0IhZxmRIsCy+JwEyfVfFuyjJqHqfVJ
+	WxGQb4SugpKr4IJ/zjE1NLZor29H0GLuAf88Uaaqg488j7kVUOl3zfeft+H+6G4NxQIJ9wUIk1fGu
+	PY44NtjZa+61OcjzrgRyLWfaqWsuACVU3nwNyy9GAPEcKiFSLH0e8i9EDmYWN9ShXd4VQv/pyr81S
+	njgE/Yd71eWjNUYqHLGYDursFGvl1HYyKqD0zk0VqsRM9m5mq+tt5+TUwBg7bR37qYc7VnDUYKZin
+	+WjEUd/HldnchJcylrWQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jLe6k-0002id-MI; Tue, 07 Apr 2020 02:36:58 +0000
-Received: from mga01.intel.com ([192.55.52.88])
+	id 1jLe6v-0002on-Hf; Tue, 07 Apr 2020 02:37:09 +0000
+Received: from mga05.intel.com ([192.55.52.43])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jLe6f-0002hj-UY
- for ath10k@lists.infradead.org; Tue, 07 Apr 2020 02:36:55 +0000
-IronPort-SDR: zmgHHHU7a9EBx0IUrKVme5UHLsYL1DurwIX8j/uRJLDIltrgQh60aZSjrRQ46F1a1wTgAh82BE
- RhL+gwiH3iTA==
+ id 1jLe6l-0002kT-Vg
+ for ath10k@lists.infradead.org; Tue, 07 Apr 2020 02:37:01 +0000
+IronPort-SDR: Eeg0Eourz0oh2dlpfZXnKUTE23NyZv0D4mSPbD01KYmv/SBYr+sZex6Is+p8JHEIXNVrQKDhMJ
+ 6DoOZHi0IIxQ==
 X-Amp-Result: SKIPPED(no attachment in message)
 X-Amp-File-Uploaded: False
-Received: from orsmga003.jf.intel.com ([10.7.209.27])
- by fmsmga101.fm.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
- 06 Apr 2020 19:36:53 -0700
-IronPort-SDR: fRFS8UtzX+0dX0TlC6r3Uz9Fo+34x4WICTaCDBETXSULIuv1LS4J/MQZcEQeV7sMfi6WcoBmkn
- s6sTh8GKyPlQ==
+Received: from orsmga002.jf.intel.com ([10.7.209.21])
+ by fmsmga105.fm.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
+ 06 Apr 2020 19:36:59 -0700
+IronPort-SDR: T7GC5W2tlKHrWAiM3UILrbPff3Qjkfw/14bTtTiGR52lhOlWYOSs2+qCjcvtAojkEMJFfNBQ/O
+ t646qqP0fhDw==
 X-ExtLoop1: 1
-X-IronPort-AV: E=Sophos;i="5.72,353,1580803200"; d="scan'208";a="251080352"
+X-IronPort-AV: E=Sophos;i="5.72,353,1580803200"; d="scan'208";a="269278220"
 Received: from lkp-server01.sh.intel.com (HELO lkp-server01) ([10.239.97.150])
- by orsmga003.jf.intel.com with ESMTP; 06 Apr 2020 19:36:51 -0700
+ by orsmga002.jf.intel.com with ESMTP; 06 Apr 2020 19:36:57 -0700
 Received: from kbuild by lkp-server01 with local (Exim 4.89)
  (envelope-from <lkp@intel.com>)
- id 1jLe6c-0000HU-Ps; Tue, 07 Apr 2020 10:36:50 +0800
-Date: Tue, 07 Apr 2020 10:36:28 +0800
+ id 1jLe6i-0001T1-Fw; Tue, 07 Apr 2020 10:36:56 +0800
+Date: Tue, 07 Apr 2020 10:36:30 +0800
 From: kbuild test robot <lkp@intel.com>
 To: Kalle Valo <kvalo@codeaurora.org>
-Subject: [ath6kl:master] BUILD SUCCESS 0a0ab84f3c86f3986f94790ba9ae1501c6c043cb
-Message-ID: <5e8be72c.awOsmVydHLvle+66%lkp@intel.com>
+Subject: [ath6kl:ath-next] BUILD SUCCESS
+ 795def8b14ffa334881264823444eaab4d1879c3
+Message-ID: <5e8be72e.DYPBZSFqtDMoy0x3%lkp@intel.com>
 User-Agent: Heirloom mailx 12.5 6/20/10
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200406_193653_997725_71D85A1B 
-X-CRM114-Status: UNSURE (   5.43  )
+X-CRM114-CacheID: sfid-20200406_193700_034214_1537F964 
+X-CRM114-Status: UNSURE (   5.85  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -2.0 (--)
+X-Spam-Score: 0.7 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-2.0 points)
+ Content analysis details:   (0.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [192.55.52.88 listed in list.dnswl.org]
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [192.55.52.43 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [192.55.52.88 listed in wl.mailspike.net]
- -0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
  3.0 HEXHASH_WORD           Multiple instances of word + hexadecimal hash
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
@@ -80,12 +78,12 @@ Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-tree/branch: https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git  master
-branch HEAD: 0a0ab84f3c86f3986f94790ba9ae1501c6c043cb  Add localversion-wireless-testing-ath
+tree/branch: https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git  ath-next
+branch HEAD: 795def8b14ffa334881264823444eaab4d1879c3  ath10k: enable radar detection in secondary segment
 
-elapsed time: 483m
+elapsed time: 484m
 
-configs tested: 147
+configs tested: 193
 configs skipped: 0
 
 The following configs have been built successfully.
@@ -106,10 +104,12 @@ arm                        shmobile_defconfig
 arm                           sunxi_defconfig
 arm64                               defconfig
 sparc                            allyesconfig
-ia64                             alldefconfig
-sh                  sh7785lcr_32bit_defconfig
+ia64                                defconfig
+powerpc                             defconfig
 mips                              allnoconfig
 i386                              allnoconfig
+ia64                             alldefconfig
+sh                  sh7785lcr_32bit_defconfig
 i386                             alldefconfig
 i386                             allyesconfig
 i386                              debian-10.3
@@ -117,7 +117,6 @@ i386                                defconfig
 ia64                             allmodconfig
 ia64                              allnoconfig
 ia64                             allyesconfig
-ia64                                defconfig
 c6x                              allyesconfig
 c6x                        evmc6678_defconfig
 nios2                         10m50_defconfig
@@ -142,7 +141,6 @@ arc                                 defconfig
 microblaze                      mmu_defconfig
 microblaze                    nommu_defconfig
 powerpc                           allnoconfig
-powerpc                             defconfig
 powerpc                       ppc64_defconfig
 powerpc                          rhel-kconfig
 mips                           32r2_defconfig
@@ -166,23 +164,51 @@ m68k                 randconfig-a001-20200406
 nds32                randconfig-a001-20200406
 parisc               randconfig-a001-20200406
 riscv                randconfig-a001-20200406
+sparc64              randconfig-a001-20200406
+h8300                randconfig-a001-20200406
+nios2                randconfig-a001-20200406
+c6x                  randconfig-a001-20200406
+microblaze           randconfig-a001-20200406
+c6x                  randconfig-a001-20200407
+h8300                randconfig-a001-20200407
+microblaze           randconfig-a001-20200407
+nios2                randconfig-a001-20200407
+sparc64              randconfig-a001-20200407
 s390                 randconfig-a001-20200406
 xtensa               randconfig-a001-20200406
 csky                 randconfig-a001-20200406
 openrisc             randconfig-a001-20200406
 sh                   randconfig-a001-20200406
+x86_64               randconfig-b001-20200406
+x86_64               randconfig-b002-20200406
+x86_64               randconfig-b003-20200406
+i386                 randconfig-b001-20200406
+i386                 randconfig-b002-20200406
+i386                 randconfig-b003-20200406
 x86_64               randconfig-c001-20200407
 x86_64               randconfig-c002-20200407
 x86_64               randconfig-c003-20200407
 i386                 randconfig-c001-20200407
 i386                 randconfig-c002-20200407
 i386                 randconfig-c003-20200407
+x86_64               randconfig-c001-20200406
+x86_64               randconfig-c002-20200406
+x86_64               randconfig-c003-20200406
+i386                 randconfig-c001-20200406
+i386                 randconfig-c002-20200406
+i386                 randconfig-c003-20200406
 x86_64               randconfig-d001-20200406
 x86_64               randconfig-d002-20200406
 x86_64               randconfig-d003-20200406
 i386                 randconfig-d001-20200406
 i386                 randconfig-d002-20200406
 i386                 randconfig-d003-20200406
+x86_64               randconfig-e001-20200407
+x86_64               randconfig-e002-20200407
+x86_64               randconfig-e003-20200407
+i386                 randconfig-e001-20200407
+i386                 randconfig-e002-20200407
+i386                 randconfig-e003-20200407
 x86_64               randconfig-e001-20200406
 x86_64               randconfig-e002-20200406
 x86_64               randconfig-e003-20200406
@@ -195,6 +221,18 @@ x86_64               randconfig-f003-20200406
 i386                 randconfig-f001-20200406
 i386                 randconfig-f002-20200406
 i386                 randconfig-f003-20200406
+x86_64               randconfig-g001-20200407
+x86_64               randconfig-g002-20200407
+x86_64               randconfig-g003-20200407
+i386                 randconfig-g001-20200407
+i386                 randconfig-g002-20200407
+i386                 randconfig-g003-20200407
+x86_64               randconfig-g001-20200406
+x86_64               randconfig-g002-20200406
+x86_64               randconfig-g003-20200406
+i386                 randconfig-g001-20200406
+i386                 randconfig-g002-20200406
+i386                 randconfig-g003-20200406
 x86_64               randconfig-h001-20200406
 x86_64               randconfig-h002-20200406
 x86_64               randconfig-h003-20200406
@@ -207,6 +245,12 @@ arm64                randconfig-a001-20200406
 ia64                 randconfig-a001-20200406
 powerpc              randconfig-a001-20200406
 sparc                randconfig-a001-20200406
+arc                  randconfig-a001-20200407
+arm                  randconfig-a001-20200407
+arm64                randconfig-a001-20200407
+ia64                 randconfig-a001-20200407
+powerpc              randconfig-a001-20200407
+sparc                randconfig-a001-20200407
 riscv                            allmodconfig
 riscv                             allnoconfig
 riscv                            allyesconfig
