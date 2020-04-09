@@ -2,43 +2,43 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 10BFB1A372E
-	for <lists+ath10k@lfdr.de>; Thu,  9 Apr 2020 17:29:53 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9FCDC1A3755
+	for <lists+ath10k@lfdr.de>; Thu,  9 Apr 2020 17:40:58 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
 	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
 	List-Unsubscribe:List-Id:Message-ID:References:In-Reply-To:Subject:To:From:
 	Date:MIME-Version:Reply-To:Content-ID:Content-Description:Resent-Date:
 	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=ZGmkwU78fnucqrzjOyZf3xg4+5F7sGNvUgPiPX5oGUg=; b=FuIAFN3SonhfO12r3kcfpUbbU
-	d15mGAuxMeUPDw3SnVOxk1zO3mNPrYjFN58WN8JAerq8TQfNsSonwodrJXmfimCQyjrSbhpwataXO
-	bYKndt4nZWeaRmLnKp82d0VvXETzIKtkxsDw7rxqNWm5F7gsWviBExsj+PlepRUz5YlBT3BhjsCml
-	ajXy8aqlstf01pX7F1cGrkP4+uQK1/4ETw94qfQfrgcPOA9LueXncX9dKzZHvuzgO6EphtbmtVX8A
-	L6RHbflPIshJWbZBy8jZMmpqFdCcxLaH6D4gH2Uw73vHcsJ+XWgJ/RTkv2Rs2qJEJGPUbtB5nLgKz
-	A/Uqmsl/w==;
+	 bh=0b5Cukc87HxELdvJY225bus18lGhHF2Vb74t0Tunzfk=; b=MywgO/8Gp42bE6EWZA+6aqt12
+	XH42fxsnNfhAJS85DYMGs2uufiP7/hAaFWNdMChzfEsJd+8VS6/+fdcMBobf4/949KV/4oD8PInBz
+	ZDKCkh92g8Vk5ihph2Vyc0fZ07PqZGMrYJl1Z/1CY1NLZJ55MNS8DTgR8wKBU/3GvS10owFagUuJP
+	dO084HGOE1vxjGYFGQ6IYeGCZ4MQtsIdmA3PKwAtM93kIpkL81few3hoVFH0DpovtB4zzbBV2aK1k
+	07SPwOOxImEwqoz8oc15O6PQzUhyXnhweDuCK/68uPkz4GmbHI2/SYe4V1UNL6ACmjF9/35tu+BVb
+	fzodb+P3A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jMZ7l-0006vD-VZ; Thu, 09 Apr 2020 15:29:49 +0000
+	id 1jMZIW-00078d-Nu; Thu, 09 Apr 2020 15:40:56 +0000
 Received: from mail26.static.mailgun.info ([104.130.122.26])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jMZ7e-0006u8-2i
- for ath10k@lists.infradead.org; Thu, 09 Apr 2020 15:29:47 +0000
+ id 1jMZIS-00078J-QX
+ for ath10k@lists.infradead.org; Thu, 09 Apr 2020 15:40:54 +0000
 DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
  q=dns/txt; 
- s=smtp; t=1586446183; h=Message-ID: References: In-Reply-To: Subject:
+ s=smtp; t=1586446852; h=Message-ID: References: In-Reply-To: Subject:
  Cc: To: From: Date: Content-Transfer-Encoding: Content-Type:
- MIME-Version: Sender; bh=brs+hk/3j/GuFd9f10w+AYVvFGTMbGIG4zlFOTxpyww=;
- b=XRbkClzRA7u3rZuxtnAiw4g3aa11ZJ3pmPMYR8i1HlMpXNzmc7ncgcS59QjfaD0IPSOxnRGo
- F2AYgHM10WSsEL+rOP8ZaoFGpX5A/9VBobLioKPfuz+zyWNzLIvm1gp8h/VpjRxALhJRHbNV
- UHWsEK5nUk85kig1d1s1aHmDbUk=
+ MIME-Version: Sender; bh=JrY+N5OWsykGVuGT2zTyq6XfRigYdFNjytDlDSHFDUw=;
+ b=EwDNpk3V6UwdlPmqo+MoUZcHjMthM9CaE6ZmBBtwy6Pwuczyftck42yzlvVvl7hV1dR4djpQ
+ qa+tc4VgWGEIgAkZ4/twxOErCTcMDajXf7BPn5kjufCciC7FFHugTeS8teV9Xdvt0VGhTrGG
+ Wt+GwOS7GcVWK8jKBsbFfU5GhuE=
 X-Mailgun-Sending-Ip: 104.130.122.26
 X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
 Received: from smtp.codeaurora.org
  (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
- by mxa.mailgun.org with ESMTP id 5e8f3f53.7fe55a2c0148-smtp-out-n01;
- Thu, 09 Apr 2020 15:29:23 -0000 (UTC)
+ by mxa.mailgun.org with ESMTP id 5e8f4202.7f78029d3d50-smtp-out-n01;
+ Thu, 09 Apr 2020 15:40:50 -0000 (UTC)
 Received: by smtp.codeaurora.org (Postfix, from userid 1001)
- id DE42CC432C2; Thu,  9 Apr 2020 15:29:21 +0000 (UTC)
+ id 7055FC433CB; Thu,  9 Apr 2020 15:40:42 +0000 (UTC)
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  aws-us-west-2-caf-mail-1.web.codeaurora.org
 X-Spam-Level: 
@@ -47,23 +47,23 @@ X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED
 Received: from mail.codeaurora.org (localhost.localdomain [127.0.0.1])
  (using TLSv1 with cipher ECDHE-RSA-AES256-SHA (256/256 bits))
  (No client certificate requested) (Authenticated sender: wgong)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 73877C433CB;
- Thu,  9 Apr 2020 15:29:20 +0000 (UTC)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 5210CC432C2;
+ Thu,  9 Apr 2020 15:40:41 +0000 (UTC)
 MIME-Version: 1.0
-Date: Thu, 09 Apr 2020 23:29:20 +0800
+Date: Thu, 09 Apr 2020 23:40:41 +0800
 From: Wen Gong <wgong@codeaurora.org>
 To: Kalle Valo <kvalo@codeaurora.org>
 Subject: Re: [PATCH v9 3/4] ath10k: add htt TX bundle for sdio
-In-Reply-To: <87pncgu2ba.fsf@kamboji.qca.qualcomm.com>
+In-Reply-To: <87tv1su2vq.fsf@kamboji.qca.qualcomm.com>
 References: <20200212080415.31265-1-wgong@codeaurora.org>
  <20200212080415.31265-4-wgong@codeaurora.org>
- <87pncgu2ba.fsf@kamboji.qca.qualcomm.com>
-Message-ID: <36ee3bed6f7cd200df0755209ec6bbc2@codeaurora.org>
+ <87tv1su2vq.fsf@kamboji.qca.qualcomm.com>
+Message-ID: <185d31c2e6f8792beb240f2c74d26463@codeaurora.org>
 X-Sender: wgong@codeaurora.org
 User-Agent: Roundcube Webmail/1.3.9
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200409_082943_134917_42BDC3EC 
-X-CRM114-Status: UNSURE (   7.39  )
+X-CRM114-CacheID: sfid-20200409_084052_940665_D98A8EBD 
+X-CRM114-Status: UNSURE (   7.79  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -94,30 +94,36 @@ Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On 2020-04-09 23:05, Kalle Valo wrote:
+On 2020-04-09 22:53, Kalle Valo wrote:
+> Wen Gong <wgong@codeaurora.org> writes:
+> 
+>> +	ar->workqueue_tx_complete =
+>> +		create_singlethread_workqueue("ath10k_tx_complete_wq");
+>> +	if (!ar->workqueue_tx_complete)
+>> +		goto err_free_aux_wq;
+> 
+> We already have three threads:
+> 
+> ath/ath10k/core.c:      ar->workqueue =
+> create_singlethread_workqueue("ath10k_wq");
+> ath/ath10k/core.c:      ar->workqueue_aux =
+> create_singlethread_workqueue("ath10k_aux_wq");
+> ath/ath10k/sdio.c:      ar_sdio->workqueue =
+> create_singlethread_workqueue("ath10k_sdio_wq");
+> 
+> Do we really need a fourth one? For example, why can't we use
+> ar->workqueue_aux?
 
->> +		ep->tx_credits -= credits;
->> +		ath10k_dbg(ar, ATH10K_DBG_HTC,
->> +			   "htc ep %d consumed %d credits (total %d)\n",
-> 
-> "htc ep %d consumed %d credits total %d\n"
-> 
-> [...]
-> 
->> +	ath10k_dbg(ar, ATH10K_DBG_HTC, "bundle skb: len:%d\n", 
->> bundle_skb->len);
-> 
-> "htc bundle skb len %d\n"
-> 
-> In other words, start with "htc" and don't use colons or parenthesis.
-> This applies to most of debug messages in this patch.
-I will change the log and other log and sent v10.
-but "ath10k: disable TX complete indication of htt for sdio" and
-"ath10k: change ATH10K_SDIO_BUS_REQUEST_MAX_NUM from 64 to 1024" has 
-appied to ath-next,
-so I only need to send the left 2 patches:
-"ath10k: add htt TX bundle for sdio" and "ath10k: enable alt data of TX 
-path for sdio", right?
+For tcp test, it has 4 thread work meanwhile:
+tx_bundle_skbs(ar->workqueue),
+rx_indication(ar->workqueue_aux),
+sdio_async_tx_request(ar_sdio->workqueue),
+tx_bundle_complete(ar->workqueue_tx_complete)
+
+It has 4+ cpu/core in system, if reduced to 3 threads, then tcp 
+throughput will drop.
+only when it only has 1/2/3 cpu/core in system, then reduced to 3 
+threads will not drop.
 
 _______________________________________________
 ath10k mailing list
