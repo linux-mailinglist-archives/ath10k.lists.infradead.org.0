@@ -2,55 +2,55 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B9DDB1A3651
-	for <lists+ath10k@lfdr.de>; Thu,  9 Apr 2020 16:54:07 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 82A991A3693
+	for <lists+ath10k@lfdr.de>; Thu,  9 Apr 2020 17:06:19 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
 	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Fg+JcBU3AacapPFs7bGBwKI+QWwjw8Yu8CzEjdCJZ1Q=; b=lXf2I6E5iCOTt+
-	TxUlou3hGhxQGEZpDF53fHGZWoYcNUuqDMoECR03/rF7xYwZX96DUL7lhY6LWkfQmmIiCp1lsL4PE
-	HLaZgQnxb7TxNzRZkUzUjQWD8KgQNyD1IXJLvyNorQHwzhg79dfT4aNM5Jr3bYslUOgeq5MQ1DoYZ
-	9jzhvAGqYs7TyZqklMa9qnRnf5lhFOVPk/DF6WB8lXAvw5X4r26RCLwfhYGBu2D18GtL2PiRPDqk6
-	85JNGopNc4oXqsuHVNwDuJqWg/10l3ZU13mCQiw3De+zg46nZR1WUunlBcxdq7QAUlbX/83i0CPk4
-	wyNcHQPeGMEfq5S0AJ4Q==;
+	List-Owner; bh=Wj6UNX64WVScDqB5QL/QygoQ6FIeM1hAHf616PNPyBY=; b=ID8LMc/Y9ZvRdY
+	19En5nYNgT9hctJPWaBThQgRE9sKhSKi6c6TY/HEFK2Sm+ImbnckPwGFv6XrpZI/u2RXsZPRu9C3C
+	GRN/FLjwT3QFTpo9yTyEVJgtZDtvuyHCkfoKzyTinMdCOnrVaLGIGE3j3jezEPV6ZdmeyTMRWZ0FX
+	1eCqEb1AsLR3NqzwkaoETtF692gCHmsDivEyevEq+ay39OlmdmTdOkEZLM8xGagENUbpEilDsjkro
+	8MTzqyIH6m8HzxSaLZEIZfIsM6kEBud1TPvCRkg1gMujR4do9EA36IfZQx5p+T61DrrIL+z+Ku4V7
+	VSl/t35lKlB2NzvL/SZg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jMYZC-0005XI-5h; Thu, 09 Apr 2020 14:54:06 +0000
+	id 1jMYkz-0007Cm-SG; Thu, 09 Apr 2020 15:06:17 +0000
 Received: from mail27.static.mailgun.info ([104.130.122.27])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jMYZ6-0005Vz-73
- for ath10k@lists.infradead.org; Thu, 09 Apr 2020 14:54:03 +0000
+ id 1jMYkq-0007BR-Fr
+ for ath10k@lists.infradead.org; Thu, 09 Apr 2020 15:06:14 +0000
 DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
  q=dns/txt; 
- s=smtp; t=1586444042; h=Content-Type: MIME-Version: Message-ID:
+ s=smtp; t=1586444773; h=Content-Type: MIME-Version: Message-ID:
  In-Reply-To: Date: References: Subject: Cc: To: From: Sender;
- bh=8m8N/spe2Z+u0ec7luPWZFv5RMC+ATlrKjVKAVXWqrA=;
- b=hKb9tbLiGg8NtmVaLniGnK0hufbVzMeqIutsAGdmKd4zpedPbj0Kp9aurH0C580I4hCad6gp
- j+6YH3Fatfd8ebVnYJWQxsryRaQE4868J5TlJcsWw08u6+cjAxbYehqpae5z//3rK4qdZO3i
- bb/99xrwib0l0XPV23mxoQ239Ds=
+ bh=7KHDKvLbxU/THY3EFbTz9kpu3q/j3kdS9KYHkOOT2xA=;
+ b=fr8vCvCWe04ZG18LDsfdVo6CWTBUkHp56YZ/tbVlz3KEaQtTcyP5BBFfMfeTrzLYRzgLuQFN
+ QOe7WDsEhScqPlsmzNdKZr+MNp6Urmf9iTwrG+m8Rm6wQV1QbbiySg0x7U9JzMfNSeof5JZt
+ v81AMooTMuQLmHq9YmCrrGnKTz8=
 X-Mailgun-Sending-Ip: 104.130.122.27
 X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
 Received: from smtp.codeaurora.org
  (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
- by mxa.mailgun.org with ESMTP id 5e8f36ed.7fe935b2dc00-smtp-out-n02;
- Thu, 09 Apr 2020 14:53:33 -0000 (UTC)
+ by mxa.mailgun.org with ESMTP id 5e8f39ce.7f996f5278f0-smtp-out-n01;
+ Thu, 09 Apr 2020 15:05:50 -0000 (UTC)
 Received: by smtp.codeaurora.org (Postfix, from userid 1001)
- id B8709C433BA; Thu,  9 Apr 2020 14:53:32 +0000 (UTC)
+ id 1EACBC432C2; Thu,  9 Apr 2020 15:05:49 +0000 (UTC)
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  aws-us-west-2-caf-mail-1.web.codeaurora.org
 X-Spam-Level: 
 X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,SPF_NONE
- autolearn=unavailable autolearn_force=no version=3.4.0
+ autolearn=ham autolearn_force=no version=3.4.0
 Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
  [88.114.240.156])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested) (Authenticated sender: kvalo)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 26616C433D2;
- Thu,  9 Apr 2020 14:53:30 +0000 (UTC)
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 26616C433D2
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id A29E4C433BA;
+ Thu,  9 Apr 2020 15:05:47 +0000 (UTC)
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org A29E4C433BA
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
@@ -60,15 +60,15 @@ To: Wen Gong <wgong@codeaurora.org>
 Subject: Re: [PATCH v9 3/4] ath10k: add htt TX bundle for sdio
 References: <20200212080415.31265-1-wgong@codeaurora.org>
  <20200212080415.31265-4-wgong@codeaurora.org>
-Date: Thu, 09 Apr 2020 17:53:29 +0300
+Date: Thu, 09 Apr 2020 18:05:45 +0300
 In-Reply-To: <20200212080415.31265-4-wgong@codeaurora.org> (Wen Gong's message
  of "Wed, 12 Feb 2020 16:04:14 +0800")
-Message-ID: <87tv1su2vq.fsf@kamboji.qca.qualcomm.com>
+Message-ID: <87pncgu2ba.fsf@kamboji.qca.qualcomm.com>
 User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/24.5 (gnu/linux)
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200409_075402_303973_949E3055 
-X-CRM114-Status: GOOD (  15.48  )
+X-CRM114-CacheID: sfid-20200409_080613_422119_263538AE 
+X-CRM114-Status: GOOD (  14.34  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -130,25 +130,29 @@ Wen Gong <wgong@codeaurora.org> writes:
 
 [...]
 
-> --- a/drivers/net/wireless/ath/ath10k/core.c
-> +++ b/drivers/net/wireless/ath/ath10k/core.c
-> @@ -3208,6 +3208,11 @@ struct ath10k *ath10k_core_create(size_t priv_size, struct device *dev,
->  	if (!ar->workqueue_aux)
->  		goto err_free_wq;
->  
-> +	ar->workqueue_tx_complete =
-> +		create_singlethread_workqueue("ath10k_tx_complete_wq");
-> +	if (!ar->workqueue_tx_complete)
-> +		goto err_free_aux_wq;
+> +	if (ep->tx_credits < credits) {
+> +		ath10k_dbg(ar, ATH10K_DBG_HTC,
+> +			   "htc insufficient credits ep %d required %d available %d consume %d\n",
+> +			   eid, credits, ep->tx_credits, consume);
+> +		ret = -EAGAIN;
+> +		goto unlock;
+> +	}
+> +
+> +	if (consume) {
+> +		ep->tx_credits -= credits;
+> +		ath10k_dbg(ar, ATH10K_DBG_HTC,
+> +			   "htc ep %d consumed %d credits (total %d)\n",
 
-We already have three threads:
+"htc ep %d consumed %d credits total %d\n"
 
-ath/ath10k/core.c:      ar->workqueue = create_singlethread_workqueue("ath10k_wq");
-ath/ath10k/core.c:      ar->workqueue_aux = create_singlethread_workqueue("ath10k_aux_wq");
-ath/ath10k/sdio.c:      ar_sdio->workqueue = create_singlethread_workqueue("ath10k_sdio_wq");
+[...]
 
-Do we really need a fourth one? For example, why can't we use
-ar->workqueue_aux?
+> +	ath10k_dbg(ar, ATH10K_DBG_HTC, "bundle skb: len:%d\n", bundle_skb->len);
+
+"htc bundle skb len %d\n"
+
+In other words, start with "htc" and don't use colons or parenthesis.
+This applies to most of debug messages in this patch.
 
 -- 
 https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
