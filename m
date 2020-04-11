@@ -2,47 +2,47 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7E8241A558F
-	for <lists+ath10k@lfdr.de>; Sun, 12 Apr 2020 01:11:48 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 66EB01A5608
+	for <lists+ath10k@lfdr.de>; Sun, 12 Apr 2020 01:13:59 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ZgDaB2BmHKziJPEZKAIIOQ3VKmrq/KMm9c66mynAZPQ=; b=ic2vYf1u5INuKq
-	hLdjD6u/DxAjT/zbLAj6kI44H3QH9cTV0EnsMFAk8uYXXrHzfTzrCcj6p3MRdFp9x5LB+YBxPL3Tb
-	R3WYeUy+d9TNa1RUyAGIlYWrSs6rqFR/SwrPdDkjMIAagyyD4yFXMZG97a8IdnLgYWARxcryAn4AX
-	IFRFWkVqUzXey3u5eUDMWEUK9HP2cDUgru0yiI/B+7L58SFkZjibtCWYL1EgwLaKK/CkpF9E2HtRG
-	tNoTvsRkXxYROtmqs9+F2R6WO0WdH3/OHnnJ7N5EHvQa5r/I4TfwSN82IYMFCQm5ixCuG429AQVd3
-	P8OswllC8erF0oCvsfgw==;
+	List-Owner; bh=h6w1y1iUMOrWubuVkTCi43cUzXW+E9Lkipyrqwq9Kd8=; b=ETvloV8guFJY+b
+	/i9ZXGGtQHtPzLilJzwdPfLPJbfutD+X01zLqxmpln4klCMSfOtMoWR9DJarAlmgKF8wCHw0hhjBH
+	52UgOIuP4k6j+SR78IMvVxW0yabpOoP1kXwteYcqtypcUgR1dbdrYeQ1J52av5mFDARXYeHy7w9pl
+	zoPlyRBa8Pmi1fhfVPqIvkPpMzszzesLHfUCpEy7UTUBaZExlQ1LPdJ0XsIC6HmAZNY0VWxgjgwSf
+	dn/VOdZj8trivG8rA/h9eHc0hqNFm2d7IvC7LyKYZv8mo8lZKevaMKGZY1SxcAB6zCbDkNHshdoFG
+	dsrSYWgmyjLljl0wsCWQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jNPHu-0007cy-Gl; Sat, 11 Apr 2020 23:11:46 +0000
+	id 1jNPK1-0001A7-1x; Sat, 11 Apr 2020 23:13:57 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jNPDv-0001eU-Fe
- for ath10k@lists.infradead.org; Sat, 11 Apr 2020 23:07:43 +0000
+ id 1jNPEx-0002jF-6I
+ for ath10k@lists.infradead.org; Sat, 11 Apr 2020 23:08:44 +0000
 Received: from sasha-vm.mshome.net (c-73-47-72-35.hsd1.nh.comcast.net
  [73.47.72.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 9CC5F217D8;
- Sat, 11 Apr 2020 23:07:37 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id B054E21924;
+ Sat, 11 Apr 2020 23:08:41 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1586646458;
- bh=gd10e2c/wzZb0TFnZI+DI1l+5W6eeDsygfka7Ju+dhE=;
+ s=default; t=1586646522;
+ bh=dVbGrWaVrIop/+1oRIbfmEKSIY22+azppfBu68D6Byg=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=hu3seVpba3gUR6z+KzXDcd4VTEak3KH6BhcbunEU/iYoufppxVR9i+gtvL7J/o/If
- wTqQpch3exefrM0eVgrhJf1Rx1bQAg3nbRIJ3AjJlVY0AIrEGcvCfXESA4yBJRIRFm
- Fq0Kk1Tzuc/aT0qte5Gw5wHw1vEp18MOnIgvZo+E=
+ b=Vgvu16iGCYvX79A30TebpY0LGzBbRNGjIppS/36VPNGfBKLOItGYtmgF0VvSHpTSt
+ hcBEnF6Ec9+kbcD7dsQ09vUM3J+rsFaIFSFUwXzB7nqQOSR6UMsYKdu7+0In0KZZ20
+ fnLowA6CMFMSiMY5iiZDfbMqQb/bSLfPaV7L4XiY=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 5.5 027/121] ath10k: fix not registering airtime of
- 11a station with WMM disable
-Date: Sat, 11 Apr 2020 19:05:32 -0400
-Message-Id: <20200411230706.23855-27-sashal@kernel.org>
+Subject: [PATCH AUTOSEL 5.5 078/121] ath10k: start recovery process when read
+ int status fail for sdio
+Date: Sat, 11 Apr 2020 19:06:23 -0400
+Message-Id: <20200411230706.23855-78-sashal@kernel.org>
 X-Mailer: git-send-email 2.20.1
 In-Reply-To: <20200411230706.23855-1-sashal@kernel.org>
 References: <20200411230706.23855-1-sashal@kernel.org>
@@ -50,8 +50,8 @@ MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200411_160739_614071_9364DCB7 
-X-CRM114-Status: UNSURE (   9.59  )
+X-CRM114-CacheID: sfid-20200411_160843_262757_4110824A 
+X-CRM114-Status: UNSURE (   9.51  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -83,49 +83,57 @@ List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
 Cc: Sasha Levin <sashal@kernel.org>, netdev@vger.kernel.org,
  linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
- Yibo Zhao <yiboz@codeaurora.org>, Kalle Valo <kvalo@codeaurora.org>
+ Wen Gong <wgong@codeaurora.org>, Kalle Valo <kvalo@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-From: Yibo Zhao <yiboz@codeaurora.org>
+From: Wen Gong <wgong@codeaurora.org>
 
-[ Upstream commit f9680c75d187f2d5b9288c02f7a432041d4447b4 ]
+[ Upstream commit 37b7ecb75627699e96750db1e0c5ac56224245df ]
 
-The tid of 11a station with WMM disable reported by FW is 0x10 in
-tx completion. The tid 16 is mapped to a NULL txq since buffer
-MMPDU capbility is not supported. Then 11a station's airtime will
-not be registered due to NULL txq check. As a results, airtime of
-11a station keeps unchanged in debugfs system.
+When running simulate crash stress test, it happened
+"failed to read from address 0x800: -110".
 
-Mask the tid along with IEEE80211_QOS_CTL_TID_MASK to make it in
-the valid range.
+Test steps:
+1. Run command continuous
+echo soft > /sys/kernel/debug/ieee80211/phy0/ath10k/simulate_fw_crash
 
-Hardwares tested : QCA9984
-Firmwares tested : 10.4-3.10-00047
+2. error happened and it did not begin recovery for long time.
+[74377.334846] ath10k_sdio mmc1:0001:1: simulating soft firmware crash
+[74378.378217] ath10k_sdio mmc1:0001:1: failed to read from address 0x800: -110
+[74378.378371] ath10k_sdio mmc1:0001:1: failed to process pending SDIO interrupts: -110
 
-Signed-off-by: Yibo Zhao <yiboz@codeaurora.org>
+It has sdio errors since it can not read MBOX_HOST_INT_STATUS_ADDRESS,
+then it has to do recovery process to recovery ath10k.
+
+Tested with QCA6174 SDIO with firmware WLAN.RMH.4.4.1-00042.
+
+Signed-off-by: Wen Gong <wgong@codeaurora.org>
 Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 Signed-off-by: Sasha Levin <sashal@kernel.org>
 ---
- drivers/net/wireless/ath/ath10k/htt_rx.c | 3 ++-
- 1 file changed, 2 insertions(+), 1 deletion(-)
+ drivers/net/wireless/ath/ath10k/sdio.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
 
-diff --git a/drivers/net/wireless/ath/ath10k/htt_rx.c b/drivers/net/wireless/ath/ath10k/htt_rx.c
-index d95b63f133abf..c249fbc8d2dd8 100644
---- a/drivers/net/wireless/ath/ath10k/htt_rx.c
-+++ b/drivers/net/wireless/ath/ath10k/htt_rx.c
-@@ -2732,7 +2732,8 @@ static void ath10k_htt_rx_tx_compl_ind(struct ath10k *ar,
- 			continue;
- 		}
+diff --git a/drivers/net/wireless/ath/ath10k/sdio.c b/drivers/net/wireless/ath/ath10k/sdio.c
+index 1453947d6bc94..35e62b1d677f4 100644
+--- a/drivers/net/wireless/ath/ath10k/sdio.c
++++ b/drivers/net/wireless/ath/ath10k/sdio.c
+@@ -913,8 +913,11 @@ static int ath10k_sdio_mbox_read_int_status(struct ath10k *ar,
+ 	 */
+ 	ret = ath10k_sdio_read(ar, MBOX_HOST_INT_STATUS_ADDRESS,
+ 			       irq_proc_reg, sizeof(*irq_proc_reg));
+-	if (ret)
++	if (ret) {
++		queue_work(ar->workqueue, &ar->restart_work);
++		ath10k_warn(ar, "read int status fail, start recovery\n");
+ 		goto out;
++	}
  
--		tid = FIELD_GET(HTT_TX_PPDU_DUR_INFO0_TID_MASK, info0);
-+		tid = FIELD_GET(HTT_TX_PPDU_DUR_INFO0_TID_MASK, info0) &
-+						IEEE80211_QOS_CTL_TID_MASK;
- 		tx_duration = __le32_to_cpu(ppdu_dur->tx_duration);
- 
- 		ieee80211_sta_register_airtime(peer->sta, tid, tx_duration, 0);
+ 	/* Update only those registers that are enabled */
+ 	*host_int_status = irq_proc_reg->host_int_status &
 -- 
 2.20.1
 
