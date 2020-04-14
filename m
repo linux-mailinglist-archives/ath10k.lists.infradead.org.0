@@ -2,132 +2,92 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id DF92F1A7304
-	for <lists+ath10k@lfdr.de>; Tue, 14 Apr 2020 07:32:23 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7E1B01A74A7
+	for <lists+ath10k@lfdr.de>; Tue, 14 Apr 2020 09:26:37 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:
-	Message-ID:Date:To:From:Subject:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ErqsiuCefOzdnZQavpbVFPp/eu0Q2iEmSoEtoqDkq38=; b=o6jai7cOpXVqaL
-	xmvWezHpmkR/OQslUdtt3dhBk2+UmD+bgisSVTLZoQ7pgpyiWDE0pznO0aFJ7XfDuA/ZnHSwUChjZ
-	BEK9YFRwvb/aTiCxbUwXkFaJxdP+eY19ixkleRaiA7IUdZYnNyY2GlOm90uQG5FAroKkEMqOKzOWl
-	hvDmDklkjL70qYwD5F2Rt+bU6rZ7qdv3S9DoQVLOYuXrbGqTmG3bQf4FXbrGCg6C/q2cw9ptnStBg
-	5T1rYagwKpC0jsKicTt/27xjom65nvFIZrfR2fHqjYlw9EutCoFh5d/9reGrnIOhIyXqEzJ1htIoC
-	2HZ9LzsvRkWIc+ry7LsA==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:References:MIME-Version:Date:Message-ID:Subject:From
+	:To:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:List-Owner;
+	 bh=l5Y/fYj6ncP4kILgnArzv1NxJ2zZuqCNLYGF7/Uyxhg=; b=onQwmH1oiqYoZ1lBZENNTCeXW
+	sOfzJ895DcdHT9Nnxf+Oac93jSll2lDvsqu015pEGlrozWMKzk3aIMChcZLKAiEybJUPR4R33Z0Zo
+	jIhqyZza7yQaK0nIouDzoA9T3PM3Tvpmgl45sECOy0KY0jiDwsXM8gWPSktBHbkbgU+wlzF4sb019
+	5C7WHwZgSBQ+qJwe9ZyhMiqmups6kBr8IwN5+j6SS+u+XGkvxfd14agZmpWbX5ioR/qSQeDyKtLDS
+	EMNdzNglcDQbV9ClCMZIJXnF/leDdbds0yPivWKMBacekzvuHQpSNag5lwVdADolUL4fGkH3DvQ6F
+	96WujZ81A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jOEBF-0001My-6I; Tue, 14 Apr 2020 05:32:17 +0000
-Received: from alexa-out-sd-02.qualcomm.com ([199.106.114.39])
+	id 1jOFxq-00057O-5i; Tue, 14 Apr 2020 07:26:34 +0000
+Received: from sonic307-56.consmr.mail.ne1.yahoo.com ([66.163.190.31])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jOEBA-0001Lu-MH
- for ath10k@lists.infradead.org; Tue, 14 Apr 2020 05:32:14 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
- d=qti.qualcomm.com; i=@qti.qualcomm.com; q=dns/txt;
- s=qcdkim; t=1586842332; x=1618378332;
- h=from:to:cc:date:message-id:references:in-reply-to:
- content-transfer-encoding:mime-version:subject;
- bh=MVznwrR6WRGZqZtQ/rQ1ZlMtRcqf/PBBv2+2gBrBQsQ=;
- b=fYnUxyXPa1kDZYep8vbRVe02zyokZPFNKq6yFk8Ab0xblkjTL6vo8hUs
- 8mqTjbwqZvsC3L/UWmJAsa8Fd8Ov/hRuFpQ7uOx4sdAjITO7OA25APW9l
- Cg7B+TTk0CX+Mstw7GF6SOyzEgQ9suWkOPY9G8ttsMs2MnkZ8udV7lKxT k=;
-Subject: RE: [PATCH v2 2/2] ath10k: correct legacy rate in tx stats
-Thread-Topic: [PATCH v2 2/2] ath10k: correct legacy rate in tx stats
-Received: from unknown (HELO ironmsg05-sd.qualcomm.com) ([10.53.140.145])
- by alexa-out-sd-02.qualcomm.com with ESMTP; 13 Apr 2020 22:32:07 -0700
-Received: from nasanexm01a.na.qualcomm.com ([10.85.0.81])
- by ironmsg05-sd.qualcomm.com with ESMTP/TLS/AES256-SHA;
- 13 Apr 2020 22:32:06 -0700
-Received: from nasanexm01a.na.qualcomm.com (10.85.0.81) by
- nasanexm01a.na.qualcomm.com (10.85.0.81) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Mon, 13 Apr 2020 22:32:06 -0700
-Received: from NAM11-DM6-obe.outbound.protection.outlook.com (199.106.107.6)
- by nasanexm01a.na.qualcomm.com (10.85.0.81) with Microsoft SMTP Server (TLS)
- id 15.0.1497.2 via Frontend Transport; Mon, 13 Apr 2020 22:32:06 -0700
-Received: from MWHPR02MB2496.namprd02.prod.outlook.com (2603:10b6:300:48::7)
- by MWHPR02MB3277.namprd02.prod.outlook.com (2603:10b6:301:6a::37) with
- Microsoft SMTP Server (version=TLS1_2,
- cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2900.28; Tue, 14 Apr
- 2020 05:32:04 +0000
-Received: from MWHPR02MB2496.namprd02.prod.outlook.com
- ([fe80::fdf2:a83d:5a48:2a6a]) by MWHPR02MB2496.namprd02.prod.outlook.com
- ([fe80::fdf2:a83d:5a48:2a6a%4]) with mapi id 15.20.2900.028; Tue, 14 Apr 2020
- 05:32:04 +0000
-From: Yu Wang <yyuwang@qti.qualcomm.com>
-To: "kvalo@codeaurora.org" <kvalo@codeaurora.org>, Yu Wang
- <yyuwang@codeaurora.org>
-Thread-Index: AQHWDnpFzFtV+JgAYEexhoJhfDOKm6h4EwBg
-Date: Tue, 14 Apr 2020 05:32:04 +0000
-Message-ID: <MWHPR02MB2496EE78C46698CE3E6101EB98DA0@MWHPR02MB2496.namprd02.prod.outlook.com>
-References: <0101016e82883ded-63f88383-cd90-4cb0-b9bb-3dd6a1e9f4e9-000000@us-west-2.amazonses.com>
- <20200409142136.5490EC433BA@smtp.codeaurora.org>
-In-Reply-To: <20200409142136.5490EC433BA@smtp.codeaurora.org>
-Accept-Language: zh-CN, en-US
-Content-Language: en-US
-X-MS-Has-Attach: 
-X-MS-TNEF-Correlator: 
-authentication-results: spf=none (sender IP is )
- smtp.mailfrom=yyuwang@qti.qualcomm.com; 
-x-originating-ip: [103.229.16.25]
-x-ms-publictraffictype: Email
-x-ms-office365-filtering-correlation-id: 03afdb92-3176-4cff-6409-08d7e0352a8c
-x-ms-traffictypediagnostic: MWHPR02MB3277:
-x-ld-processed: 98e9ba89-e1a1-4e38-9007-8bdabc25de1d,ExtAddr
-x-microsoft-antispam-prvs: <MWHPR02MB3277A5F76B9C918A1BDAD98798DA0@MWHPR02MB3277.namprd02.prod.outlook.com>
-x-ms-oob-tlc-oobclassifiers: OLM:8882;
-x-forefront-prvs: 0373D94D15
-x-forefront-antispam-report: CIP:255.255.255.255; CTRY:; LANG:en; SCL:1; SRV:;
- IPV:NLI; SFV:NSPM; H:MWHPR02MB2496.namprd02.prod.outlook.com; PTR:; CAT:NONE;
- SFTY:;
- SFS:(10019020)(376002)(39860400002)(346002)(136003)(396003)(366004)(478600001)(966005)(26005)(4326008)(71200400001)(7696005)(86362001)(6506007)(316002)(110136005)(54906003)(53546011)(186003)(55016002)(2906002)(76116006)(66946007)(52536014)(8676002)(9686003)(66446008)(64756008)(66476007)(81156014)(33656002)(66556008)(5660300002)(8936002);
- DIR:OUT; SFP:1102; 
-x-ms-exchange-senderadcheck: 1
-x-microsoft-antispam: BCL:0;
-x-microsoft-antispam-message-info: iSUPDrDtmSFcm4rQVOSqHZAviAyEtGBKCSpSkroS+J9B2TXeWl5dxcHPSO0dE1ECPEza9qLLryE4urTyOmcZ0bsG5ySX9ET+iEePPUIbpPlQl8CFq48gUaAAweCu8PEe+ymhZ9vp1tBSqE5NV23efVSnc5Ko9sZuhwp8JT8uKckMzfbdE14gHVd/2SOr6sqIt8oarU8o0yKGSxqilXNZZf1LPmtRNMlfiiN4AeNsAaC36bi1GFBYDfun9nEIjv/UOfOKngRY3u0T6El+PHGssoIDvkonCQAC+thmvoNuIpBUpT9HMEuy7ycgJwMSb+0DK1lQ5vwEH9rRk5w2rD9/sSlx1J26sFqVMmRpmxwf8UlhvR/yDJkhOiYA46KuxraVLUgPoB17rTH+LomNbVfXLImiPrn8L18sS9IUxPtphS1EQLy0NIfrWVCTS1JKyxN1g/j0wV5X49/pH3yXO1bAIHrD6i1b+tNKHqKpVG07dqTv8ZJSZmwZ+mnrWA0fZc/RmHe3LLMeFhdWCs4m02ET7A==
-x-ms-exchange-antispam-messagedata: WVYyBj1mpbvJLkfIcOjRhktcC30zm/g4o2sCTnoVxT5vDG10Q7xa2ntp/0hVWpYsj4H3+Eq/6RZ/3N1yXEUSGZ46+R8SJRPLl/K0A9+gV8gzI0R9I2ijbhu8+Q+rCJ94PSoG8iLEuksgwhFodPO35g==
-x-ms-exchange-transport-forked: True
-arc-seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
- b=DLxy/R9zFMfnBGFo37uDXbQ0zpohdB7hluo6a85sjD/qwlLIFmCUn60t3B7cfbLOwK0HRfQmVpQ3AOpR8CrMzda4o307nisWRZLz9Kuwqjte+ekFDT1P4REiGMucwv6nzgiALEr/SITQICgfIyYlWQVxTf+cCJQa5TTq+dFKgQ6EDZvherE41bM2g1KI42gq6XFMY211NgLRxidsjQGGvR1aWeXT9vocx44wkC51dlGT41h5V+uN56G9bi77S/K1ZZ4S1dnyTAW22nnCn/HPZZtg1auhT7FwoIJ7r6zVaCBVqQZHbpbqfxHJKgVxMVNoVJSffhj2bcptTpkaj46VBA==
-arc-message-signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; 
- s=arcselector9901;
- h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
- bh=rqMskidiONKcjAwfkZc+os76whAYBprcoNV1XT8BtLo=;
- b=hekGapAnWZht911pjwBoRnVTrkRSBOqEUm8Vpzfzk7ZDPZy4a4xgsl9C2i7+flPeduCTLMk226YQE6JNKJaYJRrjIVz4e4kTHCH1Sd7y+RD3a052P/m2h1OMEkasH5XE+fExVHtdhQ7o3I6rNwKmbz1812AubkUn+ylvtZUE2caRY19oNfM82lMP9T/Pp2bx2RwzHOWV9/VhxR/7SRzGVaZt0ihhA1LCW5NZItw7B6vhZUhW9SCGIXygpvpJ7y4skYQcjhvgOrYc2BRUDScBpN25BbFJTNNr7ZV5yFG+QuLUFGJi4FWBhGvTKUcKXHUpaDa70J5CFDqpm07/rxa9kQ==
-arc-authentication-results: i=1; mx.microsoft.com 1; spf=pass
- smtp.mailfrom=qti.qualcomm.com; dmarc=pass action=none
- header.from=qti.qualcomm.com; dkim=pass header.d=qti.qualcomm.com; arc=none
-dkim-signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=qualcomm.onmicrosoft.com; s=selector1-qualcomm-onmicrosoft-com;
- h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
- bh=rqMskidiONKcjAwfkZc+os76whAYBprcoNV1XT8BtLo=;
- b=tQn85Y0m4dvCGoR8RRq4xUoopzHA7vRphQ2tqAEuDAqblUsOM/WK5iDVulouOkoPkx5FceB0JJRfbAY2aXEbVz1VL3mtdc5pQx6bi4l5QcGKkVZ/yGOd6JafnyeIFp2T4NOWo+4rDB2dfrStyO4VPDQcv8hynIY6yIRwfTaf2Zk=
-x-ms-exchange-crosstenant-network-message-id: 03afdb92-3176-4cff-6409-08d7e0352a8c
-x-ms-exchange-crosstenant-originalarrivaltime: 14 Apr 2020 05:32:04.6117 (UTC)
-x-ms-exchange-crosstenant-fromentityheader: Hosted
-x-ms-exchange-crosstenant-id: 98e9ba89-e1a1-4e38-9007-8bdabc25de1d
-x-ms-exchange-crosstenant-mailboxtype: HOSTED
-x-ms-exchange-crosstenant-userprincipalname: aH3EsLGzhjFEHXXX36nr4/nSoMnBvypFS7rFtvmlbEosMmd1drmVrlIwPXwvMdLHWU9qU5aHJJdp873gFGbPpYklOGHUS+MnTOpVcWAgzu0=
-x-ms-exchange-transport-crosstenantheadersstamped: MWHPR02MB3277
-x-originatororg: qti.qualcomm.com
+ id 1jOFxm-00056h-63
+ for ath10k@lists.infradead.org; Tue, 14 Apr 2020 07:26:31 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=aol.com; s=a2048;
+ t=1586849181; bh=szgpje1dhCElM72a8LmBd0zpAXqCoOA6+NZY5gzNaBI=;
+ h=To:From:Subject:Date:References:From:Subject;
+ b=LksFpdM6Z+8A80MOOJIRa3m89+eQT9VcIpiAvm53ygAFmWvS80aFQ0zwDFTCwj5hprtyXip6uSgjvLTV7SCVert4FjWM9b46gMk8H0qJbqYVq1o1rNjgefgDW7PPHUXmcSZJKj/hFLWEo+SA7k6Xe4Si6++zunGhy2WqCBJJn6GHbtnzzVWIenEXkKbyXcecGXpWz1EelWsF2CajAUAeGzHmHEVnHEvWFaZ5+3Jpu2btfgyZQw5d6UqIpKwLkQ9jFF1XEi+y+8UHf9akuha6lhhcBmlnVjmzzkiHq266+JYRMyiG1f7zHwcnmiwfoCkRlvApvT2TvaBc953Sl6qksw==
+X-YMail-OSG: uTvnPFIVM1neRqprXqWQjY4OAJ2K08Tzawl.2KI5oB63PqUafCRm1CZu.OwDfjo
+ 3TQg9ge0963w5u9cYevN8yWMIYePs7Nl0nWbzP6k_4rp6LSJH4TYqDQcxyzgBw7XojBz6rregnBz
+ QwzSoasBIFdR22Uy0m.FuWl7wISIS.8PbJVtwpVdEoVrEDZinhD.EDkWZE.q1GAAdy_nSKHe3QGI
+ _5cTbIp1K4ayb6Dn5K1NGojmfBboABRuOiFHiaXdAzqAxbe06Ia5q9Z_1M6zox2Nxi3WXiY8RniI
+ Pdx_qkj54dIm2Q92iXwrmPcVTECodXE9NMlt4g2pX3CnJZAwXtxTgeIeypknCsZbUceaNK6zMV4w
+ xoKtFEjRAWmpUQka8O_z5Us2rS5RmCYkivzoVLKIOSYbYO6i0eJaH3.FsKZhtATPmnsZotB6toJY
+ x8iDQgSx0f6XyWm8hstqbiRdQCNQVaxs.8fwrAvvpT7B7aeYn7xmoJWr8RUYCenBCeM1YVO.IdOE
+ DULgrjOZBWrz2H_9eBdyowOwZneb1IRuf2.ZDxCx8rR22xtv8WeXKYEYvWiTBWiBTwvwo9XQ_.xh
+ CHd64aIDqG4gcN3dR6ns9fHBuQwzX9yuxTDX2o2ASGBmHG_kI18G1gfRACKM2dYfXDtOijH91Rn.
+ eO0Qxa8Q6eHUtg8vXhsOuUonmlj9vXX.AbliMvhxEfLxWc3DFwuxu1XB4GGp2rtDs0BF42guOt_3
+ u_3ou4XdsLiLKnXQQmWe5ijaWUlTtv6fdh047vzEfLLCklbzxLMTFMzkwhnvVNViApScjjFCgWO3
+ E3IeGKNzo7PXKgtsOyodo9MUL4EKRX_DhRMHG1zwmhLlNxffqBjVKyX.pLdu2iQojXbXQx6ua.sK
+ xXbhud.qgu7_6os6VIOWghneRZSoD3njGAmoyxmB8OQhExz4hJ_7CyXcyZdDrv9GDlLH2EkPwl5I
+ .M8c2PiskeyGCz9rv8cN1LD8UdQ1iSLvhbVzjX63KNsW5jFmJelOomvbxmFaChYzjvW6YPDZqe.l
+ 9o8TIlcvC7c4rpm5VplXuvdvci1Pg1g4aboGznZt0N1Cp1sTBW1P8IbSltrbPOOjkbFcwvAKAfLU
+ SvjgRHPWRzAIAWQgsaAg_xohjln_12x6DOCBCJSCi_HemI8c3BjOoKmjGdJBfWZzQq6gYbDszxkZ
+ OBihCkTSVucj2cXnf6nJhEYyTn7dKZ4pslw6BBM3b_AQTcBRwkRxMV8Nfij3pNv64ao0EXnKSu5v
+ _onUXW9aF167fh62CP_PJCYjnyfq5tpQU3Li0x6uC8r6LcY5kpBOSC7IaHwdPillObl7XRmbnjei
+ suAlFvx_FygqlpoopW_MkfBvOAhgASh0GK8sL7X0-
+Received: from sonic.gate.mail.ne1.yahoo.com by
+ sonic307.consmr.mail.ne1.yahoo.com with HTTP; Tue, 14 Apr 2020 07:26:21 +0000
+Received: by smtp403.mail.ir2.yahoo.com (VZM Hermes SMTP Server) with ESMTPA
+ ID 9c669cfd73f7b4baad151dfdc18d0be8; 
+ Tue, 14 Apr 2020 07:26:18 +0000 (UTC)
+To: ath10k@lists.infradead.org
+From: Nicola Mori <nicolamori@aol.com>
+Subject: Killer WiFi card keeps disconnecting due to latest firmware
+Message-ID: <b07a7ea1-7ab2-8ce3-95d7-6726e7708749@aol.com>
+Date: Tue, 14 Apr 2020 09:26:16 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
+ Thunderbird/68.7.0
 MIME-Version: 1.0
+Content-Language: en-US
+References: <b07a7ea1-7ab2-8ce3-95d7-6726e7708749.ref@aol.com>
+X-Mailer: WebService/1.1.15651 hermes Apache-HttpAsyncClient/4.1.4
+ (Java/11.0.6)
+X-Bad-Reply: References but no 'Re:' in Subject.
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200413_223212_773632_2AE3F070 
-X-CRM114-Status: GOOD (  18.71  )
-X-Spam-Score: -2.4 (--)
+X-CRM114-CacheID: sfid-20200414_002630_276969_E1CC7811 
+X-CRM114-Status: UNSURE (   6.48  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -1.0 (-)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-2.4 points)
+ Content analysis details:   (-1.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [199.106.114.39 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [66.163.190.31 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.8 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [66.163.190.31 listed in wl.mailspike.net]
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider [nicolamori[at]aol.com]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -139,75 +99,32 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: "linux-wireless@vger.kernel.org" <linux-wireless@vger.kernel.org>,
- "ath10k@lists.infradead.org" <ath10k@lists.infradead.org>
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-DQoNCj4gLS0tLS1PcmlnaW5hbCBNZXNzYWdlLS0tLS0NCj4gRnJvbTogYXRoMTBrIDxhdGgxMGst
-Ym91bmNlc0BsaXN0cy5pbmZyYWRlYWQub3JnPiBPbiBCZWhhbGYgT2YgS2FsbGUgVmFsbw0KPiBT
-ZW50OiBUaHVyc2RheSwgQXByaWwgOSwgMjAyMCAxMDoyMiBQTQ0KPiBUbzogWXUgV2FuZyA8eXl1
-d2FuZ0Bjb2RlYXVyb3JhLm9yZz4NCj4gQ2M6IGxpbnV4LXdpcmVsZXNzQHZnZXIua2VybmVsLm9y
-ZzsgYXRoMTBrQGxpc3RzLmluZnJhZGVhZC5vcmcNCj4gU3ViamVjdDogW0VYVF0gUmU6IFtQQVRD
-SCB2MiAyLzJdIGF0aDEwazogY29ycmVjdCBsZWdhY3kgcmF0ZSBpbiB0eCBzdGF0cw0KPg0KPiBZ
-dSBXYW5nIDx5eXV3YW5nQGNvZGVhdXJvcmEub3JnPiB3cm90ZToNCj4NCj4gPiBXaGVuIHdvcmtp
-bmcgaW4gc3RhdGlvbiBtb2RlLCBhZnRlciBjb25uZWN0ZWQgdG8gYSBsZWdhY3kgQVAsIDExZw0K
-PiA+IG9ubHksIGZvciBleGFtcGxlLCB0aGUgdHggYml0cmF0ZSBpcyBpbmNvcnJlY3QgaW4gb3V0
-cHV0IG9mIGNvbW1hbmQNCj4gPiAnaXcgd2xhbjAgbGluaycuDQo+ID4NCj4gPiBUaGF0J3MgYmVj
-YXVzZSB0aGUgbGVnYWN5IHR4IGJpdHJhdGUgdmFsdWUgcmVwb3J0ZWQgYnkgZmlybXdhcmUgaXMg
-bm90DQo+ID4gd2VsbCBoYW5kbGVkOg0KPiA+IEZvciBRQ0E2MTc0LCB0aGUgdmFsdWUgcmVwcmVz
-ZW50cyByYXRlIGluZGV4LCBidXQgdHJlYXRlZCBhcyBhIHJlYWwNCj4gPiByYXRlOyBGb3IgUUNB
-OTg4OCwgdGhlIHZhbHVlIGlzIHJlYWwgcmF0ZSwgd2l0aCB1bml0ICdNYnBzJywgYnV0DQo+ID4g
-dHJlYXRlZCBhcyAnMTAwa2JwcycuDQo+ID4NCj4gPiBUbyBmaXggdGhpcyBpc3N1ZToNCj4gPiAx
-LiBUcmFuc2xhdGUgdGhlIHJhdGUgaW5kZXggdG8gcmVhbCByYXRlIGZvciBRQ0E2MTc0OyAyLiBU
-cmFuc2xhdGUgdGhlDQo+ID4gcmF0ZSBmcm9tICdNYnBzJyB0byAna2JwcycgZm9yIFFDQTk4ODgu
-DQo+ID4NCj4gPiBUZXN0ZWQgd2l0aDoNCj4gPiBRQ0E2MTc0IFBDSWUgd2l0aCBmaXJtd2FyZSBX
-TEFOLlJNLjQuNC4xLmMzLTAwMDMxLg0KPiA+IFFDQTYxNzQgU0RJTyB3aXRoIGZpcm13YXJlIFdM
-QU4uUk1ILjQuNC4xLTAwMDI5Lg0KPiA+IFFDQTk4ODggUENJZSB3aXRoIGZpcm13YXJlIDEwLjQt
-My45LjAuMi0wMDA0MC4NCj4gPg0KPiA+IFNpZ25lZC1vZmYtYnk6IFl1IFdhbmcgPHl5dXdhbmdA
-Y29kZWF1cm9yYS5vcmc+DQo+ID4gU2lnbmVkLW9mZi1ieTogS2FsbGUgVmFsbyA8a3ZhbG9AY29k
-ZWF1cm9yYS5vcmc+DQo+DQo+IE15IGNvbW1lbnRzIGRvbid0IHNlZW0gdG8gZ28gdG8gcGF0Y2h3
-b3JrLCBzbyB0cnlpbmcgYWdhaW46DQo+DQo+IFdoYXQgYWJvdXQgUUNBOTg4WCBhbmQgV0NOMzk5
-MCwgaG93IGRvIHRoZXkgYmVoYXZlPyBEb2VzIHRoaXMgcGF0Y2gNCj4gYnJlYWsgdGhvc2U/DQpT
-aW5jZSBIVFRfVDJIX01TR19UWVBFX1BQRFVfU1RBVFNfSU5EIGlzIGEgbmV3bHkgYWRkZWQgbWVz
-c2FnZSwgc3VwcG9zZSBpdCdzIHdvbid0IGJyZWFrIHRoZSBvdGhlciBmdW5jdGlvbnMuDQpJIGRv
-buKAmXQgaGF2ZSBlbnZpcm9ubWVudCB0byB2ZXJpZnkgdGhlIHBhdGNoIHdpdGggUUNBOTg4WCBh
-bmQgV0NOMzk5MC4NCkNhbiBhbnlvbmUgaGVscCBvbiB0aGlzPw0KDQo+DQo+ID4gK2NjayA9IChw
-cmVhbWJsZSA9PSBXTUlfUkFURV9QUkVBTUJMRV9DQ0spOw0KPiA+ICtod19yYXRlID0gQVRIMTBL
-X0hXX0xFR0FDWV9SQVRFKCpyYXRlY29kZSk7DQo+ID4gK2ZvciAoaSA9IDA7IGkgPCBzYmFuZC0+
-bl9iaXRyYXRlczsgaSsrKSB7DQo+ID4gK2JpdHJhdGVzID0gJnNiYW5kLT5iaXRyYXRlc1tpXTsN
-Cj4gPiAraWYgKGF0aDEwa19tYWNfYml0cmF0ZV9pc19jY2soYml0cmF0ZXMtPmJpdHJhdGUpICE9
-IGNjaykNCj4gPiArY29udGludWU7DQo+ID4gKw0KPiA+ICtpZiAoYml0cmF0ZXMtPmh3X3ZhbHVl
-ID09IGh3X3JhdGUgfHwNCj4gPiArICAgIChiaXRyYXRlcy0+ZmxhZ3MgJiBJRUVFODAyMTFfUkFU
-RV9TSE9SVF9QUkVBTUJMRSAmJg0KPiA+ICsgICAgIGJpdHJhdGVzLT5od192YWx1ZV9zaG9ydCA9
-PSBod19yYXRlKSkgew0KPiA+ICtiaXRyYXRlID0gYml0cmF0ZXMtPmJpdHJhdGU7DQo+ID4gKw0K
-PiA+ICsvKiBUaGUgYml0cmF0ZSB3aWxsIGJlIHJlY292ZXJlZCBpbg0KPiA+ICsgKiBhdGgxMGtf
-dXBkYXRlX3Blcl9wZWVyX3R4X3N0YXRzKCkuDQo+ID4gKyAqLw0KPiA+ICtpZiAoYml0cmF0ZSA9
-PSA1NSkNCj4gPiArYml0cmF0ZSA9IDYwOw0KPiA+ICsNCj4gPiArYml0cmF0ZSA9IGJpdHJhdGUg
-LyAxMDsNCj4NCj4gSGVyZSB5b3UgdXNlIG1hZ2ljIHZhbHVlIDYwIGJ1dCBpbiBhdGgxMGtfdXBk
-YXRlX3Blcl9wZWVyX3R4X3N0YXRzKCkgeW91IHVzZQ0KPiBtYWdpYyB2YWx1ZSA1MDoNCj4NCj4g
-PiArLyogZnJvbSAxTWJwcyB0byAxMDBLYnBzICovDQo+ID4gK3JhdGUgPSByYXRlICogMTA7DQo+
-ID4gK2lmIChyYXRlID09IDUwKQ0KPiA+ICtyYXRlID0gNTU7DQo+DQo+IEFtIEkgbWlzc2luZyBz
-b21ldGhpbmcgb3IgaG93IGlzIHRoaXMgc3VwcG9zZWQgdG8gd29yaz8NCkluIGV4aXN0aW5nIGNv
-ZGUsIGF0aDEwa191cGRhdGVfcGVyX3BlZXJfdHhfc3RhdHMoKSB3aWxsIGNoZWNrIHRoZSBiaXRy
-YXRlIGFuZCBjb252ZXJ0IDZfQ0NLIHRvIDUoaW4gdGhlIGNvbW1lbnQ6IEZXIHNlbmRzIENDSyBy
-YXRlIDUuNU1icHMgYXMgNiksIGFuZCB0aGVuIDUgd2lsbCBiZSByZWNvdmVyZWQgdG8gNTUuDQpU
-aGF0J3Mgd2h5IHdlIG5lZWQgdG8gY29udmVydCBiaXRyYXRlIDU1IHRvIDYgd2hlbiBwcm9jZXNz
-aW5nIFBQRFVfU1RBVFMuDQoNCmlmICh0eHJhdGUuZmxhZ3MgPT0gV01JX1JBVEVfUFJFQU1CTEVf
-Q0NLIHx8DQp0eHJhdGUuZmxhZ3MgPT0gV01JX1JBVEVfUFJFQU1CTEVfT0ZETSkgew0KcmF0ZSA9
-IEFUSDEwS19IV19MRUdBQ1lfUkFURShwZWVyX3N0YXRzLT5yYXRlY29kZSk7DQovKiBUaGlzIGlz
-IGhhY2t5LCBGVyBzZW5kcyBDQ0sgcmF0ZSA1LjVNYnBzIGFzIDYgKi8NCmlmIChyYXRlID09IDYg
-JiYgdHhyYXRlLmZsYWdzID09IFdNSV9SQVRFX1BSRUFNQkxFX0NDSykNCnJhdGUgPSA1Ow0KcmF0
-ZV9pZHggPSBhdGgxMGtfZ2V0X2xlZ2FjeV9yYXRlX2lkeChhciwgcmF0ZSk7DQppZiAocmF0ZV9p
-ZHggPCAwKQ0KcmV0dXJuOw0KDQovKiBmcm9tIDFNYnBzIHRvIDEwMEticHMgKi8NCnJhdGUgPSBy
-YXRlICogMTA7DQppZiAocmF0ZSA9PSA1MCkNCnJhdGUgPSA1NTsNCj4NCj4gLS0NCj4gaHR0cHM6
-Ly9wYXRjaHdvcmsua2VybmVsLm9yZy9wYXRjaC8xMTI1MTAwMS8NCj4NCj4gaHR0cHM6Ly93aXJl
-bGVzcy53aWtpLmtlcm5lbC5vcmcvZW4vZGV2ZWxvcGVycy9kb2N1bWVudGF0aW9uL3N1Ym1pdHRp
-bmdwYXRjaA0KPiBlcw0KPg0KPiBfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
-X19fX19fX19fXw0KPiBhdGgxMGsgbWFpbGluZyBsaXN0DQo+IGF0aDEwa0BsaXN0cy5pbmZyYWRl
-YWQub3JnDQo+IGh0dHA6Ly9saXN0cy5pbmZyYWRlYWQub3JnL21haWxtYW4vbGlzdGluZm8vYXRo
-MTBrDQpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXwphdGgx
-MGsgbWFpbGluZyBsaXN0CmF0aDEwa0BsaXN0cy5pbmZyYWRlYWQub3JnCmh0dHA6Ly9saXN0cy5p
-bmZyYWRlYWQub3JnL21haWxtYW4vbGlzdGluZm8vYXRoMTBrCg==
+Hi, I have an issue with the WiFi card in my laptop, that keeps 
+disconnecting from the network in a strange way: randomly every 1-2 
+hours I can't access web pages or even ping the gateway, but existing 
+connections (like existing ssh sessions or Zoom videoconferences) 
+continue to work. The only solution is to restart the network connection.
+
+The fix for me has been to downgrade the firmware by removing 
+/usr/lib/firmware/ath10k/QCA6174/hw3.0/firmware-6.bin so that 
+/usr/lib/firmware/ath10k/QCA6174/hw3.0/firmware-4.bin is used; with 
+this, I have no issues.
+
+The problem is described in details in this Archlinux forum thread:
+
+   https://bbs.archlinux.org/viewtopic.php?pid=1898028
+
+I can provide additional information if needed.
+Thanks,
+
+Nicola
+
+_______________________________________________
+ath10k mailing list
+ath10k@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/ath10k
