@@ -2,44 +2,43 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 59B371AC02E
-	for <lists+ath10k@lfdr.de>; Thu, 16 Apr 2020 13:51:19 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B73A11AC137
+	for <lists+ath10k@lfdr.de>; Thu, 16 Apr 2020 14:28:00 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:References:
-	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
-	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
-	:Resent-Message-ID:List-Owner;
-	bh=mdXGcbr+b/xUXVM4B4nYpm1OEEkBatPK39MraxZ6H0Y=; b=FBJrJtuqWA9AJg6aBENx16wtQz
-	/BUAM4OD9Hn36vqDNSzVtyTT6yvVgvDJNK8ZiAkc0HtqeWvsZgc0cAxHRfQGEBqpS3S/MlkFP6y1U
-	QMub57vdDj6aWefGr+XRCybhVTsLVJsc2QKOk+rPVcWAjgtgYVgncHm9rW9jx+22wJd6adG+p22ud
-	oo+fUnAA7qbCcQGawF+6/8x1wFXEMEXEYYGyDBKpbaalo002QS/dpvTKtXJy09Scm6CNHoC4Wdf/0
-	jmC5i2ktCRbTpls2A/1v+8ERbs/9JdxcOGw7mT61kcDngzpSm9zkF4ee9wQ3E8TNlW7PnWN94P9D6
-	SMaJmuUg==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
+	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=3VdzbKCxdYDfzF3SiWK47mMBdA+gIOOnIjt9T2j5pRI=; b=ABjTaWmveDXGih
+	kxIPM9kB+BPqqelO/AGgRKp1ANIcS2hLNxSCUWUP2t4hev7t5/ofSNamaJ1yEspZYyPkih86pVO5o
+	SPY2FsVX+k4lSOeGcZO4d5ljjM0ujj+lcx+v9eQAMaNH6vOYxV2ypVKERGiijEYDulegcLT57m/YS
+	t7KlimsVDEBaUqFs/ZsPDd2MSv2djTrF6kA9JRXf1mHWyg2SykmIRH4TE8quuJU4LJMakJpt8xzh7
+	IzZKiyOBySqCJ8CfHExEGyGdmrue/6wOWHY/goZxq8/aCivmUQzLaU4AUHgi+ZPfKLPPvifauZ0dy
+	dSynbqY1WkRWCQkXKMeQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jP336-00047d-HL; Thu, 16 Apr 2020 11:51:16 +0000
+	id 1jP3cb-0006LB-Rx; Thu, 16 Apr 2020 12:27:57 +0000
 Received: from mail27.static.mailgun.info ([104.130.122.27])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jP331-00045P-EA
- for ath10k@lists.infradead.org; Thu, 16 Apr 2020 11:51:13 +0000
+ id 1jP3cV-0006Ke-HX
+ for ath10k@lists.infradead.org; Thu, 16 Apr 2020 12:27:55 +0000
 DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
  q=dns/txt; 
- s=smtp; t=1587037871; h=References: In-Reply-To: Message-Id: Date:
- Subject: Cc: To: From: Sender;
- bh=miETs94i4blhgkGVoh5R5ywNSQzqvf7HXbvSF7NJ0NU=;
- b=vMrdcHZGM33rPwtJdtIp9U/vNN7/+Lf4V4Cmd61S+SLkAdd7Q1ZnSxcHll328e+Bb1f+u3kt
- RWadpkCxaq0pXtkwZKS2tNinautukDzB5TfGoR7+d4djIxnV+go66gg6fBHz25GHZhnQjeZ5
- Ud2SRsz6xwPuB5/iukz9gzY2vug=
+ s=smtp; t=1587040073; h=Content-Type: MIME-Version: Message-ID:
+ In-Reply-To: Date: References: Subject: Cc: To: From: Sender;
+ bh=k7W4GgWYMJ6R5M6bMBdI/LAF5r7KyT9fmFnm3V4dJXE=;
+ b=BLrgh5wjZkZDVbdMkgQ1A5BRE2UHyZg/i5NpjLbV1VXkscM+i9rVrhJgZIafxDOiDUumh7rZ
+ rn3jnwwb3rBxkZmN1ZO4x2V7jaVgVjXJMWn48FIw4MRqnTWEnpgBKI2Xcal+X/0HZEJAU6UA
+ tHhpNNIEqj4AnQJFf37XM53Vsoo=
 X-Mailgun-Sending-Ip: 104.130.122.27
 X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
 Received: from smtp.codeaurora.org
  (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
- by mxa.mailgun.org with ESMTP id 5e9846ae.7f2c6e2b3768-smtp-out-n01;
- Thu, 16 Apr 2020 11:51:10 -0000 (UTC)
+ by mxa.mailgun.org with ESMTP id 5e984f38.7fe93011e880-smtp-out-n02;
+ Thu, 16 Apr 2020 12:27:36 -0000 (UTC)
 Received: by smtp.codeaurora.org (Postfix, from userid 1001)
- id 3DDCDC43636; Thu, 16 Apr 2020 11:51:09 +0000 (UTC)
+ id 0024CC432C2; Thu, 16 Apr 2020 12:27:35 +0000 (UTC)
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  aws-us-west-2-caf-mail-1.web.codeaurora.org
 X-Spam-Level: 
@@ -47,26 +46,32 @@ X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,SPF_NONE
  autolearn=unavailable autolearn_force=no version=3.4.0
 Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
  [88.114.240.156])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested) (Authenticated sender: kvalo)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 7B62DC433BA;
- Thu, 16 Apr 2020 11:51:07 +0000 (UTC)
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 7B62DC433BA
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 4A4C1C433CB;
+ Thu, 16 Apr 2020 12:27:33 +0000 (UTC)
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 4A4C1C433CB
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
  spf=none smtp.mailfrom=kvalo@codeaurora.org
 From: Kalle Valo <kvalo@codeaurora.org>
-To: ath10k@lists.infradead.org
-Subject: [PATCH v2 4/4] ath10k: hif: make send_complete_check op optional
-Date: Thu, 16 Apr 2020 14:50:59 +0300
-Message-Id: <1587037859-28873-5-git-send-email-kvalo@codeaurora.org>
-X-Mailer: git-send-email 2.7.4
-In-Reply-To: <1587037859-28873-1-git-send-email-kvalo@codeaurora.org>
-References: <1587037859-28873-1-git-send-email-kvalo@codeaurora.org>
+To: Wen Gong <wgong@codeaurora.org>
+Subject: Re: [PATCH v9 3/4] ath10k: add htt TX bundle for sdio
+References: <20200212080415.31265-1-wgong@codeaurora.org>
+ <20200212080415.31265-4-wgong@codeaurora.org>
+ <87tv1su2vq.fsf@kamboji.qca.qualcomm.com>
+ <185d31c2e6f8792beb240f2c74d26463@codeaurora.org>
+ <87h7xmtrmv.fsf@kamboji.qca.qualcomm.com>
+Date: Thu, 16 Apr 2020 15:27:30 +0300
+In-Reply-To: <87h7xmtrmv.fsf@kamboji.qca.qualcomm.com> (Kalle Valo's message
+ of "Tue, 14 Apr 2020 11:10:00 +0300")
+Message-ID: <87o8rrr4y5.fsf@kamboji.qca.qualcomm.com>
+User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/24.5 (gnu/linux)
+MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200416_045111_654002_49BD80E6 
-X-CRM114-Status: GOOD (  13.18  )
+X-CRM114-CacheID: sfid-20200416_052753_592145_EE7D5886 
+X-CRM114-Status: GOOD (  13.62  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -90,100 +95,55 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless@vger.kernel.org
-MIME-Version: 1.0
+Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-That way we don't need to have an empty function in sdio.c.
+Kalle Valo <kvalo@codeaurora.org> writes:
 
-No functional changes, compile tested only.
+> Wen Gong <wgong@codeaurora.org> writes:
+>
+>> On 2020-04-09 22:53, Kalle Valo wrote:
+>>> Wen Gong <wgong@codeaurora.org> writes:
+>>>
+>>>> +	ar->workqueue_tx_complete =
+>>>> +		create_singlethread_workqueue("ath10k_tx_complete_wq");
+>>>> +	if (!ar->workqueue_tx_complete)
+>>>> +		goto err_free_aux_wq;
+>>>
+>>> We already have three threads:
+>>>
+>>> ath/ath10k/core.c:      ar->workqueue =
+>>> create_singlethread_workqueue("ath10k_wq");
+>>> ath/ath10k/core.c:      ar->workqueue_aux =
+>>> create_singlethread_workqueue("ath10k_aux_wq");
+>>> ath/ath10k/sdio.c:      ar_sdio->workqueue =
+>>> create_singlethread_workqueue("ath10k_sdio_wq");
+>>>
+>>> Do we really need a fourth one? For example, why can't we use
+>>> ar->workqueue_aux?
+>>
+>> For tcp test, it has 4 thread work meanwhile:
+>> tx_bundle_skbs(ar->workqueue),
+>> rx_indication(ar->workqueue_aux),
+>> sdio_async_tx_request(ar_sdio->workqueue),
+>> tx_bundle_complete(ar->workqueue_tx_complete)
+>>
+>> It has 4+ cpu/core in system, if reduced to 3 threads, then tcp
+>> throughput will drop. only when it only has 1/2/3 cpu/core in system,
+>> then reduced to 3 threads will not drop.
+>
+> How much does it drop? Please add the justification (with numbers) for
+> the new thread to the commit log, so that the reason is properly
+> documented.
 
-Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
----
- drivers/net/wireless/ath/ath10k/hif.h  |  3 ++-
- drivers/net/wireless/ath/ath10k/sdio.c | 12 ------------
- drivers/net/wireless/ath/ath10k/usb.c  | 12 ------------
- 3 files changed, 2 insertions(+), 25 deletions(-)
+I see that you already submitted v10. If you can give the numbers I can
+add them to the commit log.
 
-diff --git a/drivers/net/wireless/ath/ath10k/hif.h b/drivers/net/wireless/ath/ath10k/hif.h
-index 2c5d61d98337..9e45fd9073a6 100644
---- a/drivers/net/wireless/ath/ath10k/hif.h
-+++ b/drivers/net/wireless/ath/ath10k/hif.h
-@@ -170,7 +170,8 @@ static inline void ath10k_hif_get_default_pipe(struct ath10k *ar,
- static inline void ath10k_hif_send_complete_check(struct ath10k *ar,
- 						  u8 pipe_id, int force)
- {
--	ar->hif.ops->send_complete_check(ar, pipe_id, force);
-+	if (ar->hif.ops->send_complete_check)
-+		ar->hif.ops->send_complete_check(ar, pipe_id, force);
- }
- 
- static inline u16 ath10k_hif_get_free_queue_number(struct ath10k *ar,
-diff --git a/drivers/net/wireless/ath/ath10k/sdio.c b/drivers/net/wireless/ath/ath10k/sdio.c
-index 884e1a85e29f..e2aff2254a40 100644
---- a/drivers/net/wireless/ath/ath10k/sdio.c
-+++ b/drivers/net/wireless/ath/ath10k/sdio.c
-@@ -2101,17 +2101,6 @@ static void ath10k_sdio_hif_get_default_pipe(struct ath10k *ar,
- 	*dl_pipe = 0;
- }
- 
--/* This op is currently only used by htc_wait_target if the HTC ready
-- * message times out. It is not applicable for SDIO since there is nothing
-- * we can do if the HTC ready message does not arrive in time.
-- * TODO: Make this op non mandatory by introducing a NULL check in the
-- * hif op wrapper.
-- */
--static void ath10k_sdio_hif_send_complete_check(struct ath10k *ar,
--						u8 pipe, int force)
--{
--}
--
- static const struct ath10k_hif_ops ath10k_sdio_hif_ops = {
- 	.tx_sg			= ath10k_sdio_hif_tx_sg,
- 	.diag_read		= ath10k_sdio_hif_diag_read,
-@@ -2123,7 +2112,6 @@ static const struct ath10k_hif_ops ath10k_sdio_hif_ops = {
- 	.get_htt_tx_complete	= ath10k_sdio_get_htt_tx_complete,
- 	.map_service_to_pipe	= ath10k_sdio_hif_map_service_to_pipe,
- 	.get_default_pipe	= ath10k_sdio_hif_get_default_pipe,
--	.send_complete_check	= ath10k_sdio_hif_send_complete_check,
- 	.power_up		= ath10k_sdio_hif_power_up,
- 	.power_down		= ath10k_sdio_hif_power_down,
- #ifdef CONFIG_PM
-diff --git a/drivers/net/wireless/ath/ath10k/usb.c b/drivers/net/wireless/ath/ath10k/usb.c
-index 1e0343081be9..b7daf344d012 100644
---- a/drivers/net/wireless/ath/ath10k/usb.c
-+++ b/drivers/net/wireless/ath/ath10k/usb.c
-@@ -693,17 +693,6 @@ static int ath10k_usb_hif_map_service_to_pipe(struct ath10k *ar, u16 svc_id,
- 	return 0;
- }
- 
--/* This op is currently only used by htc_wait_target if the HTC ready
-- * message times out. It is not applicable for USB since there is nothing
-- * we can do if the HTC ready message does not arrive in time.
-- * TODO: Make this op non mandatory by introducing a NULL check in the
-- * hif op wrapper.
-- */
--static void ath10k_usb_hif_send_complete_check(struct ath10k *ar,
--					       u8 pipe, int force)
--{
--}
--
- static int ath10k_usb_hif_power_up(struct ath10k *ar,
- 				   enum ath10k_firmware_mode fw_mode)
- {
-@@ -737,7 +726,6 @@ static const struct ath10k_hif_ops ath10k_usb_hif_ops = {
- 	.stop			= ath10k_usb_hif_stop,
- 	.map_service_to_pipe	= ath10k_usb_hif_map_service_to_pipe,
- 	.get_default_pipe	= ath10k_usb_hif_get_default_pipe,
--	.send_complete_check	= ath10k_usb_hif_send_complete_check,
- 	.get_free_queue_number	= ath10k_usb_hif_get_free_queue_number,
- 	.power_up		= ath10k_usb_hif_power_up,
- 	.power_down		= ath10k_usb_hif_power_down,
 -- 
-2.7.4
+https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
 
 _______________________________________________
 ath10k mailing list
