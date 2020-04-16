@@ -2,75 +2,79 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A71741AC032
-	for <lists+ath10k@lfdr.de>; Thu, 16 Apr 2020 13:51:23 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 54D291AC02D
+	for <lists+ath10k@lfdr.de>; Thu, 16 Apr 2020 13:51:19 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
-	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
-	References:List-Owner; bh=DERbOoDS3Y7INJlGhRKzulpuDNJE7Q8H6tvbk+8gOH0=; b=JTl
-	suJwUmGazi4te+gOru6rJZ/LD5lc8NzgUZMahHAJVdF27AfPBG0ynqw7WFhhxRLEjN7wIpZ1fSEwS
-	E0NrpsnA2JfXtwGZdNbqNfg7zKd2+9eD0NPBva+yBEE4sN3L7skXDnQzkycCw1Q7GyDNS9NaP3yW+
-	SmF3ZFkvzK7QPoiLaza5QWz0wCLbRCm2QuIsMz85s8g34a/Mm5OT3mMOqFamwCAYzk2B/lD0Zh/tY
-	Qj8JdiDOS7PAUx3XM0xnlu6Pr86p5Tn2IQoVGIxEZD1XS9yUnqVa2XeImwpC2Jh++v6HZKwZM5Im2
-	iv7q7hCDe2FrqNy8mmNzw/ziaRHYdSw==;
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:References:
+	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:List-Owner;
+	bh=LaXZHq/Vcfxrjukq/5sb8eypF/jbJ9U6vCDFoLwAZm4=; b=U1KqIkmU2Ka9aRg/NBXWJhljcg
+	/UQIUW07+/DyPzB3X9MWs7dbLHzKLqsByz47tvk9JNUAwblWGtPGCisENkF/it1xPVtzgKzN+XGs0
+	C/veqXZXkIlo4eV0EALEReA+hCcrLR+FDGRwACdKxiwlccBb00Myl2qNTSEB+OHPUKivf/W9HsafZ
+	TW3Zc6j+aYYMJKZnbnbM0I0zIBwaInIC4z7+uTeK8bgWJkeh0nBm8BZqITA0xa8H0wpQ05Mkq3IVB
+	9pSxKyik2bAyz0147ZhS/6VJBIF3WcwQH/wmVhP8a+Nuz6hjIaduhwxma59Jg0yHHMeyxfQFgbG3m
+	o1VEBNtQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jP33C-0004D9-5w; Thu, 16 Apr 2020 11:51:22 +0000
-Received: from mail27.static.mailgun.info ([104.130.122.27])
+	id 1jP335-00046M-0U; Thu, 16 Apr 2020 11:51:15 +0000
+Received: from mail26.static.mailgun.info ([104.130.122.26])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jP333-00045P-PF
- for ath10k@lists.infradead.org; Thu, 16 Apr 2020 11:51:17 +0000
+ id 1jP330-00045K-VD
+ for ath10k@lists.infradead.org; Thu, 16 Apr 2020 11:51:12 +0000
 DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
  q=dns/txt; 
- s=smtp; t=1587037876; h=Message-Id: Date: Subject: Cc: To: From:
- Sender; bh=cwwmQHr1vil7VSpsie/zJOQ8eZHvJ3DcsUDqo13IaCA=;
- b=r75/7IWn6Exo970wjdaU6rxxeqk0Gl0TgBqLYvfaV1c0ov14iPXJg5K8ppkX6tUdT+k2hBfq
- eJ2yfCuNNWYZPEb1NBlt6Rz8DiDUT1CqM4RRKD1cqGWWYq0z7noO5/63eSxxZg3H/tzkS5Uw
- kwUi8EvOZW9JxCmdjcNRCiATJ00=
-X-Mailgun-Sending-Ip: 104.130.122.27
+ s=smtp; t=1587037871; h=References: In-Reply-To: Message-Id: Date:
+ Subject: Cc: To: From: Sender;
+ bh=8JsMUVvug5gkrIsVmNFW/hmGCWdIBnEHirHTipJ7CuI=;
+ b=oygvvlN55gqvFKGR0Av0YmdOM3QBTLlLZ9kG5aWIRD/ozj5nr87zPS+XzOFpRrYTU2TwPkM8
+ VXTRX3Dgs6BecFDX3c/LfbtaeOGXyETYg+uwfbURB2SukVpCkUGYmoEq9TpSyc248Tg3o/9w
+ yASvxlSAt7r9aUhlTqPAGY9FzPI=
+X-Mailgun-Sending-Ip: 104.130.122.26
 X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
 Received: from smtp.codeaurora.org
  (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
- by mxa.mailgun.org with ESMTP id 5e9846a8.7f9314063998-smtp-out-n03;
- Thu, 16 Apr 2020 11:51:04 -0000 (UTC)
+ by mxa.mailgun.org with ESMTP id 5e9846a9.7f1450f51f80-smtp-out-n02;
+ Thu, 16 Apr 2020 11:51:05 -0000 (UTC)
 Received: by smtp.codeaurora.org (Postfix, from userid 1001)
- id CA77DC432C2; Thu, 16 Apr 2020 11:51:03 +0000 (UTC)
+ id 93910C433CB; Thu, 16 Apr 2020 11:51:04 +0000 (UTC)
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  aws-us-west-2-caf-mail-1.web.codeaurora.org
 X-Spam-Level: 
 X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,SPF_NONE
- autolearn=unavailable autolearn_force=no version=3.4.0
+ autolearn=ham autolearn_force=no version=3.4.0
 Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
  [88.114.240.156])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
  (No client certificate requested) (Authenticated sender: kvalo)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 25A3EC433CB;
- Thu, 16 Apr 2020 11:51:01 +0000 (UTC)
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 25A3EC433CB
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 6A943C433F2;
+ Thu, 16 Apr 2020 11:51:03 +0000 (UTC)
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 6A943C433F2
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
  spf=none smtp.mailfrom=kvalo@codeaurora.org
 From: Kalle Valo <kvalo@codeaurora.org>
 To: ath10k@lists.infradead.org
-Subject: [PATCH v2 0/4] ath10k: sdio: improve power consumption
-Date: Thu, 16 Apr 2020 14:50:55 +0300
-Message-Id: <1587037859-28873-1-git-send-email-kvalo@codeaurora.org>
+Subject: [PATCH v2 1/4] ath10k: rename ath10k_hif_swap_mailbox() to
+ ath10k_hif_start_post()
+Date: Thu, 16 Apr 2020 14:50:56 +0300
+Message-Id: <1587037859-28873-2-git-send-email-kvalo@codeaurora.org>
 X-Mailer: git-send-email 2.7.4
+In-Reply-To: <1587037859-28873-1-git-send-email-kvalo@codeaurora.org>
+References: <1587037859-28873-1-git-send-email-kvalo@codeaurora.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200416_045116_637204_E7DC3B8C 
-X-CRM114-Status: UNSURE (   6.78  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200416_045111_347428_DAFADE5D 
+X-CRM114-Status: GOOD (  13.50  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [104.130.122.27 listed in list.dnswl.org]
+ no trust [104.130.122.26 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -94,35 +98,81 @@ Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Hi,
+Convert ath10k_hif_swap_mailbox() to a more generic op so that bus drivers can
+do more than just swap the mailbox, for example set power save settings like in
+the following sdio patch.
 
-here's a patchset for improving power consumption on SDIO with some refactoring
-and some small cleanups afterwards.
+No functional changes, compile tested only.
 
-v2:
+Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
+---
+ drivers/net/wireless/ath/ath10k/core.c | 2 +-
+ drivers/net/wireless/ath/ath10k/hif.h  | 8 ++++----
+ drivers/net/wireless/ath/ath10k/sdio.c | 4 ++--
+ 3 files changed, 7 insertions(+), 7 deletions(-)
 
-* rename ath10k_hif_swap_mailbox() to make it usable for this
-
-* small cleanups found while doing the refactoring
-
-* compile tested only
-
-Kalle Valo (3):
-  ath10k: rename ath10k_hif_swap_mailbox() to ath10k_hif_start_post()
-  ath10k: sdio: remove _hif_ prefix from functions not part of hif
-    interface
-  ath10k: hif: make send_complete_check op optional
-
-Wen Gong (1):
-  ath10k: improve power save performance for sdio
-
- drivers/net/wireless/ath/ath10k/core.c |   2 +-
- drivers/net/wireless/ath/ath10k/hif.h  |  11 ++-
- drivers/net/wireless/ath/ath10k/sdio.c | 168 +++++++++++++++++++++++----------
- drivers/net/wireless/ath/ath10k/sdio.h |  16 ++++
- drivers/net/wireless/ath/ath10k/usb.c  |  12 ---
- 5 files changed, 139 insertions(+), 70 deletions(-)
-
+diff --git a/drivers/net/wireless/ath/ath10k/core.c b/drivers/net/wireless/ath/ath10k/core.c
+index 52472bbcee1f..5926281c7e05 100644
+--- a/drivers/net/wireless/ath/ath10k/core.c
++++ b/drivers/net/wireless/ath/ath10k/core.c
+@@ -2714,7 +2714,7 @@ int ath10k_core_start(struct ath10k *ar, enum ath10k_firmware_mode mode,
+ 		goto err_hif_stop;
+ 	}
+ 
+-	status = ath10k_hif_swap_mailbox(ar);
++	status = ath10k_hif_start_post(ar);
+ 	if (status) {
+ 		ath10k_err(ar, "failed to swap mailbox: %d\n", status);
+ 		goto err_hif_stop;
+diff --git a/drivers/net/wireless/ath/ath10k/hif.h b/drivers/net/wireless/ath/ath10k/hif.h
+index 0dd8973d0acf..2c5d61d98337 100644
+--- a/drivers/net/wireless/ath/ath10k/hif.h
++++ b/drivers/net/wireless/ath/ath10k/hif.h
+@@ -54,7 +54,7 @@ struct ath10k_hif_ops {
+ 	 */
+ 	void (*stop)(struct ath10k *ar);
+ 
+-	int (*swap_mailbox)(struct ath10k *ar);
++	int (*start_post)(struct ath10k *ar);
+ 
+ 	int (*get_htt_tx_complete)(struct ath10k *ar);
+ 
+@@ -139,10 +139,10 @@ static inline void ath10k_hif_stop(struct ath10k *ar)
+ 	return ar->hif.ops->stop(ar);
+ }
+ 
+-static inline int ath10k_hif_swap_mailbox(struct ath10k *ar)
++static inline int ath10k_hif_start_post(struct ath10k *ar)
+ {
+-	if (ar->hif.ops->swap_mailbox)
+-		return ar->hif.ops->swap_mailbox(ar);
++	if (ar->hif.ops->start_post)
++		return ar->hif.ops->start_post(ar);
+ 	return 0;
+ }
+ 
+diff --git a/drivers/net/wireless/ath/ath10k/sdio.c b/drivers/net/wireless/ath/ath10k/sdio.c
+index 943db9f401d8..184b3545324e 100644
+--- a/drivers/net/wireless/ath/ath10k/sdio.c
++++ b/drivers/net/wireless/ath/ath10k/sdio.c
+@@ -1725,7 +1725,7 @@ static int ath10k_sdio_hif_diag_write_mem(struct ath10k *ar, u32 address,
+ 	return 0;
+ }
+ 
+-static int ath10k_sdio_hif_swap_mailbox(struct ath10k *ar)
++static int ath10k_sdio_hif_start_post(struct ath10k *ar)
+ {
+ 	struct ath10k_sdio *ar_sdio = ath10k_sdio_priv(ar);
+ 	u32 addr, val;
+@@ -2047,7 +2047,7 @@ static const struct ath10k_hif_ops ath10k_sdio_hif_ops = {
+ 	.exchange_bmi_msg	= ath10k_sdio_bmi_exchange_msg,
+ 	.start			= ath10k_sdio_hif_start,
+ 	.stop			= ath10k_sdio_hif_stop,
+-	.swap_mailbox		= ath10k_sdio_hif_swap_mailbox,
++	.start_post		= ath10k_sdio_hif_start_post,
+ 	.get_htt_tx_complete	= ath10k_sdio_get_htt_tx_complete,
+ 	.map_service_to_pipe	= ath10k_sdio_hif_map_service_to_pipe,
+ 	.get_default_pipe	= ath10k_sdio_hif_get_default_pipe,
 -- 
 2.7.4
 
