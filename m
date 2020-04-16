@@ -2,43 +2,43 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 814AF1AC143
-	for <lists+ath10k@lfdr.de>; Thu, 16 Apr 2020 14:32:29 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A05F01AC15A
+	for <lists+ath10k@lfdr.de>; Thu, 16 Apr 2020 14:35:15 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
 	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=FJY21XSW8DXFxVfie1kvZDTMSjfQFVocS7mXhQlyi+8=; b=brG4uTuHY6vUm0
-	wXRwQAAI6wgSmQ4oBegNjyBMG/dToatxIfUEWQr0gupJFNcLITZxdhur/Eb9GRWwF1gRxYQTvzjWN
-	LNWGgknatCnlIGzY+BDiB15rQ4S3h4YZ7+2uvBYyEDBuQHCIe2UH4qX5v4gISLVFr3KS/6SNVhBN+
-	lVt03xyul2Sedpjtk1Mu+DB+1lquDdBPiQYW32OTkfb+SOHfKDDj8I+Dq6YATBDtl/l8VDBbiARYh
-	bf8gko1amW5eYIBXUy8weBPRQb4iKtKL3L4zkcTJ11FC4Erdqh0s3a8IfPNM4pKrf7ed4WLmwQZ7D
-	uFxyLtZ8bJC8XQOH1TQw==;
+	List-Owner; bh=vfC45mIagfqHflXVvooFdOxwdDzB1cwmZFHDuuXckbc=; b=n7+RdC4vPJLZgZ
+	1dFon6r6osoWVkgZegbPx3JmtWXZjmKAFs0sST8j6+l5yaly2tt+WX3gJmY678iZsQTyC8fwd60V6
+	KJu1VvyfPx5FEdDAIPVcyAVSn4XE0raFfR1mWVPNMNh2LVej4oKKpBnn0MGpABsR0jfuhxb5xcZF+
+	tdQkhjNF2kZyrkJ1+xGGIBkRMC0pFJB5x7r4rRsI+ywXIIiuAl0p6+Ul5H8O+rjkLuaf3fCLa++Hm
+	rOoKHDpzJnYDEw9+gvgHGIXczZtZPSNwQu87IMJpiAomK1BkR+EWS3E7kFq9xOmt8SL9SjvUwi4eJ
+	MMb5Z07NZsn1eEV1ULZA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jP3gx-0002YM-Co; Thu, 16 Apr 2020 12:32:27 +0000
+	id 1jP3jd-0005uu-Qs; Thu, 16 Apr 2020 12:35:13 +0000
 Received: from mail27.static.mailgun.info ([104.130.122.27])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jP3gu-0002Xx-4g
- for ath10k@lists.infradead.org; Thu, 16 Apr 2020 12:32:25 +0000
+ id 1jP3jS-0003fl-Vf
+ for ath10k@lists.infradead.org; Thu, 16 Apr 2020 12:35:11 +0000
 DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
  q=dns/txt; 
- s=smtp; t=1587040343; h=Content-Type: MIME-Version: Message-ID:
+ s=smtp; t=1587040510; h=Content-Type: MIME-Version: Message-ID:
  In-Reply-To: Date: References: Subject: Cc: To: From: Sender;
- bh=Sv9X8l4iA6VHf1QnMx+QHigKI8FR5lS3Hzj4XKr+Byc=;
- b=qVx867Gxz9axoZOwI33AuMsXS08bi3Hng9IIUYh/XkBaZdeRuvFxQUJ2Zi3+FmK4D7u+u3s7
- 5ED2StjS4h8h6NxItIh88ulvCqnEOY3b4ihJAa1PzwtLdaG0ICbgA3CW05K7oaTPuM8Nj6Cx
- zfltxAePuvAst9+paB8liFe2wPA=
+ bh=n4dagZYzuz89oguNszytFLjNH388aZHCdBtZJwNPmXg=;
+ b=pzN/RsJV+gtCkqi88IAUXNQWXt2HueaFc5+NO2hUZ//wFoQmkaLUGYF3IAYnvYbXra0i8vRy
+ LiqWYi4V/3r7YxiAS9z29K6qVmdxG9JVnYDIaXjWmk519WRstJ7NzXjKNC9lLP0ZFjvs8hNr
+ XUvFGjMV/e0yMTWc11KX5IWfxh8=
 X-Mailgun-Sending-Ip: 104.130.122.27
 X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
 Received: from smtp.codeaurora.org
  (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
- by mxa.mailgun.org with ESMTP id 5e985055.7f933f843500-smtp-out-n05;
- Thu, 16 Apr 2020 12:32:21 -0000 (UTC)
+ by mxa.mailgun.org with ESMTP id 5e9850f2.7fbac2bdd4c8-smtp-out-n05;
+ Thu, 16 Apr 2020 12:34:58 -0000 (UTC)
 Received: by smtp.codeaurora.org (Postfix, from userid 1001)
- id 542C8C433CB; Thu, 16 Apr 2020 12:32:20 +0000 (UTC)
+ id 166DDC433CB; Thu, 16 Apr 2020 12:34:57 +0000 (UTC)
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  aws-us-west-2-caf-mail-1.web.codeaurora.org
 X-Spam-Level: 
@@ -48,26 +48,27 @@ Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
  [88.114.240.156])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested) (Authenticated sender: kvalo)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id B9193C433F2;
- Thu, 16 Apr 2020 12:32:18 +0000 (UTC)
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org B9193C433F2
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id D856EC433F2;
+ Thu, 16 Apr 2020 12:34:55 +0000 (UTC)
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org D856EC433F2
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
  spf=none smtp.mailfrom=kvalo@codeaurora.org
 From: Kalle Valo <kvalo@codeaurora.org>
-To: svp <svpm@yandex.ru>
-Subject: Re: Compex WLE600VX AP mode 5GHz doesn't work since kernel 5.6
-References: <5971a327-d11a-35e6-8295-8dfb8ae3a434@yandex.ru>
-Date: Thu, 16 Apr 2020 15:32:16 +0300
-In-Reply-To: <5971a327-d11a-35e6-8295-8dfb8ae3a434@yandex.ru> (svp's message
- of "Sun, 12 Apr 2020 12:10:15 +0300")
-Message-ID: <87k12fr4q7.fsf@kamboji.qca.qualcomm.com>
+To: Nicola Mori <nicolamori@aol.com>
+Subject: Re: Killer WiFi card keeps disconnecting due to latest firmware
+References: <b07a7ea1-7ab2-8ce3-95d7-6726e7708749.ref@aol.com>
+ <b07a7ea1-7ab2-8ce3-95d7-6726e7708749@aol.com>
+Date: Thu, 16 Apr 2020 15:34:54 +0300
+In-Reply-To: <b07a7ea1-7ab2-8ce3-95d7-6726e7708749@aol.com> (Nicola Mori's
+ message of "Tue, 14 Apr 2020 09:26:16 +0200")
+Message-ID: <87ftd3r4lt.fsf@kamboji.qca.qualcomm.com>
 User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/24.5 (gnu/linux)
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200416_053224_242109_9A104B1D 
-X-CRM114-Status: GOOD (  10.08  )
+X-CRM114-CacheID: sfid-20200416_053510_305132_E267820D 
+X-CRM114-Status: GOOD (  12.80  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -97,28 +98,26 @@ Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-svp <svpm@yandex.ru> writes:
+Nicola Mori <nicolamori@aol.com> writes:
 
-> I need help with my softAP installation.
-> Compex WLE600VX miniPCIe card can't start at 5GHz AP mode after update
-> to kernel 5.6 on ArchLinux
-> With kernel 5.5.x and LTS all is OK
-> Some logs and details is in this ArchLinux forum topic
-> https://bbs.archlinux.org/viewtopic.php?id=254535
+> Hi, I have an issue with the WiFi card in my laptop, that keeps
+> disconnecting from the network in a strange way: randomly every 1-2 
+> hours I can't access web pages or even ping the gateway, but existing
+> connections (like existing ssh sessions or Zoom videoconferences)
+> continue to work. The only solution is to restart the network
+> connection.
+>
+> The fix for me has been to downgrade the firmware by removing
+> /usr/lib/firmware/ath10k/QCA6174/hw3.0/firmware-6.bin so that
+> /usr/lib/firmware/ath10k/QCA6174/hw3.0/firmware-4.bin is used; with
+> this, I have no issues.
 
-So if I read the link correctly this commit causes the regression (which
-was introduced in v5.6-rc1):
+These firmware filenames tell nothing to me (-6 and -4 are just
+interface version numbers), I need the exact firmware versions of which
+works and which doesn't. 'dmesg | grep ath10k' is the best way to get
+them.
 
-commit 2dc016599cfa9672a147528ca26d70c3654a5423
-Author:     Wen Gong <wgong@codeaurora.org>
-AuthorDate: Fri Nov 29 07:34:09 2019 +0000
-Commit:     Kalle Valo <kvalo@codeaurora.org>
-CommitDate: Mon Dec 2 12:08:01 2019 +0200
-
-    ath: add support for special 0x0 regulatory domain
-
-Wen, please take a look. Should I revert this commit? Regressions are
-not ok.
+Also adding Wen to the loop.
 
 -- 
 https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
