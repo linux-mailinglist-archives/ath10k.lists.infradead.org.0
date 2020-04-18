@@ -2,78 +2,81 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D5A571AD753
-	for <lists+ath10k@lfdr.de>; Fri, 17 Apr 2020 09:24:12 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id BF86D1AEDBE
+	for <lists+ath10k@lfdr.de>; Sat, 18 Apr 2020 16:02:42 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
 	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
 	List-Unsubscribe:List-Id:Message-ID:References:In-Reply-To:Subject:To:From:
 	Date:MIME-Version:Reply-To:Content-ID:Content-Description:Resent-Date:
 	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=lOcMyhI/OBetHOJwdrMgWV8YcsuOwMyBJFdV68SNS0M=; b=Z4ZSyYlq0uyzX11Px2B0rHgCH
-	E/wTfFVHIeCXrKUXEmfI6VCVo2psQS42tDWMNle5z/iy242rjViC9UVQ46TnTiRUq1jOvsIL2QRqV
-	s0P4llMyys4kMBkg5eKn0Q4H27CE1v2hmEsVFzadZXKDkyW4Wb7cvutwiFhXEAy20C+mNBldi1cN8
-	DZpXoomB+awzvGW4UBUAD84JAn0RDTVj+yWiy6BbPuwmMyGhGWaGp9NBEjVXe1M2XfkWNopDZH+Kq
-	cwIK7OoA81/eYGwOsT08D7WxOltTaSC6DlGL7QWiIhNeeaSD5euNr2JKIpvQa4w2ZhFg1N9XeYSBX
-	BC12BPTEw==;
+	 bh=L31nAoqUI0We7mXNL1Ciu8LMUhM8++8upTL36d7bpKo=; b=K4wDztJ+1gGP4VtRPCHQ8FKM0
+	EyBvH/1UHPwpsyfj7e7fgGLwUqxeO/K/zDJrHYDxBtG/WdhBNvnjZHMPpUVONcGhIerwuWgO7hReI
+	uxQnvl7ICqZX0e7BehkpMlKca4iwVDaTJs5eqPJlQiFgCAlGYwgjn6nbDj7EtoWsnQpck959N1tkA
+	+Gbz8sPtZr3Hvk7AU6uovBOmyjPB4jYumlb5IJGLbf8fkri8fQ01ogxuJkwLJXaNExqVezJ4rdtEP
+	kDc3n7OiDwm35RdTPQV0xUzjnCGO0/geEfFCcYqn8YYUbOG5kQ1Ol9DemjMkz3tCWOTNG+OzuTQm7
+	rWsKAKNMw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jPLM9-00057e-Nn; Fri, 17 Apr 2020 07:24:09 +0000
-Received: from mail26.static.mailgun.info ([104.130.122.26])
+	id 1jPo3H-00064d-N1; Sat, 18 Apr 2020 14:02:35 +0000
+Received: from mail27.static.mailgun.info ([104.130.122.27])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jPLM3-00056z-He
- for ath10k@lists.infradead.org; Fri, 17 Apr 2020 07:24:07 +0000
+ id 1jPo3C-00063p-BD
+ for ath10k@lists.infradead.org; Sat, 18 Apr 2020 14:02:33 +0000
 DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
  q=dns/txt; 
- s=smtp; t=1587108245; h=Message-ID: References: In-Reply-To: Subject:
+ s=smtp; t=1587218551; h=Message-ID: References: In-Reply-To: Subject:
  Cc: To: From: Date: Content-Transfer-Encoding: Content-Type:
- MIME-Version: Sender; bh=rA7iAexd4wP+UbyJuh7JwfZi1usnt0xjffk5Mpiz7Yk=;
- b=KVrFVED9IAq7hxU59/jMV21j5qkdHSbvKHWebmeImbSKkOAuQhOmomNNaEgiX5DOPlrODpHc
- v75WW33aXtxb8yX1gEo3hgpaiRX4WGalVTymAzKxjnq9R1XjsDPScBzkDt0ULwRvycTL1x0u
- l5k+yiyTJNVUfp2scxE7XtXAfCw=
-X-Mailgun-Sending-Ip: 104.130.122.26
+ MIME-Version: Sender; bh=PtPOrt07EzuEgYcXSDgkKyOC29cvpcuzM7IRgCX/a6A=;
+ b=qLXDQ0HeIaoqPzIGtAa/SqfMTjjT1VOw64gYjNaR/E3M8/OfoaKtNuRej44jiL5ZO8Na25eD
+ K0B2+O9SrZ60se8IK2EsYiz0xzmxedSAIBZHeiEC0CxrPuGe80Qz4gnqEwSJdWmaLkaGGOVC
+ z6MVDwe/OqLVQ+hZAHELgCIxvog=
+X-Mailgun-Sending-Ip: 104.130.122.27
 X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
 Received: from smtp.codeaurora.org
  (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
- by mxa.mailgun.org with ESMTP id 5e995982.7f1faff8c0d8-smtp-out-n04;
- Fri, 17 Apr 2020 07:23:46 -0000 (UTC)
+ by mxa.mailgun.org with ESMTP id 5e9b0871.7fdf83a0b6c0-smtp-out-n01;
+ Sat, 18 Apr 2020 14:02:25 -0000 (UTC)
 Received: by smtp.codeaurora.org (Postfix, from userid 1001)
- id 67EA9C433BA; Fri, 17 Apr 2020 07:23:45 +0000 (UTC)
+ id E3F95C433F2; Sat, 18 Apr 2020 14:02:24 +0000 (UTC)
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  aws-us-west-2-caf-mail-1.web.codeaurora.org
 X-Spam-Level: 
-X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED
- autolearn=unavailable autolearn_force=no version=3.4.0
+X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,URIBL_BLOCKED
+ autolearn=ham autolearn_force=no version=3.4.0
 Received: from mail.codeaurora.org (localhost.localdomain [127.0.0.1])
  (using TLSv1 with cipher ECDHE-RSA-AES256-SHA (256/256 bits))
  (No client certificate requested) (Authenticated sender: wgong)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id A55EFC433F2;
- Fri, 17 Apr 2020 07:23:44 +0000 (UTC)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 947F9C433CB;
+ Sat, 18 Apr 2020 14:02:24 +0000 (UTC)
 MIME-Version: 1.0
-Date: Fri, 17 Apr 2020 15:23:44 +0800
+Date: Sat, 18 Apr 2020 22:02:24 +0800
 From: Wen Gong <wgong@codeaurora.org>
 To: Kalle Valo <kvalo@codeaurora.org>
-Subject: Re: [PATCH] ath10k: improve power save performance for sdio
-In-Reply-To: <87y2quponn.fsf@kamboji.qca.qualcomm.com>
-References: <0101016ed9241282-73dd8b35-e2e5-4f37-9b50-cf2fb6524dfc-000000@us-west-2.amazonses.com>
- <877dyfr4fb.fsf@kamboji.qca.qualcomm.com>
- <b9f680d57a6fbc9ac59dc5fc281d0af3@codeaurora.org>
- <87y2quponn.fsf@kamboji.qca.qualcomm.com>
-Message-ID: <ffdecd6a9db5b96d6c791fc04108b163@codeaurora.org>
+Subject: Re: [PATCH v9 3/4] ath10k: add htt TX bundle for sdio
+In-Reply-To: <87o8rrr4y5.fsf@kamboji.qca.qualcomm.com>
+References: <20200212080415.31265-1-wgong@codeaurora.org>
+ <20200212080415.31265-4-wgong@codeaurora.org>
+ <87tv1su2vq.fsf@kamboji.qca.qualcomm.com>
+ <185d31c2e6f8792beb240f2c74d26463@codeaurora.org>
+ <87h7xmtrmv.fsf@kamboji.qca.qualcomm.com>
+ <87o8rrr4y5.fsf@kamboji.qca.qualcomm.com>
+Message-ID: <27ca9f2bf63807d501cfb29d8f55f904@codeaurora.org>
 X-Sender: wgong@codeaurora.org
 User-Agent: Roundcube Webmail/1.3.9
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200417_002406_005090_6E64B22A 
-X-CRM114-Status: GOOD (  11.25  )
+X-CRM114-CacheID: sfid-20200418_070231_664150_CD23456E 
+X-CRM114-Status: UNSURE (   9.30  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [104.130.122.26 listed in list.dnswl.org]
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ no trust [104.130.122.27 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
@@ -94,47 +97,30 @@ Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On 2020-04-17 15:17, Kalle Valo wrote:
-> Wen Gong <wgong@codeaurora.org> writes:
+On 2020-04-16 20:27, Kalle Valo wrote:
+> Kalle Valo <kvalo@codeaurora.org> writes:
 > 
->> On 2020-04-16 20:38, Kalle Valo wrote:
->>> Wen Gong <wgong@codeaurora.org> writes:
->>> 
->> 
->>> 
->>>> +static inline int ath10k_hif_set_mbox_sleep(struct ath10k *ar,
->>>> bool enable_sleep)
->>>> +{
->>>> +	if (ar->hif.ops->set_mbox_sleep)
->>>> +		return ar->hif.ops->set_mbox_sleep(ar, enable_sleep);
->>>> +	return 0;
->>>> +}
->>> 
->>> I don't think we need to add another hif op for this. I sent v2 which
->>> uses existing op.
->> 
->> Yes, I see it. but I see it removed ath10k_hif_set_mbox_sleep in
->> ath10k_core_start, expected it will not effect the patch's power save.
-> 
-> So the idea is that the same functionality is still there as with your
-> version, the callpath is just a bit different:
-> 
-> ath10k_core_start()
->     -> ath10k_hif_start_post()
->         -> ath10k_sdio_hif_start_post()
->             -> ath10k_sdio_set_mbox_sleep()
-> 
-> But please do double check that I didn't miss anything.
-yes, I see this now, so it not miss in v2.
-@@ -1749,6 +1819,8 @@  static int ath10k_sdio_hif_start_post(struct 
-ath10k *ar)
-  		ar_sdio->swap_mbox = false;
-  	}
 
-+	ath10k_sdio_hif_set_mbox_sleep(ar, true);
-+
-  	return 0;
-  }
+>> How much does it drop? Please add the justification (with numbers) for
+>> the new thread to the commit log, so that the reason is properly
+>> documented.
+> 
+> I see that you already submitted v10. If you can give the numbers I can
+> add them to the commit log.
+
+I tested for VHT80 mode for 3 thread config:
+result:
+                                      TCP-RX    TCP-TX    UDP-RX    
+UDP-TX
+use workqueue_tx_complete(Mbps)        423       357       448       412
+change it to ar->workqueue(Mbps)       410       360       449       414
+change it to ar->workqueue_aux(Mbps)   405       339       446       401
+
+each thread role:
+tx_bundle_skbs(ar->workqueue),
+rx_indication(ar->workqueue_aux),
+sdio_async_tx_request(ar_sdio->workqueue),
+tx_bundle_complete(ar->workqueue_tx_complete)
 
 _______________________________________________
 ath10k mailing list
