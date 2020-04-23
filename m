@@ -2,69 +2,69 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 68AC81B57E9
-	for <lists+ath10k@lfdr.de>; Thu, 23 Apr 2020 11:14:58 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C054D1B57F5
+	for <lists+ath10k@lfdr.de>; Thu, 23 Apr 2020 11:19:47 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:Message-ID:References:In-Reply-To:Subject:To:From:
-	Date:MIME-Version:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=kvDLM+Mtm0dG3n8l1Fn9Rt9q66F5tQhaqVblwhYuJ/4=; b=dwF1Jbx/KO6t9NAsvVbukzAaw
-	qc62yyWillS4rnktsFvTt4EO1tWs0bbJXHjDi93cHUH7GgMD/YO2KXQ0SzsAxDIvB1513jZbv9CQC
-	127+KIBCJ7+waTAGfw26sNjGDHrJX+bvlXa2jpsLCopUgxMTxpSJ0X09uIAbkt7cYGLXWaCpOOyTW
-	Hfbz01ZrFky/Nb5e1FRphzlqjRTHlF1O9eX31z/jlU96TE7FXgyoaHkxC7A3OIiCVhLfIIkh9YsWo
-	P5cutQFPSlZuzzvJUajAqwsbmdnMwSgDPRju1egoGOSRuyl4IWG7NDtBw7pExf0m/tKlOlWvPutep
-	0rOv+4YVQ==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=4lpuaC1roWzt8z6lcVottB0z06O1LagaZFDUZjIVqv4=; b=Ha35i1x+cmT3kM
+	1dsB8oIVjxon3sKdkkZkQRau74B+Tbw3L+G39u3fkJsZAb1HFUmZgB/1g0N3DsR9wCmuP4m4XnQWC
+	GCeo0Ycxi+3XYzVXEBJL7a9dK7wGVutiT/WCmP/CQv9ZEeGR90k2AQGu5ocUqrHAuOZ+Y0LDbrcON
+	yJc7Ak+GjnWYxIH+Bdg4X33DHkumTdZowUEw2K7lSB6SYGB4gL5DM8sFe2ubae3w8KI+OQOKvYAUH
+	U3s/yIPBe3YUZBNP8VtEsCQMBXDYS+zjjQWfzPUjZX7tYDVdzifFtGQl8JPEyn2So6ua67mtmYMmM
+	GLlDyEe7Apd+vQLmrV/Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jRXwc-0008FS-CO; Thu, 23 Apr 2020 09:14:54 +0000
+	id 1jRY1K-0003fu-1f; Thu, 23 Apr 2020 09:19:46 +0000
 Received: from mail26.static.mailgun.info ([104.130.122.26])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jRXwV-0008DV-97
- for ath10k@lists.infradead.org; Thu, 23 Apr 2020 09:14:51 +0000
+ id 1jRY1G-0003ey-FR
+ for ath10k@lists.infradead.org; Thu, 23 Apr 2020 09:19:43 +0000
 DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
  q=dns/txt; 
- s=smtp; t=1587633290; h=Message-ID: References: In-Reply-To: Subject:
- Cc: To: From: Date: Content-Transfer-Encoding: Content-Type:
- MIME-Version: Sender; bh=iq4g5E5VQINCc2CtaiWpy0Flx3rzDWj7HLPn+4IoiJ8=;
- b=uT9HXLfwMeMikLjKpJxh/2SCZiplNXSBXgqBRGnW+ulQwXKZzbGwIMCuiRGEki5otFoImT68
- V3uNKg1IflX09lv0DmZSsBf1pjnYTCSlEnTK8b2kTwfs7fTwEXWALJjgxh8KULIR6b8yQev4
- bK+Fa2wCoPHPE+XZFBwhbcNvssY=
+ s=smtp; t=1587633582; h=Content-Transfer-Encoding: MIME-Version:
+ Message-Id: Date: Subject: Cc: To: From: Sender;
+ bh=okzeHzsPlBvB+6nY8N1o+e8CEjRSPerRcY0Q6/pgWXg=;
+ b=OfeC/k8Jagh/QLe3HfolLnUC+dgKwNR3DSH/elox47dMvskzBVHz++E44cZXfSWnKw+GGw4I
+ c5FgQIn0vaPoVt18QjWD+W6rlplBmtVlWNcwmYsZ89IN7Udp0HdIhix8j3MNKa/AO9ukWMwI
+ bgAI+eIEHhVXXLDfByieN5zfWQs=
 X-Mailgun-Sending-Ip: 104.130.122.26
 X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
 Received: from smtp.codeaurora.org
  (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
- by mxa.mailgun.org with ESMTP id 5ea15c7b.7f7eecd29500-smtp-out-n05;
- Thu, 23 Apr 2020 09:14:35 -0000 (UTC)
+ by mxa.mailgun.org with ESMTP id 5ea15dad.7fe199d04420-smtp-out-n01;
+ Thu, 23 Apr 2020 09:19:41 -0000 (UTC)
 Received: by smtp.codeaurora.org (Postfix, from userid 1001)
- id 56AC5C433BA; Thu, 23 Apr 2020 09:14:34 +0000 (UTC)
+ id AC95BC433D2; Thu, 23 Apr 2020 09:19:41 +0000 (UTC)
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  aws-us-west-2-caf-mail-1.web.codeaurora.org
 X-Spam-Level: 
-X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED
+X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,SPF_NONE
  autolearn=unavailable autolearn_force=no version=3.4.0
-Received: from mail.codeaurora.org (localhost.localdomain [127.0.0.1])
- (using TLSv1 with cipher ECDHE-RSA-AES256-SHA (256/256 bits))
+Received: from wgong-HP-Z240-SFF-Workstation.qca.qualcomm.com (unknown
+ [180.166.53.21])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
  (No client certificate requested) (Authenticated sender: wgong)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id ED17BC433CB;
- Thu, 23 Apr 2020 09:14:33 +0000 (UTC)
-MIME-Version: 1.0
-Date: Thu, 23 Apr 2020 17:14:33 +0800
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 24F5BC433CB;
+ Thu, 23 Apr 2020 09:19:39 +0000 (UTC)
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 24F5BC433CB
+Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
+ spf=none smtp.mailfrom=wgong@codeaurora.org
 From: Wen Gong <wgong@codeaurora.org>
-To: Kalle Valo <kvalo@codeaurora.org>, Nicola Mori <nicolamori@aol.com>
-Subject: Re: Killer WiFi card keeps disconnecting due to latest firmware
-In-Reply-To: <87k128ng9e.fsf@kamboji.qca.qualcomm.com>
-References: <b07a7ea1-7ab2-8ce3-95d7-6726e7708749.ref@aol.com>
- <b07a7ea1-7ab2-8ce3-95d7-6726e7708749@aol.com>
- <87ftd3r4lt.fsf@kamboji.qca.qualcomm.com>
- <87k128ng9e.fsf@kamboji.qca.qualcomm.com>
-Message-ID: <57cd41942128e71f971b132df3dc403a@codeaurora.org>
-X-Sender: wgong@codeaurora.org
-User-Agent: Roundcube Webmail/1.3.9
+To: ath10k@lists.infradead.org
+Subject: [PATCH 0/4] ath10k: sdio: add support for rx/tx bitrate reporting
+Date: Thu, 23 Apr 2020 17:18:52 +0800
+Message-Id: <20200423091856.24297-1-wgong@codeaurora.org>
+X-Mailer: git-send-email 2.23.0
+MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200423_021450_594899_D10A286E 
-X-CRM114-Status: UNSURE (   6.49  )
+X-CRM114-CacheID: sfid-20200423_021942_573312_720E29FB 
+X-CRM114-Status: UNSURE (   7.73  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -89,27 +89,44 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: ath10k@lists.infradead.org
+Cc: linux-wireless@vger.kernel.org, wgong@codeaurora.org
+Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On 2020-04-22 15:14, Kalle Valo wrote:
-> Kalle Valo <kvalo@codeaurora.org> writes:
-> 
->> Nicola Mori <nicolamori@aol.com> writes:
->> 
->>> Hi, I have an issue with the WiFi card in my laptop, that keeps
->>> disconnecting from the network in a strange way: randomly every 1-2
->>> hours I can't access web pages or even ping the gateway, but existing
->>> connections (like existing ssh sessions or Zoom videoconferences)
->>> continue to work. The only solution is to restart the network
->>> connection.
-Nicola Mori,
-Could you tell us the AP model and AP configure(WPA-PSK/WEP...., ssid 
-name/password...,dhcp timeout period...)?
-We prepare to try it.
+iw wlan0 link/iw wlan0 station dump show the wrong bitrate for rx/tx.
+wrong example:
+rx bitrate: 6.0 MBit/s
+tx bitrate: 2.8 MBit/s
+
+These patches correct them.
+rx bitrate: 234.0 MBit/s VHT-MCS 3 80MHz VHT-NSS 2
+rx bitrate: 40.5 MBit/s MCS 2 40MHz
+rx bitrate: 72.2 MBit/s MCS 7 short GI
+rx bitrate: 54.0 MBit/s
+rx bitrate: 48.0 MBit/s
+
+tx bitrate: 54.0 MBit/s
+
+Wen Gong (4):
+  ath10k: enable firmware peer stats info for wmi tlv
+  ath10k: add rx bitrate report for SDIO
+  ath10k: add bitrate parse for peer stats info
+  ath10k: correct tx bitrate of iw for SDIO
+
+ drivers/net/wireless/ath/ath10k/core.c    |   2 +
+ drivers/net/wireless/ath/ath10k/core.h    |  25 +++
+ drivers/net/wireless/ath/ath10k/hw.h      |   3 +
+ drivers/net/wireless/ath/ath10k/mac.c     | 216 ++++++++++++++++++++++
+ drivers/net/wireless/ath/ath10k/wmi-ops.h |  30 +++
+ drivers/net/wireless/ath/ath10k/wmi-tlv.c | 121 ++++++++++++
+ drivers/net/wireless/ath/ath10k/wmi-tlv.h | 110 +++++++++++
+ drivers/net/wireless/ath/ath10k/wmi.h     |   9 +
+ 8 files changed, 516 insertions(+)
+
+-- 
+2.23.0
 
 _______________________________________________
 ath10k mailing list
