@@ -2,78 +2,74 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1ADFF1B57FE
-	for <lists+ath10k@lfdr.de>; Thu, 23 Apr 2020 11:20:18 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 610EB1B5CD9
+	for <lists+ath10k@lfdr.de>; Thu, 23 Apr 2020 15:47:46 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=A3itlSyRjgX6Dqu7lGRBiyw2QEyTkgW14MPAf8f8gk4=; b=u0vYUw9bOn3tnL
-	XmD0XveceYMjZPlsppOCcX8PN7OTawYhDxdmcHm596J+N/Yqqoumi67zo4PqWYxA/Sj2QegChZ+pm
-	LESGFO9EXtfxwXDH14qPuO4HgPynW+wFQZ4N7Ecc+AvCFVqKLVyZEq5cWmPAhhghOtzbYItM4pmgg
-	s13aogDgk/5ScGQuRDVrqStRYOz75WdiMGlRYy9XFX5qsBYWK4HXZW2PPw4OiWp8GZcz7c6Xgd4fL
-	y28ZvJy3MwltR9EesXXcYMyMmOVn0myzHuF2sv9N3iD8QWTnAy4iDU4o1Yo0pGQo5KeGJXY2OrNfj
-	BHpzdvjwUg0UKv0fGaAQ==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
+	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=1A7gJ8ME4lZYRM6BwaD4Z/dJawr/cMQhcp412MACiNg=; b=tBL
+	oRgYuAK6PSKY66M3/u43jI4FHkZ+JH/zzbbR+R5V4iC179zowAGNrGpvgqWw+aUzZY0PsQ1MIu0WK
+	w8yKOZ9keGcSZ3X/O6tAhwkZcj9vHyb2Ibe1rj3nYtS3v+ufR4EJbRzb/szDZsD50JK6fDuG7LF/u
+	KIJquFaronrYZqqJQfw060ivA2Nxu7js9cjo4l8M3Z1JmfbESPgZ3gW5xIRsPJh9vxKRmygtIMFHu
+	aol91IlPJ0knBbcYjsoj0VWMMXoRySXtLJukpwDfissWIhHiRMaECik4I0lytdZCBtt9HcrmpHkY3
+	h/Osb1evLtJnC8JfkCgOA/1Oc+ThIaA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jRY1n-0005YK-Fa; Thu, 23 Apr 2020 09:20:15 +0000
-Received: from mail26.static.mailgun.info ([104.130.122.26])
+	id 1jRcCa-0005Zn-2g; Thu, 23 Apr 2020 13:47:40 +0000
+Received: from mail27.static.mailgun.info ([104.130.122.27])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jRY1d-0003ey-1w
- for ath10k@lists.infradead.org; Thu, 23 Apr 2020 09:20:09 +0000
+ id 1jRcCV-0005Yj-Vv
+ for ath10k@lists.infradead.org; Thu, 23 Apr 2020 13:47:37 +0000
 DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
  q=dns/txt; 
- s=smtp; t=1587633607; h=Content-Transfer-Encoding: MIME-Version:
- References: In-Reply-To: Message-Id: Date: Subject: Cc: To: From:
- Sender; bh=Tfky6aXdcSPof7KzEZvaKUJZlUBHb8eRh2Njk9e7Y9A=;
- b=eoaLydPvYWtfwHYMGs3uQ65mLH5i1ZFmlZ3cAy15B+EY2du9nh9jh15KMDSR8weQvfCRZv49
- uaCqT8i/W4rtqabav5mbT22bcqb4m3kCrbHb7yRru63ZTGeO1Hov5bCWvVYH/ic5y7NDbyz6
- MqFnf3nP4kY3PsEfhQGFTp/UdhI=
-X-Mailgun-Sending-Ip: 104.130.122.26
+ s=smtp; t=1587649655; h=Message-Id: Date: Subject: Cc: To: From:
+ Sender; bh=gVsG1XnBWb5780Ly2KGPRylIdP51VpHcUUyeJ8uzKB4=;
+ b=MM72TOZXVEO2nMNvGSqsHcsRP9psWjAnAKKOeDOeNC5T91SAUm0LDigmujsXSDZMOxebgner
+ 3+ARrU0MMf9+uq4v2Gr/y/O+zz3OX5B7aIqZYJeVcR0LZ0jCBSFHurzTbCN/jW7KeWHhIC8/
+ Iv/tVBzbjnEd7sOtWiU+OJviLOw=
+X-Mailgun-Sending-Ip: 104.130.122.27
 X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
 Received: from smtp.codeaurora.org
  (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
- by mxa.mailgun.org with ESMTP id 5ea15db5.7f6ccf79d180-smtp-out-n02;
- Thu, 23 Apr 2020 09:19:49 -0000 (UTC)
+ by mxa.mailgun.org with ESMTP id 5ea19c73.7f3d4085f260-smtp-out-n04;
+ Thu, 23 Apr 2020 13:47:31 -0000 (UTC)
 Received: by smtp.codeaurora.org (Postfix, from userid 1001)
- id 9E053C433D2; Thu, 23 Apr 2020 09:19:49 +0000 (UTC)
+ id EFB96C433BA; Thu, 23 Apr 2020 13:47:30 +0000 (UTC)
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  aws-us-west-2-caf-mail-1.web.codeaurora.org
 X-Spam-Level: 
 X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,SPF_NONE
- autolearn=ham autolearn_force=no version=3.4.0
-Received: from wgong-HP-Z240-SFF-Workstation.qca.qualcomm.com (unknown
- [180.166.53.21])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
- (No client certificate requested) (Authenticated sender: wgong)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id F0F4BC44788;
- Thu, 23 Apr 2020 09:19:47 +0000 (UTC)
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org F0F4BC44788
+ autolearn=unavailable autolearn_force=no version=3.4.0
+Received: from che-swdbs-01.qca.qualcomm.com
+ (blr-c-bdr-fw-01_GlobalNAT_AllZones-Outside.qualcomm.com [103.229.19.19])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested) (Authenticated sender: mkenna)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id EC79CC433CB;
+ Thu, 23 Apr 2020 13:47:27 +0000 (UTC)
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org EC79CC433CB
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
- spf=none smtp.mailfrom=wgong@codeaurora.org
-From: Wen Gong <wgong@codeaurora.org>
+ spf=none smtp.mailfrom=mkenna@codeaurora.org
+From: Maharaja Kennadyrajan <mkenna@codeaurora.org>
 To: ath10k@lists.infradead.org
-Subject: [PATCH 4/4] ath10k: correct tx bitrate of iw for SDIO
-Date: Thu, 23 Apr 2020 17:18:56 +0800
-Message-Id: <20200423091856.24297-5-wgong@codeaurora.org>
-X-Mailer: git-send-email 2.23.0
-In-Reply-To: <20200423091856.24297-1-wgong@codeaurora.org>
-References: <20200423091856.24297-1-wgong@codeaurora.org>
-MIME-Version: 1.0
+Subject: [PATCH] ath10k: Avoid override CE5 configuration for QCA99X0 chipsets
+Date: Thu, 23 Apr 2020 19:19:19 +0530
+Message-Id: <1587649759-14381-1-git-send-email-mkenna@codeaurora.org>
+X-Mailer: git-send-email 1.7.9.5
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200423_022007_923338_427A21D3 
-X-CRM114-Status: GOOD (  12.24  )
+X-CRM114-CacheID: sfid-20200423_064736_091889_0BAC2557 
+X-CRM114-Status: GOOD (  19.30  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [104.130.122.26 listed in list.dnswl.org]
+ no trust [104.130.122.27 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
@@ -90,98 +86,302 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless@vger.kernel.org, wgong@codeaurora.org
+Cc: Maharaja Kennadyrajan <mkenna@codeaurora.org>,
+ linux-wireless@vger.kernel.org
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-For legacy mode, tx bitrate not show correct sometimes, for example:
-iw wlan0 link
-Connected to 8c:21:0a:b3:5a:64 (on wlan0)
-        SSID: tplinkgw
-        freq: 2462
-        RX: 19672 bytes (184 packets)
-        TX: 9851 bytes (87 packets)
-        signal: -51 dBm
-        rx bitrate: 54.0 MBit/s
-        tx bitrate: 2.8 MBit/s
+As the exisiting CE configurations are defined in global, there
+are the chances of QCA99X0 family chipsets CE configurations
+are getting changed by the ath10k_pci_override_ce_config()
+function.
 
-This patch use the tx bitrate info from WMI_TLV_PEER_STATS_INFO_EVENTID
-report from firmware, and tx bitrate show correct.
+The override will be hit and CE5 configurations will be changed,
+when the user bring up the QCA99X0 chipsets along with QCA6174
+or QCA9377 chipset. (Bring up QCA99X0 family chipsets after
+QCA6174 or QCA9377).
 
-iw wlan0 link
-Connected to 8c:21:0a:b3:5a:64 (on wlan0)
-        SSID: tplinkgw
-        freq: 2462
-        RX: 13973 bytes (120 packets)
-        TX: 6737 bytes (57 packets)
-        signal: -52 dBm
-        rx bitrate: 54.0 MBit/s
-        tx bitrate: 54.0 MBit/s
+Hence, fixing this issue by moving the global CE configuration
+to radio specific CE configuration.
 
-This patch only effect SDIO chip, ath10k_mac_sta_get_peer_stats_info
-has check for bitrate_statistics of hw_params, it is enabled only for
-"qca6174 hw3.2 sdio".
+Tested hardware: QCA9888 & QCA6174
+Tested firmware: 10.4-3.10-00047 & WLAN.RM.4.4.1.c3-00058
 
-Tested with QCA6174 SDIO with firmware WLAN.RMH.4.4.1-00042.
-
-Signed-off-by: Wen Gong <wgong@codeaurora.org>
+Signed-off-by: Maharaja Kennadyrajan <mkenna@codeaurora.org>
 ---
- drivers/net/wireless/ath/ath10k/core.h    |  2 ++
- drivers/net/wireless/ath/ath10k/mac.c     | 10 ++++++++++
- drivers/net/wireless/ath/ath10k/wmi-tlv.c |  2 ++
- 3 files changed, 14 insertions(+)
+ drivers/net/wireless/ath/ath10k/ce.h   |  2 +-
+ drivers/net/wireless/ath/ath10k/pci.c  | 74 ++++++++++++++++++++++++++--------
+ drivers/net/wireless/ath/ath10k/pci.h  |  4 ++
+ drivers/net/wireless/ath/ath10k/snoc.c |  4 +-
+ 4 files changed, 64 insertions(+), 20 deletions(-)
 
-diff --git a/drivers/net/wireless/ath/ath10k/core.h b/drivers/net/wireless/ath/ath10k/core.h
-index f70b256272ed..1168b70dd2e2 100644
---- a/drivers/net/wireless/ath/ath10k/core.h
-+++ b/drivers/net/wireless/ath/ath10k/core.h
-@@ -524,6 +524,8 @@ struct ath10k_sta {
+diff --git a/drivers/net/wireless/ath/ath10k/ce.h b/drivers/net/wireless/ath/ath10k/ce.h
+index a7478c2..9711f0e 100644
+--- a/drivers/net/wireless/ath/ath10k/ce.h
++++ b/drivers/net/wireless/ath/ath10k/ce.h
+@@ -419,7 +419,7 @@ struct ce_pipe_config {
+ #define PIPEDIR_INOUT   3  /* bidirectional */
  
- 	u32 rx_rate_code;
- 	u32 rx_bitrate_kbps;
-+	u32 tx_rate_code;
-+	u32 tx_bitrate_kbps;
- 	struct work_struct update_wk;
- 	u64 rx_duration;
- 	struct ath10k_htt_tx_stats *tx_stats;
-diff --git a/drivers/net/wireless/ath/ath10k/mac.c b/drivers/net/wireless/ath/ath10k/mac.c
-index 4b4c81ef131b..a63f8efb4f71 100644
---- a/drivers/net/wireless/ath/ath10k/mac.c
-+++ b/drivers/net/wireless/ath/ath10k/mac.c
-@@ -8497,6 +8497,16 @@ static void ath10k_mac_sta_get_peer_stats_info(struct ath10k *ar,
- 		arsta->rx_rate_code = 0;
- 		arsta->rx_bitrate_kbps = 0;
+ /* Establish a mapping between a service/direction and a pipe. */
+-struct service_to_pipe {
++struct ce_service_to_pipe {
+ 	__le32 service_id;
+ 	__le32 pipedir;
+ 	__le32 pipenum;
+diff --git a/drivers/net/wireless/ath/ath10k/pci.c b/drivers/net/wireless/ath/ath10k/pci.c
+index cd1c5d6..8400943 100644
+--- a/drivers/net/wireless/ath/ath10k/pci.c
++++ b/drivers/net/wireless/ath/ath10k/pci.c
+@@ -116,7 +116,7 @@ static int ath10k_pci_bmi_wait(struct ath10k *ar,
+ static void ath10k_pci_htt_htc_rx_cb(struct ath10k_ce_pipe *ce_state);
+ static void ath10k_pci_pktlog_rx_cb(struct ath10k_ce_pipe *ce_state);
+ 
+-static struct ce_attr host_ce_config_wlan[] = {
++static const struct ce_attr pci_host_ce_config_wlan[] = {
+ 	/* CE0: host->target HTC control and raw streams */
+ 	{
+ 		.flags = CE_ATTR_FLAGS,
+@@ -222,7 +222,7 @@ static int ath10k_pci_bmi_wait(struct ath10k *ar,
+ };
+ 
+ /* Target firmware's Copy Engine configuration. */
+-static struct ce_pipe_config target_ce_config_wlan[] = {
++static const struct ce_pipe_config pci_target_ce_config_wlan[] = {
+ 	/* CE0: host->target HTC control and raw streams */
+ 	{
+ 		.pipenum = __cpu_to_le32(0),
+@@ -335,7 +335,7 @@ static int ath10k_pci_bmi_wait(struct ath10k *ar,
+  * This table is derived from the CE_PCI TABLE, above.
+  * It is passed to the Target at startup for use by firmware.
+  */
+-static struct service_to_pipe target_service_to_ce_map_wlan[] = {
++static const struct ce_service_to_pipe pci_target_service_to_ce_map_wlan[] = {
+ 	{
+ 		__cpu_to_le32(ATH10K_HTC_SVC_ID_WMI_DATA_VO),
+ 		__cpu_to_le32(PIPEDIR_OUT),	/* out = UL = host -> target */
+@@ -1787,6 +1787,8 @@ static void ath10k_pci_fw_crashed_dump(struct ath10k *ar)
+ void ath10k_pci_hif_send_complete_check(struct ath10k *ar, u8 pipe,
+ 					int force)
+ {
++	struct ath10k_pci *ar_pci = ath10k_pci_priv(ar);
++
+ 	ath10k_dbg(ar, ATH10K_DBG_PCI, "pci hif send complete check\n");
+ 
+ 	if (!force) {
+@@ -1804,7 +1806,7 @@ void ath10k_pci_hif_send_complete_check(struct ath10k *ar, u8 pipe,
+ 		 * If at least 50% of the total resources are still available,
+ 		 * don't bother checking again yet.
+ 		 */
+-		if (resources > (host_ce_config_wlan[pipe].src_nentries >> 1))
++		if (resources > (ar_pci->attr[pipe].src_nentries >> 1))
+ 			return;
  	}
-+
-+	if (arsta->tx_rate_code != 0 && arsta->tx_bitrate_kbps != 0) {
-+		ath10k_mac_parse_bitrate(ar, arsta->tx_rate_code,
-+					 arsta->tx_bitrate_kbps,
-+					 &sinfo->txrate);
-+
-+		sinfo->filled |= BIT_ULL(NL80211_STA_INFO_TX_BITRATE);
-+		arsta->tx_rate_code = 0;
-+		arsta->tx_bitrate_kbps = 0;
-+	}
+ 	ath10k_ce_per_engine_service(ar, pipe);
+@@ -1820,14 +1822,15 @@ static void ath10k_pci_rx_retry_sync(struct ath10k *ar)
+ int ath10k_pci_hif_map_service_to_pipe(struct ath10k *ar, u16 service_id,
+ 				       u8 *ul_pipe, u8 *dl_pipe)
+ {
+-	const struct service_to_pipe *entry;
++	struct ath10k_pci *ar_pci = ath10k_pci_priv(ar);
++	const struct ce_service_to_pipe *entry;
+ 	bool ul_set = false, dl_set = false;
+ 	int i;
+ 
+ 	ath10k_dbg(ar, ATH10K_DBG_PCI, "pci hif map service\n");
+ 
+-	for (i = 0; i < ARRAY_SIZE(target_service_to_ce_map_wlan); i++) {
+-		entry = &target_service_to_ce_map_wlan[i];
++	for (i = 0; i < ARRAY_SIZE(pci_target_service_to_ce_map_wlan); i++) {
++		entry = &ar_pci->serv_to_pipe[i];
+ 
+ 		if (__le32_to_cpu(entry->service_id) != service_id)
+ 			continue;
+@@ -2316,6 +2319,7 @@ static int ath10k_bus_get_num_banks(struct ath10k *ar)
+ 
+ int ath10k_pci_init_config(struct ath10k *ar)
+ {
++	struct ath10k_pci *ar_pci = ath10k_pci_priv(ar);
+ 	u32 interconnect_targ_addr;
+ 	u32 pcie_state_targ_addr = 0;
+ 	u32 pipe_cfg_targ_addr = 0;
+@@ -2361,7 +2365,7 @@ int ath10k_pci_init_config(struct ath10k *ar)
+ 	}
+ 
+ 	ret = ath10k_pci_diag_write_mem(ar, pipe_cfg_targ_addr,
+-					target_ce_config_wlan,
++					ar_pci->pipe_config,
+ 					sizeof(struct ce_pipe_config) *
+ 					NUM_TARGET_CE_CONFIG_WLAN);
+ 
+@@ -2385,9 +2389,10 @@ int ath10k_pci_init_config(struct ath10k *ar)
+ 		return ret;
+ 	}
+ 
+-	ret = ath10k_pci_diag_write_mem(ar, svc_to_pipe_map,
+-					target_service_to_ce_map_wlan,
+-					sizeof(target_service_to_ce_map_wlan));
++	ret =
++	ath10k_pci_diag_write_mem(ar, svc_to_pipe_map,
++				  ar_pci->serv_to_pipe,
++				  sizeof(pci_target_service_to_ce_map_wlan));
+ 	if (ret != 0) {
+ 		ath10k_err(ar, "Failed to write svc/pipe map: %d\n", ret);
+ 		return ret;
+@@ -2459,23 +2464,24 @@ static void ath10k_pci_override_ce_config(struct ath10k *ar)
+ {
+ 	struct ce_attr *attr;
+ 	struct ce_pipe_config *config;
++	struct ath10k_pci *ar_pci = ath10k_pci_priv(ar);
+ 
+ 	/* For QCA6174 we're overriding the Copy Engine 5 configuration,
+ 	 * since it is currently used for other feature.
+ 	 */
+ 
+ 	/* Override Host's Copy Engine 5 configuration */
+-	attr = &host_ce_config_wlan[5];
++	attr = &ar_pci->attr[5];
+ 	attr->src_sz_max = 0;
+ 	attr->dest_nentries = 0;
+ 
+ 	/* Override Target firmware's Copy Engine configuration */
+-	config = &target_ce_config_wlan[5];
++	config = &ar_pci->pipe_config[5];
+ 	config->pipedir = __cpu_to_le32(PIPEDIR_OUT);
+ 	config->nbytes_max = __cpu_to_le32(2048);
+ 
+ 	/* Map from service/endpoint to Copy Engine */
+-	target_service_to_ce_map_wlan[15].pipenum = __cpu_to_le32(1);
++	ar_pci->serv_to_pipe[15].pipenum = __cpu_to_le32(1);
  }
  
- static void ath10k_sta_statistics(struct ieee80211_hw *hw,
-diff --git a/drivers/net/wireless/ath/ath10k/wmi-tlv.c b/drivers/net/wireless/ath/ath10k/wmi-tlv.c
-index eec1f1f27dec..9187b62b331c 100644
---- a/drivers/net/wireless/ath/ath10k/wmi-tlv.c
-+++ b/drivers/net/wireless/ath/ath10k/wmi-tlv.c
-@@ -249,6 +249,8 @@ static int ath10k_wmi_tlv_parse_peer_stats_info(struct ath10k *ar, u16 tag, u16
- 	arsta = (struct ath10k_sta *)sta->drv_priv;
- 	arsta->rx_rate_code = __le32_to_cpu(stat->last_rx_rate_code);
- 	arsta->rx_bitrate_kbps = __le32_to_cpu(stat->last_rx_bitrate_kbps);
-+	arsta->tx_rate_code = __le32_to_cpu(stat->last_tx_rate_code);
-+	arsta->tx_bitrate_kbps = __le32_to_cpu(stat->last_tx_bitrate_kbps);
+ int ath10k_pci_alloc_pipes(struct ath10k *ar)
+@@ -2491,7 +2497,7 @@ int ath10k_pci_alloc_pipes(struct ath10k *ar)
+ 		pipe->pipe_num = i;
+ 		pipe->hif_ce_state = ar;
+ 
+-		ret = ath10k_ce_alloc_pipe(ar, i, &host_ce_config_wlan[i]);
++		ret = ath10k_ce_alloc_pipe(ar, i, &ar_pci->attr[i]);
+ 		if (ret) {
+ 			ath10k_err(ar, "failed to allocate copy engine pipe %d: %d\n",
+ 				   i, ret);
+@@ -2504,7 +2510,7 @@ int ath10k_pci_alloc_pipes(struct ath10k *ar)
+ 			continue;
+ 		}
+ 
+-		pipe->buf_sz = (size_t)(host_ce_config_wlan[i].src_sz_max);
++		pipe->buf_sz = (size_t)(ar_pci->attr[i].src_sz_max);
+ 	}
  
  	return 0;
+@@ -2520,10 +2526,11 @@ void ath10k_pci_free_pipes(struct ath10k *ar)
+ 
+ int ath10k_pci_init_pipes(struct ath10k *ar)
+ {
++	struct ath10k_pci *ar_pci = ath10k_pci_priv(ar);
+ 	int i, ret;
+ 
+ 	for (i = 0; i < CE_COUNT; i++) {
+-		ret = ath10k_ce_init_pipe(ar, i, &host_ce_config_wlan[i]);
++		ret = ath10k_ce_init_pipe(ar, i, &ar_pci->attr[i]);
+ 		if (ret) {
+ 			ath10k_err(ar, "failed to initialize copy engine pipe %d: %d\n",
+ 				   i, ret);
+@@ -3595,6 +3602,31 @@ static int ath10k_pci_probe(struct pci_dev *pdev,
+ 
+ 	timer_setup(&ar_pci->ps_timer, ath10k_pci_ps_timer, 0);
+ 
++	ar_pci->attr = kmemdup(pci_host_ce_config_wlan,
++			       sizeof(pci_host_ce_config_wlan),
++			       GFP_KERNEL);
++	if (!ar_pci->attr) {
++		ret = -ENOMEM;
++		goto err_free;
++	}
++
++	ar_pci->pipe_config = kmemdup(pci_target_ce_config_wlan,
++				      sizeof(pci_target_ce_config_wlan),
++				      GFP_KERNEL);
++	if (!ar_pci->pipe_config) {
++		ret = -ENOMEM;
++		goto err_free;
++	}
++
++	ar_pci->serv_to_pipe =
++		kmemdup(pci_target_service_to_ce_map_wlan,
++			sizeof(pci_target_service_to_ce_map_wlan),
++			GFP_KERNEL);
++	if (!ar_pci->serv_to_pipe) {
++		ret = -ENOMEM;
++		goto err_free;
++	}
++
+ 	ret = ath10k_pci_setup_resource(ar);
+ 	if (ret) {
+ 		ath10k_err(ar, "failed to setup resource: %d\n", ret);
+@@ -3690,6 +3722,11 @@ static int ath10k_pci_probe(struct pci_dev *pdev,
+ err_core_destroy:
+ 	ath10k_core_destroy(ar);
+ 
++err_free:
++	kfree(ar_pci->attr);
++	kfree(ar_pci->pipe_config);
++	kfree(ar_pci->serv_to_pipe);
++
+ 	return ret;
  }
+ 
+@@ -3715,6 +3752,9 @@ static void ath10k_pci_remove(struct pci_dev *pdev)
+ 	ath10k_pci_sleep_sync(ar);
+ 	ath10k_pci_release(ar);
+ 	ath10k_core_destroy(ar);
++	kfree(ar_pci->attr);
++	kfree(ar_pci->pipe_config);
++	kfree(ar_pci->serv_to_pipe);
+ }
+ 
+ MODULE_DEVICE_TABLE(pci, ath10k_pci_id_table);
+diff --git a/drivers/net/wireless/ath/ath10k/pci.h b/drivers/net/wireless/ath/ath10k/pci.h
+index 4455ed6c5..e3cbd25 100644
+--- a/drivers/net/wireless/ath/ath10k/pci.h
++++ b/drivers/net/wireless/ath/ath10k/pci.h
+@@ -183,6 +183,10 @@ struct ath10k_pci {
+ 	 * this struct.
+ 	 */
+ 	struct ath10k_ahb ahb[0];
++
++	struct ce_attr *attr;
++	struct ce_pipe_config *pipe_config;
++	struct ce_service_to_pipe *serv_to_pipe;
+ };
+ 
+ static inline struct ath10k_pci *ath10k_pci_priv(struct ath10k *ar)
+diff --git a/drivers/net/wireless/ath/ath10k/snoc.c b/drivers/net/wireless/ath/ath10k/snoc.c
+index 21081b4..3e870aa 100644
+--- a/drivers/net/wireless/ath/ath10k/snoc.c
++++ b/drivers/net/wireless/ath/ath10k/snoc.c
+@@ -356,7 +356,7 @@
+ 	},
+ };
+ 
+-static struct service_to_pipe target_service_to_ce_map_wlan[] = {
++static struct ce_service_to_pipe target_service_to_ce_map_wlan[] = {
+ 	{
+ 		__cpu_to_le32(ATH10K_HTC_SVC_ID_WMI_DATA_VO),
+ 		__cpu_to_le32(PIPEDIR_OUT),	/* out = UL = host -> target */
+@@ -769,7 +769,7 @@ static int ath10k_snoc_hif_map_service_to_pipe(struct ath10k *ar,
+ 					       u16 service_id,
+ 					       u8 *ul_pipe, u8 *dl_pipe)
+ {
+-	const struct service_to_pipe *entry;
++	const struct ce_service_to_pipe *entry;
+ 	bool ul_set = false, dl_set = false;
+ 	int i;
+ 
 -- 
-2.23.0
+1.9.1
 
 _______________________________________________
 ath10k mailing list
