@@ -2,79 +2,75 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 053261B54BE
-	for <lists+ath10k@lfdr.de>; Thu, 23 Apr 2020 08:34:07 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 892611B551E
+	for <lists+ath10k@lfdr.de>; Thu, 23 Apr 2020 09:04:37 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
-	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=1IDHGBAgnryAoVi7oxu6FXIXVAunIIfuwz3giorUsY4=; b=f/0eda7hNs3zLG
-	IQYw9S4bfqaUgVnaXxlMgLVpQvEGgBq7+HRGmDT6BTagP/vh7Q3KU63ytYiK+AXrnO96VcOKX1JwF
-	x9vZ6M0Bm2BR6xNGcGsD6QGYVU7Smqtf3rBjrR76/ctsqM27YEiI8kii6cjxgaJ1q6xw8lJK04xpT
-	MSpahdj+ZXGvBurjYMgkS3aLk0Lkr1cDRTPnzD5waVulLazbuI7gZr71O/7eKbbqIlkQ+QcjUphOp
-	SvqmrrNfAP2JfuuiCHF9l/CMHkXZegBGmKdLoyAG1xW2FdMFDygjWo5JGfP0Hx/1+Zg4Ccp30AGXA
-	W90ZdiWpCX0zveiyoBfg==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:Message-ID:References:In-Reply-To:Subject:To:From:
+	Date:MIME-Version:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=KFWxc6i0GuVQiervqVJZ0DSS8RyrSpirfGNNBS4edZQ=; b=IVnOlJdzWBiiK4wGQN8U0aWZo
+	5JmFJttImBZmLg2Ne5MI4JoSFmNGyc/y1MWniojbB2xxDcTsuC/cDxfFulfvvbOPt0QLF0q1NxdFD
+	OWbfA6XpRIZGTwlTVNGm/RHxqpN2C/0pIraNIILcnobeJNoGqKHsCzWo4wthJVUoI5yUeqsWnm6gV
+	jp8KT3PzEhWuAqEtFPn9aMN2+NryFWtgdaGQuB4fEE24+Mkqix2kVzCig+XHe3BTLQKB1Caow8XSq
+	xRFx89NQTLqOUAE63xqSV2e/4OH5WjAiGtt317O9MOBxACp9UWXrLJx8/F4lAIfmb+AX4pPsu3/Xc
+	Kfal5ll7g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jRVQz-0000if-8h; Thu, 23 Apr 2020 06:34:05 +0000
-Received: from mail26.static.mailgun.info ([104.130.122.26])
+	id 1jRVuU-0000Bg-3d; Thu, 23 Apr 2020 07:04:34 +0000
+Received: from mail27.static.mailgun.info ([104.130.122.27])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jRVQr-0000gi-OL
- for ath10k@lists.infradead.org; Thu, 23 Apr 2020 06:34:02 +0000
+ id 1jRVuP-00009u-UQ
+ for ath10k@lists.infradead.org; Thu, 23 Apr 2020 07:04:31 +0000
 DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
  q=dns/txt; 
- s=smtp; t=1587623639; h=Date: Message-Id: Cc: To: References:
- In-Reply-To: From: Subject: Content-Transfer-Encoding: MIME-Version:
- Content-Type: Sender; bh=d6DeLgdxZxGHqKCavQ16Pn/ermyK+T7kgS/aq6u/nXg=;
- b=TfhMU4XC3yDBEu23FJajR473B54473sedsBjEUE+Q54V7agpoxj+8W2WKj7XzlVCfyn+FuH+
- zePLgWRohPm4CYQQAjZ4FCf3yzHpfkRRQKihfw+1wrwwBp+89/jCiXrHr4oNmwmJRXYAnVBy
- UdemE1GOCl7pzX22q5w6oVYU6TI=
-X-Mailgun-Sending-Ip: 104.130.122.26
+ s=smtp; t=1587625469; h=Message-ID: References: In-Reply-To: Subject:
+ Cc: To: From: Date: Content-Transfer-Encoding: Content-Type:
+ MIME-Version: Sender; bh=1TOIeWN5zNtXku1d38UIrQcnys5ngWzSnkiFB1ONDCo=;
+ b=mQukylZPjSb6WY0ODyK3UDbY/+t8jLllmBlhJT+4sRTkREWYOQgH51mB3B3jqvGjX+ci7chx
+ xIFxtlq+wVergrGjEFwXBxRl3U7l2LZFy5EPaAErW/cds3/1x8iK64z2yz2d2KRaqPMFLRd7
+ CRNFHKti6ntfLcND72LkLv137pM=
+X-Mailgun-Sending-Ip: 104.130.122.27
 X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
 Received: from smtp.codeaurora.org
  (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
- by mxa.mailgun.org with ESMTP id 5ea136d1.7f5604e10ea0-smtp-out-n02;
- Thu, 23 Apr 2020 06:33:53 -0000 (UTC)
+ by mxa.mailgun.org with ESMTP id 5ea13dfc.7f4abd3d2b20-smtp-out-n03;
+ Thu, 23 Apr 2020 07:04:28 -0000 (UTC)
 Received: by smtp.codeaurora.org (Postfix, from userid 1001)
- id 208E9C433CB; Thu, 23 Apr 2020 06:33:53 +0000 (UTC)
+ id 05989C432C2; Thu, 23 Apr 2020 07:04:28 +0000 (UTC)
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  aws-us-west-2-caf-mail-1.web.codeaurora.org
 X-Spam-Level: 
-X-Spam-Status: No, score=0.5 required=2.0 tests=ALL_TRUSTED,MISSING_DATE,
- MISSING_MID,SPF_NONE autolearn=no autolearn_force=no version=3.4.0
-Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
- [88.114.240.156])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested) (Authenticated sender: kvalo)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id AC5BCC433D2;
- Thu, 23 Apr 2020 06:33:49 +0000 (UTC)
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org AC5BCC433D2
-Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
- dmarc=none (p=none dis=none) header.from=codeaurora.org
-Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
- spf=none smtp.mailfrom=kvalo@codeaurora.org
+X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED
+ autolearn=unavailable autolearn_force=no version=3.4.0
+Received: from mail.codeaurora.org (localhost.localdomain [127.0.0.1])
+ (using TLSv1 with cipher ECDHE-RSA-AES256-SHA (256/256 bits))
+ (No client certificate requested) (Authenticated sender: wgong)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 47929C433F2;
+ Thu, 23 Apr 2020 07:04:26 +0000 (UTC)
 MIME-Version: 1.0
-Subject: Re: [PATCH v2] ath10k: Remove ATH10K_STATE_RESTARTED in simulate fw
- crash
-From: Kalle Valo <kvalo@codeaurora.org>
-In-Reply-To: <1555059170-11988-1-git-send-email-wgong@codeaurora.org>
-References: <1555059170-11988-1-git-send-email-wgong@codeaurora.org>
-To: Wen Gong <wgong@codeaurora.org>
-User-Agent: pwcli/0.0.0-git (https://github.com/kvalo/pwcli/) Python/3.5.2
-Message-Id: <20200423063353.208E9C433CB@smtp.codeaurora.org>
-Date: Thu, 23 Apr 2020 06:33:53 +0000 (UTC)
+Date: Thu, 23 Apr 2020 15:04:26 +0800
+From: Wen Gong <wgong@codeaurora.org>
+To: Kalle Valo <kvalo@codeaurora.org>
+Subject: Re: Compex WLE600VX AP mode 5GHz doesn't work since kernel 5.6
+In-Reply-To: <87k12fr4q7.fsf@kamboji.qca.qualcomm.com>
+References: <5971a327-d11a-35e6-8295-8dfb8ae3a434@yandex.ru>
+ <87k12fr4q7.fsf@kamboji.qca.qualcomm.com>
+Message-ID: <9cc7efbb3c9b29e4553a427e6f58725f@codeaurora.org>
+X-Sender: wgong@codeaurora.org
+User-Agent: Roundcube Webmail/1.3.9
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200422_233359_853531_C5CA1665 
-X-CRM114-Status: GOOD (  12.19  )
+X-CRM114-CacheID: sfid-20200423_000430_042758_0B2DA7B5 
+X-CRM114-Status: UNSURE (   9.30  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [104.130.122.26 listed in list.dnswl.org]
+ no trust [104.130.122.27 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
@@ -91,46 +87,37 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org
-Content-Type: text/plain; charset="us-ascii"
+Cc: svp <svpm@yandex.ru>, ath10k@lists.infradead.org
 Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Wen Gong <wgong@codeaurora.org> wrote:
-
-> When test simulate firmware crash, it is easy to trigger error.
-> command:
-> echo soft > /sys/kernel/debug/ieee80211/phyxx/ath10k/simulate_fw_crash.
+On 2020-04-16 20:32, Kalle Valo wrote:
+> svp <svpm@yandex.ru> writes:
 > 
-> If input more than two times continuously, then it will have error.
-> Error message:
-> ath10k_pci 0000:02:00.0: failed to set vdev 1 RX wake policy: -108
-> ath10k_pci 0000:02:00.0: device is wedged, will not restart
+>> I need help with my softAP installation.
+>> Compex WLE600VX miniPCIe card can't start at 5GHz AP mode after update
+>> to kernel 5.6 on ArchLinux
+>> With kernel 5.5.x and LTS all is OK
+>> Some logs and details is in this ArchLinux forum topic
+>> https://bbs.archlinux.org/viewtopic.php?id=254535
 > 
-> It is because the state has not changed to ATH10K_STATE_ON immediately,
-> then it will have more than two simulate crash process running meanwhile,
-> and complete/wakeup some field twice, it destroy the normal recovery
-> process.
+> So if I read the link correctly this commit causes the regression 
+> (which
+> was introduced in v5.6-rc1):
 > 
-> add flag wait-ready for this command:
-> echo soft wait-ready > /sys/kernel/debug/ieee80211/phyxx/ath10k/simulate_fw_crash
+> commit 2dc016599cfa9672a147528ca26d70c3654a5423
+> Author:     Wen Gong <wgong@codeaurora.org>
+> AuthorDate: Fri Nov 29 07:34:09 2019 +0000
+> Commit:     Kalle Valo <kvalo@codeaurora.org>
+> CommitDate: Mon Dec 2 12:08:01 2019 +0200
 > 
-> Tested with QCA6174 PCI with firmware
-> WLAN.RM.4.4.1-00109-QCARMSWPZ-1, but this will also affect QCA9377 PCI.
-> It's not a regression with new firmware releases.
+>     ath: add support for special 0x0 regulatory domain
 > 
-> Signed-off-by: Wen Gong <wgong@codeaurora.org>
-
-I'm dropping this as I suspect the real bug is somewhere else and this
-is just a workaround.
-
-Patch set to Changes Requested.
-
--- 
-https://patchwork.kernel.org/patch/10897587/
-
-https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
+> Wen, please take a look. Should I revert this commit? Regressions are
+> not ok.
+Yes, please revert it.
 
 _______________________________________________
 ath10k mailing list
