@@ -2,69 +2,70 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0711E1B5285
-	for <lists+ath10k@lfdr.de>; Thu, 23 Apr 2020 04:29:04 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3B0A11B52A8
+	for <lists+ath10k@lfdr.de>; Thu, 23 Apr 2020 04:42:37 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
 	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=tOnOUTapZTMKAvpGqoHXlkW9NI0C97vHkgAzaRLxrHs=; b=tLAxt4YAmmLJ4z
-	nncdWDcdS0p4wEUX1FySiTa+A8Sdk5ZKU7ToOWjCVpqb5rZYa/Yj7yRoicQivTjt9JeyW/tZzcxWZ
-	bLzS4IjiBJi6G+J6Pk+geNaRFrHj80F1lHky6PalnqZS9Q8msXlybrHwl1PWqTk1P+7o2r9+2p6CW
-	ICgyUX2GGhmmQI/EJDcGJNEQtpr41a8X2/Js/ZmUWazD6xK5PpTGkMywxrram8tBbK3dfd5DGBqEX
-	yGrMTMsk/Xlc5Z/95IGPKFB4+VCTKnNw0Gblo+lWkySJK8131Tx8ZNvXtujgyWQ6BtsHGCNkj3Iu7
-	W1R1T2LlzSxc23fHkTxQ==;
+	List-Owner; bh=Ya9qVLzgx9GIPntaF5j5E/hbVoWbvqs4/fa3c7ZcaLE=; b=omFUon+++bW8SS
+	MmTsDRoTOpgywlMWRYkY1OPdRpiXlCRHLAsVEVwWfr636ynSNGb8ZlLXoG2RI+yvbBazCScQWZphK
+	j9UJfe49bhIEouNah/lRB3YY3Be0PC6YiGhaZbDTsCqyfsEU6z9ILxfWoPHgZyH4sV41svrewaKo2
+	U17Gru11cM4+Uji3x5ieaQNNQY4T5SIYpFc9dJRxUTV+OpzZ1lSfAd0rDY6/SzROmBrymAyGfzH2R
+	4Z/9D4xwD4VPxGnCZ3dQXdfxYRzaIiyU0SmkFVS0kYNkVGoA4Ej4HtLl0IzIkkXj21kFlPcoMchv/
+	RCdjTqPVW2kkKkRR5HAg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jRRbi-0002Yk-5K; Thu, 23 Apr 2020 02:28:54 +0000
+	id 1jRRov-00045k-BN; Thu, 23 Apr 2020 02:42:33 +0000
 Received: from mail26.static.mailgun.info ([104.130.122.26])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jRRbb-0002W4-F9
- for ath10k@lists.infradead.org; Thu, 23 Apr 2020 02:28:51 +0000
+ id 1jRRon-00044J-2X
+ for ath10k@lists.infradead.org; Thu, 23 Apr 2020 02:42:31 +0000
 DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
  q=dns/txt; 
- s=smtp; t=1587608930; h=Content-Transfer-Encoding: MIME-Version:
+ s=smtp; t=1587609747; h=Content-Transfer-Encoding: MIME-Version:
  Message-Id: Date: Subject: Cc: To: From: Sender;
- bh=aPpPKTGsqkL6cyzNhUhTTZSVkPYP436EodQfBMFtlas=;
- b=E3DkrqzBONtAL3lsxPgCg4X1rOboosFJBA05HmCX54y1zLHyitZGV1uA+z7nvxX5aXm/XDxr
- 4tLL7npVt3WFGfXzmvu8Aq8barwl3LWuyEnP4033YsoUWgD59z90IbRuMPOH6WtYeTo1HHCS
- 8umKHWFaEdz9RS3+NlQ/xnzcBWc=
+ bh=tbRyexWXSxZmHkkyvkQyQ6qIGrWlODsLIlrE1ItUoRo=;
+ b=kfOEA8085C4s6zCLlP4LbJW2aXKXWaBgnOlQQUG+vyQdxY7siA1nmsJPTChph6k2PilwLncY
+ GqRpG3rLdvt8EB/q1uqaP7CRr50RKn1UcM/H8FClfc+NmBXet+PEMargHf4bkPolS3H4/hW+
+ IRcWm9cXeebVAGuGn5b1agVw7pI=
 X-Mailgun-Sending-Ip: 104.130.122.26
 X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
 Received: from smtp.codeaurora.org
  (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
- by mxa.mailgun.org with ESMTP id 5ea0fd4d.7f6c90aa80d8-smtp-out-n02;
- Thu, 23 Apr 2020 02:28:29 -0000 (UTC)
+ by mxa.mailgun.org with ESMTP id 5ea10083.7f6bc6d4cf10-smtp-out-n05;
+ Thu, 23 Apr 2020 02:42:11 -0000 (UTC)
 Received: by smtp.codeaurora.org (Postfix, from userid 1001)
- id 57928C433F2; Thu, 23 Apr 2020 02:28:28 +0000 (UTC)
+ id D545DC433F2; Thu, 23 Apr 2020 02:42:11 +0000 (UTC)
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  aws-us-west-2-caf-mail-1.web.codeaurora.org
 X-Spam-Level: 
 X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,SPF_NONE
- autolearn=ham autolearn_force=no version=3.4.0
+ autolearn=unavailable autolearn_force=no version=3.4.0
 Received: from wgong-HP-Z240-SFF-Workstation.qca.qualcomm.com (unknown
  [180.166.53.21])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
  (No client certificate requested) (Authenticated sender: wgong)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id A74ACC433CB;
- Thu, 23 Apr 2020 02:28:26 +0000 (UTC)
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org A74ACC433CB
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 64345C433CB;
+ Thu, 23 Apr 2020 02:42:09 +0000 (UTC)
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 64345C433CB
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
  spf=none smtp.mailfrom=wgong@codeaurora.org
 From: Wen Gong <wgong@codeaurora.org>
 To: ath10k@lists.infradead.org
-Subject: [PATCH] ath10k: enable rx duration report default for wmi tlv
-Date: Thu, 23 Apr 2020 10:27:58 +0800
-Message-Id: <20200423022758.5365-1-wgong@codeaurora.org>
+Subject: [PATCH] ath10k: add statistics of tx retries and tx failed when tx
+ complete disable
+Date: Thu, 23 Apr 2020 10:41:34 +0800
+Message-Id: <20200423024134.10601-1-wgong@codeaurora.org>
 X-Mailer: git-send-email 2.23.0
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200422_192850_287865_B8B9870F 
-X-CRM114-Status: GOOD (  10.38  )
+X-CRM114-CacheID: sfid-20200422_194227_448973_CACB6568 
+X-CRM114-Status: GOOD (  10.96  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -94,119 +95,95 @@ Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-When run command "iw dev wlan0 station dump", the rx duration is 0.
-When firmware indicate WMI_UPDATE_STATS_EVENTID, extended flag of
-statsis not set by default, so firmware do not report rx duration.
+When tx complete is disabled, all tx status will be set with status
+HTT_TX_COMPL_STATE_ACK and indicate to mac80211 by ieee80211_tx_status,
+then it does not have the statistics for retries and failed packets.
+count of tx retries and tx failed of command "iw wlan0 station dump"
+are both 0. If tx complete is not disabled, then firmware report the
+tx status and ath10k indicate the status to mac80211, then mac80211
+save the statistics and command "iw wlan0 station dump" show them.
 
-one sample:
-localhost # iw wlan0 station dump
+for example:
+localhost ~ # iw dev wlan0 station dump
+Station 3c:28:6d:96:fd:69 (on wlan0)
+	inactive time:	5 ms
+	rx bytes:	1325012
+	rx packets:	6477
+	tx bytes:	85264
+	tx packets:	518
+	tx retries:	0
+	tx failed:	0
+
+This patch only effect chips with tx complete disabled, e.g. SDIO.
+
+with this patch, output of command "iw dev wlan0 station dump":
 Station c4:04:15:5d:97:22 (on wlan0)
-        inactive time:  48 ms
-        rx bytes:       21670
-        rx packets:     147
-        tx bytes:       11529
-        tx packets:     100
-        tx retries:     88
-        tx failed:      36
-        beacon loss:    1
-        beacon rx:      31
-        rx drop misc:   47
-        signal:         -72 [-74, -75] dBm
-        signal avg:     -71 [-74, -75] dBm
-        beacon signal avg:      -71 dBm
-        tx bitrate:     54.0 MBit/s MCS 3 40MHz
-        rx bitrate:     1.0 MBit/s
-	rx duration:    0 us
-
-This patch enable firmware's extened flag of stats by setting flag
-WMI_TLV_STAT_PEER_EXTD of ar->fw_stats_req_mask which is set in
-ath10k_core_init_firmware_features via WMI_REQUEST_STATS_CMDID.
-
-After apply this patch, rx duration show value with the command:
-Station c4:04:15:5d:97:22 (on wlan0)
-        inactive time:  883 ms
-        rx bytes:       44289
-        rx packets:     265
-        tx bytes:       10838
-        tx packets:     93
-        tx retries:     899
-        tx failed:      103
-        beacon loss:    0
-        beacon rx:      78
-        rx drop misc:   46
-        signal:         -71 [-74, -76] dBm
-        signal avg:     -70 [-74, -76] dBm
-        beacon signal avg:      -70 dBm
-        tx bitrate:     54.0 MBit/s MCS 3 40MHz
-        rx bitrate:     1.0 MBit/s
-        rx duration:    358004 us
-
-This patch do not have side effect for all chips, because function
-ath10k_debug_fw_stats_request is already exported to debugfs
-"fw_stats" and WMI_REQUEST_STATS_CMDID is safely sent after condition
-checked by ath10k_peer_stats_enabled in ath10k_sta_statistics.
+        inactive time:  608 ms
+        rx bytes:       180366
+        rx packets:     991
+        tx bytes:       98765577
+        tx packets:     64624
+        tx retries:     14682
+        tx failed:      47086
 
 Tested with QCA6174 SDIO with firmware WLAN.RMH.4.4.1-00042.
 
 Signed-off-by: Wen Gong <wgong@codeaurora.org>
 ---
- drivers/net/wireless/ath/ath10k/debug.c | 2 +-
- drivers/net/wireless/ath/ath10k/debug.h | 8 ++++++++
- drivers/net/wireless/ath/ath10k/mac.c   | 2 ++
- 3 files changed, 11 insertions(+), 1 deletion(-)
+ drivers/net/wireless/ath/ath10k/core.h   | 2 ++
+ drivers/net/wireless/ath/ath10k/htt_rx.c | 7 +++++++
+ drivers/net/wireless/ath/ath10k/mac.c    | 7 +++++++
+ 3 files changed, 16 insertions(+)
 
-diff --git a/drivers/net/wireless/ath/ath10k/debug.c b/drivers/net/wireless/ath/ath10k/debug.c
-index 69139c2e6f82..e8250a665433 100644
---- a/drivers/net/wireless/ath/ath10k/debug.c
-+++ b/drivers/net/wireless/ath/ath10k/debug.c
-@@ -349,7 +349,7 @@ void ath10k_debug_fw_stats_process(struct ath10k *ar, struct sk_buff *skb)
- 	spin_unlock_bh(&ar->data_lock);
- }
+diff --git a/drivers/net/wireless/ath/ath10k/core.h b/drivers/net/wireless/ath/ath10k/core.h
+index d6adcbaf9616..07935d39d6d6 100644
+--- a/drivers/net/wireless/ath/ath10k/core.h
++++ b/drivers/net/wireless/ath/ath10k/core.h
+@@ -500,6 +500,8 @@ struct ath10k_sta {
+ 	u16 peer_id;
+ 	struct rate_info txrate;
+ 	struct ieee80211_tx_info tx_info;
++	u32 tx_retries;
++	u32 tx_failed;
+ 	u32 last_tx_bitrate;
  
--static int ath10k_debug_fw_stats_request(struct ath10k *ar)
-+int ath10k_debug_fw_stats_request(struct ath10k *ar)
- {
- 	unsigned long timeout, time_left;
- 	int ret;
-diff --git a/drivers/net/wireless/ath/ath10k/debug.h b/drivers/net/wireless/ath/ath10k/debug.h
-index 82f7eb8583d9..4cbfd9279d6f 100644
---- a/drivers/net/wireless/ath/ath10k/debug.h
-+++ b/drivers/net/wireless/ath/ath10k/debug.h
-@@ -125,6 +125,9 @@ static inline int ath10k_debug_is_extd_tx_stats_enabled(struct ath10k *ar)
- {
- 	return ar->debug.enable_extd_tx_stats;
- }
+ 	struct work_struct update_wk;
+diff --git a/drivers/net/wireless/ath/ath10k/htt_rx.c b/drivers/net/wireless/ath/ath10k/htt_rx.c
+index 816af1a8ad69..d787cbead56a 100644
+--- a/drivers/net/wireless/ath/ath10k/htt_rx.c
++++ b/drivers/net/wireless/ath/ath10k/htt_rx.c
+@@ -3574,6 +3574,13 @@ ath10k_update_per_peer_tx_stats(struct ath10k *ar,
+ 		ieee80211_tx_rate_update(ar->hw, sta, &arsta->tx_info);
+ 	}
+ 
++	if (ar->htt.disable_tx_comp) {
++		arsta->tx_retries += peer_stats->retry_pkts;
++		arsta->tx_failed += peer_stats->failed_pkts;
++		ath10k_dbg(ar, ATH10K_DBG_HTT, "htt tx retries %d tx failed %d\n",
++			   arsta->tx_retries, arsta->tx_failed);
++	}
 +
-+int ath10k_debug_fw_stats_request(struct ath10k *ar);
-+
- #else
- 
- static inline int ath10k_debug_start(struct ath10k *ar)
-@@ -192,6 +195,11 @@ static inline int ath10k_debug_is_extd_tx_stats_enabled(struct ath10k *ar)
- 	return 0;
- }
- 
-+static inline int ath10k_debug_fw_stats_request(struct ath10k *ar)
-+{
-+	return 0;
-+}
-+
- #define ATH10K_DFS_STAT_INC(ar, c) do { } while (0)
- 
- #define ath10k_debug_get_et_strings NULL
+ 	if (ath10k_debug_is_extd_tx_stats_enabled(ar))
+ 		ath10k_accumulate_per_peer_tx_stats(ar, arsta, peer_stats,
+ 						    rate_idx);
 diff --git a/drivers/net/wireless/ath/ath10k/mac.c b/drivers/net/wireless/ath/ath10k/mac.c
-index 6791c0035be0..ea5a26ea9b32 100644
+index 6791c0035be0..842ae5a529ad 100644
 --- a/drivers/net/wireless/ath/ath10k/mac.c
 +++ b/drivers/net/wireless/ath/ath10k/mac.c
-@@ -8306,6 +8306,8 @@ static void ath10k_sta_statistics(struct ieee80211_hw *hw,
- 	if (!ath10k_peer_stats_enabled(ar))
- 		return;
- 
-+	ath10k_debug_fw_stats_request(ar);
+@@ -8321,6 +8321,13 @@ static void ath10k_sta_statistics(struct ieee80211_hw *hw,
+ 	}
+ 	sinfo->txrate.flags = arsta->txrate.flags;
+ 	sinfo->filled |= BIT_ULL(NL80211_STA_INFO_TX_BITRATE);
 +
- 	sinfo->rx_duration = arsta->rx_duration;
- 	sinfo->filled |= BIT_ULL(NL80211_STA_INFO_RX_DURATION);
++	if (ar->htt.disable_tx_comp) {
++		sinfo->tx_retries = arsta->tx_retries;
++		sinfo->filled |= BIT_ULL(NL80211_STA_INFO_TX_RETRIES);
++		sinfo->tx_failed = arsta->tx_failed;
++		sinfo->filled |= BIT_ULL(NL80211_STA_INFO_TX_FAILED);
++	}
+ }
  
+ static const struct ieee80211_ops ath10k_ops = {
 -- 
 2.23.0
 
