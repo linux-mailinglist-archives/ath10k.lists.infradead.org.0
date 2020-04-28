@@ -2,70 +2,88 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 82B231BC129
-	for <lists+ath10k@lfdr.de>; Tue, 28 Apr 2020 16:27:37 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id AA6771BC430
+	for <lists+ath10k@lfdr.de>; Tue, 28 Apr 2020 17:55:22 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
-	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=yAhnQCNGE3BWH3VEm82FJzOch9Mdv9b6taZww9g2qzg=; b=NKGiJea2Ec2vKrsJPv+OujluK
-	NqyVH6I5PdpmSibP+DOdQ/FrRseQwrsZ9XE8Rpp/dZcdXNZu4HRd+hczuUktN6q+mlVZlAoaPYafS
-	808DLs1ODpYJsx4BahNxJSxSn1z7K8ZFd4Cx8L+fRGSbZbbHp1+5ekxqg05ChLzyPvczidjJHgqaT
-	/fbCHzMaqMZxggkDBdTrrq/A/6k9zT46letc97wjIhtNGZqvHk6K1CMScLOLOpvYmO2D96kVbxrv1
-	36C+uZfYfbFY+T8IwkQm6ZV+PCyOtHQQQ0fSPwick3yFv+lF/QrRtR7fdh2qvKxeSppBEic6T330T
-	Oa3Ivx7IQ==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=TRp25PngYdE2dF9aOHXZoVSQO/B69xNMSyZxAwwVBhQ=; b=g6rstc3bMfCdxI
+	KCFCVIqPxEptI1bBZufHPKdHkzYjkKT3Sf6ffEqKWgE0zp6Qq7SFitjaJ9opHoBol+XZpr9jZ5s3j
+	Z09lYRtadvxvacRIDhTG6X3638mHZmBv9n+4Kwi+MHA0uGC+GDFkcHDOTuPem2J5Q990Xp+pgMFLV
+	JLfcsIu984QBIedUTHPCHgtabK7bXnp/nV/4swA7uWZITMVcKQr1OIyjPoG+w0+wDYhuipLaa7RXV
+	AVhSOAOolJNOHGKNBRu8lp0tMoEW9uboS/xB2jJkvS08laR4O9TaySRiQBobOfvGaHYJWZvelXgpc
+	KSZOV7cha+Mp6pSEjqwQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jTRCu-0000Mh-5k; Tue, 28 Apr 2020 14:27:32 +0000
-Received: from mail2.candelatech.com ([208.74.158.173]
- helo=mail3.candelatech.com)
- by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jTRCq-0000Lt-SK
- for ath10k@lists.infradead.org; Tue, 28 Apr 2020 14:27:30 +0000
-Received: from [192.168.254.4] (unknown [50.34.219.109])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
- (No client certificate requested)
- by mail3.candelatech.com (Postfix) with ESMTPSA id 15B2313C283;
- Tue, 28 Apr 2020 07:27:24 -0700 (PDT)
-DKIM-Filter: OpenDKIM Filter v2.11.0 mail3.candelatech.com 15B2313C283
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=candelatech.com;
- s=default; t=1588084046;
- bh=uJfi3yqJT689k/koN7HWdgLdOqnl3VJ1ES5anj/Umb4=;
- h=Subject:To:References:Cc:From:Date:In-Reply-To:From;
- b=fN9YNTV5I6Omibnf0OY3BKpmE5av8OT+WHtiZg9c5deRZt+tc41d0scOzOMwQcsE1
- 1mbSWQDZN5tzgPiAi0/Jqj4JsaNr4pVg/5zKq8s8NyTSl5kP1hEWAAtX5x5x/lfBEw
- yDb5OYYRI/biBC0TzdbjdWp4DVChOKz3ofS9HIyY=
-Subject: Re: [PATCH] ath10k: increase rx buffer size to 2048
-To: Kalle Valo <kvalo@codeaurora.org>, Sven Eckelmann <sven@narfation.org>
-References: <20200205191043.21913-1-linus.luessing@c0d3.blue>
- <3300912.TRQvxCK2vZ@bentobox> <3097447.aZuNXRJysd@sven-edge>
- <87blnblsyv.fsf@codeaurora.org>
-From: Ben Greear <greearb@candelatech.com>
-Message-ID: <db0f12d8-0604-70fa-81ad-5c1060eb0c6e@candelatech.com>
-Date: Tue, 28 Apr 2020 07:27:24 -0700
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101
- Thunderbird/45.8.0
+	id 1jTSZr-00039V-1h; Tue, 28 Apr 2020 15:55:19 +0000
+Received: from mail-ot1-f67.google.com ([209.85.210.67])
+ by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
+ id 1jTSZo-000393-5f
+ for ath10k@lists.infradead.org; Tue, 28 Apr 2020 15:55:17 +0000
+Received: by mail-ot1-f67.google.com with SMTP id 72so33466187otu.1
+ for <ath10k@lists.infradead.org>; Tue, 28 Apr 2020 08:55:15 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to:user-agent;
+ bh=E/TydElCkArBzhog9A76R0UknEmptmdX1tix+Usu5wU=;
+ b=M4b6kD2LrN0BPLEZDP0SUU8zH5BmzX14DZ8LNDKgk+uLdcgLghZUGebJ3KsvaXNFtk
+ xPsBw3tO9sz8Ur85xXw+Ny/45yZzvo7y7lOYvEYYfakiIaUpU+4TVHJWHETuq7VuLKYR
+ Kno7rjIWcgLaw0CbbULfXKr49Z4d4mgk7DLShxCbr64HuriVdppV4qGpb3axdsA/PYzZ
+ FTPEgUTceuRWWZwjodrSqSuOb66jAEqIsgzrJCIpMWZaSKgdOOx5Z4V5ZalEzHJ+0Tbq
+ ZnQN3r6KosKAG8LPH7gEPp45rwIX9t1ZlHQRNiOJM8I16Uk5mYirOpWsBYjTPe9gffI9
+ iN2A==
+X-Gm-Message-State: AGi0PualW4r/Ez6B1xE8kI2Vkr6vdO7Um1LHVMMo9yNRE0fY0m4UEKVh
+ s9N5e/RQrsUUPQdWLI71xA==
+X-Google-Smtp-Source: APiQypLk5ukhxmRNHN9chkS+4R+a6N/pjUn+lFfl6zwAhvJu+8TRSrJ7WgfuuegVBXhgFeZ9TxMPWQ==
+X-Received: by 2002:a9d:37a2:: with SMTP id x31mr24139971otb.52.1588089315214; 
+ Tue, 28 Apr 2020 08:55:15 -0700 (PDT)
+Received: from rob-hp-laptop (24-155-109-49.dyn.grandenetworks.net.
+ [24.155.109.49])
+ by smtp.gmail.com with ESMTPSA id x82sm4935915oig.55.2020.04.28.08.55.14
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Tue, 28 Apr 2020 08:55:14 -0700 (PDT)
+Received: (nullmailer pid 29682 invoked by uid 1000);
+ Tue, 28 Apr 2020 15:55:13 -0000
+Date: Tue, 28 Apr 2020 10:55:13 -0500
+From: Rob Herring <robh@kernel.org>
+To: Rakesh Pillai <pillair@codeaurora.org>
+Subject: Re: [PATCH v3 1/3] dt-bindings: ath10k: Add wifi-firmware subnode
+ for wifi node
+Message-ID: <20200428155513.GA29618@bogus>
+References: <1586971906-20985-1-git-send-email-pillair@codeaurora.org>
+ <1586971906-20985-2-git-send-email-pillair@codeaurora.org>
 MIME-Version: 1.0
-In-Reply-To: <87blnblsyv.fsf@codeaurora.org>
+Content-Disposition: inline
+In-Reply-To: <1586971906-20985-2-git-send-email-pillair@codeaurora.org>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200428_072728_940790_C6F75EE6 
-X-CRM114-Status: GOOD (  19.47  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200428_085516_211501_F1700068 
+X-CRM114-Status: UNSURE (   8.17  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.7 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [209.85.210.67 listed in list.dnswl.org]
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider [robherring2[at]gmail.com]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit [robherring2[at]gmail.com]
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [209.85.210.67 listed in wl.mailspike.net]
+ 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
+ -0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -77,56 +95,28 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: =?UTF-8?Q?Linus_L=c3=bcssing?= <linus.luessing@c0d3.blue>,
- Simon Wunderlich <sw@simonwunderlich.de>, netdev@vger.kernel.org,
+Cc: Rakesh Pillai <pillair@codeaurora.org>, devicetree@vger.kernel.org,
  linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
- ath10k@lists.infradead.org, mail@adrianschmutzler.de,
- "David S . Miller" <davem@davemloft.net>,
- =?UTF-8?Q?Linus_L=c3=bcssing?= <ll@simonwunderlich.de>
-Content-Transfer-Encoding: base64
-Content-Type: text/plain; charset="utf-8"; Format="flowed"
+ ath10k@lists.infradead.org
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-CgpPbiAwNC8yOC8yMDIwIDA1OjAxIEFNLCBLYWxsZSBWYWxvIHdyb3RlOgo+IFN2ZW4gRWNrZWxt
-YW5uIDxzdmVuQG5hcmZhdGlvbi5vcmc+IHdyaXRlczoKPgo+PiBPbiBXZWRuZXNkYXksIDEgQXBy
-aWwgMjAyMCAwOTowMDo0OSBDRVNUIFN2ZW4gRWNrZWxtYW5uIHdyb3RlOgo+Pj4gT24gV2VkbmVz
-ZGF5LCA1IEZlYnJ1YXJ5IDIwMjAgMjA6MTA6NDMgQ0VTVCBMaW51cyBMw7xzc2luZyB3cm90ZToK
-Pj4+PiBGcm9tOiBMaW51cyBMw7xzc2luZyA8bGxAc2ltb253dW5kZXJsaWNoLmRlPgo+Pj4+Cj4+
-Pj4gQmVmb3JlLCBvbmx5IGZyYW1lcyB3aXRoIGEgbWF4aW11bSBzaXplIG9mIDE1MjggYnl0ZXMg
-Y291bGQgYmUKPj4+PiB0cmFuc21pdHRlZCBiZXR3ZWVuIHR3byA4MDIuMTFzIG5vZGVzLgo+Pj4+
-Cj4+Pj4gRm9yIGJhdG1hbi1hZHYgZm9yIGluc3RhbmNlLCB3aGljaCBhZGRzIGl0cyBvd24gaGVh
-ZGVyIHRvIGVhY2ggZnJhbWUsCj4+Pj4gd2UgdHlwaWNhbGx5IG5lZWQgYW4gTVRVIG9mIGF0IGxl
-YXN0IDE1MzIgYnl0ZXMgdG8gYmUgYWJsZSB0byB0cmFuc21pdAo+Pj4+IHdpdGhvdXQgZnJhZ21l
-bnRhdGlvbi4KPj4+Pgo+Pj4+IFRoaXMgcGF0Y2ggbm93IGluY3JlYXNlcyB0aGUgbWF4bWltdW0g
-ZnJhbWUgc2l6ZSBmcm9tIDE1MjggdG8gMTY1Ngo+Pj4+IGJ5dGVzLgo+Pj4gWy4uLl0KPj4+Cj4+
-PiBAS2FsbGUsIEkgc2F3IHRoYXQgdGhpcyBwYXRjaCB3YXMgbWFya2VkIGFzIGRlZmVycmVkIFsx
-XSBidXQgSSBjb3VsZG4ndCBmaW5kCj4+PiBhbnkgbWFpbCB3aHkgaXQgd2FzIGRvbmUgc28uIEl0
-IHNlZW1zIGxpa2UgdGhpcyBjdXJyZW50bHkgY3JlYXRlcyByZWFsIHdvcmxkCj4+PiBwcm9ibGVt
-cyAtIHNvIHdvdWxkIGJlIG5pY2UgaWYgeW91IGNvdWxkIGV4cGxhaW4gc2hvcnRseSB3aGF0IGlz
-IGN1cnJlbnRseQo+Pj4gYmxvY2tpbmcgaXRzIGFjY2VwdGFuY2UuCj4+Cj4+IFBpbmc/Cj4KPiBT
-b3JyeSBmb3IgdGhlIGRlbGF5LCBteSBwbGFuIHdhcyB0byBmaXJzdCB3cml0ZSBzb21lIGRvY3Vt
-ZW50YXRpb24gYWJvdXQKPiBkaWZmZXJlbnQgaGFyZHdhcmUgZmFtaWxpZXMgYnV0IGhhdmVuJ3Qg
-bWFuYWdlZCB0byBkbyB0aGF0IHlldC4KPgo+IE15IHByb2JsZW0gd2l0aCB0aGlzIHBhdGNoIGlz
-IHRoYXQgSSBkb24ndCBrbm93IHdoYXQgaGFyZHdhcmUgYW5kCj4gZmlybXdhcmUgdmVyc2lvbnMg
-d2VyZSB0ZXN0ZWQsIHNvIGl0IG5lZWRzIGFuYWx5c2lzIGJlZm9yZSBJIGZlZWwgc2FmZQo+IHRv
-IGFwcGx5IGl0LiBUaGUgYXRoMTBrIGhhcmR3YXJlIGZhbWlsaWVzIGFyZSB2ZXJ5IGRpZmZlcmVu
-dCB0aGF0IGV2ZW4KPiBpZiBhIHBhdGNoIHdvcmtzIHBlcmZlY3RseSBvbiBvbmUgYXRoMTBrIGhh
-cmR3YXJlIGl0IGNvdWxkIHN0aWxsIGJyZWFrCj4gYmFkbHkgb24gYW5vdGhlciBvbmUuCj4KPiBX
-aGF0IG1ha2VzIG1lIGZhc3RlciB0byBhcHBseSBhdGgxMGsgcGF0Y2hlcyBpcyB0byBoYXZlIGNv
-bXByZWhlbnNpdmUKPiBhbmFseXNpcyBpbiB0aGUgY29tbWl0IGxvZy4gVGhpcyBzaG93cyBtZSB0
-aGUgcGF0Y2ggYXV0aG9yIGhhcwo+IGNvbnNpZGVyZWQgYWJvdXQgYWxsIGhhcmR3YXJlIGZhbWls
-aWVzLCBub3QganVzdCB0aGUgb25lIGhlIGlzIHRlc3RpbmcKPiBvbiwgYW5kIHRoYXQgSSBkb24n
-dCBuZWVkIHRvIGRvIHRoZSBhbmFseXNpcyBteXNlbGYuCgpJdCBoYXMgYmVlbiBpbiBhdGgxMGst
-Y3QgZm9yIGEgd2hpbGUsIGFuZCB0aGF0IGhhcyBzb21lIGZhaXJseSB3aWRlIGNvdmVyYWdlCmlu
-IE9wZW5XcnQsIHNvIGxpa2VseSBpZiB0aGVyZSB3ZXJlIHByb2JsZW1zIHdlIHdvdWxkIGhhdmUg
-c2VlbiBpdCBhbHJlYWR5LgoKSSBkaWQgbm90IG1ha2UgYW55IHNwZWNpZmljIGNoYW5nZXMgdG8g
-ZmlybXdhcmUgdG8gc3VwcG9ydCB0aGlzLCBzbyB1cHN0cmVhbQpmaXJtd2FyZSBzaG91bGQgYmVo
-YXZlIHNpbWlsYXJseS4KClNlZW1zIGxpa2UgdXBzdHJlYW0gYXRoMTBrIGNvdWxkIHJlYWxseSBi
-ZW5lZml0IGZyb20gaGF2aW5nIHNvbWUgdGVzdCBiZWRzCnNvIHlvdSBjYW4gYWN0dWFsbHkgdGVz
-dCBjb2RlIG9uIGRpZmZlcmVudCBjaGlwcyBhbmQgaGF2ZSBjb25maWRlbmNlCmluIHlvdXIgY2hh
-bmdlcyEKClRoYW5rcywKQmVuCgotLSAKQmVuIEdyZWVhciA8Z3JlZWFyYkBjYW5kZWxhdGVjaC5j
-b20+CkNhbmRlbGEgVGVjaG5vbG9naWVzIEluYyAgaHR0cDovL3d3dy5jYW5kZWxhdGVjaC5jb20K
-Cl9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fCmF0aDEwayBt
-YWlsaW5nIGxpc3QKYXRoMTBrQGxpc3RzLmluZnJhZGVhZC5vcmcKaHR0cDovL2xpc3RzLmluZnJh
-ZGVhZC5vcmcvbWFpbG1hbi9saXN0aW5mby9hdGgxMGsK
+On Wed, 15 Apr 2020 23:01:44 +0530, Rakesh Pillai wrote:
+> Add a wifi-firmware subnode for the wifi node.
+> This wifi-firmware subnode is needed for the
+> targets which do not support TrustZone.
+> 
+> Signed-off-by: Rakesh Pillai <pillair@codeaurora.org>
+> ---
+>  .../devicetree/bindings/net/wireless/qcom,ath10k.txt       | 14 ++++++++++++++
+>  1 file changed, 14 insertions(+)
+> 
+
+Acked-by: Rob Herring <robh@kernel.org>
+
+_______________________________________________
+ath10k mailing list
+ath10k@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/ath10k
