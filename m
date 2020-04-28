@@ -2,64 +2,67 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7BC941BAE65
-	for <lists+ath10k@lfdr.de>; Mon, 27 Apr 2020 21:47:53 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 258831BB3AF
+	for <lists+ath10k@lfdr.de>; Tue, 28 Apr 2020 04:02:02 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Subject:To:From
 	:Date:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=ovLuyACUbfzL6NkqbmXzwz2rOMEsajBQ3cRmosMC1PY=; b=VAr6TFMiPpS6VD
-	035o/RLcaighpezKCqZKhd+CoELnY0ivX0AXgRI6TNrDUTzUcjfVcZivsDmjOnxsFEUwQW06epWHb
-	JmqF9f21D54NNZdh/+tQk8EG8FREmri1zT/1+ZIrhqznksUquCv+TdztuohShvIj8sK7ukt56domw
-	LJycadUukUypUZ4gpJ6rgJfslxKN9yzaYjteFFwb92yKQum9vqohKjocsIRcAuzs6VdexBtp85Oik
-	4dqk49fUBqzMikfRpFFOzzTuoghgiwLoC5T/3BG5AxrEG2xjsyg61hAP96zVG2nwBI8E7SK99s+lI
-	weBsL4q9flVEHdUtntcw==;
+	List-Owner; bh=oCr43uCjNfvwBfyCenEl1LGYewoE9NO8dP5pINmnJ38=; b=LkvWDRX+pR6tsN
+	Pyqfp+9BIIyOaRS8QBf8eS8x9K5US4yB0j54P4OgJejDJ7pHhrfR0WIkUKYWP2TUI3IPOK39vxPvL
+	BHOWa83eb6xSu90brtg2QnUVq5i2j5rtbKL7TvOeC7fZoUK82jkF3ZmpXhLlJSXRfswIHNlEaxlJJ
+	wE59jdiUs7PUnvuAHYoso6LxjGVxJDdA9XvUaY7zKmgeCJmxO/ogKUY+foOf64xxsIYeC901Tr9rA
+	sSPJBlTIkimkzgRoL8gcvdib/o7P74BKWxdWkw1BQ0l4JBYU7KQQg9B0A/bSsv0F/9jg6ZQgokbQN
+	+JOU+jk4wx+8oT4zKfhg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jT9jL-0001ny-6K; Mon, 27 Apr 2020 19:47:51 +0000
-Received: from mga05.intel.com ([192.55.52.43])
+	id 1jTFZQ-00026K-JB; Tue, 28 Apr 2020 02:02:00 +0000
+Received: from mga09.intel.com ([134.134.136.24])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jT9iw-0001UU-8t
- for ath10k@lists.infradead.org; Mon, 27 Apr 2020 19:47:29 +0000
-IronPort-SDR: Ncyql0lkUHo9LXcAcDu8pKadmNK2lxMbPB8mIAKtJb3VE9f+lZYOFeG7LceqBQxX+KyMUQVrgD
- V7kppKAsRyHw==
+ id 1jTFZL-00024P-ET
+ for ath10k@lists.infradead.org; Tue, 28 Apr 2020 02:01:57 +0000
+IronPort-SDR: 7sq2LXugGM/17SEx0wzRMEYIW9EXrHUdBMJ+KGUGsIu+G1icsSAfQllL3rXCzFnIr7Z5C5f8rS
+ hRFwZE7cZUgg==
 X-Amp-Result: SKIPPED(no attachment in message)
 X-Amp-File-Uploaded: False
-Received: from fmsmga005.fm.intel.com ([10.253.24.32])
- by fmsmga105.fm.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
- 27 Apr 2020 12:47:25 -0700
-IronPort-SDR: RYNfoPafx87cFeYF6WkKNA4kaVfqKgQEkUKlmp7Hq8roXLVcjkkb05ESu6ls2g5Cs5pR/vUt51
- Wfzms3wd0GDQ==
+Received: from fmsmga004.fm.intel.com ([10.253.24.48])
+ by orsmga102.jf.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
+ 27 Apr 2020 19:01:54 -0700
+IronPort-SDR: nIT8JKREcavFFTuAeZ4rH6r5cqVn/a68H2gaVNAUIAOtpFXJYgUZLpm538v+KvEB7K9KDoL/yd
+ YyZH/2FtC89Q==
 X-ExtLoop1: 1
-X-IronPort-AV: E=Sophos;i="5.73,325,1583222400"; d="scan'208";a="458506742"
+X-IronPort-AV: E=Sophos;i="5.73,326,1583222400"; d="scan'208";a="281983284"
 Received: from lkp-server01.sh.intel.com (HELO lkp-server01) ([10.239.97.150])
- by fmsmga005.fm.intel.com with ESMTP; 27 Apr 2020 12:47:23 -0700
+ by fmsmga004.fm.intel.com with ESMTP; 27 Apr 2020 19:01:52 -0700
 Received: from kbuild by lkp-server01 with local (Exim 4.89)
  (envelope-from <lkp@intel.com>)
- id 1jT9it-0002sH-6G; Tue, 28 Apr 2020 03:47:23 +0800
-Date: Tue, 28 Apr 2020 03:46:39 +0800
+ id 1jTFZH-0003vh-7j; Tue, 28 Apr 2020 10:01:51 +0800
+Date: Tue, 28 Apr 2020 10:01:10 +0800
 From: kbuild test robot <lkp@intel.com>
 To: Kalle Valo <kvalo@codeaurora.org>
-Subject: [ath6kl:pending] BUILD SUCCESS
- b1670eba5ccf8b7f00fd9a87337dc75892d586e8
-Message-ID: <5ea7369f.ksPeqb8WfoSgog85%lkp@intel.com>
+Subject: [ath6kl:ath-next] BUILD SUCCESS
+ 59a022cc14cf84c6405efc1571045683c258a1f5
+Message-ID: <5ea78e66.j094feGU7WaGgs1g%lkp@intel.com>
 User-Agent: Heirloom mailx 12.5 6/20/10
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200427_124726_649776_52AC717F 
-X-CRM114-Status: UNSURE (   5.17  )
+X-CRM114-CacheID: sfid-20200427_190155_546488_01E85622 
+X-CRM114-Status: UNSURE (   6.99  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.7 (/)
+X-Spam-Score: -2.0 (--)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (0.7 points)
+ Content analysis details:   (-2.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [192.55.52.43 listed in list.dnswl.org]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [134.134.136.24 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [134.134.136.24 listed in wl.mailspike.net]
+ -0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
  3.0 HEXHASH_WORD           Multiple instances of word + hexadecimal hash
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
@@ -78,10 +81,10 @@ Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-tree/branch: https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git  pending
-branch HEAD: b1670eba5ccf8b7f00fd9a87337dc75892d586e8  ath10k: remove the max_sched_scan_reqs value
+tree/branch: https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git  ath-next
+branch HEAD: 59a022cc14cf84c6405efc1571045683c258a1f5  ath10k: add statistics of tx retries and tx failed when tx complete disable
 
-elapsed time: 489m
+elapsed time: 864m
 
 configs tested: 166
 configs skipped: 0
@@ -104,6 +107,8 @@ arm                        multi_v5_defconfig
 arm                           sunxi_defconfig
 arm                        multi_v7_defconfig
 sparc                            allyesconfig
+powerpc                             defconfig
+ia64                                defconfig
 i386                             alldefconfig
 h8300                    h8300h-sim_defconfig
 mips                      loongson3_defconfig
@@ -112,21 +117,26 @@ s390                          debug_defconfig
 sparc64                          allmodconfig
 csky                                defconfig
 microblaze                    nommu_defconfig
+nios2                         3c120_defconfig
+ia64                         bigsur_defconfig
 i386                              allnoconfig
 i386                             allyesconfig
 i386                              debian-10.3
 ia64                             allmodconfig
-ia64                                defconfig
 ia64                              allnoconfig
 ia64                        generic_defconfig
 ia64                          tiger_defconfig
-ia64                         bigsur_defconfig
 ia64                             allyesconfig
 ia64                             alldefconfig
 nds32                               defconfig
 nds32                             allnoconfig
 alpha                               defconfig
-nios2                         3c120_defconfig
+h8300                       h8s-sim_defconfig
+h8300                     edosk2674_defconfig
+m68k                       m5475evb_defconfig
+m68k                             allmodconfig
+m68k                           sun3_defconfig
+m68k                          multi_defconfig
 nios2                         10m50_defconfig
 c6x                        evmc6678_defconfig
 xtensa                          iss_defconfig
@@ -134,15 +144,8 @@ c6x                              allyesconfig
 xtensa                       common_defconfig
 openrisc                 simple_smp_defconfig
 openrisc                    or1ksim_defconfig
-h8300                       h8s-sim_defconfig
-h8300                     edosk2674_defconfig
-m68k                       m5475evb_defconfig
-m68k                             allmodconfig
-m68k                           sun3_defconfig
-m68k                          multi_defconfig
 arc                                 defconfig
 arc                              allyesconfig
-powerpc                             defconfig
 powerpc                       ppc64_defconfig
 powerpc                          rhel-kconfig
 microblaze                      mmu_defconfig
