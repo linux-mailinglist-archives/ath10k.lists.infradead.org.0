@@ -2,139 +2,56 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0A5101C3F54
-	for <lists+ath10k@lfdr.de>; Mon,  4 May 2020 18:05:24 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id AD3091C3FDC
+	for <lists+ath10k@lfdr.de>; Mon,  4 May 2020 18:29:44 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:Subject:From:References:To:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=PayXfYTCGl8DZo+NMzlwFRHuSIiq3bRcd5WIemQACLY=; b=uTnh4sSRR49CCq
-	ZCgwPr9gGZKmrBJYmGTuw8IXW4J61mZ1xg5D0Ih6zDdVVVQ6yVdQp3utRMW+DjoQqruL/Um0qHBNN
-	BYXwY5J6E9M+ZYTSID65+/bNRhNWGlr3jip1VpsXhH7dwHt/z3hdIat1sotrVD1eRdt9QqYMmk3Oj
-	RjtvGR0dJKSbLCpTN3ug6zJOKl0AmP6vBKom1UwX1BPJtHBdJn67pBnWLHdWjcxJPsI0nKkpCorPs
-	VVSIMGbCAFABOIqMUUPsx86xCmoyqXFUtefiuLlU+30tQntsNh2FXV8b5lw82iI4u6IF8/aK0N7JG
-	RsGuJp1xuKec1Fzg2JBA==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:Cc:
+	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
+	MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:To:From:Reply-To:
+	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=BnKxWLFkJ1PxNqZh4Exq4u2s5JpJjJRWOZUXn94choI=; b=eNK4Xs1tmf31PLhtMCjlBXZCz
+	ib7W8ok/J3MvBwdpl7rLki5Fe6wSdtOuMJGWKD+jVjCgJAU0ePqhoJlkedT3Hmo4Vm7AjrV4uj6Qr
+	GZ3CHOwdmPRuYtH1s7t7Y/RDk3bMxWxaofOeqZlz5nojxSOVZ7E4Rb3SzrXcpqfKCazEexd7YskhV
+	QRKawKi/ChWJ68LaaBL93SahwHoDjdDBh+t9kE+QLAxGH3bxde12P629hriEn2Hs7AAjx2vTUubKL
+	7VD7s/q5sCVLQudTLPUtkWrtZfndauTB7Dj4qHrX4wWtTiXaRDbZne7LPYPEaF0wrSPSK0VVn2AZv
+	xwdW5mh3w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jVdas-0001wR-8Y; Mon, 04 May 2020 16:05:22 +0000
-Received: from gateway33.websitewelcome.com ([192.185.147.108])
+	id 1jVdyQ-00019H-Nx; Mon, 04 May 2020 16:29:42 +0000
+Received: from dvalin.narfation.org ([213.160.73.56])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jVdam-0007t9-01
- for ath10k@lists.infradead.org; Mon, 04 May 2020 16:05:20 +0000
-Received: from cm12.websitewelcome.com (cm12.websitewelcome.com [100.42.49.8])
- by gateway33.websitewelcome.com (Postfix) with ESMTP id 811DB3B708
- for <ath10k@lists.infradead.org>; Mon,  4 May 2020 11:04:57 -0500 (CDT)
-Received: from gator4166.hostgator.com ([108.167.133.22]) by cmsmtp with SMTP
- id VdaTj4kYS1s2xVdaTjea0g; Mon, 04 May 2020 11:04:57 -0500
-X-Authority-Reason: nr=8
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=embeddedor.com; s=default; h=Content-Transfer-Encoding:Content-Type:
- In-Reply-To:MIME-Version:Date:Message-ID:Subject:From:References:Cc:To:Sender
- :Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
- Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:
- List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=tVXYrSKt0Ghrmb1SJD+1Gw4NlDAzpzVRongcynxauWA=; b=mJmYx091kO6xLVGoBkIs0JLTsY
- NcwMsK2t5NcI8h7NXJdwQ7xbg52jbIn7leBe1/Hey2rsDRosFoJAx4yEuMZpmfanlY0kWqfjiQ2Pp
- EWOYHn0xdq9ReNPxYN6zqDSm54K+kn0dFE/HN3D1VhOKf79h6ffsyCYPV+roJ1a/P0Yx3D0fhM0oH
- C6jRXElEjymzNrixrnvYbowdSvOrUUNJZH1LbbI11KzdlaJzkS/TQJKYU5hn3tYMkBkOrrPoZdvPn
- kB7OJlyhCnmN1tVhkI3Q/2NEbX6AFD1kM+oq0au4AEuMLWZOU/S58qOcDderf6zYzOue1pevjba4G
- ppTa/uSQ==;
-Received: from [189.207.59.248] (port=44408 helo=[192.168.15.4])
- by gator4166.hostgator.com with esmtpsa
- (TLSv1.2:ECDHE-RSA-AES128-GCM-SHA256:128) (Exim 4.92)
- (envelope-from <gustavo@embeddedor.com>)
- id 1jVdaS-0000s1-PQ; Mon, 04 May 2020 11:04:56 -0500
-To: Kalle Valo <kvalo@codeaurora.org>
-References: <20200430213101.135134-1-arnd@arndb.de>
- <20200430213101.135134-5-arnd@arndb.de>
- <49831bca-b9cf-4b9a-1a60-f4289e9c83c0@embeddedor.com>
- <87368flxui.fsf@codeaurora.org>
-From: "Gustavo A. R. Silva" <gustavo@embeddedor.com>
-Autocrypt: addr=gustavo@embeddedor.com; keydata=
- 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
- VtSixD1uOgytAP7RWS474w==
-Subject: Re: [PATCH 04/15] ath10k: fix gcc-10 zero-length-bounds warnings
-Message-ID: <69f5c551-01ab-3b90-01a1-42514cd58f60@embeddedor.com>
-Date: Mon, 4 May 2020 11:09:21 -0500
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
- Thunderbird/68.7.0
+ id 1jVdyM-00016C-Jn; Mon, 04 May 2020 16:29:40 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=narfation.org;
+ s=20121; t=1588609772;
+ h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+ to:to:cc:cc:mime-version:mime-version:content-type:content-type:
+ in-reply-to:in-reply-to:references:references;
+ bh=2p0xlqH/n1GRp0FBc63MMF95nvW3k0K1p0+mBKAtSW4=;
+ b=VsccDo+2zaqkIeSU7CKoICc7/1p55+F44hkciv60cRfP+miV/RvyGGc5gNMQHK6dKAT/kZ
+ W1JXdTQ+XcM+zoyxdBx7r8gC+6C7/xC9dclW6EPG2PPlxBIDmHlJR5t5GUVKlR9SQrEgs3
+ t/D57IJhBHUrDOQVroxAJ4zH3GQ71WY=
+From: Sven Eckelmann <sven@narfation.org>
+To: ath11k@lists.infradead.org
+Subject: Re: [PATCH 1/2] ath10k: use cumulative survey statistics
+Date: Mon, 04 May 2020 18:29:26 +0200
+Message-ID: <1760068.xeLkAeoAig@bentobox>
+In-Reply-To: <20200504154122.91862-1-markus.theil@tu-ilmenau.de>
+References: <20200504154122.91862-1-markus.theil@tu-ilmenau.de>
 MIME-Version: 1.0
-In-Reply-To: <87368flxui.fsf@codeaurora.org>
-Content-Language: en-US
-X-AntiAbuse: This header was added to track abuse,
- please include it with any abuse report
-X-AntiAbuse: Primary Hostname - gator4166.hostgator.com
-X-AntiAbuse: Original Domain - lists.infradead.org
-X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
-X-AntiAbuse: Sender Address Domain - embeddedor.com
-X-BWhitelist: no
-X-Source-IP: 189.207.59.248
-X-Source-L: No
-X-Exim-ID: 1jVdaS-0000s1-PQ
-X-Source: 
-X-Source-Args: 
-X-Source-Dir: 
-X-Source-Sender: ([192.168.15.4]) [189.207.59.248]:44408
-X-Source-Auth: gustavo@embeddedor.com
-X-Email-Count: 9
-X-Source-Cap: Z3V6aWRpbmU7Z3V6aWRpbmU7Z2F0b3I0MTY2Lmhvc3RnYXRvci5jb20=
-X-Local-Domain: yes
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200504_090518_394016_55F02F7D 
-X-CRM114-Status: GOOD (  13.32  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200504_092938_963741_3FB908F1 
+X-CRM114-Status: UNSURE (   5.71  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [192.185.147.108 listed in list.dnswl.org]
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [213.160.73.56 listed in list.dnswl.org]
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [192.185.147.108 listed in wl.mailspike.net]
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
@@ -153,86 +70,79 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Maharaja Kennadyrajan <mkenna@codeaurora.org>,
- Kees Cook <keescook@chromium.org>, Arnd Bergmann <arnd@arndb.de>,
- Erik Stromdahl <erik.stromdahl@gmail.com>, netdev@vger.kernel.org,
- linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
- ath10k@lists.infradead.org, Michal Kazior <michal.kazior@tieto.com>,
- Wen Gong <wgong@codeaurora.org>, "David S. Miller" <davem@davemloft.net>
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: kvalo@codeaurora.org, linux-wireless@vger.kernel.org,
+ Markus Theil <markus.theil@tu-ilmenau.de>, ath10k@lists.infradead.org
+Content-Type: multipart/mixed; boundary="===============3274681519708504341=="
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
+--===============3274681519708504341==
+Content-Type: multipart/signed; boundary="nextPart3821530.ePlWPIuScu"; micalg="pgp-sha512"; protocol="application/pgp-signature"
+
+--nextPart3821530.ePlWPIuScu
+Content-Transfer-Encoding: 7Bit
+Content-Type: text/plain; charset="us-ascii"
+
+On Monday, 4 May 2020 17:41:21 CEST Markus Theil wrote:
+> ath10k currently reports survey results for the last interval between each
+> invocation of NL80211_CMD_GET_SURVEY. For concurrent invocations, this
+> can lead to unexpectedly small results, e.g. when hostapd uses survey
+> data and iw survey dump is invoked in parallel. Fix this by returning
+> cumulative results, that don't depend on the last invocation. Other
+> drivers, e.g. ath9k or mt76 also use this behavior.
+
+It is (unfortunately) not that trivial:
+
+See code and comments from other people:
+
+* https://patchwork.kernel.org/cover/11150285/
+* https://patchwork.kernel.org/patch/11150287/
+* https://patchwork.kernel.org/patch/11150289/
+
+Kind regards,
+	Sven
+
+--nextPart3821530.ePlWPIuScu
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: This is a digitally signed message part.
+Content-Transfer-Encoding: 7Bit
+
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAABCgAdFiEEF10rh2Elc9zjMuACXYcKB8Eme0YFAl6wQuYACgkQXYcKB8Em
+e0YCdhAAygPurJUmKQJVE5BgEzHYMvKcjs753EZjE4y4jiapgn1eygKetd86eG0y
+v9/H370oOke8oR7OZD+LH/8KtQDuhAENiasfB9gpDwZJoEtfA5YjBQmUJLz/+K30
+GJcqjCr2s2dCqIDIqXvKz+nJFgpDUkY1qowIi0/eQN9N10gIuUzh66eTLMTUUuSt
+e5E1POqjvVHD8Fh5sa+e3vTofx2aeKJHI5Bkze59xm0gIh/l44f7YyHzeZnAJ5cZ
+LlCAjpENR5aQvCkr3Vt6IMjJWtDk9/zydkzIkJAL99LyScdMYAgg3qnSekvIJ3N5
+gDF28qSi+PwzpqGm1YSVtwv/BK7NjP5b7t0P6CZtWPmzypEEc8fUAYeIAGTwgVib
+bsbuX/HQbxglLYQkoD6UQPjRkFOrNfM8SFR+rIjxc5DfVGG8dPPwfBqok0PbsRoE
+JK/KP0Enjt2XsSswER5yCbqEZkIytWsAE/Eh3OfuFLGejOw9OhmfEnZQXyVbk4RP
+5+4N6KkD+WS+AdctlXuS5+aR5tb5yMutQ7COn97kZGc2cR5OU89Sc3sFm+ydZGRK
+EuXrsyW2V3p6Yh82Mi8aXR1pHwAGxS5+nyMT0Tg+c9hVEQx+2gfJhrNztEOFWXjD
+m9jTk3xJtsGNoKqNijhFRCDQuykk5DGWUy96v/mVknpJcZqxh48=
+=sviW
+-----END PGP SIGNATURE-----
+
+--nextPart3821530.ePlWPIuScu--
 
 
-On 5/4/20 06:54, Kalle Valo wrote:
-> "Gustavo A. R. Silva" <gustavo@embeddedor.com> writes:
-> 
->> Hi Arnd,
->>
->> On 4/30/20 16:30, Arnd Bergmann wrote:
->>> gcc-10 started warning about out-of-bounds access for zero-length
->>> arrays:
->>>
->>> In file included from drivers/net/wireless/ath/ath10k/core.h:18,
->>>                  from drivers/net/wireless/ath/ath10k/htt_rx.c:8:
->>> drivers/net/wireless/ath/ath10k/htt_rx.c: In function 'ath10k_htt_rx_tx_fetch_ind':
->>> drivers/net/wireless/ath/ath10k/htt.h:1683:17: warning: array subscript 65535 is outside the bounds of an interior zero-length array 'struct htt_tx_fetch_record[0]' [-Wzero-length-bounds]
->>>  1683 |  return (void *)&ind->records[le16_to_cpu(ind->num_records)];
->>>       |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
->>> drivers/net/wireless/ath/ath10k/htt.h:1676:29: note: while referencing 'records'
->>>  1676 |  struct htt_tx_fetch_record records[0];
->>>       |                             ^~~~~~~
->>>
->>> The structure was already converted to have a flexible-array member in
->>> the past, but there are two zero-length members in the end and only
->>> one of them can be a flexible-array member.
->>>
->>> Swap the two around to avoid the warning, as 'resp_ids' is not accessed
->>> in a way that causes a warning.
->>>
->>> Fixes: 3ba225b506a2 ("treewide: Replace zero-length array with flexible-array member")
->>> Fixes: 22e6b3bc5d96 ("ath10k: add new htt definitions")
->>> Signed-off-by: Arnd Bergmann <arnd@arndb.de>
->>> ---
->>>  drivers/net/wireless/ath/ath10k/htt.h | 4 ++--
->>>  1 file changed, 2 insertions(+), 2 deletions(-)
->>>
->>> diff --git a/drivers/net/wireless/ath/ath10k/htt.h b/drivers/net/wireless/ath/ath10k/htt.h
->>> index e7096a73c6ca..7621f0a3dc77 100644
->>> --- a/drivers/net/wireless/ath/ath10k/htt.h
->>> +++ b/drivers/net/wireless/ath/ath10k/htt.h
->>> @@ -1673,8 +1673,8 @@ struct htt_tx_fetch_ind {
->>>  	__le32 token;
->>>  	__le16 num_resp_ids;
->>>  	__le16 num_records;
->>> -	struct htt_tx_fetch_record records[0];
->>> -	__le32 resp_ids[]; /* ath10k_htt_get_tx_fetch_ind_resp_ids() */
->>> +	__le32 resp_ids[0]; /* ath10k_htt_get_tx_fetch_ind_resp_ids() */
->>> +	struct htt_tx_fetch_record records[];
->>>  } __packed;
->>>  
->>>  static inline void *
->>>
->>
->> The treewide patch is an experimental change and, as this change only applies
->> to my -next tree, I will carry this patch in it, so other people don't have
->> to worry about this at all.
-> 
-> Gustavo, why do you have ath10k patches in your tree? I prefer that
-> ath10k patches go through my ath.git tree so that they are reviewed and
-> tested.
-> 
 
-I just wanted to test out a mechanical change. I will remove it from my tree
-now and will send a patch to you so you can apply it to your ath.git tree.
 
-Thanks!
---
-Gustavo
+
+--===============3274681519708504341==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
 
 _______________________________________________
 ath10k mailing list
 ath10k@lists.infradead.org
 http://lists.infradead.org/mailman/listinfo/ath10k
+
+--===============3274681519708504341==--
+
+
+
+
