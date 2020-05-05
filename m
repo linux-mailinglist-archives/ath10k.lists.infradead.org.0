@@ -2,64 +2,64 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 878771C4B07
-	for <lists+ath10k@lfdr.de>; Tue,  5 May 2020 02:24:30 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9B2E41C4B92
+	for <lists+ath10k@lfdr.de>; Tue,  5 May 2020 03:33:40 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Subject:To:From
 	:Date:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=6CM6BgqUhmJfKbkakXkmnyg2QdDdnpri82r7YVjdVNo=; b=qo30fJ5jpn9oa0
-	rRgXF7Zg4I5bH7VDCyF7KWC7kHHX1BmEaF59F47Rbkwjugai8VQmcJODdNAToSYg5Qq/SrIxcYgrF
-	xMbac1EwK75p44UcEue/6KVECY7mdiiXm38QwlxiQUOY3UFKVCmcnUW5dwJAyM/TIz0/xSy9gRGM7
-	TiViF71EPUbEn5xnsmQmL8m/rO2x5HPKKSpx0ZtOVL4FDA4MPK5kCSuv/u45WrrwDKSponAbq8dh7
-	FiTiRDXiGG8lUOkNBJWl1we2Sl/TfXlvG/O4L4kUMfa186j3dlVwFTctivu76mvSdUguklf771leG
-	SSroZNr/yA2ok7zZRtWA==;
+	List-Owner; bh=RD3/ck7/+6oMvU1xT8sIxQ2m11TrDFmNK2WkO4KKuGU=; b=RidCVOV9Cg50hE
+	5+Ds8JVJtITOl+xcdm4EIaEnD/lR6TW7NhoN/gL9zCaeYbRw6mfOir0HemhYUQhvXHgOtsJ48djCc
+	lMxWEDlV7NIdfMxiANP5eow5WfRccBFj5HpmOSZBVeKAX3IBtZQSrKaGNuP9Dqr4/lSp+nhuC3vDl
+	TVW55BJuFqRYv5jAQHpHjJCaT5h1GnH++T6cMuIWSQay3H5oNmnwOnkVG0SIaWdZ83HAuHJdljU6v
+	h6R+PCKL0R0TkHLYKiJ/hMVPa78uDYO9g8/MUzWQPHnCdWClpTKwiUvF/l/4VGWCv1tsFcgQgCK4s
+	MIn/WMm6dbikd3ZhzB4Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jVlNq-00085L-MX; Tue, 05 May 2020 00:24:26 +0000
-Received: from mga12.intel.com ([192.55.52.136])
+	id 1jVmSj-0003Ou-P6; Tue, 05 May 2020 01:33:33 +0000
+Received: from mga07.intel.com ([134.134.136.100])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jVlNm-00084m-RK
- for ath10k@lists.infradead.org; Tue, 05 May 2020 00:24:24 +0000
-IronPort-SDR: KIMAXdiHkGfWqMY2UBcpjobak8xA7k5bxxIVtK6vtFibBR8M1W3PvX+Fp3ahcDTpkfh/IjKbet
- UTOrX5vgJwhQ==
+ id 1jVmSg-0003Nk-CV
+ for ath10k@lists.infradead.org; Tue, 05 May 2020 01:33:32 +0000
+IronPort-SDR: EsXUS9m0HImON6cUNUplS0lVyKNxcNmRnjzmojkRl267VIS9uTW7s7ui4uvp5ntfG60wEbwLed
+ QK2AcPvmsbBQ==
 X-Amp-Result: SKIPPED(no attachment in message)
 X-Amp-File-Uploaded: False
-Received: from fmsmga005.fm.intel.com ([10.253.24.32])
- by fmsmga106.fm.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
- 04 May 2020 17:24:20 -0700
-IronPort-SDR: K1SGGyhkbujIjm4AD5SikTP4Lu5Vsier+bq83OuTN3Df49PfRB1UYHfyZV4YyivL3pSW4OaLF0
- 7J+MzpGkJHxQ==
+Received: from orsmga004.jf.intel.com ([10.7.209.38])
+ by orsmga105.jf.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
+ 04 May 2020 18:33:28 -0700
+IronPort-SDR: KopcAVjFfMYkU7rfrBNPWJdB9wabi+QdrAssUzJq+9RDp0cssvTvHSjFqwHXwfkmcuILSH355k
+ anHB52nSueVg==
 X-ExtLoop1: 1
-X-IronPort-AV: E=Sophos;i="5.73,354,1583222400"; d="scan'208";a="460856155"
+X-IronPort-AV: E=Sophos;i="5.73,354,1583222400"; d="scan'208";a="406664888"
 Received: from lkp-server01.sh.intel.com (HELO lkp-server01) ([10.239.97.150])
- by fmsmga005.fm.intel.com with ESMTP; 04 May 2020 17:24:18 -0700
+ by orsmga004.jf.intel.com with ESMTP; 04 May 2020 18:33:27 -0700
 Received: from kbuild by lkp-server01 with local (Exim 4.89)
  (envelope-from <lkp@intel.com>)
- id 1jVlNi-000F7Q-6P; Tue, 05 May 2020 08:24:18 +0800
-Date: Tue, 05 May 2020 08:23:49 +0800
+ id 1jVmSc-000BiN-OB; Tue, 05 May 2020 09:33:26 +0800
+Date: Tue, 05 May 2020 09:33:00 +0800
 From: kbuild test robot <lkp@intel.com>
 To: Kalle Valo <kvalo@codeaurora.org>
-Subject: [ath6kl:ath-next] BUILD SUCCESS
- 657680cc86ca4b5d49b5bb313b1320fb8439528c
-Message-ID: <5eb0b215.kvVo4eEwCniIcQO+%lkp@intel.com>
+Subject: [ath6kl:pending] BUILD SUCCESS
+ f67211fa324660ac4dc2d5b57412ab8c2e826090
+Message-ID: <5eb0c24c.mMv7Li46bZkOYGTZ%lkp@intel.com>
 User-Agent: Heirloom mailx 12.5 6/20/10
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200504_172422_898872_F5A9E6A2 
-X-CRM114-Status: UNSURE (   5.12  )
+X-CRM114-CacheID: sfid-20200504_183330_475384_451D120D 
+X-CRM114-Status: UNSURE (   5.00  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.7 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (0.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
- -0.0 SPF_PASS               SPF: sender matches SPF record
  -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [192.55.52.136 listed in list.dnswl.org]
+ medium trust [134.134.136.100 listed in list.dnswl.org]
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  3.0 HEXHASH_WORD           Multiple instances of word + hexadecimal hash
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
@@ -78,23 +78,17 @@ Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-tree/branch: https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git  ath-next
-branch HEAD: 657680cc86ca4b5d49b5bb313b1320fb8439528c  ath11k: add DBG_MAC prints to track vdev events
+tree/branch: https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git  pending
+branch HEAD: f67211fa324660ac4dc2d5b57412ab8c2e826090  ath11k: fix resource unavailability for htt stats after peer stats display
 
-elapsed time: 509m
+elapsed time: 577m
 
-configs tested: 210
+configs tested: 203
 configs skipped: 0
 
 The following configs have been built successfully.
 More configs may be tested in the coming days.
 
-arm64                            allyesconfig
-arm                              allyesconfig
-arm64                            allmodconfig
-arm                              allmodconfig
-arm64                             allnoconfig
-arm                               allnoconfig
 arm                           efm32_defconfig
 arm                         at91_dt_defconfig
 arm                        shmobile_defconfig
@@ -103,10 +97,15 @@ arm                          exynos_defconfig
 arm                        multi_v5_defconfig
 arm                           sunxi_defconfig
 arm                        multi_v7_defconfig
+arm64                            allyesconfig
+arm                              allyesconfig
+arm64                            allmodconfig
+arm                              allmodconfig
+arm64                             allnoconfig
+arm                               allnoconfig
 sparc                            allyesconfig
 arc                              allyesconfig
 ia64                        generic_defconfig
-mips                            ar7_defconfig
 riscv                             allnoconfig
 parisc                           allmodconfig
 i386                              allnoconfig
@@ -146,6 +145,7 @@ microblaze                      mmu_defconfig
 microblaze                    nommu_defconfig
 mips                      fuloong2e_defconfig
 mips                      malta_kvm_defconfig
+mips                            ar7_defconfig
 mips                             allyesconfig
 mips                         64r6el_defconfig
 mips                              allnoconfig
@@ -163,30 +163,30 @@ parisc                            allnoconfig
 parisc                generic-64bit_defconfig
 parisc                generic-32bit_defconfig
 parisc                           allyesconfig
-powerpc                      chrp32_defconfig
-powerpc                             defconfig
-powerpc                       holly_defconfig
-powerpc                       ppc64_defconfig
-powerpc                          rhel-kconfig
-powerpc                           allnoconfig
 powerpc                  mpc866_ads_defconfig
 powerpc                    amigaone_defconfig
 powerpc                    adder875_defconfig
 powerpc                     ep8248e_defconfig
 powerpc                          g5_defconfig
 powerpc                     mpc512x_defconfig
-m68k                 randconfig-a001-20200505
-mips                 randconfig-a001-20200505
-nds32                randconfig-a001-20200505
-parisc               randconfig-a001-20200505
-alpha                randconfig-a001-20200505
-riscv                randconfig-a001-20200505
+powerpc                      chrp32_defconfig
+powerpc                             defconfig
+powerpc                       holly_defconfig
+powerpc                       ppc64_defconfig
+powerpc                          rhel-kconfig
+powerpc                           allnoconfig
 m68k                 randconfig-a001-20200503
 mips                 randconfig-a001-20200503
 nds32                randconfig-a001-20200503
 alpha                randconfig-a001-20200503
 parisc               randconfig-a001-20200503
 riscv                randconfig-a001-20200503
+m68k                 randconfig-a001-20200505
+mips                 randconfig-a001-20200505
+nds32                randconfig-a001-20200505
+parisc               randconfig-a001-20200505
+alpha                randconfig-a001-20200505
+riscv                randconfig-a001-20200505
 h8300                randconfig-a001-20200503
 nios2                randconfig-a001-20200503
 microblaze           randconfig-a001-20200503
@@ -197,21 +197,16 @@ xtensa               randconfig-a001-20200504
 sh                   randconfig-a001-20200504
 openrisc             randconfig-a001-20200504
 csky                 randconfig-a001-20200504
-s390                 randconfig-a001-20200505
-xtensa               randconfig-a001-20200505
-sh                   randconfig-a001-20200505
-openrisc             randconfig-a001-20200505
-csky                 randconfig-a001-20200505
 s390                 randconfig-a001-20200430
 xtensa               randconfig-a001-20200430
 csky                 randconfig-a001-20200430
 openrisc             randconfig-a001-20200430
 sh                   randconfig-a001-20200430
-s390                 randconfig-a001-20200502
-xtensa               randconfig-a001-20200502
-sh                   randconfig-a001-20200502
-openrisc             randconfig-a001-20200502
-csky                 randconfig-a001-20200502
+s390                 randconfig-a001-20200505
+xtensa               randconfig-a001-20200505
+sh                   randconfig-a001-20200505
+openrisc             randconfig-a001-20200505
+csky                 randconfig-a001-20200505
 i386                 randconfig-b003-20200503
 x86_64               randconfig-b002-20200503
 i386                 randconfig-b001-20200503
@@ -222,12 +217,6 @@ x86_64               randconfig-c002-20200502
 i386                 randconfig-c002-20200502
 i386                 randconfig-c001-20200502
 i386                 randconfig-c003-20200502
-x86_64               randconfig-c001-20200503
-x86_64               randconfig-c002-20200503
-i386                 randconfig-c002-20200503
-x86_64               randconfig-c003-20200503
-i386                 randconfig-c001-20200503
-i386                 randconfig-c003-20200503
 x86_64               randconfig-d001-20200503
 i386                 randconfig-d003-20200503
 x86_64               randconfig-d003-20200503
@@ -249,16 +238,20 @@ x86_64               randconfig-f001-20200505
 x86_64               randconfig-f003-20200505
 i386                 randconfig-f001-20200505
 i386                 randconfig-f002-20200505
-x86_64               randconfig-g003-20200503
-i386                 randconfig-g003-20200503
-i386                 randconfig-g002-20200503
-x86_64               randconfig-g001-20200503
-i386                 randconfig-g001-20200503
 x86_64               randconfig-a003-20200505
 x86_64               randconfig-a001-20200505
 i386                 randconfig-a001-20200505
 i386                 randconfig-a003-20200505
 i386                 randconfig-a002-20200505
+x86_64               randconfig-g003-20200503
+i386                 randconfig-g003-20200503
+i386                 randconfig-g002-20200503
+x86_64               randconfig-g001-20200503
+i386                 randconfig-g001-20200503
+i386                 randconfig-g003-20200505
+i386                 randconfig-g002-20200505
+i386                 randconfig-g001-20200505
+x86_64               randconfig-g002-20200505
 ia64                 randconfig-a001-20200503
 arm64                randconfig-a001-20200503
 arc                  randconfig-a001-20200503
