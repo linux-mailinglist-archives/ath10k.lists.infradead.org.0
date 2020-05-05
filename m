@@ -2,81 +2,70 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E09F91C4A9C
-	for <lists+ath10k@lfdr.de>; Tue,  5 May 2020 01:52:54 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 92B9A1C4AD8
+	for <lists+ath10k@lfdr.de>; Tue,  5 May 2020 02:02:58 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
 	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:Message-ID:References:In-Reply-To:Subject:To:From:
-	Date:MIME-Version:Reply-To:Content-ID:Content-Description:Resent-Date:
+	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
+	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
 	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=nZdsiaIctmsoWItE2FE40/CwdIJkvg+8NDHHPtemu+k=; b=mle6J2h6Y5wZOyWwakDzlpldP
-	NzPT69lXf4xfQUiHb/eeM4Gt2suFvmoWLCRF+vYds79dQIFS5SbiXByb9uuT8JE+lmSRcoVAG9IL/
-	KcKhcU1pSE+lAE714LSyEi1/kyl282OQBI62mHlorIyUYobbBqQad+oFJVJ2lxonbjL72mS25Uk01
-	wLCXyg2FQqOGDs1PHsvmunwAGsw0jfQ8ZRnsUER25dGoN9wQtQ9zuUcuxHQho7eLdDv4vKkouHKcC
-	Ac8KVN2NoPRcVTmqZQv1z0mGB/Ae3OiFML2goG1tLHbLw6inPVvZlv1JBmv3C+dSAtMpwaMtNJqSS
-	jC3MjONLQ==;
+	 bh=AeyIQhb1JuWaBcUIIUra+os4Vo879sE9psa+cQVoHpk=; b=DcZ+icXXhLO5EBX2MYnRTl5np
+	zsW0ihbH20mydsBpPYkV5SSNcqnJAEfTIuaXL+KF7VGRAybQ6aXLgn79fbYtwirbfv/j5pbXWwmQA
+	QdTaDBqCT/tXqT6vfeEphBcSEdceC1vVFgxihmzw2MFgUJ9W5TaPsmhePul8rpUzbSUK4dBbsGt9e
+	5R9j9bPe7a8QpalBL+KS0LGJtv5NszoFO3RSD+QyaxQlvQZ6uUOM5jVK98g+xg3nDmNj6FDTkoFRa
+	15TjYS/djbVujvK2fCLGOFuLcIUHXEGaB1btvV1vpr97bn9GeHUh9Cvt2TrxUh5TEZJTF5VSMUEbg
+	RE8/1vzTg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jVktJ-0002Yt-1J; Mon, 04 May 2020 23:52:53 +0000
-Received: from mail26.static.mailgun.info ([104.130.122.26])
- by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jVktD-0002X4-Qx
- for ath10k@lists.infradead.org; Mon, 04 May 2020 23:52:49 +0000
-DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
- q=dns/txt; 
- s=smtp; t=1588636367; h=Message-ID: References: In-Reply-To: Subject:
- Cc: To: From: Date: Content-Transfer-Encoding: Content-Type:
- MIME-Version: Sender; bh=W+xBFP8RMJ4u9yTMXqLo5r5356v0vha2BJ3QKZbB5RQ=;
- b=GJyuEHb5xNFYaH5JWWqQ1Uhrj+w9qFxYc9yl2GGRCmHSrBztp/Ml6rUabU/3Knz3uap5N5HN
- iYGnpu63hthx9hQq4FNwBJZMG8kgYl9eXiCY8z3XvqEpHT14vLv4pfjf3g3SscI+TKrwIn8A
- /v1Ngl+R8jWYbrv5o/WUrmvfyzg=
-X-Mailgun-Sending-Ip: 104.130.122.26
-X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
-Received: from smtp.codeaurora.org
- (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
- by mxa.mailgun.org with ESMTP id 5eb0aacf.7f7d5a359340-smtp-out-n01;
- Mon, 04 May 2020 23:52:47 -0000 (UTC)
-Received: by smtp.codeaurora.org (Postfix, from userid 1001)
- id 14DB3C433F2; Mon,  4 May 2020 23:52:46 +0000 (UTC)
-X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
- aws-us-west-2-caf-mail-1.web.codeaurora.org
-X-Spam-Level: 
-X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED
- autolearn=unavailable autolearn_force=no version=3.4.0
-Received: from mail.codeaurora.org (localhost.localdomain [127.0.0.1])
- (using TLSv1 with cipher ECDHE-RSA-AES256-SHA (256/256 bits))
- (No client certificate requested) (Authenticated sender: rmanohar)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 96F74C433D2;
- Mon,  4 May 2020 23:52:45 +0000 (UTC)
-MIME-Version: 1.0
-Date: Mon, 04 May 2020 16:52:45 -0700
-From: Rajkumar Manoharan <rmanohar@codeaurora.org>
-To: Ben Greear <greearb@candelatech.com>
+	id 1jVl32-00029Q-Se; Tue, 05 May 2020 00:02:56 +0000
+Received: from mail2.candelatech.com ([208.74.158.173]
+ helo=mail3.candelatech.com)
+ by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
+ id 1jVl2q-00021f-9f; Tue, 05 May 2020 00:02:47 +0000
+Received: from [192.168.254.4] (unknown [50.34.219.109])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested)
+ by mail3.candelatech.com (Postfix) with ESMTPSA id 3010E13C2B0;
+ Mon,  4 May 2020 17:02:43 -0700 (PDT)
+DKIM-Filter: OpenDKIM Filter v2.11.0 mail3.candelatech.com 3010E13C2B0
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=candelatech.com;
+ s=default; t=1588636963;
+ bh=Um9qS9gMVFpziLD0y++FXs7GTlBwSq6hU8KvFDT7SJo=;
+ h=Subject:To:References:Cc:From:Date:In-Reply-To:From;
+ b=sC8XmVRNtusQqXdUSdOe55Fc0/SoPRkDS5IAa/StrszxF7pC/ry6Rixw6F091F7Y+
+ S6p2loQuzVK5Cy5UeEBEbmIdyAu43kVfYJ/kGrUW8v82gABb4bX5+1+y6OsWZ5QCTg
+ EG1AnFRc11nQX9b+9W/Evoueh8vZ6huuRdauYVoY=
 Subject: Re: [PATCH 1/2] ath10k: use cumulative survey statistics
-In-Reply-To: <323b4d4f-a967-cf63-6f5a-04f53802c50a@candelatech.com>
+To: Rajkumar Manoharan <rmanohar@codeaurora.org>
 References: <20200504154122.91862-1-markus.theil@tu-ilmenau.de>
  <f772b7bf0eac31516a4e28719c1938f2@codeaurora.org>
  <323b4d4f-a967-cf63-6f5a-04f53802c50a@candelatech.com>
-Message-ID: <4b03993ba81a8e9ebb1203c0b8aa90f6@codeaurora.org>
-X-Sender: rmanohar@codeaurora.org
-User-Agent: Roundcube Webmail/1.3.9
+ <4b03993ba81a8e9ebb1203c0b8aa90f6@codeaurora.org>
+From: Ben Greear <greearb@candelatech.com>
+Message-ID: <9044aa57-ceb2-fecd-e220-eb8b7c0db4b5@candelatech.com>
+Date: Mon, 4 May 2020 17:02:42 -0700
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101
+ Thunderbird/45.8.0
+MIME-Version: 1.0
+In-Reply-To: <4b03993ba81a8e9ebb1203c0b8aa90f6@codeaurora.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200504_165247_938625_4D433EAF 
-X-CRM114-Status: UNSURE (   9.89  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20200504_170244_359863_6319813D 
+X-CRM114-Status: GOOD (  10.22  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [104.130.122.26 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -96,36 +85,44 @@ Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On 2020-05-04 16:49, Ben Greear wrote:
-> On 05/04/2020 04:46 PM, Rajkumar Manoharan wrote:
->> On 2020-05-04 08:41, Markus Theil wrote:
->>> ath10k currently reports survey results for the last interval between 
->>> each
->>> invocation of NL80211_CMD_GET_SURVEY. For concurrent invocations, 
->>> this
->>> can lead to unexpectedly small results, e.g. when hostapd uses survey
->>> data and iw survey dump is invoked in parallel. Fix this by returning
->>> cumulative results, that don't depend on the last invocation. Other
->>> drivers, e.g. ath9k or mt76 also use this behavior.
->>> 
->>> Signed-off-by: Markus Theil <markus.theil@tu-ilmenau.de>
->>> 
->> 
->> IIRC this was fixed a while ago by below patch. Somehow it never 
->> landed in ath.git.
->> Simple one line change is enough.
->> 
->> https://patchwork.kernel.org/patch/10550707/
->> 
->> -Rajkumar
-> 
-> Have you tested this with wave-1?  Lots of older, at least, firmware
-> has brokenness in this area.
-> 
-Yes. It was tested in wave-1 as well. Venkat replied to your comment on 
-original change.
 
--Rajkumar
+
+On 05/04/2020 04:52 PM, Rajkumar Manoharan wrote:
+> On 2020-05-04 16:49, Ben Greear wrote:
+>> On 05/04/2020 04:46 PM, Rajkumar Manoharan wrote:
+>>> On 2020-05-04 08:41, Markus Theil wrote:
+>>>> ath10k currently reports survey results for the last interval between each
+>>>> invocation of NL80211_CMD_GET_SURVEY. For concurrent invocations, this
+>>>> can lead to unexpectedly small results, e.g. when hostapd uses survey
+>>>> data and iw survey dump is invoked in parallel. Fix this by returning
+>>>> cumulative results, that don't depend on the last invocation. Other
+>>>> drivers, e.g. ath9k or mt76 also use this behavior.
+>>>>
+>>>> Signed-off-by: Markus Theil <markus.theil@tu-ilmenau.de>
+>>>>
+>>>
+>>> IIRC this was fixed a while ago by below patch. Somehow it never landed in ath.git.
+>>> Simple one line change is enough.
+>>>
+>>> https://patchwork.kernel.org/patch/10550707/
+>>>
+>>> -Rajkumar
+>>
+>> Have you tested this with wave-1?  Lots of older, at least, firmware
+>> has brokenness in this area.
+>>
+> Yes. It was tested in wave-1 as well. Venkat replied to your comment on original change.
+
+Ahh, sorry I missed that.
+
+Hopefully no one is using the broken firmware anymore then!
+
+--Ben
+
+
+-- 
+Ben Greear <greearb@candelatech.com>
+Candela Technologies Inc  http://www.candelatech.com
 
 _______________________________________________
 ath10k mailing list
