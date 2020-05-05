@@ -2,90 +2,56 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 096701C5150
-	for <lists+ath10k@lfdr.de>; Tue,  5 May 2020 10:52:36 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 19BEA1C5B8F
+	for <lists+ath10k@lfdr.de>; Tue,  5 May 2020 17:37:39 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Date:To:From:Subject:
-	Message-ID:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:Resent-From
-	:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=cGbKC+DrBJlUutDDVvuHTJmfRNH+WtutcOXWmRZCEto=; b=S8p29gKi5jWeyJ
-	Ff8Bq2HVKH0AyzEBRD6KlUKhRfYbla7lwokN5SQ1PtuVx86p3LBFw8WXL++NHRYILFwlbMsbw2koB
-	z0eFNDxYBzUQ3KUjzuG4pRQ/+82F6V7/vAKN7NAEGqXjAOOEIgflvkHBCGoXl6tcqS7mBNDIA+qoW
-	w/w3yrpxH//ReW6koM1Pm9IMSgo2CWSpIDgZ0C6c7/QH1FG1JOVC+X3I4Jt6W2iG4iDHDjH1y5wIK
-	924kUF/wGMraLh4PIeUYl1HtIpazfPPh5ktADv7V91YJCQmLN3kKB5ODJQnHVuXApPDFVIRhyRDVO
-	w1uO7tZbHolbiEfuOHuQ==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=SInv+hP0SoAiKRS4AvHgP9kIpBmh8g0U2qEGTTSFtYM=; b=kYxsfEzk7EnyCv
+	qBuVKsZyycWMk9iab17XxMfDAYxP3ZGz3d8fuV+65Be/kw+IdHf2TIWR+Ex7WNhpr+4cyLIPSHmGB
+	CQMDWiQwpujyTuzHujUPVwcjOq8d1mVYpbDFbMQl73giz/cQpnb/CUiMrl+4wOV97Kmx09zydu/Nz
+	SLqJd7gDJNJAZt1PEcWkPaBBLfpG5ya+NiDqBeHkWtbS+zS5e5fCoU5xU5h0yGBKuZmfdZs4b/72Z
+	jFvW96mi7gfIDfXXAwxJqrvSdunUatbTYmpOTbUgr90ra8BQxnqQQbsa/EZeOkUQjeoYTAZ9eBpcP
+	XUkeQZW1BgUkBLYuc5BA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jVtJY-0008FK-NP; Tue, 05 May 2020 08:52:32 +0000
-Received: from mail-wr1-x432.google.com ([2a00:1450:4864:20::432])
+	id 1jVzdW-0007mn-UT; Tue, 05 May 2020 15:37:34 +0000
+Received: from smail.rz.tu-ilmenau.de ([141.24.186.67])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jVtDt-0000cf-6Q
- for ath10k@lists.infradead.org; Tue, 05 May 2020 08:46:43 +0000
-Received: by mail-wr1-x432.google.com with SMTP id h9so1739563wrt.0
- for <ath10k@lists.infradead.org>; Tue, 05 May 2020 01:46:39 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=message-id:subject:from:to:date:user-agent:mime-version
- :content-transfer-encoding;
- bh=65w78Ui+d95G3Ybtbsw78jPrw7bHLd9AqyudU5U4byw=;
- b=EIN/3FjdeSdzuTfgzlQFo9ApcfqREsXszShoJORxUGPk2GYtF5EPVtwOJsZk4lnt3z
- 1YYdfpxVFHMNcw83DQneVP2AxTaXn80Qll0Ztotcfp/ZjuyGTHlxXjKsYL/qWTRVowrH
- kUADu8yz2CKSa7TpozVXyNsGldREVQKPWGQifMb3p+e2vJ/shnLR+LRAF0ixgtv2OcTv
- MGDE6xjcq95KbQQdvANVZdyxCqjyv98migikdbjtwLMUJun1NZACnrniN+WlPG+g7S7C
- 07ObAVg2/PAnzK2edfFVEKfUwKaHX4WD511Rtq7PbV2JMmqwGgJUBXeoss5bNOOSF68X
- uLdA==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:message-id:subject:from:to:date:user-agent
- :mime-version:content-transfer-encoding;
- bh=65w78Ui+d95G3Ybtbsw78jPrw7bHLd9AqyudU5U4byw=;
- b=Wk77K32+BFcSVBjlyrf+BY0Q8slcmRNSF6F2km/7DhW8dPyQ4QNPWoNUwE/solJY89
- iI13dUQQb2RQYMfYg2XyA/vtS1HmZ63C+9RoFWaFip8LUO5hpDmoktNU73PiGR/tQ7rP
- Spp34lvBdAOJcdRwUbPHxpNlT9SjK/STh4IHaE37U4J3MCjd0kyCDMq9cxTszN+shXxK
- rIgXE4x0iJk4LmZDaJTE+nYuy12QRdJuWOLbo+zr3oMUV07GWB+j0PSJwlHVCgByUS6j
- WofSjjdN0eOZyLcutyLQ0OkXRoQeA5btZ7h6Im8IrH0I2GiSxb7z/G1iEW/B7u9V8Obw
- OF3Q==
-X-Gm-Message-State: AGi0PuYGrRGbZfk7b13yAO7yhwvSvb9jsg/JQ186HRv82Yqv3bCOQe9+
- TyvFUK96FVRRD8MLNN3PvbjKrOqq+0A=
-X-Google-Smtp-Source: APiQypLGmgFY7fKcBrq+85bL+kuTzLiCaKD6kG4b2ToWsavRKXZ6qfWZEU40RNr4M7CjVVCkQKOAxA==
-X-Received: by 2002:adf:e90b:: with SMTP id f11mr2417301wrm.364.1588668397213; 
- Tue, 05 May 2020 01:46:37 -0700 (PDT)
-Received: from neumann (ip-217-105-26-61.ip.prioritytelecom.net.
- [217.105.26.61])
- by smtp.gmail.com with ESMTPSA id s12sm2498870wmc.7.2020.05.05.01.46.36
- for <ath10k@lists.infradead.org>
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Tue, 05 May 2020 01:46:36 -0700 (PDT)
-Message-ID: <0655c3a1466f133a727ab24aec9bb3df81b25d34.camel@gmail.com>
-Subject: Killer WiFi card keeps disconnecting due to latest firmware
-From: Elia Geretto <elia.f.geretto@gmail.com>
-To: ath10k@lists.infradead.org
-Date: Tue, 05 May 2020 10:46:35 +0200
-User-Agent: Evolution 3.34.4 (3.34.4-1.fc31) 
+ id 1jVzdT-0007lg-2c; Tue, 05 May 2020 15:37:32 +0000
+Received: from [192.168.178.34] (unknown [87.147.56.179])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested)
+ by smail.rz.tu-ilmenau.de (Postfix) with ESMTPSA id A9725580248;
+ Tue,  5 May 2020 17:37:27 +0200 (CEST)
+Subject: Re: [PATCH 1/2] ath10k: use cumulative survey statistics
+To: Sven Eckelmann <sven@narfation.org>, ath11k@lists.infradead.org
+References: <20200504154122.91862-1-markus.theil@tu-ilmenau.de>
+ <f772b7bf0eac31516a4e28719c1938f2@codeaurora.org>
+ <2335594.cnkAv9Vaq7@bentobox> <1845755.pTfhzBy2qg@bentobox>
+From: Markus Theil <markus.theil@tu-ilmenau.de>
+Message-ID: <46ab4ffd-b512-de43-40bb-f35989d228b9@tu-ilmenau.de>
+Date: Tue, 5 May 2020 17:37:27 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
+ Thunderbird/68.7.0
 MIME-Version: 1.0
+In-Reply-To: <1845755.pTfhzBy2qg@bentobox>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200505_014641_283586_5CA3D8D7 
-X-CRM114-Status: GOOD (  10.24  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200505_083731_269511_58F9D129 
+X-CRM114-Status: GOOD (  10.70  )
+X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-2.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:432 listed in]
- [list.dnswl.org]
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [141.24.186.67 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [elia.f.geretto[at]gmail.com]
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -97,68 +63,61 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: linux-wireless-owner@vger.kernel.org, linux-wireless@vger.kernel.org,
+ ath10k@lists.infradead.org, Rajkumar Manoharan <rmanohar@codeaurora.org>,
+ kvalo@codeaurora.org
+Content-Type: text/plain; charset="windows-1252"
+Content-Transfer-Encoding: quoted-printable
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Hi,
+On 5/5/20 9:49 AM, Sven Eckelmann wrote:
+> On Tuesday, 5 May 2020 09:01:34 CEST Sven Eckelmann wrote:
+>> On Tuesday, 5 May 2020 01:46:12 CEST Rajkumar Manoharan wrote:
+>> [...]
+>>> IIRC this was fixed a while ago by below patch. Somehow it never landed =
 
-I am experiencing the same problem that Nicola Mori reported on 14th
-April. The thread I am referring to is the one with the same subject as
-this email.
+>>> in ath.git.
+>>> Simple one line change is enough.
+>>>
+>>> https://patchwork.kernel.org/patch/10550707/
+>> Because it doesn't work for everything. Remember that 10.2.4.x overflows=
+ all =
 
-From what I can understand, Kalle Valo and Wen Gong are trying to
-reproduce the problem, but they had difficulties retrieving the correct
-hardware. Since I can reproduce the issue with a different router,
-probably easier to retrieve, I thought I would dump the information
-here.
+>> the time (14-30s) because it used only 31 bit for the counters.
+>>
+>> But feel free to point me to the firmware version which fixed this.
+> See also https://patchwork.kernel.org/patch/9701459/
+>
+> Kind regards,
+> 	Sven
 
-I have the exact same laptop as Nicola Mori, an XPS 15 9570 and I am
-running Fedora 31 (kernel 5.6.8).
+This patch already fixes the problem for me. I tested it on QCA988X hw
+with firmware 10.2.4.
 
-The wifi card is reported as:
+[=A0=A0 10.350919] ath10k_pci 0000:04:00.0: qca988x hw2.0 target 0x4100016c
+chip_id 0x043222ff sub 0000:0000
+[=A0=A0 10.350930] ath10k_pci 0000:04:00.0: kconfig debug 1 debugfs 1
+tracing 1 dfs 0 testmode 0
+[=A0=A0 10.351803] ath10k_pci 0000:04:00.0: firmware ver 10.2.4-1.0-00047
+api 5 features no-p2p,raw-mode,mfp,allows-mesh-bcast crc32 35bd9258
+[=A0=A0 10.385617] ath10k_pci 0000:04:00.0: board_file api 1 bmi_id N/A
+crc32 bebc7c08
+[=A0=A0 11.536818] ath10k_pci 0000:04:00.0: htt-ver 2.1 wmi-op 5 htt-op 2
+cal otp max-sta 128 raw 0 hwcrypto 1
 
-3b:00.0 Network controller: Qualcomm Atheros QCA6174 802.11ac Wireless Network Adapter (rev 32)
-	Subsystem: Bigfoot Networks, Inc. Device 1535
-	Kernel driver in use: ath10k_pci
-	Kernel modules: ath10k_pci
+I also did not see the 31 bit overflow after a small amount of seconds.
 
-I have tried switching in and out a couple of firmwares with API 6 and
-I can reproduce the problem with all the versions I tested:
-
-WLAN.RM.4.4.1-00128-QCARMSWPZ-1
-WLAN.RM.4.4.1-00132-QCARMSWP-1
-WLAN.RM.4.4.1-00140-QCARMSWPZ-1 (default one on Fedora 31)
-WLAN.RM.4.4.1-00151-QCARMSWPZ-2
-
-Regarding the router, it is a Linksys E2500 v3, with firmware 3.0.05
-(latest). I use both 2.4 GHz and 5 GHz wireless, with the same SSID.
-
-As for the information regarding the wifi settings:
-- Channel: Auto (DFS)
-- Channel width: Auto (20 MHz or 40 MHz)
-- Encryption: WPA2-Personal
-
-Regarding reproduction, I would like to add that the issue happens
-quite rarely. Using my laptop the whole day at max 4 meters from the
-router, it happens only once or twice a day.
-
-In addition, when I am unable to start new connections, and
-applications like Zoom are still running perfectly, I can work around
-the issue not only by disabling and re-enabling the wifi, but also
-pinging my laptop from another device in the network. To clarify, when
-I am experiencing the issue, if I ping my laptop from my phone, it
-starts working correctly again.
-
-I am not sure if this is related, but it happens often, but not
-exclusively, when I am using Zoom for videoconferencing. However, I
-cannot confirm that it is the cause.
-
-Feel free to contact me for any additional information you may need.
+Survey data from wlp4s0
+=A0=A0=A0 frequency:=A0=A0=A0 =A0=A0=A0 =A0=A0=A0 2412 MHz [in use]
+=A0=A0=A0 noise:=A0=A0=A0 =A0=A0=A0 =A0=A0=A0 =A0=A0=A0 -65 dBm
+=A0=A0=A0 channel active time:=A0=A0=A0 =A0=A0=A0 5370225 ms
+=A0=A0=A0 channel busy time:=A0=A0=A0 =A0=A0=A0 924199 ms
+=A0=A0=A0 channel receive time:=A0=A0=A0 =A0=A0=A0 140 ms
+=A0=A0=A0 channel transmit time:=A0=A0=A0 =A0=A0=A0 0 ms
 
 Kind regards,
-Elia Geretto
+Markus
 
 
 _______________________________________________
