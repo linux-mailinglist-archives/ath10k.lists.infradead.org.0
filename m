@@ -2,43 +2,43 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1C18B1C4F37
-	for <lists+ath10k@lfdr.de>; Tue,  5 May 2020 09:35:31 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 991E01C4F38
+	for <lists+ath10k@lfdr.de>; Tue,  5 May 2020 09:35:33 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
 	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=iemS9123Jty4HMxTaSU0cXsOocgRuJOqpbmexf2M7J0=; b=SKM/YyoMEJgTQ2
-	6iUsWrbcLx8ppJKF4AKffOpfm2Q0+p6/z1OQTQt4riZqqSEOOkxQvwwdmtrHVluQQYXw7DCVzKdgR
-	tdYl+IWAmExkwaZKDfVoVkZCiqq9M5/B1xGyPVrIfKY/A43v3u+3FWPKbDEkDqvVC+Vmmb9sCyHnM
-	rB6PlBtnQhURqmbAT7z1j9aDW3ghmADgIzVxvO4QPNYZfbdB/A4usPWPSNM3TnFi4WcQAEQDiq46u
-	X7cMQyPz4gQuG/8gRtiDSEnTHBKeOL2IgghPJqi7b/9UOshwg5T9JEnUm565pVRO5u6czswNr85Lh
-	Et/sohOcUTFdJOhvRbOw==;
+	List-Owner; bh=CUe82WAhGsnh46xZgsCyUgGC0Mvi+fD1dTQVDHTrFNA=; b=BOH7X8jPbXwFN5
+	2d20w5ekZPCCP9i31gNNKJ8IRgcMK/kVH5tUhgk5A42xvt9fI0/e+8zh8ECBgWESzjgZJrKNnfiHW
+	6Bs18sV89JjBCrXmfWa+wjuwJk7ke7OQgboR8yCJFX9Wgo4+Cq5aOVvelqHHa+o6BKUtJCxvmMzEz
+	pt6wohkEzUXgmSA5HtVdKqeuTeo+GzwQ1RZEMF5zzPPiKWIa6c6YrW4uyQyGOPPSj8djOt/m33xJE
+	c5PZDODlrYwaGoB5l4hiSptlSJkLWUKkMtndo3rlyiVVKDC8f4eiX5i/cskIQL9mWxT86/eQwb5NH
+	Vus3deSdWtsRwn5epEGw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jVs6z-0007eq-Cw; Tue, 05 May 2020 07:35:29 +0000
+	id 1jVs72-0007jw-5l; Tue, 05 May 2020 07:35:32 +0000
 Received: from mail26.static.mailgun.info ([104.130.122.26])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jVs5z-0004Z1-79
- for ath10k@lists.infradead.org; Tue, 05 May 2020 07:34:39 +0000
+ id 1jVs6h-0004Z1-CM
+ for ath10k@lists.infradead.org; Tue, 05 May 2020 07:35:16 +0000
 DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
  q=dns/txt; 
- s=smtp; t=1588664070; h=Date: Message-Id: Cc: To: References:
+ s=smtp; t=1588664111; h=Date: Message-Id: Cc: To: References:
  In-Reply-To: From: Subject: Content-Transfer-Encoding: MIME-Version:
- Content-Type: Sender; bh=6rdBhKuiYxEUD7yWkFxIXkHGzzyQyMwga0bzWDTLC2U=;
- b=FCkUkcjC9S+qqHXsoIibenGWCBMW9y0rT0tzRHWScLUH7hjcDKODG6AgCq8pBDltrQ+sJhp5
- jlfnmqX4iFvJkP6xnTPM1bfZdLg01NSjLJiG0WzZzcA02ESVZ+N4B5YXuvDG7kl4M4h34e5g
- GPdk0Xh2Tu5+fYo+77oKyGdDeP8=
+ Content-Type: Sender; bh=jdXUih/dw2RAA3j/VDK1UHup5SgT35MJVZ77UKLjMnw=;
+ b=TQDEvZlcZvASrFzwObQZwqFBv+PyuxwPGBnf8jV54aBdFDMAsUB6Nr54l2Y//kEZZSwgUDDH
+ DricyuVdwFDpCe2SfmhFoJ9G+sIQy9j2NdvyOfk9L1A2B8hZUGgDvm4JJkrKSx+rmVRbOzKC
+ JeM+NY0Oq0z75pVtLteqB6z6Qm4=
 X-Mailgun-Sending-Ip: 104.130.122.26
 X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
 Received: from smtp.codeaurora.org
  (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
- by mxa.mailgun.org with ESMTP id 5eb116ff.7ffa9ad8bbc8-smtp-out-n04;
- Tue, 05 May 2020 07:34:23 -0000 (UTC)
+ by mxa.mailgun.org with ESMTP id 5eb1172e.7f0d1be42ea0-smtp-out-n03;
+ Tue, 05 May 2020 07:35:10 -0000 (UTC)
 Received: by smtp.codeaurora.org (Postfix, from userid 1001)
- id BFA51C433BA; Tue,  5 May 2020 07:34:22 +0000 (UTC)
+ id 09023C433F2; Tue,  5 May 2020 07:35:10 +0000 (UTC)
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  aws-us-west-2-caf-mail-1.web.codeaurora.org
 X-Spam-Level: 
@@ -48,27 +48,25 @@ Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
  [88.114.240.156])
  (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested) (Authenticated sender: kvalo)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 62DAAC433F2;
- Tue,  5 May 2020 07:34:21 +0000 (UTC)
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 62DAAC433F2
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id B6844C433D2;
+ Tue,  5 May 2020 07:35:08 +0000 (UTC)
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org B6844C433D2
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
  spf=none smtp.mailfrom=kvalo@codeaurora.org
 MIME-Version: 1.0
-Subject: Re: [PATCH] ath10k: Avoid override CE5 configuration for QCA99X0
- chipsets
+Subject: Re: [PATCH v2] ath10k: remove the max_sched_scan_reqs value
 From: Kalle Valo <kvalo@codeaurora.org>
-In-Reply-To: <1587649759-14381-1-git-send-email-mkenna@codeaurora.org>
-References: <1587649759-14381-1-git-send-email-mkenna@codeaurora.org>
-To: Maharaja Kennadyrajan <mkenna@codeaurora.org>
+In-Reply-To: <20191114050001.4658-1-wgong@codeaurora.org>
+References: <20191114050001.4658-1-wgong@codeaurora.org>
+To: Wen Gong <wgong@codeaurora.org>
 User-Agent: pwcli/0.1.0-git (https://github.com/kvalo/pwcli/) Python/3.5.2
-Message-Id: <20200505073422.BFA51C433BA@smtp.codeaurora.org>
-Date: Tue,  5 May 2020 07:34:22 +0000 (UTC)
+Message-Id: <20200505073510.09023C433F2@smtp.codeaurora.org>
+Date: Tue,  5 May 2020 07:35:10 +0000 (UTC)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200505_003430_436319_D5AACEBD 
-X-CRM114-Status: UNSURE (   9.01  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200505_003511_650834_4BE726EF 
+X-CRM114-Status: GOOD (  10.68  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -92,40 +90,42 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Maharaja Kennadyrajan <mkenna@codeaurora.org>,
- linux-wireless@vger.kernel.org, ath10k@lists.infradead.org
+Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Maharaja Kennadyrajan <mkenna@codeaurora.org> wrote:
+Wen Gong <wgong@codeaurora.org> wrote:
 
-> As the exisiting CE configurations are defined in global, there
-> are the chances of QCA99X0 family chipsets CE configurations
-> are getting changed by the ath10k_pci_override_ce_config()
-> function.
+> The struct cfg80211_wowlan of NET_DETECT WoWLAN feature share the same
+> struct cfg80211_sched_scan_request together with scheduled scan request
+> feature, and max_sched_scan_reqs of wiphy is only used for sched scan,
+> and ath10k does not support scheduled scan request feature, so ath10k
+> does not set flag NL80211_FEATURE_SCHED_SCAN_RANDOM_MAC_ADDR, but ath10k
+> set max_sched_scan_reqs of wiphy to a non zero value 1, then function
+> nl80211_add_commands_unsplit of cfg80211 will set it support command
+> NL80211_CMD_START_SCHED_SCAN because max_sched_scan_reqs is a non zero
+> value, but actually ath10k not support it, then it leads a mismatch result
+> for sched scan of cfg80211, then application shill found the mismatch and
+> stop running case of MAC random address scan and then the case fail.
 > 
-> The override will be hit and CE5 configurations will be changed,
-> when the user bring up the QCA99X0 chipsets along with QCA6174
-> or QCA9377 chipset. (Bring up QCA99X0 family chipsets after
-> QCA6174 or QCA9377).
+> After remove max_sched_scan_reqs value, it keeps match for sched scan and
+> case of MAC random address scan pass.
 > 
-> Hence, fixing this issue by moving the global CE configuration
-> to radio specific CE configuration.
+> Tested with QCA6174 SDIO with firmware WLAN.RMH.4.4.1-00029.
+> Tested with QCA6174 PCIe with firmware WLAN.RM.4.4.1-00110-QCARMSWP-1.
 > 
-> Tested hardware: QCA9888 & QCA6174
-> Tested firmware: 10.4-3.10-00047 & WLAN.RM.4.4.1.c3-00058
-> 
-> Signed-off-by: Maharaja Kennadyrajan <mkenna@codeaurora.org>
+> Fixes: ce834e280f2f875 ("ath10k: support NET_DETECT WoWLAN feature")
+> Signed-off-by: Wen Gong <wgong@codeaurora.org>
 > Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 
 Patch applied to ath-next branch of ath.git, thanks.
 
-521fc37be3d8 ath10k: Avoid override CE5 configuration for QCA99X0 chipsets
+d431f8939c14 ath10k: remove the max_sched_scan_reqs value
 
 -- 
-https://patchwork.kernel.org/patch/11505695/
+https://patchwork.kernel.org/patch/11243015/
 
 https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
 
