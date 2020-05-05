@@ -2,79 +2,90 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 79F3A1C502C
-	for <lists+ath10k@lfdr.de>; Tue,  5 May 2020 10:24:01 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 096701C5150
+	for <lists+ath10k@lfdr.de>; Tue,  5 May 2020 10:52:36 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
-	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
-	References:List-Owner; bh=z7JMolToLnW9q6QYC7j1cMq/NYrFWiTrHviEL6aoMvM=; b=SBX
-	Oc4SVTNQ4+7Mce7I33naTkau3Tas6vf9Syn8NezTnzwVsWP+n2DKIntiwWVj31fTEpF5V/mi5MGVM
-	8SxFIUYAv2d9oYRmwIJ+puNs71MxjM7gsYKt+G46T/sOlOqe3yQVPzdAjXHr7+Mc9cz+lPD8CHblC
-	8x1wFfBVDlZ/jyf3XOKsYpavV5QcZqE9IwRtBhre8fym9/mpj2CPfACOm3/Zlw7FpBg5dWMETt33f
-	8j/FZ6+eqDGonMz1At3oq/ilx2AYOAA/bQeBwrGj0W7fP3A5STCa4LGc0hkUZqGBdxzTxx3+l+7nn
-	1UCHiss6/f2Hs+tWuip6TGgYgwbm+3w==;
+	Content-Transfer-Encoding:Content-Type:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Date:To:From:Subject:
+	Message-ID:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:Resent-From
+	:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=cGbKC+DrBJlUutDDVvuHTJmfRNH+WtutcOXWmRZCEto=; b=S8p29gKi5jWeyJ
+	Ff8Bq2HVKH0AyzEBRD6KlUKhRfYbla7lwokN5SQ1PtuVx86p3LBFw8WXL++NHRYILFwlbMsbw2koB
+	z0eFNDxYBzUQ3KUjzuG4pRQ/+82F6V7/vAKN7NAEGqXjAOOEIgflvkHBCGoXl6tcqS7mBNDIA+qoW
+	w/w3yrpxH//ReW6koM1Pm9IMSgo2CWSpIDgZ0C6c7/QH1FG1JOVC+X3I4Jt6W2iG4iDHDjH1y5wIK
+	924kUF/wGMraLh4PIeUYl1HtIpazfPPh5ktADv7V91YJCQmLN3kKB5ODJQnHVuXApPDFVIRhyRDVO
+	w1uO7tZbHolbiEfuOHuQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jVsrv-0007rd-Hf; Tue, 05 May 2020 08:23:59 +0000
-Received: from mail27.static.mailgun.info ([104.130.122.27])
+	id 1jVtJY-0008FK-NP; Tue, 05 May 2020 08:52:32 +0000
+Received: from mail-wr1-x432.google.com ([2a00:1450:4864:20::432])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jVsrp-0007qW-U8
- for ath10k@lists.infradead.org; Tue, 05 May 2020 08:23:56 +0000
-DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
- q=dns/txt; 
- s=smtp; t=1588667035; h=Message-Id: Date: Subject: Cc: To: From:
- Sender; bh=QbuBmPty6sYHJmDdYUPa/PrW7ejMHdsCRelaXowWGh8=;
- b=kzkpQy3WOynA9vu6yfggokLWl8kTpA8w+BfdQ4LDTWq9rNMckscqdMnvE5sb6qk2l8r9UG3O
- xtJxRwc2k4CLpP2jlJKFfxBDyuYrWuasb6shpBU1PQgKcbQlgiphqeXT3Vno9nG8B7GWwRKN
- OJN6J4XUta/cehsGOh24NVd6BEI=
-X-Mailgun-Sending-Ip: 104.130.122.27
-X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
-Received: from smtp.codeaurora.org
- (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
- by mxa.mailgun.org with ESMTP id 5eb12295.7f311c520260-smtp-out-n01;
- Tue, 05 May 2020 08:23:49 -0000 (UTC)
-Received: by smtp.codeaurora.org (Postfix, from userid 1001)
- id 10C9FC433F2; Tue,  5 May 2020 08:23:49 +0000 (UTC)
-X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
- aws-us-west-2-caf-mail-1.web.codeaurora.org
-X-Spam-Level: 
-X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,SPF_NONE
- autolearn=ham autolearn_force=no version=3.4.0
-Received: from pillair-linux.qualcomm.com
- (blr-c-bdr-fw-01_GlobalNAT_AllZones-Outside.qualcomm.com [103.229.19.19])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
- (No client certificate requested) (Authenticated sender: pillair)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 0F071C433CB;
- Tue,  5 May 2020 08:23:46 +0000 (UTC)
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 0F071C433CB
-Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
- dmarc=none (p=none dis=none) header.from=codeaurora.org
-Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
- spf=none smtp.mailfrom=pillair@codeaurora.org
-From: Rakesh Pillai <pillair@codeaurora.org>
+ id 1jVtDt-0000cf-6Q
+ for ath10k@lists.infradead.org; Tue, 05 May 2020 08:46:43 +0000
+Received: by mail-wr1-x432.google.com with SMTP id h9so1739563wrt.0
+ for <ath10k@lists.infradead.org>; Tue, 05 May 2020 01:46:39 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=message-id:subject:from:to:date:user-agent:mime-version
+ :content-transfer-encoding;
+ bh=65w78Ui+d95G3Ybtbsw78jPrw7bHLd9AqyudU5U4byw=;
+ b=EIN/3FjdeSdzuTfgzlQFo9ApcfqREsXszShoJORxUGPk2GYtF5EPVtwOJsZk4lnt3z
+ 1YYdfpxVFHMNcw83DQneVP2AxTaXn80Qll0Ztotcfp/ZjuyGTHlxXjKsYL/qWTRVowrH
+ kUADu8yz2CKSa7TpozVXyNsGldREVQKPWGQifMb3p+e2vJ/shnLR+LRAF0ixgtv2OcTv
+ MGDE6xjcq95KbQQdvANVZdyxCqjyv98migikdbjtwLMUJun1NZACnrniN+WlPG+g7S7C
+ 07ObAVg2/PAnzK2edfFVEKfUwKaHX4WD511Rtq7PbV2JMmqwGgJUBXeoss5bNOOSF68X
+ uLdA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:message-id:subject:from:to:date:user-agent
+ :mime-version:content-transfer-encoding;
+ bh=65w78Ui+d95G3Ybtbsw78jPrw7bHLd9AqyudU5U4byw=;
+ b=Wk77K32+BFcSVBjlyrf+BY0Q8slcmRNSF6F2km/7DhW8dPyQ4QNPWoNUwE/solJY89
+ iI13dUQQb2RQYMfYg2XyA/vtS1HmZ63C+9RoFWaFip8LUO5hpDmoktNU73PiGR/tQ7rP
+ Spp34lvBdAOJcdRwUbPHxpNlT9SjK/STh4IHaE37U4J3MCjd0kyCDMq9cxTszN+shXxK
+ rIgXE4x0iJk4LmZDaJTE+nYuy12QRdJuWOLbo+zr3oMUV07GWB+j0PSJwlHVCgByUS6j
+ WofSjjdN0eOZyLcutyLQ0OkXRoQeA5btZ7h6Im8IrH0I2GiSxb7z/G1iEW/B7u9V8Obw
+ OF3Q==
+X-Gm-Message-State: AGi0PuYGrRGbZfk7b13yAO7yhwvSvb9jsg/JQ186HRv82Yqv3bCOQe9+
+ TyvFUK96FVRRD8MLNN3PvbjKrOqq+0A=
+X-Google-Smtp-Source: APiQypLGmgFY7fKcBrq+85bL+kuTzLiCaKD6kG4b2ToWsavRKXZ6qfWZEU40RNr4M7CjVVCkQKOAxA==
+X-Received: by 2002:adf:e90b:: with SMTP id f11mr2417301wrm.364.1588668397213; 
+ Tue, 05 May 2020 01:46:37 -0700 (PDT)
+Received: from neumann (ip-217-105-26-61.ip.prioritytelecom.net.
+ [217.105.26.61])
+ by smtp.gmail.com with ESMTPSA id s12sm2498870wmc.7.2020.05.05.01.46.36
+ for <ath10k@lists.infradead.org>
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Tue, 05 May 2020 01:46:36 -0700 (PDT)
+Message-ID: <0655c3a1466f133a727ab24aec9bb3df81b25d34.camel@gmail.com>
+Subject: Killer WiFi card keeps disconnecting due to latest firmware
+From: Elia Geretto <elia.f.geretto@gmail.com>
 To: ath10k@lists.infradead.org
-Subject: [PATCH v2] ath10k: Remove msdu from idr when management pkt send fails
-Date: Tue,  5 May 2020 13:53:35 +0530
-Message-Id: <1588667015-25490-1-git-send-email-pillair@codeaurora.org>
-X-Mailer: git-send-email 2.7.4
+Date: Tue, 05 May 2020 10:46:35 +0200
+User-Agent: Evolution 3.34.4 (3.34.4-1.fc31) 
+MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200505_012355_573618_2F90F811 
-X-CRM114-Status: GOOD (  15.53  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20200505_014641_283586_5CA3D8D7 
+X-CRM114-Status: GOOD (  10.24  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [104.130.122.27 listed in list.dnswl.org]
+ no trust [2a00:1450:4864:20:0:0:0:432 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider [elia.f.geretto[at]gmail.com]
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -86,124 +97,69 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Rakesh Pillai <pillair@codeaurora.org>, linux-wireless@vger.kernel.org,
- linux-kernel@vger.kernel.org
-MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Currently when the sending of any management pkt
-via wmi command fails, the packet is being unmapped
-freed in the error handling. But the idr entry added,
-which is used to track these packet is not getting removed.
+Hi,
 
-Hence, during unload, in wmi cleanup, all the entries
-in IDR are removed and the corresponding buffer is
-attempted to be freed. This can cause a situation where
-one packet is attempted to be freed twice.
+I am experiencing the same problem that Nicola Mori reported on 14th
+April. The thread I am referring to is the one with the same subject as
+this email.
 
-Fix this error by rmeoving the msdu from the idr
-list when the sending of a management packet over
-wmi fails.
+From what I can understand, Kalle Valo and Wen Gong are trying to
+reproduce the problem, but they had difficulties retrieving the correct
+hardware. Since I can reproduce the issue with a different router,
+probably easier to retrieve, I thought I would dump the information
+here.
 
-Tested HW: WCN3990
-Tested FW: WLAN.HL.3.1-01040-QCAHLSWMTPLZ-1
+I have the exact same laptop as Nicola Mori, an XPS 15 9570 and I am
+running Fedora 31 (kernel 5.6.8).
 
-Fixes: 1807da49733e ("ath10k: wmi: add management tx by reference support over wmi")
-Signed-off-by: Rakesh Pillai <pillair@codeaurora.org>
----
-Changes from v1:
-- Added a helper function in wmi-ops for cleanup_mgmt_tx_send
----
- drivers/net/wireless/ath/ath10k/wmi-ops.h | 15 ++++++++++++++-
- drivers/net/wireless/ath/ath10k/wmi-tlv.c | 15 +++++++++++++++
- 2 files changed, 29 insertions(+), 1 deletion(-)
+The wifi card is reported as:
 
-diff --git a/drivers/net/wireless/ath/ath10k/wmi-ops.h b/drivers/net/wireless/ath/ath10k/wmi-ops.h
-index 1491c25..8c3a656 100644
---- a/drivers/net/wireless/ath/ath10k/wmi-ops.h
-+++ b/drivers/net/wireless/ath/ath10k/wmi-ops.h
-@@ -133,6 +133,7 @@ struct wmi_ops {
- 	struct sk_buff *(*gen_mgmt_tx_send)(struct ath10k *ar,
- 					    struct sk_buff *skb,
- 					    dma_addr_t paddr);
-+	int (*cleanup_mgmt_tx_send)(struct ath10k *ar, struct sk_buff *msdu);
- 	struct sk_buff *(*gen_dbglog_cfg)(struct ath10k *ar, u64 module_enable,
- 					  u32 log_level);
- 	struct sk_buff *(*gen_pktlog_enable)(struct ath10k *ar, u32 filter);
-@@ -442,6 +443,15 @@ ath10k_wmi_get_txbf_conf_scheme(struct ath10k *ar)
- }
- 
- static inline int
-+ath10k_wmi_cleanup_mgmt_tx_send(struct ath10k *ar, struct sk_buff *msdu)
-+{
-+	if (!ar->wmi.ops->cleanup_mgmt_tx_send)
-+		return -EOPNOTSUPP;
-+
-+	return ar->wmi.ops->cleanup_mgmt_tx_send(ar, msdu);
-+}
-+
-+static inline int
- ath10k_wmi_mgmt_tx_send(struct ath10k *ar, struct sk_buff *msdu,
- 			dma_addr_t paddr)
- {
-@@ -457,8 +467,11 @@ ath10k_wmi_mgmt_tx_send(struct ath10k *ar, struct sk_buff *msdu,
- 
- 	ret = ath10k_wmi_cmd_send(ar, skb,
- 				  ar->wmi.cmd->mgmt_tx_send_cmdid);
--	if (ret)
-+	if (ret) {
-+		/* remove this msdu from idr tracking */
-+		ath10k_wmi_cleanup_mgmt_tx_send(ar, msdu);
- 		return ret;
-+	}
- 
- 	return 0;
- }
-diff --git a/drivers/net/wireless/ath/ath10k/wmi-tlv.c b/drivers/net/wireless/ath/ath10k/wmi-tlv.c
-index e1ab900f..2a31a42 100644
---- a/drivers/net/wireless/ath/ath10k/wmi-tlv.c
-+++ b/drivers/net/wireless/ath/ath10k/wmi-tlv.c
-@@ -2898,6 +2898,18 @@ ath10k_wmi_tlv_op_gen_request_stats(struct ath10k *ar, u32 stats_mask)
- }
- 
- static int
-+ath10k_wmi_tlv_op_cleanup_mgmt_tx_send(struct ath10k *ar,
-+				       struct sk_buff *msdu)
-+{
-+	struct ath10k_skb_cb *cb = ATH10K_SKB_CB(msdu);
-+	struct ath10k_wmi *wmi = &ar->wmi;
-+
-+	idr_remove(&wmi->mgmt_pending_tx, cb->msdu_id);
-+
-+	return 0;
-+}
-+
-+static int
- ath10k_wmi_mgmt_tx_alloc_msdu_id(struct ath10k *ar, struct sk_buff *skb,
- 				 dma_addr_t paddr)
- {
-@@ -2971,6 +2983,8 @@ ath10k_wmi_tlv_op_gen_mgmt_tx_send(struct ath10k *ar, struct sk_buff *msdu,
- 	if (desc_id < 0)
- 		goto err_free_skb;
- 
-+	cb->msdu_id = desc_id;
-+
- 	ptr = (void *)skb->data;
- 	tlv = ptr;
- 	tlv->tag = __cpu_to_le16(WMI_TLV_TAG_STRUCT_MGMT_TX_CMD);
-@@ -4419,6 +4433,7 @@ static const struct wmi_ops wmi_tlv_ops = {
- 	.gen_force_fw_hang = ath10k_wmi_tlv_op_gen_force_fw_hang,
- 	/* .gen_mgmt_tx = not implemented; HTT is used */
- 	.gen_mgmt_tx_send = ath10k_wmi_tlv_op_gen_mgmt_tx_send,
-+	.cleanup_mgmt_tx_send = ath10k_wmi_tlv_op_cleanup_mgmt_tx_send,
- 	.gen_dbglog_cfg = ath10k_wmi_tlv_op_gen_dbglog_cfg,
- 	.gen_pktlog_enable = ath10k_wmi_tlv_op_gen_pktlog_enable,
- 	.gen_pktlog_disable = ath10k_wmi_tlv_op_gen_pktlog_disable,
--- 
-2.7.4
+3b:00.0 Network controller: Qualcomm Atheros QCA6174 802.11ac Wireless Network Adapter (rev 32)
+	Subsystem: Bigfoot Networks, Inc. Device 1535
+	Kernel driver in use: ath10k_pci
+	Kernel modules: ath10k_pci
+
+I have tried switching in and out a couple of firmwares with API 6 and
+I can reproduce the problem with all the versions I tested:
+
+WLAN.RM.4.4.1-00128-QCARMSWPZ-1
+WLAN.RM.4.4.1-00132-QCARMSWP-1
+WLAN.RM.4.4.1-00140-QCARMSWPZ-1 (default one on Fedora 31)
+WLAN.RM.4.4.1-00151-QCARMSWPZ-2
+
+Regarding the router, it is a Linksys E2500 v3, with firmware 3.0.05
+(latest). I use both 2.4 GHz and 5 GHz wireless, with the same SSID.
+
+As for the information regarding the wifi settings:
+- Channel: Auto (DFS)
+- Channel width: Auto (20 MHz or 40 MHz)
+- Encryption: WPA2-Personal
+
+Regarding reproduction, I would like to add that the issue happens
+quite rarely. Using my laptop the whole day at max 4 meters from the
+router, it happens only once or twice a day.
+
+In addition, when I am unable to start new connections, and
+applications like Zoom are still running perfectly, I can work around
+the issue not only by disabling and re-enabling the wifi, but also
+pinging my laptop from another device in the network. To clarify, when
+I am experiencing the issue, if I ping my laptop from my phone, it
+starts working correctly again.
+
+I am not sure if this is related, but it happens often, but not
+exclusively, when I am using Zoom for videoconferencing. However, I
+cannot confirm that it is the cause.
+
+Feel free to contact me for any additional information you may need.
+
+Kind regards,
+Elia Geretto
+
 
 _______________________________________________
 ath10k mailing list
