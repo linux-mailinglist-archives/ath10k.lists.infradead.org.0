@@ -2,55 +2,64 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A28891C4E83
-	for <lists+ath10k@lfdr.de>; Tue,  5 May 2020 08:53:36 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 636D21C4EB6
+	for <lists+ath10k@lfdr.de>; Tue,  5 May 2020 09:01:51 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
-	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:Cc:
+	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
+	MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:To:From:Reply-To:
+	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
 	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=N38Zi+xo7KSgwLmfPd2EQpuZZ5G9Ku+dy9vRqjinh0o=; b=RIXEbPfro7rtVWWkZNHAOGEvw
-	2Pl8jkYP6GccUgttNcM59awf1gnT4Um/jUXX1rcn3Mu4ausLgHEdGdEB9XOTJza/FfUxlfFD2MFaD
-	0hkjTEHuQnnzGNZeUY5AgMKmmGHqq4D+yDnK5b2jl8lTjDTlkLYVkMs22MLAGvN1r1MX12b3l42NH
-	R318201gh8Y8BSdj7tT/anQEbeATSlb+FZ6vlaMvi/PhNjg1woq7N4F8c6a5QXW9QqINkBrOiJMeO
-	+c1j1/dxJb0gwaYdTcoLlUb4reZq6CZuO866DvBnriC7KSnZ2FCxWhqo2XtLpcZ+9gDwsLA04DUiU
-	etC2+K39Q==;
+	 bh=KZymV1xV10CNxLIasIG4e2kpNIvhcnSBV3nQyab59Bs=; b=VhzWN8FZyvlT0pKpR4fnHifk2
+	shu5cgM/e5cQDsCPUeC4H134TNbIjJ1Snu41iNROcUuc3j+C2tSv9c0FJ7dDWdTX3h2S64qyEwv0w
+	SzwH92er/DpKAGSOyroJj9E/ozu10C99qhGTN9rlIrgVznMQCX1JCwha65CCBaQ/9TDNY/2A1A09T
+	IiE979po5h2VU2tfVHKhBImYSJkrQLOfueB2dH2UaWZHvJrQAy8r7dzmvcsrIatHufNtX4yrcXxlA
+	n4QoW/5tWnPIjoTnNZfrMUvcAPSX5uS++JmHKZ6dozyCBaLzWxo7qnXDlPJ7Y/7mnbJzveRttwbJN
+	0ISpTkuHQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jVrSO-0000ax-NJ; Tue, 05 May 2020 06:53:32 +0000
-Received: from smail.rz.tu-ilmenau.de ([141.24.186.67])
+	id 1jVraO-0006Xh-4G; Tue, 05 May 2020 07:01:48 +0000
+Received: from dvalin.narfation.org ([213.160.73.56])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jVrSK-0000a8-57; Tue, 05 May 2020 06:53:30 +0000
-Received: from [192.168.178.34] (unknown [87.147.56.179])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
- (No client certificate requested)
- by smail.rz.tu-ilmenau.de (Postfix) with ESMTPSA id 29329580243;
- Tue,  5 May 2020 08:53:25 +0200 (CEST)
-Subject: Re: [PATCH 2/2] ath11k: use cumulative survey statistics
-To: Rajkumar Manoharan <rmanohar@codeaurora.org>
+ id 1jVraI-0006X1-6F; Tue, 05 May 2020 07:01:44 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=narfation.org;
+ s=20121; t=1588662099;
+ h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+ to:to:cc:cc:mime-version:mime-version:content-type:content-type:
+ in-reply-to:in-reply-to:references:references;
+ bh=flt+0nv/wY6EtEjl/gozth8PAjTpWfBxfoBL5ar5q9U=;
+ b=V72ELWoX7v6oOmg11Q+GW046l9XV3fOKF/Kc0iysoJ5BSdRQzs1zpqwFfbocOoMIEdVthB
+ s0DO4LzEplLZRtfnwL3PCyObY/JYfeCZN67NReUgGdHghALOFYvQGBa2m7KVJE5SQ2J7rK
+ 6E+WDW99b0X8rflgSPj8VfvtCuCR7Sk=
+From: Sven Eckelmann <sven@narfation.org>
+To: ath11k@lists.infradead.org
+Subject: Re: [PATCH 1/2] ath10k: use cumulative survey statistics
+Date: Tue, 05 May 2020 09:01:34 +0200
+Message-ID: <2335594.cnkAv9Vaq7@bentobox>
+In-Reply-To: <f772b7bf0eac31516a4e28719c1938f2@codeaurora.org>
 References: <20200504154122.91862-1-markus.theil@tu-ilmenau.de>
- <20200504154122.91862-2-markus.theil@tu-ilmenau.de>
- <85fa2d5f9183b3a12c5283b800f3750f@codeaurora.org>
-From: Markus Theil <markus.theil@tu-ilmenau.de>
-Message-ID: <c786e982-fcd6-2368-6b2f-f09b265654d6@tu-ilmenau.de>
-Date: Tue, 5 May 2020 08:53:24 +0200
-User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:68.0) Gecko/20100101
- Thunderbird/68.7.0
+ <f772b7bf0eac31516a4e28719c1938f2@codeaurora.org>
 MIME-Version: 1.0
-In-Reply-To: <85fa2d5f9183b3a12c5283b800f3750f@codeaurora.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200504_235328_780910_265EE26C 
-X-CRM114-Status: GOOD (  13.94  )
-X-Spam-Score: -2.3 (--)
+X-CRM114-CacheID: sfid-20200505_000142_388287_203AD283 
+X-CRM114-Status: UNSURE (   6.25  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-2.3 points)
+ Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [141.24.186.67 listed in list.dnswl.org]
+ medium trust [213.160.73.56 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -62,60 +71,77 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless-owner@vger.kernel.org, linux-wireless@vger.kernel.org,
- kvalo@codeaurora.org, ath10k@lists.infradead.org, ath11k@lists.infradead.org
-Content-Transfer-Encoding: base64
-Content-Type: text/plain; charset="utf-8"; Format="flowed"
+Cc: Rajkumar Manoharan <rmanohar@codeaurora.org>,
+ linux-wireless-owner@vger.kernel.org, linux-wireless@vger.kernel.org,
+ Markus Theil <markus.theil@tu-ilmenau.de>, ath10k@lists.infradead.org,
+ kvalo@codeaurora.org
+Content-Type: multipart/mixed; boundary="===============1572918091306926223=="
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-QW0gMDUuMDUuMjAyMCB1bSAwMTozNyBzY2hyaWViIFJhamt1bWFyIE1hbm9oYXJhbjoKPiBPbiAy
-MDIwLTA1LTA0IDA4OjQxLCBNYXJrdXMgVGhlaWwgd3JvdGU6Cj4+IGF0aDExayBjdXJyZW50bHkg
-cmVwb3J0cyBzdXJ2ZXkgcmVzdWx0cyBmb3IgdGhlIGxhc3QgaW50ZXJ2YWwgYmV0d2VlbiAKPj4g
-ZWFjaAo+PiBpbnZvY2F0aW9uIG9mIE5MODAyMTFfQ01EX0dFVF9TVVJWRVkuIEZvciBjb25jdXJy
-ZW50IGludm9jYXRpb25zLCB0aGlzCj4+IGNhbiBsZWFkIHRvIHVuZXhwZWN0ZWRseSBzbWFsbCBy
-ZXN1bHRzLCBlLmcuIHdoZW4gaG9zdGFwZCB1c2VzIHN1cnZleQo+PiBkYXRhIGFuZCBpdyBzdXJ2
-ZXkgZHVtcCBpcyBpbnZva2VkIGluIHBhcmFsbGVsLiBGaXggdGhpcyBieSByZXR1cm5pbmcKPj4g
-Y3VtdWxhdGl2ZSByZXN1bHRzLCB0aGF0IGRvbid0IGRlcGVuZCBvbiB0aGUgbGFzdCBpbnZvY2F0
-aW9uLiBPdGhlcgo+PiBkcml2ZXJzLCBlLmcuIGF0aDlrIG9yIG10NzYgYWxzbyB1c2UgdGhpcyBi
-ZWhhdmlvci4KPj4KPj4gU2lnbmVkLW9mZi1ieTogTWFya3VzIFRoZWlsIDxtYXJrdXMudGhlaWxA
-dHUtaWxtZW5hdS5kZT4KPj4gLS0tCj4+IMKgZHJpdmVycy9uZXQvd2lyZWxlc3MvYXRoL2F0aDEx
-ay93bWkuYyB8IDIwICsrKysrKysrKystLS0tLS0tLS0tCj4+IMKgMSBmaWxlIGNoYW5nZWQsIDEw
-IGluc2VydGlvbnMoKyksIDEwIGRlbGV0aW9ucygtKQo+Pgo+PiBkaWZmIC0tZ2l0IGEvZHJpdmVy
-cy9uZXQvd2lyZWxlc3MvYXRoL2F0aDExay93bWkuYwo+PiBiL2RyaXZlcnMvbmV0L3dpcmVsZXNz
-L2F0aC9hdGgxMWsvd21pLmMKPj4gaW5kZXggYzJhOTcyMzc3Njg3Li4zMjJkZGZkYTViZmQgMTAw
-NjQ0Cj4+IC0tLSBhL2RyaXZlcnMvbmV0L3dpcmVsZXNzL2F0aC9hdGgxMWsvd21pLmMKPj4gKysr
-IGIvZHJpdmVycy9uZXQvd2lyZWxlc3MvYXRoL2F0aDExay93bWkuYwo+PiBAQCAtNTYxMCwxNiAr
-NTYxMCwxNiBAQCBhdGgxMWtfcGRldl9ic3NfY2hhbl9pbmZvX2V2ZW50KHN0cnVjdAo+PiBhdGgx
-MWtfYmFzZSAqYWIsIHN0cnVjdCBza19idWZmICpza2IpCj4+Cj4+IMKgwqDCoMKgIHN1cnZleSA9
-ICZhci0+c3VydmV5W2lkeF07Cj4+Cj4+IC3CoMKgwqAgc3VydmV5LT5ub2lzZcKgwqDCoMKgID0g
-YnNzX2NoX2luZm9fZXYubm9pc2VfZmxvb3I7Cj4+IC3CoMKgwqAgc3VydmV5LT50aW1lwqDCoMKg
-wqDCoCA9IGRpdl91NjQodG90YWwsIGNjX2ZyZXFfaHopOwo+PiAtwqDCoMKgIHN1cnZleS0+dGlt
-ZV9idXN5ID0gZGl2X3U2NChidXN5LCBjY19mcmVxX2h6KTsKPj4gLcKgwqDCoCBzdXJ2ZXktPnRp
-bWVfcnjCoMKgID0gZGl2X3U2NChyeF9ic3MsIGNjX2ZyZXFfaHopOwo+PiAtwqDCoMKgIHN1cnZl
-eS0+dGltZV90eMKgwqAgPSBkaXZfdTY0KHR4LCBjY19mcmVxX2h6KTsKPj4gLcKgwqDCoCBzdXJ2
-ZXktPmZpbGxlZMKgwqAgfD0gKFNVUlZFWV9JTkZPX05PSVNFX0RCTSB8Cj4+IC3CoMKgwqDCoMKg
-wqDCoMKgwqDCoMKgwqDCoMKgwqDCoCBTVVJWRVlfSU5GT19USU1FIHwKPj4gLcKgwqDCoMKgwqDC
-oMKgwqDCoMKgwqDCoMKgwqDCoMKgIFNVUlZFWV9JTkZPX1RJTUVfQlVTWSB8Cj4+IC3CoMKgwqDC
-oMKgwqDCoMKgwqDCoMKgwqDCoMKgwqDCoCBTVVJWRVlfSU5GT19USU1FX1JYIHwKPj4gLcKgwqDC
-oMKgwqDCoMKgwqDCoMKgwqDCoMKgwqDCoMKgIFNVUlZFWV9JTkZPX1RJTUVfVFgpOwo+PiArwqDC
-oMKgIHN1cnZleS0+bm9pc2XCoMKgwqDCoMKgID0gYnNzX2NoX2luZm9fZXYubm9pc2VfZmxvb3I7
-Cj4+ICvCoMKgwqAgc3VydmV5LT50aW1lwqDCoMKgwqDCoCArPSBkaXZfdTY0KHRvdGFsLCBjY19m
-cmVxX2h6KTsKPj4gK8KgwqDCoCBzdXJ2ZXktPnRpbWVfYnVzeSArPSBkaXZfdTY0KGJ1c3ksIGNj
-X2ZyZXFfaHopOwo+PiArwqDCoMKgIHN1cnZleS0+dGltZV9yeMKgwqAgKz0gZGl2X3U2NChyeF9i
-c3MsIGNjX2ZyZXFfaHopOwo+PiArwqDCoMKgIHN1cnZleS0+dGltZV90eMKgwqAgKz0gZGl2X3U2
-NCh0eCwgY2NfZnJlcV9oeik7Cj4+ICvCoMKgwqAgc3VydmV5LT5maWxsZWTCoMKgwqAgfD0gKFNV
-UlZFWV9JTkZPX05PSVNFX0RCTSB8Cj4+ICvCoMKgwqDCoMKgwqDCoMKgwqDCoMKgwqDCoMKgwqDC
-oMKgIFNVUlZFWV9JTkZPX1RJTUUgfAo+PiArwqDCoMKgwqDCoMKgwqDCoMKgwqDCoMKgwqDCoMKg
-wqDCoCBTVVJWRVlfSU5GT19USU1FX0JVU1kgfAo+PiArwqDCoMKgwqDCoMKgwqDCoMKgwqDCoMKg
-wqDCoMKgwqDCoCBTVVJWRVlfSU5GT19USU1FX1JYIHwKPj4gK8KgwqDCoMKgwqDCoMKgwqDCoMKg
-wqDCoMKgwqDCoMKgwqAgU1VSVkVZX0lORk9fVElNRV9UWCk7Cj4KPiBNYXJrdXMsCj4KPiBJdCBk
-ZXBlbmRzIG9uIHR5cGUgb2Ygc3VydmV5IHJlcXVlc3QgaXMgZ2l2ZW4gdG8gZmlybXdhcmUuIElu
-IGF0aDExaywgCj4gZmlybXdhcmUgcmVwb3J0cwo+IGFjY3VtdWxhdGVkIHZhbHVlcy4gU28gdGhl
-IGFib3ZlIGFkZGl0aW9uIGlzIHdyb25nIGFuZCByZXBvcnQgZG91YmxlIAo+IHZhbHVlLiBIYXZl
-IHlvdQo+IHRlc3RlZCB0aGlzIGNoYW5nZT8KPgo+IC1SYWprdW1hcgpPaywgc28gcGxlYXNlIGRy
-b3AgYm90aCBvZiBteSBwYXRjaGVzLiBNeSBhc3N1bXB0aW9ucyB3ZXJlIGluY29tcGxldGUgCmFu
-ZCB0b28gaHVtYmxlLiBJIGp1c3QgYXNzdW1lZCwgYXRoMTBrIGFuZCBhdGgxMWsgYm90aCB1c2Ug
-aW5jcmVtZW50YWwgCnN1cnZleXMuCgpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
-X19fX19fX19fX19fXwphdGgxMGsgbWFpbGluZyBsaXN0CmF0aDEwa0BsaXN0cy5pbmZyYWRlYWQu
-b3JnCmh0dHA6Ly9saXN0cy5pbmZyYWRlYWQub3JnL21haWxtYW4vbGlzdGluZm8vYXRoMTBrCg==
+--===============1572918091306926223==
+Content-Type: multipart/signed; boundary="nextPart2406179.bnRGkfsQJl"; micalg="pgp-sha512"; protocol="application/pgp-signature"
+
+--nextPart2406179.bnRGkfsQJl
+Content-Transfer-Encoding: 7Bit
+Content-Type: text/plain; charset="us-ascii"
+
+On Tuesday, 5 May 2020 01:46:12 CEST Rajkumar Manoharan wrote:
+[...]
+> IIRC this was fixed a while ago by below patch. Somehow it never landed 
+> in ath.git.
+> Simple one line change is enough.
+> 
+> https://patchwork.kernel.org/patch/10550707/
+
+Because it doesn't work for everything. Remember that 10.2.4.x overflows all 
+the time (14-30s) because it used only 31 bit for the counters.
+
+But feel free to point me to the firmware version which fixed this.
+
+Kind regards,
+	Sven
+--nextPart2406179.bnRGkfsQJl
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: This is a digitally signed message part.
+Content-Transfer-Encoding: 7Bit
+
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAABCgAdFiEEF10rh2Elc9zjMuACXYcKB8Eme0YFAl6xD04ACgkQXYcKB8Em
+e0YEVw//TH/fq0NNa8BsCXeGXzxlVMEexjFoX4Kd4gu+kbKZaN6e6kHdfp4jVfFL
+nWvkEuCkVytqr+7pBRVvPHOdKoLTJXwkbIdfbtz2GR+qpVDqxC90qn+pPJr33V4D
+Tinws56w4EhXK3YLaptPZRYGmRUjXIsMd6+KCdUyNupG1ztIlwrSUfTYdk6imWkS
+XXUin/LTR5YsVGkBKoj3NNyBcjAvr//g+PLTiWR/PBmIDBYzl1QhvBrxMURuN8wx
+sUeco+4LlP1nunB6OE2JwikoOK0AAFc8SyjHgZeBXm45cDmbnMeYhcLYYnakl+gs
+BifsmGgeeNPl2smGYgkUC0VtisX3p4/mFU0B87Fp9RD4ouO2bFTCldbmDROTX/gY
+m55yIZIWhH908xPVjf4SLQpaC3IBSTHmfEZ1ie/5guO8E0q19pZCoDLRiYdYpUtv
+USM/9+8M68yXrvgdg/Xxi/gcOHDeKeZIXb3gxYK1+xoIfahGdM/t/IFE9qIN5O+n
+hCYEBnbA26niZop3JDQxDHesjGA8uuPkBT+xtaUqWzDgBANG4DWn94uyZGffTapk
+dCYwFM0jdzTdQQuPYDphwMisi+P42x9jgk0QkmCgAh6CfWxdTe9D44UgCs/8+lZd
+wTzFvz5lcyJv8BsOjpzHA/6mI9CiJ7178pwOYU9SR43zF4pr8kw=
+=nZKo
+-----END PGP SIGNATURE-----
+
+--nextPart2406179.bnRGkfsQJl--
+
+
+
+
+
+--===============1572918091306926223==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+_______________________________________________
+ath10k mailing list
+ath10k@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/ath10k
+
+--===============1572918091306926223==--
+
+
+
+
