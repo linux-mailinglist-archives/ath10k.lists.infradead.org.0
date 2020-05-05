@@ -2,66 +2,83 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 9F5B71C4F8F
-	for <lists+ath10k@lfdr.de>; Tue,  5 May 2020 09:49:58 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 864E21C4FA2
+	for <lists+ath10k@lfdr.de>; Tue,  5 May 2020 09:51:34 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:Cc:
-	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
-	MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:To:From:Reply-To:
-	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=K37PfFbeMVipPi80w1wCfvo9LX5xecJN5QzBVvXWH+k=; b=u4Evzc8q/l/pRe/tlowgmMLEt
-	koRHLBvt9vzWUxFGYUotmI/3UD29gpzOU2NbGhzelNY0mVDvohGmr2/jWX/G4bsQGOTRUhIWSbY2G
-	ZJnCiQTitkE0bXrxBMdY7ig/34u96vxDZeiWmyIIBtDv1LiDqa5OWqpbNhe8FAaz5UC0ZpF23FiRL
-	IKlOG1EqDaB8DtcCQ0ttF9ShLhDeFQ7xRbByWqI8mArI6tpPIjFOx6W5Q4CMXA9blIOlUjsSBh9QQ
-	AYkTL7VfsYLe8M8orlkOak7tA7sN1en8frPL6eOQ9+F7aWAA+xzTK33V3jno74lOpu4wIC7uYdssP
-	Uzr0MgVaA==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
+	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=LDIeZBRmfd7w+4dwwg3HU1ZE2i4p5chnaZ2jtXT8YR4=; b=SVSmNxtDNFkYfb
+	RU/wL9xBPb7ZQYdlkR7J+7Ydv8TzYgbTBFYuTRC9Rccm5am5/yKw3WLifTsezVV/5DVAD4AjPPB5w
+	BpqwBhzxCWYdrJewCfyW/bbw5apdWxSJROkpXcfwOXQfKsP9bdtoKZ4eAZwWrp9Y9CM/bKZqfw9W8
+	67oD6VfL2xE+tTSdJqjJNkQl1I6thUKO+FsC/feMrNBgrpJpNwdpXI36VQChHA0DMSZ1st2vDfX/p
+	BnRBDVfNPfxJ5a+aV6TmQV/f1uqew4eTZy0CgNdIOcDwLrVJXCi4B+/Q3+CFXWKaNKDJJnxEEQaet
+	qabcWa2UOJOMYsnu3fqw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jVsKx-0007UF-C6; Tue, 05 May 2020 07:49:55 +0000
-Received: from dvalin.narfation.org ([2a00:17d8:100::8b1])
+	id 1jVsMW-00029V-TK; Tue, 05 May 2020 07:51:32 +0000
+Received: from mail27.static.mailgun.info ([104.130.122.27])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jVsKt-0007TD-BQ; Tue, 05 May 2020 07:49:53 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=narfation.org;
- s=20121; t=1588664989;
- h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
- to:to:cc:cc:mime-version:mime-version:content-type:content-type:
- in-reply-to:in-reply-to:references:references;
- bh=1IWrsJBZhdCsDyfYSJJhd0QFKh2SYgRZbADR1astMwI=;
- b=dKzclyKzpjnaFtGo6rLlMP9ke/9p0TWzxDP+nC0/7MxO3EW9HfHwdCArWZMGCfVDfnbwnk
- lmm/+xonJ2rCn7mOPylZVwaLgPWtqhisnhioGRESPuVwvXfJKakr/8n/4ZYPfT/3LkfWVT
- sCMjAKUGeE6wC3X2YbqE3eA9VuXuBIk=
-From: Sven Eckelmann <sven@narfation.org>
-To: ath11k@lists.infradead.org
-Subject: Re: [PATCH 1/2] ath10k: use cumulative survey statistics
-Date: Tue, 05 May 2020 09:49:46 +0200
-Message-ID: <1845755.pTfhzBy2qg@bentobox>
-In-Reply-To: <2335594.cnkAv9Vaq7@bentobox>
-References: <20200504154122.91862-1-markus.theil@tu-ilmenau.de>
- <f772b7bf0eac31516a4e28719c1938f2@codeaurora.org>
- <2335594.cnkAv9Vaq7@bentobox>
+ id 1jVsMS-00025i-S4
+ for ath10k@lists.infradead.org; Tue, 05 May 2020 07:51:30 +0000
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
+ q=dns/txt; 
+ s=smtp; t=1588665089; h=Date: Message-Id: Cc: To: References:
+ In-Reply-To: From: Subject: Content-Transfer-Encoding: MIME-Version:
+ Content-Type: Sender; bh=PIaNX+XjiI8iaziq2RQV4YWNfhjivHE+uwXFjmQivzQ=;
+ b=Au2hnMacrtXxJHshpM808J7+ykUpI4rVx6V5rNDnlEsFGvoMl9Tfaz+ALwehItlyQBbVQ/oz
+ 8sq963DvLabtlkJRPo+tXgEpY1gqnqpQ1j7jyXTE0v/IqUU7rQtlL1K3WYgcjPhAeaB+L3ck
+ /R4wvBo8BC45m0mEihexgnibdZI=
+X-Mailgun-Sending-Ip: 104.130.122.27
+X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
+Received: from smtp.codeaurora.org
+ (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
+ by mxa.mailgun.org with ESMTP id 5eb11afe.7f460ed47fb8-smtp-out-n04;
+ Tue, 05 May 2020 07:51:26 -0000 (UTC)
+Received: by smtp.codeaurora.org (Postfix, from userid 1001)
+ id C6D62C433D2; Tue,  5 May 2020 07:51:26 +0000 (UTC)
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ aws-us-west-2-caf-mail-1.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=0.5 required=2.0 tests=ALL_TRUSTED,MISSING_DATE,
+ MISSING_MID,SPF_NONE autolearn=no autolearn_force=no version=3.4.0
+Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
+ [88.114.240.156])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested) (Authenticated sender: kvalo)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 7AA10C433D2;
+ Tue,  5 May 2020 07:51:24 +0000 (UTC)
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 7AA10C433D2
+Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
+ spf=none smtp.mailfrom=kvalo@codeaurora.org
 MIME-Version: 1.0
+Subject: Re: [PATCH] ath10k: Replace zero-length array with flexible-array
+From: Kalle Valo <kvalo@codeaurora.org>
+In-Reply-To: <20200504201108.GA32136@embeddedor>
+References: <20200504201108.GA32136@embeddedor>
+To: "Gustavo A. R. Silva" <gustavo@embeddedor.com>
+User-Agent: pwcli/0.1.0-git (https://github.com/kvalo/pwcli/) Python/3.5.2
+Message-Id: <20200505075126.C6D62C433D2@smtp.codeaurora.org>
+Date: Tue,  5 May 2020 07:51:26 +0000 (UTC)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200505_004951_536329_96004809 
-X-CRM114-Status: UNSURE (   7.90  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -2.5 (--)
+X-CRM114-CacheID: sfid-20200505_005129_393894_4B019100 
+X-CRM114-Status: GOOD (  14.59  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-2.5 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [2a00:17d8:100:0:0:0:0:8b1 listed in]
- [list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [104.130.122.27 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -73,80 +90,67 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Rajkumar Manoharan <rmanohar@codeaurora.org>,
- linux-wireless-owner@vger.kernel.org, linux-wireless@vger.kernel.org,
- Markus Theil <markus.theil@tu-ilmenau.de>, ath10k@lists.infradead.org,
- kvalo@codeaurora.org
-Content-Type: multipart/mixed; boundary="===============3406996777522705258=="
+Cc: "Gustavo A. R. Silva" <gustavo@embeddedor.com>, netdev@vger.kernel.org,
+ linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
+ ath10k@lists.infradead.org, "David S. Miller" <davem@davemloft.net>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
---===============3406996777522705258==
-Content-Type: multipart/signed; boundary="nextPart4024693.4Mujkspm9b"; micalg="pgp-sha512"; protocol="application/pgp-signature"
+"Gustavo A. R. Silva" <gustavo@embeddedor.com> wrote:
 
---nextPart4024693.4Mujkspm9b
-Content-Transfer-Encoding: 7Bit
-Content-Type: text/plain; charset="us-ascii"
-
-On Tuesday, 5 May 2020 09:01:34 CEST Sven Eckelmann wrote:
-> On Tuesday, 5 May 2020 01:46:12 CEST Rajkumar Manoharan wrote:
-> [...]
-> > IIRC this was fixed a while ago by below patch. Somehow it never landed 
-> > in ath.git.
-> > Simple one line change is enough.
-> > 
-> > https://patchwork.kernel.org/patch/10550707/
+> The current codebase makes use of the zero-length array language
+> extension to the C90 standard, but the preferred mechanism to declare
+> variable-length types such as these ones is a flexible array member[1][2],
+> introduced in C99:
 > 
-> Because it doesn't work for everything. Remember that 10.2.4.x overflows all 
-> the time (14-30s) because it used only 31 bit for the counters.
+> struct foo {
+>         int stuff;
+>         struct boo array[];
+> };
 > 
-> But feel free to point me to the firmware version which fixed this.
+> By making use of the mechanism above, we will get a compiler warning
+> in case the flexible array does not occur last in the structure, which
+> will help us prevent some kind of undefined behavior bugs from being
+> inadvertently introduced[3] to the codebase from now on.
+> 
+> Also, notice that, dynamic memory allocations won't be affected by
+> this change:
+> 
+> "Flexible array members have incomplete type, and so the sizeof operator
+> may not be applied. As a quirk of the original implementation of
+> zero-length arrays, sizeof evaluates to zero."[1]
+> 
+> sizeof(flexible-array-member) triggers a warning because flexible array
+> members have incomplete type[1]. There are some instances of code in
+> which the sizeof operator is being incorrectly/erroneously applied to
+> zero-length arrays and the result is zero. Such instances may be hiding
+> some bugs. So, this work (flexible-array member conversions) will also
+> help to get completely rid of those sorts of issues.
+> 
+> This issue was found with the help of Coccinelle.
+> 
+> [1] https://gcc.gnu.org/onlinedocs/gcc/Zero-Length.html
+> [2] https://github.com/KSPP/linux/issues/21
+> [3] commit 76497732932f ("cxgb3/l2t: Fix undefined behaviour")
+> 
+> Signed-off-by: Gustavo A. R. Silva <gustavo@embeddedor.com>
 
-See also https://patchwork.kernel.org/patch/9701459/
+Fails to apply, please rebase on top of ath.git master branch.
 
-Kind regards,
-	Sven
---nextPart4024693.4Mujkspm9b
-Content-Type: application/pgp-signature; name="signature.asc"
-Content-Description: This is a digitally signed message part.
-Content-Transfer-Encoding: 7Bit
+error: patch failed: drivers/net/wireless/ath/ath10k/pci.h:182
+error: drivers/net/wireless/ath/ath10k/pci.h: patch does not apply
+stg import: Diff does not apply cleanly
 
------BEGIN PGP SIGNATURE-----
+Patch set to Changes Requested.
 
-iQIzBAABCgAdFiEEF10rh2Elc9zjMuACXYcKB8Eme0YFAl6xGpoACgkQXYcKB8Em
-e0ZzCRAAgqYCt2mvPP4dcDSuLObeeqnrlCg1zGaJJZTOYiTbGbBOFPKRKKWoX/PG
-manCnusFGFRHSpoGC94W89wlOJ6EW9x2RMy7ylws0z15iOzziE6faiE9XNuczjQw
-+NVHZthe6xgWq5iORv2+zGtVqPPjvzoVcObZyyTdWtYmnVEb/Vo5W0g713/ha42K
-IHfFLbcwdW3OjVFEd88hEt6sOaMeM86ZmZql6cox23CNzYfG76BcNUvgta7l2Tr1
-MvpLrattlWdTP+6uWabdIdJp2IDKFj9DeEQrvUUuIlQJO1lbiZSBK+/jMqv0buNS
-dImQBdrJZElVL7LW0hqgYHesekgpigVOt4gWd/mZfJlH6dtzW8hp/btxonCzecfd
-DUJchzFPJv4LfAswoWEr/Uw3MYwi7W0pdcbKCJQbzchHgMfO2mtWX6BvfdU5Pvl3
-V5tmKzNbpJIZTFUKh0mFqsceBRXU/fYWU9S3IuAuFmPzTnew4YeBKQj/xhHmduhx
-dXF6IQU69fM2hKUQWZV9NCxmCzHXhytChza4JeQpGhXKM8bQ4sH7yuMWrSlKJ7VU
-D14XlUppGsOW8uKK6VNl76DfFpWqs76bZs95npCX0u188PwTTTAGpbqaizZjXZ5q
-OWF98ErpHvU88aaLjKsYNmUOj6pXyRCfADeukZnuXHKUWSyf3jw=
-=8mIN
------END PGP SIGNATURE-----
+-- 
+https://patchwork.kernel.org/patch/11527635/
 
---nextPart4024693.4Mujkspm9b--
-
-
-
-
-
---===============3406996777522705258==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
+https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
 
 _______________________________________________
 ath10k mailing list
 ath10k@lists.infradead.org
 http://lists.infradead.org/mailman/listinfo/ath10k
-
---===============3406996777522705258==--
-
-
-
-
