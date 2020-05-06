@@ -2,62 +2,62 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B1CD91C7D86
-	for <lists+ath10k@lfdr.de>; Thu,  7 May 2020 00:43:02 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1924E1C7D85
+	for <lists+ath10k@lfdr.de>; Thu,  7 May 2020 00:42:59 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Subject:To:From
 	:Date:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=5PyF7lIzLg7SraR4+kD22VF9NLLFsajJ3zTFHjZ1jg4=; b=hMe0/DSTnDJE1d
-	CEXxmcruUQ4t1n5/zpv6rWFS56/mpC+eo5X5nPFZcN5w80u7EROQaXEbmJOaKi8xP05TLiZRKBsN7
-	RKCh1+Ta7QQTqw3wxS0TYAN8O9EpqSmVWdC8r3ojeltOH/av/l8O7sL/w0vTReod5DfPaVZ3yHn2m
-	Pmjfneec+xA6ZzR/M6lGf2GSMXeKj89q41feQfifVEJzQSKIQL79x4XpLcGms62uLI+fxi1B+EcI9
-	J7mzKXs6SPL6acBtNVWQXbC/xShPNFgoKe/ViHhHG5h8UCwcncTWaib3O0UQYWtwxlgcsk/ScPdQC
-	zvxdY2dUCUFM868JkTKw==;
+	List-Owner; bh=O+uXtLqnOPYuFoSzYtqSK69QxMlrImYajEe64Cjy3Zo=; b=Z2CIkmh2WrBhqk
+	lR2+OxiAWDSrwgfF0awuBgPJPVPU6KbFMmR8UJouCGe6/3x9S68bqUsmyUkpycAX5QG4tB0e69ocm
+	u9twm9JQG4LETV7lSJIdjx6RSVh60ztGgn/fpCwB4sMPbmpWjMpVk2WNVkoXWVNQfoSZ9jlYBgKED
+	PkkEydOJZUI87ME4DnPHqXiPrWNonpJusKS82YGW6UZAhBwbO4Asfcv3CaEvoJwZX0NbcODqHlN8P
+	thCmqH2fGiq3M+kdeTZj7Fv24Pk5Gi84OEhm5cKXGJPOooj2kR8XNh9UPV3ThupfJsdgAqqCZRFaB
+	LyykewtuMiryd2WFDL5Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jWSkn-0003x9-8D; Wed, 06 May 2020 22:43:01 +0000
-Received: from mga18.intel.com ([134.134.136.126])
+	id 1jWSkj-0003sD-N9; Wed, 06 May 2020 22:42:57 +0000
+Received: from mga11.intel.com ([192.55.52.93])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jWSkZ-0003mN-Of
+ id 1jWSkZ-0003mO-HV
  for ath10k@lists.infradead.org; Wed, 06 May 2020 22:42:50 +0000
-IronPort-SDR: PDuVGb2YHtOiwcx/igZ8K3RTr1JHAtiyDx4RoqNE9bNj/HyMCbrrA1F6PeOoEbsfqdD8zLjimF
- p7UIy3SQcHeQ==
+IronPort-SDR: xOituPXmo2FYSHu8qv8rPLrxXF2IFHzOGdakIeZXeGZJRxwc7XuAntymw2PfkAYFzOST+2H/Cp
+ Ux26nGPb2Cpg==
 X-Amp-Result: SKIPPED(no attachment in message)
 X-Amp-File-Uploaded: False
-Received: from fmsmga008.fm.intel.com ([10.253.24.58])
- by orsmga106.jf.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
+Received: from orsmga005.jf.intel.com ([10.7.209.41])
+ by fmsmga102.fm.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
  06 May 2020 15:42:46 -0700
-IronPort-SDR: hFDLHxwQbxH2M2x4Dz0zoF4zvEfwlLztRsBFj8mKzPQYVfIa+A3utk0ZFOX1kHIKxfHwD3V2Z0
- HzIXc2Fg2V0g==
+IronPort-SDR: /B2S8C0GbAYgSl7QXgzHMoExvCCMYca03GSYkLFZ/GF4lxhqkpSaDt0ii3ORycOqrp5fq/qCJQ
+ E5a+pg1Elt8w==
 X-ExtLoop1: 1
-X-IronPort-AV: E=Sophos;i="5.73,361,1583222400"; d="scan'208";a="251337275"
+X-IronPort-AV: E=Sophos;i="5.73,361,1583222400"; d="scan'208";a="435063799"
 Received: from lkp-server01.sh.intel.com (HELO lkp-server01) ([10.239.97.150])
- by fmsmga008.fm.intel.com with ESMTP; 06 May 2020 15:42:45 -0700
+ by orsmga005.jf.intel.com with ESMTP; 06 May 2020 15:42:45 -0700
 Received: from kbuild by lkp-server01 with local (Exim 4.89)
  (envelope-from <lkp@intel.com>)
- id 1jWSkW-000IYP-DD; Thu, 07 May 2020 06:42:44 +0800
-Date: Thu, 07 May 2020 06:42:37 +0800
+ id 1jWSkW-000IaK-Qj; Thu, 07 May 2020 06:42:44 +0800
+Date: Thu, 07 May 2020 06:42:39 +0800
 From: kbuild test robot <lkp@intel.com>
 To: Kalle Valo <kvalo@codeaurora.org>
-Subject: [ath6kl:ath-next] BUILD SUCCESS
- 14dd3a71ccb7081d5d4959370794bbabc3258b34
-Message-ID: <5eb33d5d.QCNZj9EdtBE2R0w6%lkp@intel.com>
+Subject: [ath6kl:ath-qca] BUILD SUCCESS
+ defc7ef90f57328272b9d8b78d022d0a273db156
+Message-ID: <5eb33d5f.+P3KDtQ1MsDBuzS7%lkp@intel.com>
 User-Agent: Heirloom mailx 12.5 6/20/10
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200506_154247_838738_06C2963D 
-X-CRM114-Status: UNSURE (   6.22  )
+X-CRM114-CacheID: sfid-20200506_154247_590678_ADB877BC 
+X-CRM114-Status: UNSURE (   6.54  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: 2.5 (++)
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (2.5 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [134.134.136.126 listed in list.dnswl.org]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [192.55.52.93 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  1.8 LONGWORDS              Long string of long words
@@ -79,12 +79,12 @@ Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-tree/branch: https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git  ath-next
-branch HEAD: 14dd3a71ccb7081d5d4959370794bbabc3258b34  ath11k: Replace zero-length array with flexible-array
+tree/branch: https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git  ath-qca
+branch HEAD: defc7ef90f57328272b9d8b78d022d0a273db156  Merge branch 'ath-next' into ath-qca
 
-elapsed time: 483m
+elapsed time: 482m
 
-configs tested: 155
+configs tested: 139
 configs skipped: 0
 
 The following configs have been built successfully.
@@ -104,12 +104,13 @@ riscv                               defconfig
 parisc                           allyesconfig
 alpha                            allyesconfig
 powerpc                           allnoconfig
-c6x                               allnoconfig
+m68k                                defconfig
+powerpc                             defconfig
 s390                             alldefconfig
 ia64                             alldefconfig
 m68k                           sun3_defconfig
-powerpc                             defconfig
 sparc64                          allmodconfig
+c6x                               allnoconfig
 nds32                               defconfig
 csky                             allyesconfig
 s390                                defconfig
@@ -122,7 +123,6 @@ ia64                             allmodconfig
 ia64                                defconfig
 ia64                              allnoconfig
 m68k                          multi_defconfig
-m68k                                defconfig
 nds32                             allnoconfig
 csky                                defconfig
 alpha                               defconfig
@@ -158,22 +158,11 @@ nds32                randconfig-a001-20200506
 parisc               randconfig-a001-20200506
 alpha                randconfig-a001-20200506
 riscv                randconfig-a001-20200506
-m68k                 randconfig-a001-20200507
-mips                 randconfig-a001-20200507
-nds32                randconfig-a001-20200507
-parisc               randconfig-a001-20200507
-alpha                randconfig-a001-20200507
-riscv                randconfig-a001-20200507
 h8300                randconfig-a001-20200506
 nios2                randconfig-a001-20200506
 microblaze           randconfig-a001-20200506
 c6x                  randconfig-a001-20200506
 sparc64              randconfig-a001-20200506
-h8300                randconfig-a001-20200507
-nios2                randconfig-a001-20200507
-microblaze           randconfig-a001-20200507
-c6x                  randconfig-a001-20200507
-sparc64              randconfig-a001-20200507
 s390                 randconfig-a001-20200506
 xtensa               randconfig-a001-20200506
 sh                   randconfig-a001-20200506
@@ -183,11 +172,6 @@ xtensa               randconfig-a001-20200507
 sh                   randconfig-a001-20200507
 openrisc             randconfig-a001-20200507
 csky                 randconfig-a001-20200507
-i386                 randconfig-b003-20200506
-i386                 randconfig-b001-20200506
-x86_64               randconfig-b001-20200506
-x86_64               randconfig-b003-20200506
-i386                 randconfig-b002-20200506
 x86_64               randconfig-a003-20200506
 x86_64               randconfig-a001-20200506
 x86_64               randconfig-a002-20200506
