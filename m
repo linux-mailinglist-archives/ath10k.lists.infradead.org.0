@@ -2,74 +2,72 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 8230E1CD97D
-	for <lists+ath10k@lfdr.de>; Mon, 11 May 2020 14:17:36 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 551011CD9EB
+	for <lists+ath10k@lfdr.de>; Mon, 11 May 2020 14:32:12 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
-	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=H9IJ4RE/yqV0ilpVFwrK0hTA6PRoNLyLihrEC8DvNLc=; b=XRTODMXplIXLt4
-	yjK3NPRPfRCCS5P0UqddFGhS0VrdMODL8JGMEWgJ7e3DongsQ27TAcjw/6dTImzRE9OzOEHILL6bA
-	89Xv+PXbYBj6WEhQugG+7CNA9zyR0dKeUdT3SC1sHK86GquvM7TRiaSrKQ4idJZdfD2owkxQBmHN2
-	QuVvCOBtGvmwmojxw3VQvbO/LgTUJxL87LsSNEbk+Ks5t/FCZL5AjLxStQMqvJ9rPA8H5mecaFORf
-	sNcGUjcQSCJLlOiL5QIg/T7vl2/9zAhz206gZteFQ5d14e9xV1Fr3XjJVVOqzrt13jc0YnQnPGIj9
-	ucuIh5emd6v1mbPIZeJA==;
+	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
+	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=UfBI6HgnLYbfM/Z5JsK00oP5KnvgnKFPkftkyIqccz4=; b=pw1Qu5+E7qcXok
+	u5Q3ppvVInBm1Tnqdnloh1jrVaERqWjL03WzxzZt/rzzWrApRnQRDb3ki48STpziF6ItsH4lt4Tf8
+	tyg9n6+vskDc1z8o3SxgU7V6k4eNaxHvwj/Ca3bO/yNUrPZNY6NPkb6XwTR1AzLo6JC7duu5EZ2uk
+	OOCzPKtUlLXnGP8DPb6CYi5VyMbpzpKHO7pVwV/C2BUDN0RaZ7rKJo3hQUaSlumd+cMs/xUmWT/w+
+	A3JP5TTxOpM27Z3N2xYCMxK3sk6QEQwTabfkNdbKPBHKfPMQYwqunReOhTr3nVuPBdmrHWsA/YKhY
+	EaAV+bdY8Va8Cr0Geqkg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jY7NG-0004Nt-TT; Mon, 11 May 2020 12:17:34 +0000
+	id 1jY7bN-0007Xj-PH; Mon, 11 May 2020 12:32:09 +0000
 Received: from mail26.static.mailgun.info ([104.130.122.26])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jY7NA-0004NK-KC
- for ath10k@lists.infradead.org; Mon, 11 May 2020 12:17:32 +0000
+ id 1jY7bF-0007Rm-6W
+ for ath10k@lists.infradead.org; Mon, 11 May 2020 12:32:02 +0000
 DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
  q=dns/txt; 
- s=smtp; t=1589199450; h=Content-Type: MIME-Version: Message-ID:
- In-Reply-To: Date: References: Subject: Cc: To: From: Sender;
- bh=LJkqkksPCoqKwanmP1G5QFQXBwL68pGeFkXkb/IEhLI=;
- b=cWnChemK5HIM/nXCJAAFMH71rI/VJuHgMDSRfvrTdKET+CRYOY8sf4fdZ1bwUFJR/LT90EgW
- bVUdvaMZIYPfWvhTg+NFg/xcmr3g3bg3OZNu1W5It+jTJVVXgIl5i6k/rAJQyRdcL5a8dfui
- 1xvpLg6CZc+cOajKOfTI9gy6cXY=
+ s=smtp; t=1589200321; h=Date: Message-Id: Cc: To: References:
+ In-Reply-To: From: Subject: Content-Transfer-Encoding: MIME-Version:
+ Content-Type: Sender; bh=mE+eflbY/lm0yBry5TNweEh0p1uT1xNPSHaBIh67Oq4=;
+ b=fpvIJA5c9TER3Soh4dnUEcTr5XK62THxvH4WVPONPmOIyVgHSi6TU7RATTPPjIVKp4ZFEyNh
+ 1yHI6jOaGHEZd04CQkKbT3f+Lz+Z0/KATEnh1umauiKCnhaz4WIU6GX3kGIHI2BSxN+FSD03
+ LoT/8tIOFHHuPf22c6RoIin7MYg=
 X-Mailgun-Sending-Ip: 104.130.122.26
 X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
 Received: from smtp.codeaurora.org
  (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
- by mxa.mailgun.org with ESMTP id 5eb9424e.7fb160caae68-smtp-out-n04;
- Mon, 11 May 2020 12:17:18 -0000 (UTC)
+ by mxa.mailgun.org with ESMTP id 5eb945c0.7f88f26fc030-smtp-out-n01;
+ Mon, 11 May 2020 12:32:00 -0000 (UTC)
 Received: by smtp.codeaurora.org (Postfix, from userid 1001)
- id A718DC44788; Mon, 11 May 2020 12:17:17 +0000 (UTC)
+ id C3936C58A02; Mon, 11 May 2020 12:31:59 +0000 (UTC)
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  aws-us-west-2-caf-mail-1.web.codeaurora.org
 X-Spam-Level: 
-X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,SPF_NONE
- autolearn=unavailable autolearn_force=no version=3.4.0
+X-Spam-Status: No, score=0.5 required=2.0 tests=ALL_TRUSTED,MISSING_DATE,
+ MISSING_MID,SPF_NONE autolearn=no autolearn_force=no version=3.4.0
 Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
  [88.114.240.156])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested) (Authenticated sender: kvalo)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id F2C65C433F2;
- Mon, 11 May 2020 12:17:14 +0000 (UTC)
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org F2C65C433F2
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 0B0AAC44792;
+ Mon, 11 May 2020 12:31:56 +0000 (UTC)
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 0B0AAC44792
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
  spf=none smtp.mailfrom=kvalo@codeaurora.org
-From: Kalle Valo <kvalo@codeaurora.org>
-To: Arnd Bergmann <arnd@arndb.de>
-Subject: Re: [PATCH net-next 2/2] ath10k: fix ath10k_pci struct layout
-References: <20200509120707.188595-1-arnd@arndb.de>
- <20200509120707.188595-2-arnd@arndb.de>
- <87v9l24qz6.fsf@kamboji.qca.qualcomm.com>
-Date: Mon, 11 May 2020 15:17:12 +0300
-In-Reply-To: <87v9l24qz6.fsf@kamboji.qca.qualcomm.com> (Kalle Valo's message
- of "Mon, 11 May 2020 15:05:01 +0300")
-Message-ID: <87r1vq4qev.fsf@kamboji.qca.qualcomm.com>
-User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/24.5 (gnu/linux)
 MIME-Version: 1.0
+Subject: Re: [PATCH] ath10k: Skip handling del_server during driver exit
+From: Kalle Valo <kvalo@codeaurora.org>
+In-Reply-To: <1588663061-12138-1-git-send-email-pillair@codeaurora.org>
+References: <1588663061-12138-1-git-send-email-pillair@codeaurora.org>
+To: Rakesh Pillai <pillair@codeaurora.org>
+User-Agent: pwcli/0.1.0-git (https://github.com/kvalo/pwcli/) Python/3.5.2
+Message-Id: <20200511123159.C3936C58A02@smtp.codeaurora.org>
+Date: Mon, 11 May 2020 12:31:59 +0000 (UTC)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200511_051730_799450_75C5749F 
-X-CRM114-Status: GOOD (  13.29  )
+X-CRM114-CacheID: sfid-20200511_053201_410093_EB58B94C 
+X-CRM114-Status: UNSURE (   9.15  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -96,59 +94,38 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Maharaja Kennadyrajan <mkenna@codeaurora.org>, netdev@vger.kernel.org,
- linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
- ath10k@lists.infradead.org, "David S. Miller" <davem@davemloft.net>
+Cc: Rakesh Pillai <pillair@codeaurora.org>, linux-wireless@vger.kernel.org,
+ linux-kernel@vger.kernel.org, ath10k@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-Kalle Valo <kvalo@codeaurora.org> writes:
+Rakesh Pillai <pillair@codeaurora.org> wrote:
 
-> Arnd Bergmann <arnd@arndb.de> writes:
->
->> gcc-10 correctly points out a bug with a zero-length array in
->> struct ath10k_pci:
->>
->> drivers/net/wireless/ath/ath10k/ahb.c: In function 'ath10k_ahb_remove':
->> drivers/net/wireless/ath/ath10k/ahb.c:30:9: error: array subscript 0
->> is outside the bounds of an interior zero-length array 'struct
->> ath10k_ahb[0]' [-Werror=zero-length-bounds]
->>    30 |  return &((struct ath10k_pci *)ar->drv_priv)->ahb[0];
->>       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
->> In file included from drivers/net/wireless/ath/ath10k/ahb.c:13:
->> drivers/net/wireless/ath/ath10k/pci.h:185:20: note: while referencing 'ahb'
->>   185 |  struct ath10k_ahb ahb[0];
->>       |                    ^~~
->>
->> The last addition to the struct ignored the comments and added
->> new members behind the array that must remain last.
->>
->> Change it to a flexible-array member and move it last again to
->> make it work correctly, prevent the same thing from happening
->> again (all compilers warn about flexible-array members in the
->> middle of a struct) and get it to build without warnings.
->
-> Very good find, thanks! This bug would cause all sort of strange memory
-> corruption issues.
+> The qmi infrastructure sends the client a del_server
+> event when the client releases its qmi handle. This
+> is not the msg indicating the actual qmi server exiting.
+> In such cases the del_server msg should not be processed,
+> since the wifi firmware does not reset its qmi state.
+> 
+> Hence skip the processing of del_server event when the
+> driver is unloading.
+> 
+> Tested HW: WCN3990
+> Tested FW: WLAN.HL.3.1-01040-QCAHLSWMTPLZ-1
+> 
+> Fixes: ba94c753ccb4 ("ath10k: add QMI message handshake for wcn3990 client")
+> Signed-off-by: Rakesh Pillai <pillair@codeaurora.org>
+> Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 
-This motivated me to switch to using GCC 10.x and I noticed that you had
-already upgraded crosstool so it was a trivial thing to do, awesome :)
+Patch applied to ath-next branch of ath.git, thanks.
 
-https://mirrors.edge.kernel.org/pub/tools/crosstool/
-
-I use crosstool like this using GNUmakefile:
-
-CROSS_COMPILE=/opt/cross/gcc-10.1.0-nolibc/x86_64-linux/bin/x86_64-linux-
-include Makefile
-
-I think it's handy trick and would be good to mention that in the
-crosstool main page. That way I could just point people to the crosstool
-main page when they are using ancient compilers and would need to
-upgrade.
+7c6d67b136ce ath10k: Skip handling del_server during driver exit
 
 -- 
+https://patchwork.kernel.org/patch/11528317/
+
 https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
 
 _______________________________________________
