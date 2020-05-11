@@ -2,43 +2,43 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id DE1211CDA10
-	for <lists+ath10k@lfdr.de>; Mon, 11 May 2020 14:37:24 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C84631CDA19
+	for <lists+ath10k@lfdr.de>; Mon, 11 May 2020 14:38:27 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
 	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=FNAAZnKoCUQ39mjgi7PQGIU51c5LpURdxGyuqlGAUvc=; b=gTT/dlaJJOwN9S
-	7JWkAegpGOhkg7pcVcQph0elA4hpByA7qBcOB4rz4TEXpIZvbcFewEne+/zN5LUtcrjKzSgky3XWp
-	gt95f1tf6dofVZfkMvsE1KHzMrRn0VPsxWx/EkqT+YIvltjJF7IAhHgzh0C8DkiI5mOOMDTGHi2G0
-	GWW+TJtuTbTAo1d8EE7PsCcta+p0Y3aiKwkFCGlIxNmD5lDCk/We8adB3Ci5EXx11B+OKb7IzBLwb
-	+jxIWFInZKAYwAVwA6qKdleZIuR46ptlJ7/aTyyNvqjBZCFBvKKhp4bshdFfRq3KgkkJ+RMe2ABJf
-	KK5jjCq0GnnUqhYoTB5Q==;
+	List-Owner; bh=A851jtTRrGter3Rar2H0HUHw6mpR7IH8h+9EKNup+rU=; b=kgInUUdI+DqH1p
+	7MY2ojP6BMXLgPWjjKfjfR4Wm9ZVvw7nXGZ0A1cSuCzDViIBEe4n7JSB3gcP8FNV74dDO+4CFvulu
+	iMGRknbf5oJJBBtFw+QGEmb5AWf44Ez0Y5+4RRT3wQcf3WqI3WsPqC6V78gRWUZyiJQFExERG13TR
+	YS+Cb/q2xGRPhmu/aXkxh8zznzP1HzQfoUF9FAzsZYHZiMOWz23WSPh6tdNMSGHf9LngAnpog8mde
+	UZ0MllVFcA+TgyXWmC3tP6bbn8NuNjSMAOkBLsAGRP2GsJNkKkAVNcOfbfB+STA/gH4kn0C3uu/t6
+	OPZt7gy9iv/XqZROgKKg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jY7gP-0002ld-Cg; Mon, 11 May 2020 12:37:21 +0000
+	id 1jY7hS-0002yd-21; Mon, 11 May 2020 12:38:26 +0000
 Received: from mail26.static.mailgun.info ([104.130.122.26])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jY7gJ-0002l7-3Z
- for ath10k@lists.infradead.org; Mon, 11 May 2020 12:37:19 +0000
+ id 1jY7hN-0002l7-QE
+ for ath10k@lists.infradead.org; Mon, 11 May 2020 12:38:23 +0000
 DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
  q=dns/txt; 
- s=smtp; t=1589200637; h=Date: Message-Id: Cc: To: References:
+ s=smtp; t=1589200702; h=Date: Message-Id: Cc: To: References:
  In-Reply-To: From: Subject: Content-Transfer-Encoding: MIME-Version:
- Content-Type: Sender; bh=RZFBXDcHmQyEqT0beRyDtm0qoWEK9orYsqxQ96o+uwQ=;
- b=dCAMJCN8s8VwkdUrkXfp5FsQDtBhee8dJ74R3oE+DR6qzb+p8NyGZibvWkCyM2imuy5oP14p
- kGQeuGDbBmZszqN3q45dLSXkMO36FEZIhyfDppYIR3EIQNH5W7eM8zEiyQ/A8v7Ab1I/fov2
- VHd/+2Rf9D6UZt6GqVvJtVwLNyo=
+ Content-Type: Sender; bh=6zHthPA67U2sDfggdSKZPI6MNAUGMdP3o7kYKcHGj6w=;
+ b=Z44AjObDJaP6gEAJ/DCb8Dcc1LI8irqBuZGscqdi3e13TuhO+2KCAbK9kxetIoKkwWIcNQoT
+ MP0QK0/BgORN6o49VVTLK/rpzUCnC9UJ63558Hgw7Rx+o6+viY8bSbyXsXh4KmXzL6ae7RDq
+ rJsQnOSH4L/o42E9KOXaiOFFFGk=
 X-Mailgun-Sending-Ip: 104.130.122.26
 X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
 Received: from smtp.codeaurora.org
  (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
- by mxa.mailgun.org with ESMTP id 5eb946ee.7f9bafbbc570-smtp-out-n01;
- Mon, 11 May 2020 12:37:02 -0000 (UTC)
+ by mxa.mailgun.org with ESMTP id 5eb9473d.7f7a18ff7960-smtp-out-n03;
+ Mon, 11 May 2020 12:38:21 -0000 (UTC)
 Received: by smtp.codeaurora.org (Postfix, from userid 1001)
- id 856C5C43636; Mon, 11 May 2020 12:37:02 +0000 (UTC)
+ id 41011C432C2; Mon, 11 May 2020 12:38:21 +0000 (UTC)
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  aws-us-west-2-caf-mail-1.web.codeaurora.org
 X-Spam-Level: 
@@ -48,25 +48,26 @@ Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
  [88.114.240.156])
  (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested) (Authenticated sender: kvalo)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 2D225C433BA;
- Mon, 11 May 2020 12:36:59 +0000 (UTC)
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 2D225C433BA
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id DAC52C433BA;
+ Mon, 11 May 2020 12:38:19 +0000 (UTC)
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org DAC52C433BA
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
  spf=none smtp.mailfrom=kvalo@codeaurora.org
 MIME-Version: 1.0
-Subject: Re: [PATCH v2] ath10k: Replace zero-length array with flexible-array
+Subject: Re: [PATCH] ath10k: Remove experimental tag from ath10k Kconfig
 From: Kalle Valo <kvalo@codeaurora.org>
-In-Reply-To: <20200507041127.GA31587@embeddedor>
-References: <20200507041127.GA31587@embeddedor>
-To: "Gustavo A. R. Silva" <gustavoars@kernel.org>
+In-Reply-To: <20200507055324.15564-1-govinds@codeaurora.org>
+References: <20200507055324.15564-1-govinds@codeaurora.org>
+To: Govind Singh <govinds@codeaurora.org>
 User-Agent: pwcli/0.1.0-git (https://github.com/kvalo/pwcli/) Python/3.5.2
-Message-Id: <20200511123702.856C5C43636@smtp.codeaurora.org>
-Date: Mon, 11 May 2020 12:37:02 +0000 (UTC)
+Message-Id: <20200511123821.41011C432C2@smtp.codeaurora.org>
+Date: Mon, 11 May 2020 12:38:21 +0000 (UTC)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200511_053717_841090_975CB346 
-X-CRM114-Status: GOOD (  13.89  )
+X-CRM114-CacheID: sfid-20200511_053822_594367_3FDD739A 
+X-CRM114-Status: UNSURE (   6.11  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -93,60 +94,27 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: "Gustavo A. R. Silva" <gustavo@embeddedor.com>, netdev@vger.kernel.org,
- linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
- ath10k@lists.infradead.org, "David S. Miller" <davem@davemloft.net>
+Cc: Govind Singh <govinds@codeaurora.org>, linux-wireless@vger.kernel.org,
+ ath10k@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-"Gustavo A. R. Silva" <gustavoars@kernel.org> wrote:
+Govind Singh <govinds@codeaurora.org> wrote:
 
-> The current codebase makes use of the zero-length array language
-> extension to the C90 standard, but the preferred mechanism to declare
-> variable-length types such as these ones is a flexible array member[1][2],
-> introduced in C99:
+> ath10k(sdio/snoc) is no longer experimental. Remove experimental tag for
+> SDIO/SNOC from ath10k Kconfig.
 > 
-> struct foo {
->         int stuff;
->         struct boo array[];
-> };
-> 
-> By making use of the mechanism above, we will get a compiler warning
-> in case the flexible array does not occur last in the structure, which
-> will help us prevent some kind of undefined behavior bugs from being
-> inadvertently introduced[3] to the codebase from now on.
-> 
-> Also, notice that, dynamic memory allocations won't be affected by
-> this change:
-> 
-> "Flexible array members have incomplete type, and so the sizeof operator
-> may not be applied. As a quirk of the original implementation of
-> zero-length arrays, sizeof evaluates to zero."[1]
-> 
-> sizeof(flexible-array-member) triggers a warning because flexible array
-> members have incomplete type[1]. There are some instances of code in
-> which the sizeof operator is being incorrectly/erroneously applied to
-> zero-length arrays and the result is zero. Such instances may be hiding
-> some bugs. So, this work (flexible-array member conversions) will also
-> help to get completely rid of those sorts of issues.
-> 
-> This issue was found with the help of Coccinelle.
-> 
-> [1] https://gcc.gnu.org/onlinedocs/gcc/Zero-Length.html
-> [2] https://github.com/KSPP/linux/issues/21
-> [3] commit 76497732932f ("cxgb3/l2t: Fix undefined behaviour")
-> 
-> Signed-off-by: Gustavo A. R. Silva <gustavo@embeddedor.com>
+> Signed-off-by: Govind Singh <govinds@codeaurora.org>
 > Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 
 Patch applied to ath-next branch of ath.git, thanks.
 
-d3ed0cf047cf ath10k: Replace zero-length array with flexible-array
+4d0f3604c4d1 ath10k: remove experimental tag from SDIO and SNOC busses in Kconfig
 
 -- 
-https://patchwork.kernel.org/patch/11532369/
+https://patchwork.kernel.org/patch/11532477/
 
 https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
 
