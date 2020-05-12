@@ -2,54 +2,54 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 086FE1CEAC2
-	for <lists+ath10k@lfdr.de>; Tue, 12 May 2020 04:32:36 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0101B1CEB18
+	for <lists+ath10k@lfdr.de>; Tue, 12 May 2020 05:03:50 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Subject:To:From
 	:Date:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=oVUxkirYogzI98jF0QA6K8KJS9CUEfHqEFuY62cb4UE=; b=oys1PfHY2Rznr5
-	hfsAOTmSmSJuDjQNRJq6W/jXOxFwQdvafrcf1y/zOljrL4uF2M2tnnB7VTEv66UyZRgcGLANv8tS3
-	GFpncbkF2G2+PGVgp+r68u+wzmlgZfKfsmcIC+9ZhtISSOf7Kw71v1Ui85HDG81uRsYZj0yg7qLvO
-	IfhBvSUXGvr9bqeZu4PwKBVJJ7M65Zi8p3qN5VutUP5ShAdEk9biqQAg6FNZEYGtyTZqmvpXq0inK
-	nPb+zSLOUbYq1R8Dx3EhDRjlVnQ1YA+/CFEc+F41Anl4OHx+iLsXZ6PtgJRZHS2wVI9ODrrIxaeib
-	Awyds5hEQtgrj6czBy8A==;
+	List-Owner; bh=bg68Q76Y3P7cI88ielsQyL9DDw9k7o9Wa2viwWl0nBo=; b=ga3e31arlpB6zw
+	T1WrMfpw+URdBBPU66O0gY9SIjKdq5fZWXXekgTMRnQLLtNmVsHx3wEB5W2H+l1OUP+07N59C6tGd
+	KyCTNJBzdpJdQgkAM0YD6QJcRi+qUJmJQF3TgfJ3vn/gY+60CS7edNh7twssLbzTqfZEc0M/YKB+2
+	dx+d7i72BJkv7R2UDcuv6i37zWAi6qjGl4M3VtS0hRjXe4tjDeJrV/autoe2BzRUx7VCkOrxAKrhb
+	M3EbHwdZetyyDuyOaL40MAD1FPESdGAoUZl5N9u08/xEWuCVMFui4MmoBIEpeaWumDTQ3/VROjc48
+	TFNwVhF6nkPs5Uw5g1yA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jYKic-0003RD-SH; Tue, 12 May 2020 02:32:30 +0000
+	id 1jYLCu-0006RH-3A; Tue, 12 May 2020 03:03:48 +0000
 Received: from mga01.intel.com ([192.55.52.88])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jYKiY-0003Qb-Mq
- for ath10k@lists.infradead.org; Tue, 12 May 2020 02:32:28 +0000
-IronPort-SDR: nbUaLL1EX1v+MD+OwWQ7pEsacG3kAfoFw+G3OAsa8oLNNLlkCbPu4RmMKGlH/eRmP+iz8HKlyi
- pBeIVdQoAAhw==
+ id 1jYLCo-0006QU-5G
+ for ath10k@lists.infradead.org; Tue, 12 May 2020 03:03:45 +0000
+IronPort-SDR: kUJxlLMSz/9NwD4YtejB5Db7BeNmGgCxH90oBhrXySyomap8eEVZsyF5Sv3nBNtvuz1rXaQFQb
+ Gbu5vJBAolng==
 X-Amp-Result: SKIPPED(no attachment in message)
 X-Amp-File-Uploaded: False
-Received: from fmsmga002.fm.intel.com ([10.253.24.26])
+Received: from fmsmga008.fm.intel.com ([10.253.24.58])
  by fmsmga101.fm.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
- 11 May 2020 19:32:24 -0700
-IronPort-SDR: WZptRcUyRsNFNzPp1V+Gj3yt5LTJvw/52kpqaYnbEfXfoHzZ9N2xHIDR5DCro/OmTW04k4OTQB
- yhTxWGQfYSqA==
+ 11 May 2020 20:03:41 -0700
+IronPort-SDR: AILxHiJZbyttPeI1ptgyMgwjiYuMLPsyGV39mKHAZKKxcrpefP5T/t9s5eODc73YmVctAQyOGh
+ GnyaLux8vAOg==
 X-ExtLoop1: 1
-X-IronPort-AV: E=Sophos;i="5.73,381,1583222400"; d="scan'208";a="297150729"
+X-IronPort-AV: E=Sophos;i="5.73,381,1583222400"; d="scan'208";a="252765712"
 Received: from lkp-server01.sh.intel.com (HELO lkp-server01) ([10.239.97.150])
- by fmsmga002.fm.intel.com with ESMTP; 11 May 2020 19:32:23 -0700
+ by fmsmga008.fm.intel.com with ESMTP; 11 May 2020 20:03:40 -0700
 Received: from kbuild by lkp-server01 with local (Exim 4.89)
  (envelope-from <lkp@intel.com>)
- id 1jYKiU-000B6c-Tl; Tue, 12 May 2020 10:32:22 +0800
-Date: Tue, 12 May 2020 10:32:18 +0800
+ id 1jYLCm-0001vo-0x; Tue, 12 May 2020 11:03:40 +0800
+Date: Tue, 12 May 2020 11:03:08 +0800
 From: kbuild test robot <lkp@intel.com>
 To: Kalle Valo <kvalo@codeaurora.org>
-Subject: [ath6kl:master-pending] BUILD SUCCESS
- 7e7fdfc8c7aeed1ab278db1f6fb5acd1ed69fba4
-Message-ID: <5eba0ab2.RN6nxrj4sHw+0iIr%lkp@intel.com>
+Subject: [ath6kl:pending] BUILD SUCCESS
+ 6303acc5b03a5fc3bf6cf5fa072ae0dc9aaa5dd0
+Message-ID: <5eba11ec./F2BxApVg1Hw6M3d%lkp@intel.com>
 User-Agent: Heirloom mailx 12.5 6/20/10
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200511_193226_764724_394148D9 
-X-CRM114-Status: UNSURE (   6.30  )
+X-CRM114-CacheID: sfid-20200511_200342_256036_69975051 
+X-CRM114-Status: UNSURE (   5.99  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -3.2 (---)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -81,12 +81,12 @@ Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-tree/branch: https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git  master-pending
-branch HEAD: 7e7fdfc8c7aeed1ab278db1f6fb5acd1ed69fba4  Merge branch 'pending' into master-pending
+tree/branch: https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git  pending
+branch HEAD: 6303acc5b03a5fc3bf6cf5fa072ae0dc9aaa5dd0  wil6210: Replace zero-length array with flexible-array
 
-elapsed time: 484m
+elapsed time: 480m
 
-configs tested: 103
+configs tested: 106
 configs skipped: 1
 
 The following configs have been built successfully.
@@ -152,6 +152,9 @@ i386                 randconfig-a003-20200511
 i386                 randconfig-a001-20200511
 i386                 randconfig-a004-20200511
 i386                 randconfig-a002-20200511
+x86_64               randconfig-a016-20200511
+x86_64               randconfig-a012-20200511
+x86_64               randconfig-a014-20200511
 i386                 randconfig-a012-20200511
 i386                 randconfig-a016-20200511
 i386                 randconfig-a014-20200511
@@ -189,12 +192,12 @@ um                                allnoconfig
 um                               allyesconfig
 um                                  defconfig
 x86_64                                   rhel
-x86_64                               rhel-7.6
-x86_64                    rhel-7.6-kselftests
 x86_64                         rhel-7.2-clear
 x86_64                                    lkp
 x86_64                              fedora-25
 x86_64                                  kexec
+x86_64                               rhel-7.6
+x86_64                    rhel-7.6-kselftests
 
 ---
 0-DAY CI Kernel Test Service, Intel Corporation
