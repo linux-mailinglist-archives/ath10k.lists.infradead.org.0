@@ -2,65 +2,88 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A1BAE1CEB34
-	for <lists+ath10k@lfdr.de>; Tue, 12 May 2020 05:12:58 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3578F1CEE24
+	for <lists+ath10k@lfdr.de>; Tue, 12 May 2020 09:35:32 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Subject:To:From
-	:Date:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=4FS00s2gaJNQ3PtiTU7d75CtUgAFMPipgNpyQsLMMJY=; b=abqEBn8s+TGtuF
-	Z+D9GjwD51VEwS1rfmYaPr/PeCyeXwqDGvFMZub7mrMKIGLWG4jXM48J1lyqFceRo/gmLQcXHHJ51
-	eGMuOU9hOe156/aCeA9ILwEE/uzN+BaQcPmJLG07gkULO8YShdvmFXwP6eXbRR4jlcgD8ZtA/kb+J
-	a2G8LU7c3pyGjluR0s+kDGm/OKAkyGYEmzgJbcxJmO/WjUel0pS1n49vPlmOS/2osvA/qJ4Dt6GJ5
-	iHI+3ctcxeskLzxyXsKM7TOV3DUeiNY1atWokDxFyEODsq9leZ++VXLu45ibS9sdtDXk5b2tAKiMo
-	CZtleJqq7etR4NVXyRqg==;
+	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
+	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=doYSJxjbMCS+89q3xYB7AjWuc2xi2+9byHwbSODjVKs=; b=o5oA99I/wzuCUG
+	WHdsaztdQwBmtBPTeU1aVfzbqAMR2LFGsubJsFJy32Yx/68fGfTHptSTveUz2TekWma9PN1hpsXTa
+	WBDo2kLJdqh6QB+eAZz7DJpRlm5DJqj2vg8Nip6yeE+6PpZvXZECGKx1TW0lHv2DWUXK3YYOTsYQt
+	dZoZq93DjjYDkxI+IdlpO7yNvRDMqVJ3xy7Sq/nNn6uDeoaLSEvgQcJd/pZrkjAwi1PjsWfbEACf+
+	0/6v3ZUn7NiSngdMb1xqiSQkXdq64GmAT1B8SmlqiG5NnLwiepdp7tbVJKnsAzeQ1bk3O8XRZvh3M
+	thPg5kxJ7btJ2u6wXQNg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jYLLk-0004UI-QM; Tue, 12 May 2020 03:12:56 +0000
-Received: from mga07.intel.com ([134.134.136.100])
+	id 1jYPRn-0000NG-Mm; Tue, 12 May 2020 07:35:27 +0000
+Received: from mail26.static.mailgun.info ([104.130.122.26])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jYLLa-0004NS-KN
- for ath10k@lists.infradead.org; Tue, 12 May 2020 03:12:48 +0000
-IronPort-SDR: vUtINBOdVZz3Io+tmpEB0B9+/CUeW0EEPK+1TbVO+LUofcxOubFhgqXuvPrVztiLwa0x3pGX9m
- BV5ePf05SiiA==
-X-Amp-Result: SKIPPED(no attachment in message)
-X-Amp-File-Uploaded: False
-Received: from orsmga008.jf.intel.com ([10.7.209.65])
- by orsmga105.jf.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
- 11 May 2020 20:12:45 -0700
-IronPort-SDR: ihvY1YY3ZeoebfkLt5EtWAUYzUkvYrvdFRklcrQQVBC3nEOo689C3gKmswWNNi/GoBRNzrAR5s
- ymC08IC/niIQ==
-X-ExtLoop1: 1
-X-IronPort-AV: E=Sophos;i="5.73,381,1583222400"; d="scan'208";a="297886385"
-Received: from lkp-server01.sh.intel.com (HELO lkp-server01) ([10.239.97.150])
- by orsmga008.jf.intel.com with ESMTP; 11 May 2020 20:12:44 -0700
-Received: from kbuild by lkp-server01 with local (Exim 4.89)
- (envelope-from <lkp@intel.com>)
- id 1jYLLY-000IDr-13; Tue, 12 May 2020 11:12:44 +0800
-Date: Tue, 12 May 2020 11:11:56 +0800
-From: kbuild test robot <lkp@intel.com>
-To: Govind Singh <govinds@codeaurora.org>
-Subject: [ath6kl:pending 21/24] drivers/net/wireless/ath/ath11k/pci.c:49:34:
- warning: Local variable 'msi_config' shadows outer variable [shadowVariable]
-Message-ID: <202005121153.gLRyf9Tw%lkp@intel.com>
+ id 1jYPQS-00056h-K5
+ for ath10k@lists.infradead.org; Tue, 12 May 2020 07:34:10 +0000
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
+ q=dns/txt; 
+ s=smtp; t=1589268848; h=Date: Message-Id: Cc: To: References:
+ In-Reply-To: From: Subject: Content-Transfer-Encoding: MIME-Version:
+ Content-Type: Sender; bh=/qP6S8+xrEXaQmMPK80tKynj9uy70EBGXOIBLdpDKLU=;
+ b=UvIjr7Rf1A7g8nNBjLNQ2u6um0N2o/rKPh+Mm5TU1NXJpeb5FDdPQ4MfxPGV5EY47VoGQmbA
+ /KWxrkCKzkOAi45N4zBTCjxNVNG5ZN/YAkBE/21bjs8wATBxVyRoZ2wmSvXsxr9bg0uqm1UC
+ M6k4jqeOephZW6cxkBmI0Pj+tOA=
+X-Mailgun-Sending-Ip: 104.130.122.26
+X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
+Received: from smtp.codeaurora.org
+ (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
+ by mxa.mailgun.org with ESMTP id 5eba5157.7f1cb3ecf228-smtp-out-n01;
+ Tue, 12 May 2020 07:33:43 -0000 (UTC)
+Received: by smtp.codeaurora.org (Postfix, from userid 1001)
+ id A422DC44791; Tue, 12 May 2020 07:33:42 +0000 (UTC)
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ aws-us-west-2-caf-mail-1.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=0.5 required=2.0 tests=ALL_TRUSTED,MISSING_DATE,
+ MISSING_MID,SPF_NONE autolearn=no autolearn_force=no version=3.4.0
+Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
+ [88.114.240.156])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested) (Authenticated sender: kvalo)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 6106AC4478F;
+ Tue, 12 May 2020 07:33:39 +0000 (UTC)
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 6106AC4478F
+Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
+ spf=none smtp.mailfrom=kvalo@codeaurora.org
 MIME-Version: 1.0
-Content-Disposition: inline
-User-Agent: Mutt/1.10.1 (2018-07-13)
+Subject: Re: [PATCH net-next 1/2] ath10k: fix gcc-10 zero-length-bounds
+ warnings
+From: Kalle Valo <kvalo@codeaurora.org>
+In-Reply-To: <20200509120707.188595-1-arnd@arndb.de>
+References: <20200509120707.188595-1-arnd@arndb.de>
+To: Arnd Bergmann <arnd@arndb.de>
+User-Agent: pwcli/0.1.0-git (https://github.com/kvalo/pwcli/) Python/3.5.2
+Message-Id: <20200512073342.A422DC44791@smtp.codeaurora.org>
+Date: Tue, 12 May 2020 07:33:42 +0000 (UTC)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200511_201246_718528_DD62B6B9 
-X-CRM114-Status: UNSURE (   8.82  )
+X-CRM114-CacheID: sfid-20200512_003408_341921_BDB07D3E 
+X-CRM114-Status: UNSURE (   9.92  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -2.3 (--)
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-2.3 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [134.134.136.100 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [104.130.122.26 listed in list.dnswl.org]
+ 0.0 RCVD_IN_MSPIKE_H4      RBL: Very Good reputation (+4)
+ [104.130.122.26 listed in wl.mailspike.net]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -72,94 +95,50 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: kbuild-all@lists.01.org, ath10k@lists.infradead.org,
- Kalle Valo <kvalo@codeaurora.org>
+Cc: Arnd Bergmann <arnd@arndb.de>,
+ "Gustavo A. R. Silva" <gustavo@embeddedor.com>,
+ Erik Stromdahl <erik.stromdahl@gmail.com>, netdev@vger.kernel.org,
+ linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
+ ath10k@lists.infradead.org, Kalle Valo <kvalo@qca.qualcomm.com>,
+ Michal Kazior <michal.kazior@tieto.com>, Wen Gong <wgong@codeaurora.org>,
+ "David S. Miller" <davem@davemloft.net>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-tree:   https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git pending
-head:   6303acc5b03a5fc3bf6cf5fa072ae0dc9aaa5dd0
-commit: 398a800c183de17a49a5779550e72fbc3ba1e592 [21/24] ath11k: Add msi config init for QCA6390
+Arnd Bergmann <arnd@arndb.de> wrote:
 
-If you fix the issue, kindly add following tag as appropriate
-Reported-by: kbuild test robot <lkp@intel.com>
+> gcc-10 started warning about out-of-bounds access for zero-length
+> arrays:
+> 
+> In file included from drivers/net/wireless/ath/ath10k/core.h:18,
+>                  from drivers/net/wireless/ath/ath10k/htt_rx.c:8:
+> drivers/net/wireless/ath/ath10k/htt_rx.c: In function 'ath10k_htt_rx_tx_fetch_ind':
+> drivers/net/wireless/ath/ath10k/htt.h:1683:17: warning: array subscript 65535 is outside the bounds of an interior zero-length array 'struct htt_tx_fetch_record[0]' [-Wzero-length-bounds]
+>  1683 |  return (void *)&ind->records[le16_to_cpu(ind->num_records)];
+>       |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+> drivers/net/wireless/ath/ath10k/htt.h:1676:29: note: while referencing 'records'
+>  1676 |  struct htt_tx_fetch_record records[0];
+>       |                             ^~~~~~~
+> 
+> Make records[] a flexible array member to allow this, moving it behind
+> the other zero-length member that is not accessed in a way that gcc
+> warns about.
+> 
+> Fixes: 22e6b3bc5d96 ("ath10k: add new htt definitions")
+> Signed-off-by: Arnd Bergmann <arnd@arndb.de>
+> Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 
+2 patches applied to ath-next branch of ath.git, thanks.
 
-cppcheck warnings: (new ones prefixed by >>)
+9f12bebd512c ath10k: fix gcc-10 zero-length-bounds warnings
+32221df6765b ath10k: fix ath10k_pci struct layout
 
->> drivers/net/wireless/ath/ath11k/pci.c:49:34: warning: Local variable 'msi_config' shadows outer variable [shadowVariable]
-    const struct ath11k_msi_config *msi_config;
-                                    ^
-   drivers/net/wireless/ath/ath11k/pci.c:23:39: note: Shadowed declaration
-   static const struct ath11k_msi_config msi_config = {
-                                         ^
-   drivers/net/wireless/ath/ath11k/pci.c:49:34: note: Shadow variable
-    const struct ath11k_msi_config *msi_config;
-                                    ^
+-- 
+https://patchwork.kernel.org/patch/11538233/
 
-vim +/msi_config +49 drivers/net/wireless/ath/ath11k/pci.c
-
-    45	
-    46	static int ath11k_pci_enable_msi(struct ath11k_pci *ab_pci)
-    47	{
-    48		struct ath11k_base *ab = ab_pci->ab;
-  > 49		const struct ath11k_msi_config *msi_config;
-    50		struct msi_desc *msi_desc;
-    51		int num_vectors;
-    52		int ret;
-    53	
-    54		ret = ath11k_pci_get_msi_assignment(ab_pci);
-    55		if (ret) {
-    56			ath11k_err(ab, "failed to get MSI assignment, err = %d\n", ret);
-    57			goto out;
-    58		}
-    59	
-    60		msi_config = ab_pci->msi_config;
-    61		if (!msi_config) {
-    62			ath11k_err(ab, "msi_config is NULL!\n");
-    63			ret = -EINVAL;
-    64			goto out;
-    65		}
-    66	
-    67		num_vectors = pci_alloc_irq_vectors(ab_pci->pdev,
-    68						    msi_config->total_vectors,
-    69						    msi_config->total_vectors,
-    70						    PCI_IRQ_MSI);
-    71		if (num_vectors != msi_config->total_vectors) {
-    72			ath11k_err(ab, "failed to get enough MSI vectors (%d), available vectors = %d",
-    73				   msi_config->total_vectors, num_vectors);
-    74			if (num_vectors >= 0)
-    75				ret = -EINVAL;
-    76			goto reset_msi_config;
-    77		}
-    78	
-    79		msi_desc = irq_get_msi_desc(ab_pci->pdev->irq);
-    80		if (!msi_desc) {
-    81			ath11k_err(ab, "msi_desc is NULL!\n");
-    82			ret = -EINVAL;
-    83			goto free_msi_vector;
-    84		}
-    85	
-    86		ab_pci->msi_ep_base_data = msi_desc->msg.data;
-    87	
-    88		ath11k_dbg(ab, ATH11K_DBG_PCI, "msi base data is %d\n", ab_pci->msi_ep_base_data);
-    89	
-    90		return 0;
-    91	
-    92	free_msi_vector:
-    93		pci_free_irq_vectors(ab_pci->pdev);
-    94	reset_msi_config:
-    95		ab_pci->msi_config = NULL;
-    96	out:
-    97		return ret;
-    98	}
-    99	
-
----
-0-DAY CI Kernel Test Service, Intel Corporation
-https://lists.01.org/hyperkitty/list/kbuild-all@lists.01.org
+https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
 
 _______________________________________________
 ath10k mailing list
