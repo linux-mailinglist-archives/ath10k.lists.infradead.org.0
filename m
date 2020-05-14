@@ -2,53 +2,54 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7AAFD1D24E9
-	for <lists+ath10k@lfdr.de>; Thu, 14 May 2020 03:48:49 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D96E51D24EB
+	for <lists+ath10k@lfdr.de>; Thu, 14 May 2020 03:48:52 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Subject:To:From
 	:Date:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=yJeIu07ymB+9RtZyVPOAaQqP4RCX0TbpjRiPhIJ0u/8=; b=ARwVX/PUTIOM0V
-	/CLjb/KtKhZWVYKSIcs4UkE1maccRSHye7ienFgwpwvZrwyKgrzJS/ekktRhFC/bq5OCHcQhXoruj
-	ir1T8OQqx+4lwIfaZgABmklBfKaw6iU7ewoUT9z42q6QrxXUY4NTOEBnq3QudNKx+SwncXmI5OttQ
-	LfPI77naQhZDgkWWz+fI9AKd8nUe6sk3/wRP4UJqLhrobXhAq/5M5ktD7QJ4iQK679iz3J2qgriWg
-	kR1bMpCRYftD95ecVXVcD3r5fv5eld3S5VK328LJUP9KoT7PvgYxw0YzjsaYw/JNvBOp0o2SHQnxI
-	se1rvgn3UBBYnq4soNWQ==;
+	List-Owner; bh=U3Zwz8ChMI2VZNvCxOymeQn7zP3E4YL86xLbeNBUWlE=; b=JzkGp0ROFZsttV
+	3VYpYa29hPM54fdckIldewDUoRWVsgcRZU31eMJqirsKIuDh5BR/+B1pJDpwVXxGlQP5yPzTNiHnB
+	bq+nj5Qbciai6aZmPmh42J5oB1/DKWNGG0Xuqq5VX50vXbUODPqmTzlmKED+HD5VmxyMaqZ5LSTZd
+	ivKQgStL4qH5jrqtQ6NSeFGZYC4DoheQHv48GIfakegk/QvS0u5q6W0SRRv5OT8pddJVJjAPvVpbg
+	M5m52mHiMmbudIbLJh425UzzjR62OBH/stZx2G00FieaYJLwn7qRs2y5R4TUc0ZgLHg4IeWsakRSo
+	JblakSxFfd5AdkJSn/pg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jZ2zL-00076t-Qh; Thu, 14 May 2020 01:48:43 +0000
-Received: from mga12.intel.com ([192.55.52.136])
+	id 1jZ2zT-0007Eb-G4; Thu, 14 May 2020 01:48:51 +0000
+Received: from mga18.intel.com ([134.134.136.126])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jZ2zH-00076A-Rd
- for ath10k@lists.infradead.org; Thu, 14 May 2020 01:48:41 +0000
-IronPort-SDR: Zf/XILQboO3E+2uHx8tlm9BEh2vUSaWuGWiwX+kSHszGAOv3LPGFhccdtFrb6PlpK0ZjO9yqTa
- qXnNFEoWoq6A==
+ id 1jZ2zO-0007B8-RW
+ for ath10k@lists.infradead.org; Thu, 14 May 2020 01:48:48 +0000
+IronPort-SDR: 36+YIeEhD/HcrvDj8WbfMWEmUQgWe8gMMI/EmVOoGwoXh3qTH4CygISXlW6SUEji/4aCPRn65U
+ jCNRQ5pXDyfA==
 X-Amp-Result: SKIPPED(no attachment in message)
 X-Amp-File-Uploaded: False
-Received: from orsmga007.jf.intel.com ([10.7.209.58])
- by fmsmga106.fm.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
- 13 May 2020 18:48:39 -0700
-IronPort-SDR: nSeUd9z/3dBZFzXX7iKjAGF8WUdB3PgwLXvbbD60tZJwUJN2eS1u3kvNd1am+fERD7onoRjaL0
- zfIeD39VGiMg==
+Received: from fmsmga005.fm.intel.com ([10.253.24.32])
+ by orsmga106.jf.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
+ 13 May 2020 18:48:45 -0700
+IronPort-SDR: IgBi0BlalssnMGR47ntDdzMFb4lkmWYJrgjv/6zRyffYG4ym9VJ/nu4FfLL+dMtfng1bIp5/sl
+ fLPBBGgoSUAQ==
 X-ExtLoop1: 1
-X-IronPort-AV: E=Sophos;i="5.73,389,1583222400"; d="scan'208";a="251455386"
+X-IronPort-AV: E=Sophos;i="5.73,389,1583222400"; d="scan'208";a="464152954"
 Received: from lkp-server01.sh.intel.com (HELO lkp-server01) ([10.239.97.150])
- by orsmga007.jf.intel.com with ESMTP; 13 May 2020 18:48:37 -0700
+ by fmsmga005.fm.intel.com with ESMTP; 13 May 2020 18:48:38 -0700
 Received: from kbuild by lkp-server01 with local (Exim 4.89)
  (envelope-from <lkp@intel.com>)
- id 1jZ2zE-0009BH-VJ; Thu, 14 May 2020 09:48:36 +0800
-Date: Thu, 14 May 2020 09:47:46 +0800
+ id 1jZ2zF-0009J4-G7; Thu, 14 May 2020 09:48:37 +0800
+Date: Thu, 14 May 2020 09:47:48 +0800
 From: kbuild test robot <lkp@intel.com>
 To: Kalle Valo <kvalo@codeaurora.org>
-Subject: [ath6kl:master] BUILD SUCCESS d43a155ee0b2ec13e234c629013fc6c53f3dd071
-Message-ID: <5ebca342.ka54w6Ionorbrscy%lkp@intel.com>
+Subject: [ath6kl:ath-next] BUILD SUCCESS
+ ec431188b4197aaccfbc6e6ece4fb88f79723635
+Message-ID: <5ebca344.J+AQqUPFWkw3H5FM%lkp@intel.com>
 User-Agent: Heirloom mailx 12.5 6/20/10
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200513_184839_927432_62430A26 
-X-CRM114-Status: UNSURE (   5.57  )
+X-CRM114-CacheID: sfid-20200513_184847_011885_89842347 
+X-CRM114-Status: UNSURE (   6.43  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.5 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -56,8 +57,8 @@ X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [192.55.52.136 listed in list.dnswl.org]
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ medium trust [134.134.136.126 listed in list.dnswl.org]
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  1.8 LONGWORDS              Long string of long words
 X-BeenThere: ath10k@lists.infradead.org
@@ -77,13 +78,13 @@ Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-tree/branch: https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git  master
-branch HEAD: d43a155ee0b2ec13e234c629013fc6c53f3dd071  Add localversion-wireless-testing-ath
+tree/branch: https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git  ath-next
+branch HEAD: ec431188b4197aaccfbc6e6ece4fb88f79723635  wcn36xx: Replace zero-length array with flexible-array
 
-elapsed time: 482m
+elapsed time: 483m
 
-configs tested: 145
-configs skipped: 14
+configs tested: 151
+configs skipped: 10
 
 The following configs have been built successfully.
 More configs may be tested in the coming days.
@@ -101,14 +102,19 @@ m68k                             allyesconfig
 h8300                     edosk2674_defconfig
 mips                     decstation_defconfig
 sh                          rsk7201_defconfig
-sh                          sdk7786_defconfig
-arm                            hisi_defconfig
-arm                          exynos_defconfig
-arm                            mps2_defconfig
+m68k                          amiga_defconfig
+mips                malta_qemu_32r6_defconfig
+parisc                              defconfig
+i386                              allnoconfig
 s390                       zfcpdump_defconfig
 m68k                       m5249evb_defconfig
 m68k                          sun3x_defconfig
 sh                           se7619_defconfig
+mips                        qi_lb60_defconfig
+arc                        nsim_700_defconfig
+arm                         lubbock_defconfig
+arm                          tango4_defconfig
+sh                            shmin_defconfig
 mips                           mtx1_defconfig
 riscv                    nommu_virt_defconfig
 mips                        nlm_xlr_defconfig
@@ -128,9 +134,6 @@ mips                      pic32mzda_defconfig
 mips                  mips_paravirt_defconfig
 riscv                          rv32_defconfig
 powerpc                      ppc44x_defconfig
-arm                        shmobile_defconfig
-powerpc                    gamecube_defconfig
-sh                           se7343_defconfig
 arm                         at91_dt_defconfig
 sh                           se7724_defconfig
 arc                             nps_defconfig
@@ -147,7 +150,6 @@ arm                         shannon_defconfig
 nios2                            alldefconfig
 sh                   secureedge5410_defconfig
 arm                      footbridge_defconfig
-i386                              allnoconfig
 i386                             allyesconfig
 i386                                defconfig
 i386                              debian-10.3
@@ -182,7 +184,6 @@ mips                             allyesconfig
 mips                              allnoconfig
 mips                             allmodconfig
 parisc                            allnoconfig
-parisc                              defconfig
 parisc                           allyesconfig
 parisc                           allmodconfig
 powerpc                             defconfig
@@ -196,6 +197,12 @@ i386                 randconfig-a003-20200513
 i386                 randconfig-a001-20200513
 i386                 randconfig-a004-20200513
 i386                 randconfig-a002-20200513
+x86_64               randconfig-a012-20200514
+x86_64               randconfig-a016-20200514
+x86_64               randconfig-a015-20200514
+x86_64               randconfig-a013-20200514
+x86_64               randconfig-a014-20200514
+x86_64               randconfig-a011-20200514
 i386                 randconfig-a012-20200513
 i386                 randconfig-a016-20200513
 i386                 randconfig-a014-20200513
