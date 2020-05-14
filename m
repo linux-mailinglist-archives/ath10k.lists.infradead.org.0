@@ -2,54 +2,53 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C9AEE1CFE2C
-	for <lists+ath10k@lfdr.de>; Tue, 12 May 2020 21:23:34 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7AAFD1D24E9
+	for <lists+ath10k@lfdr.de>; Thu, 14 May 2020 03:48:49 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Subject:To:From
 	:Date:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=mzkLFeIigzJrGxH1ioEprb7oXXjYZIm47EARDiJ2pb4=; b=NsHo1tINmEgYRK
-	ryoH5dpI96YlPUkr08q1YIe2a+5k7LEZh2xEcvS/Ed61PNvKIbDCjujKGnCgoo+Ee2gcn616B5sYP
-	9tFqAFjW5lB473HjJagbHvcmrMv0MxOoTdWeFkv9uGQLt1loFj+HcQNm5NqTKGO+PdV/HhO4y7UXT
-	NGs9lmITgRC/iYMEyKE0QrzdRtZFsnhpHOkKmpro7qTEGQ0y71YG5Xt4+fIRo9q9qzGC/fuLVTcst
-	s0DoCYlrZJvccph0B9LxkB9loiYEF0hm1Y0gNpRt1Kk3NjY06sfl9j0j3kS7n1D1h++sIKng0YPgb
-	eEiaiIQvWAd+whf3rlQg==;
+	List-Owner; bh=yJeIu07ymB+9RtZyVPOAaQqP4RCX0TbpjRiPhIJ0u/8=; b=ARwVX/PUTIOM0V
+	/CLjb/KtKhZWVYKSIcs4UkE1maccRSHye7ienFgwpwvZrwyKgrzJS/ekktRhFC/bq5OCHcQhXoruj
+	ir1T8OQqx+4lwIfaZgABmklBfKaw6iU7ewoUT9z42q6QrxXUY4NTOEBnq3QudNKx+SwncXmI5OttQ
+	LfPI77naQhZDgkWWz+fI9AKd8nUe6sk3/wRP4UJqLhrobXhAq/5M5ktD7QJ4iQK679iz3J2qgriWg
+	kR1bMpCRYftD95ecVXVcD3r5fv5eld3S5VK328LJUP9KoT7PvgYxw0YzjsaYw/JNvBOp0o2SHQnxI
+	se1rvgn3UBBYnq4soNWQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jYaV1-0001q2-7f; Tue, 12 May 2020 19:23:31 +0000
-Received: from mga17.intel.com ([192.55.52.151])
+	id 1jZ2zL-00076t-Qh; Thu, 14 May 2020 01:48:43 +0000
+Received: from mga12.intel.com ([192.55.52.136])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jYaUu-0001o1-PW
- for ath10k@lists.infradead.org; Tue, 12 May 2020 19:23:26 +0000
-IronPort-SDR: 1pvslCF5vYOG+4zZoanEoxPuLiafBhh5WWl5e5Rz1/jCAIJK8AwK6Iu4yPA2uE9WX5MXd/e5AF
- Yps0pfKW2cUw==
+ id 1jZ2zH-00076A-Rd
+ for ath10k@lists.infradead.org; Thu, 14 May 2020 01:48:41 +0000
+IronPort-SDR: Zf/XILQboO3E+2uHx8tlm9BEh2vUSaWuGWiwX+kSHszGAOv3LPGFhccdtFrb6PlpK0ZjO9yqTa
+ qXnNFEoWoq6A==
 X-Amp-Result: SKIPPED(no attachment in message)
 X-Amp-File-Uploaded: False
-Received: from orsmga001.jf.intel.com ([10.7.209.18])
- by fmsmga107.fm.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
- 12 May 2020 12:23:23 -0700
-IronPort-SDR: R1tIiglWNJFKYwzLZbRxl046fZRmiKIXQGb+OAjfaFUzCTmt/AqjKw0LcY26JANJ7coW1W3D0U
- xro6VfCPZEuQ==
+Received: from orsmga007.jf.intel.com ([10.7.209.58])
+ by fmsmga106.fm.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
+ 13 May 2020 18:48:39 -0700
+IronPort-SDR: nSeUd9z/3dBZFzXX7iKjAGF8WUdB3PgwLXvbbD60tZJwUJN2eS1u3kvNd1am+fERD7onoRjaL0
+ zfIeD39VGiMg==
 X-ExtLoop1: 1
-X-IronPort-AV: E=Sophos;i="5.73,384,1583222400"; d="scan'208";a="341008652"
+X-IronPort-AV: E=Sophos;i="5.73,389,1583222400"; d="scan'208";a="251455386"
 Received: from lkp-server01.sh.intel.com (HELO lkp-server01) ([10.239.97.150])
- by orsmga001.jf.intel.com with ESMTP; 12 May 2020 12:23:22 -0700
+ by orsmga007.jf.intel.com with ESMTP; 13 May 2020 18:48:37 -0700
 Received: from kbuild by lkp-server01 with local (Exim 4.89)
  (envelope-from <lkp@intel.com>)
- id 1jYaUr-000IY8-Cc; Wed, 13 May 2020 03:23:21 +0800
-Date: Wed, 13 May 2020 03:22:37 +0800
+ id 1jZ2zE-0009BH-VJ; Thu, 14 May 2020 09:48:36 +0800
+Date: Thu, 14 May 2020 09:47:46 +0800
 From: kbuild test robot <lkp@intel.com>
 To: Kalle Valo <kvalo@codeaurora.org>
-Subject: [ath6kl:pending] BUILD SUCCESS
- d7cf44952da2a880988973784cdbe5385c352013
-Message-ID: <5ebaf77d.gFJJhov1Ox6RcVT4%lkp@intel.com>
+Subject: [ath6kl:master] BUILD SUCCESS d43a155ee0b2ec13e234c629013fc6c53f3dd071
+Message-ID: <5ebca342.ka54w6Ionorbrscy%lkp@intel.com>
 User-Agent: Heirloom mailx 12.5 6/20/10
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200512_122324_837567_AEA3BC2D 
-X-CRM114-Status: UNSURE (   5.71  )
+X-CRM114-CacheID: sfid-20200513_184839_927432_62430A26 
+X-CRM114-Status: UNSURE (   5.57  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.5 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -57,9 +56,9 @@ X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [192.55.52.151 listed in list.dnswl.org]
+ medium trust [192.55.52.136 listed in list.dnswl.org]
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  1.8 LONGWORDS              Long string of long words
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
@@ -78,13 +77,13 @@ Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-tree/branch: https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git  pending
-branch HEAD: d7cf44952da2a880988973784cdbe5385c352013  wcn36xx: Replace zero-length array with flexible-array
+tree/branch: https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git  master
+branch HEAD: d43a155ee0b2ec13e234c629013fc6c53f3dd071  Add localversion-wireless-testing-ath
 
-elapsed time: 484m
+elapsed time: 482m
 
-configs tested: 119
-configs skipped: 6
+configs tested: 145
+configs skipped: 14
 
 The following configs have been built successfully.
 More configs may be tested in the coming days.
@@ -98,32 +97,59 @@ arm64                               defconfig
 arm64                            allmodconfig
 arm64                             allnoconfig
 sparc                            allyesconfig
-m68k                        stmark2_defconfig
-arm                  colibri_pxa300_defconfig
-c6x                        evmc6457_defconfig
-powerpc                     powernv_defconfig
-mips                 decstation_r4k_defconfig
-arm                       aspeed_g4_defconfig
-sh                      rts7751r2d1_defconfig
-powerpc                     ep8248e_defconfig
-openrisc                    or1ksim_defconfig
+m68k                             allyesconfig
 h8300                     edosk2674_defconfig
-sh                           se7751_defconfig
-i386                                defconfig
-arm                           tegra_defconfig
-sh                            hp6xx_defconfig
-arm64                            alldefconfig
-arm                        vexpress_defconfig
-m68k                        m5272c3_defconfig
-sh                             sh03_defconfig
-riscv                            allyesconfig
-arm                         lpc32xx_defconfig
-sh                            titan_defconfig
-arc                           tb10x_defconfig
-powerpc                         wii_defconfig
-s390                                defconfig
+mips                     decstation_defconfig
+sh                          rsk7201_defconfig
+sh                          sdk7786_defconfig
+arm                            hisi_defconfig
+arm                          exynos_defconfig
+arm                            mps2_defconfig
+s390                       zfcpdump_defconfig
+m68k                       m5249evb_defconfig
+m68k                          sun3x_defconfig
+sh                           se7619_defconfig
+mips                           mtx1_defconfig
+riscv                    nommu_virt_defconfig
+mips                        nlm_xlr_defconfig
+arm                         s3c2410_defconfig
+powerpc                    adder875_defconfig
+mips                 pnx8335_stb225_defconfig
+sh                   sh7770_generic_defconfig
+arm                            dove_defconfig
+mips                 decstation_r4k_defconfig
+arm                          moxart_defconfig
+sh                               allmodconfig
+sh                             espt_defconfig
+arm                            xcep_defconfig
+microblaze                          defconfig
+arm                         orion5x_defconfig
+mips                      pic32mzda_defconfig
+mips                  mips_paravirt_defconfig
+riscv                          rv32_defconfig
+powerpc                      ppc44x_defconfig
+arm                        shmobile_defconfig
+powerpc                    gamecube_defconfig
+sh                           se7343_defconfig
+arm                         at91_dt_defconfig
+sh                           se7724_defconfig
+arc                             nps_defconfig
+arm                             rpc_defconfig
+powerpc                       holly_defconfig
+arm                           h5000_defconfig
+arm                          pxa910_defconfig
+sh                          rsk7203_defconfig
+arm                         assabet_defconfig
+m68k                                defconfig
+arm                           sama5_defconfig
+sh                        sh7785lcr_defconfig
+arm                         shannon_defconfig
+nios2                            alldefconfig
+sh                   secureedge5410_defconfig
+arm                      footbridge_defconfig
 i386                              allnoconfig
 i386                             allyesconfig
+i386                                defconfig
 i386                              debian-10.3
 ia64                             allmodconfig
 ia64                                defconfig
@@ -132,8 +158,6 @@ ia64                             allyesconfig
 m68k                             allmodconfig
 m68k                              allnoconfig
 m68k                           sun3_defconfig
-m68k                                defconfig
-m68k                             allyesconfig
 nios2                               defconfig
 nios2                            allyesconfig
 openrisc                            defconfig
@@ -152,7 +176,6 @@ h8300                            allmodconfig
 xtensa                              defconfig
 arc                                 defconfig
 arc                              allyesconfig
-sh                               allmodconfig
 sh                                allnoconfig
 microblaze                        allnoconfig
 mips                             allyesconfig
@@ -167,30 +190,32 @@ powerpc                          allyesconfig
 powerpc                          rhel-kconfig
 powerpc                          allmodconfig
 powerpc                           allnoconfig
-i386                 randconfig-a006-20200512
-i386                 randconfig-a005-20200512
-i386                 randconfig-a003-20200512
-i386                 randconfig-a001-20200512
-i386                 randconfig-a004-20200512
-i386                 randconfig-a002-20200512
-x86_64               randconfig-a016-20200512
-x86_64               randconfig-a012-20200512
-x86_64               randconfig-a015-20200512
-x86_64               randconfig-a013-20200512
-x86_64               randconfig-a014-20200512
-x86_64               randconfig-a011-20200512
-i386                 randconfig-a012-20200512
-i386                 randconfig-a016-20200512
-i386                 randconfig-a014-20200512
-i386                 randconfig-a011-20200512
-i386                 randconfig-a013-20200512
-i386                 randconfig-a015-20200512
+i386                 randconfig-a006-20200513
+i386                 randconfig-a005-20200513
+i386                 randconfig-a003-20200513
+i386                 randconfig-a001-20200513
+i386                 randconfig-a004-20200513
+i386                 randconfig-a002-20200513
+i386                 randconfig-a012-20200513
+i386                 randconfig-a016-20200513
+i386                 randconfig-a014-20200513
+i386                 randconfig-a011-20200513
+i386                 randconfig-a013-20200513
+i386                 randconfig-a015-20200513
+x86_64               randconfig-a005-20200513
+x86_64               randconfig-a003-20200513
+x86_64               randconfig-a006-20200513
+x86_64               randconfig-a004-20200513
+x86_64               randconfig-a001-20200513
+x86_64               randconfig-a002-20200513
+riscv                            allyesconfig
 riscv                             allnoconfig
 riscv                               defconfig
 riscv                            allmodconfig
 s390                             allyesconfig
 s390                              allnoconfig
 s390                             allmodconfig
+s390                                defconfig
 x86_64                              defconfig
 sparc                               defconfig
 sparc64                             defconfig
