@@ -2,47 +2,49 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B09DB1D6143
-	for <lists+ath10k@lfdr.de>; Sat, 16 May 2020 15:25:14 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9D88B1D6168
+	for <lists+ath10k@lfdr.de>; Sat, 16 May 2020 15:51:46 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=sLgew3BKO8KEiISq34hLtVKt7YWZzSDAMYPXiUB3MEI=; b=MlsfJzgBxTXxaN
-	PhjpQuUbchxQODmKoZZFOz1htSWOk3LiGH0r6piTEwLi4ORsoZ8D2yziF5L0I/4CHKcO/rcIjvFu9
-	9AgEppwClBmS3A/z6GIwNr+PuqAv4LOWSO498L39RVm8ex8Bke9yn0EJxID6Z7ZpIUGhvCyB07kN+
-	Krqiazp+ZXBh0sNP77yuLrkk66RkpKwBbuLh3m9KUOfR1kS//r9/3TG2NjIGL4EA0H9CUbdo3gFqq
-	N+hSU8Hbz1OTjwwWCSZkXcJyXJ5OVgvTdm1n54eb/lyYXFwtlWoYZPofEhnhTs28PTKdC7Iolg/QB
-	kqj0dsS0Bsi86/5nyPhg==;
+	List-Owner; bh=eKlUwbnpyTB0z/JdUeS2YLPsOmEs53Woc7x8Ka0LLzs=; b=ANTnB/ya7lahg1
+	TGsusKQ/V4TEyNrkGQBPPgFNdts9WtmkNl3FVhUWh6HA3zwiAxO2gc+StGk8o5JZTCN3csk6p70sL
+	bIWmXrkxDqwvKO5QCmbIOo1hI+wT0Tb/xXPGfncVB9siypjfSlbIDXZEH1+foM74VqullW0GOXext
+	8fS8pten4nwVhePX7CuWkxLiGU28RVVGqD4bn34Cib67xob0SbQ2iljpsrI9UVY0RcnHRbOGU3UFS
+	dVUOTB4YAK3FeVAJ1oqWmyA1bkDilP68to7D1x3EL0BH0kYyDChgfqXA+N5gB7iSB6UWBPXC9YIIB
+	K7uQcwjHTkHH6ODRwB3Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jZwoO-0001fz-GE; Sat, 16 May 2020 13:25:08 +0000
+	id 1jZxE6-0001fv-Pm; Sat, 16 May 2020 13:51:42 +0000
 Received: from s3.sipsolutions.net ([2a01:4f8:191:4433::2]
  helo=sipsolutions.net)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jZwoJ-0000m2-Ka
- for ath10k@lists.infradead.org; Sat, 16 May 2020 13:25:04 +0000
+ id 1jZxE3-0001fZ-U5
+ for ath10k@lists.infradead.org; Sat, 16 May 2020 13:51:41 +0000
 Received: by sipsolutions.net with esmtpsa
  (TLS1.3:ECDHE_SECP256R1__RSA_PSS_RSAE_SHA256__AES_256_GCM:256)
  (Exim 4.93) (envelope-from <johannes@sipsolutions.net>)
- id 1jZwnO-00EBvX-6E; Sat, 16 May 2020 15:24:06 +0200
-Message-ID: <2b74a35c726e451b2fab2b5d0d301e80d1f4cdc7.camel@sipsolutions.net>
+ id 1jZxDN-00ECfk-5c; Sat, 16 May 2020 15:50:57 +0200
+Message-ID: <7306323c35e6f44d7c569e689b48f380f80da5e5.camel@sipsolutions.net>
 Subject: Re: [PATCH v2 12/15] ath10k: use new module_firmware_crashed()
 From: Johannes Berg <johannes@sipsolutions.net>
 To: Luis Chamberlain <mcgrof@kernel.org>, jeyu@kernel.org
-Date: Sat, 16 May 2020 15:24:01 +0200
-In-Reply-To: <20200515212846.1347-13-mcgrof@kernel.org>
- (sfid-20200515_233205_994687_1F26BDAB)
+Date: Sat, 16 May 2020 15:50:55 +0200
+In-Reply-To: <2b74a35c726e451b2fab2b5d0d301e80d1f4cdc7.camel@sipsolutions.net>
+ (sfid-20200516_152518_154267_1B9A55D6)
 References: <20200515212846.1347-1-mcgrof@kernel.org>
  <20200515212846.1347-13-mcgrof@kernel.org>
  (sfid-20200515_233205_994687_1F26BDAB)
+ <2b74a35c726e451b2fab2b5d0d301e80d1f4cdc7.camel@sipsolutions.net>
+ (sfid-20200516_152518_154267_1B9A55D6)
 User-Agent: Evolution 3.36.2 (3.36.2-1.fc32) 
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200516_062503_677887_830199EE 
-X-CRM114-Status: UNSURE (   7.42  )
+X-CRM114-CacheID: sfid-20200516_065139_965982_EE235B36 
+X-CRM114-Status: UNSURE (   8.79  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.3 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -76,31 +78,33 @@ Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On Fri, 2020-05-15 at 21:28 +0000, Luis Chamberlain wrote:> module_firmware_crashed
+On Sat, 2020-05-16 at 15:24 +0200, Johannes Berg wrote:
 
-You didn't CC me or the wireless list on the rest of the patches, so I'm
-replying to a random one, but ...
+> Instead of the kernel taint, IMHO you should provide an annotation in
+> sysfs (or somewhere else) for the *struct device* that had its firmware
+> crash. Or maybe, if it's too complex to walk the entire hierarchy
+> checking for that, have a uevent, or add the ability for the kernel to
+> print out elsewhere in debugfs the list of devices that crashed at some
 
-What is the point here?
+I mean sysfs, oops.
 
-This should in no way affect the integrity of the system/kernel, for
-most devices anyway.
 
-So what if ath10k's firmware crashes? If there's a driver bug it will
-not handle it right (and probably crash, WARN_ON, or something else),
-but if the driver is working right then that will not affect the kernel
-at all.
+In addition, look what we have in iwl_trans_pcie_removal_wk(). If we
+detect that the device is really wedged enough that the only way we can
+still try to recover is by completely unbinding the driver from it, then
+we give userspace a uevent for that. I don't remember exactly how and
+where that gets used (ChromeOS) though, but it'd be nice to have that
+sort of thing as part of the infrastructure, in a sort of two-level
+notification?
 
-So maybe I can understand that maybe you want an easy way to discover -
-per device - that the firmware crashed, but that still doesn't warrant a
-complete kernel taint.
+Level 1: firmware crashed, but we're recovering, at least mostly, and
+it's more informational
 
-Instead of the kernel taint, IMHO you should provide an annotation in
-sysfs (or somewhere else) for the *struct device* that had its firmware
-crash. Or maybe, if it's too complex to walk the entire hierarchy
-checking for that, have a uevent, or add the ability for the kernel to
-print out elsewhere in debugfs the list of devices that crashed at some
-point... All of that is fine, but a kernel taint?
+Level 2: device is wedged, going to try to recover by some more forceful
+means (perhaps some devices can be power-cycled? etc.) but (more) state
+would be lost in these cases?
+
+Still don't think a kernel taint is appropriate for either of these.
 
 johannes
 
