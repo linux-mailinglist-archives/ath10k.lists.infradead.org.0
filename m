@@ -2,96 +2,84 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 627FA1D6555
-	for <lists+ath10k@lfdr.de>; Sun, 17 May 2020 04:26:16 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E76DA1D7F34
+	for <lists+ath10k@lfdr.de>; Mon, 18 May 2020 18:52:07 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
-	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=fFi+b4qFplPrUJNRA+GjOEqplPa3zbOx2VTQHIw7WQg=; b=Iew2sFfZWoeY+u3R8e8iOKmAy
-	LnEe/bw4g/aOTfMK+kloHFdbcTy/edYyZV+LK28A/lXLnIOlTVPKwmRdNQ1cFhZpwYEKdKzANIPbC
-	0ptRRgLvuusxEdJ5sM+h7FwJ7tFV8L7/cOhZpRrMyOAsTePfj1/UTghcKL34yIuFemxkvkVDdzklK
-	vdvsNHby3Ux42rXXDsszoDt7icf8uzVw8gzCaGX8jkSIMPWfyo8jOAqaeu1+KRPlqySP9BQInYoz2
-	J2FDrlBxVkxfPQ3yfKmh2J4Gf07gN8TCoKbttv78zCMh+nf4bPwdPGHwxhgLAV9GoLKvdnzA8aTEP
-	JcTALqWDw==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=rAVtnZSXgInraH4+L076L6x8/Hw1G90di6LExuarMM0=; b=bNJ8DHNcxscsTN
+	BxfGnl16wJWLCfNtGloPfeP+slJcTCbBMpGcUZMM0Cb1RU3Bg/qcqLTt2q+WQU8WIF9oabHz0Aiyd
+	mBcwCYqcPo8VJFmvdRZ9sPjEghMrVHpF2DZO+4hL2UzeGzAHKEpjCTGF2AVO2WAA4YmjymuDsb8cJ
+	9lVqtC4RY7CJVkDFjKNC6W9IEYqXvoboRuHwl++EHhjffMOzC9QAg6bcpVTdpgIz2RXlRyWAS6nug
+	5st/BqHwd043YtS3g9lCmOn7frZ8VGlKphWG1CXHtCARXEAT5xTDCh0p3RQ1hcAYrD4TVWmc4iGXc
+	GYuk6r4S9jhssy2J6VFQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1ja90J-0004kz-3s; Sun, 17 May 2020 02:26:15 +0000
-Received: from mail-pj1-x1044.google.com ([2607:f8b0:4864:20::1044])
+	id 1jaizi-0000VD-12; Mon, 18 May 2020 16:52:02 +0000
+Received: from mail-pl1-f194.google.com ([209.85.214.194])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1ja90B-0004he-8Y
- for ath10k@lists.infradead.org; Sun, 17 May 2020 02:26:08 +0000
-Received: by mail-pj1-x1044.google.com with SMTP id t40so3004684pjb.3
- for <ath10k@lists.infradead.org>; Sat, 16 May 2020 19:26:06 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=subject:to:cc:references:from:message-id:date:user-agent
- :mime-version:in-reply-to:content-language:content-transfer-encoding;
- bh=ZwOdLRAvpywpS5KSJQV24hlDOCj/cM29xK3RoHEqVVY=;
- b=QHfVbSEvVEz6DT23mdFerdywNKqNjmjW+DUPMe9eCRBLv5sCICUNznhm1qR14yjVSs
- OXyQYRPUoKIUhJgTXNeD1cpepWktYLKzQKNyl3/zqZWwzWFtRmXbQXEo8BV10hTVWKCV
- sxkp5bKk6XGK33k2TGzoc0IbMEsiJ5bc7XWCZb4GCr5k7XHt/DqqHuSzjhPr+J6LksIr
- 0u+7a36Ske87Sv2bmNhypec5xh+VkVySZ7pKI6zrRa+3QRwyzUhJu/tKsI/Ei9UKt4Ft
- 6c2yCpg+QCHM5qHsaPRhQhSSY1neseBGCZMPuWsnNtMtsQ6Rl7gWlKIYf0fVz4OE+Qii
- 4soA==
+ id 1jaize-0000UH-LS
+ for ath10k@lists.infradead.org; Mon, 18 May 2020 16:51:59 +0000
+Received: by mail-pl1-f194.google.com with SMTP id k19so4451024pll.9
+ for <ath10k@lists.infradead.org>; Mon, 18 May 2020 09:51:57 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:subject:to:cc:references:from:message-id:date
- :user-agent:mime-version:in-reply-to:content-language
- :content-transfer-encoding;
- bh=ZwOdLRAvpywpS5KSJQV24hlDOCj/cM29xK3RoHEqVVY=;
- b=jwff4zhtizkkPdODNPBtEkjwKwd3FXspoKBq5Ct4hXkLlNqmZzunxh4H/7vUmoEMcV
- O5r1PrOsmm4afJ0kww/NOKTodjN0fnzjjqkg1rhuMR7CMtEb8c8yK6g3iPbfPdKfqpzs
- 9OMpW5d6VNy9LThePI/5a1wjjwgyPe84MM+AlEPakG9b7Lu4aC3bJWMWjQh9u0EBNReG
- MEvLdPbiD/8oQxOyLLEqBAFHMio5AR3wxhTuEiPQ6aPahly8hKGUN+VzquR963TexyhY
- nFYo+WUNy03AJZTasMzZQHocriYy7dDMt2K4+kI3fpc4PyKq4tHvpQKcfvjmXFr9nKAY
- WBnA==
-X-Gm-Message-State: AOAM533w7FrL/95m+PnBzlF2GeLc+DLgezzA0aacemIyqKquHS9lMEOI
- q+Q4zw1CQ7OaK+eoyqwoG4I=
-X-Google-Smtp-Source: ABdhPJw5rz6JW1vg5rskikvCpfHsEPm/SyVrKCCArYIIjQxYoNV1U+paJ9trzpz1pu2ELsViQmttVQ==
-X-Received: by 2002:a17:90a:7046:: with SMTP id
- f64mr10651193pjk.205.1589682366517; 
- Sat, 16 May 2020 19:26:06 -0700 (PDT)
-Received: from [10.211.55.7] ([112.209.98.11])
- by smtp.gmail.com with ESMTPSA id n16sm5239127pfq.61.2020.05.16.19.26.05
- (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Sat, 16 May 2020 19:26:06 -0700 (PDT)
-Subject: Re: [PATCHv4] ath10k : Fix channel survey dump
-To: Venkateswara Naralasetty <vnaralas@codeaurora.org>,
- ath10k@lists.infradead.org
-References: <1588820612-15884-1-git-send-email-vnaralas@codeaurora.org>
-From: John Deere <24601deerej@gmail.com>
-Message-ID: <bee1439c-de98-dbf0-ee82-88620ecc560a@gmail.com>
-Date: Sun, 17 May 2020 10:26:04 +0800
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
- Thunderbird/68.7.0
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to:user-agent;
+ bh=Yd4VQPjSfVqPw2JwHOBUH7DvL28anQpLQnF2oRmOvUg=;
+ b=t6X+IuJ0gL1oeXqvdkOpWqrW+OOHMYw2vGkdvyC6H9pMD9ttjb/cpUH46Kvr4TNtLI
+ 1WcbbF4lgN/apdPRVw4P0zN8qwpcK2dV4Wx3t1X77PxT1g2k51ihkZBCYGowyR5MfVeA
+ DTrscMrAnyprBFPB5Jb6SbzTrEU8f8QmA23nq9Paice8056H11IYGBR2cPdvcLCU0fjz
+ nPP/DEvg+h68KTWf29tKIJv1bzPEFSmOKBhMTlcVJOcHq14P9wn4gGZgKt0IoRAKMaQr
+ f19qMly46eDCiRGGjxLTA6J+2yO12/BDAS1vixHBT5ettVCPFxvd6+p43x+W0kfpiqR8
+ /crg==
+X-Gm-Message-State: AOAM531ieGOTFWcfdL1YCMkSHaZH8JKxCJte+VH9M//eTU5XdkVMwqgg
+ /aNF0GPM98FR7pMMvlqiwZE=
+X-Google-Smtp-Source: ABdhPJxLH5VDUbuE1FDuR86WOwRMaXJWESAIbwJvrLBEYETZmBwxGlYnKUYGXtOmogknCzCtXf7ShQ==
+X-Received: by 2002:a17:90a:ad49:: with SMTP id w9mr365592pjv.20.1589820717327; 
+ Mon, 18 May 2020 09:51:57 -0700 (PDT)
+Received: from 42.do-not-panic.com (42.do-not-panic.com. [157.230.128.187])
+ by smtp.gmail.com with ESMTPSA id v27sm3350582pfi.61.2020.05.18.09.51.55
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Mon, 18 May 2020 09:51:56 -0700 (PDT)
+Received: by 42.do-not-panic.com (Postfix, from userid 1000)
+ id 17421404B0; Mon, 18 May 2020 16:51:55 +0000 (UTC)
+Date: Mon, 18 May 2020 16:51:54 +0000
+From: Luis Chamberlain <mcgrof@kernel.org>
+To: Johannes Berg <johannes@sipsolutions.net>
+Subject: Re: [PATCH v2 12/15] ath10k: use new module_firmware_crashed()
+Message-ID: <20200518165154.GH11244@42.do-not-panic.com>
+References: <20200515212846.1347-1-mcgrof@kernel.org>
+ <20200515212846.1347-13-mcgrof@kernel.org>
+ <2b74a35c726e451b2fab2b5d0d301e80d1f4cdc7.camel@sipsolutions.net>
 MIME-Version: 1.0
-In-Reply-To: <1588820612-15884-1-git-send-email-vnaralas@codeaurora.org>
-Content-Language: en-US
+Content-Disposition: inline
+In-Reply-To: <2b74a35c726e451b2fab2b5d0d301e80d1f4cdc7.camel@sipsolutions.net>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200516_192607_298550_D9E83D3C 
-X-CRM114-Status: GOOD (  18.69  )
-X-Spam-Score: 0.4 (/)
+X-CRM114-CacheID: sfid-20200518_095158_702090_1EEA0FFC 
+X-CRM114-Status: GOOD (  17.25  )
+X-Spam-Score: 0.5 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (0.4 points)
+ Content analysis details:   (0.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.6 FROM_STARTS_WITH_NUMS  From: starts with several numbers
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [24601deerej[at]gmail.com]
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:1044 listed in]
- [list.dnswl.org]
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
+ no trust [209.85.214.194 listed in list.dnswl.org]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider [mcgrof[at]gmail.com]
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [209.85.214.194 listed in wl.mailspike.net]
+ 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+ 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -103,88 +91,66 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless@vger.kernel.org
+Cc: linux-wireless@vger.kernel.org, aquini@redhat.com, peterz@infradead.org,
+ daniel.vetter@ffwll.ch, mchehab+samsung@kernel.org, will@kernel.org,
+ bhe@redhat.com, ath10k@lists.infradead.org, tiwai@suse.de, mingo@redhat.com,
+ dyoung@redhat.com, pmladek@suse.com, keescook@chromium.org, arnd@arndb.de,
+ gpiccoli@canonical.com, rostedt@goodmis.org, cai@lca.pw, tglx@linutronix.de,
+ andriy.shevchenko@linux.intel.com, kvalo@codeaurora.org,
+ netdev@vger.kernel.org, schlad@suse.de, linux-kernel@vger.kernel.org,
+ jeyu@kernel.org, akpm@linux-foundation.org, davem@davemloft.net
+Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
+On Sat, May 16, 2020 at 03:24:01PM +0200, Johannes Berg wrote:
+> On Fri, 2020-05-15 at 21:28 +0000, Luis Chamberlain wrote:> module_firmware_crashed
+> 
+> You didn't CC me or the wireless list on the rest of the patches, so I'm
+> replying to a random one, but ...
+> 
+> What is the point here?
+> 
+> This should in no way affect the integrity of the system/kernel, for
+> most devices anyway.
 
-On 5/7/20 11:03 AM, Venkateswara Naralasetty wrote:
-> Channel active/busy time are showing incorrect(less than previous or
-> sometimes zero) for successive survey dump command.
-> 
-> example:
-> Survey data from wlan0
-> 	frequency:                      5180 MHz [in use]
-> 	channel active time:            54995 ms
-> 	channel busy time:              432 ms
-> 	channel receive time:           0 ms
-> 	channel transmit time:          59 ms
-> Survey data from wlan0
-> 	frequency:                      5180 MHz [in use]
-> 	channel active time:            32592 ms
-> 	channel busy time:              254 ms
-> 	channel receive time:           0 ms
-> 	channel transmit time:          0 ms
-> 
-> This patch fix this issue by assigning 'wmi_bss_survey_req_type'
-> as 'WMI_BSS_SURVEY_REQ_TYPE_READ' which accumulate survey data in
-> FW and send survey data to driver upon the driver request. Wrap around
-> is taken care by FW.
-> 
-> hardware used : QCA9984
-> firmware ver  : ver 10.4-3.5.3-00057
-> 
-> hardware used : QCA988X
-> firmware ver  : 10.2.4-1.0-00047
-> 
-> Tested-by: Markus Theil <markus.theil@tu-ilmenau.de>
-> Signed-off-by: Venkateswara Naralasetty <vnaralas@codeaurora.org>
-> ---
-> v4:
->   * updated signed-off-by
-> 
-> v3:
->   * Rebased on TOT and added Tested-by
-> 
->   drivers/net/wireless/ath/ath10k/mac.c | 2 +-
->   1 file changed, 1 insertion(+), 1 deletion(-)
-> 
-> diff --git a/drivers/net/wireless/ath/ath10k/mac.c b/drivers/net/wireless/ath/ath10k/mac.c
-> index a1147cc..9330b52 100644
-> --- a/drivers/net/wireless/ath/ath10k/mac.c
-> +++ b/drivers/net/wireless/ath/ath10k/mac.c
-> @@ -7275,7 +7275,7 @@ ath10k_mac_update_bss_chan_survey(struct ath10k *ar,
->   				  struct ieee80211_channel *channel)
->   {
->   	int ret;
-> -	enum wmi_bss_survey_req_type type = WMI_BSS_SURVEY_REQ_TYPE_READ_CLEAR;
-> +	enum wmi_bss_survey_req_type type = WMI_BSS_SURVEY_REQ_TYPE_READ;
->   
->   	lockdep_assert_held(&ar->conf_mutex);
->   
-> 
+Keyword you used here is "most device". And in the worst case, *who*
+knows what other odd things may happen afterwards.
 
+> So what if ath10k's firmware crashes? If there's a driver bug it will
+> not handle it right (and probably crash, WARN_ON, or something else),
+> but if the driver is working right then that will not affect the kernel
+> at all.
 
-I have tested this on a QCA9980 device on a TP-Link Archer A7v5 with the 
-firmware version 10.2.4.70.70.
+Sometimes the device can go into a state which requires driver removal
+and addition to get things back up.
 
-[root@Archer-A7v5 ~]# uptime
-  10:18:40 up 7 days,  3:52,  load average: 0.03, 0.01, 0.00
+> So maybe I can understand that maybe you want an easy way to discover -
+> per device - that the firmware crashed, but that still doesn't warrant a
+> complete kernel taint.
 
+That is one reason, another is that a taint helps support cases *fast*
+easily detect if the issue was a firmware crash, instead of scraping
+logs for driver specific ways to say the firmware has crashed.
 
-It has been working fine:
+> Instead of the kernel taint, IMHO you should provide an annotation in
+> sysfs (or somewhere else) for the *struct device* that had its firmware
+> crash.
 
-Survey data from wlan0
-	frequency:			5240 MHz [in use]
-	noise:				-101 dBm
-	channel active time:		593724580 ms
-	channel busy time:		9706985 ms
-	channel receive time:		2053580 ms
-	channel transmit time:		6473058 ms
+It would seem the way some folks are thinking about getting more details
+would be through devlink.
 
-Tested-by: John Deere <24601deerej@gmail.com>
+> Or maybe, if it's too complex to walk the entire hierarchy
+> checking for that, have a uevent,  or add the ability for the kernel to
+> print out elsewhere in debugfs the list of devices that crashed at some
+> point... All of that is fine, but a kernel taint?
+
+debugfs is optional, a taint is simple, and device agnostic. From a
+support perspective it is very easy to see if a possible issue may
+be device firmware specific.
+
+  Luis
 
 _______________________________________________
 ath10k mailing list
