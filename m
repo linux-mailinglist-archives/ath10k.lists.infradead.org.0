@@ -2,65 +2,69 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 8660C1DA130
-	for <lists+ath10k@lfdr.de>; Tue, 19 May 2020 21:45:10 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8D5121DA354
+	for <lists+ath10k@lfdr.de>; Tue, 19 May 2020 23:16:01 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Subject:To:From
-	:Date:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=XyCLTcHeVnFILHpvmvN1J5XHxA18ls9sQsvmtmejY2M=; b=Vul/wrkupoA2Ds
-	gxxs2QGiIdfMKgbQ+OjZVlZpqt9y4cEmQJMZ8gx+COIGhSTDeW7Xwp8j0a0fftWqG8Zh0hsl0xC2F
-	RSfKu60015dHZRSulQePIjkDgRaBHyAdqMOAC/1z1qgvBvMllH2m/m9X89jFvFnVIZ7I7EyYsYmxs
-	WJNzprmJzICIrpJRbaPwon/uRcIGHwyIpVtzU79hsxQoFxa0pVakFaTm+notnxW5nvOX8Y1kWFwem
-	r3SpD+Y8gYh7ABmpZYDT9c2JoT4fSd1PV7Gvp7zFJO4uftnyGjEJ7HpvmwLm0ne7cmtyGRw1fnf7/
-	wPhpfK/mI3cVgbzb1ETA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=xa2thLs+pJGJSxIxVZACluryK4angpylPr3zbZbFtxU=; b=LkstNe8lFRtEvV
+	vN4DTUDNRZGNouhFZ9FpELlKZrT0g1vcn6uaUdaoHS3Do+oRrPgOymKCDm18Ht++rOr+8mULGrCbs
+	6Rr+Pbe/p2tdXx6J+BYeV+b4u4j8ar/5hmEypPnIfVhMKs+2yzDURtWKUG0Uq9opSSLPz7pNK2X9p
+	Lu7koM19QVV8vkW75SY9cqVx9LUSy7jUig9H/QZ9WAAMsyTN/05ompPqJhSQtlnnC+xisOnQ13ZLx
+	RsvRVg4d7WKaLDEuMH5VDZVJzqhE33wvpzBCKjzkz7J6LCMu8VcLFL4l4DeDEMtdOEvktk8oqV2Ea
+	Qi/7qiafklz6KTlF+ObQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jb8Aj-0001HO-Lw; Tue, 19 May 2020 19:45:05 +0000
-Received: from mga07.intel.com ([134.134.136.100])
+	id 1jb9ag-0006ye-L8; Tue, 19 May 2020 21:15:58 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jb8Ac-0001Dl-RW
- for ath10k@lists.infradead.org; Tue, 19 May 2020 19:45:00 +0000
-IronPort-SDR: F5nNcuIWSbD554RadVefUsWKDF8N3iVi0EtQQvhuURx5Nl+9Bl075dOBhu9ISvRMzHfmx+/FQc
- l4czXB1rCWig==
-X-Amp-Result: SKIPPED(no attachment in message)
-X-Amp-File-Uploaded: False
-Received: from fmsmga008.fm.intel.com ([10.253.24.58])
- by orsmga105.jf.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
- 19 May 2020 12:44:57 -0700
-IronPort-SDR: wdft8X1TcyV1pNhny/af/NErOFN8w1c0+74tLnVYG/yt6AxMtBUVVk9/B9vXOmjDJn0uypdhN3
- i83H8h8XL/pA==
-X-ExtLoop1: 1
-X-IronPort-AV: E=Sophos;i="5.73,410,1583222400"; d="scan'208";a="254816171"
-Received: from lkp-server01.sh.intel.com (HELO lkp-server01) ([10.239.97.150])
- by fmsmga008.fm.intel.com with ESMTP; 19 May 2020 12:44:55 -0700
-Received: from kbuild by lkp-server01 with local (Exim 4.89)
- (envelope-from <lkp@intel.com>)
- id 1jb8AZ-000GDX-6L; Wed, 20 May 2020 03:44:55 +0800
-Date: Wed, 20 May 2020 03:44:23 +0800
-From: kbuild test robot <lkp@intel.com>
-To: Kalle Valo <kvalo@codeaurora.org>
-Subject: [ath6kl:ath-next] BUILD SUCCESS
- 25ca180ad380a0c7286442a922e7fbcc6a9f6083
-Message-ID: <5ec43717.9tIg+joI5LH9wxqc%lkp@intel.com>
-User-Agent: Heirloom mailx 12.5 6/20/10
+ id 1jb9ac-0006xf-9v
+ for ath10k@lists.infradead.org; Tue, 19 May 2020 21:15:55 +0000
+Received: from kicinski-fedora-PC1C0HJN.thefacebook.com (unknown
+ [163.114.132.5])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id F10F320758;
+ Tue, 19 May 2020 21:15:51 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1589922953;
+ bh=GCBiiHv4rqoiMSHfpHfVnIXqBOlV4WZ5kFNO/xIvb+0=;
+ h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
+ b=pMBOhtVGkpEKrdS3IQvTsqqlUWq2yrjH0OVxOrhEQbatn8Ht0p3CeE5SmTyR4HkSO
+ stOZu5LdNXWbJ4nkz+yJhMkAkNqzoppkQdh4hQaii8s16PZ338EEEBTal+chQiKhY8
+ dwa2gsyphgHyjurCHyQjBcWkjja7Y7FpdLBmbAu8=
+From: Jakub Kicinski <kuba@kernel.org>
+To: mcgrof@kernel.org
+Subject: [RFC 1/2] devlink: add simple fw crash helpers
+Date: Tue, 19 May 2020 14:15:30 -0700
+Message-Id: <20200519211531.3702593-1-kuba@kernel.org>
+X-Mailer: git-send-email 2.25.4
+In-Reply-To: <20200519010530.GS11244@42.do-not-panic.com>
+References: <20200519010530.GS11244@42.do-not-panic.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200519_124458_935012_A1E299CA 
-X-CRM114-Status: UNSURE (   5.26  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.5 (/)
+X-CRM114-CacheID: sfid-20200519_141554_385772_3D6A1072 
+X-CRM114-Status: GOOD (  15.54  )
+X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-0.5 points)
+ Content analysis details:   (-5.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [134.134.136.100 listed in list.dnswl.org]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 1.8 LONGWORDS              Long string of long words
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -72,146 +76,207 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: ath10k@lists.infradead.org
+Cc: linux-wireless@vger.kernel.org, aquini@redhat.com, peterz@infradead.org,
+ daniel.vetter@ffwll.ch, mchehab+samsung@kernel.org, will@kernel.org,
+ greearb@candelatech.com, bhe@redhat.com, briannorris@chromium.org,
+ ath10k@lists.infradead.org, derosier@gmail.com, tiwai@suse.de,
+ mingo@redhat.com, Jakub Kicinski <kuba@kernel.org>, dyoung@redhat.com,
+ pmladek@suse.com, jiri@resnulli.us, keescook@chromium.org, arnd@arndb.de,
+ gpiccoli@canonical.com, rostedt@goodmis.org, cai@lca.pw, tglx@linutronix.de,
+ andriy.shevchenko@linux.intel.com, johannes@sipsolutions.net,
+ kvalo@codeaurora.org, netdev@vger.kernel.org, schlad@suse.de,
+ linux-kernel@vger.kernel.org, jeyu@kernel.org, akpm@linux-foundation.org,
+ davem@davemloft.net
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-tree/branch: https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git  ath-next
-branch HEAD: 25ca180ad380a0c7286442a922e7fbcc6a9f6083  ath11k: Fix some resource leaks in error path in 'ath11k_thermal_register()'
+Add infra for creating devlink instances for a device to report
+fw crashes. This patch expects the devlink instance to be registered
+at probe time. I belive to be the cleanest. We can also add a devm
+version of the helpers, so that we don't have to do the clean up.
+Or we can go even further and register the devlink instance only
+once error has happened (for the first time, then we can just
+find out if already registered by traversing the list like we
+do here).
 
-elapsed time: 678m
+With the patch applied and a sample driver converted we get:
 
-configs tested: 119
-configs skipped: 4
+$ devlink dev
+pci/0000:07:00.0
 
-The following configs have been built successfully.
-More configs may be tested in the coming days.
+Then monitor for errors:
 
-arm64                            allyesconfig
-arm64                               defconfig
-arm64                            allmodconfig
-arm64                             allnoconfig
-arm                                 defconfig
-arm                              allyesconfig
-arm                              allmodconfig
-arm                               allnoconfig
-sparc                            allyesconfig
-mips                             allyesconfig
-m68k                             allyesconfig
-arm                     davinci_all_defconfig
-sh                          r7780mp_defconfig
-ia64                                defconfig
-arm                           sunxi_defconfig
-powerpc                      chrp32_defconfig
-sh                          polaris_defconfig
-powerpc                       ppc64_defconfig
-openrisc                         allyesconfig
-arc                        vdk_hs38_defconfig
-sh                           se7751_defconfig
-arm                       netwinder_defconfig
-arm                          iop32x_defconfig
-mips                          ath25_defconfig
-mips                         tb0287_defconfig
-powerpc                      mgcoge_defconfig
-um                           x86_64_defconfig
-powerpc                  storcenter_defconfig
-sh                            shmin_defconfig
-nds32                            alldefconfig
-m68k                          hp300_defconfig
-sh                        sh7785lcr_defconfig
-m68k                          multi_defconfig
-arm                          pxa3xx_defconfig
-powerpc                         wii_defconfig
-powerpc                      tqm8xx_defconfig
-arm                        shmobile_defconfig
-arm                           stm32_defconfig
-powerpc                       holly_defconfig
-mips                         tb0226_defconfig
-i386                              allnoconfig
-i386                                defconfig
-i386                              debian-10.3
-i386                             allyesconfig
-ia64                             allmodconfig
-ia64                              allnoconfig
-ia64                             allyesconfig
-m68k                             allmodconfig
-m68k                              allnoconfig
-m68k                           sun3_defconfig
-m68k                                defconfig
-nios2                               defconfig
-nios2                            allyesconfig
-openrisc                            defconfig
-c6x                              allyesconfig
-c6x                               allnoconfig
-nds32                               defconfig
-nds32                             allnoconfig
-csky                             allyesconfig
-csky                                defconfig
-alpha                               defconfig
-alpha                            allyesconfig
-xtensa                           allyesconfig
-h8300                            allyesconfig
-h8300                            allmodconfig
-xtensa                              defconfig
-arc                                 defconfig
-arc                              allyesconfig
-sh                               allmodconfig
-sh                                allnoconfig
-microblaze                        allnoconfig
-mips                              allnoconfig
-mips                             allmodconfig
-parisc                            allnoconfig
-parisc                              defconfig
-parisc                           allyesconfig
-parisc                           allmodconfig
-powerpc                             defconfig
-powerpc                          allyesconfig
-powerpc                          rhel-kconfig
-powerpc                          allmodconfig
-powerpc                           allnoconfig
-i386                 randconfig-a006-20200519
-i386                 randconfig-a005-20200519
-i386                 randconfig-a001-20200519
-i386                 randconfig-a003-20200519
-i386                 randconfig-a004-20200519
-i386                 randconfig-a002-20200519
-x86_64               randconfig-a003-20200519
-x86_64               randconfig-a005-20200519
-x86_64               randconfig-a004-20200519
-x86_64               randconfig-a006-20200519
-x86_64               randconfig-a002-20200519
-x86_64               randconfig-a001-20200519
-riscv                            allyesconfig
-riscv                             allnoconfig
-riscv                               defconfig
-riscv                            allmodconfig
-s390                             allyesconfig
-s390                              allnoconfig
-s390                             allmodconfig
-s390                                defconfig
-x86_64                              defconfig
-sparc                               defconfig
-sparc64                             defconfig
-sparc64                           allnoconfig
-sparc64                          allyesconfig
-sparc64                          allmodconfig
-um                                allnoconfig
-um                                  defconfig
-um                               allmodconfig
-um                               allyesconfig
-x86_64                                   rhel
-x86_64                               rhel-7.6
-x86_64                    rhel-7.6-kselftests
-x86_64                         rhel-7.2-clear
-x86_64                                    lkp
-x86_64                              fedora-25
-x86_64                                  kexec
+$ devlink mon health
+[health,status] pci/0000:07:00.0:
+  reporter fw
+    state error error 1 recover 0
+[health,status] pci/0000:07:00.0:
+  reporter fw
+    state error error 2 recover 0
 
+These are the events I triggered on purpose. One can also inspect
+the health of all devices capable of reporting fw errors:
+
+$ devlink health
+pci/0000:07:00.0:
+  reporter fw
+    state error error 7 recover 0
+
+Obviously drivers may upgrade to the full devlink health API
+which includes state dump, state dump auto-collect and automatic
+error recovery control.
+
+Signed-off-by: Jakub Kicinski <kuba@kernel.org>
 ---
-0-DAY CI Kernel Test Service, Intel Corporation
-https://lists.01.org/hyperkitty/list/kbuild-all@lists.01.org
+ include/linux/devlink.h               |  11 +++
+ net/core/Makefile                     |   2 +-
+ net/core/devlink_simple_fw_reporter.c | 101 ++++++++++++++++++++++++++
+ 3 files changed, 113 insertions(+), 1 deletion(-)
+ create mode 100644 include/linux/devlink.h
+ create mode 100644 net/core/devlink_simple_fw_reporter.c
+
+diff --git a/include/linux/devlink.h b/include/linux/devlink.h
+new file mode 100644
+index 000000000000..2b73987eefca
+--- /dev/null
++++ b/include/linux/devlink.h
+@@ -0,0 +1,11 @@
++/* SPDX-License-Identifier: GPL-2.0-or-later */
++#ifndef _LINUX_DEVLINK_H_
++#define _LINUX_DEVLINK_H_
++
++struct device;
++
++void devlink_simple_fw_reporter_prepare(struct device *dev);
++void devlink_simple_fw_reporter_cleanup(struct device *dev);
++void devlink_simple_fw_reporter_report_crash(struct device *dev);
++
++#endif
+diff --git a/net/core/Makefile b/net/core/Makefile
+index 3e2c378e5f31..6f1513781c17 100644
+--- a/net/core/Makefile
++++ b/net/core/Makefile
+@@ -31,7 +31,7 @@ obj-$(CONFIG_LWTUNNEL_BPF) += lwt_bpf.o
+ obj-$(CONFIG_BPF_STREAM_PARSER) += sock_map.o
+ obj-$(CONFIG_DST_CACHE) += dst_cache.o
+ obj-$(CONFIG_HWBM) += hwbm.o
+-obj-$(CONFIG_NET_DEVLINK) += devlink.o
++obj-$(CONFIG_NET_DEVLINK) += devlink.o devlink_simple_fw_reporter.o
+ obj-$(CONFIG_GRO_CELLS) += gro_cells.o
+ obj-$(CONFIG_FAILOVER) += failover.o
+ obj-$(CONFIG_BPF_SYSCALL) += bpf_sk_storage.o
+diff --git a/net/core/devlink_simple_fw_reporter.c b/net/core/devlink_simple_fw_reporter.c
+new file mode 100644
+index 000000000000..48dde9123c3c
+--- /dev/null
++++ b/net/core/devlink_simple_fw_reporter.c
+@@ -0,0 +1,101 @@
++#include <linux/devlink.h>
++#include <linux/list.h>
++#include <linux/mutex.h>
++#include <net/devlink.h>
++
++struct devlink_simple_fw_reporter {
++	struct list_head list;
++	struct devlink_health_reporter *reporter;
++};
++
++
++static LIST_HEAD(devlink_simple_fw_reporters);
++static DEFINE_MUTEX(devlink_simple_fw_reporters_mutex);
++
++static const struct devlink_health_reporter_ops simple_devlink_health = {
++	.name = "fw",
++};
++
++static const struct devlink_ops simple_devlink_ops = {
++};
++
++static struct devlink_simple_fw_reporter *
++devlink_simple_fw_reporter_find_for_dev(struct device *dev)
++{
++	struct devlink_simple_fw_reporter *simple_devlink, *ret = NULL;
++	struct devlink *devlink;
++
++	mutex_lock(&devlink_simple_fw_reporters_mutex);
++	list_for_each_entry(simple_devlink, &devlink_simple_fw_reporters,
++			    list) {
++		devlink = priv_to_devlink(simple_devlink);
++		if (devlink->dev == dev) {
++			ret = simple_devlink;
++			break;
++		}
++	}
++	mutex_unlock(&devlink_simple_fw_reporters_mutex);
++
++	return ret;
++}
++
++void devlink_simple_fw_reporter_report_crash(struct device *dev)
++{
++	struct devlink_simple_fw_reporter *simple_devlink;
++
++	simple_devlink = devlink_simple_fw_reporter_find_for_dev(dev);
++	if (!simple_devlink)
++		return;
++
++	devlink_health_report(simple_devlink->reporter, "firmware crash", NULL);
++}
++EXPORT_SYMBOL_GPL(devlink_simple_fw_reporter_report_crash);
++
++void devlink_simple_fw_reporter_prepare(struct device *dev)
++{
++	struct devlink_simple_fw_reporter *simple_devlink;
++	struct devlink *devlink;
++
++	devlink = devlink_alloc(&simple_devlink_ops,
++				sizeof(struct devlink_simple_fw_reporter));
++	if (!devlink)
++		return;
++
++	if (devlink_register(devlink, dev))
++		goto err_free;
++
++	simple_devlink = devlink_priv(devlink);
++	simple_devlink->reporter =
++		devlink_health_reporter_create(devlink, &simple_devlink_health,
++					       0, NULL);
++	if (IS_ERR(simple_devlink->reporter))
++		goto err_unregister;
++
++	mutex_lock(&devlink_simple_fw_reporters_mutex);
++	list_add_tail(&simple_devlink->list, &devlink_simple_fw_reporters);
++	mutex_unlock(&devlink_simple_fw_reporters_mutex);
++
++	return;
++
++err_unregister:
++	devlink_unregister(devlink);
++err_free:
++	devlink_free(devlink);
++}
++EXPORT_SYMBOL_GPL(devlink_simple_fw_reporter_prepare);
++
++void devlink_simple_fw_reporter_cleanup(struct device *dev)
++{
++	struct devlink_simple_fw_reporter *simple_devlink;
++	struct devlink *devlink;
++
++	simple_devlink = devlink_simple_fw_reporter_find_for_dev(dev);
++	if (!simple_devlink)
++		return;
++
++	devlink = priv_to_devlink(simple_devlink);
++	devlink_health_reporter_destroy(simple_devlink->reporter);
++	devlink_unregister(devlink);
++	devlink_free(devlink);
++}
++EXPORT_SYMBOL_GPL(devlink_simple_fw_reporter_cleanup);
+-- 
+2.25.4
+
 
 _______________________________________________
 ath10k mailing list
