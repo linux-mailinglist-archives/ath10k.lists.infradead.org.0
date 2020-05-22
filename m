@@ -2,93 +2,92 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2C0CB1DE46F
-	for <lists+ath10k@lfdr.de>; Fri, 22 May 2020 12:29:57 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id DFC581DE4E6
+	for <lists+ath10k@lfdr.de>; Fri, 22 May 2020 12:54:45 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
-	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=aeqNxxWU5S8/OBt/V4zUMSMVTgLP5RTsgymlkPKPGCo=; b=ux6aLLc4TC5q6R
-	5pWP9xgAxvSoLILIKFAKN/SUAKxWsc2U9DXy5SUmQ5NOY4vqUK2zm/N38SNasMU00jjDjpHwSLmAb
-	aV1oE1WYHyBrdUqdf0rES19BT5/VzxNARvWW8le4ZRxCXxV94UQ/12zdF6c2Yn8s7+4q/oWK04PP2
-	OAZRH/UeZkPnHF6HL/FiRi1gdG74URmr0N6Rh3yyzdjexrIUMHS+cO8HTqE72aXOhri4+CPcXWrrL
-	uZ0mozpDot7aLFzy3oair339yIqgh/UuRVJiqTjeQr0Q6+29xlxlbS5QaMlyU0sxbJ/a+lLAn/MKT
-	a/+trYK9hp5foXTynkUA==;
+	Content-Transfer-Encoding:Content-Type:Reply-To:List-Subscribe:List-Help:
+	List-Post:List-Archive:List-Unsubscribe:List-Id:Date:From:To:Subject:
+	Content-Description:MIME-Version:Message-ID:Cc:Content-ID:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=x5pP9Rt/13S45XBKp2P/xHOrUsLyQmwzPto56BKKpjM=; b=eWV
+	R6Dd3dTNHaNv3RW4H9viDHw3HBttpQ0ZX8iCdOtR2lO6eHlvHJhFg8cS6TnnJHVemh2kW+NAdQUvL
+	skHmDeaeyBLaXhuCQKs1ZFZU8C6qoE3crNyEmKSBRbP/IIpk3Zlqt3IM4KVvHkIFqIaxdxJ1O169d
+	IKlsuZWVpIoX9XVneiXNmZhiyfspfivRLRQCEAlHSN2afkkKTzXqALezF23C2yN2rc/Mh4sVkUEuv
+	TlrgVzXVFtUi7fAjDR2/kwtRfRDDdN5QQ2DkXCgtTRYSw8llFQJKacbVkJHr1GX26Rvru4HW4ZXSM
+	0ufqaxXJXwAk6+vL3YBjeOc27GNppbQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jc4w5-0006Vb-LH; Fri, 22 May 2020 10:29:53 +0000
-Received: from mail26.static.mailgun.info ([104.130.122.26])
+	id 1jc5K7-0007C3-NZ; Fri, 22 May 2020 10:54:43 +0000
+Received: from buffalo.elm.relay.mailchannels.net ([23.83.212.24])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jc4vj-0006Es-2b
- for ath10k@lists.infradead.org; Fri, 22 May 2020 10:29:32 +0000
-DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
- q=dns/txt; 
- s=smtp; t=1590143369; h=Content-Type: MIME-Version: Message-ID:
- In-Reply-To: Date: References: Subject: Cc: To: From: Sender;
- bh=HUZUH5YolNvgBaMblVmAM3zcJ0jDBFMKrCg79sCTWsM=;
- b=DU5fdltSUa+R4TkXk3iOTMdlyaC00CPbB8aHBzNTjpay6R8rfhEq6j9fSY3QErdExlbhQk2D
- ZN6sZOrvC5ykQrqtTB1Sx7t2CduxX6IVz6wYWGVHAVsSrEMEFFcXn+Xuj4wgcIlPN8qz+9Rb
- SK5DDV+0QT/py8hRN/rhWAyDMOU=
-X-Mailgun-Sending-Ip: 104.130.122.26
-X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
-Received: from smtp.codeaurora.org
- (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171]) by
- smtp-out-n01.prod.us-east-1.postgun.com with SMTP id
- 5ec7a98245598550e6a2ab02 (version=TLS1.2,
- cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256); Fri, 22 May 2020 10:29:22
- GMT
-Received: by smtp.codeaurora.org (Postfix, from userid 1001)
- id 02F91C433CB; Fri, 22 May 2020 10:29:21 +0000 (UTC)
-X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
- aws-us-west-2-caf-mail-1.web.codeaurora.org
-X-Spam-Level: 
-X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,SPF_NONE,
- URIBL_BLOCKED autolearn=unavailable autolearn_force=no version=3.4.0
-Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
- [88.114.240.156])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
- (No client certificate requested) (Authenticated sender: kvalo)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 5888DC433C8;
- Fri, 22 May 2020 10:29:18 +0000 (UTC)
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 5888DC433C8
-Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
- dmarc=none (p=none dis=none) header.from=codeaurora.org
-Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
- spf=none smtp.mailfrom=kvalo@codeaurora.org
-From: Kalle Valo <kvalo@codeaurora.org>
-To: Sebastian Gottschall <s.gottschall@dd-wrt.com>
-Subject: Re: [PATCH v13] ath10k: add LED and GPIO controlling support for
- various chipsets
-References: <1523027875-5143-1-git-send-email-kvalo@codeaurora.org>
- <2468724.JaAZLprVu6@bentobox>
- <b23e65cf-4be7-72db-7955-32eae196953e@dd-wrt.com>
-Date: Fri, 22 May 2020 13:29:15 +0300
-In-Reply-To: <b23e65cf-4be7-72db-7955-32eae196953e@dd-wrt.com> (Sebastian
- Gottschall's message of "Wed, 20 May 2020 09:39:45 +0200")
-Message-ID: <87wo549sas.fsf@codeaurora.org>
-User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/24.5 (gnu/linux)
+ id 1jc5K4-00077U-Hd
+ for ath10k@lists.infradead.org; Fri, 22 May 2020 10:54:41 +0000
+X-Sender-Id: sozotechnologies|x-authuser|ocean@soweboarts.org
+Received: from relay.mailchannels.net (localhost [127.0.0.1])
+ by relay.mailchannels.net (Postfix) with ESMTP id E21679202E2
+ for <ath10k@lists.infradead.org>; Fri, 22 May 2020 10:53:56 +0000 (UTC)
+Received: from server801.thehostgroup.com
+ (100-96-9-26.trex.outbound.svc.cluster.local [100.96.9.26])
+ (Authenticated sender: sozotechnologies)
+ by relay.mailchannels.net (Postfix) with ESMTPA id 474F4920935
+ for <ath10k@lists.infradead.org>; Fri, 22 May 2020 10:53:56 +0000 (UTC)
+X-Sender-Id: sozotechnologies|x-authuser|ocean@soweboarts.org
+Received: from server801.thehostgroup.com (server801.thehostgroup.com
+ [65.49.39.15]) (using TLSv1.2 with cipher DHE-RSA-AES256-GCM-SHA384)
+ by 0.0.0.0:2500 (trex/5.18.8); Fri, 22 May 2020 10:53:56 +0000
+X-MC-Relay: Junk
+X-MailChannels-SenderId: sozotechnologies|x-authuser|ocean@soweboarts.org
+X-MailChannels-Auth-Id: sozotechnologies
+Message-ID: <1590144836582.063e442756066e73@soweboarts.org>
+X-Left-Arch: 063e442756066e73_1590144836581_1872696389
+X-MC-Loop-Signature: 1590144836581:1152221740
+X-MC-Ingress-Time: 1590144836581
+Received: from [205.234.159.68] (port=53428)
+ by server801.thehostgroup.com with esmtpsa (TLS1) tls
+ TLS_DHE_RSA_WITH_AES_256_CBC_SHA (Exim 4.93)
+ (envelope-from <ocean@soweboarts.org>) id 1jc5Ix-0003rz-Gr
+ for ath10k@lists.infradead.org; Fri, 22 May 2020 06:53:31 -0400
 MIME-Version: 1.0
+Content-Description: Mail message body
+Subject: Reminder - [Fri, May 22, 2020 at 10:00 AM]
+To: ath10k@lists.infradead.org
+From: "Tata Power - DDL"<ocean@soweboarts.org>
+Date: Fri, 22 May 2020 03:53:33 -0700
+X-Priority: 1 (High)
+X-TheHostGroup-MailScanner-Information: Please contact the ISP for more
+ information
+X-TheHostGroup-MailScanner-ID: 1jc5Ix-0003rz-Gr
+X-TheHostGroup-MailScanner: Found to be clean
+X-TheHostGroup-MailScanner-SpamCheck: 
+X-TheHostGroup-MailScanner-From: ocean@soweboarts.org
+X-Spam-Status: No
+X-AuthUser: ocean@soweboarts.org
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200522_032931_220968_1D06F0F5 
-X-CRM114-Status: UNSURE (   9.50  )
+X-CRM114-CacheID: sfid-20200522_035440_725076_BA648673 
+X-CRM114-Status: UNSURE (  -4.14  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.0 (/)
+X-Spam-Score: 6.1 (++++++)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (6.1 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [104.130.122.26 listed in list.dnswl.org]
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [104.130.122.26 listed in wl.mailspike.net]
+ no trust [23.83.212.24 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ 0.2 FREEMAIL_REPLYTO_END_DIGIT Reply-To freemail username ends in
+ digit [dnyy6800[at]rediffmail.com]
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [23.83.212.24 listed in wl.mailspike.net]
+ 0.0 MSGID_FROM_MTA_HEADER  Message-Id was added by a relay
+ 0.0 FROM_MISSP_XPRIO       Misspaced FROM + X-Priority
+ 2.5 FREEMAIL_FORGED_REPLYTO Freemail in Reply-To, but not From
+ 0.0 FROM_MISSPACED         From: missing whitespace
+ 1.7 FROM_MISSP_REPLYTO     From misspaced, has Reply-To
+ 1.6 TO_NO_BRKTS_FROM_MSSP  Multiple header formatting problems
+ 0.0 FROM_MISSP_EH_MATCH    From misspaced, matches envelope
+X-Spam-Flag: YES
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -100,28 +99,25 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
- John Crispin <john@phrozen.org>,
- Sebastian Gottschall <s.gottschall@newmedia-net.de>,
- openwrt-devel@lists.openwrt.org, Ansuel Smith <ansuelsmth@gmail.com>,
- Sven Eckelmann <sven@narfation.org>
+Reply-To: dnyy6800@rediffmail.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-(please don't top post)
+Dear ,
 
-Sebastian Gottschall <s.gottschall@dd-wrt.com> writes:
+The UN and the  (IMF) has chosen to support 150 Private individuals and small scale business owners from
+Pakistan,India,United Arab Emirates, Bahrain, Qatar and Africa.
 
-> this code is not in use in its original form for ipq4019. i have seen
-> that his patch is also dropped from ath.git but is still in use by
-> openwrt. could somone clarify the state here and why it was dropped?
+We have arranged $500K USD  which will be paid to your bank account over there in your country.
 
-I dropped the patch because of the bug report from openwrt.
+In this regards, you are to furnish the requested information to the Directorate of International Payment and transfer.
 
--- 
-https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
+Contact E-mail:    dnyy6800@rediffmail.com
+
+Best Regards
+Director of International Payment
 
 _______________________________________________
 ath10k mailing list
