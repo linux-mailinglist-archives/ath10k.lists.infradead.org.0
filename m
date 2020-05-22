@@ -2,55 +2,85 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6E3511DF0BE
-	for <lists+ath10k@lfdr.de>; Fri, 22 May 2020 22:47:33 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 007261DF173
+	for <lists+ath10k@lfdr.de>; Fri, 22 May 2020 23:49:42 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=RZ1DeDxDiswgNbG768Ecwlf+xsxREGsXeNKeuzWtdWY=; b=mE2gPwXysjH7Qx
-	J9KWAdj87BEEmeNCmd4tPpTSEGvMNSCBNJ0N396YOwqV5PZP5BOlhpjo8xDODPgC1UijX8sISo5mF
-	+aDhz7dbIwymPOJHzuRJMdpwFIqOPp8gntHsjN/zF3aBn89WPuO+tGK9t6BoNXRrt3A3FqyRVZ+Rm
-	3IkFrySVb/lV/KrUkODW51BECzW+ddL1izUhp7fqkbqm21s5NW4SsQ0xhIDExSbm8jkoHop0y/x5I
-	PBXu/pvtjQ3/h11EPfESZwhhLPxnMZSy0rP3gDnd3aMjkahl8RmQ8J+E4H/1zN13juUh2ysorlMmj
-	0UC2FrLfJhZjWqz6q5eg==;
+	List-Owner; bh=CpnYYR3Mc+QLqVl6RflZqWk2f4fER4W2isvupRuWVdc=; b=oh9+Soh7i+QbTA
+	1UJ2nrVk9sF557rexb851vELA6aPVDwhGqkS+3KaVZ/INme4jTTLJ3TKcF0JzEfKvk54fH8lctapH
+	k/riN8cmWWUS7x9i5DpBR3KyNE1K5zLdpph1GNI7l0dE7Z6tf2Jv1tmyMmqX8nCr7wjLIFnGtf7LM
+	BysGrF4XZbpwL5o9r6g9/0RATKvXMAmwSg5lxgUzKnCueLm9u4+j2Ud0HLpa4PUo7WHyVeDhKWJZR
+	F0xoGz3dyGOcGQEGZzQznJIu2VklFN3Pn5cK3CH2Q9QpsASRQtHPqzrrDFnfjkqf9ATwzoDmkv77K
+	8qUV9orXz/XhJv3JkxgQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jcEZk-0000Z4-1l; Fri, 22 May 2020 20:47:28 +0000
-Received: from s3.sipsolutions.net ([2a01:4f8:191:4433::2]
- helo=sipsolutions.net)
+	id 1jcFXt-0003ky-9W; Fri, 22 May 2020 21:49:37 +0000
+Received: from mail-pg1-f194.google.com ([209.85.215.194])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jcEZg-0000YO-MP
- for ath10k@lists.infradead.org; Fri, 22 May 2020 20:47:25 +0000
-Received: by sipsolutions.net with esmtpsa
- (TLS1.3:ECDHE_SECP256R1__RSA_PSS_RSAE_SHA256__AES_256_GCM:256)
- (Exim 4.93) (envelope-from <johannes@sipsolutions.net>)
- id 1jcEYU-000zou-Ao; Fri, 22 May 2020 22:46:10 +0200
-Message-ID: <2e5199edb433c217c7974ef7408ff8c7253145b6.camel@sipsolutions.net>
+ id 1jcFXp-0003kR-E7
+ for ath10k@lists.infradead.org; Fri, 22 May 2020 21:49:34 +0000
+Received: by mail-pg1-f194.google.com with SMTP id s10so5632406pgm.0
+ for <ath10k@lists.infradead.org>; Fri, 22 May 2020 14:49:33 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to:user-agent;
+ bh=witZhMJ16Agl4OwIfL5pB8EM3wxhLaftmrS7Z3KmwGo=;
+ b=AwW6M+d0gDPWZ3g4RYA1iqQyLlRnkgTmpm/M6CIQiP80Dus5Zk/CSF0/J6QUrfAVLp
+ viofEY3Foavo9ZvtyW5QbT3jfpk0DjWHWpxrNMf80a46Ew/d7q9yRgc2tb+n4R5h7K7z
+ QT4CM1JwrEoFHTscB8/I27xKfdjiz65N9LQEpGyk0dmSRWU8UDH26iQ/1ewhsAxLAbQx
+ 6eTU9MnzXw2MPv8xv/kGClEIJ6H8u4Vtg407fxu0sDFe/eZpv7e0wTl2UphyYgtGPWu6
+ FWGaTE8QyhwTZGb5eMG1Yy6UFqYVJ2kWwVnZTolqU0cUcv3TyxkeiV/1hIlFo1fTtP1g
+ 6vsA==
+X-Gm-Message-State: AOAM530eo4mjN9vLIGgfEo0G+asLr0x8PN/4NZ52iHMXKkkqjD4d7nXP
+ tUcA863M0kaX+R9/HQ9q5is=
+X-Google-Smtp-Source: ABdhPJyBq9LZCZJmpi4fQfFbSbNhR4Ql67aNRQjxVYgQP0yBZhIDm5eUIjVEbj0mW3rKV0Gj+0RIIQ==
+X-Received: by 2002:a65:52c3:: with SMTP id z3mr15634431pgp.146.1590184172241; 
+ Fri, 22 May 2020 14:49:32 -0700 (PDT)
+Received: from 42.do-not-panic.com (42.do-not-panic.com. [157.230.128.187])
+ by smtp.gmail.com with ESMTPSA id y7sm7633645pjn.13.2020.05.22.14.49.30
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Fri, 22 May 2020 14:49:30 -0700 (PDT)
+Received: by 42.do-not-panic.com (Postfix, from userid 1000)
+ id D524C40321; Fri, 22 May 2020 21:49:29 +0000 (UTC)
+Date: Fri, 22 May 2020 21:49:29 +0000
+From: Luis Chamberlain <mcgrof@kernel.org>
+To: Jakub Kicinski <kuba@kernel.org>
 Subject: Re: [RFC 1/2] devlink: add simple fw crash helpers
-From: Johannes Berg <johannes@sipsolutions.net>
-To: Jakub Kicinski <kuba@kernel.org>, Luis Chamberlain <mcgrof@kernel.org>
-Date: Fri, 22 May 2020 22:46:07 +0200
-In-Reply-To: <20200522101738.1495f4cc@kicinski-fedora-pc1c0hjn.dhcp.thefacebook.com>
+Message-ID: <20200522214929.GB11244@42.do-not-panic.com>
 References: <20200519010530.GS11244@42.do-not-panic.com>
  <20200519211531.3702593-1-kuba@kernel.org>
  <20200522052046.GY11244@42.do-not-panic.com>
  <20200522101738.1495f4cc@kicinski-fedora-pc1c0hjn.dhcp.thefacebook.com>
-User-Agent: Evolution 3.36.2 (3.36.2-1.fc32) 
 MIME-Version: 1.0
+Content-Disposition: inline
+In-Reply-To: <20200522101738.1495f4cc@kicinski-fedora-pc1c0hjn.dhcp.thefacebook.com>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200522_134724_730598_F2B15F7F 
-X-CRM114-Status: GOOD (  18.06  )
-X-Spam-Score: 0.3 (/)
+X-CRM114-CacheID: sfid-20200522_144933_474548_73D9EB15 
+X-CRM114-Status: GOOD (  22.93  )
+X-Spam-Score: 0.5 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (0.3 points)
+ Content analysis details:   (0.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [209.85.215.194 listed in list.dnswl.org]
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider [mcgrof[at]gmail.com]
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
- 0.3 KHOP_HELO_FCRDNS       Relay HELO differs from its IP's reverse DNS
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [209.85.215.194 listed in wl.mailspike.net]
+ 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
+ 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -69,16 +99,19 @@ Cc: linux-wireless@vger.kernel.org, aquini@redhat.com, peterz@infradead.org,
  mingo@redhat.com, dyoung@redhat.com, pmladek@suse.com, jiri@resnulli.us,
  keescook@chromium.org, arnd@arndb.de, gpiccoli@canonical.com,
  rostedt@goodmis.org, cai@lca.pw, tglx@linutronix.de,
- andriy.shevchenko@linux.intel.com, kvalo@codeaurora.org,
- netdev@vger.kernel.org, schlad@suse.de, linux-kernel@vger.kernel.org,
- jeyu@kernel.org, akpm@linux-foundation.org, davem@davemloft.net
+ andriy.shevchenko@linux.intel.com, johannes@sipsolutions.net,
+ kvalo@codeaurora.org, netdev@vger.kernel.org, schlad@suse.de,
+ linux-kernel@vger.kernel.org, jeyu@kernel.org, akpm@linux-foundation.org,
+ davem@davemloft.net
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On Fri, 2020-05-22 at 10:17 -0700, Jakub Kicinski wrote:
-
+On Fri, May 22, 2020 at 10:17:38AM -0700, Jakub Kicinski wrote:
+> On Fri, 22 May 2020 05:20:46 +0000 Luis Chamberlain wrote:
+> > > diff --git a/net/core/Makefile b/net/core/Makefile
+> > > index 3e2c378e5f31..6f1513781c17 100644
 > > > --- a/net/core/Makefile
 > > > +++ b/net/core/Makefile
 > > > @@ -31,7 +31,7 @@ obj-$(CONFIG_LWTUNNEL_BPF) += lwt_bpf.o
@@ -94,19 +127,28 @@ On Fri, 2020-05-22 at 10:17 -0700, Jakub Kicinski wrote:
 > You can't be serious. It's network specific because of how the Kconfig
 > is named?
 
-Wait, yeah, what?
+Kconfig? What has that to do with anything? The issue I have is that the
+solution I am looking for is for it to be agnostic to the subsystem. I
+have found similar firmware crashes on gpu, media, scsci.
 
 > Working for a company operating large data centers I would strongly
 > prefer if we didn't have ten different ways of reporting firmware
 > problems in the fleet.
 
-Agree. I don't actually operate anything, but still ...
+Indeed.
 
-Thinking about this - maybe there's a way to still combine devcoredump
-and devlink somehow?
+> > I'm afraid this won't work for something generic. I don't think its
+> > throw-away work though, the idea to provide a generic interface to
+> > dump firmware through netlink might be nice for networking, or other
+> > things.
+> > 
+> > But I have a feeling we'll want something still more generic than this.
+> 
+> Please be specific. Saying generic a lot is not helpful. The code (as
+> you can see in this patch) is in no way network specific. Or are you
+> saying there are machines out there running without netlink sockets?
 
-Or (optionally) make devlink trigger devcoredump while userspace
-migrates?
+No, I am saying I want something to work with any struct device.
 
 > > So networking may want to be aware that a firmware crash happened as
 > > part of this network device health thing, but firmware crashing is a
@@ -114,35 +156,29 @@ migrates?
 > > 
 > > I have now extended my patch set to include uvents and I am more set on
 > > that we need the taint now more than ever.
+> 
+> Please expect my nack if you're trying to add this to networking
+> drivers.
 
-FWIW, I still completely disagree on that taint. You (Luis) obviously
-have been running into a bug in that driver, I doubt the firmware
-actually managed to wedge the hardware.
+The uevent mechanism is not for networking.
 
-But even if it did, that's still not really a kernel taint. The kernel
-itself isn't in any way affected by this.
-
-Yes, the system is in a weird state now. But that's *not* equivalent to
-"kernel tainted".
+The taint however is, and I'd like to undertand how it is you do not see
+that an undesirable requirement for a reboot is a clear case for a taint.
 
 > The irony is you have a problem with a networking device and all the
 > devices your initial set touched are networking. Two of the drivers 
 > you touched either have or will soon have devlink health reporters
 > implemented.
 
-Like I said above, do you think it'd be feasible to make a devcoredump
-out of devlink health reports? And can the report be in a way that we
-control the file format, or are there limits? I guess I should read the
-code to find out, but I figure you probably just know. But feel free to
-tell me to read it :)
+That is all great, and I don't think its a bad idea to add
+infrastructure / extend it to get more information about a firmware
+crash dump. However, suggesting that devlink is the only solution we
+need in the kernel without considering other subsystems is what I am
+suggesting doesn't suit my needs. Networking was just the first
+subsystem I am taclking now but I have patches where similar situations
+happen across the kernel.
 
-The reason I'm asking is that it's starting to sound like we really
-ought to be implementing devlink, but we've got a bunch of
-infrastructure that uses the devcoredump, and it'll take time
-(significantly so) to change all that...
-
-johannes
-
+  Luis
 
 _______________________________________________
 ath10k mailing list
