@@ -2,67 +2,62 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id BE59C1E1340
-	for <lists+ath10k@lfdr.de>; Mon, 25 May 2020 19:09:25 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id EA7F31E156D
+	for <lists+ath10k@lfdr.de>; Mon, 25 May 2020 22:57:58 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
-	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=oG2N+jNxXqVAQ4JqW0lM+MjnxgJyMWwtg8TBPhyJ8zI=; b=q9dijV7wa8GrsKxRq4wCLOosO
-	lVdqJGPVE7PLkntlUkUe92uYzdHSSIqtPsz0Tnn81kazkiTneh3nWsg0QqpWLEnmGDfzQYB5k1kYM
-	nf39654PeDpjclm/q7j5q1Vt8icWWKFVameqQq8f7QucnZEaxg3cajyaVicYl/qG8Re9UQSkzXWjZ
-	HRP8ND4CbBDzG0SMPlAM77+Pr1uoLD4NnFgJHzBvABGyFz3Rtgcu2fZt6JG+Xv7zsN/Mnbd8FRdlH
-	ujJOxU0yDApX82ct+GBYmgodxWPb1HIMfUVov8EirQ6JGdGjPEnHgyrPpVZ5vmuBhmguQQz1gnRWp
-	WO8F836Gg==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=jADjIUGf215ICifCm9Ljxmf6ou1oykVsPESmsRkqKq4=; b=HYSYVFT8WyR5X+
+	3O6BcRYPftf7UruEHF4iIybv8OSiYXIx4uBC0Y3vlDC9uEVmAcUZJ+urlMxWSXoWj4LyrbXFBIn/c
+	ZKPjiZa2BW65Aiab6GforsKFQgWiZF6Xt+2wLNTK0Tzy3MTmFKALEl9WwDHlZvEn1L2i2E1fgngre
+	F+sfsX9qw23Rf0d80euS9DE/ToZXQW38OrKX8YbOHX99FwVFWzxeYEKNm3pK70FKYgRqJC58mpkxu
+	J2ZtMx1sKIpryiri/3Yg/z4rVQ9V7kjgS2GNeZP7Ch3UskkO0FnXv0vDE45R4+8un+2m2B/5VyL0e
+	lHfw1pUkrwem79uChA3Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jdGbK-0008E3-HC; Mon, 25 May 2020 17:09:22 +0000
-Received: from mail2.candelatech.com ([208.74.158.173]
- helo=mail3.candelatech.com)
- by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jdGbG-0008DD-24
- for ath10k@lists.infradead.org; Mon, 25 May 2020 17:09:19 +0000
-Received: from [192.168.254.4] (unknown [50.34.197.93])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	id 1jdKAT-0003W1-4Q; Mon, 25 May 2020 20:57:53 +0000
+Received: from mail.kernel.org ([198.145.29.99])
+ by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
+ id 1jdKAP-0003VQ-HT
+ for ath10k@lists.infradead.org; Mon, 25 May 2020 20:57:50 +0000
+Received: from kicinski-fedora-PC1C0HJN.hsd1.ca.comcast.net
+ (c-67-180-217-166.hsd1.ca.comcast.net [67.180.217.166])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested)
- by mail3.candelatech.com (Postfix) with ESMTPSA id AA4AC13C2B0;
- Mon, 25 May 2020 10:09:02 -0700 (PDT)
-DKIM-Filter: OpenDKIM Filter v2.11.0 mail3.candelatech.com AA4AC13C2B0
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=candelatech.com;
- s=default; t=1590426553;
- bh=EHPh+E1ZdE7p6ZvU4oC5fZ1YWPc4Oc9mXxUVaWe0EHc=;
- h=Subject:To:References:Cc:From:Date:In-Reply-To:From;
- b=cNd28c6TAYcBi4SOvvfxgiL28PAd8gdOHHzYe8KJZkh6AH7ES/Jw7RqF8KNwZRZHb
- txfs58Et5e+MY1pgeVmomgiFqNp08PQRnjG+iVEVYBWqY0JeM32G5yaSIdoz4wYt0t
- IJxuxlOo+WM4ImiDRZLZLvIWukeREUnNK6Yk3bh8=
+ by mail.kernel.org (Postfix) with ESMTPSA id 9B8262065F;
+ Mon, 25 May 2020 20:57:47 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1590440268;
+ bh=lR7NOEwZSW7Lg+I18yIGiKJF3iGfsiCFNOxqNlZ1mDc=;
+ h=Date:From:To:Cc:Subject:In-Reply-To:References:From;
+ b=swt24vm+6Bdjwmpc/k3E1NGlCiAfDgyqBkQ3G8Ce/iyqkrFCZLuItGHYd7e+lhuit
+ 2p/8FdJfvjSP6yy44RRgmPkzZ0fXJ6Hm3oE4qCNX4na//sgiBAFsr9XmKyyD1l5QJB
+ 5v9UiseaC98juTrEUehmaFTAJxgDK718S2RLobhk=
+Date: Mon, 25 May 2020 13:57:46 -0700
+From: Jakub Kicinski <kuba@kernel.org>
+To: Johannes Berg <johannes@sipsolutions.net>
 Subject: Re: [RFC 1/2] devlink: add simple fw crash helpers
-To: Andy Shevchenko <andriy.shevchenko@linux.intel.com>,
- Steve deRosier <derosier@gmail.com>
+Message-ID: <20200525135746.45e764de@kicinski-fedora-PC1C0HJN.hsd1.ca.comcast.net>
+In-Reply-To: <2e5199edb433c217c7974ef7408ff8c7253145b6.camel@sipsolutions.net>
 References: <20200519010530.GS11244@42.do-not-panic.com>
  <20200519211531.3702593-1-kuba@kernel.org>
  <20200522052046.GY11244@42.do-not-panic.com>
  <20200522101738.1495f4cc@kicinski-fedora-pc1c0hjn.dhcp.thefacebook.com>
  <2e5199edb433c217c7974ef7408ff8c7253145b6.camel@sipsolutions.net>
- <20200522215145.GC11244@42.do-not-panic.com>
- <CALLGbR+QPcECtJbYmzztV_Qysc5qtwujT_qc785zvhZMCH50fg@mail.gmail.com>
- <20200525090749.GJ1634618@smile.fi.intel.com>
-From: Ben Greear <greearb@candelatech.com>
-Message-ID: <e453d720-bfe7-5f4f-e422-a7cfb9bce833@candelatech.com>
-Date: Mon, 25 May 2020 10:08:58 -0700
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101
- Thunderbird/45.8.0
 MIME-Version: 1.0
-In-Reply-To: <20200525090749.GJ1634618@smile.fi.intel.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200525_100918_149373_ED679A21 
-X-CRM114-Status: GOOD (  17.85  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200525_135749_600471_5A176ABC 
+X-CRM114-Status: GOOD (  14.48  )
+X-Spam-Score: -3.7 (---)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-3.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
@@ -72,6 +67,9 @@ X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
+ 1.5 RCVD_IN_SORBS_WEB      RBL: SORBS: sender is an abusable web server
+ [67.180.217.166 listed in dnsbl.sorbs.net]
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -83,79 +81,58 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless <linux-wireless@vger.kernel.org>, aquini@redhat.com,
- peterz@infradead.org, Daniel Vetter <daniel.vetter@ffwll.ch>,
- mchehab+samsung@kernel.org, will@kernel.org, bhe@redhat.com,
- briannorris@chromium.org, ath10k@lists.infradead.org,
- Takashi Iwai <tiwai@suse.de>, mingo@redhat.com,
- Jakub Kicinski <kuba@kernel.org>, dyoung@redhat.com, pmladek@suse.com,
- jiri@resnulli.us, Kees Cook <keescook@chromium.org>, arnd@arndb.de,
- gpiccoli@canonical.com, rostedt@goodmis.org, cai@lca.pw, tglx@linutronix.de,
- akpm@linux-foundation.org, Kalle Valo <kvalo@codeaurora.org>,
- Network Development <netdev@vger.kernel.org>, schlad@suse.de,
- LKML <linux-kernel@vger.kernel.org>, Luis Chamberlain <mcgrof@kernel.org>,
- jeyu@kernel.org, Johannes Berg <johannes@sipsolutions.net>,
- "David S. Miller" <davem@davemloft.net>
+Cc: linux-wireless@vger.kernel.org, aquini@redhat.com, peterz@infradead.org,
+ daniel.vetter@ffwll.ch, mchehab+samsung@kernel.org, will@kernel.org,
+ greearb@candelatech.com, bhe@redhat.com, briannorris@chromium.org,
+ ath10k@lists.infradead.org, derosier@gmail.com, tiwai@suse.de,
+ mingo@redhat.com, dyoung@redhat.com, pmladek@suse.com, jiri@resnulli.us,
+ keescook@chromium.org, arnd@arndb.de, gpiccoli@canonical.com,
+ rostedt@goodmis.org, cai@lca.pw, tglx@linutronix.de,
+ andriy.shevchenko@linux.intel.com, kvalo@codeaurora.org,
+ netdev@vger.kernel.org, schlad@suse.de, linux-kernel@vger.kernel.org,
+ Luis Chamberlain <mcgrof@kernel.org>, jeyu@kernel.org,
+ akpm@linux-foundation.org, davem@davemloft.net
+Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
+On Fri, 22 May 2020 22:46:07 +0200 Johannes Berg wrote:
+> > The irony is you have a problem with a networking device and all the
+> > devices your initial set touched are networking. Two of the drivers 
+> > you touched either have or will soon have devlink health reporters
+> > implemented.  
+> 
+> Like I said above, do you think it'd be feasible to make a devcoredump
+> out of devlink health reports? And can the report be in a way that we
+> control the file format, or are there limits? I guess I should read the
+> code to find out, but I figure you probably just know. But feel free to
+> tell me to read it :)
+> 
+> The reason I'm asking is that it's starting to sound like we really
+> ought to be implementing devlink, but we've got a bunch of
+> infrastructure that uses the devcoredump, and it'll take time
+> (significantly so) to change all that...
 
+In devlink world pure FW core dumps are exposed by devlink regions.
+An API allowing reading device memory, registers, etc., but also 
+creating dumps of memory regions when things go wrong. It should be
+a fairly straightforward migration.
 
-On 05/25/2020 02:07 AM, Andy Shevchenko wrote:
-> On Fri, May 22, 2020 at 04:23:55PM -0700, Steve deRosier wrote:
->> On Fri, May 22, 2020 at 2:51 PM Luis Chamberlain <mcgrof@kernel.org> wrote:
->
->> I had to go RTFM re: kernel taints because it has been a very long
->> time since I looked at them. It had always seemed to me that most were
->> caused by "kernel-unfriendly" user actions.  The most famous of course
->> is loading proprietary modules, out-of-tree modules, forced module
->> loads, etc...  Honestly, I had forgotten the large variety of uses of
->> the taint flags. For anyone who hasn't looked at taints recently, I
->> recommend: https://www.kernel.org/doc/html/latest/admin-guide/tainted-kernels.html
->>
->> In light of this I don't object to setting a taint on this anymore.
->> I'm a little uneasy, but I've softened on it now, and now I feel it
->> depends on implementation.
->>
->> Specifically, I don't think we should set a taint flag when a driver
->> easily handles a routine firmware crash and is confident that things
->> have come up just fine again. In other words, triggering the taint in
->> every driver module where it spits out a log comment that it had a
->> firmware crash and had to recover seems too much. Sure, firmware
->> shouldn't crash, sure it should be open source so we can fix it,
->> whatever...
->
-> While it may sound idealistic the firmware for the end-user, and even for mere
-> kernel developer like me, is a complete blackbox which has more access than
-> root user in the kernel. We have tons of firmwares and each of them potentially
-> dangerous beast. As a user I really care about my data and privacy (hacker can
-> oops a firmware in order to set a specific vector attack). So, tainting kernel
-> is _a least_ we can do there, the strict rules would be to reboot immediately.
->
->> those sort of wishful comments simply ignore reality and
->> our ability to affect effective change.
->
-> We can encourage users not to buy cheap crap for the starter.
+Devlink health is more targeted, the dump is supposed to contain only
+relevant information, selected and formatted by the driver. When device
+misbehaves driver reads the relevant registers and FW state and creates
+a formatted state dump. I believe each element of the dump must fit
+into a netlink message (but there may be multiple elements, see
+devlink_fmsg_prepare_skb()).
 
-There is no stable wifi firmware for any price.
+We should be able to convert dl-regions dumps and dl-health dumps into
+devcoredumps, but since health reporters are supposed to be more
+targeted there's usually multiple of them per device.
 
-There is also no obvious feedback from even name-brand NICs like ath10k or AX200
-when you report a crash.
-
-That said, at least in my experience with ath10k-ct, the OS normally recovers fine
-from firmware crashes.  ath10k already reports full crash reports on udev, so
-easy for user-space to notice and report bug reports upstream if it cares to.  Probably
-other NICs do the same, and if not, they certainly could.
-
-Thanks,
-Ben
-
-
--- 
-Ben Greear <greearb@candelatech.com>
-Candela Technologies Inc  http://www.candelatech.com
+Conversely devcoredumps can be trivially exposed as dl-region dumps,
+but I believe dl-health would require driver changes to format the
+information appropriately.
 
 _______________________________________________
 ath10k mailing list
