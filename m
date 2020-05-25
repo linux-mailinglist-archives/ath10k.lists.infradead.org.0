@@ -2,74 +2,93 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0938B1E0AA6
-	for <lists+ath10k@lfdr.de>; Mon, 25 May 2020 11:32:39 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A3FFA1E0BF2
+	for <lists+ath10k@lfdr.de>; Mon, 25 May 2020 12:38:32 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
-	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=ynQBwHBWcBjdtk146PI5cYUnQAgz0ryKXgESAxOf0jo=; b=ujGrN0LkVS6TAphnXx2h53Hsg
-	8gnaRtThJbh6+3+4B0uG7t3cE3o1l2pBlP4ZsqhYfDqDHqX7bnAX7XIvMCROpE43a+aP/LbofRhUs
-	PhKfi1GqFbruH1lHTz1l4y0+baMOjYUsQmBV5UuYp4ClTANXmiycV+jWDQs9PndukIxoAipxx0prB
-	si36Qkcb8wG6W/bKTDQDStru/DKqvU67/1aB1ERut2Hj5UGKPgbqm+Pn8fbXU+Q0dzGYT7hmp9deo
-	H2XKcG3X+qkB5XuF73gNElzsdHMp75pfW770P6QB8CDiSVBnYgqgId4S5w8TBkxBJSmbbLmWFkh4d
-	KA0JqNmxA==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
+	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=/SqCSCnVacZ4fcPP2IvAuE1TCz+bp95RiCPwzMoOpMU=; b=LwS3hqsFcPSy4g
+	Np7B67yHH9SkJJLJxRov54y0oVbzm5R0Br725W31Tum0IMvbl9g68gzOCdbWAu1Ufsyk2l19kSp3l
+	VUnOk9rEVwgXC56gu/fWkLcDL6QseTlJKOmw8h74QGEsC3keXpe2EI2kswNTdZYKYgWtf+9luCqN3
+	E8bdyJSjq1di9y/5B+LLUE3i4YouDCqqHFzipIfti3e76/otzbzenSIfZ3KqbnbM8eBqdaioh8MpG
+	yXm24ZwHY0M6vvUJuFcyg1SailZ7FgrFDsxl0m/5D0fmXGq6SnTTnRJ5EHRLT6VnTDwnMA+WNrYX9
+	FhFczauddbA7ACs66ArA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jd9TJ-0002FJ-Df; Mon, 25 May 2020 09:32:37 +0000
-Received: from mail.as201155.net ([185.84.6.188])
+	id 1jdAV3-0007k4-38; Mon, 25 May 2020 10:38:29 +0000
+Received: from mail26.static.mailgun.info ([104.130.122.26])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jd9Oa-0003uJ-FJ
- for ath10k@lists.infradead.org; Mon, 25 May 2020 09:27:48 +0000
-Received: from smtps.newmedia-net.de ([2a05:a1c0:0:de::167]:39664
- helo=webmail.newmedia-net.de)
- by mail.as201155.net with esmtps (TLSv1:DHE-RSA-AES256-SHA:256)
- (Exim 4.82_1-5b7a7c0-XX) (envelope-from <s.gottschall@dd-wrt.com>)
- id 1jd9OT-0002hK-0v; Mon, 25 May 2020 11:27:37 +0200
-X-CTCH-RefID: str=0001.0A782F27.5ECB8F3C.0059, ss=1, re=0.000, recu=0.000,
- reip=0.000, cl=1, cld=1, fgs=0
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=dd-wrt.com;
- s=mikd; 
- h=Content-Transfer-Encoding:Content-Type:In-Reply-To:MIME-Version:Date:Message-ID:From:References:Cc:To:Subject;
- bh=183n2q30X9kt5G1Y+EJed/eLG0YBkkzBC4KGB3jOM8E=; 
- b=CpCBJMCjF0CH1RHbOed5fvJfZz5JbQs6vDFdd0ehaqdRUCA2u+P2ai4e9llzsjTejNUcloORBir7nOCARXV0gCn0F/Od3Q0TrzQGiWH1S9A1adgueSsV7cbsyOFWRv7C1eOWOT5YJSnAAOEGvIyxc5sget8tv/TRyb+h+ogMajU=;
-Subject: Re: [PATCH v13] ath10k: add LED and GPIO controlling support for
- various chipsets
-To: Sven Eckelmann <sven@narfation.org>
-References: <1523027875-5143-1-git-send-email-kvalo@codeaurora.org>
- <2468724.JaAZLprVu6@bentobox>
- <b23e65cf-4be7-72db-7955-32eae196953e@dd-wrt.com>
- <3608947.bSrYYtX6KI@bentobox>
-From: Sebastian Gottschall <s.gottschall@dd-wrt.com>
-Message-ID: <309af858-7e38-17fa-a1db-6b9ce8544ef5@dd-wrt.com>
-Date: Mon, 25 May 2020 11:27:34 +0200
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:77.0) Gecko/20100101
- Thunderbird/77.0
+ id 1jdAUu-0007gO-Qz
+ for ath10k@lists.infradead.org; Mon, 25 May 2020 10:38:23 +0000
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
+ q=dns/txt; 
+ s=smtp; t=1590403102; h=Content-Transfer-Encoding: Content-Type:
+ MIME-Version: Message-ID: In-Reply-To: Date: References: Subject: Cc:
+ To: From: Sender; bh=p5zd7PVv8BmxBXahwLnGClMRyyZ7c+gCoFns6BFp21Y=;
+ b=LUAB+Ybsbd1LOkffNwXB7ub90kpwG57cOmwt6ZdjznpwxoyxuEsF/ackxeJtt1jCXdIHub6N
+ D9KHu3W0MueNaxJNtX7oGQWUMb8kjU4NTGdJEc4WKN812mTr3i6PtAcDG5P0QHTuQ0Gn2+jN
+ 9AxQwZ6tjrDew2GxaU6hfr/3zZ4=
+X-Mailgun-Sending-Ip: 104.130.122.26
+X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
+Received: from smtp.codeaurora.org
+ (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171]) by
+ smtp-out-n03.prod.us-east-1.postgun.com with SMTP id
+ 5ecba0178cd231c403f8e0c1 (version=TLS1.2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256); Mon, 25 May 2020 10:38:15
+ GMT
+Received: by smtp.codeaurora.org (Postfix, from userid 1001)
+ id 7798BC43387; Mon, 25 May 2020 10:38:14 +0000 (UTC)
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ aws-us-west-2-caf-mail-1.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,SPF_NONE
+ autolearn=unavailable autolearn_force=no version=3.4.0
+Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
+ [88.114.240.156])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested) (Authenticated sender: kvalo)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id E2B64C433C6;
+ Mon, 25 May 2020 10:38:09 +0000 (UTC)
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org E2B64C433C6
+Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
+ spf=none smtp.mailfrom=kvalo@codeaurora.org
+From: Kalle Valo <kvalo@codeaurora.org>
+To: Pali =?utf-8?Q?Roh=C3=A1r?= <pali@kernel.org>
+Subject: Re: [PATCH 03/11] mmc: sdio: Move SDIO IDs from mwifiex driver to
+ common include file
+References: <20200522144412.19712-1-pali@kernel.org>
+ <20200522144412.19712-4-pali@kernel.org>
+Date: Mon, 25 May 2020 13:38:07 +0300
+In-Reply-To: <20200522144412.19712-4-pali@kernel.org> ("Pali
+ \=\?utf-8\?Q\?Roh\?\= \=\?utf-8\?Q\?\=C3\=A1r\=22's\?\= message
+ of "Fri, 22 May 2020 16:44:04 +0200")
+Message-ID: <87ftbo9u5s.fsf@codeaurora.org>
+User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/24.5 (gnu/linux)
 MIME-Version: 1.0
-In-Reply-To: <3608947.bSrYYtX6KI@bentobox>
-X-Received: from [2a01:7700:8040:4000:a1fd:236:8557:c23a]
- by webmail.newmedia-net.de with esmtpa (Exim 4.72)
- (envelope-from <s.gottschall@dd-wrt.com>)
- id 1jd9KM-00053m-6T; Mon, 25 May 2020 11:23:22 +0200
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200525_022744_751013_E0D94D22 
-X-CRM114-Status: GOOD (  15.67  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200525_033822_202280_5D4B2473 
+X-CRM114-Status: UNSURE (   9.13  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [104.130.122.26 listed in list.dnswl.org]
+ 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [104.130.122.26 listed in wl.mailspike.net]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
+ 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -81,73 +100,27 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
- John Crispin <john@phrozen.org>,
- Sebastian Gottschall <s.gottschall@newmedia-net.de>,
- openwrt-devel@lists.openwrt.org, Ansuel Smith <ansuelsmth@gmail.com>,
- Kalle Valo <kvalo@codeaurora.org>
-Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
+Cc: brcm80211-dev-list.pdl@broadcom.com, Ulf Hansson <ulf.hansson@linaro.org>,
+ libertas-dev@lists.infradead.org, Xinming Hu <huxinming820@gmail.com>,
+ linux-wireless@vger.kernel.org, linux-mmc@vger.kernel.org,
+ linux-kernel@vger.kernel.org, Amitkumar Karwar <amitkarwar@gmail.com>,
+ Marek =?utf-8?Q?Beh=C3=BAn?= <marek.behun@nic.cz>,
+ Ganapathi Bhat <ganapathi.bhat@nxp.com>, ath10k@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Mauro Carvalho Chehab <mchehab@kernel.org>, brcm80211-dev-list@cypress.com,
+ b43-dev@lists.infradead.org
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-
-Am 25.05.2020 um 11:22 schrieb Sven Eckelmann:
-> On Wednesday, 20 May 2020 09:39:45 CEST Sebastian Gottschall wrote:
-> [...]
->> could somone clarify the state here and why it was dropped?
->> the original patch i wrote does exclude the soc chipsets, but the patch
->> was later reorganized and some part have been rewritten
->> so i'm not sure if it covers the scenario mentioned here, which i did
-> [...]
->>> This patch was imported to OpenWrt in commit 61d57a2f88b9 ("mac80211: ath10k
->>> add leds support") and broke the 11s support for IPQ4019 and QCA4019 (5GHz)
->>> firmware versions 10.4-3.5.3-00053, 10.4-3.5.3-00057, 10.4-3.6-00140:
-> Just noticed that there was a copy and paste error in my message. The 5GHz was
-> an QCA9888 [1,2] and not an QCA4019. Otherwise the _pci error wouldn't have made
-> any sense.
->
-> And I can only say at the moment (remember that this was observer 14 months
-> ago), that it could be reproduced easily on IPQ40xx with an QCA9888 and the
-> given config running OpenWrt reboot-9440-g0f89c17b57. The diffconfig (seed) of
-> the installation was:
->
->      CONFIG_TARGET_ipq40xx=y
->      CONFIG_TARGET_ipq40xx_generic=y
->      CONFIG_TARGET_ipq40xx_generic_DEVICE_openmesh_a62=y
->      CONFIG_ATH10K_LEDS=y
->      CONFIG_PACKAGE_ath10k-firmware-qca4019=y
->      # CONFIG_PACKAGE_ath10k-firmware-qca4019-ct is not set
->      CONFIG_PACKAGE_ath10k-firmware-qca9888=y
->      # CONFIG_PACKAGE_ath10k-firmware-qca9888-ct is not set
->      CONFIG_PACKAGE_kmod-ath10k=y
->      # CONFIG_PACKAGE_kmod-ath10k-ct is not set
->      # CONFIG_PACKAGE_kmod-hwmon-core is not set
->
-> And it still can with this OpenWrt version. But it doesn't seem to happen with
-> the most recent OpenWrt reboot-13353-gb1604b744b. But there are nearly 4000
-> commits inbetween. So no idea what changed (just a timing thing or an actual
-> fix - no idea).
->
-> Btw. the wireless config was given in the original mail [2,3]
->
-> Kind regards,
-> 	Sven
-maybe openwrt installs a default trigger which doesnt make sense if 
-nothing is connected to the cards gpio.
-we can also modify the patch to exclude the 9888 from led support. you 
-just need to remove the led_pin defintion from the hw definition.
-this patch is mainly for wireless routers like the netgear r7800, r9000 
-and some tplink archer models. it also works on mikrotik qca988x cards.
-but even if the led_pin is set, it should not trigger any action until a 
-led trigger is set with sysfs. such configurations should be 
-architecture specific in any way
-
-Sebastian
-
-
-
-_______________________________________________
-ath10k mailing list
-ath10k@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/ath10k
+UGFsaSBSb2jDoXIgPHBhbGlAa2VybmVsLm9yZz4gd3JpdGVzOgoKPiBBZGQgX1dMQU4gc3VmZml4
+IHRvIG1hY3JvIG5hbWVzIGZvciBjb25zaXN0ZW5jeSB3aXRoIG90aGVyIE1hcnZlbGwgbWFjcm9z
+Lgo+IFRoZXNlIElEcyByZXByZXNlbnRzIHdsYW4gZnVuY3Rpb24gb2YgY29tYm8gYnQvd2xhbiBj
+YXJkcy4gT3RoZXIgZnVuY3Rpb25zCj4gb2YgdGhlc2UgY2FyZHMgaGF2ZSBkaWZmZXJlbnQgSURz
+Lgo+Cj4gU2lnbmVkLW9mZi1ieTogUGFsaSBSb2jDoXIgPHBhbGlAa2VybmVsLm9yZz4KCkFja2Vk
+LWJ5OiBLYWxsZSBWYWxvIDxrdmFsb0Bjb2RlYXVyb3JhLm9yZz4KCi0tIApodHRwczovL3dpcmVs
+ZXNzLndpa2kua2VybmVsLm9yZy9lbi9kZXZlbG9wZXJzL2RvY3VtZW50YXRpb24vc3VibWl0dGlu
+Z3BhdGNoZXMKCl9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
+CmF0aDEwayBtYWlsaW5nIGxpc3QKYXRoMTBrQGxpc3RzLmluZnJhZGVhZC5vcmcKaHR0cDovL2xp
+c3RzLmluZnJhZGVhZC5vcmcvbWFpbG1hbi9saXN0aW5mby9hdGgxMGsK
