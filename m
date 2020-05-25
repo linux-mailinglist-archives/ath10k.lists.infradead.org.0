@@ -2,71 +2,66 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id EF3FE1E09BA
-	for <lists+ath10k@lfdr.de>; Mon, 25 May 2020 11:08:32 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C9E121E0A9F
+	for <lists+ath10k@lfdr.de>; Mon, 25 May 2020 11:31:58 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=dW1EbYvMtAB9gXMl0Ak+xNC1/wXcZSNo2mq+Lxhxz80=; b=doLSD1j919t5mC
-	dhyyoUNjNPJHTv3+hqlL67syDDD1VMysR6FF4luSSQD96sgMP21oyfHrAdJEWn/YqJO4IAmLP7onM
-	t9VWZZr7oo4qNR3S9UiZ3TP/TAyO8264I8fJiBLJ0j4+SxbDXG3k+RK7feu66mleWpub15ibzhdzA
-	xnQxQPNEYGF+9DIZ/5m5AKSNrCLowopxfPzfF4j4EeA+fwRhMSXol+sIon6hYv33tQnvuuDVoMJr9
-	cc5z8NEH+nHkt/G6z82cg1pf5Ak9b/yC149tnrnvaq7fy6cjMB7pZVuI6xw6zQ3h8ie3UkT+YeCFE
-	ovQeh1aCy1mfi6Gtzg/A==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:Cc:
+	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
+	MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:To:From:Reply-To:
+	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=k6taG1bUGCHbfkWF5M+QLsXZ8QtLFEtLFUMs4ORuSVo=; b=JLZV+mP/AJJiTZR8DgM+zCbi/
+	XLpvaIc0KmxssMYIxJPUEaFs40n4VzO46P8cK363vRXGBqspPNpC6+HAoJ4ne/VoBPTxYmb0uDY9w
+	+6XKz0NcE3BfTXJak7f7XznC0Rn8b3aknfMGpEjzyDiyffPT/XkVJUy4VJQla3RBLpxAsJOpQZQHe
+	Rfc82CNGqgu39bBhO5ZGS+EGdfeSRUnIymXeiAA4goVpnMhq9eGUaluCUyvlzY9d0BpXUzva2OIsT
+	NfiNFvghzgj+H7+Z478x+gkEIwKF/g1JJu0C0t5IVnSPhIdjnJjrJTo+FvMtUvqM7P57dfJ704vSf
+	SGx7Gdftw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jd95y-0008Ea-Bx; Mon, 25 May 2020 09:08:30 +0000
-Received: from mga11.intel.com ([192.55.52.93])
+	id 1jd9Sc-0001Ub-Mr; Mon, 25 May 2020 09:31:54 +0000
+Received: from dvalin.narfation.org ([213.160.73.56])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jd95R-0007qy-Ir
- for ath10k@lists.infradead.org; Mon, 25 May 2020 09:07:59 +0000
-IronPort-SDR: 7vdT6mH8xZpvJuA/kj2kDWGg6+HyyAN2XhIt19EenGUoA6xdIId16jUY6GZrFTg8xKP3k53Rut
- RJqF/uTB4jlg==
-X-Amp-Result: SKIPPED(no attachment in message)
-X-Amp-File-Uploaded: False
-Received: from orsmga008.jf.intel.com ([10.7.209.65])
- by fmsmga102.fm.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
- 25 May 2020 02:07:55 -0700
-IronPort-SDR: 2hLbY16UNixp9uKwA+HoIovAgK51uxmidktw1TbuKfD5n9hRLrdAJfizedCATlB4/xfOf6J+bL
- +7VHvJIgi+Cg==
-X-ExtLoop1: 1
-X-IronPort-AV: E=Sophos;i="5.73,432,1583222400"; d="scan'208";a="301770713"
-Received: from smile.fi.intel.com (HELO smile) ([10.237.68.40])
- by orsmga008.jf.intel.com with ESMTP; 25 May 2020 02:07:47 -0700
-Received: from andy by smile with local (Exim 4.93)
- (envelope-from <andriy.shevchenko@linux.intel.com>)
- id 1jd95J-008ktF-4y; Mon, 25 May 2020 12:07:49 +0300
-Date: Mon, 25 May 2020 12:07:49 +0300
-From: Andy Shevchenko <andriy.shevchenko@linux.intel.com>
-To: Steve deRosier <derosier@gmail.com>
-Subject: Re: [RFC 1/2] devlink: add simple fw crash helpers
-Message-ID: <20200525090749.GJ1634618@smile.fi.intel.com>
-References: <20200519010530.GS11244@42.do-not-panic.com>
- <20200519211531.3702593-1-kuba@kernel.org>
- <20200522052046.GY11244@42.do-not-panic.com>
- <20200522101738.1495f4cc@kicinski-fedora-pc1c0hjn.dhcp.thefacebook.com>
- <2e5199edb433c217c7974ef7408ff8c7253145b6.camel@sipsolutions.net>
- <20200522215145.GC11244@42.do-not-panic.com>
- <CALLGbR+QPcECtJbYmzztV_Qysc5qtwujT_qc785zvhZMCH50fg@mail.gmail.com>
+ id 1jd9JN-0005JJ-Fo
+ for ath10k@lists.infradead.org; Mon, 25 May 2020 09:22:28 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=narfation.org;
+ s=20121; t=1590398536;
+ h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+ to:to:cc:cc:mime-version:mime-version:content-type:content-type:
+ in-reply-to:in-reply-to:references:references;
+ bh=rc63LKazKJ42gCxrKydqcK9JdD5SREUWcGPPhltHNEE=;
+ b=sbFk6falZc9RXyaWKLibbda8wt0DBRNXzdFTz1ZysCgsLI4WQup6umnmKY4bgelNI7PiwV
+ jWCUZqR2lVoeYl3FKZTdXEPdlBhEG938wPtCCd9t6csN+DKBfK7SQTCOLA1ZyQ/VHS5bgt
+ 4MUfx6oXr+9XSDHz/MIWS3ZzEaCDzGM=
+From: Sven Eckelmann <sven@narfation.org>
+To: Sebastian Gottschall <s.gottschall@dd-wrt.com>
+Subject: Re: [PATCH v13] ath10k: add LED and GPIO controlling support for
+ various chipsets
+Date: Mon, 25 May 2020 11:22:13 +0200
+Message-ID: <3608947.bSrYYtX6KI@bentobox>
+In-Reply-To: <b23e65cf-4be7-72db-7955-32eae196953e@dd-wrt.com>
+References: <1523027875-5143-1-git-send-email-kvalo@codeaurora.org>
+ <2468724.JaAZLprVu6@bentobox>
+ <b23e65cf-4be7-72db-7955-32eae196953e@dd-wrt.com>
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <CALLGbR+QPcECtJbYmzztV_Qysc5qtwujT_qc785zvhZMCH50fg@mail.gmail.com>
-Organization: Intel Finland Oy - BIC 0357606-4 - Westendinkatu 7, 02160 Espoo
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200525_020757_688885_8BC1179B 
-X-CRM114-Status: GOOD (  20.12  )
-X-Spam-Score: -5.0 (-----)
+X-CRM114-CacheID: sfid-20200525_022221_865723_DE087D0D 
+X-CRM114-Status: GOOD (  11.19  )
+X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-5.0 points)
+ Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [192.55.52.93 listed in list.dnswl.org]
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [213.160.73.56 listed in list.dnswl.org]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -78,76 +73,108 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless <linux-wireless@vger.kernel.org>, aquini@redhat.com,
- peterz@infradead.org, Daniel Vetter <daniel.vetter@ffwll.ch>,
- mchehab+samsung@kernel.org, will@kernel.org,
- Ben Greear <greearb@candelatech.com>, bhe@redhat.com, briannorris@chromium.org,
- ath10k@lists.infradead.org, Takashi Iwai <tiwai@suse.de>, mingo@redhat.com,
- Jakub Kicinski <kuba@kernel.org>, dyoung@redhat.com, pmladek@suse.com,
- jiri@resnulli.us, Kees Cook <keescook@chromium.org>, arnd@arndb.de,
- gpiccoli@canonical.com, rostedt@goodmis.org, cai@lca.pw, tglx@linutronix.de,
- Johannes Berg <johannes@sipsolutions.net>, Kalle Valo <kvalo@codeaurora.org>,
- Network Development <netdev@vger.kernel.org>, schlad@suse.de,
- LKML <linux-kernel@vger.kernel.org>, Luis Chamberlain <mcgrof@kernel.org>,
- jeyu@kernel.org, akpm@linux-foundation.org,
- "David S. Miller" <davem@davemloft.net>
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
+ John Crispin <john@phrozen.org>,
+ Sebastian Gottschall <s.gottschall@newmedia-net.de>,
+ openwrt-devel@lists.openwrt.org, Ansuel Smith <ansuelsmth@gmail.com>,
+ Kalle Valo <kvalo@codeaurora.org>
+Content-Type: multipart/mixed; boundary="===============8211223660415021630=="
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On Fri, May 22, 2020 at 04:23:55PM -0700, Steve deRosier wrote:
-> On Fri, May 22, 2020 at 2:51 PM Luis Chamberlain <mcgrof@kernel.org> wrote:
+--===============8211223660415021630==
+Content-Type: multipart/signed; boundary="nextPart2460714.mtjQ6OgbZm"; micalg="pgp-sha512"; protocol="application/pgp-signature"
 
-> I had to go RTFM re: kernel taints because it has been a very long
-> time since I looked at them. It had always seemed to me that most were
-> caused by "kernel-unfriendly" user actions.  The most famous of course
-> is loading proprietary modules, out-of-tree modules, forced module
-> loads, etc...  Honestly, I had forgotten the large variety of uses of
-> the taint flags. For anyone who hasn't looked at taints recently, I
-> recommend: https://www.kernel.org/doc/html/latest/admin-guide/tainted-kernels.html
-> 
-> In light of this I don't object to setting a taint on this anymore.
-> I'm a little uneasy, but I've softened on it now, and now I feel it
-> depends on implementation.
-> 
-> Specifically, I don't think we should set a taint flag when a driver
-> easily handles a routine firmware crash and is confident that things
-> have come up just fine again. In other words, triggering the taint in
-> every driver module where it spits out a log comment that it had a
-> firmware crash and had to recover seems too much. Sure, firmware
-> shouldn't crash, sure it should be open source so we can fix it,
-> whatever...
+--nextPart2460714.mtjQ6OgbZm
+Content-Transfer-Encoding: 7Bit
+Content-Type: text/plain; charset="us-ascii"
 
-While it may sound idealistic the firmware for the end-user, and even for mere
-kernel developer like me, is a complete blackbox which has more access than
-root user in the kernel. We have tons of firmwares and each of them potentially
-dangerous beast. As a user I really care about my data and privacy (hacker can
-oops a firmware in order to set a specific vector attack). So, tainting kernel
-is _a least_ we can do there, the strict rules would be to reboot immediately.
+On Wednesday, 20 May 2020 09:39:45 CEST Sebastian Gottschall wrote:
+[...]
+> could somone clarify the state here and why it was dropped?
+> the original patch i wrote does exclude the soc chipsets, but the patch 
+> was later reorganized and some part have been rewritten
+> so i'm not sure if it covers the scenario mentioned here, which i did 
+[...]
+> > This patch was imported to OpenWrt in commit 61d57a2f88b9 ("mac80211: ath10k
+> > add leds support") and broke the 11s support for IPQ4019 and QCA4019 (5GHz)
+> > firmware versions 10.4-3.5.3-00053, 10.4-3.5.3-00057, 10.4-3.6-00140:
 
-> those sort of wishful comments simply ignore reality and
-> our ability to affect effective change.
+Just noticed that there was a copy and paste error in my message. The 5GHz was 
+an QCA9888 [1,2] and not an QCA4019. Otherwise the _pci error wouldn't have made 
+any sense.
 
-We can encourage users not to buy cheap crap for the starter.
+And I can only say at the moment (remember that this was observer 14 months 
+ago), that it could be reproduced easily on IPQ40xx with an QCA9888 and the 
+given config running OpenWrt reboot-9440-g0f89c17b57. The diffconfig (seed) of 
+the installation was:
 
-> A lot of WiFi firmware crashes
-> and for well-known cases the drivers handle them well. And in some
-> cases, not so well and that should be a place the driver should detect
-> and thus raise a red flag.  If a WiFi firmware crash can bring down
-> the kernel, there's either a major driver bug or some very funky
-> hardware crap going on. That sort of thing we should be able to
-> detect, mark with a taint (or something), and fix if within our sphere
-> of influence. I guess what it comes down to me is how aggressive we
-> are about setting the flag.
+    CONFIG_TARGET_ipq40xx=y
+    CONFIG_TARGET_ipq40xx_generic=y
+    CONFIG_TARGET_ipq40xx_generic_DEVICE_openmesh_a62=y
+    CONFIG_ATH10K_LEDS=y
+    CONFIG_PACKAGE_ath10k-firmware-qca4019=y
+    # CONFIG_PACKAGE_ath10k-firmware-qca4019-ct is not set
+    CONFIG_PACKAGE_ath10k-firmware-qca9888=y
+    # CONFIG_PACKAGE_ath10k-firmware-qca9888-ct is not set
+    CONFIG_PACKAGE_kmod-ath10k=y
+    # CONFIG_PACKAGE_kmod-ath10k-ct is not set
+    # CONFIG_PACKAGE_kmod-hwmon-core is not set
 
--- 
-With Best Regards,
-Andy Shevchenko
+And it still can with this OpenWrt version. But it doesn't seem to happen with 
+the most recent OpenWrt reboot-13353-gb1604b744b. But there are nearly 4000 
+commits inbetween. So no idea what changed (just a timing thing or an actual 
+fix - no idea).
+
+Btw. the wireless config was given in the original mail [2,3]
+
+Kind regards,
+	Sven
+
+[1] https://openwrt.org/toh/hwdata/open-mesh/open-mesh_a62
+[2] https://patchwork.kernel.org/patch/10723033/#22502191
+[3] https://patchwork.kernel.org/patch/10327075/#22502179
+--nextPart2460714.mtjQ6OgbZm
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: This is a digitally signed message part.
+Content-Transfer-Encoding: 7Bit
+
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAABCgAdFiEEF10rh2Elc9zjMuACXYcKB8Eme0YFAl7LjkUACgkQXYcKB8Em
+e0YH8xAAg6aeHEscaqQ7cvLRA1v9ipqIz4bNIUte+dpOzinFIIAVW5bHwYVF0GZT
+L2Ft9lIMLrSLuFZ/PKNlqnS2Ke+ReB2796DYGAY4rw2glSr3A4YH9/IsOwJgXHp3
+tvS6sxdWDyBHXiYS+WkviGdwyyZX+GR3qgJLOagO8dbN/vEZARMTPmyKaP3YDOcC
+RghlJq+1wJGaKdaOG9BE3s4bh5puSg/czAKtYKPgHXYJBJFWIziLuhUYYSAOhLy6
+VbHr6d45nymssAQqtoUK0pnccLUI6V3JXGhmmH/yVs1aayE4txjvMPEj5aP3ZP6d
+2WRa+812FKwLnXOpRIfFgpx6WSElAk+QShbAzqwJ9HFn/dYfm2HOjui6oqU8xD04
+fHbMF4CA9p4zue4t4ClDYTKURqzutg7wLva/vKVN/ovyu0ZQKM+9o/nJu6wkth9g
+hUQllRdH9nWJiJvGlzWzYVxrMmDDa4Gvi3socbZ6zuCbIWLFWNsNsU77WKf7Od+Q
+dEPoRFEyyz7yeEQCWl+AMY20PjdGdWWG+JYHx89+/aIDyLhp3K1BHDpSToe86aCG
+8PiGV48W6NI79IqEoVeyQtenTAmpj0bizdQw5frylK2XDA7ofnEhU4+W8V8Cv9QF
+ARACuJMgtl1FbLS8jWOJP2KAFYOG8upZWbIu3bASQnJ5s9LWvYg=
+=B32t
+-----END PGP SIGNATURE-----
+
+--nextPart2460714.mtjQ6OgbZm--
 
 
+
+
+
+--===============8211223660415021630==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
 
 _______________________________________________
 ath10k mailing list
 ath10k@lists.infradead.org
 http://lists.infradead.org/mailman/listinfo/ath10k
+
+--===============8211223660415021630==--
+
+
+
+
