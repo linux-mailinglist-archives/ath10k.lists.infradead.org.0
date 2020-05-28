@@ -2,59 +2,60 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5C5821E54A4
-	for <lists+ath10k@lfdr.de>; Thu, 28 May 2020 05:26:34 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id AB52E1E554A
+	for <lists+ath10k@lfdr.de>; Thu, 28 May 2020 07:03:08 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Cc:List-Subscribe:
 	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Content-Type:
 	MIME-Version:Message-ID:Subject:To:From:Date:Reply-To:
 	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
 	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
-	References:List-Owner; bh=rV3UM3zAQgFUi51GHrU7p6amVTlQBJdvlWu7vZw4guA=; b=RmS
-	nj/ucHhnKuuimFHQ8AIA5BK3X9fpnLZpzTg8PMx2kKqbgO82S9ey/2lgkQEXdyDZrHjmIScXVbhxc
-	hLZBPhVbJf2vprZOoa8thvGp5rj+5H6xZnfLFfLqshMR/kqzxrM7+IXgUuLMvBL9FJ8xcwNwYxOA5
-	YnZTNZ07hvBY05Hug9rBBXsIHx+kz62pQ321MVqxh0HBo9QovPKtBlmnlECEIcHKlk4LZ+U/JUMqf
-	1v9AD5FqnevccSLdetFFsd6pBbCaEkfXkyRH9iU5aIpfNfQx9E6Jkca5FxYZDLVUqusPCgKUqhaHG
-	3ExQJ6yzccjRZ6ouc6AYHioj+9YNk2Q==;
+	References:List-Owner; bh=nj+qccBl6digpEwFn6r2tN+9kDOwMoefb8cAvx6cEPc=; b=Hbe
+	oFzwYnc85lDLXsyxYyI/aFw+LEQgR52o11UO9Ja45pTm3HoOFfg5FVJNP8v6UyMojl4W4G6/myeLt
+	6P0UWD8rCnaojMRAI9Pu2bMuhPhpAKzC+kdrJst80JD2phVPiMmaB91fxSCok1JvxWcvoiJUB+ZOn
+	TKC2Vjci6aCu+4UmlEIWcP+OnlPRHlLH82nF8Z5pPTP9TZBTe/5OMod5FwClm/bQYnoNF7SMJLi1E
+	7H28mSEai9sAKvozOfJCxsaY1yAi5UgbDLdqoEJE2YB/A+34kmIDOqmtz0i4obBteW7Ajv/mgxtBW
+	sBAoqYZdw0w6MPUsmGp92P16+TM+zmg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1je9Bg-0001ZQ-Fz; Thu, 28 May 2020 03:26:32 +0000
-Received: from mga09.intel.com ([134.134.136.24])
+	id 1jeAh7-0003kk-2j; Thu, 28 May 2020 05:03:05 +0000
+Received: from mga11.intel.com ([192.55.52.93])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1je9Bb-0001Yp-AA
- for ath10k@lists.infradead.org; Thu, 28 May 2020 03:26:29 +0000
-IronPort-SDR: jDMMbB8a1hRDTKH3FGJL8Nm8QDqJRmTZj8SElCaV+/GJfhF3NLUCB6QxbozH29xIen+lAyx6nL
- 7y00fjsIEP0A==
+ id 1jeAh2-0003k7-IN
+ for ath10k@lists.infradead.org; Thu, 28 May 2020 05:03:02 +0000
+IronPort-SDR: 43h251y/lI1DZrQwNQOOB10qrlTsx2ls7PHo1kotROKRncwGczQiLxgWtityRAk/A/ygpVd2iQ
+ v7JVjvtHvx/w==
 X-Amp-Result: UNKNOWN
 X-Amp-Original-Verdict: FILE UNKNOWN
 X-Amp-File-Uploaded: False
-Received: from orsmga004.jf.intel.com ([10.7.209.38])
- by orsmga102.jf.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
- 27 May 2020 20:26:26 -0700
-IronPort-SDR: IYFAHkvPs+XVzRcF72bduZ1ataBgwqW+Enz99S2lSIm4nS8lcybOplhYDWPBoBAgMf7elV8neM
- Lnb7SW21zLbA==
+Received: from orsmga006.jf.intel.com ([10.7.209.51])
+ by fmsmga102.fm.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
+ 27 May 2020 22:02:56 -0700
+IronPort-SDR: yukhW+ntWv5g3DEh0649Qzg9bYanP8WPozDxbxSFMgY95LbbmcVaN26FKLjYG9Omq45PfbCUK/
+ X5jQDWt6S2VA==
 X-ExtLoop1: 1
 X-IronPort-AV: E=Sophos;i="5.73,443,1583222400"; 
- d="gz'50?scan'50,208,50";a="414453824"
+ d="gz'50?scan'50,208,50";a="270729545"
 Received: from lkp-server01.sh.intel.com (HELO lkp-server01) ([10.239.97.150])
- by orsmga004.jf.intel.com with ESMTP; 27 May 2020 20:26:23 -0700
+ by orsmga006.jf.intel.com with ESMTP; 27 May 2020 22:02:53 -0700
 Received: from kbuild by lkp-server01 with local (Exim 4.89)
  (envelope-from <lkp@intel.com>)
- id 1je9BX-0006WX-5O; Thu, 28 May 2020 11:26:23 +0800
-Date: Thu, 28 May 2020 11:25:58 +0800
+ id 1jeAgu-000ANz-Ux; Thu, 28 May 2020 13:02:52 +0800
+Date: Thu, 28 May 2020 13:02:35 +0800
 From: kbuild test robot <lkp@intel.com>
 To: Carl Huang <cjhuang@codeaurora.org>
-Subject: [ath6kl:ath11k-qca6390-bringup 48/63]
- drivers/net/wireless/ath/ath11k/dp.c:124:5: warning: no previous prototype
- for 'ath11k_dp_srng_calculate_msi_group'
-Message-ID: <202005281155.xTKLyxZF%lkp@intel.com>
+Subject: [ath6kl:ath11k-qca6390-bringup 50/63]
+ drivers/net/wireless/ath/ath11k/debug.c:710:45: error: '(struct
+ dp_rxdma_ring *)&ar->dp.rx_mon_status_refill_ring' is a pointer; did you
+ mean to use '->'?
+Message-ID: <202005281331.LM1igAeV%lkp@intel.com>
 MIME-Version: 1.0
-Content-Type: multipart/mixed; boundary="VbJkn9YxBvnuCH5J"
+Content-Type: multipart/mixed; boundary="/9DWx/yDrRhgMJTb"
 Content-Disposition: inline
 User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200527_202627_453043_CECF2B19 
-X-CRM114-Status: UNSURE (   8.79  )
+X-CRM114-CacheID: sfid-20200527_220300_663916_CB424658 
+X-CRM114-Status: UNSURE (   7.79  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.0 (-----)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -62,12 +63,9 @@ X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [134.134.136.24 listed in list.dnswl.org]
+ high trust [192.55.52.93 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [134.134.136.24 listed in wl.mailspike.net]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -85,116 +83,136 @@ Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
 
---VbJkn9YxBvnuCH5J
+--/9DWx/yDrRhgMJTb
 Content-Type: text/plain; charset=us-ascii
 Content-Disposition: inline
 
 tree:   https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git ath11k-qca6390-bringup
 head:   7f2aca90d49b9d6d85a7d712421e1d02ce4bba2f
-commit: f2748890bfc292723a15221b8c7b40f50d6d9b76 [48/63] ath11k: enable DP interrupt setup for QCA6390
+commit: f4e7ef9fc04c0bb059bc24d4c4130d74882bedb8 [50/63] ath11k: setup QCA6390 rings for both rxdmas
 config: ia64-allmodconfig (attached as .config)
 compiler: ia64-linux-gcc (GCC) 9.3.0
 reproduce (this is a W=1 build):
         wget https://raw.githubusercontent.com/intel/lkp-tests/master/sbin/make.cross -O ~/bin/make.cross
         chmod +x ~/bin/make.cross
-        git checkout f2748890bfc292723a15221b8c7b40f50d6d9b76
+        git checkout f4e7ef9fc04c0bb059bc24d4c4130d74882bedb8
         # save the attached .config to linux build tree
         COMPILER_INSTALL_PATH=$HOME/0day COMPILER=gcc-9.3.0 make.cross ARCH=ia64 
 
 If you fix the issue, kindly add following tag as appropriate
 Reported-by: kbuild test robot <lkp@intel.com>
 
-All warnings (new ones prefixed by >>, old ones prefixed by <<):
+All error/warnings (new ones prefixed by >>, old ones prefixed by <<):
 
->> drivers/net/wireless/ath/ath11k/dp.c:124:5: warning: no previous prototype for 'ath11k_dp_srng_calculate_msi_group' [-Wmissing-prototypes]
-124 | int ath11k_dp_srng_calculate_msi_group(struct ath11k_base *ab,
-|     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+>> drivers/net/wireless/ath/ath11k/hw.c:208:5: warning: no previous prototype for 'ath11k_mac_id_to_pdev_id_ipq8074' [-Wmissing-prototypes]
+208 | int ath11k_mac_id_to_pdev_id_ipq8074(int mac_id)
+|     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+>> drivers/net/wireless/ath/ath11k/hw.c:213:5: warning: no previous prototype for 'ath11k_mac_id_to_srng_id_ipq8074' [-Wmissing-prototypes]
+213 | int ath11k_mac_id_to_srng_id_ipq8074(int mac_id)
+|     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+>> drivers/net/wireless/ath/ath11k/hw.c:218:5: warning: no previous prototype for 'ath11k_mac_id_to_pdev_id_qca6x90' [-Wmissing-prototypes]
+218 | int ath11k_mac_id_to_pdev_id_qca6x90(int mac_id)
+|     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+>> drivers/net/wireless/ath/ath11k/hw.c:223:5: warning: no previous prototype for 'ath11k_mac_id_to_srng_id_qca6x90' [-Wmissing-prototypes]
+223 | int ath11k_mac_id_to_srng_id_qca6x90(int mac_id)
+|     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--
+drivers/net/wireless/ath/ath11k/debug.c: In function 'ath11k_write_extd_rx_stats':
+>> drivers/net/wireless/ath/ath11k/debug.c:710:45: error: '(struct dp_rxdma_ring *)&ar->dp.rx_mon_status_refill_ring' is a pointer; did you mean to use '->'?
+710 |   ring_id = ar->dp.rx_mon_status_refill_ring.refill_buf_ring.ring_id;
+|                                             ^
+|                                             ->
 
-vim +/ath11k_dp_srng_calculate_msi_group +124 drivers/net/wireless/ath/ath11k/dp.c
+vim +710 drivers/net/wireless/ath/ath11k/debug.c
 
-   123	
- > 124	int ath11k_dp_srng_calculate_msi_group(struct ath11k_base *ab,
-   125					       enum hal_ring_type type, int ring_num)
-   126	{
-   127		const u8 *grp_mask;
-   128	
-   129		switch (type) {
-   130		case HAL_WBM2SW_RELEASE:
-   131			if (ring_num < 3) {
-   132				grp_mask = &ab->ring_mask.tx_ring_mask[0];
-   133			}
-   134			else if (ring_num == 3) {
-   135				grp_mask = &ab->ring_mask.rx_wbm_rel_ring_mask[0];
-   136				ring_num = 0;
-   137			} else {
-   138				return -ENOENT;
-   139			}
-   140		break;
-   141	
-   142		case HAL_REO_EXCEPTION:
-   143			grp_mask = &ab->ring_mask.rx_err_ring_mask[0];
-   144		break;
-   145	
-   146		case HAL_REO_DST:
-   147			grp_mask = &ab->ring_mask.rx_ring_mask[0];
-   148		break;
-   149	
-   150		case HAL_REO_STATUS:
-   151			grp_mask = &ab->ring_mask.reo_status_ring_mask[0];
-   152		break;
-   153	
-   154		case HAL_RXDMA_MONITOR_STATUS:
-   155		case HAL_RXDMA_MONITOR_DST:
-   156			grp_mask = &ab->ring_mask.rx_mon_status_ring_mask[0];
-   157		break;
-   158	
-   159		case HAL_RXDMA_DST:
-   160			grp_mask = &ab->ring_mask.rxdma2host_ring_mask[0];
-   161		break;
-   162	
-   163		case HAL_RXDMA_BUF:
-   164			grp_mask = &ab->ring_mask.host2rxdma_ring_mask[0];
-   165		break;
-   166	
-   167		case HAL_RXDMA_MONITOR_BUF:
-   168			return -ENOENT;
-   169		break;
-   170	
-   171		case HAL_TCL_DATA:
-   172		case HAL_TCL_CMD:
-   173		case HAL_REO_CMD:
-   174		case HAL_SW2WBM_RELEASE:
-   175		case HAL_WBM_IDLE_LINK:
-   176			return -ENOENT;
-   177		break;
-   178	
-   179		case HAL_TCL_STATUS:
-   180		case HAL_REO_REINJECT:
-   181			return -ENOENT;
-   182		break;
-   183	
-   184		case HAL_CE_SRC:
-   185		case HAL_CE_DST:
-   186		case HAL_CE_DST_STATUS:
-   187		default:
-   188			return -ENOENT;
-   189		break;
-   190		}
-   191	
-   192		return ath11k_dp_srng_find_ring_in_mask(ring_num, grp_mask);
-   193	}
-   194	
+d5c65159f28953 Kalle Valo            2019-11-23  657  
+d5c65159f28953 Kalle Valo            2019-11-23  658  static ssize_t ath11k_write_extd_rx_stats(struct file *file,
+d5c65159f28953 Kalle Valo            2019-11-23  659  					  const char __user *ubuf,
+d5c65159f28953 Kalle Valo            2019-11-23  660  					  size_t count, loff_t *ppos)
+d5c65159f28953 Kalle Valo            2019-11-23  661  {
+d5c65159f28953 Kalle Valo            2019-11-23  662  	struct ath11k *ar = file->private_data;
+f4e7ef9fc04c0b Carl Huang            2020-05-27  663  	struct ath11k_base *ab = ar->ab;
+d5c65159f28953 Kalle Valo            2019-11-23  664  	struct htt_rx_ring_tlv_filter tlv_filter = {0};
+d5c65159f28953 Kalle Valo            2019-11-23  665  	u32 enable, rx_filter = 0, ring_id;
+f4e7ef9fc04c0b Carl Huang            2020-05-27  666  	int i;
+d5c65159f28953 Kalle Valo            2019-11-23  667  	int ret;
+d5c65159f28953 Kalle Valo            2019-11-23  668  
+d5c65159f28953 Kalle Valo            2019-11-23  669  	if (kstrtouint_from_user(ubuf, count, 0, &enable))
+d5c65159f28953 Kalle Valo            2019-11-23  670  		return -EINVAL;
+d5c65159f28953 Kalle Valo            2019-11-23  671  
+d5c65159f28953 Kalle Valo            2019-11-23  672  	mutex_lock(&ar->conf_mutex);
+d5c65159f28953 Kalle Valo            2019-11-23  673  
+d5c65159f28953 Kalle Valo            2019-11-23  674  	if (ar->state != ATH11K_STATE_ON) {
+d5c65159f28953 Kalle Valo            2019-11-23  675  		ret = -ENETDOWN;
+d5c65159f28953 Kalle Valo            2019-11-23  676  		goto exit;
+d5c65159f28953 Kalle Valo            2019-11-23  677  	}
+d5c65159f28953 Kalle Valo            2019-11-23  678  
+d5c65159f28953 Kalle Valo            2019-11-23  679  	if (enable > 1) {
+d5c65159f28953 Kalle Valo            2019-11-23  680  		ret = -EINVAL;
+d5c65159f28953 Kalle Valo            2019-11-23  681  		goto exit;
+d5c65159f28953 Kalle Valo            2019-11-23  682  	}
+d5c65159f28953 Kalle Valo            2019-11-23  683  
+d5c65159f28953 Kalle Valo            2019-11-23  684  	if (enable == ar->debug.extd_rx_stats) {
+d5c65159f28953 Kalle Valo            2019-11-23  685  		ret = count;
+d5c65159f28953 Kalle Valo            2019-11-23  686  		goto exit;
+d5c65159f28953 Kalle Valo            2019-11-23  687  	}
+d5c65159f28953 Kalle Valo            2019-11-23  688  
+d5c65159f28953 Kalle Valo            2019-11-23  689  	if (enable) {
+d5c65159f28953 Kalle Valo            2019-11-23  690  		rx_filter =  HTT_RX_FILTER_TLV_FLAGS_MPDU_START;
+d5c65159f28953 Kalle Valo            2019-11-23  691  		rx_filter |= HTT_RX_FILTER_TLV_FLAGS_PPDU_START;
+d5c65159f28953 Kalle Valo            2019-11-23  692  		rx_filter |= HTT_RX_FILTER_TLV_FLAGS_PPDU_END;
+d5c65159f28953 Kalle Valo            2019-11-23  693  		rx_filter |= HTT_RX_FILTER_TLV_FLAGS_PPDU_END_USER_STATS;
+d5c65159f28953 Kalle Valo            2019-11-23  694  		rx_filter |= HTT_RX_FILTER_TLV_FLAGS_PPDU_END_USER_STATS_EXT;
+d5c65159f28953 Kalle Valo            2019-11-23  695  		rx_filter |= HTT_RX_FILTER_TLV_FLAGS_PPDU_END_STATUS_DONE;
+d5c65159f28953 Kalle Valo            2019-11-23  696  
+d5c65159f28953 Kalle Valo            2019-11-23  697  		tlv_filter.rx_filter = rx_filter;
+d5c65159f28953 Kalle Valo            2019-11-23  698  		tlv_filter.pkt_filter_flags0 = HTT_RX_FP_MGMT_FILTER_FLAGS0;
+d5c65159f28953 Kalle Valo            2019-11-23  699  		tlv_filter.pkt_filter_flags1 = HTT_RX_FP_MGMT_FILTER_FLAGS1;
+d5c65159f28953 Kalle Valo            2019-11-23  700  		tlv_filter.pkt_filter_flags2 = HTT_RX_FP_CTRL_FILTER_FLASG2;
+d5c65159f28953 Kalle Valo            2019-11-23  701  		tlv_filter.pkt_filter_flags3 = HTT_RX_FP_CTRL_FILTER_FLASG3 |
+d5c65159f28953 Kalle Valo            2019-11-23  702  			HTT_RX_FP_DATA_FILTER_FLASG3;
+d5c65159f28953 Kalle Valo            2019-11-23  703  	} else {
+d5c65159f28953 Kalle Valo            2019-11-23  704  		tlv_filter = ath11k_mac_mon_status_filter_default;
+d5c65159f28953 Kalle Valo            2019-11-23  705  	}
+d5c65159f28953 Kalle Valo            2019-11-23  706  
+ec48d28ba29194 Maharaja Kennadyrajan 2020-04-10  707  	ar->debug.rx_filter = tlv_filter.rx_filter;
+ec48d28ba29194 Maharaja Kennadyrajan 2020-04-10  708  
+f4e7ef9fc04c0b Carl Huang            2020-05-27  709  	for (i = 0; i < NUM_RXDMA_PER_PDEV; i++) {
+d5c65159f28953 Kalle Valo            2019-11-23 @710  		ring_id = ar->dp.rx_mon_status_refill_ring.refill_buf_ring.ring_id;
+d5c65159f28953 Kalle Valo            2019-11-23  711  		ret = ath11k_dp_tx_htt_rx_filter_setup(ar->ab, ring_id, ar->dp.mac_id,
+d5c65159f28953 Kalle Valo            2019-11-23  712  						       HAL_RXDMA_MONITOR_STATUS,
+d5c65159f28953 Kalle Valo            2019-11-23  713  						       DP_RX_BUFFER_SIZE, &tlv_filter);
+d5c65159f28953 Kalle Valo            2019-11-23  714  
+d5c65159f28953 Kalle Valo            2019-11-23  715  		if (ret) {
+345a4f223a7c9c Colin Ian King        2019-12-11  716  			ath11k_warn(ar->ab, "failed to set rx filter for monitor status ring\n");
+d5c65159f28953 Kalle Valo            2019-11-23  717  			goto exit;
+d5c65159f28953 Kalle Valo            2019-11-23  718  		}
+f4e7ef9fc04c0b Carl Huang            2020-05-27  719  	}
+d5c65159f28953 Kalle Valo            2019-11-23  720  
+d5c65159f28953 Kalle Valo            2019-11-23  721  	ar->debug.extd_rx_stats = enable;
+d5c65159f28953 Kalle Valo            2019-11-23  722  	ret = count;
+d5c65159f28953 Kalle Valo            2019-11-23  723  exit:
+d5c65159f28953 Kalle Valo            2019-11-23  724  	mutex_unlock(&ar->conf_mutex);
+d5c65159f28953 Kalle Valo            2019-11-23  725  	return ret;
+d5c65159f28953 Kalle Valo            2019-11-23  726  }
+d5c65159f28953 Kalle Valo            2019-11-23  727  
+
+:::::: The code at line 710 was first introduced by commit
+:::::: d5c65159f2895379e11ca13f62feabe93278985d ath11k: driver for Qualcomm IEEE 802.11ax devices
+
+:::::: TO: Kalle Valo <kvalo@codeaurora.org>
+:::::: CC: Kalle Valo <kvalo@codeaurora.org>
 
 ---
 0-DAY CI Kernel Test Service, Intel Corporation
 https://lists.01.org/hyperkitty/list/kbuild-all@lists.01.org
 
---VbJkn9YxBvnuCH5J
+--/9DWx/yDrRhgMJTb
 Content-Type: application/gzip
 Content-Disposition: attachment; filename=".config.gz"
 Content-Transfer-Encoding: base64
 
-H4sICHMgz14AAy5jb25maWcAlDxdc9u2su/9FZr0pX1oj7/ipveOH0AQlHBEEgwBylJeOK6j
+H4sICAI3z14AAy5jb25maWcAlDxdc9u2su/9FZr0pX1oj7/ipveOH0AQlHBEEgwBylJeOK6j
 pJ7Gdq4sn3Nyfv3dBb8WIEilnc7E3F0sgcV+A9SPP/y4YK/H58e748P93Zcv3xaf90/7w91x
 /3Hx6eHL/n8XsVrkyixELM2vQJw+PL3+5x8Pd9dXi7e//vbr2S+H+6vFen942n9Z8OenTw+f
 X2H0w/PTDz/+AP//CMDHr8Do8D8LHPTLFxz/y+f7+8VPS85/Xvz+6+WvZ0DIVZ7IZc15LXUN
@@ -1267,7 +1285,7 @@ CWy8UIqMJSHTRvLsYDVw4TQ53n+vc9pBbnkxyxjDDcbVcEc9Vlj3vtTKufWWPZxs0m+v3Dc3
 9JxgdS8dCI6PQHImIZ2GmDGYkp82mRm+I1PQ5mPZ2SeyXRmoffN1rctMogDYESGPLprOM7rW
 pIBr1RRsAV9T5UGNx0Qo0v8/VAtKyzCTAwA=
 
---VbJkn9YxBvnuCH5J
+--/9DWx/yDrRhgMJTb
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -1278,5 +1296,5 @@ ath10k mailing list
 ath10k@lists.infradead.org
 http://lists.infradead.org/mailman/listinfo/ath10k
 
---VbJkn9YxBvnuCH5J--
+--/9DWx/yDrRhgMJTb--
 
