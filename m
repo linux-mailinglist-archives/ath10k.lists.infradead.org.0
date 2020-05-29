@@ -2,119 +2,91 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 214391E7397
-	for <lists+ath10k@lfdr.de>; Fri, 29 May 2020 05:29:10 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 386C51E81E9
+	for <lists+ath10k@lfdr.de>; Fri, 29 May 2020 17:34:53 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
+	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=VYRia3ILnzioQcH80KaGxV2GfO4hrqJfp5URmSE9s+4=; b=E0eWsJ+cDG4AOK
-	yBOFFOYS4ZyiUl/hmbACOpYkQAUcsewIfW0a3zD3naBBuiFdjSIEn9jcO+nR0OYUgUe0e9HU2PHpR
-	DPUhayfd8/t35/wgrmsed36H99INx7Uv2p22WK+2JTSgDWHXRqPGPOXKiDZc8Ye41XeZPFV4hU1Kj
-	uJeVcOZksusEQgNuiJIaS9R21KjNBdYGPDSov05TRfFsz1pwuM2dopbfu+PA2sguRsmv1I6H/k/GU
-	DS3mP76xSh2mJyPC6H9B19FXP+ZSY9c5XedS1h3NL0qjJiW167yQ/vwX6KqZ5vBEkto8H2ccytEpK
-	V6kKy7hBAzdwsdVMrqEQ==;
+	List-Owner; bh=dWzLJrsjOepbbgvYH/pXPKBytVfyuHHLB3+Uaoe7+9A=; b=aX6AhgpFCqkP6P
+	upSIDKQMtOWx5elWfOoTcRDe1S70VqpkrQ05gQRWvaX5hKtzwBAOmXj5EE9VP14AnOnGIbkzmRPma
+	DqydZAWZ9Ty2a3HyvAQdVzwzsU0kmiKWLG7m7oImkVl4jVOr9+516SFFBhXsltuck5ZYBATe7h0M5
+	cX6FSDwVRA8QChwH2fmPf2n03c3FhazUSDRy5JRh2ArpiOmBfviLi01fYsTfNX8uT40+hQdPlwb8W
+	aGe+rbBqO55XGXxRYqeaorDD6A1t8dxoQOlU+WK8debkn18Ef1P9IhfnFoD7VlhMtGVIt617Fm70N
+	E0rOaOGPbI0sa3Bidvdg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jeVhi-0000vJ-66; Fri, 29 May 2020 03:29:06 +0000
-Received: from mail-eopbgr40076.outbound.protection.outlook.com ([40.107.4.76]
- helo=EUR03-DB5-obe.outbound.protection.outlook.com)
+	id 1jeh23-0000aD-2h; Fri, 29 May 2020 15:34:51 +0000
+Received: from m43-7.mailgun.net ([69.72.43.7])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jeVhe-0000uk-QV; Fri, 29 May 2020 03:29:04 +0000
-ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
- b=BnKYHkSEKl21XaJDxpLthtoaK4WfQP4DQR3fFGf+1McnggrUYeNqyyi4JsOteqWM0xyN3keoXIA2bQ82wwdjbkN8GSZt1z1PHMRLvFT/q2sOI2KaV3F3ne0dm6XgoKSFuK7Za7xfXjIv0afOwFc/9G8TZ88tRZHsbB3CfpfCbFz7AqPJg8jB/UPql320strnJ+bbG9gRq4fy8kPfTsy54A+vgsL0wUN9j05ytqzaLq25QM5APQYFCF++2zVCfq7nR4PrqIILPc5Y/NDZSmSNBt1v3lpFBu7/JIEOrdYjWf6TVL7thjoz2II/qGzpFHSHqy8DszdJKYlm6k8hSLrlnA==
-ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; 
- s=arcselector9901;
- h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
- bh=1+RJzjUhkAetnFTdjRVjHhJoF4iCdoCKShOM68Q09OY=;
- b=ZHJpWolTVaYcaH/+4wKWDbw28xyMG+EvNYrMjGbthpbMggS/o2nk59zw9aOxQQk1zpbeRgGglm9lJb3vUwLVMz2I8TpYcRiz58MPw3vBS2q1rgfBVnOwK5rJR1fEHwP9TF5L5G8flQJ+VebwSCkKgxGR2CL6kymOFHdcRxRxFgMRt+mp6Zf/MzhxVlM5R+HHB0OQ7Nk91ZqgxY8TSjc+iwXMmK+3KV6uNqG4Fk3xcB1oyxDgShLSiaXfjbkxnI0qyuC4a91HXNSdZHRx0jbHzXbI/FF5Xh+u+uLLmnKGtgjYPjyFLb+MkvTUGM445njF/0eI0SJUmZ6BhzaMR4uAfA==
-ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
- smtp.mailfrom=nxp.com; dmarc=pass action=none header.from=nxp.com; dkim=pass
- header.d=nxp.com; arc=none
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=nxp.com; s=selector2; 
- h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
- bh=1+RJzjUhkAetnFTdjRVjHhJoF4iCdoCKShOM68Q09OY=;
- b=nYjsj33H4CGjUywJyi7QoTZn+eQ6x3fG8NrVl7DjddCMRNJT7dQMZcY0qfbr5oC9ggFRCzjK6UopHFKxSeE51Xy9MtNDbHqueaQeNOj5ypbmmhQTueTOCuGgC2GWt/9JeK8Q3+kX30+MurvE0UzD84FPp3gEMHgtMGa/4oiV7ew=
-Received: from VI1PR04MB4366.eurprd04.prod.outlook.com (2603:10a6:803:3d::27)
- by VI1PR04MB4013.eurprd04.prod.outlook.com (2603:10a6:803:3e::15)
- with Microsoft SMTP Server (version=TLS1_2,
- cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.3021.24; Fri, 29 May
- 2020 03:28:59 +0000
-Received: from VI1PR04MB4366.eurprd04.prod.outlook.com
- ([fe80::8102:b59d:36b:4d09]) by VI1PR04MB4366.eurprd04.prod.outlook.com
- ([fe80::8102:b59d:36b:4d09%7]) with mapi id 15.20.3045.018; Fri, 29 May 2020
- 03:28:59 +0000
-From: Ganapathi Bhat <ganapathi.bhat@nxp.com>
-To: =?utf-8?B?UGFsaSBSb2jDoXI=?= <pali@kernel.org>, Ulf Hansson
- <ulf.hansson@linaro.org>, "linux-mmc@vger.kernel.org"
- <linux-mmc@vger.kernel.org>
-Subject: RE: [EXT] [PATCH 01/11] mmc: sdio: Fix macro name for Marvell device
- with ID 0x9134
-Thread-Topic: [EXT] [PATCH 01/11] mmc: sdio: Fix macro name for Marvell device
- with ID 0x9134
-Thread-Index: AQHWMEes5xoAaVwKSEe7FG6OYre4V6i+cY2Q
-Date: Fri, 29 May 2020 03:28:59 +0000
-Message-ID: <VI1PR04MB43668C84D84103D8F8B3EA428F8F0@VI1PR04MB4366.eurprd04.prod.outlook.com>
-References: <20200522144412.19712-1-pali@kernel.org>
- <20200522144412.19712-2-pali@kernel.org>
-In-Reply-To: <20200522144412.19712-2-pali@kernel.org>
-Accept-Language: en-US
-Content-Language: en-US
-X-MS-Has-Attach: 
-X-MS-TNEF-Correlator: 
-authentication-results: kernel.org; dkim=none (message not signed)
- header.d=none;kernel.org; dmarc=none action=none header.from=nxp.com;
-x-originating-ip: [103.54.18.180]
-x-ms-publictraffictype: Email
-x-ms-office365-filtering-ht: Tenant
-x-ms-office365-filtering-correlation-id: 10937a1e-ce0f-4459-eaae-08d803806cff
-x-ms-traffictypediagnostic: VI1PR04MB4013:
-x-microsoft-antispam-prvs: <VI1PR04MB40135E10FBF39F7D6C1695DF8F8F0@VI1PR04MB4013.eurprd04.prod.outlook.com>
-x-ms-oob-tlc-oobclassifiers: OLM:4714;
-x-forefront-prvs: 04180B6720
-x-ms-exchange-senderadcheck: 1
-x-microsoft-antispam: BCL:0;
-x-microsoft-antispam-message-info: kjYx2LyFWJrqUKMf9ZigoKm3tQeCc1+LqxbRYBDQHKAaU0ftkpDAPAg5ylwwWg2KnSzf8nF6p6PCiv1HPZWtZ/+G8qzuJZkgGLWHJy1uydZWuOhSxg6fduNn/gPlol0jJl2FFrs4Gb9KFIsQqWrytzzRQwzNDqA2yDeg9Q6BVniU/pa3GI3XlG/T7HrM2MR2ZfiiXbeh9ZZXsGjnyyg7NQB3izE64jXmFyAp80EH/yjpz2kRfQNqfYOocqPzWb/CpVqbgEN01CE6IhkgYAzAJ+9IKKCg6BXOHlnP/Cwt88WQ/WbpcaA5IsX26hWBu2el
-x-forefront-antispam-report: CIP:255.255.255.255; CTRY:; LANG:en; SCL:1; SRV:;
- IPV:NLI; SFV:NSPM; H:VI1PR04MB4366.eurprd04.prod.outlook.com; PTR:; CAT:NONE;
- SFTY:;
- SFS:(4636009)(136003)(366004)(396003)(376002)(346002)(39860400002)(76116006)(64756008)(66946007)(66556008)(66446008)(55016002)(66476007)(478600001)(33656002)(9686003)(558084003)(4326008)(52536014)(44832011)(86362001)(5660300002)(110136005)(2906002)(71200400001)(316002)(7696005)(186003)(8936002)(6506007)(8676002)(54906003)(7416002)(26005);
- DIR:OUT; SFP:1101; 
-x-ms-exchange-antispam-messagedata: hEHlqqKi+t+uVbuAEA4/UEzfD9RQyaWkjYD54NLf3/wdPBDeetE+Q8LwoVTcqNUTs+Pnwlah44qNo3yyB9YVgZIADoklc6WzI/+ehWqlUlxmbe2tkB9I/UgZ7RyToXqY0KV9ynA/69aQxkuXJD65W5ArL9IxXQJfOtkDDfPw/vDUt7Guewn1ARahTfooGCVJbdq+4FkMGSZwC6nFGDPNwHvYPzxxyh8rqahyHhnrN73kCedXYnAuPsCzlyfyFZZYl4iBB8uZKEwo5+d3AblQpkdmgUt9dRnjRCjD+RkovRbAhb6q2wjtyrkMsAm4kvfnxKsBAUN3UzKEh2qasx2TjAazUz1w8lbKt33GPQbObDm8CZDu9cryi5kd4BR5Wou6AyOfuu3smQs8LcIuVxnOaYJQpgvZWPxh4nXddu/vajMWFhIj9z4w2XDV1zaLHdiUeBUzO5RMa12jmBj+H3/9bmIAgY/djItDvV8oSrEjdJszdYic3qS0MVYkSHs1D4xn
-x-ms-exchange-transport-forked: True
+ id 1jeh1U-00007X-6h
+ for ath10k@lists.infradead.org; Fri, 29 May 2020 15:34:18 +0000
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
+ q=dns/txt; 
+ s=smtp; t=1590766455; h=Content-Type: MIME-Version: Message-ID:
+ In-Reply-To: Date: References: Subject: Cc: To: From: Sender;
+ bh=4h6mUhCfTn/PPwY0CqyuZa1NJ92KFZY1OPYa8ryUDI0=;
+ b=ntwiAqOg+zasFRl6kwaQ78OJkUJmKTT1qwhPczUN9ni4nUgXExmvmSbIvURI7XI8Aw0AK6aW
+ zdJLKWfqbw6/P84dhmoXNINShRhdtsxV96jA0KuglEW9PNJFmUqsJGcVyboReNMVRTflFHro
+ gS6bgMSkRoIzL2ukeHQb3Jx3JM0=
+X-Mailgun-Sending-Ip: 69.72.43.7
+X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
+Received: from smtp.codeaurora.org
+ (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171]) by
+ smtp-out-n04.prod.us-east-1.postgun.com with SMTP id
+ 5ed12b762c54998475d4127c (version=TLS1.2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256); Fri, 29 May 2020 15:34:14
+ GMT
+Received: by smtp.codeaurora.org (Postfix, from userid 1001)
+ id 1E463C433AF; Fri, 29 May 2020 15:34:13 +0000 (UTC)
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ aws-us-west-2-caf-mail-1.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,SPF_NONE
+ autolearn=unavailable autolearn_force=no version=3.4.0
+Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
+ [88.114.240.156])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested) (Authenticated sender: kvalo)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 5B55AC433CB;
+ Fri, 29 May 2020 15:34:10 +0000 (UTC)
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 5B55AC433CB
+Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
+ spf=none smtp.mailfrom=kvalo@codeaurora.org
+From: Kalle Valo <kvalo@codeaurora.org>
+To: Sven Eckelmann <sven@narfation.org>
+Subject: Re: [PATCH v13] ath10k: add LED and GPIO controlling support for
+ various chipsets
+References: <1523027875-5143-1-git-send-email-kvalo@codeaurora.org>
+ <b23e65cf-4be7-72db-7955-32eae196953e@dd-wrt.com>
+ <3608947.bSrYYtX6KI@bentobox> <3445075.COMLMNsY4U@bentobox>
+Date: Fri, 29 May 2020 18:34:07 +0300
+In-Reply-To: <3445075.COMLMNsY4U@bentobox> (Sven Eckelmann's message of "Mon, 
+ 25 May 2020 18:04:49 +0200")
+Message-ID: <87k10usqkw.fsf@codeaurora.org>
+User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/24.5 (gnu/linux)
 MIME-Version: 1.0
-X-OriginatorOrg: nxp.com
-X-MS-Exchange-CrossTenant-Network-Message-Id: 10937a1e-ce0f-4459-eaae-08d803806cff
-X-MS-Exchange-CrossTenant-originalarrivaltime: 29 May 2020 03:28:59.0724 (UTC)
-X-MS-Exchange-CrossTenant-fromentityheader: Hosted
-X-MS-Exchange-CrossTenant-id: 686ea1d3-bc2b-4c6f-a92c-d99c5c301635
-X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
-X-MS-Exchange-CrossTenant-userprincipalname: /K1heXKgcg84/KQfUpVhe2RzAgBJCWLxOT60NGTL8pHtekObnEJSR48MDctHQpjl7m3bgk7AONhZdft5olnX+A==
-X-MS-Exchange-Transport-CrossTenantHeadersStamped: VI1PR04MB4013
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200528_202902_859079_807BA8DB 
-X-CRM114-Status: UNSURE (   5.31  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.9 (/)
+X-CRM114-CacheID: sfid-20200529_083416_331596_F4A7474F 
+X-CRM114-Status: GOOD (  14.79  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-0.9 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [40.107.4.76 listed in list.dnswl.org]
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [40.107.4.76 listed in wl.mailspike.net]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [69.72.43.7 listed in list.dnswl.org]
+ 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [69.72.43.7 listed in wl.mailspike.net]
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -126,34 +98,42 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: "brcm80211-dev-list.pdl@broadcom.com"
- <brcm80211-dev-list.pdl@broadcom.com>,
- "libertas-dev@lists.infradead.org" <libertas-dev@lists.infradead.org>,
- Xinming Hu <huxinming820@gmail.com>,
- "linux-wireless@vger.kernel.org" <linux-wireless@vger.kernel.org>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- Amitkumar Karwar <amitkarwar@gmail.com>,
- =?utf-8?B?TWFyZWsgQmVow7pu?= <marek.behun@nic.cz>,
- "ath10k@lists.infradead.org" <ath10k@lists.infradead.org>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Mauro Carvalho Chehab <mchehab@kernel.org>,
- "brcm80211-dev-list@cypress.com" <brcm80211-dev-list@cypress.com>,
- Kalle Valo <kvalo@codeaurora.org>,
- "b43-dev@lists.infradead.org" <b43-dev@lists.infradead.org>
+Cc: linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
+ Sebastian Gottschall <s.gottschall@dd-wrt.com>,
+ John Crispin <john@phrozen.org>,
+ Sebastian Gottschall <s.gottschall@newmedia-net.de>,
+ openwrt-devel@lists.openwrt.org, Ansuel Smith <ansuelsmth@gmail.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-HI Pali,
+Sven Eckelmann <sven@narfation.org> writes:
 
-> Kernel quirks for SDIO devices are
-> matched against device ID from SDIO Common CIS. Therefore device ID used
-> in quirk is correct, just has misleading name.
+> On Monday, 25 May 2020 11:22:13 CEST Sven Eckelmann wrote:
+> [...]
+>> And it still can with this OpenWrt version. But it doesn't seem to happen with 
+>> the most recent OpenWrt reboot-13353-gb1604b744b. But there are nearly 4000 
+>> commits inbetween. So no idea what changed (just a timing thing or an actual 
+>> fix - no idea).
+>
+> Seems like there is a fix which solves some lost interrupt problems for 
+> IPQ40xx. Without this change, I see the reported problem. And with the patch, 
+> it is gone. Or in commits:
+>
+> * creates timeout problems: 46b949a067e5 ("ipq40xx: enlarge PCIe BAR size")
+> * works fine: 18e942b6c4e5 ("ipq40xx: fix pcie msi IRQ trigger level")
+>
+> If you look in the git logs [1], you can see that the working commit is a 
+> child of the broken one. So at least from my point of view, my initial report 
+> is no blocker anymore for Sebastian's patch (or Kalle's version of it).
 
+Great. If the patch is good to take can someone rebase the latest
+version and resubmit, please?
 
-OK, understood. Thanks for the change.
-Acked-by: Ganapathi Bhat <ganapathi.bhat@nxp.com>
+-- 
+https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
+
 _______________________________________________
 ath10k mailing list
 ath10k@lists.infradead.org
