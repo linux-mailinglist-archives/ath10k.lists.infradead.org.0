@@ -2,76 +2,89 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 594501E8EDE
-	for <lists+ath10k@lfdr.de>; Sat, 30 May 2020 09:26:36 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 43BA51E9204
+	for <lists+ath10k@lfdr.de>; Sat, 30 May 2020 16:19:04 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
-	References:To:Subject:Reply-To:Cc:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=mAn+82daEUaEulcXWIG1fopYMWtTz+J6f45V299Jcsc=; b=uMnrzh/mqDXTGzIqXvGlrMLlr
-	hEx+O3Enys/Ee6V/5FvMDWbeJDUXL8uxavIMX0w/DNVmgBJcXi39Cd7DIMw/jqG9j4vJyrnow/w27
-	A1lqULRySTQdUS6KgZwXVXrBuiVyEKRyyc+2Im7r25TdfP2ezQnavNVUHqGdciCyiYEvFIJy66m6+
-	krbBDZW+85D13zjJFdWPEZw6QhzNIqs3Kr8kcBBp9NyZ9gWABAK/miuHGqfjdp6hTNyAW52wKQzXX
-	VbXqHfKRfyUyyRFMWZJbCHC2UZS+EhbR/G9GUGBpYHf6f+tWUPdq2n8KwBbXhEak5niVjyyWkErfB
-	c+LL0yP8w==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
+	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=afg8spLJc0FjGS8wX9Dul5YhFjCwNcmRguC5EEcAwv4=; b=Bs6XEX11tkPfDs
+	W6FnTsQvIs/yL+0r2y4mDPCSSh+MGNvZId9u0xxLjVLla+di08UV2+tYXfc18DVoVTtGKQug7+R4r
+	TUwAHAFGbh4ySqHILbvovWWCTvIv2YSloymReZegG5cyMCoFbAJCpdJ29VWRolv9x3wCx3ZniLA8y
+	20/zlgs27L6NskGBmt3HqpRBox57QeDfi+I2OJ3UsdRRElDOrE8uooQzza+MJ9w1wTcPRMrKbQPF7
+	Lermg+HXAR+ZJ5Ogd9fwHLdETonFjHFxNXyrDBVcOqjETzzfSptKD5zUJIOq7LKaSNfxrFpN1R6sV
+	BmWsu/v3k2exGTmqrpwQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jevsv-00042Y-8Z; Sat, 30 May 2020 07:26:25 +0000
-Received: from mail.as201155.net ([185.84.6.188])
+	id 1jf2KD-0006Qb-7s; Sat, 30 May 2020 14:19:01 +0000
+Received: from m43-7.mailgun.net ([69.72.43.7])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jevsq-00041s-Jc
- for ath10k@lists.infradead.org; Sat, 30 May 2020 07:26:22 +0000
-Received: from smtps.newmedia-net.de ([2a05:a1c0:0:de::167]:57275
- helo=webmail.newmedia-net.de)
- by mail.as201155.net with esmtps (TLSv1:DHE-RSA-AES256-SHA:256)
- (Exim 4.82_1-5b7a7c0-XX) (envelope-from <s.gottschall@dd-wrt.com>)
- id 1jevsj-0001Tq-36
- for ath10k@lists.infradead.org; Sat, 30 May 2020 09:26:14 +0200
-X-CTCH-RefID: str=0001.0A782F24.5ED20A31.005D, ss=1, re=0.000, recu=0.000,
- reip=0.000, cl=1, cld=1, fgs=0
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=dd-wrt.com;
- s=mikd; 
- h=Content-Transfer-Encoding:Content-Type:In-Reply-To:MIME-Version:Date:Message-ID:From:References:To:Subject;
- bh=hpAf3k5+zKuUmkipxdTcNHnzg7Zb4Wa+lKZKeOtMMjs=; 
- b=Gn3MphOLfpuUctk+/Ys1B00X7QmgQVVjatzkCuWgCSOoecYEf5RK8LY8XlfObPmhlZ4nZ0UwUiSRJmDCZmsqYjSDE6F5CcVhEXXmfRiOxsGzJ6CDAG9tZjh4CF+yg7RtLCyi8BgnAzi98tfKDaduevRYqdTZIV4KhTY4b7CU5Vw=;
-Subject: Re: [PATCH] ath10k: Avoid override CE5 configuration for QCA99X0
- chipsets
-To: ath10k@lists.infradead.org
-References: <1587649759-14381-1-git-send-email-mkenna@codeaurora.org>
- <20200505073422.BFA51C433BA@smtp.codeaurora.org>
- <63ec6f30-ee3b-c412-7c56-46d447b17c8e@dd-wrt.com>
- <87ftbisqgf.fsf@codeaurora.org>
-From: Sebastian Gottschall <s.gottschall@dd-wrt.com>
-Message-ID: <19bf39e9-cee5-109f-d68f-5cbf576cc871@dd-wrt.com>
-Date: Sat, 30 May 2020 09:26:12 +0200
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:77.0) Gecko/20100101
- Thunderbird/77.0
+ id 1jf2K8-0006Q8-Pb
+ for ath10k@lists.infradead.org; Sat, 30 May 2020 14:18:58 +0000
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
+ q=dns/txt; 
+ s=smtp; t=1590848337; h=Date: Message-Id: Cc: To: References:
+ In-Reply-To: From: Subject: Content-Transfer-Encoding: MIME-Version:
+ Content-Type: Sender; bh=dpw+1kDMnFkzOFQL5lNzqbxZZHq9A4gb7QzDms9lhFM=;
+ b=UMMgR4ffxp7WgTwskP/Bq/Y3N5z0jUn+Zc/xFfHzcGL9h4a137YGOXgfOGc4p5JHA4Rpuw8J
+ GMmUK1VhDmYRtIdvFcebHKk9bivzkNeC0S3SYxonm74yRosfQFfrHYENX7eXUd36Xtbo3uFi
+ Ri9rq23G27Kh+dvy/hh2brTUZ1U=
+X-Mailgun-Sending-Ip: 69.72.43.7
+X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
+Received: from smtp.codeaurora.org
+ (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171]) by
+ smtp-out-n06.prod.us-east-1.postgun.com with SMTP id
+ 5ed26b45cb0458693367442c (version=TLS1.2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256); Sat, 30 May 2020 14:18:45
+ GMT
+Received: by smtp.codeaurora.org (Postfix, from userid 1001)
+ id 4FA7DC43391; Sat, 30 May 2020 14:18:44 +0000 (UTC)
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ aws-us-west-2-caf-mail-1.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=0.5 required=2.0 tests=ALL_TRUSTED,MISSING_DATE,
+ MISSING_MID,SPF_NONE autolearn=no autolearn_force=no version=3.4.0
+Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
+ [88.114.240.156])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested) (Authenticated sender: kvalo)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 0F24DC433C9;
+ Sat, 30 May 2020 14:18:40 +0000 (UTC)
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 0F24DC433C9
+Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
+ spf=none smtp.mailfrom=kvalo@codeaurora.org
 MIME-Version: 1.0
-In-Reply-To: <87ftbisqgf.fsf@codeaurora.org>
-X-Received: from [79.249.181.60] (helo=[10.88.193.107])
- by webmail.newmedia-net.de with esmtpa (Exim 4.72)
- (envelope-from <s.gottschall@dd-wrt.com>) id 1jevoY-00062n-8W
- for ath10k@lists.infradead.org; Sat, 30 May 2020 09:21:54 +0200
+Subject: Re: [PATCH] ath10k: Remove ath10k_qmi_register_service_notifier()
+ declaration
+From: Kalle Valo <kvalo@codeaurora.org>
+In-Reply-To: <20200528122105.1.I31937dce728b441fd72cbe23447bc4710fd56ddb@changeid>
+References: <20200528122105.1.I31937dce728b441fd72cbe23447bc4710fd56ddb@changeid>
+To: Douglas Anderson <dianders@chromium.org>
+User-Agent: pwcli/0.1.0-git (https://github.com/kvalo/pwcli/) Python/3.5.2
+Message-Id: <20200530141844.4FA7DC43391@smtp.codeaurora.org>
+Date: Sat, 30 May 2020 14:18:44 +0000 (UTC)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200530_002620_788276_115D03D1 
-X-CRM114-Status: UNSURE (   6.47  )
+X-CRM114-CacheID: sfid-20200530_071857_605739_C9DFC80C 
+X-CRM114-Status: UNSURE (   8.12  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [69.72.43.7 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
+ 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [69.72.43.7 listed in wl.mailspike.net]
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
+ valid 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -83,28 +96,38 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
+Cc: Govind Singh <govinds@codeaurora.org>, linux-kernel@vger.kernel.org,
+ Brian Norris <briannorris@chromium.org>, linux-wireless@vger.kernel.org,
+ Douglas Anderson <dianders@chromium.org>, ath10k@lists.infradead.org,
+ Bjorn Andersson <bjorn.andersson@linaro.org>, netdev@vger.kernel.org,
+ Niklas Cassel <niklas.cassel@linaro.org>, Jakub Kicinski <kuba@kernel.org>,
+ "David S. Miller" <davem@davemloft.net>
+Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-> Yeah, that patch is buggy but this should fix it:
->
-> commit 32221df6765b3773ff1af37c77f8531ebc48f246
-> Author:     Arnd Bergmann <arnd@arndb.de>
-> AuthorDate: Sat May 9 14:06:33 2020 +0200
-> Commit:     Kalle Valo <kvalo@codeaurora.org>
-> CommitDate: Tue May 12 10:33:13 2020 +0300
->
->      ath10k: fix ath10k_pci struct layout
-this patch seem to be totally unrelated to the crash issue, the patch 
-was already part of the test tree while testing.
-the crash is caused by ar_pci->pipe_config beeing NULL on ipq4019 chipsets.
-originally pipe_config is allocated by ath10k_pci_probe. but 
-ath10k_pci_probe is never used for ahb chipsets
-so the code must fix ath10k_ahb_probe to allocate these fields, or a 
-more generic solution must be found
->
+Douglas Anderson <dianders@chromium.org> wrote:
+
+> The ath10k/qmi.h header file contains a declaration for the function
+> ath10k_qmi_register_service_notifier().  This function doesn't exist.
+> Remove the declaration.
+> 
+> This patch is a no-op and was just found by code inspection.
+> 
+> Fixes: ba94c753ccb4 ("ath10k: add QMI message handshake for wcn3990 client")
+> Signed-off-by: Douglas Anderson <dianders@chromium.org>
+> Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
+
+Patch applied to ath-next branch of ath.git, thanks.
+
+23cc6bb5a2e6 ath10k: Remove ath10k_qmi_register_service_notifier() declaration
+
+-- 
+https://patchwork.kernel.org/patch/11576663/
+
+https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
+
 
 _______________________________________________
 ath10k mailing list
