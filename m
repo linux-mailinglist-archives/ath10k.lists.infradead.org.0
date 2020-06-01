@@ -2,7 +2,7 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id BB5CA1EA771
+	by mail.lfdr.de (Postfix) with ESMTPS id CD2291EA772
 	for <lists+ath10k@lfdr.de>; Mon,  1 Jun 2020 17:59:38 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
@@ -10,46 +10,46 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Subject:To:From
 	:Date:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=Y4bezEoZx6rI0r9+mfltpmUDKvxpYkj49gw/QKlvOaA=; b=iBeofVNvJixwOC
-	wvWObuFt/8QCITevwQuZQn7+KEkWdkKkp3MTpcOmJmUk/2CRfWeoU/Mi3txOjJCR7EZRS5J3wYrgC
-	WLqSrOG5crUSUW0goHFGsggdFCYEuBJ/XBohQC+U21yAIYQEpPJsSrf9iif1m3A11ImjIPOg6d2aU
-	69ukzx8m294kimcuIwFsewinL3hoRSdBqr64Pia8hQ32y3RbkygiXzuUackrsxko0IgBLE4lJYSWu
-	Lf5wQMHrbZUT3Gt+nDqP51QNbZ5HrpA+3Wv0gMDCYk0UsFjbGFXLQRctJqNwdBfgf2XIv9Y8UnU2R
-	Ux55BHTH+vAUhJAPaWUg==;
+	List-Owner; bh=0S6Wzi4kyU8Xvwy5mHp9cRSgRwusQTz63BlMMFjAKFI=; b=gjeuj7hHVsIFC2
+	Qj7K2uOQSHyNolmkYF92yWf/Q6Jh3fvLvg90hXGR8IhKnH59XK3jSqL6+8bF3E/7v4WHA4eGs6Dor
+	CB6iXYNgeb21z6Rz98/qtVJWmx886jo6mJ48HoSV2B439uafHNz2yKnOTmY2uVC9AaNOr8jqELYZe
+	L8BJ1N2nV7wirrqOWFgvt0JbGlvnhCd5tjf8O1zFWzcpkYRZ8CpyBj5iRsEWDpluiCyfiwf1S2DuH
+	rG18fmCP+BhMlCn6RLWE+5cDI8smflEslkeWqGrs7kiDvjH/RqdbzXstdKoJOnkZjLPiiWDNAzX0V
+	u0sfeYjnf5MTfcPeeIGA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jfmqb-0004GQ-UF; Mon, 01 Jun 2020 15:59:33 +0000
-Received: from mga11.intel.com ([192.55.52.93])
+	id 1jfmqe-0004Hc-7a; Mon, 01 Jun 2020 15:59:36 +0000
+Received: from mga03.intel.com ([134.134.136.65])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jfmqY-0004FP-2e
+ id 1jfmqY-0004FQ-3P
  for ath10k@lists.infradead.org; Mon, 01 Jun 2020 15:59:31 +0000
-IronPort-SDR: uUtxMahtFnVoZsJ0Xn+HvXGW3MYn/jsg0Wgjn4hWTPx6kg4V6r/uJ+PI2Gb/yKFD0DaQbsYrGr
- U0f3A/F1W0HQ==
+IronPort-SDR: 9X2ZFLzKQU3mxJNHFBrJ55PIdu+rbsjFveg921oWI8X9qmU58+VMTKzfstQbTnLzqFCjGIg8qd
+ ft/gO9BbEfvQ==
 X-Amp-Result: SKIPPED(no attachment in message)
 X-Amp-File-Uploaded: False
-Received: from orsmga008.jf.intel.com ([10.7.209.65])
- by fmsmga102.fm.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
- 01 Jun 2020 08:59:27 -0700
-IronPort-SDR: FQY+apHD0ei/HbqJfAxKSMxp7UcB4OzIYgq/9NdCjeGVmx/OFq3NxETkIjBooBa+An+5SXYTN8
- D7LOqRvYgjKw==
+Received: from fmsmga005.fm.intel.com ([10.253.24.32])
+ by orsmga103.jf.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
+ 01 Jun 2020 08:59:28 -0700
+IronPort-SDR: mT2fwjzsSSD8+u/PogVn9nA05sOFGxTS91ChlupzAjrDpimU80gp2AnJuGKAM04NFGLr/YoIRB
+ I4/k/6+cvINg==
 X-ExtLoop1: 1
-X-IronPort-AV: E=Sophos;i="5.73,461,1583222400"; d="scan'208";a="303930940"
+X-IronPort-AV: E=Sophos;i="5.73,461,1583222400"; d="scan'208";a="470368916"
 Received: from lkp-server01.sh.intel.com (HELO 78d03bb9d680) ([10.239.97.150])
- by orsmga008.jf.intel.com with ESMTP; 01 Jun 2020 08:59:26 -0700
+ by fmsmga005.fm.intel.com with ESMTP; 01 Jun 2020 08:59:26 -0700
 Received: from kbuild by 78d03bb9d680 with local (Exim 4.92)
  (envelope-from <lkp@intel.com>)
- id 1jfmqT-00005O-JQ; Mon, 01 Jun 2020 15:59:25 +0000
-Date: Mon, 01 Jun 2020 23:58:54 +0800
+ id 1jfmqT-00005R-LE; Mon, 01 Jun 2020 15:59:25 +0000
+Date: Mon, 01 Jun 2020 23:58:56 +0800
 From: kbuild test robot <lkp@intel.com>
 To: Kalle Valo <kvalo@codeaurora.org>
-Subject: [ath6kl:master-pending] BUILD SUCCESS
- 6fe1ed81020e3ee70da97bc7932c45df281cd6a7
-Message-ID: <5ed525be.zAVM5LZIDd1bSUDg%lkp@intel.com>
+Subject: [ath6kl:pending] BUILD SUCCESS
+ 43b5ac634bb35b39065cf1edf47b216722cc8227
+Message-ID: <5ed525c0.fjGtIO6JLvNaexHM%lkp@intel.com>
 User-Agent: Heirloom mailx 12.5 6/20/10
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200601_085930_150430_CBE8BB75 
-X-CRM114-Status: UNSURE (   6.12  )
+X-CRM114-CacheID: sfid-20200601_085930_184687_F4B99C77 
+X-CRM114-Status: UNSURE (   6.08  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -3.2 (---)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -57,7 +57,7 @@ X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [192.55.52.93 listed in list.dnswl.org]
+ high trust [134.134.136.65 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  1.8 LONGWORDS              Long string of long words
@@ -78,21 +78,8 @@ Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-tree/branch: https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git  master-pending
-branch HEAD: 6fe1ed81020e3ee70da97bc7932c45df281cd6a7  Merge branch 'pending' into master-pending
-
-i386-tinyconfig vmlinux size:
-
-+-------+------------------------------------+---------------------------------------------------------+
-| DELTA |               SYMBOL               |                         COMMIT                          |
-+-------+------------------------------------+---------------------------------------------------------+
-|  +220 | TOTAL                              | b2a5ac927378..6fe1ed81020e (ALL COMMITS)                |
-|  +216 | TOTAL                              | 6fe1ed81020e Merge branch 'pending' into master-pending |
-|  +217 | TEXT                               | 6fe1ed81020e Merge branch 'pending' into master-pending |
-|  +136 | arch/x86/events/zhaoxin/built-in.* | 7f69bf1ddcc3 Merge branch 'ath-next'                    |
-|  +109 | copy_xstate_to_kernel()            | 6fe1ed81020e Merge branch 'pending' into master-pending |
-|   +96 | copy_part()                        | 6fe1ed81020e Merge branch 'pending' into master-pending |
-+-------+------------------------------------+---------------------------------------------------------+
+tree/branch: https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git  pending
+branch HEAD: 43b5ac634bb35b39065cf1edf47b216722cc8227  ath11k: Add support for 6g scan hint
 
 elapsed time: 481m
 
