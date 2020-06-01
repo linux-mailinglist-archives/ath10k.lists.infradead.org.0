@@ -2,74 +2,64 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 15B731E9C81
-	for <lists+ath10k@lfdr.de>; Mon,  1 Jun 2020 06:24:18 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 57B8D1E9D00
+	for <lists+ath10k@lfdr.de>; Mon,  1 Jun 2020 07:15:38 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=GQC8kThnTKOF8jGuQotxrC7NnJMWwlrz4qBqPa0qAvI=; b=dYJv1g9oRkUQJL
-	13WCYv5cHRtValQMQBO7rNyYZobhpGxAe26CnKProb/SI96ljLNzXdynP7JGS/OdiyIW1u1C+Q9r4
-	tBjjrI7fBvDMfLX21oH21G8g/DTSPR7yKq+4Wim9gpwC76YI5iHdJVzmD8TSnuKV21RtKItTFicg5
-	X1emnZFwBVRItPrVP2u2IS0QA/td0ncxN7aLKXqff43JdGOlnZ7fJs3RBtPGN98Lgyqw++q9H+ft0
-	4mxABNIu15/xdBSsVSI3OvriBAj1Br+o826E7Ek5XBVkbmy+ozmbKETl9eDQUOx9DymeeHUMXfYw6
-	uBADBIXBB2xGVNI1/Wlg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Subject:To:From
+	:Date:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=Qvri/D5u4zKMNfO8NyxXUxA9Xvz2nmnOyLTaKXj6xUo=; b=q3Tr7cKYPIUn7n
+	419nFZdo0cJzr1mmvK4kME+lJHXZElYsVlJp0/n1PxK0YCokWeW0fCALio1oZK4sZ0075xkHwwUzl
+	0vl12kU2VAUf0+q7vaKDxA2tswHC1WDMsJi47T1HqicrENyLgtEFOxJSiOr6vSpxOg57rtmdjWJJX
+	Yrigznvj6cR3LKLeUJdviFJ1tyvDxXJZF+LyuzOrOBNxVfv2DCm7MJmEWgG7T2S9TJnIZUtojYjVZ
+	DhNVsgPkR/tYmI2nrh/pffNTYwriK8BOhF1eZ02Suoi0F/kQQAR4qVBJGvCP8HSXkS2k5/TVIgb5+
+	c/cN7bSBUgZslDFIustQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jfbzi-0000pI-Gs; Mon, 01 Jun 2020 04:24:14 +0000
-Received: from mail-qv1-f52.google.com ([209.85.219.52])
+	id 1jfcnP-0006FH-PP; Mon, 01 Jun 2020 05:15:35 +0000
+Received: from mga12.intel.com ([192.55.52.136])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jfbze-0000om-IR
- for ath10k@lists.infradead.org; Mon, 01 Jun 2020 04:24:11 +0000
-Received: by mail-qv1-f52.google.com with SMTP id g7so3869583qvx.11
- for <ath10k@lists.infradead.org>; Sun, 31 May 2020 21:24:08 -0700 (PDT)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=LEgNxIXqPtmbg89bFCyQQcY4OfFh0TLKWX3E1EmaJUA=;
- b=TIzZ5YwC0mlj/1DisoBnevF24zqh7jbbMTXD8PPppoJimSaw7wAGg7pS9/HiBupMB9
- B9+1RHJKg6qwQF8PDEJmzFzsg9PM2pUSM/03JVDrVKI8MSlBXR/GfQdeENjVhh8YDTAb
- mUBG51whPfrhrJnId6bLngds//ubPtnU5LC9bd34FsopPf1Nri9zwrWk00e9xUMiCdhw
- FSVWLdmVg+exg+qXZUXCotuMm86fHRj5nCG5DYaeM5EDradXem3ZXNmh+teInTh0qKPb
- SLuxJbFdyKXm0HAg8S2nZW+3mIt3r1hXbUFlIggBQolY28e0FWXAzofl9uixex2EfSdr
- aZvw==
-X-Gm-Message-State: AOAM532zsL3Y9hA0ixymH7O71UtCcj0dfrg2rJjFr6048Yu/W9zyeazE
- +c69v7aNTRr90PdxT5D4mGw14D0AcMEk7GcvQrs=
-X-Google-Smtp-Source: ABdhPJzKKxUJ0KnZ1BYVTA7YwCGBa2avQXMi+HbK1T5RTAxd1RVaBd+BACvF585b0jnMtHf413MGHRtBtlqgTPgHHxE=
-X-Received: by 2002:ad4:5282:: with SMTP id v2mr18252962qvr.167.1590985447844; 
- Sun, 31 May 2020 21:24:07 -0700 (PDT)
+ id 1jfcnB-00064r-Mf
+ for ath10k@lists.infradead.org; Mon, 01 Jun 2020 05:15:23 +0000
+IronPort-SDR: WXexNrjfElebisUGflWSNxI4hGYRBuT9wu+BYYwQoZ03apxog3K2ULoKyuaMBQWrVA2pvhXdO9
+ SYWM6BfgLEJw==
+X-Amp-Result: SKIPPED(no attachment in message)
+X-Amp-File-Uploaded: False
+Received: from orsmga004.jf.intel.com ([10.7.209.38])
+ by fmsmga106.fm.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
+ 31 May 2020 22:15:18 -0700
+IronPort-SDR: n+f1/Jfo2EgwF0NYalU2S1YQneg7Xyf7mO1EAt1mCf9wVyOy0t9RVBdpzmY+9YahLBc1jQxyZj
+ BJ3jBiBDH68A==
+X-ExtLoop1: 1
+X-IronPort-AV: E=Sophos;i="5.73,459,1583222400"; d="scan'208";a="415684963"
+Received: from lkp-server01.sh.intel.com (HELO 49d03d9b0ee7) ([10.239.97.150])
+ by orsmga004.jf.intel.com with ESMTP; 31 May 2020 22:15:16 -0700
+Received: from kbuild by 49d03d9b0ee7 with local (Exim 4.92)
+ (envelope-from <lkp@intel.com>)
+ id 1jfcn6-0000BH-8C; Mon, 01 Jun 2020 05:15:16 +0000
+Date: Mon, 01 Jun 2020 13:14:14 +0800
+From: kbuild test robot <lkp@intel.com>
+To: Kalle Valo <kvalo@codeaurora.org>
+Subject: [ath6kl:master] BUILD SUCCESS d65d83eb94663b62061155dd36f19fe82fd4828a
+Message-ID: <5ed48ea6.2UDPZPTvkoKDQvKZ%lkp@intel.com>
+User-Agent: Heirloom mailx 12.5 6/20/10
 MIME-Version: 1.0
-References: <75f092e3-b667-341a-e810-61edd8f089ac@candelatech.com>
-In-Reply-To: <75f092e3-b667-341a-e810-61edd8f089ac@candelatech.com>
-From: Adrian Chadd <adrian@freebsd.org>
-Date: Sun, 31 May 2020 21:23:55 -0700
-Message-ID: <CAJ-Vmo=-w=mvKB8=8g+jn3sE6vwJLOfq0SarMpeJq8OdgMApuQ@mail.gmail.com>
-Subject: Re: Un-recoverable ath10k 4019 NIC lockup.
-To: Ben Greear <greearb@candelatech.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200531_212410_610648_72056304 
-X-CRM114-Status: UNSURE (   7.77  )
+X-CRM114-CacheID: sfid-20200531_221521_748994_7AEA095B 
+X-CRM114-Status: UNSURE (   5.66  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.5 (/)
+X-Spam-Score: -0.5 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (0.5 points)
+ Content analysis details:   (-0.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.219.52 listed in list.dnswl.org]
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [192.55.52.136 listed in list.dnswl.org]
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [adrian.chadd[at]gmail.com]
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.219.52 listed in wl.mailspike.net]
- 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+ 1.8 LONGWORDS              Long string of long words
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -81,32 +71,113 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: "linux-wireless@vger.kernel.org" <linux-wireless@vger.kernel.org>,
- ath10k <ath10k@lists.infradead.org>
+Cc: ath10k@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On Wed, 27 May 2020 at 11:30, Ben Greear <greearb@candelatech.com> wrote:
->
-> While doing a torture test on OpenWrt using ath10k-ct drivers/firmware, the 5Ghz AP fell off the
-> air.  After debugging, I found this in the console logs.
->
-> I am guessing that the only way to recover in this case would be to reboot, but in case someone else
-> has ideas on additional ways to kick the 4019 chip to have it start responding again, please let me know.
+tree/branch: https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git  master
+branch HEAD: d65d83eb94663b62061155dd36f19fe82fd4828a  Add localversion-wireless-testing-ath
 
+elapsed time: 2083m
 
-Hm, i haven't looked at the Dakota datasheet in a while; does the
-platform support or ath10k actually power off/on the core fully, or
-just the RTC/MAC/PHY path?
+configs tested: 86
+configs skipped: 2
 
-Chances are there's a reset controller somewhere that lets you put the
-bus and tensilia cores in reset..
+The following configs have been built successfully.
+More configs may be tested in the coming days.
 
+arm64                            allyesconfig
+arm64                               defconfig
+arm64                            allmodconfig
+arm64                             allnoconfig
+arm                                 defconfig
+arm                              allyesconfig
+arm                              allmodconfig
+arm                               allnoconfig
+powerpc                      mgcoge_defconfig
+nds32                             allnoconfig
+s390                              allnoconfig
+arm                         vf610m4_defconfig
+arm                          pxa168_defconfig
+c6x                         dsk6455_defconfig
+riscv                    nommu_virt_defconfig
+sh                        apsh4ad0a_defconfig
+sh                           se7343_defconfig
+i386                              allnoconfig
+i386                             allyesconfig
+i386                                defconfig
+i386                              debian-10.3
+ia64                             allmodconfig
+ia64                                defconfig
+ia64                              allnoconfig
+ia64                             allyesconfig
+m68k                             allmodconfig
+m68k                              allnoconfig
+m68k                           sun3_defconfig
+m68k                                defconfig
+m68k                             allyesconfig
+nios2                               defconfig
+nios2                            allyesconfig
+openrisc                            defconfig
+c6x                              allyesconfig
+c6x                               allnoconfig
+openrisc                         allyesconfig
+nds32                               defconfig
+csky                             allyesconfig
+csky                                defconfig
+alpha                               defconfig
+alpha                            allyesconfig
+xtensa                           allyesconfig
+h8300                            allyesconfig
+h8300                            allmodconfig
+xtensa                              defconfig
+arc                                 defconfig
+arc                              allyesconfig
+sh                               allmodconfig
+sh                                allnoconfig
+microblaze                        allnoconfig
+mips                             allyesconfig
+mips                              allnoconfig
+mips                             allmodconfig
+parisc                            allnoconfig
+parisc                              defconfig
+parisc                           allyesconfig
+parisc                           allmodconfig
+powerpc                             defconfig
+powerpc                          allyesconfig
+powerpc                          rhel-kconfig
+powerpc                          allmodconfig
+powerpc                           allnoconfig
+riscv                            allyesconfig
+riscv                             allnoconfig
+riscv                               defconfig
+riscv                            allmodconfig
+s390                             allyesconfig
+s390                             allmodconfig
+s390                                defconfig
+sparc                            allyesconfig
+sparc                               defconfig
+sparc64                             defconfig
+sparc64                           allnoconfig
+sparc64                          allyesconfig
+sparc64                          allmodconfig
+um                                allnoconfig
+um                                  defconfig
+um                               allmodconfig
+um                               allyesconfig
+x86_64                                   rhel
+x86_64                               rhel-7.6
+x86_64                    rhel-7.6-kselftests
+x86_64                         rhel-7.2-clear
+x86_64                                    lkp
+x86_64                              fedora-25
+x86_64                                  kexec
 
-
--adrian
+---
+0-DAY CI Kernel Test Service, Intel Corporation
+https://lists.01.org/hyperkitty/list/kbuild-all@lists.01.org
 
 _______________________________________________
 ath10k mailing list
