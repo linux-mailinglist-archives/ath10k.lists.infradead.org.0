@@ -2,82 +2,83 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4585C1EC427
-	for <lists+ath10k@lfdr.de>; Tue,  2 Jun 2020 23:07:31 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E55B21EC640
+	for <lists+ath10k@lfdr.de>; Wed,  3 Jun 2020 02:27:37 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=kQdjHkJ7xNASS5kGIqJFS2tnYFjH+91rE9psI2QII6o=; b=ppNkXf2VhCQi2n
-	ZganpfS0F5ktPrPP5NS6/d8REaItWUrEwPaxyOfm3YYQ9Ads/3379qlrCu6dWMtcu+2n3catlHmV3
-	lPJICZ3dcTiyDH9whQdw2+xgHaQkjld6//0UgNCidUUrJ1TfZQ8YmnqnAL2y8DK7EklOiRmhA2uca
-	P7Xeq72UKHhDvXXZdTk4tQ2d4j+zbbuI+SF+DnakkPNpFCGkLHg1d3p/Sd3hWm1iv6KWwWTSVlVn8
-	ZdGjT6hW6nbXf+XXatLk6c3phj2ORy/vzES+kDzFScZknCX8pTbujw6Gg7PZ1UTzAhSaYJt+IcsVK
-	JlXxNiC6LsoiCOph9Eiw==;
+	List-Owner; bh=OrxqgTzj8oO8JOa6FNYK2GoQmhyDS/TMfwn3O2IWtYU=; b=hi9yauim5+pooX
+	AcmBKE2+lecD0JuPZ/jVZEpsLKTgnkmhcCDC3wyFUsLcQxfQq9Mrgjxsh2HdTbCWC2PscBLkAgI14
+	jJKGZqYtQAwycp1dtV1xVTy2G7siRnznnfAoJ04gbqQ263bfuC2oF/E/FS87KU4c8Z/TYv83Cc+Zf
+	eMlFWHE/vOnPjHaW8RAzJZZvjkgXquosYBV2662ziH5ycL0pTRXGNbxhZuyYzdxmpbKWhCN90wQiK
+	rT9tG2xKWgJFBIVmBdP6zqfIAV0BIIsJX7k3ud3eMCNZm7hNdS/uJFAqWfYyLWnz66VLyOe47hcQX
+	KfSwA4sTqgLK/WQqB3EQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jgE88-000899-0T; Tue, 02 Jun 2020 21:07:28 +0000
-Received: from mail-ej1-x644.google.com ([2a00:1450:4864:20::644])
+	id 1jgHFk-0007n5-8s; Wed, 03 Jun 2020 00:27:32 +0000
+Received: from mail-pg1-x541.google.com ([2607:f8b0:4864:20::541])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jgE84-00088I-Dm
- for ath10k@lists.infradead.org; Tue, 02 Jun 2020 21:07:26 +0000
-Received: by mail-ej1-x644.google.com with SMTP id a25so7004527ejg.5
- for <ath10k@lists.infradead.org>; Tue, 02 Jun 2020 14:07:21 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=QGf11SbLkxX4fJOwT9kGUgWEGfA4VGBgNO6kWFPFsRk=;
- b=XM3q8pho/PiowJ76NeZ46OC8b/u0qzNDKNLp7cEGV3nGiBc2PGReStjvx1Vz8tUMND
- 4apoBJ3u14oElCS0buaQvzQDvSszTwAsZ6Yhd5EN54LStE+ICJI6tZsQZF7P75x4vh38
- Hlaj5tBKyfVXGXv4gKJiwm0zV3L6emG1YczkM=
+ id 1jgHFf-0007mV-9a
+ for ath10k@lists.infradead.org; Wed, 03 Jun 2020 00:27:29 +0000
+Received: by mail-pg1-x541.google.com with SMTP id 185so454223pgb.10
+ for <ath10k@lists.infradead.org>; Tue, 02 Jun 2020 17:27:26 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
+ h=date:from:to:cc:subject:message-id:references:mime-version
+ :content-disposition:in-reply-to:user-agent;
+ bh=ME+J2XgncrkU0A4OBlYAXUXEjouusqpGzoZTVSrmwQw=;
+ b=S4vuMAVB6G9qrlvGBq6XTFn0smHYgZQ59s07EGefADs8D56CQbqplctsoBCC4PDC7s
+ JeL3PZp2BtOGp9VeIpuAX23boGbvgCKmfT+nBQHUVz4XOBFJKuaNrthT9Ag3iDmjUdta
+ xFhxQNaKwDDOZHnD6CMepNCxC3ebUm4eBzDksT0zuRfUjRd4V/0OizUEHMqP/cCNMJ92
+ 6XF6smSZTYK0Ztkp6DbN6JqDVt5aoREZ9jq7jF6pOlxI54b9vS9C4rYyEF/TVbexiLXy
+ Y55soAIfOJYoFOUHCL4LVHXI72IMgW7KkqR8vUx01Li0Q0+ncsqmNSo3f5zZ9w8/wr6H
+ hCmw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=QGf11SbLkxX4fJOwT9kGUgWEGfA4VGBgNO6kWFPFsRk=;
- b=d8XnSF66iSXb4GxOZhOfZ+NohKMX1adGZ8jIQewYZiram4yyklw0ayccj24U0A8YvH
- y9PKO0e3CyspNtsbZV4gfFqfrykGG7QjOiXch65za/toHDGJlvJ3nRSXAoBMfTdNIK/D
- B4eP8fFngCgHCI7Jk/zDPppe1zUkxC40kI5AljrgqAIKvjW/IUe4jNgrtUQojgJnmJsB
- TMdqYYDCfJFMh6kSEV1sVLbrIduGcuei4e58NkvSPfrsb++HpMkyOpMk4cKrlH8YiD8i
- je/zB9V+Km5N0RWX9NBIfwEdcmiOWDLXnvKu0hgO8ASvNrAPvWxVBQPIL0ZW98pFLyR6
- 9umA==
-X-Gm-Message-State: AOAM530zHrEjYTfhyhFXwGhVQKIuFZW5btkfVr7btCEp/R+4Me0ciD+c
- 2v7chQluE2iKfdWZFrGvFAPRQszvATgqWw==
-X-Google-Smtp-Source: ABdhPJwgUjL4cMFHbp/fCcVv+qy9q1I9tX7u/KsG6plya4+y1by9IapYEu7T4IuDBMZGkCPiZJQNVQ==
-X-Received: by 2002:a17:906:b88c:: with SMTP id
- hb12mr24309637ejb.483.1591132039944; 
- Tue, 02 Jun 2020 14:07:19 -0700 (PDT)
-Received: from mail-wr1-f46.google.com (mail-wr1-f46.google.com.
- [209.85.221.46])
- by smtp.gmail.com with ESMTPSA id w13sm637eju.124.2020.06.02.14.07.19
- for <ath10k@lists.infradead.org>
- (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Tue, 02 Jun 2020 14:07:19 -0700 (PDT)
-Received: by mail-wr1-f46.google.com with SMTP id l10so77206wrr.10
- for <ath10k@lists.infradead.org>; Tue, 02 Jun 2020 14:07:19 -0700 (PDT)
-X-Received: by 2002:a2e:7f02:: with SMTP id a2mr429268ljd.138.1591131684280;
- Tue, 02 Jun 2020 14:01:24 -0700 (PDT)
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to:user-agent;
+ bh=ME+J2XgncrkU0A4OBlYAXUXEjouusqpGzoZTVSrmwQw=;
+ b=koYPKq134aL/C6GSKXB+8LxYE8h4HA1lpgzLCdePEubKJA7e4NezYZPjRQ7dmXn3m4
+ +8cnHoOOhDqWCBBuhBYc29iAYX7Wt7U8TfQFX6yO2Eirs0zu1zYufjdVqJiSERVOWga3
+ 4peeuOlGaEqEPCbTbn6BVxU8MZiSO2ArpenecfUICOroYJft77+68mI/Vmr3jwnLYWr1
+ bxU4m5ntkCt8MqEP0Y236jH4p6dfDAqz85no+Mm17c3HUFKpYcv2SHnKaYIxsZvXlCIv
+ SYVBHvDvxWQIsopX62xhnBcIqnEnnGTDlmkhL8x1wr6ntWRjTmlslxLRUEqOpIYVwVyV
+ FwRQ==
+X-Gm-Message-State: AOAM531lOlJ9TPnKELse5/OouruZeCcZn9j7BYufNfEGd3G3AsTUIt5h
+ lceyy1+3QLjx3InfVphWhhG+
+X-Google-Smtp-Source: ABdhPJzZvG3si+pcjptk9lE4DT9UohBXFUnhVpKpLi3UNRBawg7bgDJ2V8v6PiM99TbovUk1Bc/CkQ==
+X-Received: by 2002:a63:d307:: with SMTP id b7mr26895913pgg.219.1591144045661; 
+ Tue, 02 Jun 2020 17:27:25 -0700 (PDT)
+Received: from Mani-XPS-13-9360 ([2409:4072:6e1f:d46:97b:c5ec:c70b:6998])
+ by smtp.gmail.com with ESMTPSA id n2sm133759pgv.65.2020.06.02.17.27.18
+ (version=TLS1_2 cipher=ECDHE-ECDSA-CHACHA20-POLY1305 bits=256/256);
+ Tue, 02 Jun 2020 17:27:24 -0700 (PDT)
+Date: Wed, 3 Jun 2020 05:57:15 +0530
+From: Manivannan Sadhasivam <manivannan.sadhasivam@linaro.org>
+To: Brian Norris <briannorris@chromium.org>
+Subject: Re: [PATCH] wireless: ath10k: Return early in
+ ath10k_qmi_event_server_exit() to avoid hard crash on reboot
+Message-ID: <20200603002715.GA5349@Mani-XPS-13-9360>
+References: <20200602052533.15048-1-john.stultz@linaro.org>
+ <CA+ASDXMbNvbBdsC11dzUPX7RkMFYhJev2npPsRD_SnGQB+1hag@mail.gmail.com>
+ <CALAqxLVA1ZQjwEdbX5KGbSyLnMBAzm9PoN_Ta_Z7rBf4w3GOvQ@mail.gmail.com>
+ <CA+ASDXPddgOvEX___unx7N2YsQctsZN+1vkwPbi8Ab_zfwFfzw@mail.gmail.com>
 MIME-Version: 1.0
-References: <20200526145815.6415-1-mcgrof@kernel.org>
- <20200526145815.6415-6-mcgrof@kernel.org>
-In-Reply-To: <20200526145815.6415-6-mcgrof@kernel.org>
-From: Brian Norris <briannorris@chromium.org>
-Date: Tue, 2 Jun 2020 14:01:12 -0700
-X-Gmail-Original-Message-ID: <CA+ASDXMR-Aa9322QjUTxiD2zwXDUig1eyG7GAAJJDvuUg1AXdA@mail.gmail.com>
-Message-ID: <CA+ASDXMR-Aa9322QjUTxiD2zwXDUig1eyG7GAAJJDvuUg1AXdA@mail.gmail.com>
-Subject: Re: [PATCH v3 5/8] ath10k: use new taint_firmware_crashed()
-To: Luis Chamberlain <mcgrof@kernel.org>
+Content-Disposition: inline
+In-Reply-To: <CA+ASDXPddgOvEX___unx7N2YsQctsZN+1vkwPbi8Ab_zfwFfzw@mail.gmail.com>
+User-Agent: Mutt/1.9.4 (2018-02-28)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200602_140724_464737_8A4A1977 
-X-CRM114-Status: GOOD (  18.08  )
+X-CRM114-CacheID: sfid-20200602_172727_400651_45A1454D 
+X-CRM114-Status: GOOD (  16.52  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:644 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:541 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -88,7 +89,6 @@ X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  author's domain
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -100,109 +100,62 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: aquini@redhat.com, linux-doc@vger.kernel.org, peterz@infradead.org,
- Daniel Vetter <daniel.vetter@ffwll.ch>, linux@dominikbrodowski.net,
- Doug Anderson <dianders@chromium.org>,
- Masahiro Yamada <yamada.masahiro@socionext.com>, glider@google.com,
- GR-everest-linux-l2@marvell.com, mchehab+samsung@kernel.org, will@kernel.org,
- tglx@linutronix.de, Rob Herring <robh@kernel.org>,
- Arnd Bergmann <arnd@arndb.de>, bhe@redhat.com, corbet@lwn.net,
- mchehab+huawei@kernel.org, ath10k <ath10k@lists.infradead.org>,
- derosier@gmail.com, Takashi Iwai <tiwai@suse.de>, mingo@redhat.com,
- Kalle Valo <kvalo@codeaurora.org>, Sami Tolvanen <samitolvanen@google.com>,
- kuba@kernel.org, yzaikin@google.com, dyoung@redhat.com, mhiramat@kernel.org,
- pmladek@suse.com, elver@google.com, gpiccoli@canonical.com, aelior@marvell.com,
- Kees Cook <keescook@chromium.org>, paulmck@kernel.org, sfr@canb.auug.org.au,
- sburla@marvell.com, Steven Rostedt <rostedt@goodmis.org>,
- fmanlunas@marvell.com, cai@lca.pw, michael.chan@broadcom.com,
- Andy Shevchenko <andriy.shevchenko@linux.intel.com>,
- Andrew Morton <akpm@linux-foundation.org>, Dmitry Vyukov <dvyukov@google.com>,
- "<netdev@vger.kernel.org>" <netdev@vger.kernel.org>, rdunlap@infradead.org,
- linux-wireless <linux-wireless@vger.kernel.org>,
- Linux Kernel <linux-kernel@vger.kernel.org>, vkoul@kernel.org, schlad@suse.de,
- jeyu@kernel.org, Johannes Berg <johannes@sipsolutions.net>,
- dchickles@marvell.com, "David S. Miller" <davem@davemloft.net>,
- bauerman@linux.ibm.com
+Cc: Amit Pundir <amit.pundir@linaro.org>, Govind Singh <govinds@codeaurora.org>,
+ Rakesh Pillai <pillair@qti.qualcomm.com>, lkml <linux-kernel@vger.kernel.org>,
+ ath10k <ath10k@lists.infradead.org>,
+ Bjorn Andersson <bjorn.andersson@linaro.org>,
+ John Stultz <john.stultz@linaro.org>, Sibi Sankar <sibis@codeaurora.org>,
+ Niklas Cassel <niklas.cassel@linaro.org>, Kalle Valo <kvalo@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On Tue, May 26, 2020 at 7:58 AM Luis Chamberlain <mcgrof@kernel.org> wrote:
->
-> This makes use of the new taint_firmware_crashed() to help
-> annotate when firmware for device drivers crash. When firmware
-> crashes devices can sometimes become unresponsive, and recovery
-> sometimes requires a driver unload / reload and in the worst cases
-> a reboot.
+On Tue, Jun 02, 2020 at 01:04:26PM -0700, Brian Norris wrote:
+> On Tue, Jun 2, 2020 at 12:40 PM John Stultz <john.stultz@linaro.org> wrote:
+> > On Tue, Jun 2, 2020 at 12:16 PM Brian Norris <briannorris@chromium.org> wrote:
+> > > On Mon, Jun 1, 2020 at 10:25 PM John Stultz <john.stultz@linaro.org> wrote:
+> > > >
+> > > > Ever since 5.7-rc1, if we call
+> > > > ath10k_qmi_remove_msa_permission(), the db845c hard crashes on
+> > > > reboot, resulting in the device getting stuck in the usb crash
+> > > > debug mode and not coming back up wihthout a hard power off.
+> > > >
+> > > > This hack avoids the issue by returning early in
+> > > > ath10k_qmi_event_server_exit().
+> > > >
+> > > > A better solution is very much desired!
+> > >
+> > > Any chance you can bisect what caused this? There are a lot of
+> > > non-ath10k pieces involved in this stuff.
+> >
+> > Amit had spent some work on chasing it down to the in kernel qrtr-ns
+> > work, and reported it here:
+> >   https://lists.infradead.org/pipermail/ath10k/2020-April/014970.html
+> >
+> > But that discussion seemingly stalled out, so I came up with this hack
+> > to workaround it for us.
+> 
+> If I'm reading it right, then that means we should revert this stuff
+> from v5.7-rc1:
+> 
+> 0c2204a4ad71 net: qrtr: Migrate nameservice to kernel from userspace
+> 
+> At least, until people can resolve the tail end of that thread. New
+> features (ath11k, etc.) are not a reason to break existing features
+> (ath10k/wcn3990).
 
-Just for the record, the underlying problem you seem to be complaining
-about does not appear to be a firmware crash at all. It does happen to
-result in a firmware crash report much later on (because when the PCIe
-endpoint is this hosed, sooner or later the driver thinks the firmware
-is dead), but it's not likely the root cause. More below.
+I don't agree with this. If you read through the replies to the bug report,
+it is clear that NS migration uncovered a corner case or even a bug. So we
+should try to fix that indeed.
 
-> Using a taint flag allows us to annotate when this happens clearly.
->
-> I have run into this situation with this driver with the latest
-> firmware as of today, May 21, 2020 using v5.6.0, leaving me at
-> a state at which my only option is to reboot. Driver removal and
-> addition does not fix the situation. This is reported on kernel.org
-> bugzilla korg#207851 [0].
+Govind: Did you get chance to work on fixing this issue?
 
-I took a look, and replied there:
-https://bugzilla.kernel.org/show_bug.cgi?id=207851#c2
+Thanks,
+Mani
 
-Per the above, it seems more likely you have a PCI or power management
-problem, not an ath10k or ath10k-firmware problem.
-
-> But this isn't the first firmware crash reported,
-> others have been filed before and none of these bugs have yet been
-> addressed [1] [2] [3].  Including my own I see these firmware crash
-> reports:
-
-Yes, firmware does crash. Sometimes repeatedly. It also happens to be
-closed source, so it's nearly impossible for the average Linux dev to
-debug. But FWIW, those 3 all appear to be recoverable -- and then they
-crash again a few minutes later. So just as claimed on prior
-iterations of this patchset, ath10k is doing fine at recovery [*] --
-it's "only" the firmware that's a problem. (And, if a WiFi firmware
-doesn't like something in the RF environment...it's totally
-understandable that the crash will happen more than once. Of course
-that sucks, but it's not unexpected.) Crucially, rebooting won't
-really do anything to help these people, AIUI.
-
-Maybe what you really want is to taint the kernel every time a
-non-free firmware is loaded ;)
-
-I'd also note that those 3 reports are 3 years old. There have been
-many ath10k-firmware updates since then, so it's not necessarily fair
-to dig those back up. Also, bugzilla.kernel.org is totally ignored by
-many linux-wireless@ folks. But I digress...
-
-All in all, I have no interest in this proposal, for many of the
-reasons already mentioned on previous iterations. It's way too coarse
-and won't be useful in understanding what's going on in a system, IMO,
-at least for ath10k. But it's also easy enough to ignore, so if it
-makes somebody happy to claim a taint, then so be it.
-
-Regards,
-Brian
-
-[*] Although, at least one of those doesn't appear to be as "clean" of
-a recovery attempt as typical. Maybe there are some lurking driver
-bugs in there too.
-
-
->   * korg#207851 [0]
->   * korg#197013 [1]
->   * korg#201237 [2]
->   * korg#195987 [3]
->
-> [0] https://bugzilla.kernel.org/show_bug.cgi?id=207851
-> [1] https://bugzilla.kernel.org/show_bug.cgi?id=197013
-> [2] https://bugzilla.kernel.org/show_bug.cgi?id=201237
-> [3] https://bugzilla.kernel.org/show_bug.cgi?id=195987
+> 
+> Brian
 
 _______________________________________________
 ath10k mailing list
