@@ -2,81 +2,86 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3491B1EE42C
-	for <lists+ath10k@lfdr.de>; Thu,  4 Jun 2020 14:08:04 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2D5F61EE9FC
+	for <lists+ath10k@lfdr.de>; Thu,  4 Jun 2020 19:59:31 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=oFjCCRzHCfvMmoLDASE9dog/WvhQ3xgbW7TePBarr1w=; b=fKci1GkKsI8V6y
-	eiryPuGogx3iZEZPCLfKOSSUpkkV6nBNFCwfZXPF84DVpHVG1PL0+1hVpskksxK8dv+ZnfHQA+PfS
-	sKU3+pvrajOFaE2q2UqITyOgVDn1Sjt9C4zSbbfIe+Qr32DZzHCD/zJCoVJ6daxoIn1juMzwVZRpO
-	ILqdhzyRgstywqQ6AM7TrmgSbgKdz8m99wl0M/+0zGdtg7zalvVDDYrHc9vx/1LixUo3Y4r2aaRur
-	pD4pfNFL0autMh1cCTqMfHh1mDG05g+i/shq3JIZ0HXvY7rcdlUD5GgwrlwhpMiFT6kUUT54qp4yn
-	eIYED3bl1v5flvZ5R6Ww==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=HWV9oKU58CsFS9tH2s5fcJ+lpie+ESVSde51CYJjyvY=; b=j4rj5XUCjVgZBI
+	hVnAnOoGck0/VwiRsOuobHT80yo2+UseWBcTINBSGQm3HhcW0JtoXKTN1+eoaS8GVBT9FErssOFUg
+	IYVlJNBzdq+2rXvhqPn80fHviZkpTgIpWsrKgpFj1OmkMeNRObWWrLJRPj+2dVSKB/ijq9XwCAN/N
+	iE96+AyoxS4nRRxpM/Ogjv+ypmPjANzyfmvH6Osi+S48QpuqmH+D5oo/mgRyPOw6LspEy2fS1KypV
+	+uShRdisQ/v3z9iAgFVl1fICrQM9hk/kc1une8wD7rGmu1OTTGi3atSVoDcQSMrGan7dwBdrzFRd4
+	4ZyMWHwtXjUKwqWnx2dw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jgof9-0005Rc-Ou; Thu, 04 Jun 2020 12:07:59 +0000
-Received: from mail-ot1-x341.google.com ([2607:f8b0:4864:20::341])
+	id 1jgu9I-0005YJ-6v; Thu, 04 Jun 2020 17:59:28 +0000
+Received: from mail-pg1-x544.google.com ([2607:f8b0:4864:20::544])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jgof6-0005QV-7O
- for ath10k@lists.infradead.org; Thu, 04 Jun 2020 12:07:57 +0000
-Received: by mail-ot1-x341.google.com with SMTP id o7so4536162oti.9
- for <ath10k@lists.infradead.org>; Thu, 04 Jun 2020 05:07:55 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=sartura-hr.20150623.gappssmtp.com; s=20150623;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=Tjq8ft+xvu8cwEN8Ezt9irnpAyJe2x67prtJGxbBMaU=;
- b=guN3uovnPUiuWEV6NiTHm3kRM3IPVjgr+mjAESWEH8ZXvhJiTcpKKYcHMWdwqNvmIg
- K0byAlSDFsLgLqnDAaR8QQI8wDIFO/tVMTja9YIKxzwQPEezcvAq6DHHQqhLerMlYvUP
- RWeqzKgFCpFRG5azJx4KZYMR0/iSdQ78bwNSR2XJnN2mW28JgLw18JVT+ZJJz842SSsI
- KqRivFDA2NMephM8gBxzE5YPGR75HMcusZQz3HBpwSWADM7jpci3scG/RWhy6FOL0+/H
- t9y8jn80Qduo23ead004Y5ZwGFV8ctc4AvcWPDHgCfJJPLBGE0CXXNNGWdXtg9BvzBou
- Nbdg==
+ id 1jgu9F-0005Xp-6W
+ for ath10k@lists.infradead.org; Thu, 04 Jun 2020 17:59:26 +0000
+Received: by mail-pg1-x544.google.com with SMTP id r10so3804804pgv.8
+ for <ath10k@lists.infradead.org>; Thu, 04 Jun 2020 10:59:24 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=2qJ1KmR7n31K99rmmaGKTiex9LAFKCkmBxAmhTYhJxo=;
+ b=O25wYAeOqYLKutlDyi60xIlbTuDdCOT5e2XYNOsNGhC4B+NaMg3VxpH/LIFlYcKegJ
+ T2d7Nsibm7xBSN7jaERDrF77NKlRLBhUJZhYCNyaOF8giEp3RryXOHyVxA+KlQtlUkqU
+ MR3J/581kbOBBRQlO36Kq+wpxgAQjeV+sg00s=
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=Tjq8ft+xvu8cwEN8Ezt9irnpAyJe2x67prtJGxbBMaU=;
- b=Sl/BDSkoZD4K9sQ9KHLnj45wt/4FoGvkm784Y3Cb4a1ygS/RVkYV/qXuWWdENO+tvs
- lLkDOhFATUrK8vGo74rg447FhZZO8M3WJ7BnRXn3pjy3Tj9Wzh5+kwtnXMf2Q8IMKpT1
- RTW27qfKfDByCtmg7eozPySItNtG0Q0YcVqB5gg3e0MjbhXsJiYaD1txBN35gd+ootAd
- khTaCJhnrlOEPwFr/Q7eRJhLitc386yswWuTgq7DxeuFz4aT4mw+sF2RuI8jhzo+w93n
- qfmpNUciYdeQ4IAKsVl9Md5UaS4J9foc0GKGg/8qHjrKwYMGI/1Kd4j6rNSC7HRP6ZsD
- duxg==
-X-Gm-Message-State: AOAM530hYUqXi+Mlzmj56YOGGVN0aINOxkrknV8jlb/pvoaXqhoCwrjr
- RNWQXnhQ1uY5NOhIXgRV7TLMrcDHvPYfTrYXMhJye4ZW
-X-Google-Smtp-Source: ABdhPJz6uKAqidAWQ3VoCGkqeayvddo7GpDPoabF0ukn18un3qPPMA6EFAcFaSSXv7kVZEzms2Np9100F4DTzKL2vaQ=
-X-Received: by 2002:a05:6830:60d:: with SMTP id
- w13mr3374166oti.243.1591272474243; 
- Thu, 04 Jun 2020 05:07:54 -0700 (PDT)
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=2qJ1KmR7n31K99rmmaGKTiex9LAFKCkmBxAmhTYhJxo=;
+ b=d31mMWNPVhicimtLnZ0f7kh8fswNW7KWQHjv3VBuHHMsgl5KWYqOxP8Ud1674YY/YP
+ znnY+kuA2f4wCBssb854/kvsDDiYK3mSAr2MTaYpJSpCLvmXb8AlZ+7Hl5sINcJZtH7N
+ yBP4bwl5NF6ikx9ax0KNNrsdLsnI+HmEetUgtVagP6LU9vKqfBuSGRQo2rfUC3hVJzAS
+ s5GBjsopwdDeMHYl244BYol1UtY8GwH2xIYOLVAq1ozW9npNsN5QZD2qZorkhxSwbAXH
+ wH7egyEhlMD3sh9DV7x2CLgUCF1yWIDxb+okOnAKUe5vo86cg8Ogoi76ZuMMRTK2mmTE
+ GkfQ==
+X-Gm-Message-State: AOAM533qYtBcG1cumWXIo2ifxkr4xFIK1bBKXR2H70blSitRrMgNhEOp
+ ZwH2+jre97ifQhmEmexXP1jBsg==
+X-Google-Smtp-Source: ABdhPJy8aqjpj6isz3vL3kGOUE53Wgd2Jl+2f1JtJGfWBzh0MNQ1ovSw5R16ThJEKXvXpFgxlTMkiA==
+X-Received: by 2002:a63:454c:: with SMTP id u12mr5625732pgk.153.1591293563926; 
+ Thu, 04 Jun 2020 10:59:23 -0700 (PDT)
+Received: from evgreen-glaptop.cheshire.ch
+ ([2601:646:c780:1404:1c5a:73fa:6d5a:5a3c])
+ by smtp.gmail.com with ESMTPSA id q13sm2568927pfk.8.2020.06.04.10.59.22
+ (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+ Thu, 04 Jun 2020 10:59:23 -0700 (PDT)
+From: Evan Green <evgreen@chromium.org>
+To: Kalle Valo <kvalo@codeaurora.org>
+Subject: [PATCH] ath10k: Acquire tx_lock in tx error paths
+Date: Thu,  4 Jun 2020 10:59:11 -0700
+Message-Id: <20200604105901.1.I5b8b0c7ee0d3e51a73248975a9da61401b8f3900@changeid>
+X-Mailer: git-send-email 2.24.1
 MIME-Version: 1.0
-References: <20200327093147.189390-1-robert.marko@sartura.hr>
-In-Reply-To: <20200327093147.189390-1-robert.marko@sartura.hr>
-From: Robert Marko <robert.marko@sartura.hr>
-Date: Thu, 4 Jun 2020 14:07:43 +0200
-Message-ID: <CA+HBbNE81PhyJ4xZiBXPnbocdC-7A=KgY=tcjLwJS-p=u66Ghw@mail.gmail.com>
-Subject: Re: [PATCH] ath10k: enable advertising support for channels 32, 68
- and 98
-To: ath10k@lists.infradead.org
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200604_050756_321215_9CDB91D3 
-X-CRM114-Status: GOOD (  12.31  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20200604_105925_239204_D0DEA16A 
+X-CRM114-Status: UNSURE (   7.79  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:341 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:544 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -88,66 +93,56 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Luka Perkov <luka.perkov@sartura.hr>
+Cc: Govind Singh <govinds@qti.qualcomm.com>, kuabhs@google.com.org,
+ sujitka@chromium.org, netdev@vger.kernel.org, linux-wireless@vger.kernel.org,
+ linux-kernel@vger.kernel.org, Evan Green <evgreen@chromium.org>,
+ ath10k@lists.infradead.org, Michal Kazior <michal.kazior@tieto.com>,
+ Jakub Kicinski <kuba@kernel.org>, "David S. Miller" <davem@davemloft.net>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On Fri, Mar 27, 2020 at 10:31 AM Robert Marko <robert.marko@sartura.hr> wrote:
->
-> Enable advertising support for 5G channels: 32, 68 and 96.
-> These channels are legal and available for use in ETSI countries.
-> So lets advertise these and they will be available in accordance with the regulatory domain used.
-Hi, are there are remarks on this patch?
+ath10k_htt_tx_free_msdu_id() has a lockdep assertion that htt->tx_lock
+is held. Acquire the lock in a couple of error paths when calling that
+function to ensure this condition is met.
 
-Regards
-Robert
->
-> Signed-off-by: Robert Marko <robert.marko@sartura.hr>
-> Cc: Luka Perkov <luka.perkov@sartura.hr>
-> ---
->  drivers/net/wireless/ath/ath10k/core.h | 2 +-
->  drivers/net/wireless/ath/ath10k/mac.c  | 3 +++
->  2 files changed, 4 insertions(+), 1 deletion(-)
->
-> diff --git a/drivers/net/wireless/ath/ath10k/core.h b/drivers/net/wireless/ath/ath10k/core.h
-> index 5101bf2b5b15..480efaa1278c 100644
-> --- a/drivers/net/wireless/ath/ath10k/core.h
-> +++ b/drivers/net/wireless/ath/ath10k/core.h
-> @@ -37,7 +37,7 @@
->  #define WMI_READY_TIMEOUT (5 * HZ)
->  #define ATH10K_FLUSH_TIMEOUT_HZ (5 * HZ)
->  #define ATH10K_CONNECTION_LOSS_HZ (3 * HZ)
-> -#define ATH10K_NUM_CHANS 41
-> +#define ATH10K_NUM_CHANS 44
->  #define ATH10K_MAX_5G_CHAN 173
->
->  /* Antenna noise floor */
-> diff --git a/drivers/net/wireless/ath/ath10k/mac.c b/drivers/net/wireless/ath/ath10k/mac.c
-> index 7fee35ff966b..f98422427b27 100644
-> --- a/drivers/net/wireless/ath/ath10k/mac.c
-> +++ b/drivers/net/wireless/ath/ath10k/mac.c
-> @@ -8363,6 +8363,7 @@ static const struct ieee80211_channel ath10k_2ghz_channels[] = {
->  };
->
->  static const struct ieee80211_channel ath10k_5ghz_channels[] = {
-> +       CHAN5G(32, 5160, 0),
->         CHAN5G(36, 5180, 0),
->         CHAN5G(40, 5200, 0),
->         CHAN5G(44, 5220, 0),
-> @@ -8371,6 +8372,8 @@ static const struct ieee80211_channel ath10k_5ghz_channels[] = {
->         CHAN5G(56, 5280, 0),
->         CHAN5G(60, 5300, 0),
->         CHAN5G(64, 5320, 0),
-> +       CHAN5G(68, 5340, 0),
-> +       CHAN5G(96, 5480, 0),
->         CHAN5G(100, 5500, 0),
->         CHAN5G(104, 5520, 0),
->         CHAN5G(108, 5540, 0),
-> --
-> 2.26.0
->
+Fixes: 6421969f248fd ("ath10k: refactor tx pending management")
+Fixes: e62ee5c381c59 ("ath10k: Add support for htt_data_tx_desc_64
+descriptor")
+Signed-off-by: Evan Green <evgreen@chromium.org>
+---
+
+ drivers/net/wireless/ath/ath10k/htt_tx.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/drivers/net/wireless/ath/ath10k/htt_tx.c b/drivers/net/wireless/ath/ath10k/htt_tx.c
+index e9d12ea708b62..e8c00af2cce1d 100644
+--- a/drivers/net/wireless/ath/ath10k/htt_tx.c
++++ b/drivers/net/wireless/ath/ath10k/htt_tx.c
+@@ -1545,7 +1545,9 @@ static int ath10k_htt_tx_32(struct ath10k_htt *htt,
+ err_unmap_msdu:
+ 	dma_unmap_single(dev, skb_cb->paddr, msdu->len, DMA_TO_DEVICE);
+ err_free_msdu_id:
++	spin_lock_bh(&htt->tx_lock);
+ 	ath10k_htt_tx_free_msdu_id(htt, msdu_id);
++	spin_unlock_bh(&htt->tx_lock);
+ err:
+ 	return res;
+ }
+@@ -1752,7 +1754,9 @@ static int ath10k_htt_tx_64(struct ath10k_htt *htt,
+ err_unmap_msdu:
+ 	dma_unmap_single(dev, skb_cb->paddr, msdu->len, DMA_TO_DEVICE);
+ err_free_msdu_id:
++	spin_lock_bh(&htt->tx_lock);
+ 	ath10k_htt_tx_free_msdu_id(htt, msdu_id);
++	spin_unlock_bh(&htt->tx_lock);
+ err:
+ 	return res;
+ }
+-- 
+2.24.1
+
 
 _______________________________________________
 ath10k mailing list
