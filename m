@@ -2,86 +2,89 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2D5F61EE9FC
-	for <lists+ath10k@lfdr.de>; Thu,  4 Jun 2020 19:59:31 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id EB5CD1EEA2A
+	for <lists+ath10k@lfdr.de>; Thu,  4 Jun 2020 20:17:32 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=HWV9oKU58CsFS9tH2s5fcJ+lpie+ESVSde51CYJjyvY=; b=j4rj5XUCjVgZBI
-	hVnAnOoGck0/VwiRsOuobHT80yo2+UseWBcTINBSGQm3HhcW0JtoXKTN1+eoaS8GVBT9FErssOFUg
-	IYVlJNBzdq+2rXvhqPn80fHviZkpTgIpWsrKgpFj1OmkMeNRObWWrLJRPj+2dVSKB/ijq9XwCAN/N
-	iE96+AyoxS4nRRxpM/Ogjv+ypmPjANzyfmvH6Osi+S48QpuqmH+D5oo/mgRyPOw6LspEy2fS1KypV
-	+uShRdisQ/v3z9iAgFVl1fICrQM9hk/kc1une8wD7rGmu1OTTGi3atSVoDcQSMrGan7dwBdrzFRd4
-	4ZyMWHwtXjUKwqWnx2dw==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:Message-ID:References:In-Reply-To:Subject:To:From:
+	Date:MIME-Version:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=o8zpZqmq/D4g/f1bwk/OfzYy1K+oYhA/mF3UAs59/8g=; b=r6Fae8XRCg1KtGEc2XamLaPP4
+	tLVy/GKljQaqmT7PiEvEsRIOTMuoMiKgZ6xCQKe/L7q2nnu9WRcSB/VKqPLiiIVXKK/Z0pMI2Yslx
+	yuweU7woMd8HKC2V6zhZRsSYX0AFfXWf8ZEM15OH8MNU41F0XmY4me3WckfLvh9fDEr9zfy7ChyXd
+	8NrGZChEqsnes5ED1XXvYmGY1MXy3lOE+ZleTe5LyfPxFUU+Td/+7CAHTY+TE03asQv3HpGrV+/wi
+	4tb9dN39TExD2FxgsNKJQzBX7Dv6IACMSkixv1P+ARSw++UxHR0+8rd54aqXyQD9zxgPL/42ZREx1
+	GsS7FI1zg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jgu9I-0005YJ-6v; Thu, 04 Jun 2020 17:59:28 +0000
-Received: from mail-pg1-x544.google.com ([2607:f8b0:4864:20::544])
+	id 1jguQk-0000rD-LG; Thu, 04 Jun 2020 18:17:30 +0000
+Received: from m43-7.mailgun.net ([69.72.43.7])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jgu9F-0005Xp-6W
- for ath10k@lists.infradead.org; Thu, 04 Jun 2020 17:59:26 +0000
-Received: by mail-pg1-x544.google.com with SMTP id r10so3804804pgv.8
- for <ath10k@lists.infradead.org>; Thu, 04 Jun 2020 10:59:24 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
- h=from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=2qJ1KmR7n31K99rmmaGKTiex9LAFKCkmBxAmhTYhJxo=;
- b=O25wYAeOqYLKutlDyi60xIlbTuDdCOT5e2XYNOsNGhC4B+NaMg3VxpH/LIFlYcKegJ
- T2d7Nsibm7xBSN7jaERDrF77NKlRLBhUJZhYCNyaOF8giEp3RryXOHyVxA+KlQtlUkqU
- MR3J/581kbOBBRQlO36Kq+wpxgAQjeV+sg00s=
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
- :content-transfer-encoding;
- bh=2qJ1KmR7n31K99rmmaGKTiex9LAFKCkmBxAmhTYhJxo=;
- b=d31mMWNPVhicimtLnZ0f7kh8fswNW7KWQHjv3VBuHHMsgl5KWYqOxP8Ud1674YY/YP
- znnY+kuA2f4wCBssb854/kvsDDiYK3mSAr2MTaYpJSpCLvmXb8AlZ+7Hl5sINcJZtH7N
- yBP4bwl5NF6ikx9ax0KNNrsdLsnI+HmEetUgtVagP6LU9vKqfBuSGRQo2rfUC3hVJzAS
- s5GBjsopwdDeMHYl244BYol1UtY8GwH2xIYOLVAq1ozW9npNsN5QZD2qZorkhxSwbAXH
- wH7egyEhlMD3sh9DV7x2CLgUCF1yWIDxb+okOnAKUe5vo86cg8Ogoi76ZuMMRTK2mmTE
- GkfQ==
-X-Gm-Message-State: AOAM533qYtBcG1cumWXIo2ifxkr4xFIK1bBKXR2H70blSitRrMgNhEOp
- ZwH2+jre97ifQhmEmexXP1jBsg==
-X-Google-Smtp-Source: ABdhPJy8aqjpj6isz3vL3kGOUE53Wgd2Jl+2f1JtJGfWBzh0MNQ1ovSw5R16ThJEKXvXpFgxlTMkiA==
-X-Received: by 2002:a63:454c:: with SMTP id u12mr5625732pgk.153.1591293563926; 
- Thu, 04 Jun 2020 10:59:23 -0700 (PDT)
-Received: from evgreen-glaptop.cheshire.ch
- ([2601:646:c780:1404:1c5a:73fa:6d5a:5a3c])
- by smtp.gmail.com with ESMTPSA id q13sm2568927pfk.8.2020.06.04.10.59.22
- (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
- Thu, 04 Jun 2020 10:59:23 -0700 (PDT)
-From: Evan Green <evgreen@chromium.org>
-To: Kalle Valo <kvalo@codeaurora.org>
-Subject: [PATCH] ath10k: Acquire tx_lock in tx error paths
-Date: Thu,  4 Jun 2020 10:59:11 -0700
-Message-Id: <20200604105901.1.I5b8b0c7ee0d3e51a73248975a9da61401b8f3900@changeid>
-X-Mailer: git-send-email 2.24.1
+ id 1jguQf-0000qq-TM
+ for ath10k@lists.infradead.org; Thu, 04 Jun 2020 18:17:28 +0000
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
+ q=dns/txt; 
+ s=smtp; t=1591294647; h=Message-ID: References: In-Reply-To: Subject:
+ Cc: To: From: Date: Content-Transfer-Encoding: Content-Type:
+ MIME-Version: Sender; bh=Sy6oxi6dVwjeydEC93CEgvW6xjF1Nhp3WKKAo+y1MfI=;
+ b=mI3ogPerGckIB68Q8vswfoe3UXvXQsM5hjWdj4oJ2fiejugzUHQkWiaGoPDd99L7k1LU7XxA
+ Z9+JsjZsx749d++83Y7Jlv66CXaUC9ZmVrmi6p44JlIqnE4yc6K63MEVKHloo43GtwVJ4iyu
+ G8AhtZID4ICH7YaQbr9FYDWD1eg=
+X-Mailgun-Sending-Ip: 69.72.43.7
+X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
+Received: from smtp.codeaurora.org
+ (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171]) by
+ smtp-out-n12.prod.us-east-1.postgun.com with SMTP id
+ 5ed93ab02dd9e15ae3b5060d (version=TLS1.2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256); Thu, 04 Jun 2020 18:17:20
+ GMT
+Received: by smtp.codeaurora.org (Postfix, from userid 1001)
+ id 2A867C433CA; Thu,  4 Jun 2020 18:17:19 +0000 (UTC)
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ aws-us-west-2-caf-mail-1.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,URIBL_BLOCKED
+ autolearn=unavailable autolearn_force=no version=3.4.0
+Received: from mail.codeaurora.org (localhost.localdomain [127.0.0.1])
+ (using TLSv1 with cipher ECDHE-RSA-AES256-SHA (256/256 bits))
+ (No client certificate requested) (Authenticated sender: sibis)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id ADA4AC433C6;
+ Thu,  4 Jun 2020 18:17:18 +0000 (UTC)
 MIME-Version: 1.0
+Date: Thu, 04 Jun 2020 23:47:18 +0530
+From: Sibi Sankar <sibis@codeaurora.org>
+To: govinds@codeaurora.org
+Subject: Re: [PATCH] wireless: ath10k: Return early in
+ ath10k_qmi_event_server_exit() to avoid hard crash on reboot
+In-Reply-To: <4e0642b9882c41f4c10963b265bf6d9f@codeaurora.org>
+References: <20200602052533.15048-1-john.stultz@linaro.org>
+ <CA+ASDXMbNvbBdsC11dzUPX7RkMFYhJev2npPsRD_SnGQB+1hag@mail.gmail.com>
+ <CALAqxLVA1ZQjwEdbX5KGbSyLnMBAzm9PoN_Ta_Z7rBf4w3GOvQ@mail.gmail.com>
+ <CA+ASDXPddgOvEX___unx7N2YsQctsZN+1vkwPbi8Ab_zfwFfzw@mail.gmail.com>
+ <20200603002715.GA5349@Mani-XPS-13-9360>
+ <4e0642b9882c41f4c10963b265bf6d9f@codeaurora.org>
+Message-ID: <40a7d87e5774d56d9ca31e4de0c17831@codeaurora.org>
+X-Sender: sibis@codeaurora.org
+User-Agent: Roundcube Webmail/1.3.9
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200604_105925_239204_D0DEA16A 
-X-CRM114-Status: UNSURE (   7.79  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200604_111727_170985_0061F4E7 
+X-CRM114-Status: GOOD (  19.69  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:544 listed in]
- [list.dnswl.org]
+ no trust [69.72.43.7 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
+ 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [69.72.43.7 listed in wl.mailspike.net]
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -93,56 +96,91 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Govind Singh <govinds@qti.qualcomm.com>, kuabhs@google.com.org,
- sujitka@chromium.org, netdev@vger.kernel.org, linux-wireless@vger.kernel.org,
- linux-kernel@vger.kernel.org, Evan Green <evgreen@chromium.org>,
- ath10k@lists.infradead.org, Michal Kazior <michal.kazior@tieto.com>,
- Jakub Kicinski <kuba@kernel.org>, "David S. Miller" <davem@davemloft.net>
-Content-Type: text/plain; charset="us-ascii"
+Cc: Amit Pundir <amit.pundir@linaro.org>, linux-kernel-owner@vger.kernel.org,
+ Rakesh Pillai <pillair@qti.qualcomm.com>,
+ Brian Norris <briannorris@chromium.org>, lkml <linux-kernel@vger.kernel.org>,
+ ath10k <ath10k@lists.infradead.org>,
+ Bjorn Andersson <bjorn.andersson@linaro.org>,
+ John Stultz <john.stultz@linaro.org>,
+ Manivannan Sadhasivam <manivannan.sadhasivam@linaro.org>,
+ Niklas Cassel <niklas.cassel@linaro.org>, Kalle Valo <kvalo@codeaurora.org>
 Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-ath10k_htt_tx_free_msdu_id() has a lockdep assertion that htt->tx_lock
-is held. Acquire the lock in a couple of error paths when calling that
-function to ensure this condition is met.
+On 2020-06-03 15:37, govinds@codeaurora.org wrote:
+> Hi Mani,
+> 
+> On 2020-06-03 05:57, Manivannan Sadhasivam wrote:
+>> On Tue, Jun 02, 2020 at 01:04:26PM -0700, Brian Norris wrote:
+>>> On Tue, Jun 2, 2020 at 12:40 PM John Stultz <john.stultz@linaro.org> 
+>>> wrote:
+>>> > On Tue, Jun 2, 2020 at 12:16 PM Brian Norris <briannorris@chromium.org> wrote:
+>>> > > On Mon, Jun 1, 2020 at 10:25 PM John Stultz <john.stultz@linaro.org> wrote:
+>>> > > >
+>>> > > > Ever since 5.7-rc1, if we call
+>>> > > > ath10k_qmi_remove_msa_permission(), the db845c hard crashes on
+>>> > > > reboot, resulting in the device getting stuck in the usb crash
+>>> > > > debug mode and not coming back up wihthout a hard power off.
+>>> > > >
+>>> > > > This hack avoids the issue by returning early in
+>>> > > > ath10k_qmi_event_server_exit().
+>>> > > >
+>>> > > > A better solution is very much desired!
+>>> > >
+>>> > > Any chance you can bisect what caused this? There are a lot of
+>>> > > non-ath10k pieces involved in this stuff.
+>>> >
+>>> > Amit had spent some work on chasing it down to the in kernel qrtr-ns
+>>> > work, and reported it here:
+>>> >   https://lists.infradead.org/pipermail/ath10k/2020-April/014970.html
+>>> >
+>>> > But that discussion seemingly stalled out, so I came up with this hack
+>>> > to workaround it for us.
+>>> 
+>>> If I'm reading it right, then that means we should revert this stuff
+>>> from v5.7-rc1:
+>>> 
+>>> 0c2204a4ad71 net: qrtr: Migrate nameservice to kernel from userspace
+>>> 
+>>> At least, until people can resolve the tail end of that thread. New
+>>> features (ath11k, etc.) are not a reason to break existing features
+>>> (ath10k/wcn3990).
+>> 
+>> I don't agree with this. If you read through the replies to the bug 
+>> report,
+>> it is clear that NS migration uncovered a corner case or even a bug. 
+>> So we
+>> should try to fix that indeed.
+>> 
+>> Govind: Did you get chance to work on fixing this issue?
+>> 
+> 
+> I have done basic testing by moving msa map/unmap from qmi service
+> callbacks to init/de-init path.
+> I will send patch for review.
+> Reason for del_server needs to investigated from rproc side.
 
-Fixes: 6421969f248fd ("ath10k: refactor tx pending management")
-Fixes: e62ee5c381c59 ("ath10k: Add support for htt_data_tx_desc_64
-descriptor")
-Signed-off-by: Evan Green <evgreen@chromium.org>
----
+Govind,
+On receiving SIGTERM, rmtfs would try
+to perform a graceful shutdown of the
+modem, that should be the source of
+the del_server.
 
- drivers/net/wireless/ath/ath10k/htt_tx.c | 4 ++++
- 1 file changed, 4 insertions(+)
+> 
+>> Thanks,
+>> Mani
+>> 
+>>> 
+>>> Brian
+> 
+> Thanks,
+> Govind
 
-diff --git a/drivers/net/wireless/ath/ath10k/htt_tx.c b/drivers/net/wireless/ath/ath10k/htt_tx.c
-index e9d12ea708b62..e8c00af2cce1d 100644
---- a/drivers/net/wireless/ath/ath10k/htt_tx.c
-+++ b/drivers/net/wireless/ath/ath10k/htt_tx.c
-@@ -1545,7 +1545,9 @@ static int ath10k_htt_tx_32(struct ath10k_htt *htt,
- err_unmap_msdu:
- 	dma_unmap_single(dev, skb_cb->paddr, msdu->len, DMA_TO_DEVICE);
- err_free_msdu_id:
-+	spin_lock_bh(&htt->tx_lock);
- 	ath10k_htt_tx_free_msdu_id(htt, msdu_id);
-+	spin_unlock_bh(&htt->tx_lock);
- err:
- 	return res;
- }
-@@ -1752,7 +1754,9 @@ static int ath10k_htt_tx_64(struct ath10k_htt *htt,
- err_unmap_msdu:
- 	dma_unmap_single(dev, skb_cb->paddr, msdu->len, DMA_TO_DEVICE);
- err_free_msdu_id:
-+	spin_lock_bh(&htt->tx_lock);
- 	ath10k_htt_tx_free_msdu_id(htt, msdu_id);
-+	spin_unlock_bh(&htt->tx_lock);
- err:
- 	return res;
- }
 -- 
-2.24.1
-
+Qualcomm Innovation Center, Inc. is a member of Code Aurora Forum,
+a Linux Foundation Collaborative Project.
 
 _______________________________________________
 ath10k mailing list
