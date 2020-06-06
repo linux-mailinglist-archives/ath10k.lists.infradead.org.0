@@ -2,68 +2,84 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2DC431F037C
-	for <lists+ath10k@lfdr.de>; Sat,  6 Jun 2020 01:26:48 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id A2FED1F07DC
+	for <lists+ath10k@lfdr.de>; Sat,  6 Jun 2020 18:12:27 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Subject:To:From
-	:Date:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=FdXh84AxzTEiiPNpJKJtdSgKVNyspQfQtx/jz0+QE3s=; b=EevDJ6jPGTVZfG
-	vwjxI+N2J4P2VQcOBhCGFfdQYVNR+35AOb3iVCBbBI4XiH+WKHx3u7AvkoKBKmBE9a7KlgKVlkh+p
-	/wJxS7FDHce8WgQ2x/K5HntS6WCaS5jN0G249vXVJLNlCZ3jXgtNnGNd+FpcHt8lHRDg6rKMYzC6m
-	hyNH9hdv/3h/OuQKJJxYM3vzZWO+NK6+Ev//rZ5sfy86DGfjKDoAc7/3FuQHAfWhCp4vVPOg7+QVd
-	52j+sO3BnjAqR3xY3PQBIDzRKSXL6eEh5ZzQdCXTHB4jfw7dx3i+B9A7nQqeBEnMwLIFdr5vEtiwP
-	FlCMxeKzFQz2Der2zUpw==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:Message-ID:References:In-Reply-To:Subject:To:From:
+	Date:MIME-Version:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=H6tNYN2taSbYsLWEuGmy8nE2O7qb3SiBJyAFJ2Bzxcc=; b=ZYsmR987hYsdlihiZGQfqh90O
+	AVAl5qwTM5oezeaKbpyaq2Pkp79lbqNEmOJtuvdPrq+7wYx3oGMZqvVUjJy6DjaZAbh0uBheies/Q
+	KO+aJ6S+lZ2gME+UM2QKSCjWioxBTvGeQTBQtPam3mjzHuRFX9XirQJcyBzoM0TvKoDx9VtPrr/fm
+	Dd8wRvxEvEg413InbJLQ6CoWzvSkIKArdNyF2K5ljF4alFpox+rpCXOcwPrXkZ5wguWrs0KxxX+5B
+	qqPKhNmQa6cvIr/LR+sv5v8uWLRp3sI0PsxXDSrQJJY9DLUmVKUaQteWKunsTVpdKLUz51UJIpmTB
+	maXQ0TBsA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jhLjX-0001JH-SX; Fri, 05 Jun 2020 23:26:43 +0000
-Received: from mga02.intel.com ([134.134.136.20])
+	id 1jhbQk-0004xV-SS; Sat, 06 Jun 2020 16:12:22 +0000
+Received: from m43-7.mailgun.net ([69.72.43.7])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jhLjT-0001IH-7Z
- for ath10k@lists.infradead.org; Fri, 05 Jun 2020 23:26:40 +0000
-IronPort-SDR: NNti8cbAqtggx43VIGMR+6MsS9DL49SeXJ94ViKdbVFOx8NEcVAXj/1XngAMR+kdOJOEmrXMNk
- X6ayJGV4zs/Q==
-X-Amp-Result: SKIPPED(no attachment in message)
-X-Amp-File-Uploaded: False
-Received: from orsmga004.jf.intel.com ([10.7.209.38])
- by orsmga101.jf.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
- 05 Jun 2020 16:26:38 -0700
-IronPort-SDR: GfA14OOnITzEqQxy6DZrMMU29pBa36IQ7lMdSg7BRTJeue5ItXb5m5s80C5IvxKOYiINjghD8Y
- RXnyMTFGfDNg==
-X-ExtLoop1: 1
-X-IronPort-AV: E=Sophos;i="5.73,478,1583222400"; d="scan'208";a="417428761"
-Received: from lkp-server02.sh.intel.com (HELO 85fa322b0eb2) ([10.239.97.151])
- by orsmga004.jf.intel.com with ESMTP; 05 Jun 2020 16:26:36 -0700
-Received: from kbuild by 85fa322b0eb2 with local (Exim 4.92)
- (envelope-from <lkp@intel.com>)
- id 1jhLjP-0000RD-Vn; Fri, 05 Jun 2020 23:26:35 +0000
-Date: Sat, 06 Jun 2020 07:26:11 +0800
-From: kernel test robot <lkp@intel.com>
-To: Kalle Valo <kvalo@codeaurora.org>
-Subject: [ath6kl:ath11k-qca6390-bringup] BUILD SUCCESS
- 6f57a4d38b4e79c1d97a251040e7cb354da9778d
-Message-ID: <5edad493.jIuBHymrecgGgWt2%lkp@intel.com>
-User-Agent: Heirloom mailx 12.5 6/20/10
+ id 1jhbQf-0004x2-TP
+ for ath10k@lists.infradead.org; Sat, 06 Jun 2020 16:12:20 +0000
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
+ q=dns/txt; 
+ s=smtp; t=1591459938; h=Message-ID: References: In-Reply-To: Subject:
+ Cc: To: From: Date: Content-Transfer-Encoding: Content-Type:
+ MIME-Version: Sender; bh=W2+f/Jlwr9sdU/LqjCOSQU2eKt+VOfS8dbeManW9W14=;
+ b=iy7PnmESnuTzW/+0DrWGl+/JMTYNhtS/ynEsh4cob4s9bGU4p9xdlXxn0X/mOaF8OTGQFvB7
+ WnhMla5CwjEUP7WuXeI5QmZ6rlXIl9zW2JP836Tj2T1/PKI7mKDxTU/kgSGgDkgq+pnwaOJo
+ Hy9yxOUmpfWwB9ExbaCrl9URwLs=
+X-Mailgun-Sending-Ip: 69.72.43.7
+X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
+Received: from smtp.codeaurora.org
+ (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171]) by
+ smtp-out-n03.prod.us-west-2.postgun.com with SMTP id
+ 5edbc0536ecee74a4f32a0fd (version=TLS1.2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256); Sat, 06 Jun 2020 16:12:03
+ GMT
+Received: by smtp.codeaurora.org (Postfix, from userid 1001)
+ id D2FD5C4339C; Sat,  6 Jun 2020 16:12:02 +0000 (UTC)
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ aws-us-west-2-caf-mail-1.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED
+ autolearn=unavailable autolearn_force=no version=3.4.0
+Received: from mail.codeaurora.org (localhost.localdomain [127.0.0.1])
+ (using TLSv1 with cipher ECDHE-RSA-AES256-SHA (256/256 bits))
+ (No client certificate requested) (Authenticated sender: govinds)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 3AD6AC433C6;
+ Sat,  6 Jun 2020 16:12:02 +0000 (UTC)
 MIME-Version: 1.0
+Date: Sat, 06 Jun 2020 21:42:02 +0530
+From: Govind Singh <govinds@codeaurora.org>
+To: ath10k@lists.infradead.org, manivannan.sadhasivam@linaro.org,
+ sibis@codeaurora.org
+Subject: Re: [PATCH] ath10k: Move msa region map/unmap to init/deinit path
+In-Reply-To: <1591191231-31917-1-git-send-email-govinds@codeaurora.org>
+References: <1591191231-31917-1-git-send-email-govinds@codeaurora.org>
+Message-ID: <3e092e58b3c2055933141ae3b698a5c0@codeaurora.org>
+X-Sender: govinds@codeaurora.org
+User-Agent: Roundcube Webmail/1.3.9
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200605_162639_326508_E853BA59 
-X-CRM114-Status: UNSURE (   4.89  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.5 (/)
+X-CRM114-CacheID: sfid-20200606_091219_109601_C1DE7F65 
+X-CRM114-Status: GOOD (  15.59  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-0.5 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [134.134.136.20 listed in list.dnswl.org]
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [134.134.136.20 listed in wl.mailspike.net]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [69.72.43.7 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [69.72.43.7 listed in wl.mailspike.net]
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
- 1.8 LONGWORDS              Long string of long words
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -75,153 +91,98 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: ath10k@lists.infradead.org
-Content-Type: text/plain; charset="us-ascii"
+Cc: linux-wireless@vger.kernel.org
 Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-tree/branch: https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git  ath11k-qca6390-bringup
-branch HEAD: 6f57a4d38b4e79c1d97a251040e7cb354da9778d  HACK: ath11k: get board file from QCA6390 directory
+Pls ignore this WAR as it does not fix all cases.
 
-elapsed time: 485m
+On 2020-06-03 19:03, Govind Singh wrote:
+> With kernel qrtr switch from user space qrtr, fw crash is seen
+> during reboot. During reboot modem rproc shutdown causes wlan qmi
+> service exit and msa region gets unmapped. Since pdev is not suspended
+> hw still accessing the msa region and this results in  fw crash as
+> msa region is unmapped.
+> 
+> Decouple msa mapping from wlan qmi server arrive/exit to init/deinit
+> path.
+> 
+> Testing is pending with "0c2204a4ad71 net: qrtr: Migrate nameservice
+> to kernel from userspace", only regression sanity performed with user 
+> space
+> qrtr on QCS404/SC7180.
+> 
+> Fixes: 0c2204a4ad71 net: qrtr: Migrate nameservice to kernel from 
+> userspace
+> Signed-off-by: Govind Singh <govinds@codeaurora.org>
+> ---
+>  drivers/net/wireless/ath/ath10k/qmi.c | 16 +++++++---------
+>  1 file changed, 7 insertions(+), 9 deletions(-)
+> 
+> diff --git a/drivers/net/wireless/ath/ath10k/qmi.c
+> b/drivers/net/wireless/ath/ath10k/qmi.c
+> index 5ae829b46c3d..8b1291e28ba2 100644
+> --- a/drivers/net/wireless/ath/ath10k/qmi.c
+> +++ b/drivers/net/wireless/ath/ath10k/qmi.c
+> @@ -796,22 +796,16 @@ static void
+> ath10k_qmi_event_server_arrive(struct ath10k_qmi *qmi)
+>  	 */
+>  	msleep(20);
+> 
+> -	ret = ath10k_qmi_setup_msa_permissions(qmi);
+> -	if (ret)
+> -		return;
+> -
+>  	ret = ath10k_qmi_msa_ready_send_sync_msg(qmi);
 
-configs tested: 126
-configs skipped: 6
 
-The following configs have been built successfully.
-More configs may be tested in the coming days.
-
-arm                                 defconfig
-arm                              allyesconfig
-arm                              allmodconfig
-arm                               allnoconfig
-arm64                            allyesconfig
-arm64                               defconfig
-arm64                            allmodconfig
-arm64                             allnoconfig
-powerpc                          allyesconfig
-m68k                       m5475evb_defconfig
-nios2                         10m50_defconfig
-mips                      malta_kvm_defconfig
-m68k                        mvme147_defconfig
-arm                          imote2_defconfig
-powerpc                     mpc5200_defconfig
-arc                        vdk_hs38_defconfig
-sh                           se7724_defconfig
-powerpc                     mpc512x_defconfig
-sh                  sh7785lcr_32bit_defconfig
-mips                           ip28_defconfig
-sparc64                             defconfig
-arm                         s5pv210_defconfig
-mips                           ip32_defconfig
-sh                          polaris_defconfig
-mips                        jmr3927_defconfig
-arm                           spitz_defconfig
-m68k                         apollo_defconfig
-csky                                defconfig
-arm                        magician_defconfig
-arm                        spear3xx_defconfig
-mips                         tb0287_defconfig
-ia64                        generic_defconfig
-arc                             nps_defconfig
-s390                             alldefconfig
-h8300                               defconfig
-i386                              allnoconfig
-sh                          urquell_defconfig
-arc                     haps_hs_smp_defconfig
-arm                          ep93xx_defconfig
-c6x                               allnoconfig
-sh                           cayman_defconfig
-powerpc                      mgcoge_defconfig
-mips                      bmips_stb_defconfig
-arm                              alldefconfig
-powerpc                      pasemi_defconfig
-arc                    vdk_hs38_smp_defconfig
-s390                              allnoconfig
-arm                         lpc32xx_defconfig
-riscv                             allnoconfig
-mips                          ath79_defconfig
-mips                     loongson1c_defconfig
-arm                          pxa910_defconfig
-arc                     nsimosci_hs_defconfig
-alpha                            alldefconfig
-arm                        mvebu_v5_defconfig
-mips                        qi_lb60_defconfig
-i386                             allyesconfig
-i386                                defconfig
-i386                              debian-10.3
-ia64                             allmodconfig
-ia64                                defconfig
-ia64                              allnoconfig
-ia64                             allyesconfig
-m68k                             allmodconfig
-m68k                              allnoconfig
-m68k                           sun3_defconfig
-m68k                                defconfig
-m68k                             allyesconfig
-nios2                               defconfig
-nios2                            allyesconfig
-openrisc                            defconfig
-c6x                              allyesconfig
-openrisc                         allyesconfig
-nds32                               defconfig
-nds32                             allnoconfig
-csky                             allyesconfig
-alpha                               defconfig
-alpha                            allyesconfig
-xtensa                           allyesconfig
-xtensa                              defconfig
-h8300                            allmodconfig
-h8300                            allyesconfig
-arc                                 defconfig
-arc                              allyesconfig
-sh                               allmodconfig
-sh                                allnoconfig
-microblaze                        allnoconfig
-mips                             allyesconfig
-mips                              allnoconfig
-mips                             allmodconfig
-parisc                            allnoconfig
-parisc                              defconfig
-parisc                           allyesconfig
-parisc                           allmodconfig
-powerpc                             defconfig
-powerpc                          rhel-kconfig
-powerpc                          allmodconfig
-powerpc                           allnoconfig
-x86_64               randconfig-a002-20200605
-x86_64               randconfig-a001-20200605
-x86_64               randconfig-a006-20200605
-x86_64               randconfig-a003-20200605
-x86_64               randconfig-a004-20200605
-x86_64               randconfig-a005-20200605
-riscv                            allyesconfig
-riscv                               defconfig
-riscv                            allmodconfig
-s390                             allyesconfig
-s390                             allmodconfig
-s390                                defconfig
-sparc                            allyesconfig
-sparc                               defconfig
-sparc64                           allnoconfig
-sparc64                          allyesconfig
-sparc64                          allmodconfig
-um                                allnoconfig
-um                                  defconfig
-um                               allmodconfig
-um                               allyesconfig
-x86_64                                   rhel
-x86_64                               rhel-7.6
-x86_64                    rhel-7.6-kselftests
-x86_64                         rhel-7.2-clear
-x86_64                                    lkp
-x86_64                              fedora-25
-x86_64                                  kexec
-
----
-0-DAY CI Kernel Test Service, Intel Corporation
-https://lists.01.org/hyperkitty/list/kbuild-all@lists.01.org
+>  	if (ret)
+> -		goto err_setup_msa;
+> +		return;
+> 
+>  	ret = ath10k_qmi_cap_send_sync_msg(qmi);
+>  	if (ret)
+> -		goto err_setup_msa;
+> +		return;
+> 
+>  	return;
+> 
+> -err_setup_msa:
+> -	ath10k_qmi_remove_msa_permission(qmi);
+>  }
+> 
+>  static int ath10k_qmi_fetch_board_file(struct ath10k_qmi *qmi)
+> @@ -854,7 +848,6 @@ static void ath10k_qmi_event_server_exit(struct
+> ath10k_qmi *qmi)
+>  	struct ath10k *ar = qmi->ar;
+>  	struct ath10k_snoc *ar_snoc = ath10k_snoc_priv(ar);
+> 
+> -	ath10k_qmi_remove_msa_permission(qmi);
+>  	ath10k_core_free_board_files(ar);
+>  	if (!test_bit(ATH10K_SNOC_FLAG_UNREGISTERING, &ar_snoc->flags))
+>  		ath10k_snoc_fw_crashed_dump(ar);
+> @@ -1046,6 +1039,10 @@ int ath10k_qmi_init(struct ath10k *ar, u32 
+> msa_size)
+>  	if (ret)
+>  		goto err_qmi_lookup;
+> 
+> +	ret = ath10k_qmi_setup_msa_permissions(qmi);
+> +	if (ret)
+> +		goto err_qmi_lookup;
+> +
+>  	return 0;
+> 
+>  err_qmi_lookup:
+> @@ -1064,6 +1061,7 @@ int ath10k_qmi_deinit(struct ath10k *ar)
+>  	struct ath10k_snoc *ar_snoc = ath10k_snoc_priv(ar);
+>  	struct ath10k_qmi *qmi = ar_snoc->qmi;
+> 
+> +	ath10k_qmi_remove_msa_permission(qmi);
+>  	qmi_handle_release(&qmi->qmi_hdl);
+>  	cancel_work_sync(&qmi->event_work);
+>  	destroy_workqueue(qmi->event_wq);
 
 _______________________________________________
 ath10k mailing list
