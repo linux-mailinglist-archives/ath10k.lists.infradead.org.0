@@ -2,47 +2,46 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B56321F2674
-	for <lists+ath10k@lfdr.de>; Tue,  9 Jun 2020 01:41:47 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8BAA01F2679
+	for <lists+ath10k@lfdr.de>; Tue,  9 Jun 2020 01:42:44 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=KZh5yx2uoYxKzIlJJRCEmDmP7syggAFQnzlXuWgxMGA=; b=ZVLPR5phl7CEoT
-	hcAkJfWc0h/Iawj18GqZqGu5c6Qt7cFWYgPy55RF0NG4zXwMYiX1NUk6nyS+XCsp7b0+1m0xlPoEW
-	8Jnhh7KHzxtxPiqfVv8e8y+sWVGySzgo9t7ObgQftCnUWb/k5Bg+kuacdbd2L4PnfTNuncJK7582z
-	Ljh/KbVZ+EV33uHAbArSMFPbH0EwX159tbzCnt4f6UtSyRxxS9Msnfa2fR8E40+tmw2mWll4T8BgO
-	EOlazYJdID8ryTNblpBGYrLJrqd/AzHdnqgAxS91HMwfHn5yiynXBn0+qNAIas4raCYdCg8M01tRW
-	INQfZsJqWIIRPe8AAKaA==;
+	List-Owner; bh=dBBlnJusFTU6gEvI8r7BX7m6qL8JL5KFNQBmKki2gqA=; b=URd+mpSol8Ue6z
+	Ms2y+CCMw/q9Lh1IMiJEV9erM/A/0Dq67hax7mkWXEUG/gKh8ZEyelFVrX93es75lF+33ASCEgxp/
+	QmoICYX5MtKTYWdhQp4locRBJO4kQSwTy0SYbpbo3EJUlgjEb6H9755Ljfnf/vKtC0CaecqDaxtAO
+	dYoyNYDYHiL2k9EkPehpOQgXMHziXm0DyY2b6Auf2OUkTybJucyd2YfaqouKK8scHuva8iFiigwex
+	NM4N7s/x0gXkvb20LjN3QlgdeTYWwW6J67znN0jpKPKGiuqyFG7dLoezCqYlPHAGnByhWOhvqMTdL
+	Upl5awl/7hAhLbb3Qvjw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jiROj-0003np-QX; Mon, 08 Jun 2020 23:41:45 +0000
+	id 1jiRPe-0004ak-3h; Mon, 08 Jun 2020 23:42:42 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jiR3u-0007y8-Je
- for ath10k@lists.infradead.org; Mon, 08 Jun 2020 23:20:17 +0000
+ id 1jiR4D-0000Z8-U0
+ for ath10k@lists.infradead.org; Mon, 08 Jun 2020 23:20:43 +0000
 Received: from sasha-vm.mshome.net (c-73-47-72-35.hsd1.nh.comcast.net
  [73.47.72.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 8C1202074B;
- Mon,  8 Jun 2020 23:20:12 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id 6C4F720814;
+ Mon,  8 Jun 2020 23:20:32 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1591658413;
- bh=UgH8czb3Zqf99cuf6/cq5xSM1xd308oDJ5vXdkILL9g=;
+ s=default; t=1591658433;
+ bh=IUbQgMpK4Y3MqY8X+oGpHPp8mDTkcB99iLVehvevYVs=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=XsyHY1Z1IZeI/ZC6xck34lVfuBKFswhRcAgyhwfNgOvVlcJghvBYzhZ/v7KL0ruFa
- vg0Gcdrm4KIB43pghf71fcj/v+rU5c8YPk3J67c0/KWhzOGTtA8P2LXSi41nVM72TF
- 93sobBbPk6BX+1YRhxI1b2yN8U6KoX6iOGuQeJXY=
+ b=PV9fBQ7MwD01rTlDwv3M5ZiU7Ca/P+wv6GYiY9A0xvFbijY3geLeTdUFbA4RDOh/w
+ vHAyQs1ubZ0gTGGSs3+XO+pv39Pc9oiSz+ImOODoRg9dr9Y70O2+NPaKBS7bYXjDWK
+ DBYlWnSfrIqdFBjWLkd+H+RNoSN35Ahct5pOVP0s=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 5.4 062/175] ath10k: fix kernel null pointer
- dereference
-Date: Mon,  8 Jun 2020 19:16:55 -0400
-Message-Id: <20200608231848.3366970-62-sashal@kernel.org>
+Subject: [PATCH AUTOSEL 5.4 077/175] ath10k: add flush tx packets for SDIO chip
+Date: Mon,  8 Jun 2020 19:17:10 -0400
+Message-Id: <20200608231848.3366970-77-sashal@kernel.org>
 X-Mailer: git-send-email 2.25.1
 In-Reply-To: <20200608231848.3366970-1-sashal@kernel.org>
 References: <20200608231848.3366970-1-sashal@kernel.org>
@@ -50,9 +49,8 @@ MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200608_162014_731122_08EC2EAE 
-X-CRM114-Status: UNSURE (   9.11  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200608_162034_041957_D3CF6400 
+X-CRM114-Status: GOOD (  13.42  )
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-5.2 points)
@@ -82,74 +80,262 @@ List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
 Cc: Sasha Levin <sashal@kernel.org>, netdev@vger.kernel.org,
- Venkateswara Naralasetty <vnaralas@codeaurora.org>,
  linux-wireless@vger.kernel.org, ath10k@lists.infradead.org,
- Kalle Valo <kvalo@codeaurora.org>
+ Wen Gong <wgong@codeaurora.org>, Kalle Valo <kvalo@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-From: Venkateswara Naralasetty <vnaralas@codeaurora.org>
+From: Wen Gong <wgong@codeaurora.org>
 
-[ Upstream commit acb31476adc9ff271140cdd4d3c707ff0c97f5a4 ]
+[ Upstream commit dd7fc5545bbafdbd6c1efdc996b61883b285bdc5 ]
 
-Currently sta airtime is updated without any lock in case of
-host based airtime calculation. Which may result in accessing the
-invalid sta pointer in case of continuous station connect/disconnect.
+When station connected to AP, and run TX traffic such as TCP/UDP, and
+system enter suspend state, then mac80211 call ath10k_flush with set
+drop flag, recently it only send wmi peer flush to firmware and
+firmware will flush all pending TX packets, for PCIe, firmware will
+indicate the TX packets status to ath10k, and then ath10k indicate to
+mac80211 TX complete with the status, then all the packets has been
+flushed at this moment. For SDIO chip, it is different, its TX
+complete indication is disabled by default, and it has a tx queue in
+ath10k, and its tx credit control is enabled, total tx credit is 96,
+when its credit is not sufficient, then the packets will buffered in
+the tx queue of ath10k, max packets is TARGET_TLV_NUM_MSDU_DESC_HL
+which is 1024, for SDIO, when mac80211 call ath10k_flush with set drop
+flag, maybe it have pending packets in tx queue of ath10k, and if it
+does not have sufficient tx credit, the packets will stay in queue
+untill tx credit report from firmware, if it is a noisy environment,
+tx speed is low and the tx credit report from firmware will delay more
+time, then the num_pending_tx will remain > 0 untill all packets send
+to firmware. After the 1st ath10k_flush, mac80211 will call the 2nd
+ath10k_flush without set drop flag immediately, then it will call to
+ath10k_mac_wait_tx_complete, and it wait untill num_pending_tx become
+to 0, in noisy environment, it is esay to wait about near 5 seconds,
+then it cause the suspend take long time.
 
-This patch fix the kernel null pointer dereference by updating the
-station airtime with proper RCU lock in case of host based airtime
-calculation.
+1st and 2nd callstack of ath10k_flush
+[  303.740427] ath10k_sdio mmc1:0001:1: ath10k_flush drop:1, pending:0-0
+[  303.740495] ------------[ cut here ]------------
+[  303.740739] WARNING: CPU: 1 PID: 3921 at /mnt/host/source/src/third_party/kernel/v4.19/drivers/net/wireless/ath/ath10k/mac.c:7025 ath10k_flush+0x54/0x104 [ath10k_core]
+[  303.740757] Modules linked in: bridge stp llc ath10k_sdio ath10k_core rfcomm uinput cros_ec_rpmsg mtk_seninf mtk_cam_isp mtk_vcodec_enc mtk_fd mtk_vcodec_dec mtk_vcodec_common mtk_dip mtk_mdp3 videobuf2_dma_contig videobuf2_memops v4l2_mem2mem videobuf2_v4l2 videobuf2_common hid_google_hammer hci_uart btqca bluetooth dw9768 ov8856 ecdh_generic ov02a10 v4l2_fwnode mtk_scp mtk_rpmsg rpmsg_core mtk_scp_ipi ipt_MASQUERADE fuse iio_trig_sysfs cros_ec_sensors_ring cros_ec_sensors_sync cros_ec_light_prox cros_ec_sensors industrialio_triggered_buffer
+[  303.740914]  kfifo_buf cros_ec_activity cros_ec_sensors_core lzo_rle lzo_compress ath mac80211 zram cfg80211 joydev [last unloaded: ath10k_core]
+[  303.741009] CPU: 1 PID: 3921 Comm: kworker/u16:10 Tainted: G        W         4.19.95 #2
+[  303.741027] Hardware name: MediaTek krane sku176 board (DT)
+[  303.741061] Workqueue: events_unbound async_run_entry_fn
+[  303.741086] pstate: 60000005 (nZCv daif -PAN -UAO)
+[  303.741166] pc : ath10k_flush+0x54/0x104 [ath10k_core]
+[  303.741244] lr : ath10k_flush+0x54/0x104 [ath10k_core]
+[  303.741260] sp : ffffffdf080e77a0
+[  303.741276] x29: ffffffdf080e77a0 x28: ffffffdef3730040
+[  303.741300] x27: ffffff907c2240a0 x26: ffffffde6ff39afc
+[  303.741321] x25: ffffffdef3730040 x24: ffffff907bf61018
+[  303.741343] x23: ffffff907c2240a0 x22: ffffffde6ff39a50
+[  303.741364] x21: 0000000000000001 x20: ffffffde6ff39a50
+[  303.741385] x19: ffffffde6bac2420 x18: 0000000000017200
+[  303.741407] x17: ffffff907c24a000 x16: 0000000000000037
+[  303.741428] x15: ffffff907b49a568 x14: ffffff907cf332c1
+[  303.741476] x13: 00000000000922e4 x12: 0000000000000000
+[  303.741497] x11: 0000000000000001 x10: 0000000000000007
+[  303.741518] x9 : f2256b8c1de4bc00 x8 : f2256b8c1de4bc00
+[  303.741539] x7 : ffffff907ab5e764 x6 : 0000000000000000
+[  303.741560] x5 : 0000000000000080 x4 : 0000000000000001
+[  303.741582] x3 : ffffffdf080e74a8 x2 : ffffff907aa91244
+[  303.741603] x1 : ffffffdf080e74a8 x0 : 0000000000000024
+[  303.741624] Call trace:
+[  303.741701]  ath10k_flush+0x54/0x104 [ath10k_core]
+[  303.741941]  __ieee80211_flush_queues+0x1dc/0x358 [mac80211]
+[  303.742098]  ieee80211_flush_queues+0x34/0x44 [mac80211]
+[  303.742253]  ieee80211_set_disassoc+0xc0/0x5ec [mac80211]
+[  303.742399]  ieee80211_mgd_deauth+0x720/0x7d4 [mac80211]
+[  303.742535]  ieee80211_deauth+0x24/0x30 [mac80211]
+[  303.742720]  cfg80211_mlme_deauth+0x250/0x3bc [cfg80211]
+[  303.742849]  cfg80211_mlme_down+0x90/0xd0 [cfg80211]
+[  303.742971]  cfg80211_disconnect+0x340/0x3a0 [cfg80211]
+[  303.743087]  __cfg80211_leave+0xe4/0x17c [cfg80211]
+[  303.743203]  cfg80211_leave+0x38/0x50 [cfg80211]
+[  303.743319]  wiphy_suspend+0x84/0x5bc [cfg80211]
+[  303.743335]  dpm_run_callback+0x170/0x304
+[  303.743346]  __device_suspend+0x2dc/0x3e8
+[  303.743356]  async_suspend+0x2c/0xb0
+[  303.743370]  async_run_entry_fn+0x48/0xf8
+[  303.743383]  process_one_work+0x304/0x604
+[  303.743394]  worker_thread+0x248/0x3f4
+[  303.743403]  kthread+0x120/0x130
+[  303.743416]  ret_from_fork+0x10/0x18
 
-Proceeding with the analysis of "ARM Kernel Panic".
-The APSS crash happened due to OOPS on CPU 0.
-Crash Signature : Unable to handle kernel NULL pointer dereference
-at virtual address 00000300
-During the crash,
-PC points to "ieee80211_sta_register_airtime+0x1c/0x448 [mac80211]"
-LR points to "ath10k_txrx_tx_unref+0x17c/0x364 [ath10k_core]".
-The Backtrace obtained is as follows:
-[<bf880238>] (ieee80211_sta_register_airtime [mac80211]) from
-[<bf945a38>] (ath10k_txrx_tx_unref+0x17c/0x364 [ath10k_core])
-[<bf945a38>] (ath10k_txrx_tx_unref [ath10k_core]) from
-[<bf9428e4>] (ath10k_htt_txrx_compl_task+0xa50/0xfc0 [ath10k_core])
-[<bf9428e4>] (ath10k_htt_txrx_compl_task [ath10k_core]) from
-[<bf9b9bc8>] (ath10k_pci_napi_poll+0x50/0xf8 [ath10k_pci])
-[<bf9b9bc8>] (ath10k_pci_napi_poll [ath10k_pci]) from
-[<c059e3b0>] (net_rx_action+0xac/0x160)
-[<c059e3b0>] (net_rx_action) from [<c02329a4>] (__do_softirq+0x104/0x294)
-[<c02329a4>] (__do_softirq) from [<c0232b64>] (run_ksoftirqd+0x30/0x90)
-[<c0232b64>] (run_ksoftirqd) from [<c024e358>] (smpboot_thread_fn+0x25c/0x274)
-[<c024e358>] (smpboot_thread_fn) from [<c02482fc>] (kthread+0xd8/0xec)
+[  303.743812] ath10k_sdio mmc1:0001:1: ath10k_flush drop:0, pending:0-0
+[  303.743858] ------------[ cut here ]------------
+[  303.744057] WARNING: CPU: 1 PID: 3921 at /mnt/host/source/src/third_party/kernel/v4.19/drivers/net/wireless/ath/ath10k/mac.c:7025 ath10k_flush+0x54/0x104 [ath10k_core]
+[  303.744075] Modules linked in: bridge stp llc ath10k_sdio ath10k_core rfcomm uinput cros_ec_rpmsg mtk_seninf mtk_cam_isp mtk_vcodec_enc mtk_fd mtk_vcodec_dec mtk_vcodec_common mtk_dip mtk_mdp3 videobuf2_dma_contig videobuf2_memops v4l2_mem2mem videobuf2_v4l2 videobuf2_common hid_google_hammer hci_uart btqca bluetooth dw9768 ov8856 ecdh_generic ov02a10 v4l2_fwnode mtk_scp mtk_rpmsg rpmsg_core mtk_scp_ipi ipt_MASQUERADE fuse iio_trig_sysfs cros_ec_sensors_ring cros_ec_sensors_sync cros_ec_light_prox cros_ec_sensors industrialio_triggered_buffer kfifo_buf cros_ec_activity cros_ec_sensors_core lzo_rle lzo_compress ath mac80211 zram cfg80211 joydev [last unloaded: ath10k_core]
+[  303.744256] CPU: 1 PID: 3921 Comm: kworker/u16:10 Tainted: G        W         4.19.95 #2
+[  303.744273] Hardware name: MediaTek krane sku176 board (DT)
+[  303.744301] Workqueue: events_unbound async_run_entry_fn
+[  303.744325] pstate: 60000005 (nZCv daif -PAN -UAO)
+[  303.744403] pc : ath10k_flush+0x54/0x104 [ath10k_core]
+[  303.744480] lr : ath10k_flush+0x54/0x104 [ath10k_core]
+[  303.744496] sp : ffffffdf080e77a0
+[  303.744512] x29: ffffffdf080e77a0 x28: ffffffdef3730040
+[  303.744534] x27: ffffff907c2240a0 x26: ffffffde6ff39afc
+[  303.744556] x25: ffffffdef3730040 x24: ffffff907bf61018
+[  303.744577] x23: ffffff907c2240a0 x22: ffffffde6ff39a50
+[  303.744598] x21: 0000000000000000 x20: ffffffde6ff39a50
+[  303.744620] x19: ffffffde6bac2420 x18: 000000000001831c
+[  303.744641] x17: ffffff907c24a000 x16: 0000000000000037
+[  303.744662] x15: ffffff907b49a568 x14: ffffff907cf332c1
+[  303.744683] x13: 00000000000922ea x12: 0000000000000000
+[  303.744704] x11: 0000000000000001 x10: 0000000000000007
+[  303.744747] x9 : f2256b8c1de4bc00 x8 : f2256b8c1de4bc00
+[  303.744768] x7 : ffffff907ab5e764 x6 : 0000000000000000
+[  303.744789] x5 : 0000000000000080 x4 : 0000000000000001
+[  303.744810] x3 : ffffffdf080e74a8 x2 : ffffff907aa91244
+[  303.744831] x1 : ffffffdf080e74a8 x0 : 0000000000000024
+[  303.744853] Call trace:
+[  303.744929]  ath10k_flush+0x54/0x104 [ath10k_core]
+[  303.745098]  __ieee80211_flush_queues+0x1dc/0x358 [mac80211]
+[  303.745277]  ieee80211_flush_queues+0x34/0x44 [mac80211]
+[  303.745424]  ieee80211_set_disassoc+0x108/0x5ec [mac80211]
+[  303.745569]  ieee80211_mgd_deauth+0x720/0x7d4 [mac80211]
+[  303.745706]  ieee80211_deauth+0x24/0x30 [mac80211]
+[  303.745853]  cfg80211_mlme_deauth+0x250/0x3bc [cfg80211]
+[  303.745979]  cfg80211_mlme_down+0x90/0xd0 [cfg80211]
+[  303.746103]  cfg80211_disconnect+0x340/0x3a0 [cfg80211]
+[  303.746219]  __cfg80211_leave+0xe4/0x17c [cfg80211]
+[  303.746335]  cfg80211_leave+0x38/0x50 [cfg80211]
+[  303.746452]  wiphy_suspend+0x84/0x5bc [cfg80211]
+[  303.746467]  dpm_run_callback+0x170/0x304
+[  303.746477]  __device_suspend+0x2dc/0x3e8
+[  303.746487]  async_suspend+0x2c/0xb0
+[  303.746498]  async_run_entry_fn+0x48/0xf8
+[  303.746510]  process_one_work+0x304/0x604
+[  303.746521]  worker_thread+0x248/0x3f4
+[  303.746530]  kthread+0x120/0x130
+[  303.746542]  ret_from_fork+0x10/0x18
 
-Tested HW: QCA9888
-Tested FW: 10.4-3.10-00047
+one sample's debugging log: it wait 3190 ms(5000 - 1810).
 
-Signed-off-by: Venkateswara Naralasetty <vnaralas@codeaurora.org>
+1st ath10k_flush, it has 120 packets in tx queue of ath10k:
+<...>-1513  [000] .... 25374.786005: ath10k_log_err: ath10k_sdio mmc1:0001:1 ath10k_flush drop:1, pending:120-0
+<...>-1513  [000] ...1 25374.788375: ath10k_log_warn: ath10k_sdio mmc1:0001:1 ath10k_htt_tx_mgmt_inc_pending htt->num_pending_mgmt_tx:0
+<...>-1500  [001] .... 25374.790143: ath10k_log_dbg: ath10k_sdio mmc1:0001:1 bundle tx work, eid:1, count:121
+
+2st ath10k_flush, it has 121 packets in tx queue of ath10k:
+<...>-1513  [000] .... 25374.790571: ath10k_log_err: ath10k_sdio mmc1:0001:1 ath10k_flush drop:0, pending:121-0
+<...>-1513  [000] .... 25374.791990: ath10k_log_err: ath10k_sdio mmc1:0001:1 ath10k_mac_wait_tx_complete state:1 pending:121-0
+<...>-1508  [001] .... 25374.792696: ath10k_log_dbg: ath10k_sdio mmc1:0001:1 credit update: delta:46
+<...>-1508  [001] .... 25374.792700: ath10k_log_dbg: ath10k_sdio mmc1:0001:1 credit total:46
+<...>-1508  [001] .... 25374.792729: ath10k_log_dbg: ath10k_sdio mmc1:0001:1 bundle tx work, eid:1, count:121
+<...>-1508  [001] .... 25374.792937: ath10k_log_dbg: ath10k_sdio mmc1:0001:1 bundle tx status:0, eid:1, req count:88, count:32, len:49792
+<...>-1508  [001] .... 25374.793031: ath10k_log_dbg: ath10k_sdio mmc1:0001:1 bundle tx status:0, eid:1, req count:75, count:14, len:21784
+kworker/u16:0-25773 [003] .... 25374.793701: ath10k_log_dbg: ath10k_sdio mmc1:0001:1 bundle tx complete, eid:1, pending complete count:46
+<...>-1881  [000] .... 25375.073178: ath10k_log_dbg: ath10k_sdio mmc1:0001:1 credit update: delta:24
+<...>-1881  [000] .... 25375.073182: ath10k_log_dbg: ath10k_sdio mmc1:0001:1 credit total:24
+<...>-1881  [000] .... 25375.073429: ath10k_log_dbg: ath10k_sdio mmc1:0001:1 bundle tx work, eid:1, count:75
+<...>-1879  [001] .... 25375.074090: ath10k_log_dbg: ath10k_sdio mmc1:0001:1 bundle tx complete, eid:1, pending complete count:24
+<...>-1881  [000] .... 25375.074123: ath10k_log_dbg: ath10k_sdio mmc1:0001:1 bundle tx status:0, eid:1, req count:51, count:24, len:37344
+<...>-1879  [001] .... 25375.270126: ath10k_log_dbg: ath10k_sdio mmc1:0001:1 credit update: delta:26
+<...>-1879  [001] .... 25375.270130: ath10k_log_dbg: ath10k_sdio mmc1:0001:1 credit total:26
+<...>-1488  [000] .... 25375.270174: ath10k_log_dbg: ath10k_sdio mmc1:0001:1 bundle tx work, eid:1, count:51
+<...>-1488  [000] .... 25375.270529: ath10k_log_dbg: ath10k_sdio mmc1:0001:1 bundle tx status:0, eid:1, req count:25, count:26, len:40456
+<...>-1879  [001] .... 25375.270693: ath10k_log_dbg: ath10k_sdio mmc1:0001:1 bundle tx complete, eid:1, pending complete count:26
+<...>-1488  [001] .... 25377.775885: ath10k_log_dbg: ath10k_sdio mmc1:0001:1 credit update: delta:12
+<...>-1488  [001] .... 25377.775890: ath10k_log_dbg: ath10k_sdio mmc1:0001:1 credit total:12
+<...>-1488  [001] .... 25377.775933: ath10k_log_dbg: ath10k_sdio mmc1:0001:1 bundle tx work, eid:1, count:25
+<...>-1488  [001] .... 25377.776059: ath10k_log_dbg: ath10k_sdio mmc1:0001:1 bundle tx status:0, eid:1, req count:13, count:12, len:18672
+<...>-1879  [001] .... 25377.776100: ath10k_log_dbg: ath10k_sdio mmc1:0001:1 bundle tx complete, eid:1, pending complete count:12
+<...>-1488  [001] .... 25377.878079: ath10k_log_dbg: ath10k_sdio mmc1:0001:1 credit update: delta:15
+<...>-1488  [001] .... 25377.878087: ath10k_log_dbg: ath10k_sdio mmc1:0001:1 credit total:15
+<...>-1879  [000] .... 25377.878323: ath10k_log_dbg: ath10k_sdio mmc1:0001:1 bundle tx work, eid:1, count:13
+<...>-1879  [000] .... 25377.878487: ath10k_log_dbg: ath10k_sdio mmc1:0001:1 bundle tx status:0, eid:1, req count:0, count:13, len:20228
+<...>-1879  [000] .... 25377.878497: ath10k_log_dbg: ath10k_sdio mmc1:0001:1 bundle tx complete, eid:1, pending complete count:13
+<...>-1488  [001] .... 25377.919927: ath10k_log_dbg: ath10k_sdio mmc1:0001:1 credit update: delta:11
+<...>-1488  [001] .... 25377.919932: ath10k_log_dbg: ath10k_sdio mmc1:0001:1 credit total:13
+<...>-1488  [001] .... 25377.919976: ath10k_log_dbg: ath10k_sdio mmc1:0001:1 bundle tx work, eid:1, count:0
+<...>-1881  [000] .... 25377.982645: ath10k_log_warn: ath10k_sdio mmc1:0001:1 HTT_T2H_MSG_TYPE_MGMT_TX_COMPLETION status:0
+<...>-1513  [001] .... 25377.982973: ath10k_log_err: ath10k_sdio mmc1:0001:1 ath10k_mac_wait_tx_complete time_left:1810, pending:0-0
+
+Flush all pending TX packets for the 1st ath10k_flush reduced the wait
+time of the 2nd ath10k_flush and then suspend take short time.
+
+This Patch only effect SDIO chips.
+
+Tested with QCA6174 SDIO with firmware WLAN.RMH.4.4.1-00042.
+
+Signed-off-by: Wen Gong <wgong@codeaurora.org>
 Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
-Link: https://lore.kernel.org/r/1585736290-17661-1-git-send-email-vnaralas@codeaurora.org
+Link: https://lore.kernel.org/r/20200415233730.10581-1-wgong@codeaurora.org
 Signed-off-by: Sasha Levin <sashal@kernel.org>
 ---
- drivers/net/wireless/ath/ath10k/txrx.c | 2 ++
- 1 file changed, 2 insertions(+)
+ drivers/net/wireless/ath/ath10k/htt.h    | 7 +++++++
+ drivers/net/wireless/ath/ath10k/htt_tx.c | 8 +++++++-
+ drivers/net/wireless/ath/ath10k/mac.c    | 1 +
+ 3 files changed, 15 insertions(+), 1 deletion(-)
 
-diff --git a/drivers/net/wireless/ath/ath10k/txrx.c b/drivers/net/wireless/ath/ath10k/txrx.c
-index 39abf8b12903..f46b9083bbf1 100644
---- a/drivers/net/wireless/ath/ath10k/txrx.c
-+++ b/drivers/net/wireless/ath/ath10k/txrx.c
-@@ -84,9 +84,11 @@ int ath10k_txrx_tx_unref(struct ath10k_htt *htt,
- 		wake_up(&htt->empty_tx_wq);
- 	spin_unlock_bh(&htt->tx_lock);
+diff --git a/drivers/net/wireless/ath/ath10k/htt.h b/drivers/net/wireless/ath/ath10k/htt.h
+index 30c080094af1..bd5fa4dbab9c 100644
+--- a/drivers/net/wireless/ath/ath10k/htt.h
++++ b/drivers/net/wireless/ath/ath10k/htt.h
+@@ -2033,6 +2033,7 @@ struct ath10k_htt_tx_ops {
+ 	int (*htt_h2t_aggr_cfg_msg)(struct ath10k_htt *htt,
+ 				    u8 max_subfrms_ampdu,
+ 				    u8 max_subfrms_amsdu);
++	void (*htt_flush_tx)(struct ath10k_htt *htt);
+ };
  
-+	rcu_read_lock();
- 	if (txq && txq->sta && skb_cb->airtime_est)
- 		ieee80211_sta_register_airtime(txq->sta, txq->tid,
- 					       skb_cb->airtime_est, 0);
-+	rcu_read_unlock();
+ static inline int ath10k_htt_send_rx_ring_cfg(struct ath10k_htt *htt)
+@@ -2072,6 +2073,12 @@ static inline int ath10k_htt_tx(struct ath10k_htt *htt,
+ 	return htt->tx_ops->htt_tx(htt, txmode, msdu);
+ }
  
- 	if (ar->bus_param.dev_type != ATH10K_DEV_TYPE_HL)
- 		dma_unmap_single(dev, skb_cb->paddr, msdu->len, DMA_TO_DEVICE);
++static inline void ath10k_htt_flush_tx(struct ath10k_htt *htt)
++{
++	if (htt->tx_ops->htt_flush_tx)
++		htt->tx_ops->htt_flush_tx(htt);
++}
++
+ static inline int ath10k_htt_alloc_txbuff(struct ath10k_htt *htt)
+ {
+ 	if (!htt->tx_ops->htt_alloc_txbuff)
+diff --git a/drivers/net/wireless/ath/ath10k/htt_tx.c b/drivers/net/wireless/ath/ath10k/htt_tx.c
+index a182c0944cc7..735482877a1f 100644
+--- a/drivers/net/wireless/ath/ath10k/htt_tx.c
++++ b/drivers/net/wireless/ath/ath10k/htt_tx.c
+@@ -529,9 +529,14 @@ void ath10k_htt_tx_destroy(struct ath10k_htt *htt)
+ 	htt->tx_mem_allocated = false;
+ }
+ 
+-void ath10k_htt_tx_stop(struct ath10k_htt *htt)
++static void ath10k_htt_flush_tx_queue(struct ath10k_htt *htt)
+ {
+ 	idr_for_each(&htt->pending_tx, ath10k_htt_tx_clean_up_pending, htt->ar);
++}
++
++void ath10k_htt_tx_stop(struct ath10k_htt *htt)
++{
++	ath10k_htt_flush_tx_queue(htt);
+ 	idr_destroy(&htt->pending_tx);
+ }
+ 
+@@ -1774,6 +1779,7 @@ static const struct ath10k_htt_tx_ops htt_tx_ops_hl = {
+ 	.htt_send_frag_desc_bank_cfg = ath10k_htt_send_frag_desc_bank_cfg_32,
+ 	.htt_tx = ath10k_htt_tx_hl,
+ 	.htt_h2t_aggr_cfg_msg = ath10k_htt_h2t_aggr_cfg_msg_32,
++	.htt_flush_tx = ath10k_htt_flush_tx_queue,
+ };
+ 
+ void ath10k_htt_set_tx_ops(struct ath10k_htt *htt)
+diff --git a/drivers/net/wireless/ath/ath10k/mac.c b/drivers/net/wireless/ath/ath10k/mac.c
+index b0f6f2727053..c6ab1fcde84d 100644
+--- a/drivers/net/wireless/ath/ath10k/mac.c
++++ b/drivers/net/wireless/ath/ath10k/mac.c
+@@ -7082,6 +7082,7 @@ static void ath10k_flush(struct ieee80211_hw *hw, struct ieee80211_vif *vif,
+ 					ath10k_wmi_peer_flush(ar, arvif->vdev_id,
+ 							      arvif->bssid, bitmap);
+ 			}
++			ath10k_htt_flush_tx(&ar->htt);
+ 		}
+ 		return;
+ 	}
 -- 
 2.25.1
 
