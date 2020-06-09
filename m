@@ -2,64 +2,86 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id EB6E61F3F1D
-	for <lists+ath10k@lfdr.de>; Tue,  9 Jun 2020 17:20:50 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7CF981F3F1F
+	for <lists+ath10k@lfdr.de>; Tue,  9 Jun 2020 17:21:34 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Subject:To:From
-	:Date:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=RMO799Nkn4uwHUmJDhCWJd4BjklJc19Y2B+y2c4h1Aw=; b=NhgPGP+K+HTjn8
-	KbDQCd8/OSQPRXwhoFqYc+ffh6hkrogBI9kH91gMldU0/E9iUEWFcOL71DWlp+rjzHB6B3ebiJHjJ
-	hskXaI5Zn/eWeVkM+0WEbdLnUL/gKu9FcW0fhsv78ruGRQl9RP3w9czTwiaff62yCS/VKE7puMX59
-	YUDewvLCWg3LxAr+G3ohi7YndmvzWaTHAI/oYi6rrc+iAxj/VqjuyCxXzA9DnJz/M22JoaKJ82Ukv
-	1qpR+BRzi+jnowStyQhvz6D4Vb1ouJ5G496B4V7z3dvdENtRf+LU4r9/Odyf5Sj6P6KkqCIrBGDIH
-	DdHXjscfmcRfEN814WWg==;
+	List-Owner; bh=PG6DGD41oCsLDbho2OGqhiIegbMAZ3QmnpbTBUiDS4U=; b=IrFlEFwkUW7T2C
+	hn3zzjAz3G8Rvqnj929dx3NTOpgjroQ2UFXTe41uV6EGFWxntc7IBg6VxS+H3IKPVZG7BoEIyiv6v
+	OMJ56SJeVoW0bIclV+tduK6qC3If+HhsP+Gn22nKCUE1IFiQG3Msw+8WSWcAb8TiSeDUuZjNGp3t/
+	ZdVij7vdM6Wl8nT3IkkyGAx++NTN/AzNRa8HCnQa3dKa2ul+r+eQdpfAOJ9XITaTCCnLdUPWtFvL/
+	P0ZXq8eGwu+8RtZfQBiqVvBuBBCtew2iX269AJVx59DXByk01QLfTkjEZ1YA+K9/wr2ivFjLca5At
+	N6OEw4WYTTdLu26jb6eQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jig3U-0006h6-PX; Tue, 09 Jun 2020 15:20:48 +0000
-Received: from mga11.intel.com ([192.55.52.93])
+	id 1jig4C-0006p0-Q6; Tue, 09 Jun 2020 15:21:32 +0000
+Received: from mail-pg1-x542.google.com ([2607:f8b0:4864:20::542])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jig3Q-0006gS-3A
- for ath10k@lists.infradead.org; Tue, 09 Jun 2020 15:20:45 +0000
-IronPort-SDR: HCJG/h81aMarW/1FgKGLfYIWX2xbFTpDeClEOl6RoDfxaPgRpg1Eooy1EHlrUeK5ZluEhF11qH
- PGPNLXzXN5ZA==
-X-Amp-Result: SKIPPED(no attachment in message)
-X-Amp-File-Uploaded: False
-Received: from fmsmga002.fm.intel.com ([10.253.24.26])
- by fmsmga102.fm.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
- 09 Jun 2020 08:20:43 -0700
-IronPort-SDR: z7RSb7PJodDkutgLzbvCCJBUByJo8YAdcaTtiX44/0PQb00yEmJR5nKP7g8NJ8FqCc/m4HbDdh
- tj+i/aogPmEg==
-X-ExtLoop1: 1
-X-IronPort-AV: E=Sophos;i="5.73,492,1583222400"; d="scan'208";a="306221750"
-Received: from lkp-server01.sh.intel.com (HELO 4a187143b92d) ([10.239.97.150])
- by fmsmga002.fm.intel.com with ESMTP; 09 Jun 2020 08:20:41 -0700
-Received: from kbuild by 4a187143b92d with local (Exim 4.92)
- (envelope-from <lkp@intel.com>)
- id 1jig3N-000034-0f; Tue, 09 Jun 2020 15:20:41 +0000
-Date: Tue, 09 Jun 2020 23:20:20 +0800
-From: kernel test robot <lkp@intel.com>
-To: Kalle Valo <kvalo@codeaurora.org>
-Subject: [ath6kl:ath-qca] BUILD SUCCESS
- 31c013f3c568b96f16d58e52a50d98b85506685e
-Message-ID: <5edfa8b4.a+y2aLBpoi6CDSLK%lkp@intel.com>
-User-Agent: Heirloom mailx 12.5 6/20/10
+ id 1jig48-0006od-4V
+ for ath10k@lists.infradead.org; Tue, 09 Jun 2020 15:21:29 +0000
+Received: by mail-pg1-x542.google.com with SMTP id s10so10493563pgm.0
+ for <ath10k@lists.infradead.org>; Tue, 09 Jun 2020 08:21:27 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=uwvFGjyGkvShem51AX2k8l39E+uinZbFtzIiRAp08Pk=;
+ b=Tqsz7mN0ZQ/Ebtwuuhlz2Aj5Nxp7ZH2E32VDTotEwsEFHfoCIcICryte8znwPwr/ML
+ rJGLk5Don0hvRBsPIb38oIrdDDbG5L4Ob6CtN/+bzblcvgk0eAlGkyw9/JzYg5JF7rpH
+ AXZ4YKev82m2zvwOymfK78TMabY5wSKQSzWgk=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=uwvFGjyGkvShem51AX2k8l39E+uinZbFtzIiRAp08Pk=;
+ b=RXdeR4IOH+UIjUj0Xp0kBffQ9WST4k7c6yLDHMlJGc/ooCNSFdsbiheoPq6CMKO7Bs
+ ffCM2kGzpeTiO9Wcrf30JMAmRYNslPeQwGgIY0bhXftFnJ0Sb9FW74gu0Sek09eDsg1T
+ 6D5ulkcKR1kOBVlltYKvYpu45EmLFNgxiqX4WUEBrrWahlwja+gEiitfZ6wMGcjnLuAh
+ Er/gsBNmwy5ja1ZTiJEoCT7viGUUU80BuPG3JAwlkLF1ZLeJg7oCagd83FmKY+PiSSE9
+ /9HvH6AHI9vAalf6J6OTkd3StKLMxe2aj23uIoVwagWeqdycoL3tlBb29/u5jzuwjvJS
+ W/2A==
+X-Gm-Message-State: AOAM531aECpS9d7rxSFQVgb99b7yHu1vJELuyh9k82NPeoJcI9D0X/QK
+ Ag8Bbwl/IjAqdaNC++LjVhWBIg==
+X-Google-Smtp-Source: ABdhPJxfhZlV3Xjw60pqAdeCuYbdjB53klCTzNpy+pv6huQHBaXZLmLMb8qM09KF80pvp6RVg0iY4g==
+X-Received: by 2002:a62:b402:: with SMTP id h2mr27157063pfn.221.1591716087205; 
+ Tue, 09 Jun 2020 08:21:27 -0700 (PDT)
+Received: from tictac2.mtv.corp.google.com
+ ([2620:15c:202:1:24fa:e766:52c9:e3b2])
+ by smtp.gmail.com with ESMTPSA id c2sm10383572pfi.71.2020.06.09.08.21.26
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Tue, 09 Jun 2020 08:21:26 -0700 (PDT)
+From: Douglas Anderson <dianders@chromium.org>
+To: kvalo@codeaurora.org
+Subject: [PATCH] ath10k: Wait until copy complete is actually done before
+ completing
+Date: Tue,  9 Jun 2020 08:20:58 -0700
+Message-Id: <20200609082015.1.Ife398994e5a0a6830e4d4a16306ef36e0144e7ba@changeid>
+X-Mailer: git-send-email 2.27.0.278.ge193c7cf3a9-goog
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200609_082044_191974_BE45653C 
-X-CRM114-Status: UNSURE (   5.40  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -5.0 (-----)
+X-CRM114-CacheID: sfid-20200609_082128_193389_B7318557 
+X-CRM114-Status: GOOD (  12.94  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-5.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [192.55.52.93 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:542 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -71,191 +93,102 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: ath10k@lists.infradead.org
+Cc: saiprakash.ranjan@codeaurora.org, linux-arm-msm@vger.kernel.org,
+ linux-wireless@vger.kernel.org, Douglas Anderson <dianders@chromium.org>,
+ ath10k@lists.infradead.org, linux-kernel@vger.kernel.org,
+ pillair@codeaurora.org, netdev@vger.kernel.org,
+ Jakub Kicinski <kuba@kernel.org>, "David S. Miller" <davem@davemloft.net>,
+ kuabhs@google.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-tree/branch: https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git  ath-qca
-branch HEAD: 31c013f3c568b96f16d58e52a50d98b85506685e  Merge branch 'ath-next' into ath-qca
+On wcn3990 we have "per_ce_irq = true".  That makes the
+ath10k_ce_interrupt_summary() function always return 0xfff. The
+ath10k_ce_per_engine_service_any() function will see this and think
+that _all_ copy engines have an interrupt.  Without checking, the
+ath10k_ce_per_engine_service() assumes that if it's called that the
+"copy complete" (cc) interrupt fired.  This combination seems bad.
 
-elapsed time: 480m
+Let's add a check to make sure that the "copy complete" interrupt
+actually fired in ath10k_ce_per_engine_service().
 
-configs tested: 164
-configs skipped: 12
+This might fix a hard-to-reproduce failure where it appears that the
+copy complete handlers run before the copy is really complete.
+Specifically a symptom was that we were seeing this on a Qualcomm
+sc7180 board:
+  arm-smmu 15000000.iommu: Unhandled context fault:
+  fsr=0x402, iova=0x7fdd45780, fsynr=0x30003, cbfrsynra=0xc1, cb=10
 
-The following configs have been built successfully.
-More configs may be tested in the coming days.
+Even on platforms that don't have wcn3990 this still seems like it
+would be a sane thing to do.  Specifically the current IRQ handler
+comments indicate that there might be other misc interrupt sources
+firing that need to be cleared.  If one of those sources was the one
+that caused the IRQ handler to be called it would also be important to
+double-check that the interrupt we cared about actually fired.
 
-arm64                            allyesconfig
-arm64                               defconfig
-arm64                            allmodconfig
-arm64                             allnoconfig
-arm                                 defconfig
-arm                              allyesconfig
-arm                              allmodconfig
-arm                               allnoconfig
-m68k                         amcore_defconfig
-mips                       rbtx49xx_defconfig
-um                                  defconfig
-sh                     magicpanelr2_defconfig
-powerpc                      ep88xc_defconfig
-sh                ecovec24-romimage_defconfig
-arm                           h3600_defconfig
-powerpc                    mvme5100_defconfig
-openrisc                 simple_smp_defconfig
-sparc                            allyesconfig
-sh                           se7705_defconfig
-mips                     decstation_defconfig
-arm                              zx_defconfig
-mips                        nlm_xlr_defconfig
-sh                             shx3_defconfig
-c6x                        evmc6678_defconfig
-arc                 nsimosci_hs_smp_defconfig
-arm                        mvebu_v5_defconfig
-arm                          iop32x_defconfig
-arm                            mps2_defconfig
-sh                 kfr2r09-romimage_defconfig
-arm                          moxart_defconfig
-arc                         haps_hs_defconfig
-m68k                            mac_defconfig
-arm                        oxnas_v6_defconfig
-arm                    vt8500_v6_v7_defconfig
-mips                         tb0219_defconfig
-m68k                        mvme16x_defconfig
-mips                          malta_defconfig
-arc                          axs101_defconfig
-sh                           se7724_defconfig
-arm                       aspeed_g5_defconfig
-mips                           xway_defconfig
-arm                            dove_defconfig
-xtensa                           alldefconfig
-arm                         shannon_defconfig
-um                                allnoconfig
-arm                         socfpga_defconfig
-sh                   sh7724_generic_defconfig
-arm                            qcom_defconfig
-sh                             espt_defconfig
-powerpc                          allmodconfig
-powerpc                     mpc512x_defconfig
-arm                     davinci_all_defconfig
-mips                  maltasmvp_eva_defconfig
-arm                            xcep_defconfig
-arm                         mv78xx0_defconfig
-c6x                        evmc6457_defconfig
-ia64                      gensparse_defconfig
-arm                       omap2plus_defconfig
-i386                             alldefconfig
-parisc                generic-32bit_defconfig
-arm                          ep93xx_defconfig
-i386                              allnoconfig
-i386                             allyesconfig
-i386                                defconfig
-i386                              debian-10.3
-ia64                             allmodconfig
-ia64                                defconfig
-ia64                              allnoconfig
-ia64                             allyesconfig
-m68k                             allmodconfig
-m68k                              allnoconfig
-m68k                           sun3_defconfig
-m68k                                defconfig
-m68k                             allyesconfig
-nios2                               defconfig
-nios2                            allyesconfig
-openrisc                            defconfig
-c6x                              allyesconfig
-c6x                               allnoconfig
-openrisc                         allyesconfig
-nds32                               defconfig
-nds32                             allnoconfig
-csky                             allyesconfig
-csky                                defconfig
-alpha                               defconfig
-alpha                            allyesconfig
-xtensa                           allyesconfig
-h8300                            allyesconfig
-h8300                            allmodconfig
-xtensa                              defconfig
-arc                                 defconfig
-arc                              allyesconfig
-sh                               allmodconfig
-sh                                allnoconfig
-microblaze                        allnoconfig
-mips                             allyesconfig
-mips                              allnoconfig
-mips                             allmodconfig
-parisc                            allnoconfig
-parisc                              defconfig
-parisc                           allyesconfig
-parisc                           allmodconfig
-powerpc                          allyesconfig
-powerpc                          rhel-kconfig
-powerpc                           allnoconfig
-powerpc                             defconfig
-i386                 randconfig-a001-20200607
-i386                 randconfig-a006-20200607
-i386                 randconfig-a002-20200607
-i386                 randconfig-a005-20200607
-i386                 randconfig-a004-20200607
-i386                 randconfig-a003-20200607
-i386                 randconfig-a001-20200609
-i386                 randconfig-a002-20200609
-i386                 randconfig-a006-20200609
-i386                 randconfig-a005-20200609
-i386                 randconfig-a003-20200609
-i386                 randconfig-a004-20200609
-x86_64               randconfig-a011-20200608
-x86_64               randconfig-a016-20200608
-x86_64               randconfig-a012-20200608
-x86_64               randconfig-a014-20200608
-x86_64               randconfig-a013-20200608
-x86_64               randconfig-a015-20200608
-i386                 randconfig-a014-20200607
-i386                 randconfig-a015-20200607
-i386                 randconfig-a011-20200607
-i386                 randconfig-a016-20200607
-i386                 randconfig-a012-20200607
-i386                 randconfig-a013-20200607
-i386                 randconfig-a014-20200608
-i386                 randconfig-a011-20200608
-i386                 randconfig-a015-20200608
-i386                 randconfig-a016-20200608
-i386                 randconfig-a012-20200608
-i386                 randconfig-a013-20200608
-x86_64               randconfig-a002-20200607
-x86_64               randconfig-a001-20200607
-x86_64               randconfig-a006-20200607
-x86_64               randconfig-a003-20200607
-x86_64               randconfig-a004-20200607
-x86_64               randconfig-a005-20200607
-riscv                            allyesconfig
-riscv                             allnoconfig
-riscv                               defconfig
-riscv                            allmodconfig
-s390                             allyesconfig
-s390                              allnoconfig
-s390                             allmodconfig
-s390                                defconfig
-sparc                               defconfig
-sparc64                             defconfig
-sparc64                           allnoconfig
-sparc64                          allyesconfig
-sparc64                          allmodconfig
-um                               allmodconfig
-um                               allyesconfig
-x86_64                                   rhel
-x86_64                               rhel-7.6
-x86_64                    rhel-7.6-kselftests
-x86_64                         rhel-7.2-clear
-x86_64                                    lkp
-x86_64                              fedora-25
-x86_64                                  kexec
-
+Signed-off-by: Douglas Anderson <dianders@chromium.org>
 ---
-0-DAY CI Kernel Test Service, Intel Corporation
-https://lists.01.org/hyperkitty/list/kbuild-all@lists.01.org
+
+ drivers/net/wireless/ath/ath10k/ce.c | 30 +++++++++++++++++++---------
+ 1 file changed, 21 insertions(+), 9 deletions(-)
+
+diff --git a/drivers/net/wireless/ath/ath10k/ce.c b/drivers/net/wireless/ath/ath10k/ce.c
+index 294fbc1e89ab..ffdd4b995f33 100644
+--- a/drivers/net/wireless/ath/ath10k/ce.c
++++ b/drivers/net/wireless/ath/ath10k/ce.c
+@@ -481,6 +481,15 @@ static inline void ath10k_ce_engine_int_status_clear(struct ath10k *ar,
+ 	ath10k_ce_write32(ar, ce_ctrl_addr + wm_regs->addr, mask);
+ }
+ 
++static inline bool ath10k_ce_engine_int_status_check(struct ath10k *ar,
++						     u32 ce_ctrl_addr,
++						     unsigned int mask)
++{
++	struct ath10k_hw_ce_host_wm_regs *wm_regs = ar->hw_ce_regs->wm_regs;
++
++	return ath10k_ce_read32(ar, ce_ctrl_addr + wm_regs->addr) & mask;
++}
++
+ /*
+  * Guts of ath10k_ce_send.
+  * The caller takes responsibility for any needed locking.
+@@ -1301,19 +1310,22 @@ void ath10k_ce_per_engine_service(struct ath10k *ar, unsigned int ce_id)
+ 
+ 	spin_lock_bh(&ce->ce_lock);
+ 
+-	/* Clear the copy-complete interrupts that will be handled here. */
+-	ath10k_ce_engine_int_status_clear(ar, ctrl_addr,
+-					  wm_regs->cc_mask);
++	if (ath10k_ce_engine_int_status_check(ar, ctrl_addr,
++					      wm_regs->cc_mask)) {
++		/* Clear before handling */
++		ath10k_ce_engine_int_status_clear(ar, ctrl_addr,
++						  wm_regs->cc_mask);
+ 
+-	spin_unlock_bh(&ce->ce_lock);
++		spin_unlock_bh(&ce->ce_lock);
+ 
+-	if (ce_state->recv_cb)
+-		ce_state->recv_cb(ce_state);
++		if (ce_state->recv_cb)
++			ce_state->recv_cb(ce_state);
+ 
+-	if (ce_state->send_cb)
+-		ce_state->send_cb(ce_state);
++		if (ce_state->send_cb)
++			ce_state->send_cb(ce_state);
+ 
+-	spin_lock_bh(&ce->ce_lock);
++		spin_lock_bh(&ce->ce_lock);
++	}
+ 
+ 	/*
+ 	 * Misc CE interrupts are not being handled, but still need
+-- 
+2.27.0.278.ge193c7cf3a9-goog
+
 
 _______________________________________________
 ath10k mailing list
