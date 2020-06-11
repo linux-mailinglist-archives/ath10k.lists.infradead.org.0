@@ -2,37 +2,38 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 8BE7C1F669B
-	for <lists+ath10k@lfdr.de>; Thu, 11 Jun 2020 13:29:15 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 70DBA1F6770
+	for <lists+ath10k@lfdr.de>; Thu, 11 Jun 2020 14:05:46 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	Message-ID:References:To:From:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=3c3kkELfyErS+HJOpYqMY4Do7E57wpR3Ut6bakuBqQw=; b=RJdEOeV0e6zHuL
-	dhJRzJqE+xQLubC5mOAYLfyYwnYF6arUdtt7xRuiEyqyInp+Drpe+VH5jRLyZSCF1lOkjLexYiWmj
-	breiW6D+yIv1eUmKXewDansgn3Lq2E7RWddqZfQv6w0cMe44EdpefzlFEmxziVPQtq/MpG8jT1doo
-	jp2EIp+zG8dNeQuQCLMZUcxn5T/ujF1LtTP44lQ6f1ysCGHvzGndrDZpvx4itrlAVcMK+RXqt8xaa
-	T9SwRO4nBMVOIl8D1byjbfVQjNRtaYdzcnjFqExetQabxcQNPnwwTqR/PJLin+bKy/kpIhriLVT54
-	zyfytNtbdpzNKRqvWkZg==;
+	List-Owner; bh=jOuw2KyFRizc/0nE16CsOP9Xxeii6mS7vaZOxdToCAc=; b=A3W7JQqpCAQeYX
+	jZQXOV3lGRaK3lnAnY60KEkx+N6Ow6kU0vyC3pbrJ37+UYd1TvGk9Y2VL1clPTHiQsd3JnJFKl/Sk
+	9nyBsZtOcH4GANX3YRkhDF/o1S6sgpyZqqrd7SCwG5DTlX6ShLIrDgizMfIeUlNOXMKwOXYMV0Ob5
+	kNwsnRcwYPi7k+R6Qkoo19ixpl5DG/HTRfVu/ug7bQqTLJPUe5wnJ/JV6LXZ1t9cdda/Jcv+Cizs6
+	iGV0eU10pDmAYvbc/oEpyBiV56PGe97nPS42WFosoqQ9ggdWlNhNtaRSnfiS/iUZvPk3Y5Wl+9V2h
+	YT8APh4493VrVcDFpjIA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jjLOT-0003vS-FJ; Thu, 11 Jun 2020 11:29:13 +0000
+	id 1jjLxo-0005Xq-CZ; Thu, 11 Jun 2020 12:05:44 +0000
 Received: from smail.rz.tu-ilmenau.de ([141.24.186.67])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jjLOQ-0003v0-5k
- for ath10k@lists.infradead.org; Thu, 11 Jun 2020 11:29:11 +0000
+ id 1jjLxj-0005Tu-9Y
+ for ath10k@lists.infradead.org; Thu, 11 Jun 2020 12:05:40 +0000
 Received: from [192.168.178.27] (unknown [87.147.49.100])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by smail.rz.tu-ilmenau.de (Postfix) with ESMTPSA id 99B0958005E;
- Thu, 11 Jun 2020 13:29:07 +0200 (CEST)
+ by smail.rz.tu-ilmenau.de (Postfix) with ESMTPSA id CC82B580065;
+ Thu, 11 Jun 2020 14:05:37 +0200 (CEST)
 Subject: Re: [PATCH] ath10k: enable advertising support for channels 32, 68
  and 98
+From: Markus Theil <markus.theil@tu-ilmenau.de>
 To: Robert Marko <robert.marko@sartura.hr>, ath10k@lists.infradead.org
 References: <20200327093147.189390-1-robert.marko@sartura.hr>
-From: Markus Theil <markus.theil@tu-ilmenau.de>
+ <1f5bab38-4c77-6858-ed02-f52c71ee11fe@tu-ilmenau.de>
 Autocrypt: addr=markus.theil@tu-ilmenau.de; keydata=
  mQINBF7QuV0BEACYaiAXGmLtuHHqn37GUkDV2K7DSvTSZlPQ5q1DJSVS5mPyFtqqWeQr5jEM
  lrG5sSLSQdQqVDrKB9brno0u2yVYmQs+QY9wgrIrDBeDX+tHmKUDioN+EFpwSFhgBJ1ZDaj2
@@ -77,16 +78,16 @@ Autocrypt: addr=markus.theil@tu-ilmenau.de; keydata=
  4hhZ0lPC3oNT4a4V4IJX5+WRWcRFgrZjSAJE1VgMeqbBIK4qajpX3ugXpoBb/m2/JLIeP+Yf
  DNjaaWVQV4QO+ibYz1Kay6Y4+M1NhxrlyfhdfuOWu5FLuDRww14hdF2Y6MbIFOY33Al7hCy9
  HbCBIiM=
-Message-ID: <1f5bab38-4c77-6858-ed02-f52c71ee11fe@tu-ilmenau.de>
-Date: Thu, 11 Jun 2020 13:29:07 +0200
+Message-ID: <4ad21411-2948-ea8a-5335-0d286dc98825@tu-ilmenau.de>
+Date: Thu, 11 Jun 2020 14:05:37 +0200
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
  Thunderbird/68.9.0
 MIME-Version: 1.0
-In-Reply-To: <20200327093147.189390-1-robert.marko@sartura.hr>
+In-Reply-To: <1f5bab38-4c77-6858-ed02-f52c71ee11fe@tu-ilmenau.de>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200611_042910_368376_43457B53 
-X-CRM114-Status: GOOD (  15.47  )
+X-CRM114-CacheID: sfid-20200611_050539_495496_4645F153 
+X-CRM114-Status: GOOD (  17.04  )
 X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-2.3 points)
@@ -113,75 +114,79 @@ Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On 3/27/20 10:31 AM, Robert Marko wrote:
-> Enable advertising support for 5G channels: 32, 68 and 96.
-> These channels are legal and available for use in ETSI countries.
-> So lets advertise these and they will be available in accordance with the regulatory domain used.
+On 6/11/20 1:29 PM, Markus Theil wrote:
+> On 3/27/20 10:31 AM, Robert Marko wrote:
+>> Enable advertising support for 5G channels: 32, 68 and 96.
+>> These channels are legal and available for use in ETSI countries.
+>> So lets advertise these and they will be available in accordance with the regulatory domain used.
+>>
+>> Signed-off-by: Robert Marko <robert.marko@sartura.hr>
+>> Cc: Luka Perkov <luka.perkov@sartura.hr>
+>> ---
+>>  drivers/net/wireless/ath/ath10k/core.h | 2 +-
+>>  drivers/net/wireless/ath/ath10k/mac.c  | 3 +++
+>>  2 files changed, 4 insertions(+), 1 deletion(-)
+>>
+>> diff --git a/drivers/net/wireless/ath/ath10k/core.h b/drivers/net/wireless/ath/ath10k/core.h
+>> index 5101bf2b5b15..480efaa1278c 100644
+>> --- a/drivers/net/wireless/ath/ath10k/core.h
+>> +++ b/drivers/net/wireless/ath/ath10k/core.h
+>> @@ -37,7 +37,7 @@
+>>  #define WMI_READY_TIMEOUT (5 * HZ)
+>>  #define ATH10K_FLUSH_TIMEOUT_HZ (5 * HZ)
+>>  #define ATH10K_CONNECTION_LOSS_HZ (3 * HZ)
+>> -#define ATH10K_NUM_CHANS 41
+>> +#define ATH10K_NUM_CHANS 44
+>>  #define ATH10K_MAX_5G_CHAN 173
+>>  
+>>  /* Antenna noise floor */
+>> diff --git a/drivers/net/wireless/ath/ath10k/mac.c b/drivers/net/wireless/ath/ath10k/mac.c
+>> index 7fee35ff966b..f98422427b27 100644
+>> --- a/drivers/net/wireless/ath/ath10k/mac.c
+>> +++ b/drivers/net/wireless/ath/ath10k/mac.c
+>> @@ -8363,6 +8363,7 @@ static const struct ieee80211_channel ath10k_2ghz_channels[] = {
+>>  };
+>>  
+>>  static const struct ieee80211_channel ath10k_5ghz_channels[] = {
+>> +	CHAN5G(32, 5160, 0),
+>>  	CHAN5G(36, 5180, 0),
+>>  	CHAN5G(40, 5200, 0),
+>>  	CHAN5G(44, 5220, 0),
+>> @@ -8371,6 +8372,8 @@ static const struct ieee80211_channel ath10k_5ghz_channels[] = {
+>>  	CHAN5G(56, 5280, 0),
+>>  	CHAN5G(60, 5300, 0),
+>>  	CHAN5G(64, 5320, 0),
+>> +	CHAN5G(68, 5340, 0),
+>> +	CHAN5G(96, 5480, 0),
+>>  	CHAN5G(100, 5500, 0),
+>>  	CHAN5G(104, 5520, 0),
+>>  	CHAN5G(108, 5540, 0),
+> Hi, your patch is incomplete. Mgmt frames cannot be received on channel 32, because of the following lines in wmi.c:
 >
-> Signed-off-by: Robert Marko <robert.marko@sartura.hr>
-> Cc: Luka Perkov <luka.perkov@sartura.hr>
-> ---
->  drivers/net/wireless/ath/ath10k/core.h | 2 +-
->  drivers/net/wireless/ath/ath10k/mac.c  | 3 +++
->  2 files changed, 4 insertions(+), 1 deletion(-)
+> 	/* Hardware can Rx CCK rates on 5GHz. In that case phy_mode is set to
+> 	 * MODE_11B. This means phy_mode is not a reliable source for the band
+> 	 * of mgmt rx.
+> 	 */
+> 	if (channel >= 1 && channel <= 14) {
+> 		status->band = NL80211_BAND_2GHZ;
+> 	} else if (channel >= 36 && channel <= ATH10K_MAX_5G_CHAN) {
+> 		status->band = NL80211_BAND_5GHZ;
+> 	} else {
+> 		/* Shouldn't happen unless list of advertised channels to
+> 		 * mac80211 has been changed.
+> 		 */
+> 		WARN_ON_ONCE(1);
+> 		dev_kfree_skb(skb);
+> 		return 0;
+> 	}
 >
-> diff --git a/drivers/net/wireless/ath/ath10k/core.h b/drivers/net/wireless/ath/ath10k/core.h
-> index 5101bf2b5b15..480efaa1278c 100644
-> --- a/drivers/net/wireless/ath/ath10k/core.h
-> +++ b/drivers/net/wireless/ath/ath10k/core.h
-> @@ -37,7 +37,7 @@
->  #define WMI_READY_TIMEOUT (5 * HZ)
->  #define ATH10K_FLUSH_TIMEOUT_HZ (5 * HZ)
->  #define ATH10K_CONNECTION_LOSS_HZ (3 * HZ)
-> -#define ATH10K_NUM_CHANS 41
-> +#define ATH10K_NUM_CHANS 44
->  #define ATH10K_MAX_5G_CHAN 173
->  
->  /* Antenna noise floor */
-> diff --git a/drivers/net/wireless/ath/ath10k/mac.c b/drivers/net/wireless/ath/ath10k/mac.c
-> index 7fee35ff966b..f98422427b27 100644
-> --- a/drivers/net/wireless/ath/ath10k/mac.c
-> +++ b/drivers/net/wireless/ath/ath10k/mac.c
-> @@ -8363,6 +8363,7 @@ static const struct ieee80211_channel ath10k_2ghz_channels[] = {
->  };
->  
->  static const struct ieee80211_channel ath10k_5ghz_channels[] = {
-> +	CHAN5G(32, 5160, 0),
->  	CHAN5G(36, 5180, 0),
->  	CHAN5G(40, 5200, 0),
->  	CHAN5G(44, 5220, 0),
-> @@ -8371,6 +8372,8 @@ static const struct ieee80211_channel ath10k_5ghz_channels[] = {
->  	CHAN5G(56, 5280, 0),
->  	CHAN5G(60, 5300, 0),
->  	CHAN5G(64, 5320, 0),
-> +	CHAN5G(68, 5340, 0),
-> +	CHAN5G(96, 5480, 0),
->  	CHAN5G(100, 5500, 0),
->  	CHAN5G(104, 5520, 0),
->  	CHAN5G(108, 5540, 0),
+> Have you tested this patch?
+I've tested your patch (changed 36 to 32 in wmi.c). And channel 32 does
+not work for me, even with that change.
+Nevertheless, I was able to use channels 68 and 96 between two ath10k
+cards in AP and STA mode. I do not know,
+why channel 32 does not work.
 
-Hi, your patch is incomplete. Mgmt frames cannot be received on channel 32, because of the following lines in wmi.c:
-
-	/* Hardware can Rx CCK rates on 5GHz. In that case phy_mode is set to
-	 * MODE_11B. This means phy_mode is not a reliable source for the band
-	 * of mgmt rx.
-	 */
-	if (channel >= 1 && channel <= 14) {
-		status->band = NL80211_BAND_2GHZ;
-	} else if (channel >= 36 && channel <= ATH10K_MAX_5G_CHAN) {
-		status->band = NL80211_BAND_5GHZ;
-	} else {
-		/* Shouldn't happen unless list of advertised channels to
-		 * mac80211 has been changed.
-		 */
-		WARN_ON_ONCE(1);
-		dev_kfree_skb(skb);
-		return 0;
-	}
-
-Have you tested this patch?
-
-Markus
 
 
 _______________________________________________
