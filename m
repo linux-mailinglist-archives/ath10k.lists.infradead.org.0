@@ -2,101 +2,65 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 70DBA1F6770
-	for <lists+ath10k@lfdr.de>; Thu, 11 Jun 2020 14:05:46 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 37BD01F72B8
+	for <lists+ath10k@lfdr.de>; Fri, 12 Jun 2020 06:10:43 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:References:To:From:Subject:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=jOuw2KyFRizc/0nE16CsOP9Xxeii6mS7vaZOxdToCAc=; b=A3W7JQqpCAQeYX
-	jZQXOV3lGRaK3lnAnY60KEkx+N6Ow6kU0vyC3pbrJ37+UYd1TvGk9Y2VL1clPTHiQsd3JnJFKl/Sk
-	9nyBsZtOcH4GANX3YRkhDF/o1S6sgpyZqqrd7SCwG5DTlX6ShLIrDgizMfIeUlNOXMKwOXYMV0Ob5
-	kNwsnRcwYPi7k+R6Qkoo19ixpl5DG/HTRfVu/ug7bQqTLJPUe5wnJ/JV6LXZ1t9cdda/Jcv+Cizs6
-	iGV0eU10pDmAYvbc/oEpyBiV56PGe97nPS42WFosoqQ9ggdWlNhNtaRSnfiS/iUZvPk3Y5Wl+9V2h
-	YT8APh4493VrVcDFpjIA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Subject:To:From
+	:Date:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=6hSE6NaSwqDKSeuhKTOKg2HxDkT/ApeGdc/RDpJ1Q2g=; b=lLVPKeCxFSU7zr
+	m/10so3cfKVWyBXpB90eYf4lu2WcIdwKqdH4+eh7+QDWPVJOOQCV3PpRNvEA166UbJe2M5c1E+JC7
+	JdJ2NkjfIcJU4khLGaGlQZ95B3EtNz/wuvGH3IFg4YrzX3L1T09g32HDY3cBQisZwOJAlD9CqcbeM
+	aWgDxp1MMBjj+ERFiUeRY7IMr7N1QEOK8f4eKtZ71Fwtjoz2RZWFeyMFizgm6TEWdlpF6UNJiUCDJ
+	hLrIBt5A+IRpOUnivbDk7AxT+TLAqxBqa4emah4NpsUn/avtG1fd7ED3lRrNRvdlXvy8iRDV/kyze
+	EEicvz9dGjvFYlpiHwag==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jjLxo-0005Xq-CZ; Thu, 11 Jun 2020 12:05:44 +0000
-Received: from smail.rz.tu-ilmenau.de ([141.24.186.67])
+	id 1jjb1c-0003Tg-8v; Fri, 12 Jun 2020 04:10:40 +0000
+Received: from mga05.intel.com ([192.55.52.43])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jjLxj-0005Tu-9Y
- for ath10k@lists.infradead.org; Thu, 11 Jun 2020 12:05:40 +0000
-Received: from [192.168.178.27] (unknown [87.147.49.100])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
- (No client certificate requested)
- by smail.rz.tu-ilmenau.de (Postfix) with ESMTPSA id CC82B580065;
- Thu, 11 Jun 2020 14:05:37 +0200 (CEST)
-Subject: Re: [PATCH] ath10k: enable advertising support for channels 32, 68
- and 98
-From: Markus Theil <markus.theil@tu-ilmenau.de>
-To: Robert Marko <robert.marko@sartura.hr>, ath10k@lists.infradead.org
-References: <20200327093147.189390-1-robert.marko@sartura.hr>
- <1f5bab38-4c77-6858-ed02-f52c71ee11fe@tu-ilmenau.de>
-Autocrypt: addr=markus.theil@tu-ilmenau.de; keydata=
- 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
- HbCBIiM=
-Message-ID: <4ad21411-2948-ea8a-5335-0d286dc98825@tu-ilmenau.de>
-Date: Thu, 11 Jun 2020 14:05:37 +0200
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
- Thunderbird/68.9.0
+ id 1jjb1X-0003TI-Ro
+ for ath10k@lists.infradead.org; Fri, 12 Jun 2020 04:10:37 +0000
+IronPort-SDR: D6+M2VIKNjrjgo8vw+pm2DSbTRKsPRvnwd70i63Az0ci3dBaC76yvHDK+O4/GaT5dK6g9qbyTy
+ 3rJ1vtOivP3g==
+X-Amp-Result: SKIPPED(no attachment in message)
+X-Amp-File-Uploaded: False
+Received: from orsmga002.jf.intel.com ([10.7.209.21])
+ by fmsmga105.fm.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
+ 11 Jun 2020 21:10:34 -0700
+IronPort-SDR: zClPPzR0ljxMYkPHcwsL7SNLQTSs6x7ek4PA6Y8ZfNRz1soeZQocOLQEQnGA+iLAE3aFLBAPOJ
+ NhCRDcDemWjQ==
+X-ExtLoop1: 1
+X-IronPort-AV: E=Sophos;i="5.73,501,1583222400"; d="scan'208";a="289764403"
+Received: from lkp-server01.sh.intel.com (HELO b6eec31c25be) ([10.239.97.150])
+ by orsmga002.jf.intel.com with ESMTP; 11 Jun 2020 21:10:32 -0700
+Received: from kbuild by b6eec31c25be with local (Exim 4.92)
+ (envelope-from <lkp@intel.com>)
+ id 1jjb1U-0000Tp-0M; Fri, 12 Jun 2020 04:10:32 +0000
+Date: Fri, 12 Jun 2020 12:10:13 +0800
+From: kernel test robot <lkp@intel.com>
+To: Kalle Valo <kvalo@codeaurora.org>
+Subject: [ath6kl:ath-qca] BUILD SUCCESS
+ 9327e9a2e02a1cf10e61b548f841decce81bc877
+Message-ID: <5ee30025.9RBCUkjw3zchOaFo%lkp@intel.com>
+User-Agent: Heirloom mailx 12.5 6/20/10
 MIME-Version: 1.0
-In-Reply-To: <1f5bab38-4c77-6858-ed02-f52c71ee11fe@tu-ilmenau.de>
-Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200611_050539_495496_4645F153 
-X-CRM114-Status: GOOD (  17.04  )
-X-Spam-Score: -2.3 (--)
+X-CRM114-CacheID: sfid-20200611_211035_911989_E853A79C 
+X-CRM114-Status: UNSURE (   5.46  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.5 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-2.3 points)
+ Content analysis details:   (-0.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [141.24.186.67 listed in list.dnswl.org]
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [192.55.52.43 listed in list.dnswl.org]
+ 1.8 LONGWORDS              Long string of long words
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -108,86 +72,143 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: Luka Perkov <luka.perkov@sartura.hr>
+Cc: ath10k@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-On 6/11/20 1:29 PM, Markus Theil wrote:
-> On 3/27/20 10:31 AM, Robert Marko wrote:
->> Enable advertising support for 5G channels: 32, 68 and 96.
->> These channels are legal and available for use in ETSI countries.
->> So lets advertise these and they will be available in accordance with the regulatory domain used.
->>
->> Signed-off-by: Robert Marko <robert.marko@sartura.hr>
->> Cc: Luka Perkov <luka.perkov@sartura.hr>
->> ---
->>  drivers/net/wireless/ath/ath10k/core.h | 2 +-
->>  drivers/net/wireless/ath/ath10k/mac.c  | 3 +++
->>  2 files changed, 4 insertions(+), 1 deletion(-)
->>
->> diff --git a/drivers/net/wireless/ath/ath10k/core.h b/drivers/net/wireless/ath/ath10k/core.h
->> index 5101bf2b5b15..480efaa1278c 100644
->> --- a/drivers/net/wireless/ath/ath10k/core.h
->> +++ b/drivers/net/wireless/ath/ath10k/core.h
->> @@ -37,7 +37,7 @@
->>  #define WMI_READY_TIMEOUT (5 * HZ)
->>  #define ATH10K_FLUSH_TIMEOUT_HZ (5 * HZ)
->>  #define ATH10K_CONNECTION_LOSS_HZ (3 * HZ)
->> -#define ATH10K_NUM_CHANS 41
->> +#define ATH10K_NUM_CHANS 44
->>  #define ATH10K_MAX_5G_CHAN 173
->>  
->>  /* Antenna noise floor */
->> diff --git a/drivers/net/wireless/ath/ath10k/mac.c b/drivers/net/wireless/ath/ath10k/mac.c
->> index 7fee35ff966b..f98422427b27 100644
->> --- a/drivers/net/wireless/ath/ath10k/mac.c
->> +++ b/drivers/net/wireless/ath/ath10k/mac.c
->> @@ -8363,6 +8363,7 @@ static const struct ieee80211_channel ath10k_2ghz_channels[] = {
->>  };
->>  
->>  static const struct ieee80211_channel ath10k_5ghz_channels[] = {
->> +	CHAN5G(32, 5160, 0),
->>  	CHAN5G(36, 5180, 0),
->>  	CHAN5G(40, 5200, 0),
->>  	CHAN5G(44, 5220, 0),
->> @@ -8371,6 +8372,8 @@ static const struct ieee80211_channel ath10k_5ghz_channels[] = {
->>  	CHAN5G(56, 5280, 0),
->>  	CHAN5G(60, 5300, 0),
->>  	CHAN5G(64, 5320, 0),
->> +	CHAN5G(68, 5340, 0),
->> +	CHAN5G(96, 5480, 0),
->>  	CHAN5G(100, 5500, 0),
->>  	CHAN5G(104, 5520, 0),
->>  	CHAN5G(108, 5540, 0),
-> Hi, your patch is incomplete. Mgmt frames cannot be received on channel 32, because of the following lines in wmi.c:
->
-> 	/* Hardware can Rx CCK rates on 5GHz. In that case phy_mode is set to
-> 	 * MODE_11B. This means phy_mode is not a reliable source for the band
-> 	 * of mgmt rx.
-> 	 */
-> 	if (channel >= 1 && channel <= 14) {
-> 		status->band = NL80211_BAND_2GHZ;
-> 	} else if (channel >= 36 && channel <= ATH10K_MAX_5G_CHAN) {
-> 		status->band = NL80211_BAND_5GHZ;
-> 	} else {
-> 		/* Shouldn't happen unless list of advertised channels to
-> 		 * mac80211 has been changed.
-> 		 */
-> 		WARN_ON_ONCE(1);
-> 		dev_kfree_skb(skb);
-> 		return 0;
-> 	}
->
-> Have you tested this patch?
-I've tested your patch (changed 36 to 32 in wmi.c). And channel 32 does
-not work for me, even with that change.
-Nevertheless, I was able to use channels 68 and 96 between two ath10k
-cards in AP and STA mode. I do not know,
-why channel 32 does not work.
+tree/branch: https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git  ath-qca
+branch HEAD: 9327e9a2e02a1cf10e61b548f841decce81bc877  Merge branch 'ath-next' into ath-qca
 
+elapsed time: 1374m
 
+configs tested: 116
+configs skipped: 5
+
+The following configs have been built successfully.
+More configs may be tested in the coming days.
+
+arm                                 defconfig
+arm                              allyesconfig
+arm                              allmodconfig
+arm                               allnoconfig
+arm64                            allyesconfig
+arm64                               defconfig
+arm64                            allmodconfig
+arm64                             allnoconfig
+arm                  colibri_pxa300_defconfig
+arm                       imx_v4_v5_defconfig
+xtensa                         virt_defconfig
+mips                            ar7_defconfig
+arm                            mmp2_defconfig
+m68k                            mac_defconfig
+mips                     loongson1b_defconfig
+arm                       imx_v6_v7_defconfig
+m68k                             allyesconfig
+sh                     magicpanelr2_defconfig
+m68k                        mvme16x_defconfig
+riscv                            alldefconfig
+powerpc                      ppc64e_defconfig
+mips                            gpr_defconfig
+i386                              allnoconfig
+mips                           ip27_defconfig
+sh                               alldefconfig
+xtensa                              defconfig
+arm                         socfpga_defconfig
+c6x                              alldefconfig
+arm                        spear3xx_defconfig
+i386                             allyesconfig
+i386                                defconfig
+i386                              debian-10.3
+ia64                             allmodconfig
+ia64                                defconfig
+ia64                              allnoconfig
+ia64                             allyesconfig
+m68k                             allmodconfig
+m68k                              allnoconfig
+m68k                           sun3_defconfig
+m68k                                defconfig
+nios2                               defconfig
+nios2                            allyesconfig
+openrisc                            defconfig
+c6x                              allyesconfig
+c6x                               allnoconfig
+openrisc                         allyesconfig
+nds32                               defconfig
+nds32                             allnoconfig
+csky                             allyesconfig
+csky                                defconfig
+alpha                               defconfig
+alpha                            allyesconfig
+xtensa                           allyesconfig
+h8300                            allyesconfig
+h8300                            allmodconfig
+arc                                 defconfig
+arc                              allyesconfig
+sh                               allmodconfig
+sh                                allnoconfig
+microblaze                        allnoconfig
+mips                             allyesconfig
+mips                              allnoconfig
+mips                             allmodconfig
+parisc                            allnoconfig
+parisc                              defconfig
+parisc                           allyesconfig
+parisc                           allmodconfig
+powerpc                          allyesconfig
+powerpc                          rhel-kconfig
+powerpc                          allmodconfig
+powerpc                           allnoconfig
+powerpc                             defconfig
+i386                 randconfig-a006-20200611
+i386                 randconfig-a002-20200611
+i386                 randconfig-a001-20200611
+i386                 randconfig-a004-20200611
+i386                 randconfig-a005-20200611
+i386                 randconfig-a003-20200611
+x86_64               randconfig-a015-20200611
+x86_64               randconfig-a011-20200611
+x86_64               randconfig-a016-20200611
+x86_64               randconfig-a012-20200611
+x86_64               randconfig-a014-20200611
+x86_64               randconfig-a013-20200611
+i386                 randconfig-a015-20200611
+i386                 randconfig-a011-20200611
+i386                 randconfig-a014-20200611
+i386                 randconfig-a013-20200611
+i386                 randconfig-a016-20200611
+i386                 randconfig-a012-20200611
+riscv                            allyesconfig
+riscv                             allnoconfig
+riscv                               defconfig
+riscv                            allmodconfig
+s390                             allyesconfig
+s390                              allnoconfig
+s390                             allmodconfig
+s390                                defconfig
+sparc                            allyesconfig
+sparc                               defconfig
+sparc64                             defconfig
+sparc64                           allnoconfig
+sparc64                          allyesconfig
+sparc64                          allmodconfig
+um                               allmodconfig
+um                                allnoconfig
+um                                  defconfig
+um                               allyesconfig
+x86_64                               rhel-7.6
+x86_64                    rhel-7.6-kselftests
+x86_64                               rhel-8.3
+x86_64                                  kexec
+x86_64                                   rhel
+x86_64                         rhel-7.2-clear
+x86_64                                    lkp
+x86_64                              fedora-25
+
+---
+0-DAY CI Kernel Test Service, Intel Corporation
+https://lists.01.org/hyperkitty/list/kbuild-all@lists.01.org
 
 _______________________________________________
 ath10k mailing list
