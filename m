@@ -2,44 +2,45 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 229AA1F9AE0
-	for <lists+ath10k@lfdr.de>; Mon, 15 Jun 2020 16:51:52 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 63FE41F9B13
+	for <lists+ath10k@lfdr.de>; Mon, 15 Jun 2020 16:56:40 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
-	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
-	References:List-Owner; bh=OA9s/By0AnPNzJxqsq0nlqN+1FfeDrSL6QFzZezlj9Y=; b=XVZ
-	27+tlyIaTF2RkBQoxiHvlGS+u1RjopTE2GjgSiKgrEt6y/AuPN8sjdoGpmK+oGzw+3pUl4cbs4V03
-	baC3JeI3qa+HuWyZDS3oEXbwy8uQ3WBQLjoaWvownE/4GtriSM2jI363rOnsa/Qdm4OeDr83v2jxv
-	W3tpxuLdJU82hbG3qhjeoIgsCKM6gd3AZJBHfBoTGXf3VY1tJlJIckNSkKJX9TC+YtUVM33E8qTkH
-	wrk1mnF9ghVWlan5dyKer5rR/3KjzAF5czG9RhLOB1Gsd2Aw59ovXJLHAEC48nlWf62CkXFovJXvF
-	JmGq2T5ieE4yF/1ZEX21ZJ2yry/0C7A==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
+	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=EvU9bA0J4bxxPdRayC5afEZtq5omVMTVl7RpDZWyLks=; b=U1nMkiEIkPAuY1
+	uoO61cLdZzDFxM1RMGhalrmkk32z/rMQcHNtPeCapqBKUQ9z/Vfp4qDpROD+TZxp0rPMXWqvKIb0l
+	Qg0lIgqk2vTaDz3Tui/u7UwjFGcSHGR0gCbRrxycREeAkX1i7zuR6zhR+qEf223neoStG7u5ArPHM
+	kPMQv3nI2KmhbhKv6uCy5aU3vp/C2P4xcXoHxE3Jnhx//kqIq7XIc3xAOf2xwo/VmNzyWw6A5RiNL
+	7B4oaJrmgGmBhX44+73V40vWp5oZ8o9BNodXb8irxa4fAqE8zhEjsH8bGPN5YRWMFgmoDteLnTMjH
+	+JRixjQebaMqvRMYyzAA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jkqSk-0000Ri-E0; Mon, 15 Jun 2020 14:51:50 +0000
+	id 1jkqXO-00054g-PB; Mon, 15 Jun 2020 14:56:38 +0000
 Received: from mail27.static.mailgun.info ([104.130.122.27])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jkqSV-0000Ip-3Y
- for ath10k@lists.infradead.org; Mon, 15 Jun 2020 14:51:37 +0000
+ id 1jkqXI-000542-1c
+ for ath10k@lists.infradead.org; Mon, 15 Jun 2020 14:56:36 +0000
 DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
  q=dns/txt; 
- s=smtp; t=1592232695; h=Message-Id: Date: Subject: Cc: To: From:
- Sender; bh=T704JSESpRyoVW9jvYH5GgVhIJT6xztX8hZwE7462RU=;
- b=ri6wFVYOTO+NPeEq0jNmCvXaZLKdD3b0iQAqSUWC1dBf7RoEsKBSygAG5ZmeEk2TRDeP8/LK
- LIS6mtZ57CjootEg+QpwLaHdD+Gi3xbwJvcxTMA8YaUYrn0O+uehPi2E2KqZLxlMbsR3Ku00
- CzQUJ4th8hMMiQ13ScTKRhTTK7o=
+ s=smtp; t=1592232994; h=Content-Type: MIME-Version: Message-ID:
+ In-Reply-To: Date: References: Subject: Cc: To: From: Sender;
+ bh=RTqnmaAhKbyyX5m1MHI2x1eM5OG8zLQJxTp6BIGwfIk=;
+ b=ffNKK/c64j1GQNR54vNuyufjjpx7JOMxPH3L+B+wmGecBfIVxfatxXH3nf2rioJbrnpPcfdJ
+ 0dyYxHiQbKbi7YgZiFSkvUnI6471MQgE3BunsrkSglnSyGkHd+CLAtOaeihDRBrQwZNxYewJ
+ +NPn5qd8hM+W8U5nF1HGnZvEeHE=
 X-Mailgun-Sending-Ip: 104.130.122.27
 X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
 Received: from smtp.codeaurora.org
  (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171]) by
- smtp-out-n15.prod.us-east-1.postgun.com with SMTP id
- 5ee78af48fe116ddd999c504 (version=TLS1.2,
- cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256); Mon, 15 Jun 2020 14:51:32
+ smtp-out-n08.prod.us-west-2.postgun.com with SMTP id
+ 5ee78c186f2ee827da872ea5 (version=TLS1.2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256); Mon, 15 Jun 2020 14:56:24
  GMT
 Received: by smtp.codeaurora.org (Postfix, from userid 1001)
- id 5A782C433AD; Mon, 15 Jun 2020 14:51:31 +0000 (UTC)
+ id 3D405C43395; Mon, 15 Jun 2020 14:56:24 +0000 (UTC)
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  aws-us-west-2-caf-mail-1.web.codeaurora.org
 X-Spam-Level: 
@@ -47,24 +48,31 @@ X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,SPF_NONE
  autolearn=unavailable autolearn_force=no version=3.4.0
 Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
  [88.114.240.156])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits))
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested) (Authenticated sender: kvalo)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id D15D3C433CA;
- Mon, 15 Jun 2020 14:51:28 +0000 (UTC)
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org D15D3C433CA
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id EB0F6C433CA;
+ Mon, 15 Jun 2020 14:56:20 +0000 (UTC)
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org EB0F6C433CA
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
  spf=none smtp.mailfrom=kvalo@codeaurora.org
 From: Kalle Valo <kvalo@codeaurora.org>
-To: ath10k@lists.infradead.org
-Subject: [PATCH v6] ath10k: provide survey info as accumulated data
-Date: Mon, 15 Jun 2020 17:51:26 +0300
-Message-Id: <1592232686-28712-1-git-send-email-kvalo@codeaurora.org>
-X-Mailer: git-send-email 2.7.4
+To: Doug Anderson <dianders@chromium.org>
+Subject: Re: [PATCH] ath10k: Wait until copy complete is actually done before
+ completing
+References: <20200609082015.1.Ife398994e5a0a6830e4d4a16306ef36e0144e7ba@changeid>
+ <20200615143237.519F3C433C8@smtp.codeaurora.org>
+ <CAD=FV=VaexjLaaZJSxndTEi6KCFaPWW=sUt6hjy9=0Qn68kH1g@mail.gmail.com>
+Date: Mon, 15 Jun 2020 17:56:19 +0300
+In-Reply-To: <CAD=FV=VaexjLaaZJSxndTEi6KCFaPWW=sUt6hjy9=0Qn68kH1g@mail.gmail.com>
+ (Doug Anderson's message of "Mon, 15 Jun 2020 07:39:33 -0700")
+Message-ID: <87zh94idik.fsf@codeaurora.org>
+User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/24.5 (gnu/linux)
+MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200615_075135_922543_0936567C 
-X-CRM114-Status: GOOD (  10.45  )
+X-CRM114-CacheID: sfid-20200615_075634_614022_5D84BD69 
+X-CRM114-Status: GOOD (  17.58  )
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
@@ -90,98 +98,61 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: linux-wireless@vger.kernel.org, 24601deerej@gmail.com, sven@narfation.org,
- markus.theil@tu-ilmenau.de
-MIME-Version: 1.0
+Cc: Sai Prakash Ranjan <saiprakash.ranjan@codeaurora.org>,
+ linux-arm-msm <linux-arm-msm@vger.kernel.org>,
+ linux-wireless <linux-wireless@vger.kernel.org>,
+ LKML <linux-kernel@vger.kernel.org>, ath10k@lists.infradead.org,
+ Rakesh Pillai <pillair@codeaurora.org>, netdev <netdev@vger.kernel.org>,
+ Jakub Kicinski <kuba@kernel.org>, "David S. Miller" <davem@davemloft.net>,
+ kuabhs@google.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-From: Venkateswara Naralasetty <vnaralas@codeaurora.org>
+Doug Anderson <dianders@chromium.org> writes:
 
-It is expected that the returned counters by .get_survey are monotonic
-increasing. But the data from ath10k gets reset to zero regularly. Channel
-active/busy time are then showing incorrect values (less than previous or
-sometimes zero) for the currently active channel during successive survey
-dump commands.
+> On Mon, Jun 15, 2020 at 7:32 AM Kalle Valo <kvalo@codeaurora.org> wrote:
+>>
+>> Douglas Anderson <dianders@chromium.org> wrote:
+>>
+>> > On wcn3990 we have "per_ce_irq = true".  That makes the
+>> > ath10k_ce_interrupt_summary() function always return 0xfff. The
+>> > ath10k_ce_per_engine_service_any() function will see this and think
+>> > that _all_ copy engines have an interrupt.  Without checking, the
+>> > ath10k_ce_per_engine_service() assumes that if it's called that the
+>> > "copy complete" (cc) interrupt fired.  This combination seems bad.
+>> >
+>> > Let's add a check to make sure that the "copy complete" interrupt
+>> > actually fired in ath10k_ce_per_engine_service().
+>> >
+>> > This might fix a hard-to-reproduce failure where it appears that the
+>> > copy complete handlers run before the copy is really complete.
+>> > Specifically a symptom was that we were seeing this on a Qualcomm
+>> > sc7180 board:
+>> >   arm-smmu 15000000.iommu: Unhandled context fault:
+>> >   fsr=0x402, iova=0x7fdd45780, fsynr=0x30003, cbfrsynra=0xc1, cb=10
+>> >
+>> > Even on platforms that don't have wcn3990 this still seems like it
+>> > would be a sane thing to do.  Specifically the current IRQ handler
+>> > comments indicate that there might be other misc interrupt sources
+>> > firing that need to be cleared.  If one of those sources was the one
+>> > that caused the IRQ handler to be called it would also be important to
+>> > double-check that the interrupt we cared about actually fired.
+>> >
+>> > Signed-off-by: Douglas Anderson <dianders@chromium.org>
+>> > Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
+>>
+>> ath10k firmwares work very differently, on what hardware and firmware did you
+>> test this? I'll add that information to the commit log.
+>
+> I am running on a Qualcomm sc7180 SoC.
 
-example:
+Sorry, I was unclear, I meant the ath10k hardware :) I guess WCN3990 but
+what firmware version?
 
-  $ iw dev wlan0 survey dump
-  Survey data from wlan0
-  	frequency:                      5180 MHz [in use]
-  	channel active time:            54995 ms
-  	channel busy time:              432 ms
-  	channel receive time:           0 ms
-  	channel transmit time:          59 ms
-  ...
-
-  $ iw dev wlan0 survey dump
-  Survey data from wlan0
-  	frequency:                      5180 MHz [in use]
-  	channel active time:            32592 ms
-  	channel busy time:              254 ms
-  	channel receive time:           0 ms
-  	channel transmit time:          0 ms
-  ...
-
-The correct way to handle this is to use the non-clearing
-WMI_BSS_SURVEY_REQ_TYPE_READ wmi_bss_survey_req_type. The firmware will
-then accumulate the survey data and handle wrap arounds.
-
-Tested on:
-
-* QCA9984 hw1.0 firmware 10.4-3.5.3-00057
-* QCA988X hw2.0 firmware 10.2.4-1.0-00047
-* QCA9888 hw2.0 firmware 10.4-3.9.0.2-00024
-* QCA4019 hw1.0 firmware 10.4-3.6-00140
-
-Fixes: fa7937e3d5c2 ("ath10k: update bss channel survey information")
-Signed-off-by: Venkateswara Naralasetty <vnaralas@codeaurora.org>
-Tested-by: Markus Theil <markus.theil@tu-ilmenau.de>
-Tested-by: John Deere <24601deerej@gmail.com>
-[sven@narfation.org: adjust commit message]
-Signed-off-by: Sven Eckelmann <sven@narfation.org>
-Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
----
-
-v6:
-
-* cc linux-wireless so patchwork sees this
-
-v5:
-* add additional tested devices
-* restructure commit message
-
-v4:
- * updated signed-off-by
-
-v3:
- * Rebased on TOT and added Tested-by
-
-Everything expect QCA9984 hw1.0 firmware 10.4-3.5.3-00057 was also tested
-by Sven.
-
- drivers/net/wireless/ath/ath10k/mac.c | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
-diff --git a/drivers/net/wireless/ath/ath10k/mac.c b/drivers/net/wireless/ath/ath10k/mac.c
-index 919d15584d4a..77daca67a8e1 100644
---- a/drivers/net/wireless/ath/ath10k/mac.c
-+++ b/drivers/net/wireless/ath/ath10k/mac.c
-@@ -7283,7 +7283,7 @@ ath10k_mac_update_bss_chan_survey(struct ath10k *ar,
- 				  struct ieee80211_channel *channel)
- {
- 	int ret;
--	enum wmi_bss_survey_req_type type = WMI_BSS_SURVEY_REQ_TYPE_READ_CLEAR;
-+	enum wmi_bss_survey_req_type type = WMI_BSS_SURVEY_REQ_TYPE_READ;
- 
- 	lockdep_assert_held(&ar->conf_mutex);
- 
 -- 
-2.7.4
-
+https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
 
 _______________________________________________
 ath10k mailing list
