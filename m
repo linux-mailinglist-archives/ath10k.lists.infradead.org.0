@@ -2,64 +2,64 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3F4E81FA7FE
-	for <lists+ath10k@lfdr.de>; Tue, 16 Jun 2020 06:54:13 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 47FEF1FA804
+	for <lists+ath10k@lfdr.de>; Tue, 16 Jun 2020 06:55:33 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Subject:To:From
 	:Date:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=wqZ/JCY8JvBBKu0kaF46pV4Ny+OgxqjEk4WYjAd6tO8=; b=VDBs5Tri1UeyDz
-	Kr0v/XB+zs++elOGYTnZHj1Ahuff6e299S9v4xbyAuy9YnG0jOIAHqj75qJA4adwA3bBvrsgxdAsG
-	Wl+GG3MsJuwj/ZVT+CDYu/Z13gk2t3fSM0cKjmzK3JH/IdQuEreSQfZdnj/UlYD2glIGaJlFG5z/p
-	g+qMclW2HYoghrwVeLjRIffu+GOJlfvygamMpIja7CRYbqReCLn4Y/YNhWvXVeZNd8gYysMZY82pD
-	nu3sAH+ujnwcNUxpHf4F5psMHXFaxshCRMzIoATYH8LsX+yrouzOkak99w379JXKHX2gAbFnjUnLG
-	jj1GAUMYceY7KSKuuzHA==;
+	List-Owner; bh=lQrTUTF8vEbAsWWoBwgmJCsT0t2zuNYsDmvU4e4AdY8=; b=hc+hti23GkICDz
+	pzzE+AqkLn794z5AEvThUl7m+X3gdA/2l0bM3pqgDP0fS/1zB0cvFrPalHCl63Lntuocwwr61WjnC
+	6M+ovdcMndhM6c9yaCcYGUYzHgiTAN5KrRLE3i5nyaON/6i2r5NMrW6UFe+JdR8nL/3jcYWoWSqcf
+	NkVjIu6r/uvRXt8FIapkag8/x9MZIxg8flWPXwtbeFEhlSMjB5/quty71T36s54OANgyXa/P2Nx+L
+	Sw9XaUoDH4imA5Kz0P4VkzlFtebH5vmLhpeLXYq0AW1wt6VWdL3shBX4f8QdMknmzyUvflg9GOtBb
+	/XN7ZsA/cKbqihxtFVBw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jl3bu-0006yD-O9; Tue, 16 Jun 2020 04:54:10 +0000
-Received: from mga03.intel.com ([134.134.136.65])
+	id 1jl3dD-0001GP-Bf; Tue, 16 Jun 2020 04:55:31 +0000
+Received: from mga12.intel.com ([192.55.52.136])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jl3br-0006xh-29
- for ath10k@lists.infradead.org; Tue, 16 Jun 2020 04:54:08 +0000
-IronPort-SDR: mgtkoGdoddCkLYdn4jJqXRBL4ecU1z261c4dEPqi5Z7z+VJsoqy1fUkzXlaP3y2ivnVWFqACZj
- UTL65a/qEpew==
+ id 1jl3cn-0007pf-O9
+ for ath10k@lists.infradead.org; Tue, 16 Jun 2020 04:55:08 +0000
+IronPort-SDR: OFfVAE8N18FqOSV9WL4zK4Jl9/t5p9LuEvsu26c9IYzHg6ChedUHibCG4YgqO6eKvJKX0/paxt
+ IKKofLceOlIA==
 X-Amp-Result: SKIPPED(no attachment in message)
 X-Amp-File-Uploaded: False
-Received: from orsmga002.jf.intel.com ([10.7.209.21])
- by orsmga103.jf.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
- 15 Jun 2020 21:54:05 -0700
-IronPort-SDR: Tr17r2o1gZEEN91eefdNXxV/YeLcvu2VMMl/x9vw9J5+Q+239ioE51HXFLdsPjbJ6Odexb1wR3
- feUKoF1xnKvQ==
+Received: from fmsmga001.fm.intel.com ([10.253.24.23])
+ by fmsmga106.fm.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
+ 15 Jun 2020 21:55:04 -0700
+IronPort-SDR: kXofDlCeiSKDgWXHaVI8v6qY54guq8HlVYlKghVCq2JEfrkU4MGc5Lm07wx+nBWlCJ/ar5pfQf
+ KqAX+08/Nf+g==
 X-ExtLoop1: 1
-X-IronPort-AV: E=Sophos;i="5.73,517,1583222400"; d="scan'208";a="290933507"
+X-IronPort-AV: E=Sophos;i="5.73,517,1583222400"; d="scan'208";a="382760092"
 Received: from lkp-server02.sh.intel.com (HELO ec7aa6149bd9) ([10.239.97.151])
- by orsmga002.jf.intel.com with ESMTP; 15 Jun 2020 21:54:03 -0700
+ by fmsmga001.fm.intel.com with ESMTP; 15 Jun 2020 21:55:03 -0700
 Received: from kbuild by ec7aa6149bd9 with local (Exim 4.92)
  (envelope-from <lkp@intel.com>)
- id 1jl3bn-0000SH-8i; Tue, 16 Jun 2020 04:54:03 +0000
-Date: Tue, 16 Jun 2020 12:54:01 +0800
+ id 1jl3cl-0000SN-A3; Tue, 16 Jun 2020 04:55:03 +0000
+Date: Tue, 16 Jun 2020 12:54:03 +0800
 From: kernel test robot <lkp@intel.com>
 To: Kalle Valo <kvalo@codeaurora.org>
-Subject: [ath6kl:master-pending] BUILD SUCCESS
- cd924b92f26a9ecbee509eca31096daa65cfaac0
-Message-ID: <5ee85069.tcR1jDxHPXslQlFw%lkp@intel.com>
+Subject: [ath6kl:pending] BUILD SUCCESS
+ 96b87ee2d3fc1482c2340f6f77752a72b1d5ff2d
+Message-ID: <5ee8506b.SOyXSVpzJVnOgt5N%lkp@intel.com>
 User-Agent: Heirloom mailx 12.5 6/20/10
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200615_215407_145728_8B21CAC9 
+X-CRM114-CacheID: sfid-20200615_215505_814702_F2830D58 
 X-CRM114-Status: UNSURE (   4.90  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -3.2 (---)
+X-Spam-Score: -0.5 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-3.2 points)
+ Content analysis details:   (-0.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [134.134.136.65 listed in list.dnswl.org]
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [192.55.52.136 listed in list.dnswl.org]
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  1.8 LONGWORDS              Long string of long words
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
@@ -78,12 +78,12 @@ Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-tree/branch: https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git  master-pending
-branch HEAD: cd924b92f26a9ecbee509eca31096daa65cfaac0  Merge branch 'pending' into master-pending
+tree/branch: https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git  pending
+branch HEAD: 96b87ee2d3fc1482c2340f6f77752a72b1d5ff2d  ath11k: Add bdf-addr in hw_params
 
 elapsed time: 481m
 
-configs tested: 101
+configs tested: 107
 configs skipped: 1
 
 The following configs have been built successfully.
@@ -107,10 +107,10 @@ um                           x86_64_defconfig
 mips                      pic32mzda_defconfig
 arm                       versatile_defconfig
 ia64                      gensparse_defconfig
+i386                              allnoconfig
 i386                             allyesconfig
 i386                                defconfig
 i386                              debian-10.3
-i386                              allnoconfig
 ia64                             allmodconfig
 ia64                                defconfig
 ia64                              allnoconfig
@@ -158,6 +158,12 @@ i386                 randconfig-a001-20200615
 i386                 randconfig-a004-20200615
 i386                 randconfig-a005-20200615
 i386                 randconfig-a003-20200615
+x86_64               randconfig-a015-20200615
+x86_64               randconfig-a011-20200615
+x86_64               randconfig-a016-20200615
+x86_64               randconfig-a012-20200615
+x86_64               randconfig-a014-20200615
+x86_64               randconfig-a013-20200615
 i386                 randconfig-a015-20200615
 i386                 randconfig-a011-20200615
 i386                 randconfig-a014-20200615
