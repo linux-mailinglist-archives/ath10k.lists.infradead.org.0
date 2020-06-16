@@ -2,65 +2,89 @@ Return-Path: <ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org>
 X-Original-To: lists+ath10k@lfdr.de
 Delivered-To: lists+ath10k@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 47FEF1FA804
-	for <lists+ath10k@lfdr.de>; Tue, 16 Jun 2020 06:55:33 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2F5551FAACA
+	for <lists+ath10k@lfdr.de>; Tue, 16 Jun 2020 10:11:44 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Subject:To:From
-	:Date:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=lQrTUTF8vEbAsWWoBwgmJCsT0t2zuNYsDmvU4e4AdY8=; b=hc+hti23GkICDz
-	pzzE+AqkLn794z5AEvThUl7m+X3gdA/2l0bM3pqgDP0fS/1zB0cvFrPalHCl63Lntuocwwr61WjnC
-	6M+ovdcMndhM6c9yaCcYGUYzHgiTAN5KrRLE3i5nyaON/6i2r5NMrW6UFe+JdR8nL/3jcYWoWSqcf
-	NkVjIu6r/uvRXt8FIapkag8/x9MZIxg8flWPXwtbeFEhlSMjB5/quty71T36s54OANgyXa/P2Nx+L
-	Sw9XaUoDH4imA5Kz0P4VkzlFtebH5vmLhpeLXYq0AW1wt6VWdL3shBX4f8QdMknmzyUvflg9GOtBb
-	/XN7ZsA/cKbqihxtFVBw==;
+	List-Archive:List-Unsubscribe:List-Id:Date:Message-Id:To:References:
+	In-Reply-To:From:Subject:MIME-Version:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=XExNME/FTtzbMCgbBVcnMrESWHrN0ac5LPys1s2NsYI=; b=kO9UJrXrmBxRMZ
+	gM9IKQffi4oeu9vGU12RJuzTEQXbCcijbAKW/RGuG+3iXv8BTHhvuYHDtU8tYBB/MQDf0JbH0JETp
+	3ZQl7X/Pf8gi5PfaJ0MizIoI30PNvvHhemQo7kajVV6E4sUFr4VZhY8dFI0e9RnIhysJCQzTJFofB
+	yFULFBp3O09mgxGxKWboS7FROwLiaYOVT4e1pmLOmhyfPeTK5QGgUBirk1WAk+XvxdWXctKgbGBWW
+	NIz1HZwhm3GN4jYLtZCwW4VR9UmqhcL5DQoUwTpqgq2Howtv8wsnureGesRdgh3Ur2mf5pxcUR/yk
+	fa5Tfvtdz3DJi3QCVa0A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jl3dD-0001GP-Bf; Tue, 16 Jun 2020 04:55:31 +0000
-Received: from mga12.intel.com ([192.55.52.136])
+	id 1jl6h2-00021Z-7l; Tue, 16 Jun 2020 08:11:40 +0000
+Received: from mail27.static.mailgun.info ([104.130.122.27])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jl3cn-0007pf-O9
- for ath10k@lists.infradead.org; Tue, 16 Jun 2020 04:55:08 +0000
-IronPort-SDR: OFfVAE8N18FqOSV9WL4zK4Jl9/t5p9LuEvsu26c9IYzHg6ChedUHibCG4YgqO6eKvJKX0/paxt
- IKKofLceOlIA==
-X-Amp-Result: SKIPPED(no attachment in message)
-X-Amp-File-Uploaded: False
-Received: from fmsmga001.fm.intel.com ([10.253.24.23])
- by fmsmga106.fm.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
- 15 Jun 2020 21:55:04 -0700
-IronPort-SDR: kXofDlCeiSKDgWXHaVI8v6qY54guq8HlVYlKghVCq2JEfrkU4MGc5Lm07wx+nBWlCJ/ar5pfQf
- KqAX+08/Nf+g==
-X-ExtLoop1: 1
-X-IronPort-AV: E=Sophos;i="5.73,517,1583222400"; d="scan'208";a="382760092"
-Received: from lkp-server02.sh.intel.com (HELO ec7aa6149bd9) ([10.239.97.151])
- by fmsmga001.fm.intel.com with ESMTP; 15 Jun 2020 21:55:03 -0700
-Received: from kbuild by ec7aa6149bd9 with local (Exim 4.92)
- (envelope-from <lkp@intel.com>)
- id 1jl3cl-0000SN-A3; Tue, 16 Jun 2020 04:55:03 +0000
-Date: Tue, 16 Jun 2020 12:54:03 +0800
-From: kernel test robot <lkp@intel.com>
-To: Kalle Valo <kvalo@codeaurora.org>
-Subject: [ath6kl:pending] BUILD SUCCESS
- 96b87ee2d3fc1482c2340f6f77752a72b1d5ff2d
-Message-ID: <5ee8506b.SOyXSVpzJVnOgt5N%lkp@intel.com>
-User-Agent: Heirloom mailx 12.5 6/20/10
+ id 1jl6gy-00021A-AU
+ for ath10k@lists.infradead.org; Tue, 16 Jun 2020 08:11:37 +0000
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
+ q=dns/txt; 
+ s=smtp; t=1592295095; h=Date: Message-Id: Cc: To: References:
+ In-Reply-To: From: Subject: Content-Transfer-Encoding: MIME-Version:
+ Content-Type: Sender; bh=9+bNEyX9TKpnegMA6tNmg75S3hpqEiep0k8ONIAoA/c=;
+ b=GnzRpPYdvLT+pUBx3tZfTGCgif7M3PljKHHTcPOSDluxpsMGFh8TuwITZp32DEqKsZOm4ZPk
+ 1pz6ZUKg1PPetLeeLt1+wkkMcUffMDhQd1RNZfJEp5JAkvkHw2dbsKifLCieMlk4LWMiM8UQ
+ r7FbA6n6z3ssDGj/CikKC8foCso=
+X-Mailgun-Sending-Ip: 104.130.122.27
+X-Mailgun-Sid: WyJiZDQ3OSIsICJhdGgxMGtAbGlzdHMuaW5mcmFkZWFkLm9yZyIsICJiZTllNGEiXQ==
+Received: from smtp.codeaurora.org
+ (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171]) by
+ smtp-out-n02.prod.us-west-2.postgun.com with SMTP id
+ 5ee87eb66f2ee827da3deac9 (version=TLS1.2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256); Tue, 16 Jun 2020 08:11:34
+ GMT
+Received: by smtp.codeaurora.org (Postfix, from userid 1001)
+ id 7D1A2C43391; Tue, 16 Jun 2020 08:11:34 +0000 (UTC)
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ aws-us-west-2-caf-mail-1.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=0.5 required=2.0 tests=ALL_TRUSTED,MISSING_DATE,
+ MISSING_MID,SPF_NONE,URIBL_BLOCKED autolearn=no autolearn_force=no
+ version=3.4.0
+Received: from potku.adurom.net (88-114-240-156.elisa-laajakaista.fi
+ [88.114.240.156])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested) (Authenticated sender: kvalo)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 3F846C433C8;
+ Tue, 16 Jun 2020 08:11:31 +0000 (UTC)
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 3F846C433C8
+Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
+ spf=none smtp.mailfrom=kvalo@codeaurora.org
 MIME-Version: 1.0
+Subject: Re: [PATCH] ath10k: Wait until copy complete is actually done before
+ completing
+From: Kalle Valo <kvalo@codeaurora.org>
+In-Reply-To: <20200609082015.1.Ife398994e5a0a6830e4d4a16306ef36e0144e7ba@changeid>
+References: <20200609082015.1.Ife398994e5a0a6830e4d4a16306ef36e0144e7ba@changeid>
+To: Douglas Anderson <dianders@chromium.org>
+User-Agent: pwcli/0.1.0-git (https://github.com/kvalo/pwcli/) Python/3.5.2
+Message-Id: <20200616081134.7D1A2C43391@smtp.codeaurora.org>
+Date: Tue, 16 Jun 2020 08:11:34 +0000 (UTC)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200615_215505_814702_F2830D58 
-X-CRM114-Status: UNSURE (   4.90  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.5 (/)
+X-CRM114-CacheID: sfid-20200616_011136_426360_1B3D913F 
+X-CRM114-Status: GOOD (  12.08  )
+X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-0.5 points)
+ Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [192.55.52.136 listed in list.dnswl.org]
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [104.130.122.27 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 1.8 LONGWORDS              Long string of long words
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [104.130.122.27 listed in wl.mailspike.net]
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: ath10k@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -72,134 +96,57 @@ List-Post: <mailto:ath10k@lists.infradead.org>
 List-Help: <mailto:ath10k-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/ath10k>,
  <mailto:ath10k-request@lists.infradead.org?subject=subscribe>
-Cc: ath10k@lists.infradead.org
+Cc: saiprakash.ranjan@codeaurora.org, linux-arm-msm@vger.kernel.org,
+ linux-wireless@vger.kernel.org, Douglas Anderson <dianders@chromium.org>,
+ ath10k@lists.infradead.org, linux-kernel@vger.kernel.org,
+ pillair@codeaurora.org, netdev@vger.kernel.org,
+ Jakub Kicinski <kuba@kernel.org>, "David S. Miller" <davem@davemloft.net>,
+ kuabhs@google.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "ath10k" <ath10k-bounces@lists.infradead.org>
 Errors-To: ath10k-bounces+lists+ath10k=lfdr.de@lists.infradead.org
 
-tree/branch: https://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git  pending
-branch HEAD: 96b87ee2d3fc1482c2340f6f77752a72b1d5ff2d  ath11k: Add bdf-addr in hw_params
+Douglas Anderson <dianders@chromium.org> wrote:
 
-elapsed time: 481m
+> On wcn3990 we have "per_ce_irq = true".  That makes the
+> ath10k_ce_interrupt_summary() function always return 0xfff. The
+> ath10k_ce_per_engine_service_any() function will see this and think
+> that _all_ copy engines have an interrupt.  Without checking, the
+> ath10k_ce_per_engine_service() assumes that if it's called that the
+> "copy complete" (cc) interrupt fired.  This combination seems bad.
+> 
+> Let's add a check to make sure that the "copy complete" interrupt
+> actually fired in ath10k_ce_per_engine_service().
+> 
+> This might fix a hard-to-reproduce failure where it appears that the
+> copy complete handlers run before the copy is really complete.
+> Specifically a symptom was that we were seeing this on a Qualcomm
+> sc7180 board:
+>   arm-smmu 15000000.iommu: Unhandled context fault:
+>   fsr=0x402, iova=0x7fdd45780, fsynr=0x30003, cbfrsynra=0xc1, cb=10
+> 
+> Even on platforms that don't have wcn3990 this still seems like it
+> would be a sane thing to do.  Specifically the current IRQ handler
+> comments indicate that there might be other misc interrupt sources
+> firing that need to be cleared.  If one of those sources was the one
+> that caused the IRQ handler to be called it would also be important to
+> double-check that the interrupt we cared about actually fired.
+> 
+> Tested-on: WCN3990 SNOC WLAN.HL.3.2.2-00490-QCAHLSWMTPL-1
+> 
+> Signed-off-by: Douglas Anderson <dianders@chromium.org>
+> Signed-off-by: Kalle Valo <kvalo@codeaurora.org>
 
-configs tested: 107
-configs skipped: 1
+Patch applied to ath-next branch of ath.git, thanks.
 
-The following configs have been built successfully.
-More configs may be tested in the coming days.
+8f9ed93d09a9 ath10k: Wait until copy complete is actually done before completing
 
-arm                                 defconfig
-arm                              allyesconfig
-arm                              allmodconfig
-arm                               allnoconfig
-arm64                            allyesconfig
-arm64                               defconfig
-arm64                            allmodconfig
-arm64                             allnoconfig
-arm                         axm55xx_defconfig
-mips                         bigsur_defconfig
-mips                      bmips_stb_defconfig
-c6x                              allyesconfig
-sh                            migor_defconfig
-arm                             pxa_defconfig
-um                           x86_64_defconfig
-mips                      pic32mzda_defconfig
-arm                       versatile_defconfig
-ia64                      gensparse_defconfig
-i386                              allnoconfig
-i386                             allyesconfig
-i386                                defconfig
-i386                              debian-10.3
-ia64                             allmodconfig
-ia64                                defconfig
-ia64                              allnoconfig
-ia64                             allyesconfig
-m68k                             allmodconfig
-m68k                              allnoconfig
-m68k                           sun3_defconfig
-m68k                                defconfig
-m68k                             allyesconfig
-nios2                               defconfig
-nios2                            allyesconfig
-openrisc                            defconfig
-c6x                               allnoconfig
-openrisc                         allyesconfig
-nds32                               defconfig
-nds32                             allnoconfig
-csky                             allyesconfig
-csky                                defconfig
-alpha                               defconfig
-alpha                            allyesconfig
-xtensa                           allyesconfig
-h8300                            allyesconfig
-h8300                            allmodconfig
-xtensa                              defconfig
-arc                                 defconfig
-arc                              allyesconfig
-sh                               allmodconfig
-sh                                allnoconfig
-microblaze                        allnoconfig
-mips                             allyesconfig
-mips                              allnoconfig
-mips                             allmodconfig
-parisc                            allnoconfig
-parisc                              defconfig
-parisc                           allyesconfig
-parisc                           allmodconfig
-powerpc                             defconfig
-powerpc                          allyesconfig
-powerpc                          rhel-kconfig
-powerpc                          allmodconfig
-powerpc                           allnoconfig
-i386                 randconfig-a006-20200615
-i386                 randconfig-a002-20200615
-i386                 randconfig-a001-20200615
-i386                 randconfig-a004-20200615
-i386                 randconfig-a005-20200615
-i386                 randconfig-a003-20200615
-x86_64               randconfig-a015-20200615
-x86_64               randconfig-a011-20200615
-x86_64               randconfig-a016-20200615
-x86_64               randconfig-a012-20200615
-x86_64               randconfig-a014-20200615
-x86_64               randconfig-a013-20200615
-i386                 randconfig-a015-20200615
-i386                 randconfig-a011-20200615
-i386                 randconfig-a014-20200615
-i386                 randconfig-a013-20200615
-i386                 randconfig-a016-20200615
-i386                 randconfig-a012-20200615
-riscv                            allyesconfig
-riscv                             allnoconfig
-riscv                               defconfig
-riscv                            allmodconfig
-s390                             allyesconfig
-s390                              allnoconfig
-s390                             allmodconfig
-s390                                defconfig
-sparc                            allyesconfig
-sparc                               defconfig
-sparc64                             defconfig
-sparc64                           allnoconfig
-sparc64                          allyesconfig
-sparc64                          allmodconfig
-um                               allmodconfig
-um                                allnoconfig
-um                                  defconfig
-um                               allyesconfig
-x86_64                                   rhel
-x86_64                         rhel-7.2-clear
-x86_64                                    lkp
-x86_64                              fedora-25
-x86_64                               rhel-7.6
-x86_64                    rhel-7.6-kselftests
-x86_64                               rhel-8.3
-x86_64                                  kexec
+-- 
+https://patchwork.kernel.org/patch/11595887/
 
----
-0-DAY CI Kernel Test Service, Intel Corporation
-https://lists.01.org/hyperkitty/list/kbuild-all@lists.01.org
+https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
+
 
 _______________________________________________
 ath10k mailing list
